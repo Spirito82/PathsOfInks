@@ -8,7 +8,7 @@ Titolare del trattamento: Emanuele Sinagra (sviluppatore indipendente), contatta
 
 Paths of Inks è un'app per leggere librogame (libri-gioco a bivi, "choose your own adventure"), a partire dall'avventura ambientata nella leggenda di Robin Hood. Questa informativa descrive quali dati vengono trattati, come vengono utilizzati e quali diritti ha l'utente, in conformità al Regolamento (UE) 2016/679 ("GDPR").
 
-In sintesi: **Paths of Inks funziona interamente offline, non richiede la creazione di un account e non invia i dati dell'utente ad alcun server**. Le condizioni d'uso dell'app sono descritte nei [Termini e Condizioni](terms_it.md).
+In sintesi: **Paths of Inks non richiede la creazione di un account e non invia i dati dell'utente ad alcun server**. Lettura, salvataggi e tutte le funzionalità di gioco funzionano interamente offline; l'accesso alla rete serve **unicamente a completare gli acquisti tramite Google Play**. Le condizioni d'uso dell'app sono descritte nei [Termini e Condizioni](terms_it.md).
 
 ## 2. Dati trattati
 
@@ -23,7 +23,11 @@ Tutti questi dati sono salvati **esclusivamente nella memoria privata dell'app s
 
 ### 2.2 Dati raccolti tramite servizi di terze parti
 
-**Nessuno.** L'app non integra servizi di autenticazione, analytics, crash reporting, pubblicità o pagamenti in-app. La build Android di rilascio è distribuita **senza permesso di accesso alla rete**: tecnicamente l'app non è in grado di inviare dati verso l'esterno.
+L'app non integra **alcun servizio di autenticazione, analytics, crash reporting o pubblicità**.
+
+L'unico servizio di terze parti coinvolto è **Google Play Billing**, utilizzato per la vendita di libri o contenuti aggiuntivi all'interno dell'app. Gli acquisti sono gestiti interamente da Google Play secondo la [propria informativa privacy](https://policies.google.com/privacy): il Fornitore riceve soltanto un token di acquisto anonimo che conferma il diritto al contenuto e **non riceve né conserva alcun dato di pagamento** (numero di carta, indirizzo di fatturazione, intestatario).
+
+L'accesso alla rete è richiesto esclusivamente per questa finalità. L'app non contatta alcun server gestito dal Fornitore, perché non ne esiste alcuno.
 
 ### 2.3 Cosa Paths of Inks non fa
 
