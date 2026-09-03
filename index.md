@@ -12,7 +12,7 @@ The first included adventure is set in the legend of **Robin Hood**.
 - multi-book library with editions in several languages;
 - configurable theme, font and text size;
 - interface in Italian and English;
-- **works fully offline**: no account, no data sent anywhere.
+- **works offline**: no account, no data sent anywhere; the network is used only to complete purchases through Google Play.
 
 ## Legal documents
 
@@ -29,4 +29,4 @@ The first included adventure is set in the legend of **Robin Hood**.
 
 ## In italiano
 
-**Paths of Inks** è un'app per leggere librogame: libri-gioco a bivi in cui crei un personaggio, compi scelte, gestisci inventario e abilità e affronti combattimenti testuali. La prima avventura inclusa è ambientata nella leggenda di **Robin Hood**. L'app funziona completamente offline: nessun account, nessun dato inviato all'esterno.
+**Paths of Inks** è un'app per leggere librogame: libri-gioco a bivi in cui crei un personaggio, compi scelte, gestisci inventario e abilità e affronti combattimenti testuali. La prima avventura inclusa è ambientata nella leggenda di **Robin Hood**. L'app funziona offline: nessun account, nessun dato inviato all'esterno; la rete serve solo per gli acquisti tramite Google Play.
