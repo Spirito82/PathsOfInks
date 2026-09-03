@@ -1,87 +1,89 @@
 # Privacy Policy – Paths of Inks
 
-**Ultimo aggiornamento: 3 settembre 2026**
+**Last updated: 3 September 2026**
 
-Titolare del trattamento: Emanuele Sinagra (sviluppatore indipendente), contattabile all'indirizzo email indicato al punto 8.
+Data controller: Emanuele Sinagra (independent developer), reachable at the email address listed in section 8.
 
-## 1. Introduzione
+*Versione italiana: [Informativa sulla privacy](privacy_it.md)*
 
-Paths of Inks è un'app per leggere librogame (libri-gioco a bivi, "choose your own adventure"), a partire dall'avventura ambientata nella leggenda di Robin Hood. Questa informativa descrive quali dati vengono trattati, come vengono utilizzati e quali diritti ha l'utente, in conformità al Regolamento (UE) 2016/679 ("GDPR").
+## 1. Introduction
 
-In sintesi: **Paths of Inks funziona interamente offline, non richiede la creazione di un account e non invia i dati dell'utente ad alcun server**. Le condizioni d'uso dell'app sono descritte nei [Termini e Condizioni](terms.md).
+Paths of Inks is an app for reading gamebooks (branching "choose your own adventure" books), starting with an adventure set in the legend of Robin Hood. This policy describes what data is processed, how it is used and what rights you have, in accordance with Regulation (EU) 2016/679 ("GDPR").
 
-## 2. Dati trattati
+In short: **Paths of Inks works entirely offline, requires no account and sends no user data to any server**. The terms of use of the app are described in the [Terms and Conditions](terms.md).
 
-### 2.1 Dati creati dall'utente e conservati sul dispositivo
+## 2. Data processed
 
-- **Profili di gioco**: nome del personaggio scelto dall'utente, caratteristiche, abilità, punti vita, inventario ed equipaggiamento.
-- **Progressi narrativi**: pagina corrente, scelte compiute, flag e variabili della storia, checkpoint di combattimento.
-- **Preferenze dell'app**: tema, font, dimensione del testo, lingua dell'interfaccia, ultimo profilo e libro utilizzati.
-- **Libri presenti in libreria**: i file XML dei librogame (`librogame.xml` e `items.xml`) inclusi nell'app o importati dall'utente.
+### 2.1 Data created by the user and stored on the device
 
-Tutti questi dati sono salvati **esclusivamente nella memoria privata dell'app sul dispositivo dell'utente** e non vengono trasmessi al Fornitore né a terzi.
+- **Game profiles**: the character name chosen by the user, attributes, skills, hit points, inventory and equipment.
+- **Story progress**: current page, choices made, narrative flags and variables, combat checkpoints.
+- **App preferences**: theme, font, text size, interface language, last profile and book used.
+- **Books in the library**: the XML files of the gamebooks (`librogame.xml` and `items.xml`) shipped with the app or added by the user.
 
-### 2.2 Dati raccolti tramite servizi di terze parti
+All of this data is stored **exclusively in the app's private storage on the user's device** and is never transmitted to the Provider or to any third party.
 
-**Nessuno.** L'app non integra servizi di autenticazione, analytics, crash reporting, pubblicità o pagamenti in-app. La build Android di rilascio è distribuita **senza permesso di accesso alla rete**: tecnicamente l'app non è in grado di inviare dati verso l'esterno.
+### 2.2 Data collected through third-party services
 
-### 2.3 Cosa Paths of Inks non fa
+**None.** The app integrates no authentication, analytics, crash reporting, advertising or in-app payment services. The Android release build ships **without the network access permission**: technically, the app is unable to send data anywhere.
 
-- Non richiede la creazione di un account e non raccoglie email, nome reale o credenziali.
-- Non raccoglie dati di geolocalizzazione.
-- Non accede a contatti, fotocamera, microfono o file personali del dispositivo, al di fuori dei file che l'utente sceglie esplicitamente di importare come libro.
-- Non profila l'utente, non mostra pubblicità e non raccoglie identificativi pubblicitari.
-- Non vende né cede dati a terzi.
+### 2.3 What Paths of Inks does not do
 
-### 2.4 Dati trattati dagli store di distribuzione
+- It does not require an account and does not collect email addresses, real names or credentials.
+- It does not collect location data.
+- It does not access contacts, camera, microphone or personal files on the device, other than the files the user explicitly chooses to import as a book.
+- It does not profile users, does not display advertising and does not collect advertising identifiers.
+- It does not sell or otherwise disclose data to third parties.
 
-Se l'app viene installata tramite Google Play (o un altro store), il gestore dello store può raccogliere autonomamente dati relativi a download, installazione ed eventuali crash, secondo le proprie informative privacy, sulle quali il Fornitore non ha controllo:
+### 2.4 Data processed by the distribution stores
+
+If the app is installed through Google Play (or another store), the store operator may independently collect data about downloads, installations and crashes, under its own privacy policy, over which the Provider has no control:
 
 - Google Play: https://policies.google.com/privacy
 
-## 3. Base giuridica e finalità del trattamento
+## 3. Legal basis and purpose of processing
 
-I dati indicati al punto 2.1 sono trattati unicamente sul dispositivo dell'utente e sotto il suo controllo, per la sola finalità di **fornire le funzionalità dell'app** (salvare la partita, riprendere la lettura, applicare le preferenze). La base giuridica è l'esecuzione del rapporto d'uso richiesto dall'utente (art. 6.1.b GDPR).
+The data listed in section 2.1 is processed solely on the user's device and under the user's control, for the sole purpose of **providing the app's features** (saving the game, resuming reading, applying preferences). The legal basis is the performance of the use relationship requested by the user (Art. 6(1)(b) GDPR).
 
-Non essendovi trasmissione né accesso da parte del Fornitore, il Fornitore non svolge alcuna raccolta centralizzata su tali dati.
+Since there is no transmission to, or access by, the Provider, the Provider carries out no centralised collection of this data.
 
-## 4. Conservazione dei dati
+## 4. Data retention
 
-- Profili, progressi, preferenze e libri restano sul dispositivo finché l'utente non li elimina.
-- L'utente può cancellare singoli profili dall'app, oppure rimuovere tutti i dati **disinstallando l'app** o svuotando i dati dell'applicazione dalle impostazioni del sistema operativo.
-- Il Fornitore non conserva copie di backup dei dati dell'utente. Eventuali backup automatici del dispositivo (es. backup di sistema Android o iCloud) sono gestiti dal sistema operativo secondo le impostazioni scelte dall'utente.
+- Profiles, progress, preferences and books remain on the device until the user deletes them.
+- The user may delete individual profiles from within the app, or remove all data by **uninstalling the app** or clearing the application's data from the operating system settings.
+- The Provider keeps no backup copies of user data. Any automatic device backups (e.g. Android system backup or iCloud) are handled by the operating system according to the settings chosen by the user.
 
-## 5. Condivisione dei dati
+## 5. Data sharing
 
-I dati **non vengono condivisi, venduti o ceduti a terzi**, in quanto non lasciano il dispositivo dell'utente.
+Data is **not shared, sold or transferred to third parties**, as it never leaves the user's device.
 
-## 6. Pubblico di destinazione
+## 6. Intended audience
 
-Paths of Inks è un'app di narrativa interattiva con contenuti avventurosi che possono includere combattimenti descritti testualmente. **Non è destinata a bambini di età inferiore ai 13 anni.** Se hai tra 13 e 18 anni, puoi usare l'app con il consenso di un genitore o tutore. L'app non raccoglie consapevolmente dati di minori: non raccoglie, in generale, dati identificativi di alcun utente.
+Paths of Inks is an interactive fiction app with adventure content that may include combat described in text. **It is not intended for children under 13.** If you are between 13 and 18, you may use the app with the consent of a parent or guardian. The app does not knowingly collect data from minors: in general, it collects no identifying data from any user.
 
-## 7. Diritti dell'utente
+## 7. Your rights
 
-In quanto interessato ai sensi degli artt. 15-22 GDPR, hai diritto ad accedere ai tuoi dati, richiederne la rettifica, la cancellazione o la limitazione, opporti al trattamento e ottenerne la portabilità.
+As a data subject under Articles 15-22 GDPR, you have the right to access your data, to request its rectification, erasure or restriction, to object to processing and to data portability.
 
-Poiché i dati risiedono esclusivamente sul tuo dispositivo, puoi esercitare direttamente questi diritti:
+Because the data resides exclusively on your device, you can exercise these rights directly:
 
-- consultando e modificando profili e preferenze dall'interno dell'app;
-- cancellando i profili dall'app;
-- disinstallando l'app o cancellando i dati dell'applicazione dalle impostazioni di sistema, per rimuovere tutto;
-- copiando i file dei libri e dei profili tramite gli strumenti di backup o condivisione del dispositivo, dove disponibili.
+- by viewing and editing profiles and preferences inside the app;
+- by deleting profiles from within the app;
+- by uninstalling the app or clearing the application's data from your system settings, to remove everything;
+- by copying book and profile files using your device's backup or sharing tools, where available.
 
-Per qualsiasi richiesta puoi comunque scrivere all'indirizzo indicato al punto 8. Hai inoltre diritto a proporre reclamo all'Autorità Garante per la Protezione dei Dati Personali (www.garanteprivacy.it) se ritieni che il trattamento violi il GDPR.
+You may in any case write to the address in section 8 for any request. You also have the right to lodge a complaint with your national data protection authority (in Italy: the Garante per la Protezione dei Dati Personali, www.garanteprivacy.it) if you believe the processing infringes the GDPR.
 
-## 8. Contatti
+## 8. Contact
 
-Per domande sulla privacy o per esercitare i tuoi diritti:
+For privacy questions or to exercise your rights:
 
 📧 email: pathsofinks.app@gmail.com
 
-## 9. Modifiche a questa informativa
+## 9. Changes to this policy
 
-Questa informativa può essere aggiornata, ad esempio se in futuro l'app introducesse funzionalità online (sincronizzazione, negozio di libri, diagnostica). La data di "ultimo aggiornamento" in cima al documento riflette l'ultima revisione. In caso di modifiche sostanziali — in particolare l'introduzione di qualsiasi invio di dati verso l'esterno — l'app ne darà evidenza e potrà richiedere una nuova accettazione.
+This policy may be updated, for example if the app introduces online features in the future (synchronisation, a book store, diagnostics). The "last updated" date at the top of the document reflects the most recent revision. In the event of material changes — in particular the introduction of any transmission of data outside the device — the app will make this evident and may ask for renewed acceptance.
 
 ---
 
-*Vedi anche: [Termini e Condizioni](terms.md)*
+*See also: [Terms and Conditions](terms.md)*
