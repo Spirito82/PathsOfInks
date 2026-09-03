@@ -10,7 +10,7 @@ Paths of Inks è un **lettore di librogame**: un'applicazione di intrattenimento
 
 L'App è un'opera di **narrativa di finzione**. Personaggi, luoghi, eventi e regole di gioco sono immaginari o rielaborazioni letterarie di leggende di pubblico dominio; qualsiasi somiglianza con persone reali è casuale. Nessun contenuto dell'App costituisce informazione storica accurata, consiglio o istruzione da applicare nella vita reale.
 
-L'App funziona **interamente offline** e non richiede la creazione di un account.
+L'App non richiede la creazione di un account. La lettura e tutte le funzionalità di gioco funzionano **interamente offline**; la connessione di rete serve solo a completare gli acquisti tramite Google Play.
 
 ## 2. Contenuti narrativi e sensibilità
 
