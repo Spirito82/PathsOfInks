@@ -12,7 +12,7 @@ Paths of Inks is a **gamebook reader**: an entertainment application that lets y
 
 The App is a work of **fiction**. Characters, places, events and game rules are imaginary, or literary reworkings of public-domain legends; any resemblance to real persons is coincidental. No content in the App constitutes accurate historical information, advice or instructions to be applied in real life.
 
-The App works **entirely offline** and requires no account.
+The App requires no account. Reading and all game features work **entirely offline**; a network connection is needed only to complete purchases through Google Play.
 
 ## 2. Narrative content and sensitivity
 
