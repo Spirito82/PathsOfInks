@@ -10,7 +10,7 @@ Data controller: Emanuele Sinagra (independent developer), reachable at the emai
 
 Paths of Inks is an app for reading gamebooks (branching "choose your own adventure" books), starting with an adventure set in the legend of Robin Hood. This policy describes what data is processed, how it is used and what rights you have, in accordance with Regulation (EU) 2016/679 ("GDPR").
 
-In short: **Paths of Inks works entirely offline, requires no account and sends no user data to any server**. The terms of use of the app are described in the [Terms and Conditions](terms.md).
+In short: **Paths of Inks requires no account and sends no user data to any server**. Reading, saving and every game feature work fully offline; network access is used **solely to complete purchases through Google Play**. The terms of use of the app are described in the [Terms and Conditions](terms.md).
 
 ## 2. Data processed
 
@@ -25,7 +25,11 @@ All of this data is stored **exclusively in the app's private storage on the use
 
 ### 2.2 Data collected through third-party services
 
-**None.** The app integrates no authentication, analytics, crash reporting, advertising or in-app payment services. The Android release build ships **without the network access permission**: technically, the app is unable to send data anywhere.
+The app integrates **no authentication, analytics, crash reporting or advertising services**.
+
+The only third-party service involved is **Google Play Billing**, used to sell books or additional content inside the app. Purchases are processed entirely by Google Play under [its own privacy policy](https://policies.google.com/privacy): the Provider receives only an anonymous purchase token confirming the entitlement, and **never receives or stores payment details** (card number, billing address, cardholder name).
+
+Network access is requested for this purpose alone. The app does not contact any server operated by the Provider, because none exists.
 
 ### 2.3 What Paths of Inks does not do
 
