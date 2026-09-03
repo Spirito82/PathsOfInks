@@ -1,24 +1,32 @@
 # Paths of Inks
 
-**Paths of Inks** è un'app per leggere librogame: libri-gioco a bivi in cui crei un personaggio, compi scelte, gestisci inventario e abilità e affronti combattimenti testuali.
+**Paths of Inks** is an app for reading gamebooks: branching books in which you create a character, make choices, manage inventory and skills, and fight text-based battles.
 
-La prima avventura inclusa è ambientata nella leggenda di **Robin Hood**.
+The first included adventure is set in the legend of **Robin Hood**.
 
-## Caratteristiche
+## Features
 
-- lettura di librogame con scelte, requisiti narrativi, flag e variabili;
-- creazione e gestione di più profili di personaggio, con salvataggio dei progressi;
-- caratteristiche, abilità, inventario, equipaggiamento e combattimenti a turni;
-- libreria multi-libro con edizioni in più lingue;
-- temi, font e dimensione del testo configurabili;
-- interfaccia in italiano e inglese;
-- **funziona completamente offline**: nessun account, nessun dato inviato all'esterno.
+- gamebook reading with choices, narrative requirements, flags and variables;
+- multiple character profiles, with saved progress;
+- attributes, skills, inventory, equipment and turn-based combat;
+- multi-book library with editions in several languages;
+- configurable theme, font and text size;
+- interface in Italian and English;
+- **works fully offline**: no account, no data sent anywhere.
 
-## Documenti
+## Legal documents
 
-- [Privacy Policy](privacy.md)
-- [Termini e Condizioni](terms.md)
+| | English | Italiano |
+|---|---|---|
+| Privacy | [Privacy Policy](privacy.md) | [Informativa sulla privacy](privacy_it.md) |
+| Terms | [Terms and Conditions](terms.md) | [Termini e Condizioni](terms_it.md) |
 
-## Contatti
+## Contact
 
 📧 pathsofinks.app@gmail.com
+
+---
+
+## In italiano
+
+**Paths of Inks** è un'app per leggere librogame: libri-gioco a bivi in cui crei un personaggio, compi scelte, gestisci inventario e abilità e affronti combattimenti testuali. La prima avventura inclusa è ambientata nella leggenda di **Robin Hood**. L'app funziona completamente offline: nessun account, nessun dato inviato all'esterno.
