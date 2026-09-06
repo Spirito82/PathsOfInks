@@ -1,6 +1,6 @@
 # Privacy Policy – Paths of Inks
 
-**Ultimo aggiornamento: 3 settembre 2026**
+**Ultimo aggiornamento: 6 settembre 2026**
 
 Titolare del trattamento: Emanuele Sinagra (sviluppatore indipendente), contattabile all'indirizzo email indicato al punto 8.
 
@@ -8,7 +8,7 @@ Titolare del trattamento: Emanuele Sinagra (sviluppatore indipendente), contatta
 
 Paths of Inks è un'app per leggere librogame (libri-gioco a bivi, "choose your own adventure"), a partire dall'avventura ambientata nella leggenda di Robin Hood. Questa informativa descrive quali dati vengono trattati, come vengono utilizzati e quali diritti ha l'utente, in conformità al Regolamento (UE) 2016/679 ("GDPR").
 
-In sintesi: **Paths of Inks non richiede la creazione di un account e non invia i dati dell'utente ad alcun server**. Lettura, salvataggi e tutte le funzionalità di gioco funzionano interamente offline; l'accesso alla rete serve **unicamente a completare gli acquisti tramite Google Play**. Le condizioni d'uso dell'app sono descritte nei [Termini e Condizioni](terms_it.md).
+In sintesi: **Paths of Inks non richiede la creazione di un account e non invia i dati dell'utente ad alcun server**. Lettura, salvataggi e tutte le funzionalità di gioco funzionano interamente offline; l'accesso alla rete serve **soltanto a completare gli acquisti tramite Google Play e a scaricare le revisioni dei testi dei librogame**, che sono file pubblici e uguali per tutti. Le condizioni d'uso dell'app sono descritte nei [Termini e Condizioni](terms_it.md).
 
 ## 2. Dati trattati
 
@@ -27,7 +27,19 @@ L'app non integra **alcun servizio di autenticazione, analytics, crash reporting
 
 L'unico servizio di terze parti coinvolto è **Google Play Billing**, utilizzato per la vendita di libri o contenuti aggiuntivi all'interno dell'app. Gli acquisti sono gestiti interamente da Google Play secondo la [propria informativa privacy](https://policies.google.com/privacy): il Fornitore riceve soltanto un token di acquisto anonimo che conferma il diritto al contenuto e **non riceve né conserva alcun dato di pagamento** (numero di carta, indirizzo di fatturazione, intestatario).
 
-L'accesso alla rete è richiesto esclusivamente per questa finalità. L'app non contatta alcun server gestito dal Fornitore, perché non ne esiste alcuno.
+### 2.3 Aggiornamento dei testi
+
+All'apertura l'app verifica se esista una revisione più recente del librogame che sta leggendo, scaricandola
+da una pagina pubblica ospitata su GitHub Pages. La richiesta è una normale lettura di file pubblici: **non
+contiene alcun dato dell'utente**, né identificatori, né informazioni sulla partita in corso.
+
+Come per qualunque richiesta web, il fornitore dell'infrastruttura (GitHub, Inc.) può registrare nei propri
+log tecnici l'indirizzo IP e il tipo di applicazione che effettua la richiesta, secondo la [propria
+informativa](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement). Il Fornitore
+non ha accesso a quei log e non gestisce alcun server proprio.
+
+La verifica non è necessaria per giocare: senza rete l'app continua a funzionare con i testi già presenti sul
+dispositivo, e le partite già cominciate restano comunque sulla versione del testo con cui sono nate.
 
 ### 2.3 Cosa Paths of Inks non fa
 

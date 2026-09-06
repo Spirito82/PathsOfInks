@@ -1,6 +1,6 @@
 # Privacy Policy – Paths of Inks
 
-**Last updated: 3 September 2026**
+**Last updated: 6 September 2026**
 
 Data controller: Emanuele Sinagra (independent developer), reachable at the email address listed in section 8.
 
@@ -10,7 +10,7 @@ Data controller: Emanuele Sinagra (independent developer), reachable at the emai
 
 Paths of Inks is an app for reading gamebooks (branching "choose your own adventure" books), starting with an adventure set in the legend of Robin Hood. This policy describes what data is processed, how it is used and what rights you have, in accordance with Regulation (EU) 2016/679 ("GDPR").
 
-In short: **Paths of Inks requires no account and sends no user data to any server**. Reading, saving and every game feature work fully offline; network access is used **solely to complete purchases through Google Play**. The terms of use of the app are described in the [Terms and Conditions](terms.md).
+In short: **Paths of Inks requires no account and sends no user data to any server**. Reading, saving and every game feature work fully offline; network access is used **only to complete purchases through Google Play and to download revisions of the gamebook texts**, which are public files, identical for everyone. The terms of use of the app are described in the [Terms and Conditions](terms.md).
 
 ## 2. Data processed
 
@@ -29,7 +29,19 @@ The app integrates **no authentication, analytics, crash reporting or advertisin
 
 The only third-party service involved is **Google Play Billing**, used to sell books or additional content inside the app. Purchases are processed entirely by Google Play under [its own privacy policy](https://policies.google.com/privacy): the Provider receives only an anonymous purchase token confirming the entitlement, and **never receives or stores payment details** (card number, billing address, cardholder name).
 
-Network access is requested for this purpose alone. The app does not contact any server operated by the Provider, because none exists.
+### 2.3 Text updates
+
+On opening, the app checks whether a newer revision of the gamebook being read exists, downloading it from a
+public page hosted on GitHub Pages. The request is an ordinary read of public files: it **contains no user
+data**, no identifiers and no information about the game in progress.
+
+As with any web request, the infrastructure provider (GitHub, Inc.) may record the IP address and the type of
+application making the request in its technical logs, under [its own
+statement](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement). The Provider has no
+access to those logs and operates no server of its own.
+
+The check is not required in order to play: with no network the app keeps working with the texts already on the
+device, and games already started stay on the version of the text they began with.
 
 ### 2.3 What Paths of Inks does not do
 

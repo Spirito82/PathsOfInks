@@ -1,0 +1,20 @@
+{
+  "books": [
+    {
+      "id": "robin-hood-clear-it",
+      "workId": "robin-hood-clear",
+      "title": "Robin Hood: Oltre la Leggenda",
+      "language": "it",
+      "version": 2,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-clear-it/v2/librogame.xml",
+        "sha256": "258FBBC572C098D69090025F3EE780AABD910D5FD4FB03A8FECADFB183DB2C5E"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-clear-it/v2/items.xml",
+        "sha256": "596AD041AE41858E5E3E7F9CCBCE3EA27286B5705B1FACEF5558BA2FE1C0D09C"
+      }
+    }
+  ]
+}
