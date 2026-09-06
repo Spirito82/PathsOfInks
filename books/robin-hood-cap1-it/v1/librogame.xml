@@ -1,0 +1,2146 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="1" phase="test" id="robin-hood-cap1-it" workId="robin-hood-clear" language="it" title="Robin Hood I: Il ritorno a Locksley" author="Progetto Librogame" protagonist="Robin di Locksley">
+  <CharacterRules skillPoints="8" enemyKnowledgeSkill="woodcraft">
+    <Skills>
+      <Skill id="archery" name="Tiro con l'arco" description="Precisione, scelta del bersaglio e copertura a distanza." maxLevel="5" />
+      <Skill id="woodcraft" name="Vita nei boschi" description="Tracce, animali, orientamento e uso del terreno." maxLevel="5" />
+      <Skill id="stealth" name="Furtività" description="Infiltrazione, pedinamento e movimento inosservato." maxLevel="5" />
+      <Skill id="command" name="Presenza" description="Autorevolezza, ascolto e capacità di farsi seguire senza un titolo." maxLevel="5" />
+      <Skill id="guile" name="Astuzia" description="Inganno, lettura delle intenzioni e improvvisazione." maxLevel="5" />
+    </Skills>
+  </CharacterRules>
+  <Variables>
+    <Variable id="hunger" name="Fame del contado" type="number" initial="4" min="0" max="10" visible="true" />
+    <Variable id="pressure" name="Pressione dello sceriffo" type="number" initial="1" min="0" max="10" visible="true" />
+    <Variable id="aliceTrust" name="Fiducia di Alice" type="number" initial="0" min="-3" max="5" visible="false" />
+    <Variable id="marianTrust" name="Fiducia di Marian" type="number" initial="0" min="-3" max="5" visible="false" />
+    <Variable id="resources" name="Risorse della banda" type="number" initial="2" min="0" max="10" visible="false" />
+    <Variable id="loyalty" name="Lealtà della banda" type="number" initial="5" min="0" max="10" visible="false" />
+    <Variable id="operationsCompleted" name="Operazioni completate" type="number" initial="0" min="0" max="3" visible="false" />
+    <Variable id="kitFreed" name="Kit liberato" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="infirmarySistersFreed" name="Sorelle liberate dall’infermeria" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="maeraAtChapter" name="Maera al capitolo" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="willAlive" name="Will presente nella compagnia" type="number" initial="1" min="0" max="1" visible="false" />
+    <Variable id="companionsWithRobin" name="Compagni con Robin a Nottingham" type="number" initial="1" min="0" max="1" visible="false" />
+    <Variable id="searchedWillAfterFire" name="Will cercato dopo l'incendio" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="aliceCoin" name="Moneta per Alice" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="marianMsg" name="Stato messaggio Marian" type="number" initial="0" min="0" max="2" visible="false" />
+    <Variable id="paidBracy" name="Bracy pagato" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="combatLoc" name="Luogo del Combattimento" type="number" initial="1" min="1" max="3" visible="false" />
+    <Variable id="fordCompanion" name="Compagno al guado" type="number" initial="1" min="1" max="2" visible="false" />
+    <Variable id="aliceNoteShown" name="Biglietto mostrato ad Alice in questa visita" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="agnesFreed" name="Agnes liberata (non noto nei vecchi profili)" type="number" initial="-1" min="-1" max="1" visible="false" />
+    <Variable id="agnesPromiseMade" name="Impegno verso Agnes (non noto nei vecchi profili)" type="number" initial="-1" min="-1" max="1" visible="false" />
+    <Variable id="agnesEscorted" name="Agnes già accompagnata fuori dalla cella" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="privateWitnessRequested" name="Testimone richiesta nell'accordo privato" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Talents>
+    <Talent id="locksleyWitness" name="Una voce di Locksley" description="Qualcuno nel villaggio è disposto a confermare pubblicamente ciò che Robin sostiene." />
+    <Talent id="willMartyr" name="La freccia rossa" description="Will è morto dopo il diversivo nella gola; la banda ricorda sia il suo coraggio sia la decisione di non tornare per lui." />
+  </Talents>
+  <StartingItems>
+    <Item id="locksley-bow" />
+    <Item id="short-sword" />
+    <Item id="travel-cloak" />
+    <Item id="discharge-letter" />
+    <Item id="silver-coins" />
+  </StartingItems>
+  <EventDefinitions>
+    <Event id="letteraSequestrata" name="La lettera di congedo viene sequestrata" once="true" />
+    <Event id="granaioPromesso" name="Robin promette ad Alice di aprire il granaio" once="true" />
+    <Event id="saccoSegnato" name="Robin incide il falcone sul sacco di Alice" once="true" />
+    <Event id="messaggioLetto" name="Robin decifra il messaggio di Marian alla cappella" once="true" />
+    <Event id="oswaldIndagato" name="Robin ottiene prove contro il castaldo Oswald" once="true" />
+    <Event id="bracyCorrotto" name="Il portatore Bracy accetta di farsi corrompere" once="true" />
+    <Event id="bandaFondata" name="Robin e i primi compagni stabiliscono il patto" />
+    <Event id="edaSalvata" name="Eda viene protetta e messa in salvo" once="true" />
+    <Event id="guardieRespinteLocksley" name="Le guardie sono respinte durante lo scontro a Locksley" once="true" />
+    <Event id="johnSentinella" name="Little John presidia il guado" once="true" />
+    <Event id="johnGuardiano" name="Little John sorveglia i sentieri principali" once="true" />
+    <Event id="tuckUnito" name="Frate Tuck si unisce formalmente alla banda" once="true" contradicts="tuckIndipendente" />
+    <Event id="tuckIndipendente" name="Frate Tuck collabora ma resta indipendente" once="true" />
+    <Event id="willMorto" name="Will Scarlet cade in battaglia" once="true" />
+    <Event id="willNemico" name="Will Scarlet si rivolta contro Robin" once="true" />
+    <Event id="willLeale" name="Will Scarlet accetta di rispettare le regole" once="true" contradicts="willNemico" />
+    <Event id="marianPartner" name="Marian diventa alleata politica" once="true" contradicts="marianAmante" />
+    <Event id="marianAmante" name="Marian intreccia una relazione con Robin" once="true" />
+    <Event id="convoglioAssaltato" name="L'operazione al convoglio di Bracken è conclusa" once="true" requires="bandaFondata" />
+    <Event id="prigioneViolata" name="L'operazione alla prigione di Nottingham è conclusa" once="true" requires="bandaFondata" />
+    <Event id="decimeRecuperate" name="L'operazione all'abbazia di Kirklees è conclusa" once="true" requires="bandaFondata" />
+    <Event id="campoEvacuato" name="La banda evacua il rifugio di Sherwood" once="true" />
+    <Event id="gisborneCatturato" name="Guy di Gisborne viene fatto prigioniero" once="true" contradicts="gisborneFuggito" />
+    <Event id="gisborneFuggito" name="Guy di Gisborne sfugge alla cattura" once="true" />
+    <Event id="testimonianzaPubblica" name="Vengono prodotte le prove contro lo sceriffo" once="true" />
+    <Event id="rivoltaArmata" name="I quartieri iniziano una sollevazione armata" once="true" />
+    <Event id="vittoriaAutoritaria" name="La banda prende il potere con metodi spietati" once="true" />
+    <Event id="vittoriaPopolare" name="Si instaura un governo civico e popolare" once="true" contradicts="vittoriaAutoritaria" />
+    <Event id="restaurazionePrivata" name="Robin usa il successo solo per riavere il maniero" once="true" />
+    <Event id="robinEsiliato" name="Robin viene esiliato" once="true" />
+    <Event id="robinMartire" name="Robin si sacrifica diventando martire" once="true" />
+    <Event id="robinSottomesso" name="Robin capitola davanti allo sceriffo" once="true" />
+    <Event id="agnesRescued" name="Agnes raggiunge il fossato fuori dalla prigione" once="true" />
+  </EventDefinitions>
+  <Cast>
+    <Character id="robin" name="Robin" role="signore spodestato di Locksley, tornato dalla guerra">
+      <Alias>Locksley</Alias>
+      <Introduces>1</Introduces>
+      <Persona>Osserva prima le uscite e poi i volti. È abituato a essere ascoltato e scambia il silenzio per consenso. Usa l'ironia quando ha paura. La competenza con arco e bosco è reale; la capacità di guidare persone libere deve conquistarla.</Persona>
+    </Character>
+    <Character id="alice" name="Alice" role="tessitrice di Locksley, vedova, prima voce del villaggio">
+      <Alias>Alice Weaver</Alias>
+      <Places>al villaggio|al granaio|alla dispensa|al mulino|nel cortile del maniero|nel maniero|al ponte|nella cappella|a Locksley|al rifugio|nella foresta|sulla strada|al processo|alle porte di nottingham|al mercato|al torneo</Places>
+      <Introduces>2 5 12 14 29 34 35 41 42 47</Introduces>
+      <Persona>Non entra nella banda. Conosce debiti, famiglie e compromessi locali, ed è la misura delle conseguenze civili: aiuta Robin se le sue azioni rendono possibile restare, non soltanto fuggire.</Persona>
+    </Character>
+    <Character id="oswald" name="Oswald" role="balivo insediato a Locksley dallo sceriffo">
+      <Alias>Oswald Bracy</Alias>
+      <Alias>Bracy</Alias>
+      <Introduces>6 10 13 18 19 21 24 25 27 28 308</Introduces>
+      <Persona>Non è un guerriero: è diligente, meschino e protetto da documenti autentici usati per sostenere menzogne. Può diventare informatore, vittima, testimone o persecutore.</Persona>
+    </Character>
+    <Character id="marian" name="Marian" role="nobildonna di Nottingham che tiene una rete di copisti e testimoni">
+      <Alias>Marian Fitzwalter</Alias>
+      <Places>alle porte di nottingham|al mercato|al castello|in prigione|al processo|nella cappella|alla chiesa|nel maniero|al granaio|a nottingham|alla cripta|al torneo|al villaggio|al rifugio</Places>
+      <Introduces>18 27 28 46 290</Introduces>
+      <CitedIn>46</CitedIn>
+      <Persona>Ha accesso a case, cappelle e scrivani di Nottingham. Non aspetta Robin e non lavora per restaurarne il titolo: vuole limitare il potere arbitrario dello sceriffo. La fiducia misura collaborazione politica e intimità, senza obbligo romantico.</Persona>
+    </Character>
+    <Character id="gisborne" name="Gisborne" role="cacciatore di uomini al servizio dello sceriffo">
+      <Alias>Guy di Gisborne</Alias>
+      <Introduces>18 25 29</Introduces>
+      <Persona>Rende eseguibili le minacce dello sceriffo. Riconosce schemi, segue rifornimenti e cattura intermediari. Rispetta la competenza di Robin senza idealizzarla.</Persona>
+    </Character>
+    <Character id="elias" name="Elias" role="scrivano di Locksley, fratello di Agnes">
+      <Alias>lo scrivano Elias</Alias>
+      <Places>al granaio|nel maniero|nel cortile del maniero|alla dispensa|al villaggio|nella cappella|al mulino|al rifugio</Places>
+      <Introduces>18 21 22 33 34</Introduces>
+      <Persona>Copia da settimane cifre che non tornano e ha smesso di credere che chi entra dopo il buio venga per parlare. Non difende Oswald: è pronto a fuggire con qualcuno. La sorella in prigione è la leva con cui lo si convince e il motivo per cui non parla.</Persona>
+    </Character>
+    <Character id="agnes" name="Agnes" role="sorella di Elias, prigioniera a Nottingham, testimone dei decreti falsi">
+      <Places>alle porte di nottingham|in prigione|al castello|nel maniero|al granaio|al processo|al rifugio|alla chiesa</Places>
+      <Introduces>35 37</Introduces>
+      <Persona>Ha contestato una data e per quello è dentro. Ricostruisce a memoria righe di documenti che altri hanno bruciato, e sa che la propria utilità come testimone è anche ciò che la tiene in pericolo.</Persona>
+    </Character>
+    <Character id="ned" name="Ned" role="stalliere del maniero di Locksley">
+      <Places>nel cortile del maniero|al granaio|alla dispensa|nel maniero|al villaggio</Places>
+      <Introduces>9 18 22 42</Introduces>
+      <Persona>Quando Robin è partito era un ragazzo che dormiva nel fieno per sorvegliare i cani. È rimasto al suo posto perché andarsene costa più che restare, e paga i furti altrui perché è l'ultimo della fila.</Persona>
+    </Character>
+    <Character id="maud" name="Maud" role="cuoca del maniero, in servizio da quando Robin era ragazzo">
+      <Places>alla dispensa|nel cortile del maniero|nel maniero|al villaggio|al mercato|sulla strada</Places>
+      <Introduces>10 21 25 43 45</Introduces>
+      <Persona>Porta la cena a chi ha preso la casa in cui ha lavorato una vita, e non chiama tradimento il fatto di continuare. Aiuta se l'aiuto non la costringe a scegliere pubblicamente.</Persona>
+    </Character>
+    <Character id="matthew" name="Matthew" role="mugnaio di Locksley">
+      <Places>al mulino|al villaggio|al granaio|al ponte|a Locksley|sulla strada</Places>
+      <Introduces>5 6 7 12 13 27</Introduces>
+      <Persona>Ha consegnato più grano di quanto risulti nei conti e lo sa dimostrare. Non si alza quando entra il padrone tornato: il mulino è fermo, e un mulino fermo non deve niente a nessuno.</Persona>
+    </Character>
+    <Character id="edwin" name="Edwin" role="carrettiere dei Weaver, fratello di Joan e zio di Nell">
+      <Alias>Edwin Carter</Alias>
+      <Places>al villaggio|al ponte|al granaio|al mulino|al guado|a Locksley</Places>
+      <Introduces>2 13</Introduces>
+      <Persona>Ha insegnato a Robin a riconoscere una ruota storta dal suono. Guida il carro degli altri perché la sorella e il nipote sono trattenuti al ponte, e abbassa lo sguardo per primo.</Persona>
+    </Character>
+  </Cast>
+  <Page id="1">
+    <Title>Il falcone capovolto</Title>
+    <Intent>
+      <In>sulla strada, solo</In>
+      <Act>Robin arriva al crocevia di Locksley e deve decidere in quale direzione proseguire.</Act>
+      <Out>sulla strada, solo</Out>
+    </Intent>
+    <Text>Riconosci il cippo di confine prima ancora di vedere il campanile. Affiora dall'erba sulla curva della strada. A tredici anni vi appoggiavi una mela e cercavi di colpirla con l'arco di tuo padre. Il falcone scolpito nella pietra guardava allora verso Locksley; adesso qualcuno ha capovolto il cippo, lasciando le ali rivolte a terra.
+
+Sotto il dosso, un carro carico di sacchi procede verso il villaggio fra due guardie a cavallo. La ruota sinistra oscilla a ogni buca. Il telone si alza nel vento e scopre alcuni nomi scritti a carbone: Weaver, Carter, Miller. Conosci quelle famiglie. Una riga nera attraversa ciascun nome.
+
+Il carico non proviene da un unico granaio. I sacchi hanno misure, cuciture e rattoppi diversi, come se fossero stati raccolti casa per casa. Il carrettiere tiene la schiena curva e non guarda mai le guardie. Non puoi ancora sapere se si tratti di tasse, debiti o di un sequestro, ma riconosci il grano delle famiglie di Locksley sotto scorta armata.
+
+Più avanti compaiono i tetti del villaggio e il maniero. Sul comignolo, al posto del falcone, sventolano i colori dello sceriffo. Alla base del muro le felci coprono il fossato dal quale, da ragazzo, raggiungevi una pietra mobile per rientrare dopo il coprifuoco.
+
+La campana della cappella di Santa Edith annuncia la metà del pomeriggio. Due contadine con cesti vuoti si spostano sul bordo della strada per lasciar passare il carro. Nessuna alza gli occhi.
+
+Hai tre monete, una spada corta e una lettera di congedo che dimostra quando hai lasciato il servizio militare. Non spiega che cosa sia accaduto durante la tua assenza. Puoi seguire il carro e interrogare ciò che sta succedendo alle famiglie; tentare l'ingresso segreto al maniero; oppure raggiungere la cappella e cercare qualcuno disposto a parlare.</Text>
+    <Keywords>
+      <Keyword name="Locksley">
+        <Description>Terre, villaggio e maniero appartenuti alla famiglia di Robin. Il decreto dello sceriffo li considera confiscati.</Description>
+      </Keyword>
+      <Keyword name="cippo">
+        <Description>Pietra infissa nel terreno per segnare un confine, una distanza o un luogo.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Seguire il carro e scoprire perché il raccolto viaggia sotto scorta" goto="2" />
+      <Choice text="Cercare nel fossato il vecchio passaggio verso il maniero" goto="8" />
+      <Choice text="Raggiungere la cappella e cercare qualcuno disposto a spiegare i sequestri" goto="15" />
+    </Choices>
+    <OnEnter>
+      <Effects>
+        <setVariable target="agnesFreed" value="0" />
+        <setVariable target="agnesPromiseMade" value="0" />
+      </Effects>
+    </OnEnter>
+  </Page>
+  <Page id="2">
+    <Title>La ruota nel fango</Title>
+    <Intent>
+      <In>sulla strada, solo</In>
+      <Act>Robin trova il carro dei Weaver bloccato nel fango e decide se aiutare Edwin.</Act>
+      <Out>al villaggio, non visto</Out>
+    </Intent>
+    <Text>Raggiungi il carro davanti alla casa dei Weaver. La ruota posteriore è sprofondata nel fango fino al mozzo. Il cavallo tira, la correggia geme e il carico non si muove. Il carrettiere scende e trattiene un'imprecazione quando una delle guardie si volta verso di lui.
+
+È Edwin Carter. Fu lui a insegnarti come riconoscere una ruota storta dal suono. Ha più grigio nella barba e una cicatrice che non ricordi. Quando ti vede fra i noccioli, resta immobile per un istante; poi abbassa lo sguardo prima che la guardia possa seguirlo.
+
+«Un viandante potrebbe darci una mano», dice, fingendo di non conoscerti.
+
+La guardia mangia una mela presa dal carro. Sui sacchi vedi ancora i nomi delle famiglie attraversati da una riga nera. Dal cortile dei Weaver arriva il rumore regolare di un telaio: qualcuno è al lavoro dentro la casa.
+
+Edwin torna a spingere la ruota. Puoi aiutarlo senza rivelare il tuo nome e cercare di parlargli sottovoce. Puoi convincere la guardia che il mozzo sia danneggiato e condurla oltre la siepe. Oppure puoi lasciare il carro e bussare alla casa dei Weaver, dove forse qualcuno potrà spiegarti perché il raccolto è stato preso.</Text>
+    <Keywords>
+      <Keyword name="mozzo">
+        <Description>Parte centrale della ruota, attraversata dall'asse e collegata al cerchione.</Description>
+      </Keyword>
+      <Keyword name="correggia">
+        <Description>Striscia robusta di cuoio, usata qui nei finimenti del cavallo e del carro.</Description>
+      </Keyword>
+    </Keywords>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="pressure" operator="gte" value="3" />
+        </Requirements>
+        <Content>Dal cinturone della guardia sporge un foglio piegato in quattro. Il vento ne solleva un angolo e ti lascia intravedere le parole “arco di tasso” e “cicatrice alla tempia”: qualcuno ha già portato sulla strada una descrizione che potrebbe essere la tua.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Aiutare Edwin col carro senza rivelare il tuo nome" goto="3" />
+      <Choice text="Convincere la guardia che il mozzo sia danneggiato e portarla oltre la siepe" goto="4" reqSkill="guile" reqSkillLevel="2" />
+      <Choice text="Lasciare il carro e chiedere spiegazioni ad Alice Weaver" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="3">
+    <Title>I nomi sui sacchi</Title>
+    <Intent>
+      <In>al villaggio, non visto</In>
+      <Act>Robin si nasconde sotto il carro per esaminare i sacchi confiscati.</Act>
+      <Out>al villaggio, non visto</Out>
+    </Intent>
+    <Text>Entri nella strada tenendo il cappuccio basso e infili la spalla sotto il pianale. Il legno è viscido. Al primo sforzo il fango entra nello stivale e ti serra il piede. Edwin spinge dall'altro lato; il carro avanza appena, ma basta perché la guardia smetta di mangiare e vi osservi.
+
+«Non alzate la testa, messere», sussurra Edwin.
+
+Non sai se il vecchio titolo sia rispetto, abitudine o un avvertimento. Prima che tu possa domandarlo, il peso si sposta sopra le vostre spalle e senti il grano scorrere nei sacchi.
+
+Da vicino leggi anche i numeri scritti accanto ai nomi. Su alcuni sacchi una quantità è stata cancellata e sostituita con una maggiore. Non puoi stabilire chi abbia cambiato le cifre né in quale momento, ma l'alterazione è visibile. Il sacco dei Weaver si distingue per una cucitura azzurra; potresti segnarlo e riconoscerlo più tardi.
+
+La guardia getta il torsolo e scende da cavallo. Fra pochi passi raggiungerà il lato del carro dove siete nascosti. Hai il tempo di porre a Edwin una sola domanda, incidere un segno sul sacco dei Weaver oppure attirare l'uomo verso il mozzo prima che veda il tuo volto.</Text>
+    <Keywords>
+      <Keyword name="pianale">
+        <Description>Superficie piatta del carro sulla quale viene sistemato il carico.</Description>
+      </Keyword>
+      <Keyword name="torsolo">
+        <Description>Parte centrale e più dura di un frutto, rimasta dopo averne mangiato la polpa.</Description>
+      </Keyword>
+      <Keyword name="mozzo">
+        <Description>Parte centrale della ruota attraversata dall’asse.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Chiedere a Edwin chi abbia ordinato di cambiare le quantità" goto="6">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Incidere un falcone sul sacco dei Weaver per riconoscerlo" goto="7" setFlag="markedAliceSack">
+        <Events>
+          <Event>saccoSegnato</Event>
+        </Events>
+      </Choice>
+      <Choice text="Attirare la guardia verso il mozzo prima che veda il tuo volto" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="4">
+    <Title>Oltre la siepe</Title>
+    <Intent>
+      <In>al villaggio, non visto</In>
+      <Act>Robin distrae la guardia fingendo un guasto alla ruota.</Act>
+      <Out>al villaggio, non visto</Out>
+    </Intent>
+    <Text>Indichi alla guardia una fessura nel mozzo e dici che la ruota potrebbe staccarsi alla prima discesa. L'uomo ti segue oltre la siepe per guardarla da sotto. Edwin continua a parlare al cavallo. Quando passate accanto al fossato, lascia cadere la correggia e la riprende subito. Non sai se volesse avvertirti o soltanto rallentare il carro.
+
+«Sei un carradore?» domanda la guardia.
+
+Ha lasciato la lancia contro il carico, ma tiene la mano vicino al pugnale. È giovane e non sembra averti riconosciuto. Ti studia perché hai messo in dubbio la sicurezza del carro e ora si aspetta una spiegazione.
+
+Il fossato termina vicino a tre arnie coperte di paglia. Un ramo basso si piega sopra l'elmo della guardia; colpendolo potresti distrarla abbastanza da immobilizzarla. Una pietra piatta sporge accanto alla prima arnia: rovesciandola contro il legno provocheresti le api e avresti il tempo di correre, ma Edwin e il cavallo rimarrebbero nel caos.
+
+Nella borsa porti la lettera di congedo col sigillo militare. Puoi mostrarla tenendola fra le tue mani, senza permettere alla guardia di sequestrarla. Puoi usare il ramo e affrontare l'uomo da vicino. Oppure puoi rovesciare l'arnia e fuggire verso le case, accettando il rischio per chi resta sulla strada.</Text>
+    <Keywords>
+      <Keyword name="carradore">
+        <Description>Artigiano che costruisce o ripara carri e le loro ruote.</Description>
+      </Keyword>
+      <Keyword name="arnie">
+        <Description>Strutture nelle quali vengono allevate le api; plurale di arnia.</Description>
+      </Keyword>
+      <Keyword name="arnia">
+        <Description>Struttura nella quale vive una colonia di api allevate.</Description>
+      </Keyword>
+      <Keyword name="mozzo">
+        <Description>Parte centrale della ruota attraversata dall’asse.</Description>
+      </Keyword>
+      <Keyword name="correggia">
+        <Description>Striscia robusta di cuoio usata in finimenti, legature o meccanismi.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Mostrare il congedo senza permettere alla guardia di prenderlo" goto="11" reqItem="discharge-letter" />
+      <Choice text="Usare il ramo per distrarre e immobilizzare la guardia" goto="12" reqSkill="woodcraft" reqSkillLevel="2">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Rovesciare l'arnia e correre verso il cortile dei Weaver, rischiando la rabbia delle guardie sui paesani" goto="5">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Title>La porta di Alice</Title>
+    <Intent>
+      <In>al villaggio, non visto</In>
+      <Act>Robin entra nel cortile dei Weaver per cercare Alice.</Act>
+      <Out>al villaggio, non visto</Out>
+    </Intent>
+    <Text>Attraversi il cortile dei Weaver fra matasse stese ad asciugare. I colori sono pallidi e molte fibre sono state tinte più di una volta. Bussi. Il telaio tace, ma nessuno apre. Al secondo colpo senti passi allontanarsi, poi il catenaccio scorre lentamente.
+
+Alice Weaver compare nella fessura con un coltello da stoffa lungo l'avambraccio. È più magra di come la ricordavi e ha una ciocca grigia fra i capelli scuri. Ti osserva dalle scarpe infangate alla cicatrice sulla tempia.
+
+«Se siete tornato per il maniero, siete in ritardo.»
+
+Solo allora capisci che ti ha riconosciuto. Dietro di lei quattro bambini siedono attorno a una pagnotta scura. La maggiore divide le fette cercando di renderle uguali. Il più piccolo indossa una giubba ricavata da una vecchia tenda; vicino al gomito è rimasta una parte del falcone ricamato che apparteneva alla casa di Locksley.
+
+Alice segue il tuo sguardo. «Se invece siete tornato per noi, non cominciate con una promessa.»
+
+Non ti invita a entrare, ma lascia aperta la porta. Puoi posare una moneta vicino al pane e aspettare che sia lei a decidere se parlare. Puoi mostrarle il falcone cucito sotto il tuo bavero, offrendo un riconoscimento senza invocare diritti. Oppure puoi chiedere soltanto dove trovare Matthew, il mugnaio, e non coinvolgere Alice oltre ciò che sceglierà di dirti.</Text>
+    <Keywords>
+      <Keyword name="Alice Weaver">
+        <Description>Tessitrice e vedova di Locksley. Conosce debiti e famiglie del villaggio, ma non può permettersi gesti eroici senza conseguenze.</Description>
+      </Keyword>
+      <Keyword name="matasse">
+        <Description>Fasci di filo avvolti ordinatamente, pronti per essere tinti o lavorati.</Description>
+      </Keyword>
+      <Keyword name="giubba">
+        <Description>Indumento corto indossato sopra la camicia.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Posare una moneta vicino al pane e aspettare Alice" goto="13" reqItem="silver-coins">
+        <Effects>
+          <setVariable target="aliceCoin" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Mostrarle il falcone cucito sotto il bavero senza invocare diritti" goto="13">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Chiedere soltanto dove trovare Matthew il mugnaio" goto="6" />
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Title>La macina immobile</Title>
+    <Intent>
+      <In>al ponte, scoperto|al villaggio, non visto</In>
+      <Act>Robin visita il mulino silenzioso e interroga Matthew.</Act>
+      <Out>al mulino, in attesa</Out>
+    </Intent>
+    <Text>La porta del mulino è aperta, ma non senti il rumore dell'acqua né quello della macina. Matthew siede sulla pietra immobile e passa una cote su un ferro già affilato. Quando la tua ombra attraversa il pavimento, ti riconosce e non si alza.
+
+«Avete scelto un buon giorno per tornare. Non c'è niente da macinare e quindi niente che possiate reclamare.»
+
+Il pavimento è stato spazzato fino all'ultima manciata di farina. Sul muro restano zone più chiare dove erano appesi gli attrezzi. Matthew guarda verso il cortile prima di continuare.
+
+«Oswald prende il grano dicendo che le famiglie devono pagare vecchi debiti. Poi ci tassa perché il mulino non produce. Il problema è che i suoi conti cambiano.»
+
+Ti fa un esempio preciso. La famiglia Miller doveva consegnare sei sacchi e Matthew li ha pesati tutti prima che fossero caricati. Nel registro del granaio ne risultano ricevuti soltanto quattro; gli altri due sono diventati un debito nuovo. Matthew conosce quantità e famiglie perché ogni consegna passava dalla sua bilancia, ma non possiede una copia del registro di Oswald.
+
+Puoi osservare i conti del granaio e confrontarli con ciò che Matthew è disposto a testimoniare. Puoi chiedergli chi ricopia quei conti prima che raggiungano Oswald. Oppure puoi promettere di riaprire il granaio questa notte: offriresti pane immediato, senza sapere ancora quante guardie, carri o famiglie sarebbero coinvolti.</Text>
+    <Keywords>
+      <Keyword name="macina">
+        <Description>Grande pietra circolare usata nel mulino per ridurre i cereali in farina.</Description>
+      </Keyword>
+      <Keyword name="cote">
+        <Description>Pietra abrasiva usata per affilare lame e utensili.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Osservare i conti del granaio e confrontarli con la testimonianza di Matthew" goto="7" />
+      <Choice text="Farsi dire da Matthew chi ricopia i conti, per poi intrufolarsi nel solaio del maniero" goto="18" />
+      <Choice text="Promettere di riaprire il granaio questa notte" goto="16" setFlag="promisedGrain">
+        <Events>
+          <Event>granaioPromesso</Event>
+        </Events>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Title>La finestra del granaio</Title>
+    <Intent>
+      <In>al mulino, in attesa|al villaggio, non visto</In>
+      <Act>Robin si nasconde presso il granaio sigillato dallo sceriffo.</Act>
+      <Out>al granaio, non visto</Out>
+    </Intent>
+    <Text>Il granaio si trova dietro la vecchia rimessa. La porta nuova porta il marchio dello sceriffo. Ti nascondi fra le ortiche e osservi il lavoro attraverso una fessura nel muro.
+
+Due facchini scaricano i sacchi dal carro di Edwin. Il caposquadra legge ad alta voce il nome e la quantità scritti su ciascuno: tornano i Weaver, i Carter e il grano che passa dal mulino di Matthew; uno scrivano li registra su una tavoletta di cera. Quando deve rimproverare un facchino, lascia la tavoletta sul banco vicino alla finestra. Avvicinandoti potresti copiare le cifre e confrontarle più tardi con le testimonianze delle famiglie.
+
+Sul tetto una scandola sollevata dal vento lascia un'apertura verso il solaio. Sotto, presso la pompa, Hobb gira la manovella con una mano e continua a guardare il proprio coltello appeso alla cintura del caposquadra. Sul manico sono incise due iniziali; non sai a chi appartengano né perché l'uomo glielo abbia preso.
+
+La porta posteriore conserva la vecchia serratura. Ricordi come sollevarne la chiave prima di girarla, ma al momento non possiedi una chiave adatta.
+
+Puoi salire sul tetto e cercare i registri conservati nel solaio. Puoi parlare con Hobb e chiedergli che cosa sappia del lavoro nel granaio. Oppure puoi tornare da Alice con ciò che hai osservato, lasciando che sia lei a decidere quali famiglie possano confermarlo.</Text>
+    <Keywords>
+      <Keyword name="scandola">
+        <Description>Sottile asse di legno usata come tegola per coprire un tetto.</Description>
+      </Keyword>
+      <Keyword name="solaio">
+        <Description>Spazio o piano posto immediatamente sotto il tetto, spesso usato come deposito.</Description>
+      </Keyword>
+    </Keywords>
+    <objects>
+      <object name="tavoletta dei pesi">
+        <actions>
+          <action type="esamina" reqSkill="stealth" reqSkillLevel="2">
+            <description>Attendere che lo scrivano si volti e confrontare i numeri.</description>
+            <result>
+              <foundItem id="grain-tallies" />
+              <Effects>
+                <subtractVariable target="hunger" value="1" />
+              </Effects>
+              <Choice text="Cucire la copia nella fodera del mantello" goto="27" />
+            </result>
+          </action>
+        </actions>
+      </object>
+    </objects>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="pressure" operator="gte" value="3" />
+        </Requirements>
+        <Content>Senti le guardie muoversi con nervosismo, chiamandosi spesso per assicurarsi che nessuno si sia allontanato col buio.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="pressure" operator="lt" value="3" />
+        </Requirements>
+        <Content>L'atmosfera è rilassata; una delle guardie appoggiata al muro sbadiglia rumorosamente.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Salire sul tetto e cercare i registri nel solaio" goto="18" reqSkill="stealth" reqSkillLevel="2" />
+      <Choice text="Chiedere a Hobb che cosa sappia del granaio e del coltello" goto="19" />
+      <Choice text="Tornare da Alice con ciò che hai osservato" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Title>La pietra murata</Title>
+    <Intent>
+      <In>sulla strada, solo</In>
+      <Act>Robin scende nel fossato asciutto del maniero cercando un vecchio passaggio.</Act>
+      <Out>nel cortile del maniero, nascosto</Out>
+    </Intent>
+    <Text>Scendi nel fossato restando sotto le felci. Conti sette sostegni del muro fino alla pietra che spostavi per rientrare dopo il coprifuoco. La riconosci dalla forma, ma una fascia di malta chiara ora la unisce alle altre. Qualcuno ha chiuso il passaggio.
+
+Poco più avanti, il canale di scolo entra sotto la cucina. L'acqua è bassa e scura di cenere e grasso. Potresti attraversarlo strisciando, senza sapere chi si trovi nella dispensa dall'altra parte.
+
+Nel cortile dormono due vecchi levrieri. Riconosci Bran dal muso bianco. Il secondo potrebbe essere Cinder, ma sono passati troppi anni perché tu ne sia certo. Una cagna più giovane percorre invece il muro col naso a terra. Quando il vento cambia, si ferma nella tua direzione.
+
+L'edera raggiunge la colombaia abbandonata sopra il cammino di ronda. Da ragazzo vi nascondevi messaggi dietro una pietra a forma d'ala. Non sai se il nascondiglio esista ancora, ma dalla colombaia potresti osservare il cortile e raggiungere il tetto senza attraversare il canale.
+
+Puoi usare il vecchio fischio col quale chiamavi Bran e vedere se ti riconosce. Puoi entrare dal canale di scolo, affrontando chiunque sia nella cucina. Oppure puoi arrampicarti fino alla colombaia e controllare il nascondiglio prima di cercare un accesso al maniero.</Text>
+    <Keywords>
+      <Keyword name="malta">
+        <Description>Impasto usato per legare fra loro pietre o mattoni.</Description>
+      </Keyword>
+      <Keyword name="levrieri">
+        <Description>Cani alti, snelli e molto veloci, tradizionalmente impiegati nella caccia.</Description>
+      </Keyword>
+      <Keyword name="colombaia">
+        <Description>Costruzione o vano destinato a ospitare colombi.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Usare il vecchio fischio e vedere se Bran ti riconosce" goto="9" />
+      <Choice text="Strisciare nel canale di scolo fino alla cucina" goto="10" reqSkill="stealth" reqSkillLevel="2" />
+      <Choice text="Arrampicarti alla colombaia e controllare il vecchio nascondiglio" goto="14" reqSkill="woodcraft" reqSkillLevel="2" />
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Title>Tre cani</Title>
+    <Intent>
+      <In>nel cortile del maniero, nascosto</In>
+      <Act>Robin usa un vecchio fischio per chiamare i cani e non farsi tradire.</Act>
+      <Out>nel cortile del maniero, nascosto</Out>
+    </Intent>
+    <Text>Porti due dita alle labbra e fischi le quattro note con cui un tempo chiamavi i cani dalle cucine.
+
+I due levrieri alzano il muso. Bran tenta di rimettersi in piedi e trema sulle zampe; l'altro batte la coda contro la terra. La cagna giovane non ti ha mai conosciuto. Abbaia, corre al muro e graffia la pietra a pochi passi dal tuo volto.
+
+«Che hai trovato, Meg?»
+
+La voce arriva dalla scuderia. Ned attraversa il cortile asciugandosi le mani sulla tunica. Quando sei partito era un ragazzo che dormiva nel fieno per sorvegliare i puledri malati. Ora cammina con una spalla più bassa dell'altra e porta alla cintura le chiavi della stalla.
+
+Puoi passare il mantello attraverso il varco vicino a Bran. Se il vecchio cane vi riconoscerà il tuo odore e si calmerà, Meg potrebbe seguire la sua reazione; non hai però alcuna certezza. Puoi ripetere il fischio e attirare entrambi i levrieri verso il muro, creando abbastanza confusione da costringere Ned ad avvicinarsi. Oppure puoi chiamare subito lo stalliere per nome, prima che dia l'allarme, e lasciare che sia lui a decidere se riconoscerti.</Text>
+    <Keywords>
+      <Keyword name="levrieri">
+        <Description>Cani alti, snelli e molto veloci, tradizionalmente impiegati nella caccia.</Description>
+      </Keyword>
+      <Keyword name="stalliere">
+        <Description>Persona incaricata di accudire cavalli e stalle.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Passare il mantello vicino a Bran e osservare la reazione dei cani" goto="20" reqItem="travel-cloak" />
+      <Choice text="Ripetere il fischio e attirare i levrieri verso il muro" goto="21" />
+      <Choice text="Chiamare Ned per nome prima che dia l’allarme" goto="21" />
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Title>Il coltello da pane</Title>
+    <Intent>
+      <In>nel cortile del maniero, nascosto</In>
+      <Act>Robin striscia nel canale di scolo fino alla cucina.</Act>
+      <Out>alla dispensa, non visto</Out>
+    </Intent>
+    <Text>Il canale si restringe sotto la cucina. Negli ultimi passi avanzi sui gomiti, col mento quasi nell'acqua che sa di cenere e cipolla. Spingi la grata; il perno cede e tu emergi nella dispensa respirando troppo forte.
+
+La punta di un coltello si ferma davanti al tuo occhio.
+
+Lo impugna Maud, la cuoca che lavorava qui quando eri ragazzo. Le sue braccia sono ancora robuste, ma il grembiule è coperto di toppe. Sugli scaffali restano tre cipolle, un vaso di grasso e una forma di pane chiusa in una gabbia di ferro.
+
+Maud ti riconosce. Lo capisci perché pronuncia il nome di tuo padre, non perché abbassi la lama.
+
+«Vostro padre mi pagava per cucinare», dice. «Oswald mi paga perché i miei figli mangino. Non chiedetemi di fingere che sia la stessa cosa. Ma non chiedetemi neppure di dimenticare quale dei due è qui adesso.»
+
+Dal piano superiore arriva il rumore di una penna, poi quello di un calamaio spostato. Qualcuno sta scrivendo nel solaio. Fra te e la scala c'è Maud.
+
+Puoi dirle che cerchi i registri e chiederle soltanto di lasciarti passare. Puoi fingerti un ladro che non conosce Locksley, anche se Maud sembra averti già riconosciuto. Oppure puoi tornare nel canale prima di costringerla a scegliere fra te e la sicurezza dei propri figli.</Text>
+    <Keywords>
+      <Keyword name="Maud">
+        <Description>Cuoca del maniero prima e dopo la confisca. La continuità del suo lavoro non equivale a fedeltà verso chi occupa la casa.</Description>
+      </Keyword>
+      <Keyword name="dispensa">
+        <Description>Locale nel quale si conservano cibo e provviste.</Description>
+      </Keyword>
+      <Keyword name="grembiule">
+        <Description>Indumento protettivo portato sopra gli abiti durante i lavori domestici o artigianali.</Description>
+      </Keyword>
+      <Keyword name="calamaio">
+        <Description>Piccolo recipiente contenente l'inchiostro nel quale si intinge la penna.</Description>
+      </Keyword>
+      <Keyword name="solaio">
+        <Description>Spazio o piano posto immediatamente sotto il tetto, spesso usato come deposito.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Dire a Maud che cerchi i registri e chiederle di lasciarti passare" goto="22" />
+      <Choice text="Fingerti un ladro che non conosce Locksley" goto="23" reqSkill="guile" reqSkillLevel="2" />
+      <Choice text="Lasciare in pace Maud, tornando nel canale per poi arrampicarsi fino al solaio" goto="18" />
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Title>Il sigillo militare</Title>
+    <Intent>
+      <In>al villaggio, non visto</In>
+      <Act>Robin mostra il suo congedo militare alla guardia del ponte.</Act>
+      <Out>al ponte, scoperto</Out>
+    </Intent>
+    <Text>La guardia legge il luogo e la data scritti sul tuo congedo. Quando arriva al nome del comandante, smette di sorridere. Alza la pergamena verso la luce e controlla il sigillo militare.
+
+«Il sergente Ansel ha combattuto nella stessa campagna», dice. «Sarà lui a decidere se questo documento è autentico.»
+
+Provi a riprendere il congedo, ma la guardia arretra e porta la mano libera al pugnale. Non vuole distruggerlo: vuole consegnare ad Ansel sia la pergamena sia l'uomo che la reclama.
+
+Dietro la siepe, Edwin è riuscito a liberare la ruota. Il carro riparte e per qualche istante il rumore copre le vostre voci. Puoi accompagnare la guardia e difendere di persona l'autenticità del congedo; riprenderlo con la forza prima che chiami aiuto; oppure lasciarla andare e seguirla, per scoprire dove si trova Ansel senza presentarti come prigioniero.</Text>
+    <Keywords>
+      <Keyword name="congedo">
+        <Description>Documento che attesta la conclusione del servizio militare.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Accompagnare la guardia da Ansel e difendere di persona il congedo" goto="24" />
+      <Choice text="Riprendere il congedo con la forza prima che chiami aiuto" goto="12">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Lasciarle portare il congedo e seguirla fino ad Ansel" goto="25" reqSkill="stealth" reqSkillLevel="2" reqItem="discharge-letter" consumeItem="true" setFlag="letterSeized">
+        <Events>
+          <Event>letteraSequestrata</Event>
+        </Events>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="12">
+    <Title>La prima campana</Title>
+    <Intent>
+      <In>al ponte, scoperto|al villaggio, non visto</In>
+      <Act>La guardia grida aiuto e Robin deve reagire all'allarme.</Act>
+      <Out>al ponte, scoperto</Out>
+    </Intent>
+    <Text>La guardia grida aiuto dal fossato. Dal granaio risponde un rintocco secco, poi un secondo. Non è la campana della cappella: serve a richiamare i soldati.
+
+Il villaggio si chiude intorno a te. Una donna ritira una scodella dal davanzale; il fabbro spegne il mantice e accosta le imposte. Alice Weaver afferra un bambino per la camicia e lo trascina in casa.
+
+Due guardie escono dal cortile del granaio e si dividono. Una corre verso il ponte, l'altra verso la cappella. Prima che blocchino le strade puoi raggiungere Alice e chiederle rifugio. Il canale del mulino, nascosto dai salici, conduce alla casa di Matthew. Se invece vuoi entrare nel maniero, la colombaia addossata al muro offre ancora un possibile passaggio sopra le pattuglie.</Text>
+    <Keywords>
+      <Keyword name="mantice">
+        <Description>Strumento a soffietto che alimenta il fuoco della fucina spingendovi aria.</Description>
+      </Keyword>
+      <Keyword name="imposte">
+        <Description>Pannelli di legno che chiudono una finestra dall’interno o dall’esterno.</Description>
+      </Keyword>
+    </Keywords>
+    <OnEnter>
+      <Effects>
+        <addVariable target="pressure" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Chiedere rifugio ad Alice prima che chiuda la porta" goto="13" />
+      <Choice text="Raggiungere Matthew attraverso il canale nascosto dai salici" goto="6" />
+      <Choice text="Usare la colombaia per entrare nel maniero sopra le pattuglie" goto="14" />
+    </Choices>
+  </Page>
+  <Page id="13">
+    <Convergence reason="I due modi di presentarsi — la moneta e il falcone — restano nelle variabili e la scena li distingue nei propri brani condizionali." />
+    <Title>Quello che Alice chiede</Title>
+    <Intent>
+      <In>al granaio, non visto|al ponte, scoperto|al villaggio, non visto|alla dispensa, non visto|nel cortile del maniero, nascosto|nella cappella, non visto</In>
+      <Act>Alice spiega i sequestri dei Carter e propone di confrontare testimonianze e conti.</Act>
+      <Out>al villaggio, con Alice</Out>
+    </Intent>
+    <Text>Alice aspetta che i quattro bambini siano passati nella stanza sul retro. La maggiore prende il pane rimasto sul tavolo e chiude la porta dietro di sé. Soltanto allora Alice posa il coltello da stoffa, tenendolo comunque dalla propria parte.
+
+«Ieri gli uomini di Oswald hanno svuotato la casa dei Carter», dice. «Edwin guida il loro carro perché sua sorella Joan e il figlio di lei sono trattenuti al ponte. Gli hanno promesso di liberarli quando la famiglia avrà pagato un debito comparso la settimana scorsa.»
+
+Alice estrae dal telaio una striscia di lino ripiegata. Vi ha raccolto tre dichiarazioni. Matthew, il mugnaio, sostiene di avere consegnato più grano di quanto compare nei conti. Joan Halley dice che una parte del proprio raccolto è stata cancellata dopo la consegna. La famiglia Weaver descrive lo stesso sistema: Oswald registra come mancanti sacchi che i suoi uomini hanno già preso.
+
+Sono accuse precise, ma non bastano ancora a dimostrare che sia stato alterato il registro del granaio. Per farlo servirebbe confrontarle con i numeri scritti dagli amministratori di Oswald.
+
+«Posso dirvi dove tengono i Carter», continua Alice. «Posso aiutarvi a confrontare queste testimonianze con i conti. Oppure posso mostrarvi il vecchio passaggio verso il maniero. Ma non rischierò i miei figli soltanto perché siete tornato.»
+
+Puoi correre al ponte prima che le guardie trasferiscano i prigionieri; restare con Alice e verificare con ordine le tre testimonianze; oppure chiederle soltanto come entrare nel maniero, evitando di coinvolgere altre famiglie.</Text>
+    <Keywords>
+      <Keyword name="lino">
+        <Description>Tessuto resistente ricavato dalle fibre dell’omonima pianta.</Description>
+      </Keyword>
+    </Keywords>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="aliceTrust" operator="gte" value="1" />
+        </Requirements>
+        <Content>Osserva il falcone ricamato sotto il tuo bavero e per un istante il suo sguardo si addolcisce. Spinge verso di te la ciotola dell'acqua: un gesto minimo, ma non lo avrebbe fatto per un soldato di Oswald.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="aliceCoin" operator="gte" value="1" />
+        </Requirements>
+        <Content>La moneta d'argento che hai posato sul tavolo scompare rapidamente nella sua tasca. Spinge verso di te la ciotola dell'acqua, riconoscendo il pasto comprato per i suoi figli.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="aliceNoteShown" operator="eq" value="1" />
+        </Requirements>
+        <Content>Prima che tu risponda, porgi ad Alice il biglietto trovato nella colombaia. Lo gira verso la luce e scioglie il filo bianco. «Non riconosco la scrittura. Il sacrestano di Santa Edith saprà dirvi chi è entrato nella cappella. Chiedete a lui, ma non fate il mio nome.» Ti restituisce foglio e filo: l'invito resta da verificare.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Correre al ponte prima che le guardie trasferiscano i Carter" goto="26">
+        <Effects>
+          <setVariable target="aliceNoteShown" value="0" />
+        </Effects>
+      </Choice>
+      <Choice text="Confrontare con Alice le dichiarazioni e i conti del granaio" goto="27">
+        <Effects>
+          <setVariable target="aliceNoteShown" value="0" />
+        </Effects>
+      </Choice>
+      <Choice text="Chiedere il vecchio accesso al maniero senza coinvolgere altre famiglie" goto="14">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+          <setVariable target="aliceNoteShown" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Convergence reason="L'arrivo racconta il proprio ingresso: si entra nella colombaia da una tavola spezzata, qualunque strada ci abbia portati sotto il muro." />
+    <Title>Il filo bianco</Title>
+    <Intent>
+      <In>al ponte, scoperto|al villaggio, con Alice|alla dispensa, non visto|nel cortile del maniero, nascosto</In>
+      <Act>Robin si arrampica fino alla vecchia colombaia per osservare il cortile.</Act>
+      <Out>nel cortile del maniero, nascosto</Out>
+    </Intent>
+    <Text>Entri nella colombaia attraverso una tavola spezzata e aspetti che la pattuglia passi sotto il muro. Dal tetto vedi due cani presso le cucine, una sentinella sul cammino di ronda e una finestra accesa sopra la scuderia. Dietro quel vetro qualcuno continua a scrivere mentre il resto della casa si prepara alla notte.
+
+Da ragazzo nascondevi messaggi in una cavità dietro una pietra a forma d'ala. La pietra è stata spostata di recente. Dentro trovi un filo bianco annodato attorno a un biglietto: «Cappella di Santa Edith, dopo la preghiera di nona. Vieni senza dire il tuo nome.»
+
+Chi ha scritto conosce il tuo vecchio nascondiglio e si aspetta il tuo ritorno, ma non sai se voglia aiutarti o attirarti in trappola. Puoi andare alla cappella per incontrarlo. Puoi ignorare il messaggio e raggiungere dalle travi la stanza illuminata, dove forse sono custoditi i registri. Oppure puoi portare il biglietto alla tessitrice Alice Weaver e chiederle se riconosce la scrittura o il filo.</Text>
+    <Keywords>
+      <Keyword name="cammino">
+        <Description>Nel cammino di ronda, passaggio sopraelevato lungo le mura usato dalle sentinelle.</Description>
+      </Keyword>
+      <Keyword name="colombaia">
+        <Description>Costruzione o vano destinato a ospitare colombi.</Description>
+      </Keyword>
+    </Keywords>
+    <OnEnter>
+      <Effects>
+        <addVariable target="marianTrust" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Andare alla cappella e scoprire chi ha lasciato il messaggio" goto="15" grantItem="marian-thread">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Raggiungere dal tetto la stanza dove vengono copiati i registri" goto="18" />
+      <Choice text="Mostrare il biglietto ad Alice e chiederle se lo riconosce" goto="13">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+          <setVariable target="aliceNoteShown" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="15">
+    <Title>La candela di Santa Edith</Title>
+    <Intent>
+      <In>nel cortile del maniero, nascosto|sulla strada, solo</In>
+      <Act>Robin entra nella cappella di Santa Edith per decifrare un messaggio.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>La preghiera è finita, ma nella cappella nessuno ha fretta di uscire. Fuori passano gli zoccoli di una pattuglia. Le due contadine che hai visto sulla strada sono inginocchiate vicino alla porta, con i cesti vuoti ai piedi.
+
+Il sacrestano cieco avanza tastando le panche e ti porge una candela spenta. «Questa fuma», dice. Vicino allo stoppino, sotto un velo di cera, spunta il bordo di un foglio arrotolato. Puoi scaldare la candela con una fiamma e liberare il messaggio senza spezzarla.
+
+Dietro il divisorio una donna velata è rimasta seduta. Non prega: tiene il volto rivolto verso di voi e sembra ascoltare. Nella sagrestia, inoltre, la tavola pubblica delle offerte mostra due somme cancellate e riscritte più alte. Puoi leggere il messaggio, parlare con la donna oppure chiedere al sacrestano chi abbia aumentato quelle somme. Non sai se i tre indizi siano collegati.</Text>
+    <Keywords>
+      <Keyword name="sagrestia">
+        <Description>Locale della chiesa dove si conservano arredi, registri e vesti sacre.</Description>
+      </Keyword>
+      <Keyword name="sacrestano">
+        <Description>Persona incaricata di custodire la chiesa e preparare ciò che serve alle funzioni.</Description>
+      </Keyword>
+    </Keywords>
+    <objects>
+      <object name="candela fumosa">
+        <actions>
+          <action type="esamina" reqSkill="guile" reqSkillLevel="1">
+            <description>Scaldare la cera senza bruciare il foglio nascosto presso lo stoppino.</description>
+            <result setFlag="preservedMarianCandle">
+              <Choice text="Portare il messaggio intatto alla donna dietro il tramezzo" goto="288">
+                <Effects>
+                  <setVariable target="marianMsg" value="2" />
+                </Effects>
+              </Choice>
+            </result>
+          </action>
+        </actions>
+      </object>
+    </objects>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="hunger" operator="gte" value="5" />
+        </Requirements>
+        <Content>Vedi alcuni paesani pregare non per la salvezza, ma per avere un pasto l'indomani. La fame logora persino il silenzio della navata.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="pressure" operator="gte" value="4" />
+        </Requirements>
+        <Content>Le preghiere sono mormorii veloci, e gli sguardi dei popolani scattano verso il portone a ogni minimo rumore.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Scaldare la candela e leggere il messaggio nascosto, prima di avvicinarti alla donna" goto="286" setFlag="readMarianCandle">
+        <Effects>
+          <setVariable target="marianMsg" value="1" />
+        </Effects>
+        <Events>
+          <Event>messaggioLetto</Event>
+        </Events>
+      </Choice>
+      <Choice text="Chiedere alla donna velata perché stia ascoltando" goto="287">
+        <Effects />
+      </Choice>
+      <Choice text="Chiedere al sacrestano chi abbia aumentato le offerte registrate" goto="29">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Title>Una promessa al buio</Title>
+    <Intent>
+      <In>al mulino, in attesa</In>
+      <Act>Matthew promette il suo aiuto al mulino per il recupero del grano.</Act>
+      <Out>al mulino, in attesa</Out>
+    </Intent>
+    <Text>Matthew ti accompagna alla porta del mulino. «Se aprite il granaio, non gettate i sacchi in strada per farvi applaudire», dice. «Distribuiteli con ordine. Oswald aspetta soltanto un disordine abbastanza grande da giustificare altri soldati.»
+
+Al buio torni lungo il canale e osservi il granaio. Due lanterne illuminano il ballatoio, ma durante il cambio una parte dell'edificio resta al buio. Sotto la tettoia, una pattuglia gioca a dadi. Hobb lavora alla pompa e guarda spesso la chiave appesa alla cintura del caposquadra. Più tardi un carro vuoto verrà alla porta posteriore per portare via alcuni sacchi.
+
+Ora hai tre piani possibili. Puoi chiedere a Hobb di aiutarti a prendere la chiave. Puoi sfruttare il cambio delle lanterne per entrare dalla finestra superiore. Oppure puoi lasciare che il carro parta e fermarlo lontano dalle case, riducendo il rischio di una rappresaglia immediata sul villaggio.</Text>
+    <Keywords>
+      <Keyword name="ballatoio">
+        <Description>Passaggio rialzato che corre lungo una parete o collega ambienti a un piano superiore.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Chiedere a Hobb di aiutarti a prendere la chiave" goto="19" />
+      <Choice text="Entrare dalla finestra durante il cambio delle lanterne" goto="30" reqSkill="stealth" reqSkillLevel="2" />
+      <Choice text="Fermare il carro lontano dalle case per limitare la rappresaglia" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Title>La cera conserva i numeri</Title>
+    <Intent>
+      <In>al granaio, non visto|al villaggio, non visto</In>
+      <Act>Lo scrivano Elias viene interrotto mentre copia i registri.</Act>
+      <Out>al granaio, scoperto</Out>
+    </Intent>
+    <Text>Lo scrivano posa lo stilo quando un facchino lascia cadere un sacco. Scende dal banco per rimproverarlo e lascia aperta la tavoletta di cera sulla quale registra consegne e debiti.
+
+Dalla pompa arriva il cigolio regolare della manovella: Hobb continua a girarla e non alza gli occhi. Ti avvicini mentre il caposquadra guarda altrove. Le righe sono divise per famiglia. Accanto a ogni nome compaiono la quantità richiesta, quella ricevuta e quella ancora dovuta. Diversi numeri sono stati cancellati e riscritti. Nel conto dei Weaver, un sei più piccolo è ancora visibile sotto il quattro inciso sopra: due sacchi consegnati sono scomparsi dal totale.
+
+Prendi un foglio destinato alle ricevute e copi nomi, quantità e correzioni. Non sai ancora chi abbia ordinato di alterare i conti, ma la copia permetterà ad Alice di confrontare le dichiarazioni con il registro amministrato da Oswald.
+
+Lo scrivano torna verso il banco. Puoi nascondere subito il foglio nella fodera del mantello e portarlo ad Alice. Puoi invece seguirlo quando consegnerà i conti, per scoprire chi li riceve. Oppure puoi cambiare una cifra sulla tavoletta: Oswald si accorgerebbe presto dell'ammanco, ma probabilmente accuserebbe per primo un facchino incapace di leggere il registro.</Text>
+    <Keywords>
+      <Keyword name="stilo">
+        <Description>Strumento appuntito usato per incidere lettere e numeri sulla cera.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Nascondere la copia dei conti e portarla ad Alice" goto="27" grantItem="grain-tallies" />
+      <Choice text="Seguire lo scrivano per scoprire chi riceve il registro" goto="34" grantItem="grain-tallies" />
+      <Choice text="Cambiare una cifra e provocare un controllo nel granaio" goto="33">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Convergence reason="Il testo racconta adesso la salita nel solaio, che è il passaggio comune a tutte le provenienze." />
+    <Title>Lo scrivano nel solaio</Title>
+    <Intent>
+      <In>al granaio, non visto|al mulino, in attesa|al villaggio, non visto|alla dispensa, non visto|nel cortile del maniero, nascosto</In>
+      <Act>Robin spia lo scrivano Elias nel solaio del granaio.</Act>
+      <Out>al granaio, non visto</Out>
+    </Intent>
+    <Text>La scala del solaio finisce contro la botola aperta, e l'ultimo gradino cede di un dito sotto il peso. Nel solaio Elias ricopia il registro su pergamena. La lampada proietta la tua ombra sul tavolo; lo scrivano la vede e posa la penna. Copia da settimane cifre che non tornano e ha smesso di credere che chi sale nel solaio dopo il buio venga per parlare.
+
+«Se siete qui per uccidermi, chiudete almeno la botola», dice. «Sotto c'è Ned, che tiene le stalle e a cui toccherebbe ripulirlo.»
+
+Quando si volta, copre con la mano il foglio sul quale stava lavorando. Hai già intravisto due date diverse e il nome di Gisborne scritto a margine. Sul leggio, una pagina del registro è cucita con un filo più chiaro delle altre: potrebbe essere stata aggiunta o sostituita.
+
+Sotto il tavolo c'è una sacca pronta per un viaggio. Contiene pane, una camicia da uomo e scarpe da donna. Elias non sembra preparato a difendere il balivo Oswald; sembra pronto a fuggire con qualcuno.
+
+«Marian Fitzwalter cerca i conti originali», aggiunge Elias. «Passa da Santa Edith per raccogliere copie. Il sacrestano sa come raggiungerla. Se portate fuori una prova, non lasciate che Oswald sia il solo a leggerla.»
+
+Puoi offrirgli una via sicura in cambio di una pagina firmata che provi le falsificazioni. Puoi rinchiuderlo e prendere i documenti. Oppure puoi chiedergli per chi siano le scarpe e quale minaccia gli impedisca di partire.</Text>
+    <Keywords>
+      <Keyword name="Elias">
+        <Description>Scrivano dei registri di Locksley. Ha corretto i conti sotto minaccia di Gisborne.</Description>
+      </Keyword>
+      <Keyword name="leggio">
+        <Description>Sostegno inclinato sul quale si appoggia un libro o un documento per leggerlo.</Description>
+      </Keyword>
+      <Keyword name="pergamena">
+        <Description>Materiale da scrittura ottenuto dalla pelle animale opportunamente lavorata.</Description>
+      </Keyword>
+    </Keywords>
+    <objects>
+      <object name="registro ricucito">
+        <actions>
+          <action type="esamina" reqSkill="guile" reqSkillLevel="2">
+            <description>Confrontare filo, fori e date per individuare la pagina aggiunta dopo la rilegatura.</description>
+            <result>
+              <foundItem id="stitched-page" />
+              <Choice text="Mostrare a Elias la cucitura e chiedergli di spiegare la seconda data" goto="35" />
+            </result>
+          </action>
+        </actions>
+      </object>
+    </objects>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="pressure" operator="gte" value="3" />
+        </Requirements>
+        <Content>La mano di Elias trema leggermente, macchiando d'inchiostro un bordo della pergamena: è terrorizzato, e sa che le guardie sono in allerta.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Offrire a Elias una fuga sicura in cambio di una prova firmata" goto="35" />
+      <Choice text="Rinchiudere Elias e prendere i documenti prima che dia l’allarme" goto="36">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Chiedere per chi siano le scarpe e che cosa gli impedisca di fuggire" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Title>Il coltello di Hobb</Title>
+    <Intent>
+      <In>al granaio, non visto|al mulino, in attesa</In>
+      <Act>Hobb fissa il suo vecchio coltello alla cintura del caposquadra.</Act>
+      <Out>al villaggio, scoperto</Out>
+    </Intent>
+    <Text>Hobb gira la pompa senza bere. Ogni volta che il caposquadra passa, guarda il coltello legato alla cintura dell'uomo accanto a una chiave di ferro. Sul manico sono incise le iniziali H e M.
+
+«Era di mia madre», ti spiega sottovoce. «Bracy me l'ha preso quando ho aperto un sacco destinato alla mia famiglia. Dice che il grano appartiene ormai allo sceriffo.»
+
+Il caposquadra dirige lo scarico. Quando solleva i sacchi usa entrambe le mani, ma tre facchini lavorano abbastanza vicino da vederti. Hobb indica la chiave alla sua cintura: apre la porta laterale del granaio. Se gli restituisci il coltello, lui è disposto a prendere la chiave durante il cambio delle guardie.
+
+Puoi tentare di sfilare il coltello mentre Bracy solleva un sacco. Puoi pagarlo perché lo restituisca. Oppure puoi chiedere a Hobb di reclamarlo davanti ai facchini: sarebbe più rischioso, ma costringerebbe gli altri a scegliere se sostenere lui o il caposquadra.</Text>
+    <Choices>
+      <Choice text="Sfilare il coltello mentre Bracy solleva un sacco" goto="38" reqSkill="stealth" reqSkillLevel="2" grantItem="hobb-knife" />
+      <Choice text="Pagare Bracy perché restituisca il coltello a Hobb" goto="39" reqItem="silver-coins" grantItem="hobb-knife">
+        <Events>
+          <Event>bracyCorrotto</Event>
+        </Events>
+        <Effects>
+          <setVariable target="paidBracy" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Chiedere a Hobb di reclamare il coltello davanti ai facchini" goto="39" reqSkill="command" reqSkillLevel="2" />
+    </Choices>
+  </Page>
+  <Page id="20">
+    <Title>Il mantello nel cortile</Title>
+    <Intent>
+      <In>nel cortile del maniero, nascosto</In>
+      <Act>Robin distrae i cani del maniero con un lembo del suo mantello.</Act>
+      <Out>nel cortile del maniero, nascosto</Out>
+    </Intent>
+    <Text>Spingi un lembo del mantello attraverso il varco. La cagna giovane lo annusa e smette di abbaiare, ma resta diffidente. Bran, il vecchio levriero, si avvicina più lentamente. Dopo un istante afferra la lana e tira, come faceva quando giocavate nel cortile.
+
+Il mantello ti sfugge. Bran lo trascina fino alla scuderia agitando la coda. Ned esce, raccoglie la stoffa e trova sotto il bavero il falcone ricamato che portavi da ragazzo. Guarda prima il simbolo, poi il punto del muro dietro cui sei nascosto.
+
+«Pensavo foste morto oltremare», dice a bassa voce. Non chiama le guardie. Dietro di lui la porta della scuderia è aperta e una scala sale al solaio illuminato. Dal cortile, però, una sentinella domanda perché i cani abbiano abbaiato.
+
+Puoi chiedere a Ned di lasciare aperta la porta e allontanarsi, così non dovrà guidarti di persona. Puoi entrare subito mentre lui calma i cani. Oppure puoi ritirarti prima che una guardia lo sorprenda ad aiutarti.</Text>
+    <Keywords>
+      <Keyword name="levriero">
+        <Description>Cane alto, snello e veloce, tradizionalmente impiegato nella caccia.</Description>
+      </Keyword>
+      <Keyword name="lembo">
+        <Description>Margine o parte pendente di un tessuto o di un indumento.</Description>
+      </Keyword>
+    </Keywords>
+    <OnEnter>
+      <Effects>
+        <addVariable target="pressure" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Chiedere a Ned di lasciare aperto l’accesso al solaio" goto="21" />
+      <Choice text="Entrare subito mentre Ned calma i cani" goto="18" clearFlag="hasTravelCloak" />
+      <Choice text="Ritirarti prima che una guardia sorprenda Ned ad aiutarti" goto="14">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="21">
+    <Convergence reason="Ned raggiunge Robin dietro le stalle: è la conseguenza diretta del richiamo ai cani, e regge anche le altre provenienze dal cortile." />
+    <Title>Il salario di Ned</Title>
+    <Intent>
+      <In>nel cortile del maniero, nascosto</In>
+      <Act>Ned riconosce Robin nel cortile e scambia con lui poche parole.</Act>
+      <Out>nel cortile del maniero, nascosto</Out>
+    </Intent>
+    <Text>Ned ti raggiunge dietro le stalle quando la sentinella volta le spalle. Ti restituisce il mantello attraverso le sbarre.
+
+«Oswald paga in ritardo, ma paga», dice. «Voi conoscevate ogni cavallo. Di mio figlio non ricordavate neppure il nome.»
+
+Ricordi Ned con un neonato addormentato nella mangiatoia, ma il nome non ti torna alla mente. Ned capisce dal tuo silenzio che il rimprovero ha colpito nel segno.
+
+Poi indica la finestra illuminata. «Elias copia i conti nel solaio. Quando la cuoca Maud porta la cena a Oswald, il corridoio resta vuoto.» Può lasciare la porta socchiusa o dirti quando Oswald sarà lontano, ma non vuole giurarti fedeltà. Puoi limitarti a chiedere la porta aperta; pagare l'informazione come un normale scambio; oppure ordinargli di obbedire in nome di un'autorità che gli abitanti di Locksley non ti riconoscono più.</Text>
+    <Keywords>
+      <Keyword name="sbarre">
+        <Description>Aste robuste di legno o metallo che chiudono un passaggio lasciando vedere attraverso.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Chiedere a Ned di lasciare socchiusa la porta e salire cautamente verso il solaio" goto="18">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Offrirgli una moneta per gli orari di Oswald, senza chiamarla fedeltà" goto="34" reqItem="silver-coins" />
+      <Choice text="Rivendicare il maniero e ordinargli di aiutarti come faceva un tempo" goto="40">
+        <Effects>
+          <subtractVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="22">
+    <Title>Una richiesta limitata</Title>
+    <Intent>
+      <In>alla dispensa, non visto</In>
+      <Act>Maud esita e decide di non dare l'allarme nella dispensa.</Act>
+      <Out>alla dispensa, non visto</Out>
+    </Intent>
+    <Text>Maud abbassa il coltello senza posarlo. Dalla cucina arriva il profumo della cena di Oswald; nella dispensa, tre cipolle sono tutto ciò che resta per i servi. Non occorre un registro per capire chi mangia in questa casa.
+
+«Elias lavora nel solaio sopra la scuderia», dice. «Quando porto la cena nella sala di Oswald, il corridoio resta vuoto per pochi minuti. Ned, quello delle stalle, non deve sapere che vi ho aiutato.»
+
+Maud ti offre una via fino ai conti, non la propria fedeltà. Alla cintura porta la chiave della porta dei servi. Chiederla ti darebbe una fuga più sicura, ma se non la restituissi Oswald accuserebbe lei.
+
+Puoi accettare il limite e approfittare soltanto del corridoio libero. Puoi chiederle anche la chiave, promettendo di riportarla. Oppure puoi ammettere che, se il tuo piano fallisse, non riusciresti a proteggere né lei né Ned dalle conseguenze.</Text>
+    <Choices>
+      <Choice text="Attendere che Maud distragga la servitù, sfruttando il momento per salire al solaio" goto="18">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Chiederle anche la chiave dei servi, promettendo di riportarla prima dell’alba" goto="41" />
+      <Choice text="Ammettere che non puoi garantire chi resterà fuori dalle conseguenze" goto="23">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="23">
+    <Title>Il nome che non hai detto</Title>
+    <Intent>
+      <In>alla dispensa, non visto</In>
+      <Act>Maud riconosce l'arma di Robin e intuisce la sua identit.</Act>
+      <Out>alla dispensa, non visto</Out>
+    </Intent>
+    <Text>Maud indica la spada al tuo fianco. «Un ladro qualunque non porta un'arma simile e non conosce il vecchio canale di Locksley.» Poi guarda la cicatrice sulla tua tempia. «Se siete davvero Robin, almeno ditemi come mi chiamo.»
+
+Da ragazzo venivi qui a rubare croste calde e Maud ti colpiva le dita con il mestolo. Conosci bene il suo nome. Pronunciarlo, però, significa ammettere di essere tornato mentendo alla donna che manda avanti la casa.
+
+Sul ripiano ci sono due pagnotte destinate a Oswald. Un garzone, nella stanza accanto, sta contando le razioni: se le rubassi, la mancanza verrebbe scoperta e qualcuno dei servi potrebbe essere punito.
+
+Puoi chiamare Maud per nome e dirle la verità. Puoi continuare a fingerti un ladro e prendere il pane, accettando il rischio per i servi. Oppure puoi tornare nel canale senza coinvolgerla.</Text>
+    <Keywords>
+      <Keyword name="mestolo">
+        <Description>Utensile con lungo manico e coppa profonda, usato per servire zuppe e vivande.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Pronunciare il nome di Maud, rivelarti e accettare il rimprovero" goto="22">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continuare a fingerti un ladro e prendere il pane destinato a Oswald" goto="42">
+        <Effects>
+          <subtractVariable target="aliceTrust" value="1" />
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Rientrare nel canale senza rubare né costringere Maud a scegliere" goto="14">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="24">
+    <Title>Un soldato che ricorda</Title>
+    <Intent>
+      <In>al ponte, scoperto|nel cortile del maniero, nascosto</In>
+      <Act>Il sergente Ansel esamina il congedo militare di Robin al posto di guardia.</Act>
+      <Out>nel maniero, scoperto</Out>
+    </Intent>
+    <Text>Nel posto di guardia, il sergente Ansel esamina il tuo congedo alla luce della lampada. «È autentico», conclude. «Ero presente quando fu apposto questo sigillo.» Sta per restituirtelo quando entra Oswald Bracy.
+
+Oswald posa sul tavolo tre accuse: debiti non pagati, abbandono delle terre e diserzione. «Il congedo smentisce soltanto l'ultima», dice. «Le altre bastano per confiscare Locksley.»
+
+Ansel può testimoniare che non sei un disertore, ma non sa come siano stati calcolati i debiti. Puoi chiedergli di confermare subito l'autenticità davanti a Oswald. Puoi pretendere di vedere il registro sul quale si fondano le somme richieste. Oppure puoi riprendere il congedo e rifiutarti di deporre l'arco: conserveresti documento e arma, ma Oswald avrebbe il pretesto per dichiararti pericoloso.</Text>
+    <Keywords>
+      <Keyword name="Sergente Ansel">
+        <Description>Veterano della stessa campagna di Robin. Può confermare l'autenticità del congedo, non annullare le altre accuse.</Description>
+      </Keyword>
+      <Keyword name="diserzione">
+        <Description>Abbandono illecito del servizio militare.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Far confermare ad Ansel l’autenticità del congedo davanti a Oswald" goto="43" setFlag="anselWitness" />
+      <Choice text="Chiedere il registro originale su cui Oswald fonda i debiti" goto="43" />
+      <Choice text="Riprendere la lettera e rifiutare di consegnare il tuo arco" goto="43">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Title>Dietro la guardia</Title>
+    <Intent>
+      <In>al ponte, scoperto</In>
+      <Act>Robin segue di nascosto la guardia fino alle stanze di Oswald.</Act>
+      <Out>nel cortile del maniero, nascosto</Out>
+    </Intent>
+    <Text>Segui la guardia fino alla porta dei servi, poi raggiungi una finestra della stanza dove Oswald riceve i propri uomini. Attraverso una fessura nell'imposta lo vedi chiudere il tuo congedo in una cassapanca rinforzata. Subito dopo sigilla un messaggio per Gisborne.
+
+Nella stanza accanto scorgi un registro aperto. Non puoi raggiungere sia il documento sia i conti senza attraversare il corridoio. Una corda da fieno permette di salire alla finestra del solaio, dove lavora lo scrivano. Nel cortile sta arrivando il sergente Ansel, che potrebbe riconoscere il sigillo militare. La cuoca Maud, infine, passa verso la cucina: attraverso il vecchio canale potresti chiederle una via interna.
+
+Puoi cercare prima i conti nel solaio; fermare Ansel e spiegargli che il congedo ti è stato sequestrato; oppure tornare da Maud. Ogni minuto, però, offre a Oswald il tempo di spostare la pergamena.</Text>
+    <Keywords>
+      <Keyword name="imposta">
+        <Description>Pannello di legno usato per chiudere una finestra.</Description>
+      </Keyword>
+      <Keyword name="cassapanca">
+        <Description>Mobile simile a una grande cassa con coperchio, usato anche come sedile.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Salire nel solaio e cercare i conti prima di recuperare la lettera" goto="18" />
+      <Choice text="Fermare Ansel nel cortile e descrivergli il sigillo del congedo" goto="24" />
+      <Choice text="Tornare da Maud attraverso il canale e cercare una via interna" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="26">
+    <Title>Il ponte basso</Title>
+    <Intent>
+      <In>al villaggio, con Alice</In>
+      <Act>Robin osserva il ponte basso presidiato dalle guardie.</Act>
+      <Out>al ponte, scoperto</Out>
+    </Intent>
+    <Text>Sei guardie occupano il ponte di pietra. Nel mezzo è fermo il carro confiscato ai Carter. Joan, la sorella di Edwin, stringe una pentola vuota. Suo figlio Thomas ha i polsi legati a un montante perché ha tentato di riprendere una coperta; la corda gli ha già ferito la pelle.
+
+Il sergente Ansel guida la scorta e non ha ancora guardato il saliceto dove sei nascosto. Sotto il parapetto il torrente copre molti rumori. Sopra, due cavalli sono legati allo stesso finimento.
+
+Con due frecce precise potresti recidere le cinghie e creare una confusione sufficiente a liberare i Carter, ma aumenteresti la caccia all'arciere sconosciuto. Puoi invece uscire col congedo e costringere Ansel a riconoscerti davanti ai suoi uomini. Oppure puoi scendere in acqua, raggiungere Thomas da sotto il ponte e tagliare la corda senza farti vedere.</Text>
+    <Keywords>
+      <Keyword name="parapetto">
+        <Description>Bassa protezione costruita sul margine di un ponte, terrazzo o fortificazione.</Description>
+      </Keyword>
+      <Keyword name="saliceto">
+        <Description>Luogo in cui crescono numerosi salici.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="scoccare dal saliceto sui finimenti e rischiare uno scontro aperto pur di liberare i cavalli" goto="44" reqSkill="archery" reqSkillLevel="2">
+        <Effects>
+          <addVariable target="pressure" value="2" />
+          <setVariable target="combatLoc" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="uscire sulla strada col congedo e sfidare Ansel davanti ai suoi uomini pronti a combattere" goto="44" setFlag="publicAtBridge">
+        <Effects>
+          <setVariable target="combatLoc" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="scendere nel torrente e tagliare la corda che lega Thomas, preparandoti a respingere la scorta" goto="44" reqSkill="stealth" reqSkillLevel="2">
+        <Effects>
+          <setVariable target="combatLoc" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="27">
+    <Title>Tre voci nella fodera</Title>
+    <Intent>
+      <In>al granaio, non visto|al granaio, scoperto|al mulino, in attesa|al villaggio, non visto|al villaggio, con Alice|alla dispensa, non visto</In>
+      <Act>Alice prepara le prove raccolte contro Oswald nascoste nella fodera.</Act>
+      <Out>al villaggio, non visto</Out>
+    </Intent>
+    <Text>Alice dispone sul tavolo ciò che siete riusciti a raccogliere: una copia dei conti, se esiste, oppure dichiarazioni, frammenti e nomi da verificare. Poi batte tre volte contro il muro. Matthew, il mugnaio, entra dalla porta posteriore insieme a Joan Halley. Al collo della donna è appesa una chiave, ma non sai ancora che cosa apra.
+
+Matthew detta il proprio caso ad Alice. «Oswald mi aveva chiesto sei sacchi», dice. «Li ho consegnati tutti. Nei conti che mi hanno letto ne risultano quattro: gli altri due sono diventati un debito.»
+
+Joan indica la riga successiva. «Io ne dovevo quattro e ne ho portati due. Nel registro non compare alcuna consegna. Ora sostengono che li debba ancora tutti.»
+
+Alice mostra la dichiarazione dei Weaver. Anche nel loro caso due sacchi ricevuti dagli uomini di Oswald sono stati cancellati dal conto. Le tre famiglie descrivono lo stesso inganno. Se possiedi una copia o un frammento del registro, collega le loro parole ai numeri usati per imporre debiti e confische; altrimenti Alice trascrive quantità e testimoni perché l'accusa non dipenda dalla memoria di una sola persona.
+
+«Possiamo presentare tutto a Oswald quando ascolterà i reclami», proponi.
+
+Joan lascia sfuggire una breve risata. Prende fra le dita la chiave che porta al collo. «Questa apriva casa mia. Adesso sulla porta c'è il sigillo dello sceriffo.» Guarda la copia sul tavolo. «Se andiamo da Oswald, gli diremo anche chi conserva le prove contro di lui. Che cosa gli impedirà di prendere anche quelle?»
+
+Alice può cucire documenti e dichiarazioni nella fodera del tuo mantello prima che tu affronti Oswald. «Marian Fitzwalter raccoglie copie a Santa Edith», dice Alice. «Il sacrestano sa dove trovarla.» Potete affidarne una copia a Marian, così che non rimangano tutte nello stesso luogo. Oppure Matthew può denunciare le falsificazioni davanti al mulino, dove abitanti e guardie saranno costretti ad ascoltarlo insieme. La scelta decide chi verrà esposto e quante copie potranno sopravvivere.</Text>
+    <Choices>
+      <Choice text="Cucire documenti e dichiarazioni nella fodera prima di affrontare Oswald" goto="43" grantItem="witness-statements">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Affidare una copia alla donna che attende nella cappella" goto="289" grantItem="witness-statements">
+        <Effects />
+      </Choice>
+      <Choice text="sostenere Matthew davanti al mulino, anche a costo di uno scontro armato con le guardie" goto="44" setFlag="publicTestimony">
+        <Events>
+          <Event>testimonianzaPubblica</Event>
+        </Events>
+        <Effects>
+          <addVariable target="pressure" value="1" />
+          <setVariable target="combatLoc" value="2" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Title>La donna dietro il tramezzo</Title>
+    <Intent>
+      <In>nella cappella, non visto</In>
+      <Act>Marian si scopre il volto e discute con Robin prove, testimoni e responsabilità.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>Il sacrestano chiude la porta della cappella. La donna velata ti fa cenno di restare dietro il divisorio di legno. Quando gli ultimi passi si allontanano, si scopre il volto. Riconosci Marian Fitzwalter.
+
+Non la vedevi da anni. Porta i capelli raccolti e ha una macchia d'inchiostro sull'indice. Non ti offre la mano.
+
+«Ho saputo tre giorni fa che le terre di Locksley erano state confiscate», dice. «Ho lasciato il filo nella colombaia perché era l'unico luogo in cui potevo chiamarvi senza usare il vostro nome.»
+
+Marian ti chiede che cosa hai visto dal tuo ritorno. Le racconti soltanto ciò che puoi confermare; lei distingue le tue osservazioni dalle voci raccolte lungo la strada.
+
+«Prima di accusare il balivo Oswald dobbiamo sapere chi è disposto a ripetere i fatti davanti a un giudice», dice. Indica uno spazio sul banco per i documenti e un altro per i nomi dei testimoni. «Un sigillo non dimostra da solo una consegna. E una voce non sostituisce un registro.»
+
+Marian apre due fogli. Il primo è un ricorso contro la confisca, già respinto da un giudice di Nottingham. Il secondo elenca le famiglie che Oswald vuole allontanare dalle loro case prima della luna nuova.
+
+«Posso nascondere una copia delle prove», spiega. «Posso cercare uno scrivano che non dipenda dallo sceriffo e guadagnare tempo per alcune famiglie. Non posso cancellare da sola un decreto che porta il sigillo della corona.»
+
+Poi ti domanda quale parte del rischio intendi assumerti. Puoi concordare come far testimoniare chi ha firmato le dichiarazioni, quando le hai raccolte; ammettere che le famiglie devono venire prima della tua casa; oppure chiederle di condurre il ricorso senza esporre il tuo nome. Il colloquio sta per finire: Oswald deve ancora rispondere delle confische.</Text>
+    <Keywords>
+      <Keyword name="Marian Fitzwalter">
+        <Description>Gentildonna con contatti fra cappelle, case e scrivani di Nottingham. Si oppone al potere arbitrario dello sceriffo, non lavora per restaurare automaticamente Robin.</Description>
+      </Keyword>
+    </Keywords>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="aliceTrust" operator="gte" value="2" />
+        </Requirements>
+        <Content>«Le famiglie hanno bisogno che qualcuno le ascolti prima di dare ordini», aggiunge.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Concordare con Marian come far testimoniare chi ha firmato le dichiarazioni" goto="294" reqItem="witness-statements">
+        <Effects>
+          <addVariable target="marianTrust" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Ammettere che le famiglie devono venire prima della tua casa" goto="295">
+        <Effects>
+          <addVariable target="marianTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Chiedere a Marian di condurre il ricorso senza esporre il tuo nome" goto="296">
+        <Effects>
+          <subtractVariable target="marianTrust" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="29">
+    <Title>L'olio della cappella</Title>
+    <Intent>
+      <In>nella cappella, non visto</In>
+      <Act>Il sacrestano cieco accompagna Robin nella sagrestia fra i registri.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>Il sacrestano cieco ti conduce nella sagrestia. Distingue i registri grazie ai nodi sui lacci e apre quello delle offerte per l'olio.
+
+Accanto al nome di Joan Halley compaiono due pagamenti: una normale offerta alla cappella e, tre giorni dopo, una somma molto più alta riscossa in nome di Gisborne per la «protezione delle funzioni». Il secondo pagamento porta un'impronta di cera rossa. La ricevuta può dimostrare che Gisborne usa i conti della cappella per esigere denaro che non appartiene alle tasse della corona.
+
+Il sacrestano ti lascia copiare nome, data e importo, ma chiude il volume quando provi a prendere la ricevuta. «Se sparisce, chi rimane qui non avrà più alcuna prova.»
+
+Puoi rispettare il rifiuto e chiedergli di testimoniare. Puoi sottrarre la ricevuta, ottenendo una prova trasportabile ma tradendo la sua fiducia. Oppure puoi tornare da Alice Weaver e verificare il pagamento con Joan prima di decidere.</Text>
+    <Keywords>
+      <Keyword name="lacci">
+        <Description>Cordicelle o strisce usate per legare e chiudere qualcosa.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Rispettare il rifiuto e chiedere al sacrestano di testimoniare sui due pagamenti" goto="290" setFlag="chapelWitness">
+        <Effects>
+          <addVariable target="marianTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Sottrarre la ricevuta mentre il sacrestano chiude il registro" goto="308" reqSkill="stealth" reqSkillLevel="2" grantItem="chapel-oil-receipt">
+        <Effects>
+          <subtractVariable target="marianTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Tornare da Alice e verificare chi abbia riscosso la quota da Joan" goto="13">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="30">
+    <Title>Sopra le lanterne</Title>
+    <Intent>
+      <In>al mulino, in attesa</In>
+      <Act>Robin si nasconde sul ballatoio del granaio per spiare le guardie.</Act>
+      <Out>al granaio, non visto</Out>
+    </Intent>
+    <Text>Raggiungi il ballatoio del granaio con la corda fissata in precedenza. Sotto di te due guardie giocano a dadi. La loro discussione copre per qualche istante il rumore dei tuoi passi.
+
+Ora vedi il contenuto del magazzino. Il sacco dei Weaver, riconoscibile dalla cucitura azzurra descritta da Alice, è vicino alla finestra. La tavoletta sulla quale lo scrivano annota pesi e consegne riposa sul banco. Nel granaio ci sono però decine di sacchi: anche aprendo la porta, da solo non potresti distribuirli in modo ordinato.
+
+Puoi prendere soltanto la tavoletta e ottenere una prova delle falsificazioni. Puoi far scivolare nel fossato il sacco dei Weaver e restituire almeno quello. Oppure puoi aspettare che le guardie si addormentino e aprire la porta dall'interno: parte del grano tornerebbe al villaggio, ma Oswald accuserebbe facchini e abitanti di averti aiutato.</Text>
+    <objects>
+      <object name="serratura posteriore">
+        <actions>
+          <action type="apri" reqItem="granary-key">
+            <description>Provare la chiave nella serratura senza forzarla né svegliare le guardie.</description>
+            <result>
+              <Choice text="Aprire la porta e far rotolare fuori soltanto i sacchi già confiscati" goto="32">
+                <Effects>
+                  <subtractVariable target="hunger" value="1" />
+                </Effects>
+              </Choice>
+            </result>
+          </action>
+        </actions>
+      </object>
+    </objects>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="pressure" operator="gte" value="3" />
+        </Requirements>
+        <Content>La tensione tra i soldati nel cortile è palpabile; le ronde si incrociano con tempi stretti, lasciando pochi margini di manovra.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Calarti sul banco e prendere la tavoletta prima di rischiare il grano" goto="17" />
+      <Choice text="Far scivolare dalla finestra il solo sacco riconoscibile di Alice" goto="32" setFlag="returnedAliceGrain">
+        <Effects>
+          <subtractVariable target="hunger" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Attendere il sonno delle guardie e aprire la porta dall’interno" goto="32">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="31">
+    <Title>Il carro sotto gli olmi</Title>
+    <Intent>
+      <In>al mulino, in attesa</In>
+      <Act>Edwin guida il carro verso il mulino eludendo la guardia addormentata.</Act>
+      <Out>al villaggio, non visto</Out>
+    </Intent>
+    <Text>Edwin conduce il carro fuori dal villaggio poco prima dell'alba. Una guardia sonnecchia accanto a lui; l'altra segue a cavallo. Il sentiero passa fra due olmi e poi entra nei campi aperti. È l'ultimo punto dove gli alberi possono nascondere un agguato.
+
+Quando il carro raggiunge il primo tronco, Edwin si piega a controllare il mozzo. Nel rialzarsi lascia la correggia laterale fuori dal fermaglio e guarda per un istante verso il tuo nascondiglio. Un taglio farebbe inclinare il carro senza rovesciarlo. Sopra la strada pende anche un ramo morto che, se abbattuto, spaventerebbe il cavallo della scorta.
+
+Entrambi i piani coinvolgerebbero Edwin contro la sua volontà, mentre sua sorella Joan e il giovane Thomas dipendono ancora dalle decisioni dello sceriffo. Puoi limitarti a mostrarti a lui: se fermerà il carro sarà una sua scelta; se proseguirà dovrai lasciarlo passare. Oppure puoi intervenire sulla correggia o sul ramo e assumerti la responsabilità di costringerlo a partecipare.</Text>
+    <Keywords>
+      <Keyword name="mozzo">
+        <Description>Parte centrale della ruota attraversata dall’asse.</Description>
+      </Keyword>
+      <Keyword name="correggia">
+        <Description>Striscia robusta di cuoio usata in finimenti, legature o meccanismi.</Description>
+      </Keyword>
+    </Keywords>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="aliceTrust" operator="gte" value="1" />
+        </Requirements>
+        <Content>Quando ti intravede, Edwin lascia pendere deliberatamente una correggia dei finimenti.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Tagliare la correggia indicata da Edwin e inclinare il carro fra gli olmi" goto="32" reqSkill="stealth" reqSkillLevel="2" />
+      <Choice text="Far cadere il ramo davanti al cavallo che segue la scorta" goto="32" reqSkill="woodcraft" reqSkillLevel="2">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Mostrarti soltanto a Edwin e lasciargli decidere se fermare il carro" goto="32" />
+    </Choices>
+  </Page>
+  <Page id="32">
+    <Convergence reason="L'apertura racconta il fermo del carro senza dire quale espediente lo abbia prodotto: vale per tutte e tre le scelte." />
+    <Title>Il grano restituito</Title>
+    <Intent>
+      <In>al granaio, non visto|al villaggio, non visto</In>
+      <Act>Il grano rubato viene scaricato di nascosto al mulino di Matthew.</Act>
+      <Out>al mulino, in attesa</Out>
+    </Intent>
+    <Text>Il carro resta fermo abbastanza a lungo perché i sacchi cambino mano. Il grano recuperato raggiunge il mulino senza canti né torce. Matthew nasconde i sacchi dietro il muro, dove l'acqua copre i passi. Alice annota ogni quantità: una parte torna alle famiglie indicate sui sacchi, una parte va a chi non possiede più nulla, una parte resta chiusa per la semina.
+
+«Se domani vengono a cercarla?» domanda una donna prima di prendere la propria razione.
+
+«Domani avrete mangiato», risponde Alice. Non lo dice come una vittoria.
+
+Edwin guarda spesso la strada. Anche se i suoi familiari fossero ormai al sicuro, Oswald potrebbe usarli ancora per punirlo. «Questo non cancella il decreto. Domani porteranno altri uomini e conteranno anche le ciotole.»
+
+Sul portone del granaio qualcuno ha inciso un piccolo falcone. Potrebbe diventare un segno di speranza oppure una prova contro ogni famiglia presente. Puoi raccogliere le deposizioni prima che la gente si disperda; entrare nel maniero mentre le guardie cercano il carico; oppure restare al mulino per affrontare la reazione di Oswald accanto agli abitanti.</Text>
+    <Keywords>
+      <Keyword name="semina">
+        <Description>Quantità di semi conservata per essere piantata nel raccolto successivo.</Description>
+      </Keyword>
+    </Keywords>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="hunger" value="2" />
+        <addVariable target="pressure" value="1" />
+        <addVariable target="aliceTrust" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Raccogliere subito deposizioni mentre le famiglie ricevono il grano" goto="27" />
+      <Choice text="Approfittare dell'assenza delle guardie per infiltrarsi nel maniero e salire al solaio" goto="18" />
+      <Choice text="Restare al mulino e affrontare con gli abitanti la risposta di Oswald" goto="44">
+        <Effects>
+          <setVariable target="combatLoc" value="2" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="33">
+    <Title>Una cifra falsa</Title>
+    <Intent>
+      <In>al granaio, scoperto</In>
+      <Act>La cifra alterata da Robin provoca un controllo e le guardie accusano Hobb.</Act>
+      <Out>al granaio, non visto</Out>
+    </Intent>
+    <Text>La cifra che hai cambiato produce l'effetto sperato prima che tu riesca a lasciare il cortile. Lo scrivano confronta la tavoletta con i sacchi, chiama il caposquadra e ripete il conto. Manca una misura. Oswald non ordina di pesare di nuovo il grano: domanda chi abbia toccato la cera.
+
+Il caposquadra indica Hobb.
+
+Due guardie lo trascinano fuori dalla pompa. Hobb continua a ripetere che non sa leggere; una di loro gli torce il polso fino a costringerlo in ginocchio. «È per questo che lo avete scelto», dice Oswald. «Un uomo che non sa leggere non può nemmeno correggere la propria menzogna.»
+
+La porta dell'archivio resta aperta mentre tutti guardano l'interrogatorio. Hai ottenuto il varco che volevi e costruito contro Hobb la stessa logica che volevi smascherare: un numero scritto da qualcun altro è diventato prova della sua colpa.
+
+Puoi uscire allo scoperto, confessare la modifica e consegnare a Oswald un motivo per arrestarti; seguire il trasferimento e liberare Hobb lontano dal cortile, dove dovrai spiegargli perché lo hai esposto; oppure usare l'archivio aperto e accettare che la tua prova venga pagata da un innocente. Nessuna scelta cancellerà ciò che Hobb ha già visto.</Text>
+    <Keywords>
+      <Keyword name="interrogatorio">
+        <Description>Serie formale o coercitiva di domande rivolte a chi è sospettato o accusato.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Confessare davanti a Oswald di aver alterato tu la tavoletta" goto="43">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+          <addVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="seguire il trasferimento e assaltare le guardie per liberare Hobb" goto="44">
+        <Effects>
+          <addVariable target="pressure" value="2" />
+          <setVariable target="combatLoc" value="3" />
+        </Effects>
+      </Choice>
+      <Choice text="Usare il varco verso lo scrivano Elias accettando che Hobb paghi per la tua menzogna" goto="18">
+        <Effects>
+          <subtractVariable target="aliceTrust" value="2" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="34">
+    <Title>La borsa dello scrivano</Title>
+    <Intent>
+      <In>al granaio, scoperto|nel cortile del maniero, nascosto</In>
+      <Act>Elias lascia il granaio all'alba e Robin decide come intercettarlo.</Act>
+      <Out>al villaggio, non visto</Out>
+    </Intent>
+    <Text>Elias lascia il granaio all'alba con le tavolette avvolte nella tela cerata. Prima di raggiungere il maniero si ferma presso la fossa delle ceneri e vi getta un foglio dopo averlo strappato.
+
+Quando si allontana recuperi i pezzi. Il testo è bruciato, ma la cera rossa che lo chiudeva conserva metà di un sigillo: sembra il muso di un lupo e sotto resta la lettera G.
+
+Il frammento non dimostra da solo chi abbia ricevuto il messaggio. Può però essere confrontato con altri sigilli e mostra che Elias distrugge corrispondenza prima di consegnare i conti a Oswald. Puoi cucirlo nel guanto e seguire Elias fino al registro originale; portarlo ad Alice Weaver perché lo conservi con le deposizioni; oppure nasconderlo in una candela spenta a Santa Edith e affidarlo al sacrestano. Lo conosci da prima di partire: custodiva già i messaggi degli abitanti e potrebbe indicarti qualcuno capace di riconoscere il sigillo.</Text>
+    <Choices>
+      <Choice text="Cucire il frammento nel guanto e seguire Elias fino al solaio" goto="18" grantItem="gisborne-seal-fragment" />
+      <Choice text="Portare la mezza impronta ad Alice perché la unisca alle deposizioni" goto="27" grantItem="gisborne-seal-fragment" />
+      <Choice text="Nascondere il frammento in una candela della cappella e affidarlo al sacrestano" goto="291" grantItem="gisborne-seal-fragment">
+        <Effects />
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="35">
+    <Convergence reason="La firma è l'esito comune: quale leva l'abbia ottenuta resta negli effetti e nel seguito." />
+    <Title>Il prezzo della firma</Title>
+    <Intent>
+      <In>al granaio, non visto</In>
+      <Act>Elias firma una dichiarazione giurata sotto la minaccia di Robin.</Act>
+      <Out>al granaio, non visto</Out>
+    </Intent>
+    <Text>Elias rilegge la dichiarazione due volte. Alla terza corregge una parola: non “ordinato”, ma “minacciato”. Poi firma per esteso e aggiunge la data. La penna rimane fra le sue dita anche quando gli tendi la mano per prendere il foglio.
+
+«Mia sorella si chiama Agnes.» Apre la sacca sotto il tavolo e ne estrae le scarpe da donna che avevi intravisto. «Copiava atti a Nottingham. Ha trovato una lettera che descriveva la vendita di alcune terre prima che il decreto le confiscasse. Gisborne l'ha fatta arrestare per furto di sigillo.»
+
+La pagina che Elias ha firmato può incrinare i conti di Locksley. Agnes viva potrebbe dimostrare che la frode comincia prima di Oswald e raggiunge uffici più alti. Gisborne lo sa: ogni volta che manca un documento, fa recapitare al fratello una nuova data per il trasferimento alla forca.
+
+«Se vengo con voi, penseranno che abbia parlato. Se resto, continuerò a scrivere ciò che vogliono.» Elias ripiega le scarpe senza guardarle. Proteggerlo significa condurlo fuori dal maniero e promettere di cercare una donna in una prigione che non hai mai visto. Nasconderlo presso la tessitrice Alice Weaver sposterebbe il pericolo sulla sua casa. Prendere soltanto la firma gli lascerebbe almeno la possibilità di scegliere la propria menzogna.
+
+Non puoi offrire sicurezza. Puoi decidere a chi dire la verità sul rischio.</Text>
+    <Keywords>
+      <Keyword name="forca">
+        <Description>Struttura usata per eseguire una condanna all’impiccagione.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Promettere di cercare Agnes e condurre Elias alla cappella" goto="297" grantItem="stitched-page" setFlag="promisedAgnes">
+        <Effects>
+          <setVariable target="agnesPromiseMade" value="1" />
+          <addVariable target="marianTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Chiedere ad Alice il permesso di nascondere Elias presso i Weaver" goto="27" grantItem="stitched-page">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Prendere la pagina firmata e lasciare a Elias la scelta di restare o fuggire" goto="298" grantItem="stitched-page" />
+    </Choices>
+  </Page>
+  <Page id="36">
+    <Title>Documenti senza testimone</Title>
+    <Intent>
+      <In>al granaio, non visto</In>
+      <Act>Robin usa la botola per chiudere in trappola Elias.</Act>
+      <Out>al granaio, non visto</Out>
+    </Intent>
+    <Text>Chiudi la botola prima che Elias possa raggiungerla e fai scorrere il gancio. Il rumore è piccolo, quasi domestico. Proprio per questo la paura sul volto dello scrivano arriva tardi: non si aspettava che la tua offerta di ascoltarlo finisse con una serratura.
+
+Il registro pesa più di quanto immaginassi. È rilegato su assi sottili e rinforzato agli angoli; non passerà sotto il mantello. Tagli allora il filo chiaro, strappi la pagina aggiunta e prendi anche la copia sulla quale compare la firma di Gisborne. Dietro di te Elias comincia a chiamare Ned, prima piano, poi con la voce di chi sa che ogni secondo di silenzio verrà usato contro di lui.
+
+Possiedi una prova forte, ma l'hai separata dall'uomo capace di spiegarne date, pressioni e correzioni. Oswald potrà chiamarla un foglio rubato. Elias, una volta liberato, potrà negare tutto oppure raccontare esattamente come lo hai trattato. Dal cortile arriva il passo irregolare di Ned; conosce ogni tavola della scala e fra poco capirà che la botola è bloccata.
+
+Puoi riaprirla e offrire ancora a Elias la fuga, sapendo che la seconda proposta avrà il sapore di una minaccia; scendere dalla tettoia prima che Ned arrivi; oppure portare la pagina direttamente a Marian, affidandole un documento ottenuto senza il consenso del testimone. Il foglio è lo stesso. La storia che lo accompagnerà è già cambiata.</Text>
+    <Keywords>
+      <Keyword name="botola">
+        <Description>Apertura orizzontale munita di sportello, usata per accedere a un piano o vano.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Riaprire la botola e offrire ancora a Elias una fuga insieme" goto="35" />
+      <Choice text="Scendere dalla tettoia con la pagina prima che arrivi Ned" goto="299" grantItem="stitched-page">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Portare subito a Marian il documento preso senza il consenso di Elias" goto="292" grantItem="stitched-page">
+        <Effects>
+          <subtractVariable target="marianTrust" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="37">
+    <Title>Agnes di Nottingham</Title>
+    <Intent>
+      <In>al granaio, non visto</In>
+      <Act>Elias rivela che sua sorella Agnes  prigioniera a Nottingham.</Act>
+      <Out>al granaio, non visto</Out>
+    </Intent>
+    <Text>«Mia sorella non ha falsificato nulla.» Elias parla finalmente senza guardare la porta. «Ha copiato una lettera che provava la vendita delle terre prima del decreto. Quando si sono accorti della seconda copia, Gisborne l'ha accusata di aver rubato il sigillo.»
+
+Si chiama Agnes e lavorava in una stanza dell'archivio di Nottingham dove gli scrivani non firmano ciò che trascrivono. È rinchiusa nella torre orientale, insieme ai debitori che il tribunale non vuole mostrare nelle celle comuni. Ogni settimana Elias riceve una striscia di pergamena con la data del processo spostata di pochi giorni: abbastanza vicina da costringerlo a obbedire, mai abbastanza definitiva da permettergli di scegliere la fuga.
+
+Elias ti mostra la pagina cucita nel registro. Il filo attraversa fori più vecchi e la data superiore è stata raschiata; sotto la polvere di pergamena resta l'anno precedente al decreto. «Vi dirò dove tagliare. Non la toccherò finché Agnes è là dentro.»
+
+Puoi promettere di cercarla, assumendo un debito verso una sconosciuta e una prigione lontana; memorizzare cucitura e date e affrontare Oswald senza una pagina sottratta; oppure domandare a Marian se esista una via legale per proteggere Agnes. Elias non ti chiede di salvare il mondo. Ti chiede di non trasformare sua sorella nel prezzo invisibile della tua prova.</Text>
+    <Keywords>
+      <Keyword name="trascrivono">
+        <Description>Copiano fedelmente un testo scritto in un altro documento.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Promettere di cercare Agnes e chiedere a Elias di firmare la pagina" goto="35" setFlag="knowsAgnes">
+        <Effects>
+          <setVariable target="agnesPromiseMade" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Memorizzare date e cucitura e affrontare Oswald senza sottrarre il foglio" goto="43" setFlag="knowsStitchedPage">
+        <Events>
+          <Event>oswaldIndagato</Event>
+        </Events>
+      </Choice>
+      <Choice text="Chiedere a Marian se può proteggere Agnes attraverso il tribunale" goto="293" setFlag="knowsAgnes">
+        <Effects />
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="38">
+    <Convergence reason="L'arrivo mostra il coltello tornato a Hobb; il modo in cui ci è tornato resta nella pressione e nei brani condizionali." />
+    <Title>Una lama restituita</Title>
+    <Intent>
+      <In>al villaggio, scoperto</In>
+      <Act>Hobb riprende possesso del coltello appartenuto a sua madre.</Act>
+      <Out>al villaggio, non visto</Out>
+    </Intent>
+    <Text>Hobb ha di nuovo il coltello di sua madre. Passa il pollice sulle iniziali del manico e controlla che la lama non sia stata spezzata. Non ti ringrazia: riavere un oggetto che non avrebbe mai dovuto perdere non lo rende tuo debitore.
+
+Dopo aver osservato il cambio delle guardie, prende dalla pompa una piccola chiave sporca di farina. «Apre la porta posteriore, accanto al banco dei pesi. Deve tornare qui prima del mattino, altrimenti perquisiranno noi facchini.»
+
+Ti offre dunque un aiuto preciso e limitato. Puoi usare subito la chiave per raggiungere i sacchi; entrare soltanto per copiare i pesi e restituirla prima del cambio; oppure rifiutarla, lasciando che Hobb non rischi altro per il granaio.</Text>
+    <Choices>
+      <Choice text="Usare subito la piccola chiave sulla porta posteriore del granaio" goto="32" grantItem="granary-key" />
+      <Choice text="Copiare i pesi e restituire la chiave a Hobb prima del cambio" goto="17" />
+      <Choice text="Lasciare a Hobb coltello e chiave, chiedendogli di non rischiare altro" goto="27">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="39">
+    <Convergence reason="La scena distingue esplicitamente chi ha pagato Bracy, con un brano condizionale su «paidBracy»." />
+    <Title>In ginocchio per un coltello</Title>
+    <Intent>
+      <In>al villaggio, scoperto</In>
+      <Act>Il caposquadra umilia Hobb e Robin decide come intervenire.</Act>
+      <Out>al villaggio, scoperto</Out>
+    </Intent>
+    <Text>Il caposquadra sfila il coltello dalla cintura e lo fa girare fra le dita. «Lo vuoi indietro?» domanda a Hobb. «Chiedilo come si chiede al padrone.»
+
+I facchini rallentano senza smettere di lavorare. Nessuno guarda direttamente la pompa, ma ogni sacco impiega più tempo a raggiungere il banco. Hobb tiene le mani aperte lungo i fianchi. Inginocchiarsi gli restituirebbe l'utensile e gli lascerebbe forse il salario; rifiutare trasformerebbe un coltello da pane nella ragione ufficiale del suo licenziamento.
+
+Hai ancora una moneta. Pagarla chiuderebbe la disputa senza umiliare Hobb, ma insegnerebbe al caposquadra che può vendere ciò che sequestra. Puoi invece nominare l'oggetto per quello che è — proprietà di un lavoratore — davanti a uomini che conoscono bene la differenza. Oppure puoi tacere e lasciare che Hobb decida da solo, dopo averlo spinto a reclamare pubblicamente.
+
+Il coltello vale poco. Il gesto con cui tornerà al proprietario vale molto di più, e non soltanto per Hobb. Il caposquadra osserva gli altri facchini: ha capito che la scena riguarda anche il modo in cui obbediranno domani.</Text>
+    <Keywords>
+      <Keyword name="sequestra">
+        <Description>Prende e trattiene un bene per ordine o con il pretesto dell’autorità.</Description>
+      </Keyword>
+    </Keywords>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="paidBracy" operator="eq" value="1" />
+        </Requirements>
+        <Content>Bracy intasca la tua moneta ghignando, ma invece di porgerti subito il coltello preferisce ribadire la sua autorità davanti agli altri.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Pagare una moneta e restituire il coltello a Hobb senza cerimonie" goto="38" reqItem="silver-coins" />
+      <Choice text="Dire davanti ai facchini che una cintura non rende suo il coltello" goto="38" reqSkill="command" reqSkillLevel="2">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Tacere e lasciare a Hobb la decisione se inginocchiarsi" goto="38" />
+    </Choices>
+  </Page>
+  <Page id="40">
+    <Title>Il vecchio padrone</Title>
+    <Intent>
+      <In>nel cortile del maniero, nascosto</In>
+      <Act>Ned riconosce apertamente l'autorit del suo vecchio padrone.</Act>
+      <Out>nel cortile del maniero, nascosto</Out>
+    </Intent>
+    <Text>«Apparteneva», corregge Ned.
+
+La parola cade nel cortile più forte di un grido. La cagna giovane smette di tirare il mantello; persino Bran abbassa il muso. Ned resta sulla soglia della scuderia con la porta alle spalle e le chiavi dei cavalli strette in pugno.
+
+«Quando ve ne siete andato, il tetto perdeva sopra la mangiatoia. Vostro padre era morto e i creditori venivano ogni mese. Nessuno ha chiesto a noi se la casa dovesse aspettarvi.» Indica il vessillo dello sceriffo senza voltarsi. «Oswald almeno non finge che il salario sia affetto.»
+
+Una guardia compare sul cammino di ronda. Ned chiude la porta prima che possa vedere con chi stia parlando e lascia il tuo mantello fuori, nel fango. Non ti denuncia, ma ritira l'aiuto che stavi trattando come un dovere. Dall'interno senti il catenaccio e poi la sua voce rivolta ai cani, ordinaria, abbastanza calma da non attirare domande.
+
+Puoi raccogliere il mantello e chiedere scusa senza pretendere che la scusa riapra la porta; cercare comunque il canale di scolo, usando un'altra persona della casa come accesso; oppure aspettare Oswald all'ingresso principale e trasformare il titolo contestato in uno scontro pubblico. Il maniero non è diventato tuo perché hai ricordato come entrarvi.</Text>
+    <Keywords>
+      <Keyword name="mangiatoia">
+        <Description>Recipiente lungo nel quale viene disposto il cibo per gli animali.</Description>
+      </Keyword>
+    </Keywords>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="aliceTrust" value="1" />
+        <addVariable target="pressure" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Raccogliere il mantello e chiedere scusa senza domandare altro a Ned" goto="14" />
+      <Choice text="Cercare il canale di scolo e rinunciare all’aiuto della scuderia" goto="10" />
+      <Choice text="Aspettare Oswald davanti alla porta principale e rivendicare un’udienza" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="41">
+    <Title>La chiave della dispensa</Title>
+    <Intent>
+      <In>alla dispensa, non visto</In>
+      <Act>Maud affida a Robin la chiave della dispensa e delle porte di servizio.</Act>
+      <Out>alla dispensa, non visto</Out>
+    </Intent>
+    <Text>Maud mostra una chiave lunga quanto il palmo. «Apre la dispensa, la porta dei servi e il cancello sul cortile. Se sparisce, Oswald licenzierà me. Se torna prima dell'alba, potrò dire di averla dimenticata nel paiolo.»
+
+Fra poco Maud porterà la cena nella stanza dove mangia Oswald e la scala per il solaio resterà libera. Con la chiave potresti uscire senza ripercorrere il canale e trasportare anche un registro ingombrante. Ogni porta lasciata aperta, però, indicherebbe che qualcuno della servitù ti ha aiutato.
+
+Puoi prendere la chiave e assumerti la responsabilità di riportarla; rifiutarla e usare soltanto la scala durante il servizio della cena; oppure rinunciare all'ingresso e chiedere a Maud di avvertire Alice Weaver che i registri si trovano sopra la scuderia. In quest'ultimo caso proteggeresti la chiave, ma faresti correre a Maud il rischio di essere seguita.</Text>
+    <Keywords>
+      <Keyword name="paiolo">
+        <Description>Recipiente metallico profondo, spesso munito di manico, usato per cuocere sul fuoco.</Description>
+      </Keyword>
+    </Keywords>
+    <Choices>
+      <Choice text="Prendere la chiave di Maud e promettere di rimetterla nel paiolo" goto="18" grantItem="granary-key" setFlag="owesMaudKey">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Rifiutare la chiave e usare soltanto la scala durante il servizio" goto="18" />
+      <Choice text="Chiedere a Maud di portare ad Alice un messaggio sui registri" goto="27" />
+    </Choices>
+  </Page>
+  <Page id="42">
+    <Title>Pane rubato a una cucina occupata</Title>
+    <Intent>
+      <In>alla dispensa, non visto</In>
+      <Act>Robin ruba due pagnotte destinate alla tavola di Oswald.</Act>
+      <Out>alla dispensa, non visto</Out>
+    </Intent>
+    <Text>Prendi due pagnotte destinate alla tavola di Oswald. Maud non ti ferma, ma ti mostra il conto delle razioni appeso accanto al forno.
+
+«Portatele pure», dice. «Domani Oswald vedrà che mancano e darà meno pane ai servi. Voi direte di aver rubato al ricco; Ned, che tiene le stalle, e il garzone pagheranno il furto.»
+
+Ora sai chi subirebbe la conseguenza. Puoi rimettere le pagnotte a posto e spiegare finalmente perché sei entrato. Puoi portarle ad Alice Weaver, raccontandole la provenienza e lasciando a lei la decisione se usarle. Oppure puoi lasciarle vicino al canale, dove i servi potranno recuperarle senza che tu debba tornare in cucina.</Text>
+    <Choices>
+      <Choice text="Rimettere il pane sullo scaffale e rivelare a Maud perché sei entrato" goto="22">
+        <Effects>
+          <addVariable target="aliceTrust" value="1" />
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Portare le pagnotte ad Alice spiegando da quale razione provengono" goto="13">
+        <Effects>
+          <subtractVariable target="hunger" value="1" />
+          <subtractVariable target="aliceTrust" value="1" />
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Lasciare il pane presso il canale perché siano i servi a ritrovarlo" goto="14">
+        <Effects>
+          <addVariable target="pressure" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="43">
+    <Convergence reason="Il colloquio con Oswald è il beat comune, e la scena distingue adesso chi arriva con prove da chi arriva a mani vuote." />
+    <Title>Il decreto sul tavolo</Title>
+    <Intent>
+      <In>al granaio, non visto|al villaggio, non visto|nel cortile del maniero, nascosto|nel maniero, scoperto</In>
+      <Act>Robin affronta Oswald esponendo le prove dei suoi crimini.</Act>
+      <Out>nel maniero, scoperto</Out>
+    </Intent>
+    <Text>Oswald apre sul tavolo il decreto che ha confiscato Locksley e fa portare il registro sul quale fonda i debiti. La tua lettera di congedo resta con gli altri documenti che ciascuna parte è disposta a mostrare. Il decreto porta il sigillo della corona; il congedo dimostra che non hai abbandonato il servizio militare. Le quantità del registro sono quelle che le famiglie di Locksley raccontano di avere consegnato in numero diverso.
+
+Ansel rimane vicino alla porta. La cuoca Maud si è fermata con un vassoio fra le mani. Due amministratori attendono dall'altra parte del tavolo; uno ha già preparato la penna per trascrivere le tue parole.
+
+«Le vostre terre sono state confiscate per debiti e abbandono», dice Oswald. «Il congedo vi assolve dall'accusa di diserzione, non dalle altre. Potrete presentare ricorso a Nottingham dopo aver consegnato arco e spada.»
+
+Poi indica la finestra. «Se rifiutate, registrerò che siete tornato per spingere i debitori alla rivolta.»
+
+Fuori dalla finestra qualcuno grida che Robin di Locksley è tornato. Chi ripete il nome non sa ancora se tu sia entrato come prigioniero, accusatore o ladro.
+
+Puoi aprire la finestra e leggere ad alta voce i nomi e le quantità cancellate, rendendo pubblica l'accusa. Oppure puoi recuperare documenti e congedo e fuggire prima che Oswald ordini il tuo arresto. Devi decidere con che cosa rispondere, e chi potrà confermarlo quando tu non sarai più in questa stanza.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements mode="any">
+          <Variable id="marianTrust" operator="gte" value="2" />
+          <Variable id="aliceTrust" operator="gte" value="3" />
+        </Requirements>
+        <Content>Una seconda voce risponde dalla piazza: non chiede la restituzione del maniero, ma la lettura pubblica dei conti.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="any">
+          <Item id="grain-tallies" />
+          <Item id="stitched-page" />
+          <Item id="witness-statements" />
+          <Item id="chapel-oil-receipt" />
+          <Item id="gisborne-seal-fragment" />
+          <Item id="hobb-knife" />
+        </Requirements>
+        <Content>Le copie e le testimonianze che hai raccolto possono dimostrare che alcune consegne sono state cancellate o diminuite. Non annullano il decreto, ma possono costringere Oswald a rispondere davanti ad altre persone: puoi deporle sul tavolo e chiedere ad Ansel di impedire che i presenti si allontanino prima di avere testimoniato.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="not">
+          <Item id="grain-tallies" />
+          <Item id="stitched-page" />
+          <Item id="witness-statements" />
+          <Item id="chapel-oil-receipt" />
+          <Item id="gisborne-seal-fragment" />
+          <Item id="hobb-knife" />
+        </Requirements>
+        <Content>Dalla tua parte del tavolo c'è soltanto il congedo. Il registro di Oswald è l'unico conto che qualcuno abbia portato in questa stanza, e nessuno dei presenti è obbligato a ricordarne un altro. Puoi ancora leggere ad alta voce ciò che vedi, ma sarà la tua parola contro una pergamena sigillata.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Mostrare le prove e chiedere ad Ansel di trattenere i testimoni" goto="46">
+        <Requirements mode="any">
+          <Variable id="marianTrust" operator="gte" value="2" />
+          <Talent id="locksleyWitness" />
+        </Requirements>
+      </Choice>
+      <Choice text="Leggere dalla finestra nomi e quantità cancellate" goto="47">
+        <Effects>
+          <addVariable target="pressure" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Recuperare documenti e congedo e fuggire prima dell’arresto" goto="48" />
+    </Choices>
+  </Page>
+  <Page id="44">
+    <Convergence reason="Le tre azioni compaiono tutte nell'apertura del combattimento: i cavalli che si agitano, Thomas che si allontana, Ansel costretto a dividere gli uomini." />
+    <Title>Lo Scontro con le Guardie</Title>
+    <Intent>
+      <In>al granaio, non visto|al mulino, in attesa|al ponte, scoperto|al villaggio, non visto</In>
+      <Act>Robin affronta le guardie a Locksley nel luogo raggiunto lungo il percorso.</Act>
+      <Out>a Locksley, dopo lo scontro</Out>
+    </Intent>
+    <Text />
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="combatLoc" operator="eq" value="1" />
+        </Requirements>
+        <Content>Il tuo intervento spezza l'ordine della scorta sul ponte. I cavalli si agitano, Thomas Carter riesce ad allontanarsi e Ansel deve dividere gli uomini. Joan afferra il figlio e corre via. Devi combattere per aprire una via, non per uccidere.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="combatLoc" operator="eq" value="2" />
+        </Requirements>
+        <Content>Restando a difendere Matthew al mulino, costringi le guardie di Oswald a rispondere con la forza. Gli abitanti arretrano, spaventati, e ti trovi da solo a dover respingere l'avanzata per coprire la fuga del mugnaio e delle prove. Devi resistere all'assalto.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="combatLoc" operator="eq" value="3" />
+        </Requirements>
+        <Content>Il trasferimento di Hobb viene interrotto dalla tua imboscata. Le guardie lasciano cadere i catenacci e sguainano le spade. Devi combattere rapidamente per mettere in fuga i soldati e permettere al facchino di salvarsi.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Combat victoryGoto="47" fleeGoto="48" defeatGoto="45" victoryEvents="guardieRespinteLocksley" victorySetFlag="locksleyGuardsDefeated" fleeSetFlag="escapedLocksleyGuards" defeatSetFlag="robinCapturedLocksley">
+      <Enemy name="Guardie dello Sceriffo" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="45">
+    <Title>La corda non è ancora una forca</Title>
+    <Intent>
+      <In>a Locksley, dopo lo scontro</In>
+      <Act>Robin, scortato come prigioniero, approfitta dell'aiuto del villaggio per fuggire.</Act>
+      <Out>sulla strada, in fuga</Out>
+    </Intent>
+    <Text>Quando la scorta attraversa Locksley con te prigioniero, gli abitanti non assaltano le guardie. Alice rovescia davanti alla ruota una cesta di rocchetti, che rotolano fra gli zoccoli. Maud apre il portone dei servi quel tanto che basta per guardarti in volto. Non osano fermare le lame, ma rallentano il passaggio, ritardano i cavalli, e ti mostrano che non sei un bandito ai loro occhi. Nel cortile, Oswald firma la tua condanna al trasferimento senza farti alcuna domanda.</Text>
+    <Keywords>
+      <Keyword name="rocchetti">
+        <Description>Piccoli cilindri sui quali viene avvolto il filo.</Description>
+      </Keyword>
+    </Keywords>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="combatLoc" operator="eq" value="1" />
+        </Requirements>
+        <Content>Ti legano al montante del carro. Non riesci a vedere che cosa sia accaduto a Joan e Thomas durante lo scontro sul ponte, e Ansel rifiuta di dirtelo.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="combatLoc" operator="eq" value="2" />
+        </Requirements>
+        <Content>Sconfitto davanti al mulino, le guardie ti trascinano via in catene. Non sai se Matthew sia riuscito a mettere in salvo se stesso e il villaggio.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="combatLoc" operator="eq" value="3" />
+        </Requirements>
+        <Content>La tua imboscata è fallita. Ti legano al montante accanto ad Hobb. Il povero facchino guarda a terra, disperato per aver perso la sua unica occasione di salvezza.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Sfruttare i rocchetti di Alice e sparire fra i telai dei Weaver" goto="47">
+        <Requirements>
+          <Variable id="aliceTrust" operator="gte" value="2" />
+        </Requirements>
+      </Choice>
+      <Choice text="Attendere il rintocco della cappella e scivolare dal carro al cimitero" goto="46">
+        <Requirements>
+          <Variable id="marianTrust" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Spezzare il piolo del carro e raggiungere il canale senza aiuti" goto="48" reqSkill="woodcraft" reqSkillLevel="2" />
+      <Choice text="Restare legato finché la scorta entra nel bosco e si allontana dal villaggio" goto="48" />
+    </Choices>
+  </Page>
+  <Page id="46" ending="true">
+    <Title>Verso Sherwood — Il dossier</Title>
+    <Intent>
+      <In>nel maniero, scoperto|sulla strada, in fuga</In>
+      <Act>Robin lascia Locksley portando con s le prove raccolte.</Act>
+      <Out>nella foresta, in esplorazione</Out>
+    </Intent>
+    <Text>Lasci Locksley dalla porta nord senza correre. Solo quando il cimitero nasconde il maniero devii verso il sentiero dei carbonai.
+
+Le prove raccolte non restituiscono da sole la tua casa, ma raccontano una frode coerente: consegne diminuite nei conti, debiti costruiti su quelle cifre e documenti modificati prima della confisca. Oswald potrà chiamare false le copie e punire i testimoni. Ansel non firmerà un verbale falso, ma non disobbedirà a un ordine scritto, e la sua correttezza non basta a proteggere nessuno. Per questo dovrai riprodurle e custodirle in luoghi diversi.
+
+Alice conosce nomi e quantità; Marian Fitzwalter conosce persone capaci di leggere un atto fuori dal controllo dello sceriffo. Potrai cercare il loro aiuto se hai conquistato la loro fiducia, oppure trovare nuovi custodi.
+
+Sherwood appare oltre i campi. Non contiene una banda in attesa del proprio capo: è soltanto un luogo dove le pattuglie faticano a marciare unite e una prova può restare nascosta abbastanza a lungo da essere letta.
+
+Qui si chiude «Il ritorno a Locksley». Lasci il villaggio con delle carte da custodire e con dei nomi da proteggere: sarà da lì che ricomincerà il capitolo successivo.</Text>
+    <Keywords>
+      <Keyword name="carbonai">
+        <Description>Lavoratori che producono carbone di legna bruciando lentamente il legno in cumuli coperti.</Description>
+      </Keyword>
+    </Keywords>
+  </Page>
+  <Page id="47" ending="true">
+    <Title>Verso Sherwood — Il nome gridato</Title>
+    <Intent>
+      <In>a Locksley, dopo lo scontro|nel maniero, scoperto|sulla strada, in fuga</In>
+      <Act>Robin si avvia verso Sherwood mentre il suo nome viene sussurrato nel villaggio.</Act>
+      <Out>nella foresta, in esplorazione</Out>
+    </Intent>
+    <Text>Quando raggiungi l'ultima casa, il tuo nome ti ha già preceduto. Una bambina lo sussurra dalla finestra; un uomo chiude la porta appena ti vede; dal mulino qualcuno risponde al grido delle guardie con un fischio che potrebbe essere scherno o avvertimento.
+
+Nel villaggio circolano versioni incompatibili. Robin è tornato per reclamare il maniero e ha aggredito gli uomini della corona. Robin ha restituito un sacco di grano. Robin ha letto davanti alle imposte i nomi cancellati. Robin ha aperto una via ai Carter. Alice Weaver ha nascosto un uomo fra i telai. Ogni persona conserva il gesto visto dalla propria soglia e riempie il resto con ciò che spera o teme.
+
+Lo sceriffo sceglierà la storia più utile: un nobile fallito che sobilla i debitori. Chi hai aiutato potrà raccontarne un'altra, ma dovrà farlo mentre le pattuglie conteranno scorte, parenti e assenze. Il piccolo falcone inciso sul granaio è già abbastanza riconoscibile da diventare promessa e abbastanza semplice da essere falsificato.
+
+Attraversi il torrente fra gli ontani e lavi il fango dalle mani. Il volto è ricercato, la strada per Nottingham quasi certamente sorvegliata. Il nome che portavi come eredità ha cominciato a muoversi senza il tuo permesso. A Sherwood dovrai decidere se inseguirlo, correggerlo o meritare almeno una parte delle cose che gli altri stanno già attribuendo a Robin Hood.
+
+Qui si chiude «Il ritorno a Locksley». Lasci il villaggio con un nome che corre più veloce di te, e che qualcun altro sta già raccontando a modo suo: sarà da lì che ricomincerà il capitolo successivo.</Text>
+    <Keywords>
+      <Keyword name="ontani">
+        <Description>Alberi che crescono frequentemente lungo corsi d’acqua e terreni umidi.</Description>
+      </Keyword>
+      <Keyword name="sobilla">
+        <Description>Spinge altre persone alla protesta o alla ribellione, spesso di nascosto.</Description>
+      </Keyword>
+    </Keywords>
+    <OnEnter>
+      <Effects>
+        <addVariable target="pressure" value="2" />
+        <subtractVariable target="hunger" value="1" />
+      </Effects>
+    </OnEnter>
+  </Page>
+  <Page id="48" ending="true">
+    <Convergence reason="L'arrivo distingue esplicitamente le due fughe: «se sei fuggito dal maniero o dal villaggio… se hai atteso il bosco legato sul carro»." />
+    <Title>Verso Sherwood — Nessun testimone</Title>
+    <Intent>
+      <In>a Locksley, dopo lo scontro|nel maniero, scoperto|sulla strada, in fuga</In>
+      <Act>Robin si inoltra nei campi braccato dagli uomini dello sceriffo.</Act>
+      <Out>nella foresta, braccato</Out>
+    </Intent>
+    <Text>Quando riesci a sottrarti agli uomini di Oswald, lasci la strada e attraversi i campi verso Sherwood. Se sei fuggito dal maniero o dal villaggio, il canale dietro il mulino nasconde una parte delle impronte; se hai atteso il bosco legato sul carro, sfrutti invece la prima curva senza visuale per liberarti e sparire fra gli alberi.
+
+Oswald sa che sei tornato, ma non conosce ancora ogni porta attraversata né ogni documento visto. Questa incertezza concede tempo a te e mette in pericolo le persone che interrogherà.
+
+Controlli ciò che sei riuscito a portare: forse una prova, una chiave da restituire o soltanto il congedo e il ricordo dei conti. Non sono ancora una causa organizzata. E tu non hai ancora una banda.
+
+Sherwood offre riparo, ma anche freddo e fame. Le persone che vivono fra quegli alberi non hanno alcun motivo per obbedire al titolo che Locksley ti ha appena negato.
+
+Qui si chiude «Il ritorno a Locksley». Lasci il villaggio senza che nessuno possa dire con certezza che cosa hai fatto, e senza nessuno che possa confermarlo: sarà da lì che ricomincerà il capitolo successivo.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="pressure" value="1" />
+      </Effects>
+    </OnEnter>
+  </Page>
+  <Page id="286">
+    <Title>Il foglio aperto</Title>
+    <Intent>
+      <In>nella cappella, non visto</In>
+      <Act>Robin legge il foglio della candela e segue la convocazione.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>Scaldi la candela alla fiamma di un cero e liberi il foglio. Lo apri prima di avvicinarti alla donna: «Aspettami dietro il divisorio. Non pronunciare il mio nome. I conti di Locksley sono stati riscritti.» Ripieghi il messaggio e raggiungi il punto indicato; vuoi sapere chi abbia scritto quelle parole.</Text>
+    <Choices>
+      <Choice text="Ascoltare la donna che ti ha convocato con il messaggio" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="287">
+    <Title>La domanda alla donna</Title>
+    <Intent>
+      <In>nella cappella, non visto</In>
+      <Act>Robin domanda alla donna velata perché lo stia ascoltando.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>Ti avvicini alla donna senza aprire la candela. «Perché ascoltate quello che dico al sacrestano?» domandi. Lei indica il divisorio. «Aspettavo chi avrebbe accettato quella candela. Non dirò il suo nome davanti a una pattuglia.» Hai scelto di interrogarla direttamente; per ascoltare il resto ti sposti al riparo delle panche.</Text>
+    <Choices>
+      <Choice text="Ascoltare il resto della risposta dietro il divisorio" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="288">
+    <Title>Il rotolo sigillato</Title>
+    <Intent>
+      <In>nella cappella, non visto</In>
+      <Act>Robin consegna il rotolo sigillato senza leggerlo.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>Porti alla donna il foglio liberato dalla candela, con il sigillo di cera ancora intatto. Non lo hai aperto. Lei osserva il rotolo e lo mette al sicuro senza svolgerlo. «Avete preferito chiedere a me invece di leggere. Vi risponderò, ma non davanti alla porta.» La segui dietro il divisorio.</Text>
+    <Choices>
+      <Choice text="Attendere che la donna ti parli dopo aver riposto il rotolo" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="289">
+    <Title>Una copia al sicuro</Title>
+    <Intent>
+      <In>al villaggio, non visto</In>
+      <Act>Robin affida una copia delle dichiarazioni a Marian e conserva gli originali.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>Alice prepara una seconda copia delle deposizioni di Locksley; conservi gli originali e porti la copia a Santa Edith. Il sacrestano ti indica la donna dietro il divisorio. Le consegni la copia destinata a Marian. «La custodirò separata dagli originali», risponde lei, ripiegandola in una tasca interna. Ora una copia rimarrà qui anche se le guardie ti fermeranno.</Text>
+    <Choices>
+      <Choice text="Concordare con Marian come usare le prove rimaste al sicuro" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="290">
+    <Title>La voce del sacrestano</Title>
+    <Intent>
+      <In>nella cappella, non visto</In>
+      <Act>Il sacrestano accetta di testimoniare soltanto ciò che può confermare.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>«Accetto di testimoniare sui due pagamenti», risponde il sacrestano. «Dirò quali somme mi sono state lette e quali offerte ho ricevuto. Non dirò di avere assistito alla riscossione.» Richiude il registro, che rimane nella cappella. Poi ti conduce al divisorio: «Marian Fitzwalter raccoglie queste testimonianze. Ripeterò anche a lei ciò che ho appena detto.»</Text>
+    <Choices>
+      <Choice text="Ascoltare Marian dopo l’impegno del sacrestano" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="291">
+    <Title>Il sigillo nella candela</Title>
+    <Intent>
+      <In>al villaggio, non visto</In>
+      <Act>Robin nasconde il sigillo nella candela; la donna lo esamina e lo restituisce.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>Raggiungi Santa Edith e scavi un piccolo incavo sotto una candela spenta. Vi nascondi il frammento senza scaldare la sua impronta. «Ho trovato questo sigillo tra i fogli distrutti dallo scrivano», spieghi al sacrestano. Lui porta la candela alla donna dietro il divisorio e le indica il nascondiglio. La donna estrae il frammento prima di accendere il lume. «Potremo confrontare l’impronta con altre lettere; non basta ancora per accusare qualcuno.» Dopo averla esaminata ti restituisce la cera.</Text>
+    <Choices>
+      <Choice text="Discutere con la donna come confrontare l’impronta" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="292">
+    <Title>Un documento senza consenso</Title>
+    <Intent>
+      <In>al granaio, non visto</In>
+      <Act>Marian copia i dati della pagina sottratta a Elias e restituisce l’originale.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>Porti il documento sottratto a Elias a Santa Edith e chiedi al sacrestano di Marian, come ti aveva indicato lo scrivano. Il sacrestano ti conduce dalla donna dietro il divisorio. Le porgi la pagina e dici subito che Elias non ha acconsentito a consegnartela. «Allora distingueremo ciò che questo foglio prova da ciò che il suo autore è disposto a confermare», risponde. Copia data e firma su un foglio separato e ti restituisce l’originale.</Text>
+    <Choices>
+      <Choice text="Ascoltare Marian sui limiti dei documenti raccolti" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="293">
+    <Title>Un ricorso per Agnes</Title>
+    <Intent>
+      <In>al granaio, non visto</In>
+      <Act>Marian risponde alla richiesta di aiuto legale per Agnes senza garantire la liberazione.</Act>
+      <Out>nella cappella, non visto</Out>
+    </Intent>
+    <Text>Raggiungi Santa Edith seguendo l’indicazione di Elias. Chiedi al sacrestano di Marian: vuoi sapere se un ricorso possa proteggere Agnes. Lui ti conduce dalla donna velata dietro il divisorio. Mentre invita gli altri fedeli a uscire, abbassi la voce per non farti sentire dalla navata.
+
+Riprendi la domanda su Agnes e riferisci a Marian ciò che Elias ti ha raccontato della sorella. «Posso far controllare l’accusa di furto del sigillo e chiedere che ogni trasferimento sia messo per iscritto», risponde. «Non posso promettere che il giudice accetti il ricorso, né che Gisborne aspetti. Serviranno il nome della prigioniera, quello di chi l’ha arrestata e qualcuno disposto a confermare le date.» Le dai i nomi che conosci. Marian li annota su un foglio separato: la via legale è un tentativo concreto, non una garanzia di liberazione.</Text>
+    <Choices>
+      <Choice text="Proseguire con Marian oltre il tentativo di ricorso" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="294">
+    <Title>I nomi prima dell'accusa</Title>
+    <Intent>
+      <In>nella cappella, non visto</In>
+      <Act>Marian chiude l'accordo sui testimoni e Robin raggiunge Oswald.</Act>
+      <Out>nel maniero, scoperto</Out>
+    </Intent>
+    <Text>Marian separa i nomi dei testimoni dalle copie che possono circolare e ripete quali persone hanno accettato di parlare. Non promette che Ansel o Oswald le proteggeranno. Tu lasci Santa Edith con la responsabilità di non trasformare quelle firme in uno scudo per te stesso. Attraversi Locksley senza chiamare altra gente e chiedi di essere ricevuto da Oswald con le prove che puoi davvero sostenere.</Text>
+    <Choices>
+      <Choice text="Entrare e chiedere a Oswald di rispondere dei conti" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="295">
+    <Title>Prima le famiglie</Title>
+    <Intent>
+      <In>nella cappella, non visto</In>
+      <Act>Robin conferma a Marian la priorità delle famiglie e raggiunge Oswald.</Act>
+      <Out>nel maniero, scoperto</Out>
+    </Intent>
+    <Text>Marian ripiega il ricorso e lascia in cima l'elenco delle famiglie minacciate di sfratto. «Allora cominciate da ciò che potete impedire oggi», dice. Uscite separatamente dalla cappella. Tu raggiungi il maniero senza chiedere che il tuo nome preceda i loro casi e domandi di vedere Oswald sui conti e sulle confische.</Text>
+    <Choices>
+      <Choice text="Presentarti a Oswald senza mettere il maniero davanti alle famiglie" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="296">
+    <Title>Un ricorso senza il tuo nome</Title>
+    <Intent>
+      <In>nella cappella, non visto</In>
+      <Act>Marian accetta di tenere il nome di Robin fuori dal ricorso e Robin affronta comunque Oswald sui fatti.</Act>
+      <Out>nel maniero, scoperto</Out>
+    </Intent>
+    <Text>Marian accetta di non usare il tuo nome per dare peso al ricorso. «Questo protegge la causa da una parte della vostra fama», precisa. «Non vi evita di rispondere delle cose che farete in prima persona.» Lasci a lei copie e formule, poi vai al maniero per contestare a Oswald i debiti e le confische che hai visto con i tuoi occhi.</Text>
+    <Choices>
+      <Choice text="Chiedere a Oswald di rispondere dei fatti senza usare Marian come scudo" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="297">
+    <Title>Elias dietro una porta chiusa</Title>
+    <Intent>
+      <In>al granaio, non visto</In>
+      <Act>Robin accompagna davvero Elias a Santa Edith prima di tornare al maniero.</Act>
+      <Out>nel maniero, scoperto</Out>
+    </Intent>
+    <Text>Conduci Elias a Santa Edith per vicoli abbastanza stretti da non esporlo al cortile del maniero. Il sacrestano gli apre la sagrestia e promette soltanto ciò che può mantenere: una porta chiusa, acqua e un messaggio alla rete di Marian. Elias conserva le scarpe di Agnes; tu la pagina firmata. Solo dopo averlo lasciato al riparo torni verso il maniero e chiedi udienza a Oswald.</Text>
+    <Choices>
+      <Choice text="Portare la pagina firmata davanti a Oswald" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="298">
+    <Title>La firma resta con te</Title>
+    <Intent>
+      <In>al granaio, non visto</In>
+      <Act>Robin lascia a Elias la scelta di restare e porta la pagina firmata da Oswald.</Act>
+      <Out>nel maniero, scoperto</Out>
+    </Intent>
+    <Text>Elias non ti segue. Ripone le scarpe nella sacca e resta accanto alla botola, libero almeno di decidere se fuggire dopo di te. Tu pieghi la pagina firmata nella fodera, lasci il solaio e raggiungi l'ingresso del maniero. La prova cambia valore quando scegli di mostrarla alla persona che controlla i registri: Oswald dovrà negare la firma o spiegare le correzioni.</Text>
+    <Choices>
+      <Choice text="Chiedere a Oswald di spiegare la pagina firmata" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="299">
+    <Title>Dalla tettoia alla porta</Title>
+    <Intent>
+      <In>al granaio, non visto</In>
+      <Act>Robin scende con il documento sottratto e raggiunge Oswald prima che Elias venga liberato.</Act>
+      <Out>nel maniero, scoperto</Out>
+    </Intent>
+    <Text>Scendi dalla tettoia prima che Ned raggiunga la botola. Non presenti il foglio rubato come una confessione di Elias: sai di averlo preso senza il suo consenso e che Oswald userà proprio questo contro di te. Giri attorno alla scuderia, raggiungi la porta principale e chiedi di essere ricevuto mentre la pagina è ancora abbastanza recente da costringere Oswald a riconoscerne il contenuto.</Text>
+    <Choices>
+      <Choice text="Entrare con il documento e assumerti il modo in cui lo hai ottenuto" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="308">
+    <Title>La ricevuta sotto il mantello</Title>
+    <Intent>
+      <In>nella cappella, non visto</In>
+      <Act>Robin sottrae la ricevuta, lascia Santa Edith e raggiunge Oswald con la prova presa contro il volere del sacrestano.</Act>
+      <Out>nel maniero, scoperto</Out>
+    </Intent>
+    <Text>Quando il sacrestano richiude il registro, sfili la ricevuta e la nascondi sotto il mantello. Non puoi fingere che sia una copia concessa: l'hai presa dopo un rifiuto esplicito, lasciando nella sagrestia una prova in meno e una fiducia tradita. Esci da Santa Edith prima che il volume venga riaperto, attraversi Locksley e raggiungi il maniero con il foglio che collega Gisborne ai pagamenti della cappella. Chiedi di vedere il balivo Oswald sapendo che dovrai rispondere anche del modo in cui hai ottenuto la prova.</Text>
+    <Choices>
+      <Choice text="Mostrare a Oswald la ricevuta senza nascondere come l'hai ottenuta" goto="43" />
+    </Choices>
+  </Page>
+</Librogame>

@@ -15,6 +15,22 @@
         "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-clear-it/v2/items.xml",
         "sha256": "596AD041AE41858E5E3E7F9CCBCE3EA27286B5705B1FACEF5558BA2FE1C0D09C"
       }
+    },
+    {
+      "id": "robin-hood-cap1-it",
+      "workId": "robin-hood-clear",
+      "title": "Robin Hood I: Il ritorno a Locksley",
+      "language": "it",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v1/librogame.xml",
+        "sha256": "991A210AA8EC487950C9CDC02CA7620071CB75557603EF67074E2C25B5F2584C"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v1/items.xml",
+        "sha256": "596AD041AE41858E5E3E7F9CCBCE3EA27286B5705B1FACEF5558BA2FE1C0D09C"
+      }
     }
   ]
 }
