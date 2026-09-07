@@ -61,6 +61,26 @@
       }
     },
     {
+      "id": "suddenly-an-ogre-it",
+      "workId": "suddenly-an-ogre",
+      "title": "All'improvviso un ogre",
+      "author": "J. Alan Henning",
+      "language": "it",
+      "genre": "Librogame per Dungeon World",
+      "blurb": "Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco. Dopo due ore senti dei rami spezzarsi. Questo è un librogame per il sistema Dungeon World, e quasi tutte le tue scelte sono le sue Mosse Base: leggendo, impari anche come si gioca a quel gioco. I dadi sono già stati tirati per te, e ogni tiro ti viene mostrato insieme a quello che ha significato.",
+      "contentWarnings": "Violenza, sangue, morte e la delusione di un genitore.",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v1/librogame.xml",
+        "sha256": "23498D20165728AAEB24B609E1FDC3CB56CDD02FD1A726945DD8DD8CF0E4855A"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v1/items.xml",
+        "sha256": "D9A120F73EE4DD684FDE7C727B2B84E8DB43B8671D34478BF3DD49FC268E35AD"
+      }
+    },
+    {
       "id": "viperblood-en",
       "workId": "viperblood",
       "title": "Viperblood",

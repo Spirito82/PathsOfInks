@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<librogame formatVersion="1">
+  <items>
+    <item id="healing-potion" name="Pozione curativa" description="Il motivo per cui sei qui. È per tua sorella, e berla tu è una decisione, non un incidente."><special type="heal" value="20"/></item>
+    <item id="short-sword" name="Spada corta" description="Mischia, 1 peso, 8 monete."><special type="equip" value="weapon"/><special type="attackBonus" value="2"/></item>
+    <item id="worn-bow" name="Arco consumato" description="Vicino, 2 pesi, 15 monete. Ha visto stagioni migliori."><special type="attackBonus" value="1"/></item>
+    <item id="one-arrow" name="Fascio di frecce" description="Resta una sola munizione, che è comunque una più di nessuna."/>
+    <item id="leather-armor" name="Armatura di cuoio" description="1 armatura, 1 peso, 10 monete."><special type="equip" value="armor"/><special type="defenseBonus" value="1"/></item>
+    <item id="adventuring-gear" name="Attrezzatura da avventura" description="Corda, cibo, le piccole cose utili. 1 peso, 20 monete."/>
+    <item id="dungeon-rations" name="Razioni da sotterraneo" description="5 usi, 1 peso, 3 monete."><special type="heal" value="4"/></item>
+    <item id="three-coins" name="Tre monete" description="Tutto il denaro che hai con te."/>
+  </items>
+</librogame>
