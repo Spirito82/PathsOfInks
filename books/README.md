@@ -22,6 +22,16 @@ ramo corrente farebbe arrivare a tutti, in un istante, qualunque cosa sia stata 
 `bozza`, `test` o `pubblico`, e ogni compilazione dell'app decide quali accetta: una bozza non
 raggiunge un lettore per una svista nella configurazione della distribuzione.
 
+**Titolo, autore e lingua stanno anche nel manifesto**, oltre che dentro il libro. Servono a
+mostrare un volume prima di averlo scaricato: senza di essi lo scaffale dell'app saprebbe elencare
+soltanto degli identificatori. Il campo `workId` tiene insieme le edizioni della stessa opera —
+capitoli e traduzioni — e la `language` decide in quale scaffale il volume compare.
+
+**Una lingua è un'edizione a sé**, con il proprio `id`, il proprio file e la propria riga nel
+manifesto: chi legge in italiano non scarica il tedesco. Le traduzioni della stessa opera
+condividono `workId` e devono avere la stessa struttura — stessi numeri di scena, stesse scelte,
+stesse destinazioni — perché è la struttura, non il testo, a far funzionare i salvataggi.
+
 **Le impronte sono obbligatorie.** L'app scarica, calcola lo sha256 e installa soltanto se
 corrisponde: un file alterato lungo la strada non entra nella libreria.
 
