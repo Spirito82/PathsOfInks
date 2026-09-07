@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<Librogame formatVersion="1" version="1" phase="test" id="suddenly-an-ogre-it" workId="suddenly-an-ogre" language="it" title="All'improvviso un ogre" author="J. Alan Henning" checks="dadi" genre="Librogame per Dungeon World" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/">
+<Librogame formatVersion="1" version="2" phase="test" id="suddenly-an-ogre-it" workId="suddenly-an-ogre" language="it" title="All'improvviso un ogre" author="J. Alan Henning" checks="dadi" genre="Librogame per Dungeon World" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/">
   <Changes>
     <Change>Riscritto per questo motore; le voci numerate e le loro scelte non sono cambiate</Change>
     <Change>Dove l'originale ti chiede di tirare, l'app tira per te e ti mostra il risultato</Change>
@@ -1174,20 +1174,20 @@ Non ti è rimasto niente, tranne ciò che conta di più.
 Fine.</Text>
   </Page>
   <Page id="98">
-    <Text>[Last Breath—Con 7–9, la Morte ti offrirà un patto. Accettalo e ti stabilizzi, oppure rifiuta e varca le Porte Nere verso qualunque sorte ti attenda.]
+    <Text>[Last Breath—Con 7–9, la Morte ti offrirà un patto. Accettalo e ti stabilizzi, oppure rifiuta e varca i Cancelli Neri verso qualunque sorte ti attenda.]
 
-Attraverso le Porte Nere avanza la Morte, la Signora dei Corvi. Ha una voce rauca come il grido di un corvo. «Portami l'ogre, e tua sorella la rimanderò indietro dalle Porte.»
+Attraverso i Cancelli Neri avanza la Morte, la Signora dei Corvi. Ha una voce rauca come il grido di un corvo. «Portami l'ogre, e tua sorella la rimanderò indietro dai Cancelli.»
 
 Che cosa fai?</Text>
     <Choices>
-      <Choice text="Varcare le Porte: sei allo stremo e nel dolore, la mano di tua sorella calda nella tua" goto="97" />
+      <Choice text="Varcare i Cancelli: sei allo stremo e nel dolore, la mano di tua sorella calda nella tua" goto="97" />
       <Choice text="Fare il possibile per portare l'ogre alla Signora dei Corvi, così che tua sorella viva" goto="75" />
     </Choices>
   </Page>
   <Page id="99" ending="true">
     <Text>[Last Breath—Con 10+ hai ingannato la morte: sei messo male, ma sei ancora vivo.]
 
-Ti prepari a varcare le Porte Nere senza di lei, ma tua sorella ti prende la mano e ti tira indietro. Scuote la testa e dice: «Va tutto bene.» Varca le Porte da sola.
+Ti prepari a varcare i Cancelli Neri senza di lei, ma tua sorella ti prende la mano e ti tira indietro. Scuote la testa e dice: «Va tutto bene.» Varca i Cancelli da sola.
 
 Ti svegli al suono di un russare. È buio, e l'ogre russa poco lontano da te. Tremi di freddo, senza armatura. Nella luce pallida della luna, di tutte le tue cose riesci a vedere soltanto la bottiglia fredda che contiene la pozione curativa. Strisci fino a lei, la stappi e la bevi avidamente. Quando il suo calore ti ha inondato, ti alzi e cominci il lungo viaggio verso la casa dove tua madre piange da sola.
 
@@ -1410,9 +1410,9 @@ Resti immobile qualche istante, la spalla dolorante, a riprendere fiato, per cap
 
 Ti getti sull'arco e sulla faretra, poi guardi con orrore la faretra vuota. L'ogre ti colpisce con la clava e ti fa perdere i sensi. [Il mostro tira 9 (4 su un d8, più 5), meno 1 per la tua armatura, per 8 danni. Ti restano 0 punti ferita.]
 
-Ancora una volta ti trovi davanti alle Porte Nere, tenendo per mano tua sorella.
+Ancora una volta ti trovi davanti ai Cancelli Neri, tenendo per mano tua sorella.
 
-Le lasci la mano e varchi le Porte Nere senza di lei. Sospiri mentre ti volti a guardarla. Presto le attraverserà anche lei e ti raggiungerà.
+Le lasci la mano e varchi i Cancelli Neri senza di lei. Sospiri mentre ti volti a guardarla. Presto li attraverserà anche lei e ti raggiungerà.
 
 Fine.</Text>
   </Page>
@@ -1507,9 +1507,9 @@ Ti getti sulla spada prima ancora che l'ogre si accorga di te e gli affondi la l
 
 Ti afferra la testa con tutte e due le mani. [Il mostro tira 13 (8 su un d8, più 5), meno 1 per la tua armatura, per 12 danni. Ti restano 0 punti ferita.] Ti stritola il cranio fra le mani.
 
-Sbatti le palpebre e ancora una volta ti trovi davanti alle Porte Nere, tenendo per mano tua sorella.
+Sbatti le palpebre e ancora una volta ti trovi davanti ai Cancelli Neri, tenendo per mano tua sorella.
 
-Le lasci la mano e varchi le Porte Nere senza di lei. Sospiri mentre ti volti a guardarla. Presto le attraverserà anche lei e ti raggiungerà.
+Le lasci la mano e varchi i Cancelli Neri senza di lei. Sospiri mentre ti volti a guardarla. Presto li attraverserà anche lei e ti raggiungerà.
 
 Fine.</Text>
   </Page>

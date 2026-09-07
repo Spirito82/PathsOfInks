@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <librogame formatVersion="1">
   <items>
-    <item id="healing-potion" name="Healing potion" description="The reason you came this way at all. It is for your sister, and drinking it yourself would be a decision, not an accident. 0 weight; 50 coins."><special type="heal" value="20"/></item>
-    <item id="short-sword" name="Short sword" description="Plain, kept sharp, and the only thing standing between you and something eight feet tall. To the ogre it would be a knife. Close; 1 weight; 8 coins."><special type="equip" value="weapon"/><special type="attackBonus" value="2"/></item>
-    <item id="worn-bow" name="Worn bow" description="It has seen better seasons. The string has been replaced twice and the belly is scarred, but it still throws an arrow where you point it. Near; 2 weight; 15 coins."><special type="equip" value="weapon"/><special type="attackBonus" value="1"/></item>
-    <item id="one-arrow" name="Bundle of arrows" description="Three shafts when you set out, and you count them more often than you would like. One left is still one more than none. 1 weight; 1 coin."/>
-    <item id="leather-armor" name="Leather armour" description="Boiled hide, cracked across the shoulder where it has been worn wet too often. It turns a killing blow into a bruise, sometimes. 1 armour; 1 weight; 10 coins."><special type="equip" value="armor"/><special type="defenseBonus" value="1"/></item>
-    <item id="adventuring-gear" name="Adventuring gear" description="Chalk, poles, spikes, rope, tinder, the small useful things you notice only when they are gone. Rummage through it and you find what the moment needs. 1 weight; 20 coins."/>
-    <item id="dungeon-rations" name="Dungeon rations" description="Hard bread and salted meat, five meals of it, dull enough that you eat it only when you must. 1 weight; 3 coins."><special type="heal" value="4"/></item>
-    <item id="three-coins" name="Three coins" description="Every coin you have on you, and not enough to replace a single thing you might lose today. 0 weight."/>
+    <item id="healing-potion" name="Healing potion" description="The reason you came. It is for your sister, and drinking it yourself is a decision, not an accident."><special type="heal" value="20"/></item>
+    <item id="short-sword" name="Short sword" description="Close, one weight, eight coins."><special type="equip" value="weapon"/><special type="attackBonus" value="2"/></item>
+    <item id="worn-bow" name="Worn bow" description="Near, two weight, fifteen coins. It has seen better seasons."><special type="attackBonus" value="1"/></item>
+    <item id="one-arrow" name="Bundle of arrows" description="Only one ammo left, which is one more than none."/>
+    <item id="leather-armor" name="Leather armour" description="One armour, one weight, ten coins."><special type="equip" value="armor"/><special type="defenseBonus" value="1"/></item>
+    <item id="adventuring-gear" name="Adventuring gear" description="Rope, food, the small useful things. One weight, twenty coins."/>
+    <item id="dungeon-rations" name="Dungeon rations" description="Five uses, one weight, three coins."><special type="heal" value="4"/></item>
+    <item id="three-coins" name="Three coins" description="All the money you have on you."/>
   </items>
 </librogame>

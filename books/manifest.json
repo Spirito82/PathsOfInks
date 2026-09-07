@@ -1,46 +1,6 @@
 {
   "books": [
     {
-      "id": "robin-hood-cap1-it",
-      "workId": "robin-hood-cap1",
-      "title": "Robin Hood I: Il ritorno a Locksley",
-      "author": "Progetto Librogame",
-      "language": "it",
-      "genre": "Avventura storica",
-      "blurb": "Il primo capitolo di «Robin Hood: Oltre la Leggenda»: il ritorno a Locksley, dall'arrivo di Robin fino al momento in cui lascia il villaggio per Sherwood. Un maniero confiscato, un registro dei debiti che non torna, e un pugno di persone che devono decidere se rischiare per te. Sessantatré scene, e finisce dove comincia la foresta.",
-      "contentWarnings": "Violenza, prigionia, fame e ingiustizia.",
-      "version": 3,
-      "phase": "test",
-      "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v3/librogame.xml",
-        "sha256": "C4B06B3BD62787DA9B93DF0C3162C5B3481C691D17D153F8BD0DDBA9903EC986"
-      },
-      "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v3/items.xml",
-        "sha256": "596AD041AE41858E5E3E7F9CCBCE3EA27286B5705B1FACEF5558BA2FE1C0D09C"
-      }
-    },
-    {
-      "id": "robin-hood-clear-it",
-      "workId": "robin-hood-clear",
-      "title": "Robin Hood: Oltre la Leggenda",
-      "author": "Progetto Librogame",
-      "language": "it",
-      "genre": "Avventura storica",
-      "blurb": "Robin di Locksley torna dalla guerra e trova la sua terra confiscata, i suoi contadini indebitati su registri che non tornano, e un castaldo che ha il sigillo della corona dalla sua parte. Ha un congedo firmato, un arco, e nessuno che gli debba obbedienza. Non è la leggenda: è quello che viene prima. Ogni persona che incontri ha ragioni sue, e ricorda che cosa hai fatto quando eri di passaggio. La banda non ti aspetta nella foresta — semmai la costruisci, e solo se qualcuno decide di seguirti.",
-      "contentWarnings": "Violenza, prigionia, fame e ingiustizia; muore qualcuno a cui potresti tenere.",
-      "version": 3,
-      "phase": "test",
-      "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-clear-it/v3/librogame.xml",
-        "sha256": "CAF8432F2FEBB5FD5229BE55C42F2350EB4807C3CC42AABEC7BBBA6935D2B915"
-      },
-      "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-clear-it/v3/items.xml",
-        "sha256": "596AD041AE41858E5E3E7F9CCBCE3EA27286B5705B1FACEF5558BA2FE1C0D09C"
-      }
-    },
-    {
       "id": "suddenly-an-ogre-en",
       "workId": "suddenly-an-ogre",
       "title": "Suddenly an Ogre",
@@ -49,14 +9,14 @@
       "genre": "Dungeon World gamebook",
       "blurb": "Your sister is dying. The healer gave you the potion and told you that time is everything: the long way round will get you home too late, and the forest path is not safe. You take the forest path. Two hours in, you hear branches breaking. This is a gamebook for the Dungeon World system, and most of your choices are its Basic Moves — so as you read, you also learn how that game is played. The dice have already been rolled for you, and you are shown each roll and what it meant.",
       "contentWarnings": "Violence, gore, death, and disappointing a parent.",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v1/librogame.xml",
-        "sha256": "023F8C8A28A824E441F068DCAFE124736EE4141730AA9F77997E3DC709F5F6A9"
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v2/librogame.xml",
+        "sha256": "23A663532DA0463A47F8E66259D347D0E5C91DF0411AAD398F5985AAA5388779"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v2/items.xml",
         "sha256": "2D828F53EC0305883F537E11B9EDF03009CE123D17F4EDAF521B1E2C4356072A"
       }
     },
@@ -69,14 +29,14 @@
       "genre": "Librogame per Dungeon World",
       "blurb": "Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco. Dopo due ore senti dei rami spezzarsi. Questo è un librogame per il sistema Dungeon World, e quasi tutte le tue scelte sono le sue Mosse Base: leggendo, impari anche come si gioca a quel gioco. I dadi sono già stati tirati per te, e ogni tiro ti viene mostrato insieme a quello che ha significato.",
       "contentWarnings": "Violenza, sangue, morte e la delusione di un genitore.",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v1/librogame.xml",
-        "sha256": "913C796D8DC2ACCEDE9BB534E487DFD1DC848DD32602A8A6FADB617E4655D706"
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v2/librogame.xml",
+        "sha256": "60A81F4038BBFBD1E716D90DEC761E5F47872BC6A587E151392882357E4C9137"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v2/items.xml",
         "sha256": "BDC360D1936F06C4420B70065A01183E09E76F35B479C933C1A6A0AF4228D568"
       }
     },
