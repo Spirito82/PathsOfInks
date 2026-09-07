@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<librogame formatVersion="1">
+  <items>
+    <item id="magic-scroll" name="The magic scroll" description="Parchment that carries a map of the crypt and the notes of the volunteers who came before you. It returns to the castle when its bearer dies."/>
+    <item id="white-yarn" name="Skein of white yarn" description="Pure white wool with a faint glow. It unspools by itself and marks the path you took."/>
+    <item id="crystal-vial" name="Crystal vial" description="Empty, clear, and light enough to forget you are carrying it."/>
+  </items>
+</librogame>

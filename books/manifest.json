@@ -40,14 +40,14 @@
       "title": "Viperblood (pilot)",
       "author": "Luke Simonds",
       "language": "en",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-pilot-en/v1/librogame.xml",
-        "sha256": "A6D25B8563F179B7D27F64AC8ECC537F1778D9CE91FFFDF9A1F2FF1C1F11702B"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-pilot-en/v2/librogame.xml",
+        "sha256": "A02C17A64EB4A0EB149282B0865CF400893A821772D9A4922C364B0B60B4C919"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-pilot-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-pilot-en/v2/items.xml",
         "sha256": "6ECB455FB5633E899578E60B299D905CA95CF9CC8EF1F0D5495BCE766713D85E"
       }
     }

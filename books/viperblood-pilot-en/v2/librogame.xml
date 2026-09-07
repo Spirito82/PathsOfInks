@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="viperblood-pilot-en" workId="viperblood"
+           language="en" title="Viperblood (pilot)" author="Luke Simonds" checks="dadi"
+           license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/"
+           endingSummary="true">
+  <Changes>
+    <Change>Rewritten for this engine; rooms in different states merged into single scenes</Change>
+    <Change>Fights and tests re-tuned and scaled: DEATH &amp; TREASURE is not used</Change>
+    <Change>Enemy morale not implemented; the chance of a random encounter is ours</Change>
+    <Change>Abilities renamed, and tests the original left open assigned by us</Change>
+    <Change>Original illustrations not included: they are not licensed with the text</Change>
+    <Change>A pilot: it covers the entrance and one room, and stops there</Change>
+  </Changes>
+  <CharacterRules skillPoints="6" enemyKnowledgeSkill="instinct">
+    <Skills>
+      <Skill id="toughness" name="Toughness" description="How much poison, gas and exhaustion you can take." maxLevel="5" />
+      <Skill id="agility" name="Agility" description="Squeezing through tight places, slipping past what is watching." maxLevel="5" />
+      <Skill id="strength" name="Strength" description="Shifting stone, forcing what will not move." maxLevel="5" />
+      <Skill id="instinct" name="Instinct" description="Noticing what is out of place, reading a room before it reads you." maxLevel="5" />
+    </Skills>
+  </CharacterRules>
+  <Variables>
+    <Variable id="wealth" name="Coin" type="number" initial="0" min="0" max="100000" visible="true" />
+    <Variable id="yarnPath" name="The thread marks the way" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="fromWhere" name="Which side you crossed from" type="number" initial="1" min="1" max="2" visible="false" />
+  </Variables>
+  <StartingItems>
+    <Item id="magic-scroll" />
+  </StartingItems>
+  <Tables>
+    <Table id="crypt" dice="8" times="2">
+      <Result range="1" is="rabetsFour" />
+      <Result range="2" is="snakesHunting" />
+      <Result range="3" is="rabetsLost" />
+      <Result range="4" is="snakeAsleep" />
+      <Result range="5-8" />
+      <Outcome when="rabetsFour" goto="11" />
+      <Outcome when="snakesHunting" goto="12" />
+      <Outcome when="rabetsLost" goto="13" />
+      <Outcome when="snakeAsleep" goto="14" />
+      <Outcome when="rabetsFour rabetsFour" goto="15" />
+      <Outcome when="rabetsFour snakesHunting" goto="16" />
+      <Outcome when="rabetsFour rabetsLost" goto="17" />
+      <Outcome when="rabetsFour snakeAsleep" goto="18" />
+      <Outcome when="snakesHunting snakesHunting" goto="19" />
+      <Outcome when="snakesHunting rabetsLost" goto="20" />
+      <Outcome when="snakesHunting snakeAsleep" goto="21" />
+      <Outcome when="rabetsLost rabetsLost" goto="22" />
+      <Outcome when="rabetsLost snakeAsleep" goto="23" />
+      <Outcome when="snakeAsleep snakeAsleep" goto="24" />
+    </Table>
+  </Tables>
+
+  <Page id="1">
+    <Title>The stair of weathered jade</Title>
+    <Text>VIPERBLOOD, an emerald green water rumoured to be found only in the First Crypt, is said to cure anything that afflicts humankind. The king is deathly ill. One at a time he is sending out "volunteers" from his court to retrieve some for him. It is your turn now. Any treasure you find is yours to keep as a reward for your service.
+
+You have been equipped with a magic scroll on which you can write notes about what you find and record a map of the crypt. It returns to the castle upon the death of its bearer. It already carries a map, and the notes left by previous "volunteers".
+
+Guards escort you to the ancient burial grounds. In the back, far from the paths maintained for mourners of the recent dead, is the crypt of the ancient queens: the First Crypt. They leave you in front of a stair, roughly hewn into weathered jade stone, which passes steeply up to a massive facade, an entryway, and statues looming over you. Cold air wafts slowly down the steps to your feet.</Text>
+    <Choices>
+      <Choice text="Climb the steps and enter the crypt" goto="2" />
+    </Choices>
+  </Page>
+
+  <Page id="2">
+    <Title>The hall of the jade serpent</Title>
+    <Text>You stand at the entrance on the east side of a large hall, lit faintly by the light from the opening behind you. The space is full, wall to wall and floor to ceiling, with an enormous jade statue of a snake, twisting and turning over itself, tying itself in knots, but with space enough to move through them.
+
+The head of the snake is to your right, mouth open, large pointed fangs ready to strike. Behind the fangs it appears there is a tunnel inside the snake.
+
+At your feet is a skein of pure white yarn, glowing with a slightly magical aura.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements><Variable id="yarnPath" operator="eq" value="1" /></Requirements>
+        <Content>A white thread runs away from your feet and disappears among the coils. You laid it yourself, and it still marks the way through.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Climb into the mouth and follow the tunnel inside the snake" goto="3" />
+      <Choice text="Work around the coils, unspooling the yarn behind you" check="agility" difficulty="1" goto="4" failGoto="5" roll="crypt" grantItem="white-yarn">
+        <Effects><setVariable target="fromWhere" value="1" /></Effects>
+      </Choice>
+      <Choice text="Work around the coils with nothing but your hands" check="agility" difficulty="1" goto="6" failGoto="5" roll="crypt">
+        <Effects><setVariable target="fromWhere" value="1" /></Effects>
+      </Choice>
+      <Choice text="Follow the white thread to the far corner" goto="7">
+        <Requirements><Variable id="yarnPath" operator="eq" value="1" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="3">
+    <Title>Inside the serpent</Title>
+    <Text>You push through the cramped tunnel and find that inside it is far less complicated than it appears from without. Rather than twists and turns it takes you on a relatively straight path north, opening up into a new chamber.</Text>
+    <Choices>
+      <Choice text="Step out into the chamber" goto="10" />
+    </Choices>
+  </Page>
+
+  <Page id="4">
+    <Title>The thread holds</Title>
+    <Text>You work your way carefully over, under and around the intertwining body of the stone snake. It is slow work, and the yarn magically strings itself out as you go, marking a quick path through the statue. You will not have to guess again.</Text>
+    <OnEnter>
+      <Effects><setVariable target="yarnPath" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Come out in the far corner of the hall" goto="7">
+        <Requirements><Variable id="fromWhere" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Come out beside the entrance" goto="2">
+        <Requirements><Variable id="fromWhere" operator="eq" value="2" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="5">
+    <Title>Back where you started</Title>
+    <Text>Try as you might, you cannot make heads or tails of how to go through this snake. The coils bring you round on yourself, and you eventually find yourself back where you started, out of breath and no wiser.</Text>
+    <Choices>
+      <Choice text="Stand again at the eastern entrance" goto="2">
+        <Requirements><Variable id="fromWhere" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Stand again in the far corner" goto="7">
+        <Requirements><Variable id="fromWhere" operator="eq" value="2" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="6">
+    <Title>Over, under, around</Title>
+    <Text>You work your way carefully over, under and around the intertwining body of the stone snake. It is slow work, and you do not recall your exact path: you will have to spend the same time again the next time you cross this room.</Text>
+    <Choices>
+      <Choice text="Come out in the far corner of the hall" goto="7">
+        <Requirements><Variable id="fromWhere" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Come out beside the entrance" goto="2">
+        <Requirements><Variable id="fromWhere" operator="eq" value="2" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="7">
+    <Title>The far corner</Title>
+    <Text>In the south-west corner of the hall are two sets of double doors: one on the south wall, one on the west wall. Behind you the jade coils stand between you and the daylight of the entrance.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements><Variable id="yarnPath" operator="eq" value="1" /></Requirements>
+        <Content>Your white thread comes out of the coils here, and runs back the way you came.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Push open the double doors on the south wall" goto="10" />
+      <Choice text="Cross back towards the entrance, working around the coils" check="agility" difficulty="1" goto="6" failGoto="5" roll="crypt">
+        <Effects><setVariable target="fromWhere" value="2" /></Effects>
+      </Choice>
+      <Choice text="Follow the white thread back to the entrance" goto="2">
+        <Requirements><Variable id="yarnPath" operator="eq" value="1" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="8">
+    <Title>You can go on</Title>
+    <Text>When it is over you stand still for a while, listening to the hall. Nothing else moves among the coils. You pick up where you left off and finish crossing.</Text>
+    <Choices>
+      <Choice text="Come out in the far corner of the hall" goto="7">
+        <Requirements><Variable id="fromWhere" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Come out beside the entrance" goto="2">
+        <Requirements><Variable id="fromWhere" operator="eq" value="2" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="9" ending="true">
+    <Title>You died</Title>
+    <Text>You died in the hall of the jade serpent. The magic scroll returns to the castle on its own, carrying your notes and your map. Future adventurers may find your body, and take anything you were carrying.</Text>
+    <Choices>
+      <Choice text="Take a new volunteer from the court and begin again" goto="1" resetAdventure="true" />
+    </Choices>
+  </Page>
+
+  <Page id="10" ending="true">
+    <Title>Here the pilot ends</Title>
+    <Text>Beyond this door the crypt goes on: a dark room with bronze sconces, a grotto where a stone faun pours dark water, a room strung wall to wall with tripwires, and much further in, the emerald water the king is dying for.
+
+This conversion stops here. What you have played is the entrance and the hall of the jade serpent, converted from Luke Simonds's Viperblood to find out whether it fits the engine.</Text>
+  </Page>
+
+  <Page id="11">
+    <Title>Four rabets, and a dead snake</Title>
+    <Text>Four rabets come round the coils dragging a dead snake by the tail. They stop when they see you. The one at the front lets go of the tail, and the body slaps against the jade.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="Four rabets dragging a dead snake" hp="48" attack="4" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="12">
+    <Title>Hunting</Title>
+    <Text>You hear them before you see them: five snakes moving fast and low over the stone, spread out the way things spread out when they are hunting together.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="A pack of five hunting snakes" hp="40" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="13">
+    <Title>Two rabets, lost</Title>
+    <Text>Two rabets come round a coil arguing in low barks, and stop dead. They are not where they meant to be, and neither of them expected you.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="Two lost rabets" hp="24" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="14">
+    <Title>A snake taking a nap</Title>
+    <Text>A snake lies coiled in a hollow of the statue, out of the draught, asleep. You could try to get past it. It might not stay asleep.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="A snake woken badly" hp="32" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="15">
+    <Title>Two parties at once</Title>
+    <Text>Four rabets come round the coils with a dead snake, and behind them, drawn by the noise, four more. Nobody backs off.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="Four rabets dragging a dead snake" hp="48" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="Four more rabets, drawn by the noise" hp="48" attack="4" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="16">
+    <Title>Hunters and hunted, both here</Title>
+    <Text>Four rabets are dragging their dead snake past you when the pack that has been following the smell arrives. For a moment nobody is sure who is fighting whom. The moment passes.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="Four rabets dragging a dead snake" hp="48" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="A pack of five hunting snakes" hp="40" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="17">
+    <Title>The party and the strays</Title>
+    <Text>Four rabets with a dead snake, and two more who have clearly been looking for them. Finding you first does not improve anybody's temper.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="Four rabets dragging a dead snake" hp="48" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="Two lost rabets" hp="24" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="18">
+    <Title>Enough noise to wake it</Title>
+    <Text>Four rabets come round the coils dragging a dead snake. They are not quiet about it, and in the hollow above you something that was asleep stops being asleep.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="Four rabets dragging a dead snake" hp="48" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="A snake woken badly" hp="32" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="19">
+    <Title>Two packs, one corridor of stone</Title>
+    <Text>Snakes come from both sides of the coil at once. They are not hunting each other, which leaves only you.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="A pack of five hunting snakes" hp="40" attack="5" defense="2" loreDifficulty="2" />
+      <Enemy name="A second pack, coming the other way" hp="40" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="20">
+    <Title>The strays run into the pack</Title>
+    <Text>Two lost rabets come round the coil at a trot, see you, and stop. Behind them the hunting pack that has been herding them all along arrives.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="A pack of five hunting snakes" hp="40" attack="5" defense="2" loreDifficulty="2" />
+      <Enemy name="Two lost rabets" hp="24" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="21">
+    <Title>The pack, and what it wakes</Title>
+    <Text>The hunting pack pours over the jade, and the noise brings the sleeper out of its hollow behind you.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="A pack of five hunting snakes" hp="40" attack="5" defense="2" loreDifficulty="2" />
+      <Enemy name="A snake woken badly" hp="32" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="22">
+    <Title>Four rabets, none of whom know the way</Title>
+    <Text>Two rabets come round the coil, and two more from the other side, all of them lost, all of them relieved to see somebody until they see it is you.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="Two lost rabets" hp="24" attack="3" defense="1" loreDifficulty="1" />
+      <Enemy name="Two more lost rabets" hp="24" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="23">
+    <Title>They step on it before you do</Title>
+    <Text>Two lost rabets come round the coil at a bad angle and one of them puts a foot in the hollow where the snake is sleeping. Now none of you have a choice.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="Two lost rabets" hp="24" attack="3" defense="1" loreDifficulty="1" />
+      <Enemy name="A snake woken badly" hp="32" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="24">
+    <Title>Two hollows, two sleepers</Title>
+    <Text>There is a snake asleep in the hollow ahead of you and another in the hollow behind, and the stone carries every sound you make to both of them.</Text>
+    <Combat victoryGoto="8" fleeGoto="8" defeatGoto="9">
+      <Enemy name="A snake woken badly" hp="32" attack="4" defense="2" loreDifficulty="2" />
+      <Enemy name="A second snake, woken worse" hp="32" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+</Librogame>
