@@ -1,37 +1,63 @@
 {
   "books": [
     {
-      "id": "robin-hood-clear-it",
-      "workId": "robin-hood-clear",
-      "title": "Robin Hood: Oltre la Leggenda",
-      "author": "Progetto Librogame",
-      "language": "it",
-      "version": 2,
-      "phase": "test",
-      "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-clear-it/v2/librogame.xml",
-        "sha256": "258FBBC572C098D69090025F3EE780AABD910D5FD4FB03A8FECADFB183DB2C5E"
-      },
-      "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-clear-it/v2/items.xml",
-        "sha256": "596AD041AE41858E5E3E7F9CCBCE3EA27286B5705B1FACEF5558BA2FE1C0D09C"
-      }
-    },
-    {
       "id": "robin-hood-cap1-it",
       "workId": "robin-hood-cap1",
       "title": "Robin Hood I: Il ritorno a Locksley",
       "author": "Progetto Librogame",
       "language": "it",
-      "version": 2,
+      "genre": "Avventura storica",
+      "blurb": "Il primo capitolo di «Robin Hood: Oltre la Leggenda»: il ritorno a Locksley, dall'arrivo di Robin fino al momento in cui lascia il villaggio per Sherwood. Un maniero confiscato, un registro dei debiti che non torna, e un pugno di persone che devono decidere se rischiare per te. Sessantatré scene, e finisce dove comincia la foresta.",
+      "contentWarnings": "Violenza, prigionia, fame e ingiustizia.",
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v2/librogame.xml",
-        "sha256": "2C4DF089A696512A1614779711189980F7A7E76CB52243A597FBD86492646457"
+        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v3/librogame.xml",
+        "sha256": "C4B06B3BD62787DA9B93DF0C3162C5B3481C691D17D153F8BD0DDBA9903EC986"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v3/items.xml",
         "sha256": "596AD041AE41858E5E3E7F9CCBCE3EA27286B5705B1FACEF5558BA2FE1C0D09C"
+      }
+    },
+    {
+      "id": "robin-hood-clear-it",
+      "workId": "robin-hood-clear",
+      "title": "Robin Hood: Oltre la Leggenda",
+      "author": "Progetto Librogame",
+      "language": "it",
+      "genre": "Avventura storica",
+      "blurb": "Robin di Locksley torna dalla guerra e trova la sua terra confiscata, i suoi contadini indebitati su registri che non tornano, e un castaldo che ha il sigillo della corona dalla sua parte. Ha un congedo firmato, un arco, e nessuno che gli debba obbedienza. Non è la leggenda: è quello che viene prima. Ogni persona che incontri ha ragioni sue, e ricorda che cosa hai fatto quando eri di passaggio. La banda non ti aspetta nella foresta — semmai la costruisci, e solo se qualcuno decide di seguirti.",
+      "contentWarnings": "Violenza, prigionia, fame e ingiustizia; muore qualcuno a cui potresti tenere.",
+      "version": 3,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-clear-it/v3/librogame.xml",
+        "sha256": "CAF8432F2FEBB5FD5229BE55C42F2350EB4807C3CC42AABEC7BBBA6935D2B915"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-clear-it/v3/items.xml",
+        "sha256": "596AD041AE41858E5E3E7F9CCBCE3EA27286B5705B1FACEF5558BA2FE1C0D09C"
+      }
+    },
+    {
+      "id": "suddenly-an-ogre-en",
+      "workId": "suddenly-an-ogre",
+      "title": "Suddenly an Ogre",
+      "author": "J. Alan Henning",
+      "language": "en",
+      "genre": "Dungeon World gamebook",
+      "blurb": "Your sister is dying. The healer gave you the potion and told you that time is everything: the long way round will get you home too late, and the forest path is not safe. You take the forest path. Two hours in, you hear branches breaking. This is a gamebook for the Dungeon World system, and most of your choices are its Basic Moves — so as you read, you also learn how that game is played. The dice have already been rolled for you, and you are shown each roll and what it meant.",
+      "contentWarnings": "Violence, gore, death, and disappointing a parent.",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v1/librogame.xml",
+        "sha256": "023F8C8A28A824E441F068DCAFE124736EE4141730AA9F77997E3DC709F5F6A9"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v1/items.xml",
+        "sha256": "7E0E5158C2BD1C6E1DA55313A456DF25FEB0B95A62D75783CF3D19D0AD256905"
       }
     },
     {
@@ -56,19 +82,20 @@
     {
       "id": "viperblood-it",
       "workId": "viperblood",
-      "title": "Viperblood",
+      "title": "Sangue di Vipera",
       "author": "Luke Simonds",
       "language": "it",
       "genre": "Dungeon crawl vecchia scuola",
       "blurb": "Il re sta morendo, e l'unica cura è un'acqua verde che scorre da qualche parte sotto la cripta delle antiche regine. Tocca a te scendere a prenderla: chi è andato prima di te non è tornato, i suoi appunti sì. Quindici stanze di giada e aria fredda, una statua dentro cui devi arrampicarti, rabet che commerciano e tendono agguati in egual misura, e un serpente viola addormentato su un mucchio di monete. Tutto quello che porti fuori è tuo, se porti fuori anche te.",
-      "version": 1,
+      "contentWarnings": "Violenza, ferite descritte per esteso, e la morte del personaggio.",
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v1/librogame.xml",
-        "sha256": "92E99C6932FD6E8C817F0D93996BB1E54692DC66EB8A303997EFCF3A11C850C8"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v2/librogame.xml",
+        "sha256": "B84FF1921DC9FD4D3A0C174514C695B55364B77C74D7A0450A8907831920F2BC"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v2/items.xml",
         "sha256": "69F3C2D25CE53552474FBAEF3689523B2EAB36C43D1037CEC3F19AF3835F9CEB"
       }
     }

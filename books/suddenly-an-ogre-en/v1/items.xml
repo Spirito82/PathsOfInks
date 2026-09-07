@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<librogame formatVersion="1">
+  <items>
+    <item id="healing-potion" name="Healing potion" description="The reason you came. It is for your sister, and drinking it yourself is a decision, not an accident."><special type="heal" value="20"/></item>
+    <item id="short-sword" name="Short sword" description="Close, one weight, eight coins."><special type="equip" value="weapon"/><special type="attackBonus" value="2"/></item>
+    <item id="worn-bow" name="Worn bow" description="Near, two weight, fifteen coins. It has seen better seasons."><special type="attackBonus" value="1"/></item>
+    <item id="one-arrow" name="Bundle of arrows" description="Only one ammo left, which is one more than none."/>
+    <item id="leather-armor" name="Leather armour" description="One armour, one weight, ten coins."><special type="equip" value="armor"/><special type="defenseBonus" value="1"/></item>
+    <item id="adventuring-gear" name="Adventuring gear" description="Rope, food, the small useful things. One weight, twenty coins."/>
+    <item id="dungeon-rations" name="Dungeon rations" description="Five uses, one weight, three coins."><special type="heal" value="4"/></item>
+    <item id="three-coins" name="Three coins" description="All the money you have on you."/>
+  </items>
+</librogame>

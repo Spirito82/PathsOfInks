@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<librogame formatVersion="1">
+  <items>
+    <item id="locksley-bow" name="Arco di Locksley" description="Un arco di tasso con il falcone di Locksley inciso sotto l'impugnatura."><special type="equip" value="weapon"/><special type="attackBonus" value="2"/><special type="skillBonus" target="archery" value="1"/></item>
+    <item id="short-sword" name="Spada corta" description="Una lama da viaggio robusta, priva di decorazioni."><special type="equip" value="weapon"/><special type="attackBonus" value="1"/></item>
+    <item id="travel-cloak" name="Mantello da viaggio" description="Lana scura, consumata dalla strada; sotto il bavero resta il falcone ricamato di Locksley."><special type="equip" value="armor"/><special type="defenseBonus" value="1"/></item>
+    <item id="discharge-letter" name="Lettera di congedo" description="Il sigillo militare prova quando Robin ha lasciato il servizio, ma non annulla da solo il decreto di confisca."/>
+    <item id="silver-coins" name="Tre monete d'argento" description="Tutto il denaro rimasto a Robin dopo il viaggio."/>
+    <item id="grain-tallies" name="Copia dei pesi del grano" description="Nomi e quantità mostrano prelievi superiori a quelli dichiarati."/>
+    <item id="gisborne-seal-fragment" name="Frammento del sigillo di Gisborne" description="Cera spezzata recuperata tra le minute bruciate; collega Gisborne ai conti di Locksley."/>
+    <item id="granary-key" name="Chiave del granaio" description="Ferro annerito, denti larghi; apre la porta posteriore del granaio fiscale."/>
+    <item id="stitched-page" name="Pagina cucita" description="Una pagina aggiunta al registro dopo il decreto, con data e beneficiari delle confische."/>
+    <item id="witness-statements" name="Deposizioni di Locksley" description="Testimonianze anonime cucite nella fodera del mantello."/>
+    <item id="hobb-knife" name="Coltello di Hobb" description="Un utensile da lavoro sequestrato dal caposquadra, con le iniziali del proprietario."/>
+    <item id="marian-thread" name="Filo bianco" description="Il segnale lasciato nella colombaia da una rete che non ha ancora dichiarato il proprio nome."/>
+    <item id="chapel-oil-receipt" name="Ricevuta dell'olio di Santa Edith" description="Una quota di protezione riscossa da Gisborne compare accanto alla donazione volontaria di Joan Halley."/>
+    <item id="peter-written-statement" name="Nota del forestale Peter" description="Peter ha scritto l'ordine ricevuto da Brewer, il luogo di consegna dei prigionieri e la parola d'ordine dell'ovile."/>
+    <item id="forester-key" name="Chiave dei forestali" description="Una chiave di ferro per catene, ovili e piccoli posti di guardia."/>
+    <item id="forest-fines-ledger" name="Registro delle multe forestali" description="Nomi, somme e ordini mostrano che le multe servono a produrre ostaggi, non soltanto denaro."/>
+    <item id="blank-arrest-warrant" name="Mandato con righe vuote" description="Un mandato già sigillato, con spazi destinati ai nomi di persone non ancora arrestate."/>
+    <item id="bracken-manifest" name="Manifesto di Bracken" description="La doppia contabilità mostra il peso dichiarato e quello reale dei carri del convoglio."/>
+    <item id="reprisal-orders" name="Ordini di rappresaglia" description="Gisborne ha preparato sovrattasse contro tre villaggi prima ancora dell'attacco al convoglio."/>
+    <item id="gisborne-pay-orders" name="Ordini della paga segreta" description="Il cilindro elenca la casa di caccia in cui vengono pagati gli informatori di Gisborne."/>
+    <item id="bracken-pay-key" name="Chiave della paga di Bracken" description="La seconda chiave del forziere della paga, presa al capitano del convoglio."/>
+    <item id="prison-ration-ledger" name="Registro delle razioni" description="Quaranta razioni risultano consegnate ogni giorno, ma soltanto venti raggiungono le celle."/>
+    <item id="decree-draft-notes" name="Note sulla bozza del decreto" description="Le note del copista collegano tre testimoni alla vendita delle terre precedente alla confisca."/>
+    <item id="prison-transfer-order" name="Mandato di trasferimento" description="Ordina il trasferimento di Agnes e degli altri detenuti considerati utili a Gisborne."/>
+    <item id="prisoner-list" name="Lista dei prigionieri utili" description="Nomi di debitori e testimoni che l'amministrazione intende usare come leva."/>
+    <item id="chaplain-decree-copy" name="Copia del cappellano" description="Padre Godric ha conservato una copia della bozza autentica del decreto di Locksley."/>
+    <item id="hollow-tithe-weight" name="Peso cavo delle decime" description="Il contrappeso dell'esattore è truccato e porta sotto la ruggine il marchio di Gisborne."/>
+    <item id="kirklees-rubbing" name="Calco del registro di Kirklees" description="Riproduce firma e pagamenti nascosti nelle perdite di strada delle decime."/>
+    <item id="tithe-marking-dies" name="Punzoni delle decime" description="Servono a cancellare i marchi dei villaggi e attribuire il grano alla guarnigione."/>
+    <item id="false-abbey-seal" name="Falso sigillo dell'abbazia" description="Una matrice perfetta, mentre il vero sigillo di Adeliza ha il bordo scheggiato."/>
+    <item id="sheriff-provocation-order" name="Ordine di provocazione" description="Autorizza Gisborne a creare disordini da attribuire ai fuorilegge; porta il sigillo privato dello sceriffo."/>
+    <item id="willow-tonic" name="Tonico di salice" description="Una dose medicinale preparata per febbre e ferite; si consuma dopo l'uso."><special type="heal" value="15"/></item>
+    <item id="field-rations" name="Razioni da campo" description="Pane secco, mele e cacio sufficienti a soccorrere una piccola famiglia; si consumano dopo l'uso."><special type="subtractVariable" target="hunger" value="1"/></item>
+  </items>
+</librogame>
