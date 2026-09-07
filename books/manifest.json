@@ -33,6 +33,23 @@
         "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v2/items.xml",
         "sha256": "596AD041AE41858E5E3E7F9CCBCE3EA27286B5705B1FACEF5558BA2FE1C0D09C"
       }
+    },
+    {
+      "id": "viperblood-pilot-en",
+      "workId": "viperblood",
+      "title": "Viperblood (pilot)",
+      "author": "Luke Simonds",
+      "language": "en",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-pilot-en/v1/librogame.xml",
+        "sha256": "A6D25B8563F179B7D27F64AC8ECC537F1778D9CE91FFFDF9A1F2FF1C1F11702B"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-pilot-en/v1/items.xml",
+        "sha256": "6ECB455FB5633E899578E60B299D905CA95CF9CC8EF1F0D5495BCE766713D85E"
+      }
     }
   ]
 }
