@@ -19,18 +19,18 @@
     },
     {
       "id": "robin-hood-cap1-it",
-      "workId": "robin-hood-clear",
+      "workId": "robin-hood-cap1",
       "title": "Robin Hood I: Il ritorno a Locksley",
       "author": "Progetto Librogame",
       "language": "it",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v1/librogame.xml",
-        "sha256": "991A210AA8EC487950C9CDC02CA7620071CB75557603EF67074E2C25B5F2584C"
+        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v2/librogame.xml",
+        "sha256": "2C4DF089A696512A1614779711189980F7A7E76CB52243A597FBD86492646457"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/robin-hood-cap1-it/v2/items.xml",
         "sha256": "596AD041AE41858E5E3E7F9CCBCE3EA27286B5705B1FACEF5558BA2FE1C0D09C"
       }
     }
