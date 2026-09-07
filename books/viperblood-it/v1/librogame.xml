@@ -1,0 +1,1444 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="1" phase="test" id="viperblood-it" workId="viperblood"
+           language="it" title="Viperblood" author="Luke Simonds" checks="dadi"
+           license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/"
+           endingSummary="true" deathPage="43" genre="Dungeon crawl vecchia scuola">
+  <Blurb>Il re sta morendo, e l'unica cura è un'acqua verde che scorre da qualche parte sotto la cripta delle antiche regine. Tocca a te scendere a prenderla: chi è andato prima di te non è tornato, i suoi appunti sì.
+
+Quindici stanze di giada e aria fredda, una statua dentro cui devi arrampicarti, rabet che commerciano e tendono agguati in egual misura, e un serpente viola addormentato su un mucchio di monete. Tutto quello che porti fuori è tuo, se porti fuori anche te.</Blurb>
+  <Changes>
+    <Change>Riscritto per questo motore: le stanze che l'originale ripeteva in stati diversi sono scene singole che cambiano con quello che hai fatto</Change>
+    <Change>«Torna al paragrafo precedente» sostituito da uscite esplicite, e alcuni paragrafi sono diventati oggetti o azioni</Change>
+    <Change>DEATH &amp; TREASURE non è usato: combattimenti, prove e danni sono stati ritarati per questo motore</Change>
+    <Change>Il morale dei nemici non è implementato; la probabilità di un incontro casuale è una regola aggiunta da noi</Change>
+    <Change>Le capacità sono state rinominate Tempra, Agilità, Forza, Istinto, e le prove che l'originale lasciava aperte le abbiamo assegnate noi</Change>
+    <Change>Il veleno colpisce una volta sola invece che nell'arco di ore: questo motore non ha un orologio</Change>
+    <Change>La porta a ovest della stanza del serpente addormentato porta alla stanza delle pire, correggendo una contraddizione dell'originale</Change>
+    <Change>Illustrazioni e mappa originali non incluse: non sono coperte dalla licenza del testo</Change>
+    <Change>Tradotto in italiano</Change>
+  </Changes>
+  <CharacterRules skillPoints="6" enemyKnowledgeSkill="instinct">
+    <Skills>
+      <Skill id="toughness" name="Tempra" description="Quanto veleno, gas e sfinimento riesci a reggere." maxLevel="5" />
+      <Skill id="agility" name="Agilità" description="Infilarsi in spazi stretti, passare accanto a ciò che sta guardando." maxLevel="5" />
+      <Skill id="strength" name="Forza" description="Spostare la pietra, forzare ciò che non cede." maxLevel="5" />
+      <Skill id="instinct" name="Istinto" description="Notare quello che è fuori posto, leggere una stanza prima che sia lei a leggere te." maxLevel="5" />
+    </Skills>
+  </CharacterRules>
+  <Variables>
+    <Variable id="wealth" name="Monete" type="number" initial="0" min="0" max="100000" visible="true" />
+    <Variable id="yarnPath" name="Un filo dentro la statua" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="poolSnakeDead" name="Il serpente della vasca è morto" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="secretDoor" name="Il pannello è aperto" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="sconcesLit" name="Le torciere sono accese" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="guardsDead" name="Le guardie del passaggio sono morte" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="webKnown" name="Conosci il percorso nella ragnatela" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="webCut" name="La ragnatela è tagliata" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="webSprung" name="La ragnatela è già scattata" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="rabetsDead" name="I rabet sono morti" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="grottoOpen" name="Il muro della grotta è aperto" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="purpleSnakeDead" name="Il serpente viola è morto" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="hasEgg" name="Porti un uovo" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="eggDelivered" name="I rabet hanno il loro uovo" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="puddingBurned" name="Il budino è bruciato" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="hasWater" name="La bottiglia è piena di viperblood" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="fromWhere" name="Da che lato hai attraversato la statua" type="number" initial="1" min="1" max="2" visible="false" />
+    <Variable id="riverSide" name="Su quale riva del fiume ti trovi" type="number" initial="1" min="1" max="2" visible="false" />
+    <Variable id="campSearched" name="L'accampamento è stato frugato" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="purseTaken" name="La borsa caduta è tua" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <StartingItems>
+    <Item id="magic-scroll" />
+  </StartingItems>
+  <Tables>
+    <Table id="crypt" dice="8" times="2">
+      <Result range="1" is="rabetsFour" />
+      <Result range="2" is="snakesHunting" />
+      <Result range="3" is="rabetsLost" />
+      <Result range="4" is="snakeAsleep" />
+      <Result range="5-8" />
+      <Outcome when="rabetsFour" goto="102" />
+      <Outcome when="snakesHunting" goto="103" />
+      <Outcome when="rabetsLost" goto="104" />
+      <Outcome when="snakeAsleep" goto="105" />
+      <Outcome when="rabetsFour rabetsFour" goto="106" />
+      <Outcome when="rabetsFour snakesHunting" goto="107" />
+      <Outcome when="rabetsFour rabetsLost" goto="108" />
+      <Outcome when="rabetsFour snakeAsleep" goto="109" />
+      <Outcome when="snakesHunting snakesHunting" goto="110" />
+      <Outcome when="snakesHunting rabetsLost" goto="111" />
+      <Outcome when="snakesHunting snakeAsleep" goto="112" />
+      <Outcome when="rabetsLost rabetsLost" goto="113" />
+      <Outcome when="rabetsLost snakeAsleep" goto="114" />
+      <Outcome when="snakeAsleep snakeAsleep" goto="115" />
+    </Table>
+  </Tables>
+
+  <Page id="1">
+    <Title>La scala di giada consunta</Title>
+    <Text>Il VIPERBLOOD, un'acqua verde smeraldo che si dice si trovi soltanto nella Prima Cripta, guarirebbe qualunque male affligga gli uomini. Il re è malato a morte. Uno alla volta manda giù «volontari» della sua corte a prendergliene un po'. Adesso tocca a te. Ogni tesoro che trovi è tuo, come ricompensa per il servizio.
+
+Ti hanno dato una pergamena magica su cui annotare quello che trovi e disegnare la mappa della cripta. Torna al castello quando chi la porta muore. Porta già una mappa, e gli appunti lasciati dai «volontari» venuti prima.
+
+Le guardie ti scortano fino agli antichi campi di sepoltura. In fondo, lontano dai sentieri tenuti in ordine per chi piange i morti recenti, c'è la cripta delle antiche regine: la Prima Cripta. Ti lasciano davanti a una scala, scavata grossolanamente nella giada consunta, che sale ripida verso una facciata enorme, un ingresso e statue che incombono su di te. Aria fredda scende lenta lungo i gradini fino ai tuoi piedi.</Text>
+    <Choices>
+      <Choice text="Salire i gradini ed entrare nella cripta" goto="42" />
+    </Choices>
+  </Page>
+
+  <Page id="3">
+    <Title>Il pannello consunto</Title>
+    <Text>Ispezionando con cura la parete sud, trovi un pannello diverso dagli altri: la sua torciera è senza olio e la faccia di serpente incisa è consumata dal tocco ripetuto.</Text>
+    <Choices>
+      <Choice text="Toccare il serpente" goto="28" />
+      <Choice text="Lasciare stare il pannello" goto="17" />
+    </Choices>
+  </Page>
+
+  <Page id="5">
+    <Title>Tagliare la ragnatela</Title>
+    <Text>Tagli di netto la ragnatela di fili, lasciandoli penzolare dai loro chiodi mentre apri passaggi nella stanza. Quando finisci, senti un sibilo e la stanza si riempie di un gas, evidentemente innescato dai fili.</Text>
+    <OnEnter>
+      <Effects><setVariable target="webCut" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Trattenere il respiro e resistere" check="toughness" difficulty="2" goto="11" failGoto="16" />
+    </Choices>
+  </Page>
+
+  <Page id="6">
+    <Title>Di netto, attraverso il collo</Title>
+    <Text>Con un colpo fortunato tagli di netto il collo del serpente: la testa precipita nella vasca con un tonfo, e subito dopo il corpo.</Text>
+    <OnEnter>
+      <Effects><setVariable target="poolSnakeDead" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Fermarsi a guardare l'acqua" goto="19" />
+    </Choices>
+  </Page>
+
+  <Page id="7">
+    <Title>Le zanne</Title>
+    <Text>Il serpente ti affonda le zanne, e la ferita diventa fredda quasi subito. Il veleno fa il suo lavoro in un istante invece che nell'arco di ore, e quello che lascia dietro di sé ti resta nel sangue.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="18" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Uscire barcollando dalla camera" goto="42" />
+      <Choice text="Voltarsi e continuare a combattere" goto="8" />
+    </Choices>
+  </Page>
+
+  <Page id="8">
+    <Title>Il serpente nella vasca</Title>
+    <Text>Un enorme serpente smeraldo esplode fuori dalla vasca, spruzzando acqua per tutta la stanza.</Text>
+    <Combat victoryGoto="6" fleeGoto="7" defeatGoto="43">
+      <Enemy name="Un enorme serpente smeraldo" hp="36" attack="7" defense="4" loreDifficulty="3" />
+    </Combat>
+  </Page>
+
+  <Page id="9">
+    <Title>Il fauno e la vasca</Title>
+    <Text>In fondo a un corridoio breve c'è una piccola grotta nel muro. Una statua di fauno versa un liquido scuro in una vasca attorno ai suoi piedi.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements><Variable id="grottoOpen" operator="eq" value="0" /></Requirements>
+        <Content>Tra le pietre della parete di fondo della grotta filtrano punti di luce: dall'altra parte c'è un'altra stanza. Potresti provare a spostare qualche pietra per aprire un passaggio, ma farlo in silenzio sarebbe difficile.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="grottoOpen" operator="eq" value="1" /></Requirements>
+        <Content>Dalle pietre della parete dietro la statua è stato ricavato un passaggio verso ovest.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Provare a spostare le pietre in silenzio" check="strength" difficulty="2" goto="39" failGoto="46">
+        <Requirements><Variable id="grottoOpen" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Andare a ovest attraverso il passaggio" goto="64">
+        <Requirements><Variable id="grottoOpen" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Bere il liquido scuro" goto="52" />
+      <Choice text="Andare a est" goto="25" />
+    </Choices>
+  </Page>
+
+  <Page id="10">
+    <Title>Sopra, sotto, intorno</Title>
+    <Text>Ti fai strada con cautela sopra, sotto e intorno al corpo intrecciato del serpente di pietra. È un lavoro lento. Non ricordi il percorso esatto, e la prossima volta che attraverserai questa stanza ci metterai lo stesso tempo.</Text>
+    <Choices>
+      <Choice text="Uscire nell'angolo opposto della sala" goto="27">
+        <Requirements><Variable id="fromWhere" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Uscire accanto all'ingresso" goto="42">
+        <Requirements><Variable id="fromWhere" operator="eq" value="2" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="11">
+    <Title>Trattieni il respiro</Title>
+    <Text>Senti il torpore che comincia a prenderti, ma indurisci la volontà e trattieni il respiro. In pochi istanti il gas si dissolve e torni a respirare senza pericolo.</Text>
+    <OnEnter>
+      <Effects><setVariable target="webSprung" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Guardarsi intorno nella stanza" goto="25" />
+    </Choices>
+  </Page>
+
+  <Page id="12">
+    <Title>Luce lungo le pareti</Title>
+    <Text>Accendi l'olio delle torciere una a una, riempiendo la stanza di luce e di calore. Scopri che una torciera sulla parete sud è vuota, e salta subito all'occhio che le incisioni di quel pannello sono diverse dalle altre: la faccia del serpente è consumata dal tocco ripetuto.</Text>
+    <OnEnter>
+      <Effects><setVariable target="sconcesLit" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Toccare il serpente" goto="28">
+        <Requirements><Variable id="secretDoor" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Tornare alla stanza" goto="17" />
+    </Choices>
+  </Page>
+
+  <Page id="13">
+    <Title>Polvere e nient'altro</Title>
+    <Text>Cerchi, ma lungo la parete sud non trovi niente che conti: la polvere sollevata dalla corrente ti riempie gli occhi e ti fa tossire.</Text>
+    <Choices>
+      <Choice text="Tornare alla stanza" goto="17" />
+    </Choices>
+  </Page>
+
+  <Page id="14">
+    <Title>Acqua tiepida</Title>
+    <Text>L'acqua è tiepida ma sorprendentemente dissetante, e scendendo ti calma la gola. Potresti riempire la fiala di cristallo sul tavolo e avere lo stesso sollievo più avanti.</Text>
+    <OnEnter>
+      <Effects><heal value="10" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Riempire la fiala e portarla con te" goto="19" grantItem="crystal-vial" />
+      <Choice text="Lasciare la fiala dov'è" goto="19" />
+    </Choices>
+  </Page>
+
+  <Page id="15">
+    <Title>Sempre al punto di partenza</Title>
+    <Text>Per quanto ci provi, non riesci a capire come si attraversi questo serpente. Le spire ti fanno girare in tondo, e alla fine ti ritrovi al punto di partenza.</Text>
+    <Choices>
+      <Choice text="Trovarsi di nuovo all'ingresso a est" goto="42">
+        <Requirements><Variable id="fromWhere" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Trovarsi di nuovo nell'angolo opposto" goto="27">
+        <Requirements><Variable id="fromWhere" operator="eq" value="2" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="16">
+    <Title>Il sonno, e una gabbia di legno</Title>
+    <Text>Il torpore ti piomba addosso. Provi a resistere, ma non reggi a lungo e ti addormenti. Quando ti svegli ti ritrovi dentro una gabbia di legno chiusa a chiave, con l'odore di morte e di carne arrostita nel naso prima ancora che gli occhi si schiariscano e tu veda la stanza.</Text>
+    <OnEnter>
+      <Effects><setVariable target="webSprung" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Aspettare di capire che cosa vogliono" goto="37" />
+    </Choices>
+  </Page>
+
+  <Page id="17">
+    <Title>La stanza delle incisioni</Title>
+    <Text>Sei in una stanza grande, cinquanta piedi per cinquanta. C'è una porta a due battenti sulla parete nord e una porta singola sulla parete ovest. Le pareti sono coperte di immagini incise minuziose, e ogni dieci piedi c'è una torciera di bronzo.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements><Variable id="sconcesLit" operator="eq" value="0" /></Requirements>
+        <Content>Non c'è nessuna fonte di luce, e una strana corrente che viene dalla parete sud fa pensare che da quella parte ci sia una porta nascosta.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="sconcesLit" operator="eq" value="1" /></Requirements>
+        <Content>Le torciere che hai acceso bruciano regolari, e la stanza è luminosa e calda.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="secretDoor" operator="eq" value="1" /></Requirements>
+        <Content>Il pannello sulla parete sud è aperto dove hai toccato il serpente: una porta segreta su un passaggio buio.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Andare a nord attraverso la porta a due battenti" goto="27" />
+      <Choice text="Andare a ovest attraverso la porta singola" goto="25" />
+      <Choice text="Andare a sud attraverso la porta segreta" goto="50">
+        <Requirements><Variable id="secretDoor" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Cercare lungo la parete sud" check="instinct" difficulty="2" goto="3" failGoto="13">
+        <Requirements><Variable id="secretDoor" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Accendere le torciere" goto="12">
+        <Requirements><Variable id="sconcesLit" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Esaminare le immagini incise" goto="21">
+        <Requirements><Variable id="secretDoor" operator="eq" value="0" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="18">
+    <Title>Attraverso i buchi della ragnatela</Title>
+    <Text>Fai scivolare il corpo con cautela attraverso i buchi della ragnatela senza sfiorare un filo. Ora che l'hai fatto una volta, pensi di poterlo rifare, se ti prendi il tuo tempo.</Text>
+    <OnEnter>
+      <Effects><setVariable target="webKnown" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Prendere il passaggio a sud" goto="23" />
+      <Choice text="Prendere la porta a est" goto="27" />
+      <Choice text="Andare a ovest verso la grotta" goto="9" />
+    </Choices>
+  </Page>
+
+  <Page id="19">
+    <Title>La vasca, e quello che ci galleggia</Title>
+    <Text>Sei accanto alla vasca, ora tinta di rosso dal sangue del serpente che galleggia in superficie. Guardando l'acqua più da vicino, vedi che non è affatto smeraldo: è normale acqua limpida.</Text>
+    <Choices>
+      <Choice text="Bere l'acqua" goto="14" />
+      <Choice text="Tornare all'ingresso della camera" goto="31" />
+    </Choices>
+  </Page>
+
+  <Page id="21">
+    <Title>Serpenti, e conigli che si inchinano</Title>
+    <Text>Le immagini sono divise in pannelli di dieci piedi, ognuno con serpenti enormi in posizioni diverse e folle di conigli che sembrano inchinarsi ad adorarli. Tutti i serpenti sono stati sfregiati tranne uno, che invece appare consumato dal tocco ripetuto.</Text>
+    <Choices>
+      <Choice text="Toccare il serpente" goto="28" />
+      <Choice text="Tornare alla stanza" goto="17" />
+    </Choices>
+  </Page>
+
+  <Page id="22">
+    <Title>Dentro il serpente</Title>
+    <Text>Ti spingi nel cunicolo stretto e scopri che dentro è molto meno complicato di quanto sembri da fuori. Invece di curve e giravolte, ti porta quasi dritto verso nord e si apre in una camera nuova.</Text>
+    <Choices>
+      <Choice text="Uscire nella camera" goto="31" />
+    </Choices>
+  </Page>
+
+  <Page id="28">
+    <Title>Il pannello ruota verso l'interno</Title>
+    <Text>Quando tocchi la testa di serpente, il pannello ruota lentamente verso l'interno e scopre una porta segreta sulla parete sud.</Text>
+    <OnEnter>
+      <Effects><setVariable target="secretDoor" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Guardare oltre la porta segreta" goto="50" />
+      <Choice text="Restare nella stanza" goto="17" />
+    </Choices>
+  </Page>
+
+  <Page id="30">
+    <Title>Il filo tiene</Title>
+    <Text>Ti fai strada con cautela sopra, sotto e intorno al corpo intrecciato del serpente. È un lavoro lento, ma il gomitolo si svolge da sé mentre avanzi, segnando un percorso rapido dentro la statua.</Text>
+    <OnEnter>
+      <Effects><setVariable target="yarnPath" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Uscire nell'angolo opposto della sala" goto="27">
+        <Requirements><Variable id="fromWhere" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Uscire accanto all'ingresso" goto="42">
+        <Requirements><Variable id="fromWhere" operator="eq" value="2" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="26">
+    <Title>Un'ombra sotto la superficie</Title>
+    <Text>Guardando meglio, vedi una lunga ombra scura che gira sotto la superficie dell'acqua. Qualunque cosa sia, non ti ha notato.</Text>
+    <Choices>
+      <Choice text="Indietreggiare finché sei in tempo" goto="31" />
+      <Choice text="Provare a prendere l'acqua lo stesso" check="agility" difficulty="2" goto="35" failGoto="8" />
+    </Choices>
+  </Page>
+
+  <Page id="27">
+    <Title>L'angolo opposto della sala</Title>
+    <Text>Nell'angolo sud-ovest della sala ci sono due porte a due battenti, una sulla parete sud e una sulla parete ovest. Dietro di te le spire di giada stanno fra te e la luce del giorno dell'ingresso.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements><Variable id="yarnPath" operator="eq" value="1" /></Requirements>
+        <Content>Il tuo filo bianco esce dalle spire proprio qui, e ripercorre la strada che hai fatto.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Andare a sud attraverso la porta a due battenti" goto="17" />
+      <Choice text="Andare a ovest attraverso la porta a due battenti" goto="53" />
+      <Choice text="Seguire il filo bianco fino all'ingresso" goto="42">
+        <Requirements><Variable id="yarnPath" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Rifarsi strada tra le spire" check="agility" difficulty="1" goto="10" failGoto="15" roll="crypt">
+        <Requirements><Variable id="yarnPath" operator="eq" value="0" /></Requirements>
+        <Effects><setVariable target="fromWhere" value="2" /></Effects>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="31">
+    <Title>La camera verde</Title>
+    <Text>Sei all'ingresso di una grande camera rotonda, cinquanta piedi di diametro, immersa nella luce verde e velata di una gemma grezza incastonata nel soffitto. La nebbia sale da una grande vasca d'acqua che copre buona parte del pavimento. È impossibile dire se l'acqua sia verde davvero o se sia un effetto della luce. Vicino al bordo dell'acqua, su un tavolinetto di pietra, c'è una fiala di cristallo.</Text>
+    <Choices>
+      <Choice text="Guardare quello che galleggia nella vasca" goto="19">
+        <Requirements><Variable id="poolSnakeDead" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Esaminare l'acqua" goto="26">
+        <Requirements><Variable id="poolSnakeDead" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Riempire la fiala" goto="8">
+        <Requirements><Variable id="poolSnakeDead" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Tornare alla sala della statua" goto="42" />
+    </Choices>
+  </Page>
+
+  <Page id="34">
+    <Title>Un filo ti prende il piede</Title>
+    <Text>Mentre ti muovi con cautela nella ragnatela di fili, sbagli un passo: il piede impiglia un filo e lo tira. Senti un sibilo e la stanza si riempie di un gas, evidentemente innescato dai fili.</Text>
+    <Choices>
+      <Choice text="Trattenere il respiro e resistere" check="toughness" difficulty="2" goto="40" failGoto="16" />
+    </Choices>
+  </Page>
+
+  <Page id="35">
+    <Title>La fiala, e quello che è uscito dall'acqua</Title>
+    <Text>Riempi in fretta la fiala e salti indietro mentre un serpente enorme emerge. Quando avrai tempo di guardare la fiala, scoprirai che l'acqua dentro è limpida, non smeraldo. Hai il tempo che basta per fuggire dalla stanza.</Text>
+    <Choices>
+      <Choice text="Fuggire verso la sala della statua" goto="42" grantItem="crystal-vial" />
+      <Choice text="Restare e combattere" goto="8" grantItem="crystal-vial" />
+    </Choices>
+  </Page>
+
+  <Page id="37">
+    <Title>Il re dei rabet</Title>
+    <Text>Dopo un po' un rabet apre la gabbia e ti prende per mano per portarti dal suo re. Scopri che questo parla la lingua comune, mentre gli altri si esprimono solo con latrati bassi e ringhi. Facendo da interprete per il re, ti spiega che vogliono un uovo di serpente da una stanza qui vicino. Se glielo porti, ti ricompenseranno con un tesoro. Ti danno una mappa delle stanze vicine con la stanza delle uova segnata da una X.</Text>
+    <Choices>
+      <Choice text="Prendere la mappa e alzarsi" goto="23" />
+    </Choices>
+  </Page>
+
+  <Page id="39">
+    <Title>Le pietre cedono</Title>
+    <Text>Riesci a spostare in silenzio abbastanza pietre da aprire un passaggio in cui strisciare.</Text>
+    <OnEnter>
+      <Effects><setVariable target="grottoOpen" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Strisciare fino a ovest" goto="64" />
+      <Choice text="Restare nella grotta" goto="9" />
+    </Choices>
+  </Page>
+
+  <Page id="40">
+    <Title>Il gas si dirada</Title>
+    <Text>Senti il torpore che comincia a prenderti, ma indurisci la volontà e trattieni il respiro. In pochi istanti il gas si dissolve e torni a respirare senza pericolo. La ragnatela ora pende molle, scattata: non prenderà nessuno due volte.</Text>
+    <OnEnter>
+      <Effects><setVariable target="webSprung" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Guardarsi intorno nella stanza" goto="25" />
+    </Choices>
+  </Page>
+
+  <Page id="42">
+    <Title>La sala del serpente di giada</Title>
+    <Text>Sei all'ingresso sul lato est di una sala grande, sessanta piedi per cinquanta, illuminata appena dalla luce che entra dall'apertura verso l'esterno. Lo spazio è pieno, da parete a parete e dal pavimento al soffitto, di un'enorme statua di giada che raffigura un serpente attorcigliato su se stesso, annodato, ma con spazio a sufficienza per passare fra i nodi.
+
+La testa del serpente è alla tua destra, la bocca aperta, le grandi zanne aguzze pronte a colpire. Dietro le zanne sembra esserci un cunicolo dentro il serpente.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements><Variable id="yarnPath" operator="eq" value="0" /></Requirements>
+        <Content>Ai tuoi piedi c'è una matassa di lana bianchissima, avvolta da una tenue aura magica.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="yarnPath" operator="eq" value="1" /></Requirements>
+        <Content>Un filo bianco parte dai tuoi piedi e sparisce fra le spire. L'hai steso tu, e segna ancora la via.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="hasWater" operator="eq" value="1" /></Requirements>
+        <Content>La bottiglia alla cintura è piena di acqua smeraldo, e la luce del giorno è alle tue spalle.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Uscire dalla cripta con l'acqua" goto="101">
+        <Requirements><Variable id="hasWater" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Entrare nella bocca e seguire il cunicolo dentro il serpente" goto="22" />
+      <Choice text="Seguire il filo bianco fino all'angolo opposto" goto="27">
+        <Requirements><Variable id="yarnPath" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Farsi strada tra le spire svolgendo il gomitolo" check="agility" difficulty="1" goto="30" failGoto="15" roll="crypt" grantItem="white-yarn">
+        <Requirements><Variable id="yarnPath" operator="eq" value="0" /></Requirements>
+        <Effects><setVariable target="fromWhere" value="1" /></Effects>
+      </Choice>
+      <Choice text="Farsi strada tra le spire con le sole mani" check="agility" difficulty="1" goto="10" failGoto="15" roll="crypt">
+        <Requirements><Variable id="yarnPath" operator="eq" value="0" /></Requirements>
+        <Effects><setVariable target="fromWhere" value="1" /></Effects>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="43" ending="true">
+    <Title>Morte nella Prima Cripta</Title>
+    <Text>La tua avventura finisce nella Prima Cripta. La pergamena magica torna al castello da sola, con i tuoi appunti e la tua mappa. Chi verrà dopo potrà trovare il tuo corpo e prendere tutto quello che portavi.</Text>
+    <Choices>
+      <Choice text="Scegliere un nuovo volontario a corte e ricominciare" goto="1" resetAdventure="true" />
+    </Choices>
+  </Page>
+
+  <Page id="23">
+    <Title>La stanza dei rabet, da nord-ovest</Title>
+    <Text>Sei all'ingresso nell'angolo nord-ovest di una stanza molto grande, cento piedi per quaranta.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+        </Requirements>
+        <Content>La stanza è piena di creature allampanate e corazzate, con il muso appuntito e lunghe orecchie flosce. Si muovono nella luce tremolante di un falò al centro della stanza, dove stanno arrostendo pezzi di un serpente gigante. Riconosci in loro dei rabet, imbroglioni famosi per i loro agguati astuti e per le trappole nel sottosuolo.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+          <Variable id="guardsDead" operator="eq" value="0" />
+        </Requirements>
+        <Content>Mentre te ne rendi conto, le due guardie ai lati di questo passaggio ti notano.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="guardsDead" operator="eq" value="1" />
+        </Requirements>
+        <Content>Le due guardie che hai ucciso giacciono nell'ombra ai due lati dell'ingresso, e nessuno le ha spostate.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="secretDoor" operator="eq" value="1" /></Requirements>
+        <Content>Sai che nell'angolo nord-est c'è una porta segreta.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="rabetsDead" operator="eq" value="1" /></Requirements>
+        <Content>I rabet giacciono morti per la stanza. Pezzi di serpente gigante stanno carbonizzando sul falò al centro, e non c'è nessuno a girarli.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="eggDelivered" operator="eq" value="1" />
+          <Variable id="rabetsDead" operator="eq" value="0" />
+        </Requirements>
+        <Content>La stanza è piena di latrati e di odore di serpente arrostito. Non gli importa che tu passi, ma non ti vogliono nemmeno vicino.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Andare a nord verso la stanza piccola" goto="25" />
+      <Choice text="Passare per la porta segreta nell'angolo nord-est" goto="17">
+        <Requirements mode="any">
+          <Variable id="rabetsDead" operator="eq" value="1" />
+          <Variable id="eggDelivered" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Frugare la stanza" goto="65">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="1" />
+          <Variable id="campSearched" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Combattere le guardie" goto="47">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+          <Variable id="guardsDead" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Farsi avanti e trattare con i rabet" goto="45">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Sgusciare lungo la parete nord fino alla porta segreta" check="agility" difficulty="2" goto="17" failGoto="38">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+          <Variable id="guardsDead" operator="eq" value="1" />
+          <Variable id="secretDoor" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Sgusciare lungo la parete nord fino all'angolo nord-est" check="agility" difficulty="2" goto="49" failGoto="38">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+          <Variable id="guardsDead" operator="eq" value="1" />
+          <Variable id="secretDoor" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="25">
+    <Title>La stanza dei fili</Title>
+    <Text>Sei in una stanza piccola, venti piedi per venti. Un corridoio breve a est porta a una porta singola. A sud c'è un passaggio aperto. Un corridoio breve a ovest finisce in una grotta, da cui senti un gocciolio d'acqua.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+        <Content>La stanza è riempita da un'intricata ragnatela di fili legati a chiodi sul pavimento, sul soffitto e sulle pareti. In qualche punto c'è lo spazio per infilarsi tra i fili, ma appena appena.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+          <Variable id="webKnown" operator="eq" value="1" />
+        </Requirements>
+        <Content>Hai già attraversato la ragnatela una volta: ricordi il percorso e sai come passare senza rischi, se ti prendi il tuo tempo.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="webCut" operator="eq" value="1" /></Requirements>
+        <Content>I fili penzolano dalle pareti e dal soffitto dove li hai tagliati.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="webSprung" operator="eq" value="1" />
+          <Variable id="webCut" operator="eq" value="0" />
+        </Requirements>
+        <Content>La ragnatela di fili pende molle, scattata: non pensi che sia ancora un pericolo.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Andare a est verso la porta singola" goto="27">
+        <Requirements mode="any">
+          <Variable id="webCut" operator="eq" value="1" />
+          <Variable id="webSprung" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Andare a sud attraverso il passaggio" goto="23">
+        <Requirements mode="any">
+          <Variable id="webCut" operator="eq" value="1" />
+          <Variable id="webSprung" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Andare a ovest verso la grotta" goto="9">
+        <Requirements mode="any">
+          <Variable id="webCut" operator="eq" value="1" />
+          <Variable id="webSprung" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Rifare a memoria il percorso a est verso la porta singola" check="agility" difficulty="1" goto="27" failGoto="34">
+        <Requirements mode="all">
+          <Variable id="webKnown" operator="eq" value="1" />
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Rifare a memoria il percorso verso sud" check="agility" difficulty="1" goto="23" failGoto="34">
+        <Requirements mode="all">
+          <Variable id="webKnown" operator="eq" value="1" />
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Rifare a memoria il percorso a ovest verso la grotta" check="agility" difficulty="1" goto="9" failGoto="34">
+        <Requirements mode="all">
+          <Variable id="webKnown" operator="eq" value="1" />
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Provare a passare tra i fili" check="agility" difficulty="2" goto="18" failGoto="34">
+        <Requirements mode="all">
+          <Variable id="webKnown" operator="eq" value="0" />
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Tagliare i fili" goto="5">
+        <Requirements mode="all">
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="38">
+    <Title>Un fragore nella stanza sbagliata</Title>
+    <Text>Mentre cerchi di attraversare lo spazio in silenzio sbagli un passo, e un fragore rimbomba nella stanza quando lo zaino ti cade a terra. Un istante dopo ti sono addosso dieci rabet e il loro re.</Text>
+    <Combat victoryGoto="59" fleeGoto="48" defeatGoto="48">
+      <Enemy name="Dieci rabet" hp="40" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="Re Rabet, con due asce" hp="30" attack="6" defense="3" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="41">
+    <Title>Lungo la parete nord</Title>
+    <Text>Nessuno ti nota mentre avanzi lungo la parete nord della stanza. Capisci subito che è l'unica zona sicura, fuori dalla vista dei rabet che si muovono al centro e nella parte sud. Avvicinandoti al passaggio nell'angolo nord-ovest, vedi che ai suoi lati ci sono guardie nascoste nell'ombra.</Text>
+    <Choices>
+      <Choice text="Attaccare le guardie" goto="47" />
+      <Choice text="Cercare un modo non violento per entrare nel passaggio" check="instinct" difficulty="3" goto="25" failGoto="47" />
+      <Choice text="Parlare con i rabet" goto="45" />
+      <Choice text="Tornare alla porta segreta" goto="50" />
+    </Choices>
+  </Page>
+
+  <Page id="45">
+    <Title>Parlare con i rabet</Title>
+    <Text>Metti le mani bene in vista.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements><Variable id="hasEgg" operator="eq" value="0" /></Requirements>
+        <Content>All'inizio i rabet si sorprendono e alzano le armi. Ma quando vedono che sei gente d'avventura, uno si fa avanti e ti prende per mano per portarti dal suo re. Scopri che questo parla la lingua comune, mentre gli altri si esprimono solo con latrati bassi e ringhi. Facendo da interprete per il re, ti spiega che vogliono un uovo di serpente da una stanza qui vicino. Se glielo porti, ti ricompenseranno con un tesoro. Ti danno una mappa delle stanze vicine con la stanza delle uova segnata da una X.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="hasEgg" operator="eq" value="1" /></Requirements>
+        <Content>I rabet esplodono in festa quando vedono l'uovo, ululando di gioia. Re Rabet tende le braccia per prenderlo, mentre il suo interprete ti porge un sacchetto. Dentro ci sono cinque gemme. L'interprete ti spiega che non ti daranno fastidio se tornerai in questa stanza, ma che per il resto non vogliono avere altro a che fare con te. Detto francamente, non gli piace il tuo odore. Si scopre che i rabet sanno essere davvero offensivi.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Prendere la mappa e tornare alla stanza" goto="23">
+        <Requirements><Variable id="hasEgg" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Consegnare l'uovo e prendere il sacchetto" goto="23">
+        <Requirements><Variable id="hasEgg" operator="eq" value="1" /></Requirements>
+        <Effects>
+          <setVariable target="hasEgg" value="0" />
+          <setVariable target="eggDelivered" value="1" />
+          <addVariable target="wealth" value="2000" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="46">
+    <Title>La pietra sul piede</Title>
+    <Text>Mentre sposti l'ultima pietra per aprire il passaggio, te la lasci cadere su un piede e ti scappa un urlo. Un istante dopo, qualcosa compare nel passaggio che hai appena aperto.</Text>
+    <OnEnter>
+      <Effects><setVariable target="grottoOpen" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Voltarsi verso quello che sta arrivando" goto="9" roll="crypt" />
+    </Choices>
+  </Page>
+
+  <Page id="47">
+    <Title>Le due guardie</Title>
+    <Text>Stai combattendo contro le due guardie rabet ai lati del passaggio. Se lo scontro dura, la stanza lo sentirà.</Text>
+    <Combat victoryGoto="55" fleeGoto="51" defeatGoto="43">
+      <Enemy name="Una guardia rabet" hp="8" attack="2" defense="1" loreDifficulty="1" />
+      <Enemy name="La seconda guardia rabet" hp="8" attack="2" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="48">
+    <Title>Un colpo alla nuca</Title>
+    <Text>Con un tonfo, un oggetto contundente ti colpisce alla nuca e perdi i sensi. Quando ti svegli ti ritrovi dentro una gabbia di legno chiusa a chiave, con l'odore di morte e di carne arrostita nel naso prima ancora che gli occhi si schiariscano e tu veda la stanza.</Text>
+    <Choices>
+      <Choice text="Aspettare di capire che cosa vogliono" goto="37" />
+    </Choices>
+  </Page>
+
+  <Page id="49">
+    <Title>L'angolo nord-est</Title>
+    <Text>Nessuno ti nota mentre avanzi lungo la parete nord della stanza, e presto arrivi al passaggio nell'angolo nord-est, dove trovi una porta segreta nel muro.</Text>
+    <OnEnter>
+      <Effects><setVariable target="secretDoor" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Passare per la porta segreta" goto="17" />
+      <Choice text="Parlare con i rabet" goto="45" />
+      <Choice text="Tornare all'angolo nord-ovest" goto="23" />
+    </Choices>
+  </Page>
+
+  <Page id="50">
+    <Title>La stanza vista dalla porta segreta</Title>
+    <Text>Sei alla porta segreta nell'angolo nord-est di una stanza molto grande, cento piedi per quaranta.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+        </Requirements>
+        <Content>La stanza è piena di creature allampanate e corazzate, con il muso appuntito e lunghe orecchie flosce, che si muovono nella luce tremolante di un falò al centro, dove stanno arrostendo pezzi di un serpente gigante. Non ti hanno ancora notato mentre guardi dalla porta. Nell'angolo nord-ovest c'è un altro passaggio aperto.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="any">
+          <Variable id="rabetsDead" operator="eq" value="1" />
+          <Variable id="eggDelivered" operator="eq" value="1" />
+        </Requirements>
+        <Content>Nella stanza non c'è più nessuno a sorvegliare questa porta.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Tornare nella stanza delle incisioni" goto="17" />
+      <Choice text="Entrare nella stanza" goto="23">
+        <Requirements mode="any">
+          <Variable id="rabetsDead" operator="eq" value="1" />
+          <Variable id="eggDelivered" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Provare ad attraversare la stanza senza farsi notare" check="agility" difficulty="2" goto="41" failGoto="38">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Parlare con i rabet" goto="45">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="51">
+    <Title>La stanza sente lo scontro</Title>
+    <Text>Sentendo il frastuono dello scontro, altri otto rabet e il loro re accorrono a unirsi.</Text>
+    <Combat victoryGoto="59" fleeGoto="48" defeatGoto="48">
+      <Enemy name="Otto rabet" hp="34" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="Re Rabet, con due asce" hp="30" attack="6" defense="3" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="52">
+    <Title>L'acqua scura del fauno</Title>
+    <Text>È acqua normale, dissetante ma niente di che. Riempi di nuovo l'otre.</Text>
+    <Choices>
+      <Choice text="Rialzarsi e guardare la grotta" goto="9" />
+    </Choices>
+  </Page>
+
+  <Page id="53">
+    <Title>Il corridoio lungo</Title>
+    <Text>Sei in un corridoio, dieci piedi di larghezza e ottanta di lunghezza. Ci sono porte a est, a sud, a ovest e a nord.</Text>
+    <Choices>
+      <Choice text="Andare a est" goto="27" />
+      <Choice text="Andare a sud" goto="80" />
+      <Choice text="Andare a ovest" goto="92" />
+      <Choice text="Andare a nord" goto="62" />
+    </Choices>
+  </Page>
+
+  <Page id="54">
+    <Title>Il corridoio a L</Title>
+    <Text>Un lungo corridoio a L si apre su una stanza all'estremità sud e su una caverna all'estremità nord.</Text>
+    <Choices>
+      <Choice text="Andare a sud, nella stanza" goto="62" />
+      <Choice text="Andare a nord, nella caverna" goto="58" />
+    </Choices>
+  </Page>
+
+  <Page id="55">
+    <Title>Le guardie sono a terra</Title>
+    <Text>Le due guardie giacciono nell'ombra ai due lati dell'ingresso, e per ora nessuno nella stanza ha guardato da questa parte.</Text>
+    <OnEnter>
+      <Effects><setVariable target="guardsDead" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Fare il punto sulla stanza" goto="23" />
+    </Choices>
+  </Page>
+
+  <Page id="57">
+    <Title>La stanza delle pire</Title>
+    <Text>Sei in una stanza, sessanta piedi per quaranta, dominata da una piattaforma di pietra verde che occupa quasi tutto il pavimento. Legna mezza bruciata, cenere e ossa sulla piattaforma dicono che è un luogo per le pire funebri. I bordi della stanza sono occupati da file di urne di giada. Una sta accanto alla piattaforma, piena a metà di cenere, e vicino c'è il cadavere bruciato di una donna in vesti verdi. Puoi prendere le vesti; frugandola non trovi nient'altro di valore.</Text>
+    <Choices>
+      <Choice text="Prendere le vesti verdi e andare a est" goto="64" grantItem="green-robes" />
+      <Choice text="Andare a est" goto="64" />
+      <Choice text="Andare a ovest" goto="68" />
+    </Choices>
+  </Page>
+
+  <Page id="58">
+    <Title>La caverna, riva nord</Title>
+    <Text>Sei in una grande caverna naturale, pareti di pietra verde grezza, tutt'altra cosa rispetto alle camere finemente scolpite della cripta. Un fiume di acqua smeraldo corre nel mezzo della caverna, da un foro nella parete nord-est giù verso sud-ovest. Attraversarlo senza rischi sarebbe impossibile. Sull'altra sponda ci sono file e file di giare di giada, disposte in ordine.</Text>
+    <OnEnter>
+      <Effects><setVariable target="riverSide" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Esaminare l'acqua" goto="76" />
+      <Choice text="Tornare nella cripta" goto="54" />
+    </Choices>
+  </Page>
+
+  <Page id="59">
+    <Title>L'accampamento, tornato silenzioso</Title>
+    <Text>L'ultimo di loro smette di muoversi. Pezzi di serpente gigante continuano a carbonizzare sul falò al centro, e non è rimasto nessuno a girarli.</Text>
+    <OnEnter>
+      <Effects><setVariable target="rabetsDead" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Guardarsi intorno nella stanza" goto="23" />
+    </Choices>
+  </Page>
+
+
+  <Page id="62">
+    <Title>La stanza del fango bollente</Title>
+    <Text>Una stanza grande, novanta piedi per quaranta, è occupata da uno spesso letto di fango bollente; il vapore sale e riempie l'aria, e la luce viene da grandi uova luminose raccolte in grappoli qua e là.</Text>
+    <Choices>
+      <Choice text="Andare a nord" goto="54" />
+      <Choice text="Andare a sud" goto="53" />
+      <Choice text="Esaminare un grappolo di uova" goto="72" />
+    </Choices>
+  </Page>
+
+  <Page id="64">
+    <Title>La stanza del serpente viola</Title>
+    <Text>Sei in una stanza buia, quaranta piedi per cinquanta.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements><Variable id="purpleSnakeDead" operator="eq" value="0" /></Requirements>
+        <Content>Un enorme serpente viola dorme arrotolato nella metà nord della stanza. Per raggiungere una qualsiasi delle uscite dovresti passargli accanto in silenzio.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="purpleSnakeDead" operator="eq" value="1" /></Requirements>
+        <Content>L'enorme serpente viola giace morto, e marcisce sopra un mucchio di tesori. Il fetore dell'icore della sua morte è così forte che non puoi restare qui a lungo senza cedere e svenire.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="grottoOpen" operator="eq" value="1" /></Requirements>
+        <Content>Nell'angolo sud-est c'è un passaggio segreto, quello che hai aperto dalla grotta.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Andare a est" goto="80">
+        <Requirements><Variable id="purpleSnakeDead" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Andare a ovest, verso la stanza delle pire" goto="57">
+        <Requirements><Variable id="purpleSnakeDead" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Prendere il passaggio segreto a sud-est" goto="9">
+        <Requirements><Variable id="grottoOpen" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Passare a est in silenzio" check="agility" difficulty="1" goto="80" failGoto="95">
+        <Requirements><Variable id="purpleSnakeDead" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Passare a ovest in silenzio, verso la stanza delle pire" check="agility" difficulty="1" goto="57" failGoto="95">
+        <Requirements><Variable id="purpleSnakeDead" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Frugare la stanza" goto="90">
+        <Requirements><Variable id="purpleSnakeDead" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Cercare un modo per uccidere il serpente" goto="85">
+        <Requirements><Variable id="purpleSnakeDead" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Arraffare in fretta un po' di tesoro prima di andare" goto="87">
+        <Requirements><Variable id="purpleSnakeDead" operator="eq" value="1" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="65">
+    <Title>Ossa, stracci e cenere</Title>
+    <Text>Tra le ossa di serpente, gli stracci lerci e i mucchi di cenere dell'accampamento dei rabet trovi mille monete e cinque gemme viola.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="wealth" value="3000" />
+        <setVariable target="campSearched" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Intascare tutto e rialzarsi" goto="23" />
+    </Choices>
+  </Page>
+
+  <Page id="66">
+    <Title>I rampicanti</Title>
+    <Text>Un rampicante scatta e ti si avvolge alla gamba, bruciandoti la pelle dove tocca, prima che tu riesca a prendere un uovo. Sono quattro, e si muovono insieme.</Text>
+    <Combat victoryGoto="73" fleeGoto="67" defeatGoto="43">
+      <Enemy name="Quattro rampicanti ustionanti" hp="30" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="67">
+    <Title>Un uovo, e un salto all'indietro</Title>
+    <Text>Afferri un uovo e salti indietro fuori dalla portata dei rampicanti. Per portarlo servono tutte e due le braccia.</Text>
+    <OnEnter>
+      <Effects><setVariable target="hasEgg" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Indietreggiare nella stanza" goto="62" />
+    </Choices>
+  </Page>
+
+  <Page id="68">
+    <Title>Il labirinto mutevole</Title>
+    <Text>In una stanza grande, sessanta piedi per sessanta, pannelli di giada formano un labirinto che cambia di continuo: i pannelli salgono e scendono dal pavimento a ritmo, e a ogni movimento il disegno del labirinto è un altro. Ci sono passaggi alle estremità est e ovest della stanza.</Text>
+    <Choices>
+      <Choice text="Farsi strada nel labirinto verso est" check="instinct" difficulty="2" goto="75" failGoto="96" />
+      <Choice text="Farsi strada nel labirinto verso ovest" check="instinct" difficulty="2" goto="75" failGoto="96" />
+    </Choices>
+  </Page>
+
+  <Page id="69">
+    <Title>L'acqua smeraldo</Title>
+    <Text>L'acqua smeraldo guarisce. Il dolore ti lascia mentre deglutisci, e quello che avevi nel sangue non c'è più.</Text>
+    <OnEnter>
+      <Effects>
+        <heal value="999" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Rialzarsi sulla riva nord" goto="76">
+        <Requirements><Variable id="riverSide" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Rialzarsi sulla riva sud" goto="77">
+        <Requirements><Variable id="riverSide" operator="eq" value="2" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+  <Page id="72">
+    <Title>Il grappolo di uova</Title>
+    <Text>Sei grandi uova luminose sono raccolte in un nido di rampicanti arancione acceso. Guardando, vedi che i rampicanti si muovono lentamente da soli attorno alle uova. Con attenzione potresti prendere un uovo, ma per portarlo servirebbero tutte e due le braccia.</Text>
+    <Choices>
+      <Choice text="Provare a prendere un uovo" check="agility" difficulty="2" goto="79" failGoto="66">
+        <Requirements><Variable id="hasEgg" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Tornare nella stanza" goto="62" />
+    </Choices>
+  </Page>
+
+  <Page id="73">
+    <Title>I rampicanti a pezzi</Title>
+    <Text>I rampicanti giacciono a pezzi, e dal liquido arancione che ne esce sale vapore più denso. Adesso puoi prendere un uovo con comodo.</Text>
+    <OnEnter>
+      <Effects><setVariable target="hasEgg" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Prendere un uovo e farsi indietro" goto="62" />
+    </Choices>
+  </Page>
+
+  <Page id="74">
+    <Title>Si divide</Title>
+    <Text>Il tuo colpo stacca un budino più piccolo dalla massa principale. Adesso sono due, e quello piccolo è più veloce.</Text>
+    <Choices>
+      <Choice text="Continuare a combatterli entrambi" goto="82" />
+    </Choices>
+  </Page>
+
+  <Page id="75">
+    <Title>Oltre il labirinto</Title>
+    <Text>Riesci ad attraversare il labirinto senza danni. Lungo la strada trovi una borsa lasciata cadere da chi è venuto prima di te.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements><Variable id="purseTaken" operator="eq" value="1" /></Requirements>
+        <Content>Quello che c'era dentro l'hai già preso; il cuoio è rimasto dove l'hai buttato.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Prendere la borsa e uscire a est" goto="57">
+        <Requirements><Variable id="purseTaken" operator="eq" value="0" /></Requirements>
+        <Effects>
+          <addVariable target="wealth" value="500" />
+          <setVariable target="purseTaken" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Prendere la borsa e uscire a ovest" goto="77">
+        <Requirements><Variable id="purseTaken" operator="eq" value="0" /></Requirements>
+        <Effects>
+          <addVariable target="wealth" value="500" />
+          <setVariable target="purseTaken" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Uscire a est" goto="57" />
+      <Choice text="Uscire a ovest" goto="77" />
+    </Choices>
+  </Page>
+
+  <Page id="76">
+    <Title>L'acqua, da vicino</Title>
+    <Text>Guardandola bene, vedi che l'acqua è di un puro colore smeraldo, esattamente quella che ti hanno mandato a cercare. Una bottiglia vuota giace nella sabbia della riva.</Text>
+    <Choices>
+      <Choice text="Bere l'acqua" goto="69" />
+      <Choice text="Riempire la bottiglia" goto="97">
+        <Requirements><Variable id="hasWater" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Lasciare la riva" goto="54" />
+    </Choices>
+  </Page>
+
+  <Page id="77">
+    <Title>La caverna, riva sud</Title>
+    <Text>Sei in una grande caverna naturale, pareti di pietra verde grezza, tutt'altra cosa rispetto alle camere finemente scolpite della cripta. Un fiume di acqua smeraldo corre nel mezzo, da un foro nella parete nord-est giù verso ovest. Attraversarlo senza rischi sarebbe impossibile. Sull'altra sponda ci sono file e file di giare di giada, disposte in ordine.</Text>
+    <OnEnter>
+      <Effects><setVariable target="riverSide" value="2" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Raccogliere l'acqua nella bottiglia" goto="98">
+        <Requirements mode="all">
+          <Variable id="hasWater" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Bere l'acqua" goto="69" />
+      <Choice text="Tornare nella cripta" goto="68" />
+    </Choices>
+  </Page>
+
+  <Page id="79">
+    <Title>Un uovo, in silenzio</Title>
+    <Text>Afferri un uovo senza farti prendere dai rampicanti, che ti scattano contro mentre ti ritiri.</Text>
+    <OnEnter>
+      <Effects><setVariable target="hasEgg" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Rientrare nella stanza" goto="62" />
+    </Choices>
+  </Page>
+
+  <Page id="80">
+    <Title>La stanza delle vasche calde</Title>
+    <Text>Sei in una stanza, sessanta piedi per quaranta, piena di vapore, con crepe appena luminose nel pavimento piastrellato sotto cui sembrano bruciare dei fuochi. Vasche di marmo piene di acqua calda sono disposte in due file al centro. Sarebbe un bel posto per riposare, ma non sembra esserci nient'altro di interessante.</Text>
+    <Choices>
+      <Choice text="Andare a ovest" goto="64" />
+      <Choice text="Andare a nord" goto="53" />
+    </Choices>
+  </Page>
+
+  <Page id="81" ending="true">
+    <Title>Dentro il budino</Title>
+    <Text>Mentre muori, il budino ti assorbe. A parte la pergamena magica, che torna al castello, quello che portavi potrà essere recuperato da chi verrà dopo solo se sconfiggerà il budino.</Text>
+    <Choices>
+      <Choice text="Scegliere un nuovo volontario a corte e ricominciare" goto="1" resetAdventure="true" />
+    </Choices>
+  </Page>
+
+  <Page id="82">
+    <Title>Il budino di smeraldo</Title>
+    <Text>La massa avanza, e dove tocca, porta via. Puoi continuare a menare le tue armi, oppure allungare la mano verso la torcia dal manico di giada ai tuoi piedi.</Text>
+    <Combat victoryGoto="83" fleeGoto="74" defeatGoto="81">
+      <Enemy name="Un budino di smeraldo" hp="34" attack="7" defense="4" loreDifficulty="3" />
+    </Combat>
+  </Page>
+
+  <Page id="83">
+    <Title>L'anello nella poltiglia</Title>
+    <Text>Con un ultimo colpo di torcia il budino va a fuoco, e presto sul pavimento resta solo un mucchio di poltiglia bruciata. Quasi nascosto nella poltiglia trovi un anello d'oro con un grande smeraldo. La porta è ricomparsa.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="puddingBurned" value="1" />
+        <addVariable target="wealth" value="1500" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Prendere l'anello e uscire dalla stanza" goto="53" grantItem="emerald-ring" />
+      <Choice text="Uscire dalla stanza" goto="53" />
+    </Choices>
+  </Page>
+
+  <Page id="85">
+    <Title>La testa fra le spire</Title>
+    <Text>Trovi la testa del serpente fra le spire del suo corpo. Un colpo con un'arma da mischia abbastanza grande basterebbe a ucciderlo qui.</Text>
+    <Choices>
+      <Choice text="Provare a uccidere il serpente nel sonno" check="strength" difficulty="3" goto="89" failGoto="94" />
+      <Choice text="Farsi indietro" goto="64" />
+    </Choices>
+  </Page>
+
+  <Page id="87">
+    <Title>Quello che riesci a portare via in fretta</Title>
+    <Text>Riesci a raccogliere una manciata di monete, ma restare di più ti farebbe svenire per il fetore di morte. Potresti riprovare la prossima volta che passi per questa stanza.</Text>
+    <OnEnter>
+      <Effects><addVariable target="wealth" value="500" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Uscire dalla stanza" goto="64" />
+    </Choices>
+  </Page>
+
+  <Page id="88">
+    <Title>«Accetto questa offerta»</Title>
+    <Text>Mentre attraversi il cerchio delle candele, una voce profonda e rauca, senza corpo, dice: «Accetto questa offerta». Le fiamme delle candele si alzano e anneriscono il soffitto. Ti volti e vedi che al posto della porta d'ingresso non c'è più niente: solo un muro verde e liscio. La pozza si rapprende e si solleva in una massa smeraldo informe che avanza pesante verso di te. Ai tuoi piedi noti una torcia dal manico di giada.</Text>
+    <Choices>
+      <Choice text="Combattere con le tue armi" goto="82" />
+      <Choice text="Combattere con la torcia di giada" goto="91" />
+    </Choices>
+  </Page>
+
+  <Page id="89">
+    <Title>Un colpo poderoso</Title>
+    <Text>Con un colpo poderoso uccidi il serpente. Comincia a emanare un odore putrido mentre l'icore cola dalla ferita mortale.</Text>
+    <OnEnter>
+      <Effects><setVariable target="purpleSnakeDead" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Allontanarsi dal corpo" goto="64" />
+    </Choices>
+  </Page>
+
+  <Page id="90">
+    <Title>Su cosa dorme</Title>
+    <Text>Scopri che il serpente dorme sopra un mucchio di tesori. Con un po' di fortuna potresti raccoglierne una parte senza svegliarlo.</Text>
+    <Choices>
+      <Choice text="Provare a raccogliere il tesoro" check="agility" difficulty="3" goto="86" failGoto="95" />
+      <Choice text="Lasciarlo dov'è" goto="64" />
+    </Choices>
+  </Page>
+
+  <Page id="86">
+    <Title>Quanto osi prendere</Title>
+    <Text>Riesci a raccogliere una manciata di monete, ma temi che di più sveglierebbe il serpente, da come ha cominciato a contorcersi. Potresti riprovare più avanti, quando si sarà calmato.</Text>
+    <OnEnter>
+      <Effects><addVariable target="wealth" value="500" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Allontanarsi dal mucchio" goto="64" />
+    </Choices>
+  </Page>
+
+  <Page id="91">
+    <Title>La torcia di giada</Title>
+    <Text>Impugni la torcia dal manico di giada. Brucia più di quanto dovrebbe, e la massa si ritrae dalla luce prima ancora che tu l'abbia menata.</Text>
+    <Combat victoryGoto="83" fleeGoto="82" defeatGoto="81">
+      <Enemy name="Un budino di smeraldo, che si ritrae dalla fiamma" hp="26" attack="6" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="92">
+    <Title>La stanza delle candele nere</Title>
+    <Text>In una stanza grande e semicircolare, sessanta piedi di diametro, formazioni di cristallo di giada fanno da candelabri per candele nere e fumose.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements><Variable id="puddingBurned" operator="eq" value="0" /></Requirements>
+        <Content>Sono disposte attorno a una pozza di liquido verde scuro.</Content>
+      </Text>
+      <Text>
+        <Requirements><Variable id="puddingBurned" operator="eq" value="1" /></Requirements>
+        <Content>Sono disposte attorno a chiazze di poltiglia nera bruciata sul pavimento. Adesso qui non c'è più niente di interessante.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Esaminare il liquido" goto="88">
+        <Requirements><Variable id="puddingBurned" operator="eq" value="0" /></Requirements>
+      </Choice>
+      <Choice text="Uscire dall'unica porta" goto="53" />
+    </Choices>
+  </Page>
+
+  <Page id="94">
+    <Title>Non abbastanza per ucciderlo</Title>
+    <Text>Colpisci, ma non basta a uccidere il serpente sul colpo. Si sveglia avvolgendoti il braccio.</Text>
+    <Choices>
+      <Choice text="Combatterlo" goto="95" />
+    </Choices>
+  </Page>
+
+  <Page id="95">
+    <Title>Il serpente viola, sveglio</Title>
+    <Text>Il serpente è sveglio e ti ha visto. Il suo morso porta un veleno che agisce in fretta.</Text>
+    <Combat victoryGoto="89" fleeGoto="64" defeatGoto="43">
+      <Enemy name="L'enorme serpente viola" hp="36" attack="7" defense="4" loreDifficulty="3" />
+    </Combat>
+  </Page>
+
+  <Page id="96">
+    <Title>Un pannello si alza</Title>
+    <Text>Sbagli un passo e un pannello che sale dal pavimento ti colpisce.</Text>
+    <OnEnter>
+      <Effects><damage value="12" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Rialzarsi e riprovare" goto="68" />
+    </Choices>
+  </Page>
+
+  <Page id="97">
+    <Title>La covata</Title>
+    <Text>Mentre immergi la bottiglia per riempirla, una covata di cinque serpenti salta fuori dall'acqua, ti costringe a indietreggiare e poi si muove per attaccarti.</Text>
+    <Combat victoryGoto="99" fleeGoto="100" defeatGoto="100">
+      <Enemy name="Una covata di cinque serpenti" hp="22" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="98">
+    <Title>La bottiglia si riempie</Title>
+    <Text>Tieni la bottiglia sotto la superficie finché non è piena, poi la tappi. L'acqua dentro ha il colore del fiume, e non sbiadisce.</Text>
+    <OnEnter>
+      <Effects><setVariable target="hasWater" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Rialzarsi con la bottiglia" goto="77" grantItem="water-bottle" />
+    </Choices>
+  </Page>
+
+  <Page id="99">
+    <Title>Tolti di mezzo i serpenti</Title>
+    <Text>Tolti di mezzo i serpenti, puoi raccogliere senza rischi una bottiglia d'acqua. Ha il colore del fiume, e non sbiadisce.</Text>
+    <OnEnter>
+      <Effects><setVariable target="hasWater" value="1" /></Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Rialzarsi con la bottiglia" goto="58" grantItem="water-bottle" />
+    </Choices>
+  </Page>
+
+  <Page id="100">
+    <Title>La corrente ti porta via</Title>
+    <Text>Con la testa che gira per i morsi dei serpenti, cadi nell'acqua e la corrente ti porta via. L'acqua ti guarisce mentre galleggi in un tunnel buio, e un istante dopo la corrente ti deposita sulla riva di un'altra caverna.</Text>
+    <OnEnter>
+      <Effects>
+        <heal value="999" />
+        <setVariable target="riverSide" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Rimettersi in piedi sulla riva opposta" goto="77" />
+    </Choices>
+  </Page>
+
+  <Page id="101" ending="true">
+    <Title>Fuori dalla caverna</Title>
+    <Text>Quando esci dalla caverna, le guardie ti aspettano sui gradini. Una prende la bottiglia d'acqua, monta a cavallo e parte di corsa verso il castello. Un'altra ti consegna un sacco con cinquemila monete e una lettera che ti scioglie dal servizio al re.
+
+Niente ti trattiene dal cercare altre avventure, se ne hai il coraggio.</Text>
+    <OnEnter>
+      <Effects><addVariable target="wealth" value="5000" /></Effects>
+    </OnEnter>
+  </Page>
+
+
+  <Page id="102">
+    <Title>Quattro rabet, e un serpente morto</Title>
+    <Text>Quattro rabet svoltano l'angolo trascinando un serpente morto per la coda. Si fermano quando ti vedono. Quello davanti molla la coda, e il corpo sbatte contro la pietra.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Quattro rabet che trascinano un serpente morto" hp="20" attack="4" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="103">
+    <Title>A caccia</Title>
+    <Text>Li senti prima di vederli: cinque serpenti che si muovono veloci e bassi sulla pietra, distanziati come si distanzia chi caccia in gruppo.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Un branco di cinque serpenti a caccia" hp="22" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="104">
+    <Title>Due rabet, persi</Title>
+    <Text>Due rabet svoltano l'angolo litigando a latrati bassi, e si bloccano di colpo. Non sono dove volevano essere, e nessuno dei due si aspettava te.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Due rabet persi" hp="12" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="105">
+    <Title>Un serpente che sonnecchia</Title>
+    <Text>Un serpente è arrotolato in un incavo della pietra, al riparo dalla corrente, e dorme. Potresti provare a passargli accanto. Potrebbe non restare addormentato.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Un serpente svegliato male" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="106">
+    <Title>Due gruppi insieme</Title>
+    <Text>Quattro rabet svoltano l'angolo con un serpente morto, e dietro di loro, attirati dal rumore, altri quattro. Nessuno si tira indietro.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Quattro rabet che trascinano un serpente morto" hp="20" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="Altri quattro rabet, attirati dal rumore" hp="20" attack="4" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="107">
+    <Title>Cacciatori e prede, tutti qui</Title>
+    <Text>Quattro rabet ti stanno trascinando accanto il loro serpente morto quando arriva il branco che seguiva l'odore. Per un attimo nessuno è sicuro di chi stia combattendo contro chi. L'attimo passa.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Quattro rabet che trascinano un serpente morto" hp="20" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="Un branco di cinque serpenti a caccia" hp="22" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="108">
+    <Title>Il gruppo e gli sbandati</Title>
+    <Text>Quattro rabet con un serpente morto, e altri due che chiaramente li stavano cercando. Trovare prima te non migliora l'umore di nessuno.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Quattro rabet che trascinano un serpente morto" hp="20" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="Due rabet persi" hp="12" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="109">
+    <Title>Rumore abbastanza da svegliarlo</Title>
+    <Text>Quattro rabet svoltano l'angolo trascinando un serpente morto. Non lo fanno in silenzio, e in un incavo sopra di te qualcosa che dormiva smette di dormire.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Quattro rabet che trascinano un serpente morto" hp="20" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="Un serpente svegliato male" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="110">
+    <Title>Due branchi, un solo corridoio di pietra</Title>
+    <Text>I serpenti arrivano da tutti e due i lati insieme. Non stanno cacciando l'uno l'altro, il che lascia solo te.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Un branco di cinque serpenti a caccia" hp="22" attack="5" defense="2" loreDifficulty="2" />
+      <Enemy name="Un secondo branco, dall'altra parte" hp="22" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="111">
+    <Title>Gli sbandati incontrano il branco</Title>
+    <Text>Due rabet persi svoltano l'angolo di corsa, ti vedono e si fermano. Dietro di loro arriva il branco che li stava spingendo fin dall'inizio.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Un branco di cinque serpenti a caccia" hp="22" attack="5" defense="2" loreDifficulty="2" />
+      <Enemy name="Due rabet persi" hp="12" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="112">
+    <Title>Il branco, e quello che sveglia</Title>
+    <Text>Il branco a caccia si riversa sulla pietra, e il rumore fa uscire dal suo incavo, dietro di te, quello che dormiva.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Un branco di cinque serpenti a caccia" hp="22" attack="5" defense="2" loreDifficulty="2" />
+      <Enemy name="Un serpente svegliato male" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="113">
+    <Title>Quattro rabet, e nessuno sa la strada</Title>
+    <Text>Due rabet svoltano un angolo, e altri due arrivano dall'altra parte, tutti persi, tutti sollevati di vedere qualcuno finché non vedono che sei tu.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Due rabet persi" hp="12" attack="3" defense="1" loreDifficulty="1" />
+      <Enemy name="Altri due rabet persi" hp="12" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+
+  <Page id="114">
+    <Title>Ci mettono il piede prima di te</Title>
+    <Text>Due rabet persi svoltano l'angolo male e uno di loro mette un piede nell'incavo dove dorme un serpente. Adesso nessuno di voi ha più scelta.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Due rabet persi" hp="12" attack="3" defense="1" loreDifficulty="1" />
+      <Enemy name="Un serpente svegliato male" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="115">
+    <Title>Due incavi, due dormienti</Title>
+    <Text>C'è un serpente addormentato in un incavo davanti a te e un altro dietro, e la pietra porta a entrambi ogni rumore che fai.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Un serpente svegliato male" hp="18" attack="4" defense="2" loreDifficulty="2" />
+      <Enemy name="Un secondo serpente, svegliato peggio" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+
+  <Page id="116">
+    <Title>Puoi proseguire</Title>
+    <Text>Quando è finita, per un po' resti a orecchie tese. Non si muove nient'altro. Riprendi da dove avevi lasciato.</Text>
+    <Choices>
+      <Choice text="Uscire nell'angolo opposto della sala" goto="27">
+        <Requirements><Variable id="fromWhere" operator="eq" value="1" /></Requirements>
+      </Choice>
+      <Choice text="Uscire accanto all'ingresso della sala" goto="42">
+        <Requirements><Variable id="fromWhere" operator="eq" value="2" /></Requirements>
+      </Choice>
+      <Choice text="Tornare alla grotta" goto="9">
+        <Requirements><Variable id="grottoOpen" operator="eq" value="1" /></Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+
+</Librogame>

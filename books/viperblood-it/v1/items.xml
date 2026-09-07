@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<librogame formatVersion="1">
+  <items>
+    <item id="magic-scroll" name="La pergamena magica" description="Pergamena con la mappa della cripta e gli appunti dei volontari venuti prima di te. Torna al castello quando chi la porta muore."/>
+    <item id="white-yarn" name="Matassa di lana bianca" description="Lana bianchissima con un tenue bagliore. Si svolge da sola e segna il percorso che hai fatto."/>
+    <item id="crystal-vial" name="Fiala di cristallo" description="Piena di acqua limpida presa nella camera verde. Tiepida, e migliore di quanto sembri; si beve una volta sola."><special type="heal" value="10"/></item>
+    <item id="water-bottle" name="Bottiglia di viperblood" description="Acqua smeraldo del fiume sotto la cripta. Il colore non sbiadisce."/>
+    <item id="green-robes" name="Vesti verdi" description="Prese da un cadavere bruciato accanto a una pira funebre. Sanno di cenere, e tengono più caldo di quello che indossavi arrivando."><special type="equip" value="armor"/><special type="defenseBonus" value="1"/></item>
+    <item id="emerald-ring" name="Anello d'oro con smeraldo" description="Trovato nella poltiglia bruciata del budino. Caldo al tatto, e rende la mano più ferma."><special type="equip" value="accessory"/><special type="defenseBonus" value="1"/></item>
+  </items>
+</librogame>

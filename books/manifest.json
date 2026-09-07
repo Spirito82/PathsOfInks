@@ -35,20 +35,41 @@
       }
     },
     {
-      "id": "viperblood-pilot-en",
+      "id": "viperblood-en",
       "workId": "viperblood",
-      "title": "Viperblood (pilot)",
+      "title": "Viperblood",
       "author": "Luke Simonds",
       "language": "en",
-      "version": 2,
+      "genre": "Old-school dungeon crawl",
+      "blurb": "The king is dying, and the only cure is a green water that runs somewhere under the crypt of the ancient queens. You are the next volunteer sent down to fetch it — the ones before you did not come back, though their notes did. Fifteen rooms of jade and cold air, a statue you have to climb through, rabets who trade and ambush in equal measure, and a purple snake asleep on a pile of coin. Everything you carry out is yours to keep, if you carry yourself out with it.",
+      "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-pilot-en/v2/librogame.xml",
-        "sha256": "A02C17A64EB4A0EB149282B0865CF400893A821772D9A4922C364B0B60B4C919"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v1/librogame.xml",
+        "sha256": "692B1C8E618EBA758B849460899CEA293F94C851D06CE84664362DF031EA3B87"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-pilot-en/v2/items.xml",
-        "sha256": "6ECB455FB5633E899578E60B299D905CA95CF9CC8EF1F0D5495BCE766713D85E"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v1/items.xml",
+        "sha256": "2C828F6728FEFD89320B4D1ABCB9A6730CDC6A6930A0B8FB6525F761A48476AF"
+      }
+    },
+    {
+      "id": "viperblood-it",
+      "workId": "viperblood",
+      "title": "Viperblood",
+      "author": "Luke Simonds",
+      "language": "it",
+      "genre": "Dungeon crawl vecchia scuola",
+      "blurb": "Il re sta morendo, e l'unica cura è un'acqua verde che scorre da qualche parte sotto la cripta delle antiche regine. Tocca a te scendere a prenderla: chi è andato prima di te non è tornato, i suoi appunti sì. Quindici stanze di giada e aria fredda, una statua dentro cui devi arrampicarti, rabet che commerciano e tendono agguati in egual misura, e un serpente viola addormentato su un mucchio di monete. Tutto quello che porti fuori è tuo, se porti fuori anche te.",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v1/librogame.xml",
+        "sha256": "92E99C6932FD6E8C817F0D93996BB1E54692DC66EB8A303997EFCF3A11C850C8"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v1/items.xml",
+        "sha256": "69F3C2D25CE53552474FBAEF3689523B2EAB36C43D1037CEC3F19AF3835F9CEB"
       }
     }
   ]
