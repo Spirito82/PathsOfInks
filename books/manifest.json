@@ -9,18 +9,18 @@
       "genre": "Dungeon World gamebook",
       "blurb": "Your sister is dying. The healer gave you the potion and told you that time is everything: the long way round will get you home too late, and the forest path is not safe. You take the forest path. Two hours in, you hear branches breaking. What comes out of the pines is eight feet tall, carries a tree trunk, and is not always in the mood to talk. Eighteen hit points, a hundred and fifty-eight scenes, seventeen endings — and some of them are not the one you would call winning.",
       "contentWarnings": "Violence, gore, death, and disappointing a parent.",
-      "version": 10,
+      "version": 11,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v10/librogame.xml",
-        "sha256": "BBCC9CA7EFD131DC1CC5ED523DFE3F41EB3E7A88A604DD3A1ADFB73E15CA14BF"
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v11/librogame.xml",
+        "sha256": "0C904AFD0DC1B3A4F26518A355773E39EAAEE7FBC3EA3BA98643BCC30DCFEB8D"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v10/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v11/items.xml",
         "sha256": "C570DE201272AC6F7D2546842B286B807916AC3407675AD6F560EF7465471B28"
       },
-      "minAppBuild": 21,
-      "minAppVersion": "1.19"
+      "minAppBuild": 22,
+      "minAppVersion": "1.20"
     },
     {
       "id": "suddenly-an-ogre-it",
@@ -31,18 +31,18 @@
       "genre": "Librogame per Dungeon World",
       "blurb": "Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco. Dopo due ore senti dei rami spezzarsi. Quello che esce dai pini è alto due metri e mezzo, porta un tronco d'albero, e non sempre ha voglia di parlare. Diciotto punti ferita, centocinquantotto scene, diciassette finali — e qualcuno non è quello che chiameresti vincere.",
       "contentWarnings": "Violenza, sangue, morte e la delusione di un genitore.",
-      "version": 10,
+      "version": 11,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v10/librogame.xml",
-        "sha256": "19A19B35C51F6F430241B02E1C7622E164C2A05BA888696480B08C30456F843B"
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v11/librogame.xml",
+        "sha256": "FAD4DCAE329D89E9962DE810ED832E840D02AF694044417AF38F5FD75AACB4C2"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v10/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v11/items.xml",
         "sha256": "B412B77AB557A3C30FE2A8304030F7BC9C211ED0A994FBA99D8D26968D787DD2"
       },
-      "minAppBuild": 21,
-      "minAppVersion": "1.19"
+      "minAppBuild": 22,
+      "minAppVersion": "1.20"
     },
     {
       "id": "viperblood-en",
