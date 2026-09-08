@@ -9,14 +9,14 @@
       "genre": "Dungeon World gamebook",
       "blurb": "Your sister is dying. The healer gave you the potion and told you that time is everything: the long way round will get you home too late, and the forest path is not safe. You take the forest path. Two hours in, you hear branches breaking. This is a gamebook for the Dungeon World system, and most of your choices are its Basic Moves — so as you read, you also learn how that game is played. The dice have already been rolled for you, and you are shown each roll and what it meant.",
       "contentWarnings": "Violence, gore, death, and disappointing a parent.",
-      "version": 3,
+      "version": 4,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v3/librogame.xml",
-        "sha256": "33A75604FAB6460AD0C22D5F162B97B6B81CC15A5DE02314220176374272223F"
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v4/librogame.xml",
+        "sha256": "CEECFB7008D697B455915750F7AA3819AB9E16F04A459CC41B938A8AA8515109"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v3/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v4/items.xml",
         "sha256": "2D828F53EC0305883F537E11B9EDF03009CE123D17F4EDAF521B1E2C4356072A"
       }
     },
@@ -29,14 +29,14 @@
       "genre": "Librogame per Dungeon World",
       "blurb": "Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco. Dopo due ore senti dei rami spezzarsi. Questo è un librogame per il sistema Dungeon World, e quasi tutte le tue scelte sono le sue Mosse Base: leggendo, impari anche come si gioca a quel gioco. I dadi sono già stati tirati per te, e ogni tiro ti viene mostrato insieme a quello che ha significato.",
       "contentWarnings": "Violenza, sangue, morte e la delusione di un genitore.",
-      "version": 3,
+      "version": 4,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v3/librogame.xml",
-        "sha256": "F73D4D13CC9B529401A143D3BB8E6071FB100E1E52B6571EC8C28BFB2D193388"
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v4/librogame.xml",
+        "sha256": "2B941775B0888FDB1C2CF2E373E8789A9E369E7E533295E379F12B6F8A4C0A86"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v3/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v4/items.xml",
         "sha256": "BDC360D1936F06C4420B70065A01183E09E76F35B479C933C1A6A0AF4228D568"
       }
     },
