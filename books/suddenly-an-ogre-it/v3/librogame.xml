@@ -1,0 +1,1950 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="3" phase="test" id="suddenly-an-ogre-it" workId="suddenly-an-ogre" language="it" title="All'improvviso un ogre" author="J. Alan Henning" checks="dadi" genre="Librogame per Dungeon World" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" deathPage="81">
+  <Changes>
+    <Change>Riscritto per questo motore; le voci numerate e le loro scelte non sono cambiate</Change>
+    <Change>I nomi delle mosse di Dungeon World e i tiri già stampati non ci sono più: qui il libro si legge come un racconto, non come una lezione su un sistema di gioco</Change>
+    <Change>I danni che l'originale raccontava adesso sono veri. Si parte con 18 punti ferita, come il personaggio dell'originale, e i punti che ti vengono tolti sono quelli che l'autore ha scritto scena per scena</Change>
+    <Change>Alla voce 155 il danno è 4 invece di 5: sull'unico percorso che ci arriva, il conto dell'originale lascia il lettore a 1 punto ferita, e le scene precedenti ne consumano uno in più</Change>
+    <Change>Tre tiri che dipendevano dal peso o dal valore di quello che porti sono diventati scelte esplicite, perché questo motore non sa sommare un inventario dentro un tiro di dado</Change>
+    <Change>Dove l'originale chiede davvero di tirare — undici punti — tira l'app per te</Change>
+    <Change>Il libro dichiara di non avere caratteristiche né abilità, perché nessuna scena le legge; il contatore del carico è stato tolto, perché nessuna scena lo cambiava</Change>
+    <Change>La griglia dell'inventario che segue sette partite separate non è inclusa: appartiene alla carta</Change>
+    <Change>Le voci 86 e 154 dell'originale, a cui non punta niente, sono state lasciate fuori</Change>
+    <Change>Le scene non hanno titolo, come nell'originale: un titolo sopra una scena direbbe che cosa sta per succedere</Change>
+    <Change>La fotografia di copertina non è inclusa; l'originale non ne indica la fonte</Change>
+    <Change>Tradotto in italiano dall'inglese</Change>
+  </Changes>
+  <CharacterRules skillPoints="0" attributePoints="0" hitPoints="18" />
+  <ContentWarnings>Violenza, sangue, morte e la delusione di un genitore.</ContentWarnings>
+  <Blurb>Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco.
+
+Dopo due ore senti dei rami spezzarsi. Questo è un librogame per il sistema Dungeon World, e quasi tutte le tue scelte sono le sue Mosse Base: leggendo, impari anche come si gioca a quel gioco. I dadi sono già stati tirati per te, e ogni tiro ti viene mostrato insieme a quello che ha significato.</Blurb>
+  <StartingItems>
+    <Item id="healing-potion" />
+    <Item id="short-sword" />
+    <Item id="worn-bow" />
+    <Item id="one-arrow" />
+    <Item id="leather-armor" />
+    <Item id="adventuring-gear" />
+    <Item id="dungeon-rations" />
+    <Item id="three-coins" />
+  </StartingItems>
+  <Tables>
+    <Table id="ultimoRespiro" dice="36" times="1">
+      <Result range="1-6" is="pieno" />
+      <Result range="7-21" is="misto" />
+      <Result range="22-36" is="mancato" />
+      <Outcome when="pieno" goto="99" />
+      <Outcome when="misto" goto="98" />
+      <Outcome when="mancato" goto="90" />
+    </Table>
+    <Table id="corsaFinale" dice="36" times="1">
+      <Result range="1-3" is="pieno" />
+      <Result range="4-15" is="misto" />
+      <Result range="16-36" is="mancato" />
+      <Outcome when="pieno" goto="70" />
+      <Outcome when="misto" goto="100" />
+      <Outcome when="mancato" goto="60" />
+    </Table>
+    <Table id="scattoCarico" dice="36" times="1">
+      <Result range="1-36" is="mancato" />
+      <Outcome when="mancato" goto="92" />
+    </Table>
+    <Table id="scattoAlleggerito" dice="36" times="1">
+      <Result range="1" is="pieno" />
+      <Result range="2-10" is="misto" />
+      <Result range="11-36" is="mancato" />
+      <Outcome when="pieno" goto="65" />
+      <Outcome when="misto" goto="84" />
+      <Outcome when="mancato" goto="92" />
+    </Table>
+    <Table id="scattoLibero" dice="36" times="1">
+      <Result range="1-10" is="pieno" />
+      <Result range="11-26" is="misto" />
+      <Result range="27-36" is="mancato" />
+      <Outcome when="pieno" goto="65" />
+      <Outcome when="misto" goto="84" />
+      <Outcome when="mancato" goto="92" />
+    </Table>
+    <Table id="mucchioCarico" dice="36" times="1">
+      <Result range="1-36" is="mancato" />
+      <Outcome when="mancato" goto="101" />
+    </Table>
+    <Table id="mucchioAlleggerito" dice="36" times="1">
+      <Result range="1" is="pieno" />
+      <Result range="2-10" is="misto" />
+      <Result range="11-36" is="mancato" />
+      <Outcome when="pieno" goto="46" />
+      <Outcome when="misto" goto="93" />
+      <Outcome when="mancato" goto="101" />
+    </Table>
+    <Table id="mucchioLibero" dice="36" times="1">
+      <Result range="1-10" is="pieno" />
+      <Result range="11-26" is="misto" />
+      <Result range="27-36" is="mancato" />
+      <Outcome when="pieno" goto="46" />
+      <Outcome when="misto" goto="93" />
+      <Outcome when="mancato" goto="101" />
+    </Table>
+    <Table id="pedaggioPoco" dice="36" times="1">
+      <Result range="1-10" is="pieno" />
+      <Result range="11-26" is="misto" />
+      <Result range="27-36" is="mancato" />
+      <Outcome when="pieno" goto="46" />
+      <Outcome when="misto" goto="20" />
+      <Outcome when="mancato" goto="28" />
+    </Table>
+    <Table id="pedaggioDiscreto" dice="36" times="1">
+      <Result range="1-15" is="pieno" />
+      <Result range="16-30" is="misto" />
+      <Result range="31-36" is="mancato" />
+      <Outcome when="pieno" goto="46" />
+      <Outcome when="misto" goto="20" />
+      <Outcome when="mancato" goto="28" />
+    </Table>
+    <Table id="pedaggioRicco" dice="36" times="1">
+      <Result range="1-30" is="pieno" />
+      <Result range="31-36" is="misto" />
+      <Outcome when="pieno" goto="46" />
+      <Outcome when="misto" goto="20" />
+    </Table>
+  </Tables>
+  <Page id="1">
+    <Text>Corri lungo il sentiero nel bosco da due ore. All'improvviso senti dei rami spezzarsi non lontano da te, e il rumore ovattato di passi pesanti sugli aghi di pino caduti. Fra i pini fitti non riesci a vedere niente. Il sentiero stretto attraverso il bosco scuro prosegue verso nord.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Tornare indietro verso sud lungo il sentiero, cercando di non fare rumore" goto="2" />
+      <Choice text="Arrampicarti su un pino alle tue spalle per vedere meglio" goto="4" />
+      <Choice text="Aspettare che qualunque cosa sia si avvicini" goto="6" />
+    </Choices>
+  </Page>
+  <Page id="2">
+    <Text>Mentre ti volti in fretta per tornare indietro lungo il sentiero, inciampi in una radice e cadi di lato fra gli aghi di pino, la cintura si strappa e la spada nel fodero vola via. Guardando dietro di te vedi una testa piccola, in alto, che spunta sopra i rami.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Rotolare nel sottobosco e restare immobile" goto="3" />
+      <Choice text="Afferrare il fodero, sguainare la spada e tenerti pronto" goto="6" />
+      <Choice text="Abbandonare la spada, saltare in piedi e correre a sud lungo il sentiero" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="3">
+    <Text>Senti la creatura avvicinarsi, muovendosi rapida fra i cespugli. All'improvviso una testa piccola, in alto, spunta sopra gli alberi e si ferma appena prima del sentiero. È chiaramente una creatura grande, forse otto piedi di altezza. Annusa l'aria, poi guarda dritto verso di te. Gli occhi le si spalancano, e avanza sul sentiero. È un umanoide mostruoso e nudo, alto circa otto piedi, con una testa piccola. In una mano stringe un tronco d'albero, come una clava.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Cercare di ricordare tutto quello che sai su creature simili" goto="8" />
+      <Choice text="Incoccare una freccia e tirare" goto="12" />
+      <Choice text="Attaccare discorso" goto="14" />
+    </Choices>
+  </Page>
+  <Page id="4">
+    <Text>Arrampicandoti sul pino, ti issi su un ramo robusto. Le mani ti si appiccicano di resina, e il profumo del pino quasi ti culla in un senso di sicurezza. Ma vedi un movimento fra i pini, e non riesci a capire che cosa sia. Mentre si avvicina, vedi che è una creatura mostruosamente grande, forse otto piedi di altezza, ma con una testa piccola. Un ogre! Porta al fianco un tronco d'albero, come una clava.
+
+Puoi fare al GM una di queste domande:</Text>
+    <Choices>
+      <Choice text="Che cosa è successo qui di recente?" goto="5" />
+      <Choice text="Che cosa sta per succedere?" goto="7" />
+      <Choice text="A che cosa devo stare attento?" goto="9" />
+      <Choice text="Che cosa qui mi è utile o prezioso?" goto="11" />
+      <Choice text="Chi comanda davvero qui?" goto="13" />
+      <Choice text="Che cosa qui non è quello che sembra?" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>Dall'albero vedi impronte profonde attraversare il sentiero e proseguire nel folto dall'altra parte, dove adesso distingui rami spezzati. L'ogre dev'essere arrivato da quella parte del bosco.
+
+Riabbassi lo sguardo su di lui e vedi che ha le narici spalancate. Deve aver colto il tuo odore, e muove la testa avanti e indietro scrutando le cime degli alberi. Guarda dritto verso di te e ruggisce, un suono bestiale che riecheggia nel bosco e fa alzare in volo i corvi, i cui gracchi coprono il ruggito.
+
+L'ogre si precipita verso la base del tuo albero.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Arrampicarti più in alto sull'albero" goto="18" />
+      <Choice text="Incoccare una freccia e provare a colpire l'ogre" goto="21" />
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Text>È chiaramente una creatura grande, forse otto piedi di altezza, e solo la testa piccola spunta sopra i rami dei pini. Annusa l'aria, poi guarda dritto verso di te. Gli occhi le si spalancano, e avanza sul sentiero. È un umanoide mostruoso e nudo, alto circa otto piedi, con quella testa sproporzionatamente piccola. In una mano stringe un tronco d'albero, come una clava, che comincia a far roteare davanti a sé come una falce.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Schivare il tronco e infilarti vicino all'ogre" goto="19" />
+      <Choice text="Ritirarti fra i pini, difendendoti mentre lo fai" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>La creatura sta annusando l'aria, le narici spalancate. Molto probabilmente sta per cogliere il tuo odore.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Arrampicarti più in alto sull'albero" goto="18" />
+      <Choice text="Scendere dall'albero e correre" goto="22" />
+      <Choice text="Restare immobile sperando che non scopra dove sei" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>È chiaramente un ogre. La testa è umana, perché gli ogre un tempo erano umani, umani che si nascosero nel folto dei boschi. Lì impararono a detestare i propri antenati. Sulle colline sopra le foreste costruirono rozzi altari di pietra e sacrificarono cervi e orsi a dèi oscuri, finché crebbero di statura ma non di saggezza e cominciarono a sacrificare ai loro dèi oscuri anche gli uomini.
+
+Immagini di averlo raccolto da pezzi di canzoni che i bardi cantano nelle taverne.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Incoccare una freccia e tirare" goto="12" />
+      <Choice text="Attaccare discorso" goto="14" />
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>La creatura dalla testa piccola ha orecchie grandi e narici larghe e spalancate, ma occhietti lucidi. È più probabile che ti senta o che ti annusi, piuttosto che ti veda, quassù sull'albero.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Lanciare pigne lontano nel bosco per attirare l'attenzione del mostro" goto="23" />
+      <Choice text="Restare immobile sperando che non scopra dove sei" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Text>Ti precipiti lungo il sentiero, più in fretta e più in silenzio che puoi. Per fortuna il sentiero gira e si contorce, e sei fuori dalla vista della creatura. Non senti alcun segno di essere seguito.
+
+Che cosa vuoi fare?</Text>
+    <Choices>
+      <Choice text="Nasconderti fuori dal sentiero per un po', poi tornare a riprendere la spada" goto="16" />
+      <Choice text="Rifare i tuoi passi lungo il sentiero, sperando che l'ogre se ne sia andato" goto="31" />
+      <Choice text="Tagliare attraverso il bosco verso casa, col rischio di perderti" goto="38" />
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Text>Dalla cima dell'albero vedi che il sentiero piega verso est. Puoi tagliare attraverso il bosco in linea retta e ritrovare il sentiero più avanti.
+
+Sposti lo sguardo dalle pigne sui rami vicini a te alle grandi orecchie del mostro, là sotto.
+
+Che cosa vuoi fare?</Text>
+    <Choices>
+      <Choice text="Lanciare pigne lontano nel bosco per attirare l'attenzione del mostro" goto="23" />
+      <Choice text="Scendere e correre verso est attraverso il bosco per ritrovare il sentiero più avanti" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="12">
+    <Text>La freccia è incoccata. Da qui, però, il tiro non c'è.</Text>
+    <Choices>
+      <Choice text="Spostarti finché non lo vedi bene, anche a costo di farti vedere" goto="17" />
+      <Choice text="Tirare da dove sei e accontentarti di quel che viene" goto="39" />
+      <Choice text="Svuotargli addosso la faretra, e contare dopo quel che resta" goto="77" />
+    </Choices>
+  </Page>
+  <Page id="13">
+    <Text>La creatura dalla testa piccola ha occhietti lucidi ma narici larghe e spalancate. Va dietro al naso, ed è molto più probabile che ti annusi piuttosto che ti veda, quassù sull'albero.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Lanciare pigne lontano nel bosco per attirare l'attenzione del mostro" goto="23" />
+      <Choice text="Sgusciare giù dall'altro lato dell'albero e nasconderti fra foglie, rametti e pigne alla base, così che non possa annusarti" goto="78" />
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Text>«Salve», dici, «non badare a me. Sto solo attraversando il bosco. Fra un momento sarò fuori dai piedi.»
+
+«Tu paghi pedaggio», dice la creatura, con una voce roca, sorprendentemente sommessa per la sua stazza. Ha gli occhi rossi.
+
+Provi a pensare a che cosa hai che questa creatura possa apprezzare. La tua armatura è troppo piccola perché la indossi. La tua spada per lei sarebbe un coltello. In tutto hai:
+
+Razioni da sotterraneo (5 usi, 1 peso; 3 monete)
+
+Attrezzatura da avventura (1 peso; 20 monete)
+
+Pozione curativa (0 peso; 50 monete)
+
+Armatura di cuoio (1 armatura, 1 peso; 10 monete)
+
+3 monete (0 peso)
+
+Spada corta (mischia, 1 peso; 8 monete)
+
+Arco consumato (media distanza, 2 peso; 15 monete)
+
+Fascio di frecce (3 munizioni, 1 peso; 1 moneta)
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Quale di queste cose le offri? Decidi" goto="20" />
+      <Choice text="Tenerti la tua roba. Incoccare una freccia e tirare" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="15">
+    <Text>Niente non è quello che sembra?!
+
+È un mostro grosso e spaventoso con un bastone grosso e spaventoso, che pesta per il bosco cercando teste da fracassare.
+
+Però ha gli occhi rossi, e sembra che abbia pianto.
+
+Che cosa vuoi fare?</Text>
+    <Choices>
+      <Choice text="Restare in silenzio e immobile in cima all'albero finché non passa oltre" goto="26" />
+      <Choice text="Scendere dall'albero e parlare con l'ogre" goto="41" />
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>L'ogre si avvicina, e lo senti annusare e strascicare. Non è lontano da te. Vorresti poter aspettare il crepuscolo, ma il tempo è tutto per salvare tua sorella. Alla fine comincia ad allontanarsi. Aspetti finché i suoi passi non svaniscono in lontananza. Con cautela, lentamente, rifai i tuoi passi fino al tratto di sentiero dove hai lasciato la spada.</Text>
+    <Choices>
+      <Choice text="Ti ricordi perfettamente dove l'hai lasciata, vero?" goto="24" />
+      <Choice text="All'epoca ti eri impresso il punto in mente, vero?" goto="42" />
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Text>Fai un passo avanti, ti metti al centro del sentiero e allinei una serie di tiri puliti. Due frecce si conficcano nella spalla dell'ogre, che urla di dolore e di rabbia. La terza freccia gli sfreccia sopra la spalla mentre ti piomba addosso, muovendosi sorprendentemente veloce. L'ogre ti sta calando la clava addosso.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Usare l'arco per difenderti dalla forza piena della clava" goto="25" />
+      <Choice text="Rotolare sotto la clava per arrivare abbastanza vicino da pugnalarlo" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Text>Mentre ti arrampicavi più in alto, l'ogre ha cominciato a scuotere violentemente il tuo albero. Oscilli avanti e indietro, a stento riesci a reggerti.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Aggrapparti stretto all'albero per non cadere e morire" goto="34" />
+      <Choice text="Reggerti stretto ma provare a colpire l'ogre con l'arco" goto="44" />
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>Provi a evitare la clava che ruota, ma il mostro è più veloce di quanto sembri, e ti sbatte a terra. Ti rialzi in piedi, la spada corta pronta.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="7" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Pugnalare il mostro" goto="27" />
+      <Choice text="Ritirarti nel bosco combattendo" goto="45" />
+    </Choices>
+  </Page>
+  <Page id="20">
+    <Text>Provi a pensare a che cosa hai che questa creatura possa apprezzare. Più vale, più hai probabilità che ti lasci passare — e meno ti resta se non lo fa.</Text>
+    <Choices>
+      <Choice text="Offrire la pozione curativa, la cosa più preziosa che porti" goto="46" roll="pedaggioRicco" />
+      <Choice text="Offrire la tua attrezzatura da avventura" goto="46" roll="pedaggioDiscreto" />
+      <Choice text="Offrire la tua armatura di cuoio" goto="46" roll="pedaggioPoco" />
+      <Choice text="Offrire il tuo arco consumato" goto="46" roll="pedaggioPoco" />
+      <Choice text="Mostrargli le mani vuote: gli hai già dato tutto" goto="54" />
+    </Choices>
+  </Page>
+  <Page id="21">
+    <Text>I rami fitti dell'albero, che ti hanno reso così facile arrampicarti, ti rendono difficile allineare un tiro buono.
+
+Scegli una cosa:</Text>
+    <Choices>
+      <Choice text="Devi spostarti per avere il tiro, avvicinandoti all'ogre" goto="29" />
+      <Choice text="Devi accontentarti di quel che riesci a fare" goto="47" />
+      <Choice text="Devi tirare più volte, consumando una munizione (le tue ultime frecce)" goto="79" />
+    </Choices>
+  </Page>
+  <Page id="22">
+    <Text>La resina del pino ti si attacca alle mani mentre provi a scendere in fretta.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Fare così in fretta da finire per cadere per il resto del tragitto" goto="30" />
+      <Choice text="Andare così piano che l'ogre ti annusa e si avvicina" goto="48" />
+    </Choices>
+  </Page>
+  <Page id="23">
+    <Text>Stacchi con cura tre pigne dal ramo più vicino e, prendendo la mira su un albero lontano, le lanci più forte che puoi. Le pigne mancano l'albero a cui miravi, ma una rimbalza su un ramo con un tonfo soddisfacente.
+
+L'ogre lancia un ruggito e si allontana a grandi passi verso il rumore.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Scendere dall'albero e correre lungo il sentiero più veloce che puoi" goto="31" />
+      <Choice text="Scendere dall'albero e correre nel bosco più veloce che puoi, evitando il sentiero" goto="49" />
+    </Choices>
+  </Page>
+  <Page id="24">
+    <Text>Torni sul sentiero ma la spada non si vede da nessuna parte. Cerchi con attenzione fra rametti, aghi di pino e foglie marce lungo il sentiero, ma non la trovi. Rimpiazzare quella spada ti costerà almeno otto monete d'argento, molto più delle tre che hai.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Cercare lungo il sentiero per tutto il tempo che serve" goto="32" />
+      <Choice text="Dimenticare la spada e proseguire lungo il sentiero" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Text>Disperatamente usi l'arco per fermare la clava che ti si abbatte addosso. La clava spezza l'arco e ti schiaccia la spalla.
+
+L'ogre solleva la clava per colpire ancora.
+
+Lasci cadere l'arco spezzato e sguaini la spada corta. Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Attaccare!" goto="33" />
+      <Choice text="Schivare la clava e avvicinarti" goto="50" />
+    </Choices>
+  </Page>
+  <Page id="26">
+    <Text>All'improvviso le narici dell'ogre si spalancano, e alza la testa, annusando e tirando su col naso. Ti sposti con cautela lungo un ramo, nascondendoti dietro il tronco, sperando che non possa vederti né annusarti. Ma con orrore lo senti avvicinarsi. Adesso è sotto di te e ha cominciato a scuotere l'albero violentemente.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Aggrapparti stretto all'albero per non cadere e morire" goto="34" />
+      <Choice text="Reggerti stretto ma provare a colpire l'ogre con l'arco" goto="51" />
+    </Choices>
+  </Page>
+  <Page id="27">
+    <Text>L'ogre incombe su di te. Affondi la lama verso il suo ventre, ma l'ogre ti avvolge la mano della spada nella sua manona, stringendo e spezzandoti le dita, poi ti strappa la spada di mano. Ti conficca addosso la tua stessa spada, e cadi a terra.
+
+L'ogre estrae la spada e si prepara a colpire ancora, ma tu cadi a terra, apparentemente senza vita.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="11" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Text>Tremando, allunghi la mano con il pedaggio che offri.
+
+La creatura ti cala addosso il tronco che usa come clava, sbattendoti a terra nel dolore, mandando in aria quello che offrivi e ferendoti la mano della spada.
+
+«Pedaggio non buono!» ti grida rabbiosa. «Tutto dare a me!» Ti minaccia con la clava.
+
+La mano della spada ti fa male.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="9" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Mettere tutto quello che hai, tutto, in un mucchio" goto="52" />
+      <Choice text="Mettere qualche oggetto in un mucchio, poi scappare" goto="80" />
+    </Choices>
+  </Page>
+  <Page id="29">
+    <Text>Per avere un tiro buono devi scendere un po' lungo l'albero prima di poter tirare. La freccia si conficca a fondo nella spalla dell'ogre, che lancia un urlo.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Lasciare l'arco e saltargli addosso, provando a ucciderlo con la spada" goto="35" />
+      <Choice text="Tirare ancora" goto="53" />
+    </Choices>
+  </Page>
+  <Page id="30">
+    <Text>Nella fretta perdi l'appiglio e cadi giù per il resto dell'albero, sbattendo contro i rami prima di finire a terra.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Tornare indietro lungo il sentiero da cui sei venuto, lontano dall'ogre (e lontano da casa)" goto="10" />
+      <Choice text="Correre nel bosco più veloce che puoi, evitando il sentiero" goto="49" />
+    </Choices>
+  </Page>
+  <Page id="31">
+    <Text>Non riesci a vedere dove sia andato l'ogre. Se è ancora vicino al sentiero, probabilmente hai un solo tentativo per passargli davanti di corsa, o rischi di essere preso e mangiato.
+
+Più cose porti, più lento corri. Che cosa sei disposto a lasciare?</Text>
+    <Choices>
+      <Choice text="Niente. Correre con tutto quello che hai" goto="92" roll="scattoCarico" />
+      <Choice text="L'armatura, l'arco e l'attrezzatura da avventura" goto="84" roll="scattoAlleggerito" />
+      <Choice text="Tutto tranne la pozione" goto="84" roll="scattoLibero" />
+    </Choices>
+  </Page>
+  <Page id="32">
+    <Text>Maledici la fattura del fodero di cuoio, di cui di solito vai così fiero, ma che adesso lo rende più difficile da trovare. Alla fine ce l'hai di nuovo in mano. Non puoi fare a meno di ammirarne le filigrane.
+
+Senti lo schianto di un ramo spezzato sotto un piede e vedi un umanoide mostruoso e nudo piombarti addosso, le narici spalancate. È alto circa otto piedi, con una testa sproporzionatamente piccola. In una mano stringe un tronco d'albero, come una clava, che comincia a far roteare davanti a sé come una falce.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Schivare il tronco e infilarti vicino all'ogre" goto="19" />
+      <Choice text="Ritirarti fra i pini, difendendoti mentre lo fai" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="33">
+    <Text>Provi una finta e un affondo con la spada, ma l'ogre ti cala addosso la clava e ti schiaccia a terra prima che tu riesca anche solo ad avvicinarti.
+
+L'ogre lascia andare il tronco che usava come clava; il tronco continua a schiacciarti a terra. Ti strappa di mano la spada corta.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Fingerti morto" goto="56" />
+      <Choice text="Spingere via il tronco e scappare" goto="66" />
+    </Choices>
+  </Page>
+  <Page id="34">
+    <Text>L'ogre scuote l'albero così ferocemente che scivoli un poco più in basso, sbattendo la testa contro un ramo.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Reggerti stretto ma provare a colpire l'ogre con l'arco" goto="51" />
+      <Choice text="Arrampicarti più in alto sull'albero che oscilla, per restare fuori dalla sua portata, col rischio di cadere e morire" goto="67" />
+    </Choices>
+  </Page>
+  <Page id="35">
+    <Text>Ti tuffi giù dall'albero, la spada corta davanti a te, provando a mozzargli la testa. L'ogre sussulta vedendoti piombare, e la tua lama gli colpisce duro la clavicola.
+
+Ti scaglia contro l'albero e va su tutte le furie. Scuote te e l'albero così forte che l'albero si rovescia, le radici in aria in una nuvola di terra, polvere e aghi di pino, e tu cadi accanto al tronco.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="10" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Rialzarti e caricare l'ogre con la spada" goto="55" />
+      <Choice text="Scappare" goto="66" />
+    </Choices>
+  </Page>
+  <Page id="36">
+    <Text>Ti ritiri in una parte particolarmente fitta del bosco, dove gli alberi sono cresciuti vicini l'uno all'altro. L'ogre ti cala addosso la clava, ma colpisce un ramo, che sbatte contro di te al suo posto. Pugnali l'ogre ma ha la pelle così spessa che non gli cavi nemmeno una goccia di sangue.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Attaccare!" goto="88" />
+      <Choice text="Schivare la clava e avvicinarti" goto="58" />
+    </Choices>
+  </Page>
+  <Page id="37">
+    <Text>Resti assolutamente immobile contro il tronco, che ondeggia appena per il tuo peso e per una brezza che si alza. L'ogre ha buttato indietro la testa e inspira a fondo. Lascia il sentiero, e lo perdi di vista fra gli alberi. Lo senti annusare da qualche parte sotto di te.
+
+Il ramo su cui stai in piedi comincia a incrinarsi. Si sta facendo appiccicoso e scivoloso per la resina, come le tue mani sul tronco.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Provare a restare fermo e saldo il più a lungo possibile, finché il ramo cede" goto="59" />
+      <Choice text="Arrampicarti su, abbracciando il tronco, finché le mani ti si fanno così scivolose di resina che ti fai male scendendo di qualche ramo" goto="89" />
+    </Choices>
+  </Page>
+  <Page id="38">
+    <Text>Quando hai lasciato il guaritore, ti aveva avvertito di non lasciare il sentiero del bosco, ma perdersi sembra meglio che farsi ammazzare da un ogre.
+
+Hai provato a restare fuori dal sentiero, col rischio di incontrare di nuovo l'ogre. Ma hai provato a restare abbastanza vicino da non perderlo.
+
+Purtroppo il consiglio del guaritore era saggio, e a un certo punto hai perso di vista il sentiero e non sei più riuscito a ritrovarlo. Hai vagato per il bosco, sempre più disperato mentre il giorno avanzava, finché nel tardo pomeriggio hai ritrovato il sentiero.</Text>
+    <Choices>
+      <Choice text="Continua" goto="60" />
+    </Choices>
+  </Page>
+  <Page id="39">
+    <Text>La tua freccia si conficca nella spalla dell'ogre, rimbalzando via senza fargli niente. L'ogre ti carica, sorprendentemente veloce. Ti sta calando la clava addosso.</Text>
+    <Choices>
+      <Choice text="Rotolare sotto la clava per arrivare abbastanza vicino da pugnalarlo" goto="57" />
+      <Choice text="Usare l'arco per difenderti dalla forza piena della clava" goto="61" />
+    </Choices>
+  </Page>
+  <Page id="40">
+    <Text>Quando hai lasciato il guaritore, ti aveva avvertito di non lasciare il sentiero del bosco, ma perdersi sembra meglio che farsi ammazzare da un ogre.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Fidarti di quello che hai visto dalla cima dell'albero: puntare a est, sicuro di ritrovare il sentiero più avanti, col rischio di metterci troppo" goto="95" />
+      <Choice text="Provare a restare fuori dal sentiero ma vicino, col rischio di incontrare di nuovo l'ogre" goto="103" />
+    </Choices>
+  </Page>
+  <Page id="41">
+    <Text>Scendi dall'albero lentamente e con cautela, poi esci sul sentiero. «Salve!» chiami. «Che piacere vederti!»
+
+L'ogre si asciuga una lacrima e ti fulmina con lo sguardo.
+
+«Non badare a me. Sto solo attraversando il bosco. Fra un momento sarò fuori dai piedi. C'è qualcosa che posso fare per te, prima? Qualcosa che non va?»
+
+«Non avere regalo per Ugromsh nel suo giorno.»
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Provare a ricordare tutto quello che hai sentito sugli ogre e capire che cosa possa volere Ugromsh" goto="62" />
+      <Choice text="Offrirgli un regalo, ma prima procurarti una leva su di lui" goto="72" />
+      <Choice text="Offrire all'ogre un regalo in cambio del passaggio, ma con +1 forward al tiro" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="42">
+    <Text>Il tuo fodero di cuoio marrone era ornato di motivi ondulati che lo facevano confondere meglio con le foglie brune cadute e gli aghi di pino. Eri sicuro che l'ogre non l'avrebbe visto dal sentiero.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Cercare fra i mucchi di foglie lungo il sentiero per tutto il tempo che serve" goto="63" />
+      <Choice text="Dimenticare la spada e proseguire lungo il sentiero" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="43">
+    <Text>Lasci cadere l'arco e rotoli sotto la clava per arrivare a distanza utile e pugnalare l'ogre. Sguaini la spada, ma l'ogre lascia cadere la clava e prova a schiacciarti con le sue mani carnose.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Provare a tagliargli i tendini" goto="64" />
+      <Choice text="Provare a mozzargli la mano" goto="107" />
+    </Choices>
+  </Page>
+  <Page id="44">
+    <Text>È difficile tenerti stretto al tronco e tirare allo stesso tempo. Peggio ancora, i rami fitti dell'albero, che ti hanno reso così facile arrampicarti, ti rendono difficile allineare un tiro buono.
+
+Scegli una cosa (in ogni caso infliggi il tuo danno):</Text>
+    <Choices>
+      <Choice text="Scendere di un ramo o due, più vicino a lui, per avere il tiro" goto="29" />
+      <Choice text="Tirare da dove sei e accontentarti di quel che viene" goto="96" />
+      <Choice text="Tirare una freccia dopo l'altra, spendendo quel che resta nella faretra" goto="104" />
+    </Choices>
+  </Page>
+  <Page id="45">
+    <Text>La spada davanti a te, ti ritiri in una parte particolarmente fitta del bosco, dove gli alberi sono cresciuti vicini l'uno all'altro. L'ogre ti cala addosso la clava, ma colpisce un ramo, che sbatte contro di te al suo posto.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Voltarti e correre nel bosco più veloce che puoi" goto="66" />
+      <Choice text="Ritirarti ancora più a fondo nel folto alle tue spalle" goto="85" />
+    </Choices>
+  </Page>
+  <Page id="46">
+    <Text>Ti allontani a grandi passi, lasciando l'ogre che ghigna sul bottino che gli hai dato, poi ti metti a correre lungo il sentiero.</Text>
+    <Choices>
+      <Choice text="Se hai dato all'ogre la pozione curativa" goto="76" />
+      <Choice text="Altrimenti" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="47">
+    <Text>La tua freccia colpisce un ramo e poi rimbalza sulla testa dell'ogre, senza fargli niente.
+
+Ruggendo, l'ogre comincia a scuotere l'albero con ancora più forza.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Arrampicarti più in alto sull'albero" goto="18" />
+      <Choice text="Tirare ancora" goto="21" />
+    </Choices>
+  </Page>
+  <Page id="48">
+    <Text>Mentre scendi dall'albero, vedi l'ogre che ti corre incontro lungo il sentiero, facendo roteare la clava davanti a sé come una falce.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Incoccare una freccia e tirare" goto="12" />
+      <Choice text="Schivare la clava che ruota e infilarti vicino all'ogre" goto="19" />
+      <Choice text="Ritirarti fra i pini, difendendoti mentre lo fai" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="49">
+    <Text>Quando hai lasciato il guaritore, ti aveva avvertito di non lasciare il sentiero del bosco, ma perdersi sembra meglio che farsi ammazzare da un ogre.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Provare a restare fuori dal sentiero ma vicino, col rischio di farti male fra le rocce e i rami del sottobosco" goto="68" />
+      <Choice text="Puntare lontano dal sentiero nella direzione di casa, col rischio di metterci così tanto che tua sorella muoia prima che tu le porti la pozione" goto="109" />
+    </Choices>
+  </Page>
+  <Page id="50">
+    <Text>Riesci a schivare la clava che ruota e ad avvicinarti all'ogre, la spada pronta.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Colpire con la spada" goto="69" />
+      <Choice text="Provare a tagliargli i tendini" goto="64" />
+    </Choices>
+  </Page>
+  <Page id="51">
+    <Text>I rami fitti dell'albero, che ti hanno reso così facile arrampicarti, ti rendono difficile allineare un tiro buono.
+
+Scegli una cosa (in ogni caso infliggi il tuo danno):</Text>
+    <Choices>
+      <Choice text="Devi spostarti per avere il tiro, scendendo lungo l'albero e più vicino all'ogre, ma infliggi danno" goto="29" />
+      <Choice text="Devi accontentarti di quel che riesci a fare" goto="96" />
+      <Choice text="Devi tirare più volte, consumando una munizione (le tue ultime frecce), ma infliggi danno" goto="104" />
+    </Choices>
+  </Page>
+  <Page id="52">
+    <Text>Hai messo in un mucchio tutto quello che ti resta, tranne la pozione curativa. Cominci a metterla nel mucchio insieme al resto. Gli occhi dell'ogre si spalancano, e allunga la mano verso di essa.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Lasciare la pozione e scappare. Se la lasci, tua sorella morirà, ma tu vivrai." goto="105" />
+      <Choice text="Tenerti la pozione e correre lungo il sentiero più veloce che puoi" goto="97" />
+    </Choices>
+  </Page>
+  <Page id="53">
+    <Text>L'ogre prova a ripararsi sotto uno dei rami grossi. Tiri ancora! Scegli una cosa:</Text>
+    <Choices>
+      <Choice text="Devi spostarti per avere il tiro, scendendo a portata dell'ogre, ma infliggi danno" goto="71" />
+      <Choice text="Devi accontentarti di quel che riesci a fare" goto="112" />
+      <Choice text="Devi tirare più volte, consumando una munizione (le tue ultime frecce), ma infliggi danno" goto="125" />
+    </Choices>
+  </Page>
+  <Page id="54">
+    <Text>Fissi tutti i tuoi averi, posati davanti all'ogre, ma il tuo sguardo va alla pozione curativa.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Lasciare la pozione e scappare. Se la lasci, tua sorella morirà, ma tu vivrai." goto="105" />
+      <Choice text="Tenerti la pozione e correre lungo il sentiero più veloce che puoi" goto="97" />
+    </Choices>
+  </Page>
+  <Page id="55">
+    <Text>Ti scagli contro l'ogre in mezzo a una nuvola di polvere e aghi di pino, affondandogli la spada nel ventre.
+
+Grugnendo e sanguinando, l'ogre ti afferra per la mano della spada e te la stritola. Urli di dolore. Ti solleva verso di sé, poi ti stacca un morso enorme dalla spalla sinistra.
+
+L'ogre lascia cadere a terra il tuo corpo apparentemente senza vita e si estrae la spada dal ventre, poi crolla a terra.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="8" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="56">
+    <Text>Sei accasciato sotto il tronco, gli occhi chiusi, lo zaino da una parte. Senti lo zaino che ti viene sfilato, e senti l'ogre che lo apre. Qualche istante dopo senti masticare. Deve star mangiando le tue razioni. Il tronco ti preme forte contro la gamba destra, che comincia a far male.
+
+Poi lo senti tirare fuori oggetti dallo zaino. Dai rumori di metallo contro metallo, sembra che stia frugando nella tua attrezzatura da avventura. Il che vuol dire che nello zaino resta solo la pozione curativa che serve a tua sorella.
+
+Apri gli occhi appena. Vedi l'ogre che guarda i chiodi che portavi nello zaino. Lo zaino è accanto a lui, la spada dall'altra parte dello zaino, lontano da lui.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Buttarti sullo zaino, e poi scappare" goto="73" />
+      <Choice text="Buttarti sulla spada, e poi prendere lo zaino" goto="94" />
+    </Choices>
+  </Page>
+  <Page id="57">
+    <Text>Lasci cadere l'arco e provi a rotolare sotto la clava per pugnalare l'ogre. Ma l'ogre si muove sorprendentemente in fretta per la sua stazza, ed è bravo con quella clava. Il colpo è di striscio; poteva andare molto peggio. Solleva la clava per colpire ancora.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Pugnalare l'ogre con la lama" goto="106" />
+      <Choice text="Prepararti a parare la clava con il piatto della spada" goto="121" />
+    </Choices>
+  </Page>
+  <Page id="58">
+    <Text>Gli alberi fitti rendono più difficile all'ogre tenerti a distanza, e ti permettono di avvicinarti senza essere colpito dalla clava. Ma questi alberi vicini non lasciano molto spazio nemmeno a te per muoverti.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Attaccare con la spada" goto="74" />
+      <Choice text="Provare a tagliargli i tendini" goto="113" />
+    </Choices>
+  </Page>
+  <Page id="59">
+    <Text>Il ramo su cui stai in piedi si spezza con uno schianto secco, e salti su un altro ramo abbracciando il tronco per reggerti. Senti un ruggito dell'ogre, che deve aver sentito il ramo rompersi.
+
+Hai le mani viscide di resina, e cominci a strofinartele sui vestiti.
+
+Con orrore lo senti avvicinarsi. Adesso è sotto di te e ha cominciato a scuotere l'albero violentemente.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Aggrapparti stretto all'albero per non cadere e morire" goto="34" />
+      <Choice text="Reggerti stretto ma provare a colpire l'ogre con l'arco" goto="51" />
+    </Choices>
+  </Page>
+  <Page id="60" ending="true">
+    <Text>Mentre corri lungo il sentiero, ti stanchi sempre di più. Cala la notte, e il buio rende difficile seguire il sentiero; devi procedere piano e con attenzione. Quando esci dal bosco e arrivi nella prateria, almeno un barlume di luna ti aiuta a trovare la strada.
+
+Torni alla capanna della tua famiglia con la luna alta nel cielo. Tua madre è accasciata accanto al letto di tua sorella. Corri al suo fianco. La sua mano è fredda e rigida. Sei arrivato troppo tardi.
+
+Fine.</Text>
+  </Page>
+  <Page id="61">
+    <Text>Disperatamente usi l'arco per fermare la clava che ti si abbatte addosso. La clava ti strappa l'arco dalle mani e ti schiaccia la spalla.
+
+Sguaini la spada e pugnali l'ogre, ma ha la pelle così spessa che non gli cavi nemmeno una goccia di sangue.
+
+L'ogre solleva la clava per colpire ancora.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Attaccare!" goto="33" />
+      <Choice text="Schivare la clava e avvicinarti" goto="50" />
+    </Choices>
+  </Page>
+  <Page id="62">
+    <Text>Ti tornano in mente storie da fuoco di bivacco sugli ogre. Un tempo erano umani, ma si ritirarono nel folto dei boschi e sulle cime delle alte colline, e trovarono dèi oscuri da adorare. Ugromsh è una di quelle divinità, una dea della guerra, e la si onora con doni di armi insanguinate, perché gli ogre non fabbricano armi.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Offrire all'ogre la tua spada come dono per Ugromsh" goto="82" />
+      <Choice text="Offrire all'ogre arco e frecce come dono per Ugromsh" goto="110" />
+    </Choices>
+  </Page>
+  <Page id="63">
+    <Text>Stai per maledire la fattura del fodero di cuoio, quando all'improvviso ne intravedi i motivi ondulati. Alla fine ce l'hai di nuovo in mano. Non puoi fare a meno di ammirarne le filigrane.
+
+Senti lo schianto di un ramo spezzato sotto un piede e senti l'ogre da qualche parte fuori dal sentiero, vicino.</Text>
+    <Choices>
+      <Choice text="Continua" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="64">
+    <Text>Ti giri di scatto e gli affondi la lama dietro la gamba, sopra il ginocchio. Sangue nero schizza dappertutto ma l'ogre è ancora in piedi.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Attaccare ancora e provare a ucciderlo" goto="83" />
+      <Choice text="Scappare" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="65">
+    <Text>Corri più veloce che puoi lungo il sentiero nel bosco. All'improvviso il tronco che l'ogre usa come clava ti passa davanti. Ti abbassi agilmente e continui a correre lungo il sentiero, il ruggito dell'ogre che riecheggia alle tue spalle.</Text>
+    <Choices>
+      <Choice text="Continua" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="66">
+    <Text>Ti volti per correre nel bosco ma l'ogre va su tutte le furie. Ti salta addosso, ti afferra un braccio, te lo storce fuori dalla spalla e te lo strappa dal corpo. Poi comincia a bastonarti con quello, mentre perdi i sensi per il dolore e lo choc.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="13" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="67">
+    <Text>Ti arrampichi più in alto che puoi, aggrappato stretto al tronco. La cima dell'albero oscilla avanti e indietro in modo spaventoso mentre l'ogre lo scuote.
+
+Alla fine l'albero smette di tremare. Senti l'ogre che va avanti e indietro attorno alla base.
+
+Poi anche quel rumore cessa.
+
+Scendi con cautela di qualche ramo e non vedi traccia dell'ogre.
+
+Scendi fino in fondo all'albero e ancora non vedi né senti nulla di lui.</Text>
+    <Choices>
+      <Choice text="Continua" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="68">
+    <Text>Corri appena fuori dalla vista di dove pensi che sia il sentiero, cercando di tenerlo d'occhio. Ogni tanto vai a sbattere contro un albero o inciampi su una roccia.
+
+Alla fine, non avendo sentito né visto niente dell'ogre, ritrovi il sentiero, e corri ancora più forte.</Text>
+    <Choices>
+      <Choice text="Continua" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="69">
+    <Text>Affondi la lama verso l'alto, squarciandogli la coscia.
+
+Muggisce di rabbia e ti cala addosso la clava, che ti sbatte contro la spalla. Un altro colpo così potrebbe ucciderti.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="6" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Provare a uccidere l'ogre" goto="116" />
+      <Choice text="Provare a fuggire" goto="126" />
+    </Choices>
+  </Page>
+  <Page id="70" ending="true">
+    <Text>Mentre corri lungo il sentiero, ti stanchi sempre di più. Esci dal bosco e arrivi nella prateria mentre il sole comincia a calare sotto l'orizzonte.
+
+Torni alla capanna della tua famiglia con la luce che sbiadisce e arrossa i campi. Corri al fianco di tua sorella. Tua madre scoppia in lacrime quando tiri fuori la pozione. Tua sorella è incosciente e respira appena, così tua madre le tiene aperta la bocca. Con cura e lentamente le versi dentro la pozione curativa.
+
+Tu e tua madre restate seduti accanto al suo letto tutta la notte, sperando in un qualunque segno che si riprenda.
+
+Al mattino, mentre il buio sbiadisce, tua sorella si sveglia e chiede dell'acqua.
+
+Vivrà.
+
+Fine.</Text>
+  </Page>
+  <Page id="71">
+    <Text>Con cautela scendi un poco, mettendoti su un ramo che sembra fuori dalla portata dell'ogre. Tiri a bruciapelo verso il basso, sulla sua testa. La freccia gli si conficca a fondo fra l'orecchio e la guancia.
+
+Urla, un suono orribile, come un gatto che si lamenta, e ti scaglia la clava verso l'alto, colpendoti così forte da rischiare di buttarti giù dall'albero.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Assecondare il colpo e provare ad atterrare senza farti male, per metterti subito a correre" goto="108" />
+      <Choice text="Sguainare la spada mentre cadi, per poter difenderti o colpire" goto="122" />
+    </Choices>
+  </Page>
+  <Page id="72">
+    <Text>Quale leva hai su questo ogre?</Text>
+    <Choices>
+      <Choice text="Offrire un dono ma minacciarlo con la spada" goto="114" />
+      <Choice text="Offrire un dono ma minacciare di correre più veloce di quanto riesca a inseguirti" goto="123" />
+    </Choices>
+  </Page>
+  <Page id="73" ending="true">
+    <Text>Mentre l'ogre guarda i chiodi, afferri lo zaino. Ne senti dentro il peso della pozione. Ti metti subito a correre, senza osare voltarti. Senti il grugnito sorpreso dell'ogre, ma nessun segno di inseguimento.
+
+Mentre corri lungo il sentiero, ti stanchi sempre di più. Esci dal bosco e arrivi nella prateria mentre il sole comincia a calare sotto l'orizzonte.
+
+Per alleggerirti, ti togli l'armatura e la nascondi non lontano dal sentiero. Forse potrai tornare a riprenderla, ma tua sorella conta molto di più. Hai già perso quasi tutto quello che avevi al mondo per colpa dell'ogre.
+
+Torni alla capanna della tua famiglia con la luce che sbiadisce e arrossa i campi. Corri al fianco di tua sorella. Tua madre scoppia in lacrime quando tiri fuori la pozione. Tua sorella è incosciente e respira appena, così tua madre le tiene aperta la bocca. Con cura e lentamente le versi dentro la pozione curativa.
+
+Tu e tua madre restate seduti accanto al suo letto tutta la notte, sperando in un qualunque segno che si riprenda.
+
+Al mattino, mentre il buio sbiadisce, tua sorella si sveglia e chiede dell'acqua.
+
+Vivrà.
+
+Fine.</Text>
+  </Page>
+  <Page id="74">
+    <Text>Ti abbassi dietro un albero e colpisci verso l'alto, piantando la spada nella coscia dell'ogre.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Provare a finire l'ogre" goto="87" />
+      <Choice text="Abbassarti dietro l'albero e provare a tagliargli i tendini" goto="115" />
+    </Choices>
+  </Page>
+  <Page id="75">
+    <Text>Ti svegli e vedi l'ogre seduto che beve l'ultimo sorso della pozione curativa. Rabbrividisci. Ti ha tolto l'armatura. Vedi la spada, l'arco e la faretra non lontano da lui.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Afferrare arco e faretra e provare ad arrampicarti su un albero" goto="117" />
+      <Choice text="Afferrare la spada e attaccare" goto="124" />
+    </Choices>
+  </Page>
+  <Page id="76" ending="true">
+    <Text>Corri più veloce che puoi. Forse riuscirai a tenere la mano di tua sorella e a dirle addio prima che lasci questo mondo.
+
+Fine.</Text>
+  </Page>
+  <Page id="77">
+    <Text>Allinei una serie di tiri puliti. Due frecce si conficcano nella spalla dell'ogre, che urla di dolore e di rabbia. La terza freccia — la tua ultima — gli sfreccia sopra la spalla mentre ti piomba addosso, muovendosi sorprendentemente veloce. L'ogre ti sta calando la clava addosso.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Usare l'arco per difenderti dalla forza piena della clava" goto="25" />
+      <Choice text="Rotolare sotto la clava per arrivare abbastanza vicino da pugnalarlo" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="78">
+    <Text>Scendi dall'albero con la giusta misura di cautela e di velocità, senza cadere e senza fare rumore. Ti seppellisci sotto gli aghi di pino e le foglie che il vento ha ammucchiato sotto quest'albero.
+
+Per molto tempo non senti altro che il vento fra gli alberi, poi senti l'ogre che annusa e tira su col naso lì vicino. Si avvicina abbastanza da farti sentire le vibrazioni dei suoi passi. Ti sta sopra, e respira a fondo.
+
+Tu trattieni il fiato.
+
+Alla fine se ne va pestando, e tu aspetti quanto osi aspettare, poi esci dalle foglie, torni in fretta sul sentiero e corri verso casa più veloce che puoi.</Text>
+    <Choices>
+      <Choice text="Continua" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="79">
+    <Text>Scagli una raffica di frecce, svuotando la faretra. Una si conficca a fondo nella spalla dell'ogre. L'ogre lancia un urlo e comincia a scuotere l'albero violentemente.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Lasciare l'arco e saltargli addosso, provando a ucciderlo con la spada" goto="35" />
+      <Choice text="Provare ad arrampicarti più in alto" goto="67" />
+    </Choices>
+  </Page>
+  <Page id="80">
+    <Text>L'ogre vuole un mucchio. Quello che posi è quello che non porterai più con te — e quello che continui a portare è quello che ti rallenterà, se le cose vanno male.</Text>
+    <Choices>
+      <Choice text="Posare quasi niente e sperare che si accontenti" goto="101" roll="mucchioCarico" />
+      <Choice text="Posare l'armatura, l'arco e l'attrezzatura da avventura" goto="93" roll="mucchioAlleggerito" />
+      <Choice text="Posare tutto tranne la pozione" goto="93" roll="mucchioLibero" />
+    </Choices>
+  </Page>
+  <Page id="81">
+    <Text>Sei davanti ai Cancelli Neri. Con tua sorpresa, la mano della spada non ti fa più male. Anzi, stai tenendo per mano la tua sorellina. La guardi e le sorridi.</Text>
+    <Choices>
+      <Choice text="Guardare la Morte negli occhi" goto="98" roll="ultimoRespiro" />
+    </Choices>
+  </Page>
+  <Page id="82">
+    <Text>«La mia spada non è niente davanti alla tua ferocia, e per te è poco più di un pugnale», dici. «Eppure può essere un dono degno per Ugromsh. Prendila come bottino di guerra.» Ti tagli il palmo dell'altra mano perché la lama si copra di sangue, poi le porgi la spada dall'elsa.
+
+L'ogre posa la clava e prende la spada con cura. «Grande dono per Ugromsh. Va' adesso. Oppure offro anche te.»
+
+T'inchini e passi oltre l'ogre con cautela, senza osare voltarti.
+
+Dopo la curva del sentiero, quando sei fuori dalla sua vista, ti metti a correre.</Text>
+    <Choices>
+      <Choice text="Continua" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="83">
+    <Text>La tua spada era affondata così a fondo nella gamba dell'ogre che non riesci a tirarla fuori. In quel momento l'ogre ti afferra la mano della spada. Ti stritola la mano e le ossa del polso e dell'avambraccio.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="10" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Spingere dentro la spada con l'altra mano" goto="118" />
+      <Choice text="Provare a liberarti e correre" goto="127" />
+    </Choices>
+  </Page>
+  <Page id="84" ending="true">
+    <Text>Corri più veloce che puoi lungo il sentiero nel bosco. All'improvviso il tronco che l'ogre usa come clava ti passa davanti. Provi ad abbassarti ma sei troppo lento: la clava ti sbatte addosso.
+
+Mentre giaci stordito, il mostro prende tutto quello che ti resta, poi si allontana pesantemente nel bosco.
+
+Non ha preso tutto. Non avrai la pozione, ma hai ancora la vita.
+
+Tua madre non perderà entrambi i figli oggi. Cominci la lunga camminata verso casa.
+
+Fine.</Text>
+  </Page>
+  <Page id="85">
+    <Text>L'ogre va su tutte le furie, lascia cadere la clava e comincia a strappare da terra gli alberi attorno a te, radici comprese. Poi ti riduce la mano e il braccio della spada a poltiglia con uno di quegli alberi sradicati. Il dolore è insopportabile. Il mostro continua a bastonarti fino alla morte.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="11" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="87">
+    <Text>Ignorando la tua lama, l'ogre ti solleva per il collo e la spalla, e comincia a stritolarti la gola e a soffocarti. Con un ultimo sforzo disperato gli spingi la spada nel petto. L'ogre ti lascia andare e crolla in avanti.
+
+Resti disteso qualche minuto, a riprendere fiato, a stento capace di muoverti. Alla fine strisci fino all'ogre. Con riluttanza gli frughi nel perizoma, e trovi delle razioni e una gemma da 400 monete.
+
+Torni sul sentiero e cominci ad affrettarti quanto le ferite ti permettono. Hai ancora un lungo viaggio davanti, e le ferite potrebbero impedirti di arrivare da tua sorella in tempo. Defy Danger. Tira 2d6 -1 (CON).</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="10" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Con 10 o più" goto="102" />
+      <Choice text="Con 7, 8 o 9" goto="111" />
+      <Choice text="Con 6 o meno" goto="60" />
+    </Choices>
+  </Page>
+  <Page id="88">
+    <Text>Provi una finta e un affondo con la spada, ma l'ogre ti cala addosso la clava e ti schiaccia a terra prima che tu riesca anche solo ad avvicinarti.
+
+L'ogre lascia andare il tronco che usava come clava; il tronco continua a schiacciarti a terra. Ti strappa di mano la spada corta.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="8" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Fingerti morto" goto="56" />
+      <Choice text="Spingere via il tronco e scappare" goto="66" />
+    </Choices>
+  </Page>
+  <Page id="89">
+    <Text>Resti immobile il più a lungo possibile, anche mentre le mani ti si fanno scivolose di resina. Alla fine non reggi più, e scivoli giù lungo l'albero prima di riuscire a fermarti.
+
+Trattieni il fiato ma non senti alcun segno che l'ogre abbia sentito. Anzi, sembra essersi allontanato.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Scendere dall'albero e correre lungo il sentiero più veloce che puoi" goto="31" />
+      <Choice text="Scendere dall'albero e correre nel bosco più veloce che puoi, evitando il sentiero" goto="49" />
+    </Choices>
+  </Page>
+  <Page id="90" ending="true">
+    <Text>Apri gli occhi, e vedi l'ogre che mangia le ultime delle tue razioni. Prima che tu possa fare qualcosa, afferra la bottiglia con la pozione curativa e comincia a berla. Chiudi gli occhi, e di nuovo sei davanti ai Cancelli Neri, per mano a tua sorella.
+
+Le lasci la mano e varchi i Cancelli Neri da solo. Sospiri guardandola indietro. Presto attraverserà anche lei e ti raggiungerà.
+
+Fine.</Text>
+  </Page>
+  <Page id="91">
+    <Text>Adocchi un mucchio di foglie e aghi di pino che sembra un buon posto morbido dove atterrare. Purtroppo, proprio mentre salti, l'ogre allunga la mano e ti afferra per la spalla, prendendoti al volo e stritolandoti il braccio. Senti le ossa scricchiolare.
+
+I piedi ti penzolano. L'ogre ti tiene abbastanza lontano da non poterlo colpire al corpo.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="12" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Provare a mozzargli con la spada il braccio con cui ti tiene" goto="129" />
+      <Choice text="Provare a liberarti a calci" goto="137" />
+    </Choices>
+  </Page>
+  <Page id="92">
+    <Text>Corri più veloce che puoi lungo il sentiero nel bosco. All'improvviso il tronco che l'ogre usa come clava ti passa davanti. Provi ad abbassarti ma sei troppo lento: la clava ti prende in pieno sulla testa.
+
+L'ogre va su tutte le furie e ti colpisce due volte con la clava.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="18" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="93" ending="true">
+    <Text>«No, prendi tutto!» Il mostro ti colpisce con la clava lunga mentre provi a fuggire.
+
+Mentre giaci stordito, il mostro prende tutti i tuoi averi e si allontana pesantemente nel bosco. Non ha preso tutto. Non avrai la pozione, ma hai ancora la vita.
+
+Tua madre non perderà entrambi i figli oggi. Cominci la lunga camminata verso casa.
+
+Fine.</Text>
+  </Page>
+  <Page id="94">
+    <Text>Ti lanci verso la spada, ma l'ogre all'improvviso ti infilza il petto con i chiodi che stava guardando.
+
+Guardi con orrore il tuo sangue colare sui chiodi.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="13" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="95">
+    <Text>Riesci a immaginarti in testa l'ansa che vuoi tagliare puntando dritto nel bosco, ma quello che non avevi calcolato è quanto fossero fitti gli alberi, quanto lento il procedere, e quanta strada fosse davvero.
+
+Non perdi il senso dell'orientamento e nel tardo pomeriggio ritrovi il sentiero, esattamente dove te lo aspettavi. Dell'ogre nessuna traccia.</Text>
+    <Choices>
+      <Choice text="Continua" goto="60" />
+    </Choices>
+  </Page>
+  <Page id="96">
+    <Text>La tua freccia colpisce un ramo e poi devia contro la testa dell'ogre, senza fargli danno.
+
+Ruggendo, l'ogre comincia a scuotere l'albero ancora più forte.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Aggrapparti con forza all'albero per non precipitare e morire" goto="34" />
+      <Choice text="Reggerti all'albero ma provare a colpire l'ogre con l'arco" goto="44" />
+    </Choices>
+  </Page>
+  <Page id="97" ending="true">
+    <Text>Senti l'ogre ruggire e mettersi a seguirti, ma non vuole abbandonare tutto quello che ti ha preso, e i suoi passi si fermano.
+
+Corri lungo il sentiero per ore, e la stanchezza cresce mano a mano che l'adrenalina dello scontro con l'ogre svanisce.
+
+Alla fine esci dal bosco e arrivi nella prateria, mentre il sole comincia a calare sotto l'orizzonte.
+
+Arrivi alla capanna della tua famiglia con l'ultima luce che arrossa i campi. Corri al capezzale di tua sorella. Tua madre scoppia in lacrime nel vederti senza armatura, senza armi e senza equipaggiamento. Tua sorella è priva di sensi e respira appena.
+
+Le mostri la pozione e lei piange ancora di più, ma stavolta di sollievo. Tua sorella è priva di sensi e respira appena, così tua madre le tiene la bocca aperta. Con attenzione e lentezza le versi in bocca la pozione curativa.
+
+Tu e tua madre restate al suo capezzale tutta la notte, in attesa di un qualsiasi segno di ripresa.
+
+Al mattino, mentre il buio si dirada, tua sorella si sveglia e chiede dell'acqua.
+
+Vivrà.
+
+Non ti è rimasto niente, tranne ciò che conta di più.
+
+Fine.</Text>
+  </Page>
+  <Page id="98">
+    <Text>Attraverso i Cancelli Neri avanza la Morte, la Signora dei Corvi. Ha una voce rauca come il grido di un corvo. «Portami l'ogre, e tua sorella la rimanderò indietro dai Cancelli.»
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Varcare i Cancelli: sei allo stremo e nel dolore, la mano di tua sorella calda nella tua" goto="97" />
+      <Choice text="Fare il possibile per portare l'ogre alla Signora dei Corvi, così che tua sorella viva" goto="75" />
+    </Choices>
+  </Page>
+  <Page id="99" ending="true">
+    <Text>Ti prepari a varcare i Cancelli Neri senza di lei, ma tua sorella ti prende la mano e ti tira indietro. Scuote la testa e dice: «Va tutto bene.» Varca i Cancelli da sola.
+
+Ti svegli al suono di un russare. È buio, e l'ogre russa poco lontano da te. Tremi di freddo, senza armatura. Nella luce pallida della luna, di tutte le tue cose riesci a vedere soltanto la bottiglia fredda che contiene la pozione curativa. Strisci fino a lei, la stappi e la bevi avidamente. Quando il suo calore ti ha inondato, ti alzi e cominci il lungo viaggio verso la casa dove tua madre piange da sola.
+
+Fine.</Text>
+  </Page>
+  <Page id="100" ending="true">
+    <Text>Mentre corri lungo il sentiero, la stanchezza cresce sempre di più. Esci dal bosco e arrivi nella prateria, mentre il sole comincia a calare sotto l'orizzonte.
+
+Per alleggerirti, finisci per lasciare cadere tutto il resto delle tue cose, tenendo soltanto la pozione curativa. Ci vorrà molto tempo per ricomprare tutto, ma che altro puoi fare? Tua sorella conta molto di più.
+
+Arrivi alla capanna della tua famiglia con l'ultima luce che arrossa i campi. Corri al capezzale di tua sorella. Tua madre scoppia in lacrime nel vederti senza armatura, senza armi e senza equipaggiamento. Tua sorella è priva di sensi e respira appena.
+
+Le mostri la pozione e lei piange ancora di più, ma stavolta di sollievo. Tua sorella è priva di sensi e respira appena, così tua madre le tiene la bocca aperta. Con attenzione e lentezza le versi in bocca la pozione curativa.
+
+Tu e tua madre restate al suo capezzale tutta la notte, in attesa di un qualsiasi segno di ripresa.
+
+Al mattino, mentre il buio si dirada, tua sorella si sveglia e chiede dell'acqua.
+
+Vivrà.
+
+Fine.</Text>
+  </Page>
+  <Page id="101">
+    <Text>«No, prendi tutto!» Il mostro ti colpisce con la clava lunga prima che tu riesca a fare anche solo due passi.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="9" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="102" ending="true">
+    <Text>Malgrado le ferite, l'adrenalina ti inonda e la voglia di tornare a casa da tua sorella, finché c'è tempo, ti spinge avanti.
+
+Non riesci a correre, ma cammini più in fretta che puoi. Il sole è già calato sotto l'orizzonte quando lasci il bosco per la prateria, ma la luce morente del giorno ti illumina la strada.
+
+Arrivi alla capanna della tua famiglia mentre cala il buio. Crolli sulla soglia e fai un cenno a tua madre, il viso rigato di lacrime. Lei fruga nello zaino e trova la pozione.
+
+Va al capezzale di tua sorella, che è priva di sensi e respira appena. Strisci fino a lei e le tieni la bocca aperta. Tua madre le versa in bocca la pozione curativa, con attenzione e lentezza.
+
+Tu e tua madre restate al suo capezzale tutta la notte, in attesa di un qualsiasi segno di ripresa.
+
+Al mattino, mentre il buio si dirada, tua sorella si sveglia e chiede dell'acqua.
+
+Vivrà.
+
+E sai che, con la gemma presa all'ogre, adesso potete permettervi di vivere in città. Tua sorella non si limiterà a vivere: potrà prosperare.
+
+Fine.</Text>
+  </Page>
+  <Page id="103">
+    <Text>Sei rimasto fuori dal sentiero, dal lato opposto a dove pensavi che fosse l'ogre, ma hai cercato di restare abbastanza vicino da non perderlo di vista. Purtroppo camminare su rametti, rami e foglie secche faceva molto più rumore.
+
+Ti prende alla sprovvista vedere l'ogre correre verso di te, sorprendentemente veloce per la sua stazza.
+
+In una mano stringe un pezzo di tronco, come una clava, e comincia a farlo roteare davanti a sé come una falce.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Schivare il tronco e infilarti vicino all'ogre" goto="19" />
+      <Choice text="Ritirarti più a fondo fra i pini, difendendoti mentre lo fai" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="104">
+    <Text>Vista l'altezza a cui ti trovi sull'albero, devi tirare più volte prima di colpire l'ogre. L'ultima freccia si conficca a fondo nella sua spalla, e l'ogre lancia un ululato.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Scendere fino in fondo dall'albero e saltargli addosso, provando a ucciderlo con la spada" goto="35" />
+      <Choice text="Aspettare e vedere" goto="128" />
+    </Choices>
+  </Page>
+  <Page id="105" ending="true">
+    <Text>Con rimpianto guardi la pozione e indietreggi lentamente. L'ogre afferra la pozione e la beve avidamente. Ti volti e corri via.
+
+Corri lungo il sentiero per ore, e la stanchezza cresce mano a mano che l'adrenalina dello scontro con l'ogre svanisce.
+
+Alla fine esci dal bosco e arrivi nella prateria, mentre il sole comincia a calare sotto l'orizzonte.
+
+Arrivi alla capanna della tua famiglia con l'ultima luce che arrossa i campi. Corri al capezzale di tua sorella. Tua madre scoppia in lacrime nel vederti senza armatura, senza armi e senza equipaggiamento. Tua sorella è priva di sensi e respira appena.
+
+Ti siedi e parli con tua sorella, le racconti del guaritore e dell'ogre. Mentre le racconti di aver perso la pozione, tua sorella comincia all'improvviso a rantolare. Sembra che stia annegando. Tua madre prova disperatamente a calmarla, le porta un'altra coperta, ma mentre si affanna intorno a lei tua sorella tossisce e resta immobile. Tua madre comincia a singhiozzare e a gridare.
+
+Fine.</Text>
+  </Page>
+  <Page id="106">
+    <Text>Gli affondi la lama nella coscia, e sangue nero schizza dappertutto. Ruggisce di dolore e di sorpresa.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Attaccare di nuovo e provare a ucciderlo" goto="135" />
+      <Choice text="Scappare" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="107">
+    <Text>Provi a mozzare la mano dell'ogre, ma lui ti afferra la mano della spada e comincia a stritolarti le dita intorno alla lama. Urli di dolore senza volerlo.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="11" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Provare a liberarti dalla presa dell'ogre e fuggire" goto="119" />
+      <Choice text="Usare l'altra mano per sguainare un pugnale e colpire l'ogre" goto="134" />
+    </Choices>
+  </Page>
+  <Page id="108">
+    <Text>Non provi a restare sul ramo: assecondi la caduta, concentrandoti su un atterraggio pulito, usando l'arco per darti un po' di stabilità mentre scendi. Atterri con eleganza su un mucchio di foglie e aghi di pino, e mentre l'ogre allunga la mano per afferrarti, scatti verso il sentiero prima che possa prenderti.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="109">
+    <Text>Corri lungo il sentiero nel bosco finché ce la fai, rallentando al passo quando la stanchezza è troppa, per poi riprendere a correre un po'.</Text>
+    <Choices>
+      <Choice text="Andare avanti finché il fiato regge" goto="100" roll="corsaFinale" />
+    </Choices>
+  </Page>
+  <Page id="110">
+    <Text>«Il mio arco e le mie frecce non sono niente davanti alla tua ferocia», dici. «Eppure possono essere un dono degno per Ugromsh. Prendili come bottino di guerra.» Porgi l'arco e la faretra.
+
+L'ogre prende arco e faretra e li getta a terra. «Dono scarso da solo per Ugromsh.»
+
+L'ogre ti si scaglia addosso, sorprendentemente veloce. «Sacrifico anche te.» Ti sta calando addosso la clava.</Text>
+    <Choices>
+      <Choice text="Provare a rotolare sotto la clava che ruota per avvicinarti abbastanza da pugnalarlo" goto="57" />
+      <Choice text="Usare l'arco per non prendere in pieno la forza della clava" goto="61" />
+    </Choices>
+  </Page>
+  <Page id="111" ending="true">
+    <Text>Malgrado le ferite, l'adrenalina ti inonda e la voglia di tornare a casa da tua sorella, finché c'è tempo, ti spinge avanti.
+
+Non riesci a correre, ma cammini più in fretta che puoi.
+
+Mentre arranchi lungo il sentiero, ti sfinisci sempre di più. Esci dal bosco e arrivi nella prateria, mentre il sole comincia a calare sotto l'orizzonte.
+
+Per alleggerirti, ti togli l'armatura e la nascondi poco lontano dal sentiero. Forse potrai tornare a riprenderla, ma tua sorella conta molto di più.
+
+Il sole è già calato sotto l'orizzonte quando lasci il bosco per la prateria, ma la luce morente del giorno ti illumina la strada.
+
+Arrivi alla capanna della tua famiglia mentre cala il buio. Tua madre scoppia in lacrime nel vederti senza armatura, senza armi e senza equipaggiamento. Tua sorella è priva di sensi e respira appena.
+
+Crolli sulla soglia e fai un cenno a tua madre, il viso rigato di lacrime. Le mostri la pozione e lei piange ancora di più, ma stavolta di sollievo.
+
+Va al capezzale di tua sorella, che è priva di sensi e respira appena. Strisci fino a lei e le tieni la bocca aperta. Tua madre le versa in bocca la pozione curativa, con attenzione e lentezza.
+
+Tu e tua madre restate al suo capezzale tutta la notte, in attesa di un qualsiasi segno di ripresa.
+
+Al mattino, mentre il buio si dirada, tua sorella si sveglia e chiede dell'acqua.
+
+Vivrà.
+
+E sai che, con la gemma presa all'ogre, adesso potete permettervi di vivere in città. Tua sorella non si limiterà a vivere: potrà prosperare.
+
+Fine.</Text>
+  </Page>
+  <Page id="112">
+    <Text>La tua freccia colpisce un ramo e poi devia contro la testa dell'ogre, senza fargli danno.
+
+Ruggendo, l'ogre comincia a scuotere l'albero ancora più forte.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Tirare di nuovo" goto="21" />
+      <Choice text="Scendere dall'albero, lasciare l'arco e saltargli addosso, provando a ucciderlo con la spada" goto="35" />
+    </Choices>
+  </Page>
+  <Page id="113">
+    <Text>Ti giri di scatto per affondargli la lama dietro la gamba, ma l'ogre lascia cadere la clava e con la manona ti sbatte forte contro un albero.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="7" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Attaccare di nuovo" goto="120" />
+      <Choice text="Provare a scappare" goto="133" />
+    </Choices>
+  </Page>
+  <Page id="114">
+    <Text>«Non c'è dubbio che tu possa prendere tutto quello che ho, ma prima di morire ti farò male», dici. Sguaini la spada e la agiti in modo minaccioso. «Lascia che ti dia un dono per Ugromsh e che me ne vada per la mia strada.»
+
+L'ogre fa oscillare fra voi due il tronco che usa come clava, costringendoti a fare un passo indietro.
+
+«Dammi spada per Ugromsh. Dammi cibo. Dammi corda.»
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Schivare il tronco e infilarti vicino all'ogre" goto="19" />
+      <Choice text="Dargli la spada, il cibo e la corda (dalla tua attrezzatura da avventura)" goto="136" />
+    </Choices>
+  </Page>
+  <Page id="115">
+    <Text>Ti giri di scatto per affondargli la lama dietro la gamba, ma l'ogre lascia cadere la clava e con la manona ti sbatte forte contro un albero.
+
+Crolli a terra, e quando apri gli occhi resti sconvolto da quello che vedi.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="18" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="116">
+    <Text>Lascia cadere la clava e prova ad afferrarti, ma tu gli spingi la spada nel basso ventre. Salti di lato mentre l'ogre si accascia.
+
+Resti immobile qualche istante, la spalla dolorante, a riprendere fiato, per capire se l'ogre sia davvero morto. Sembra di sì. Alla fine strisci fino a lui. Con riluttanza gli frughi nel perizoma, e trovi delle razioni e una gemma da 400 monete.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="102" />
+    </Choices>
+  </Page>
+  <Page id="117" ending="true">
+    <Text>Ti getti sull'arco e sulla faretra, poi guardi con orrore la faretra vuota. L'ogre ti colpisce con la clava e ti fa perdere i sensi.
+
+Ancora una volta ti trovi davanti ai Cancelli Neri, tenendo per mano tua sorella.
+
+Le lasci la mano e varchi i Cancelli Neri senza di lei. Sospiri mentre ti volti a guardarla. Presto li attraverserà anche lei e ti raggiungerà.
+
+Fine.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="12" />
+      </Effects>
+    </OnEnter>
+  </Page>
+  <Page id="118">
+    <Text>Usi tutte e due le mani per spingere la spada più a fondo che puoi. Mentre spingi, l'ogre ti stringe le braccia intorno alle spalle e ti spezza la clavicola.
+
+Tu e l'ogre crollate insieme in un groviglio.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="9" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="119" ending="true">
+    <Text>Trasformi il panico di essere a un passo dalla morte in uno scatto improvviso di energia: strappi la mano spezzata dalla presa dell'ogre, e la spada ti cade a terra tintinnando.
+
+Mentre l'ogre si china a raccogliere la tua arma, lasci cadere anche la faretra per alleggerirti, e corri via lungo il sentiero nel bosco.
+
+Senti l'ogre ruggire e mettersi a seguirti, ma non vuole abbandonare tutto quello che ti ha preso, e i suoi passi si fermano.
+
+Corri lungo il sentiero per ore, e la stanchezza cresce mano a mano che l'adrenalina dello scontro con l'ogre svanisce.
+
+Per alleggerirti, ti togli l'armatura come puoi, con una mano sola. La nascondi poco lontano dal sentiero. Forse potrai tornare a riprenderla, ma tua sorella conta molto di più.
+
+Alla fine esci dal bosco e arrivi nella prateria, mentre il sole comincia a calare sotto l'orizzonte.
+
+Arrivi alla capanna della tua famiglia con l'ultima luce che arrossa i campi. Corri al capezzale di tua sorella. Tua madre scoppia in lacrime nel vederti senza armatura, senza armi e senza equipaggiamento.
+
+La mano della spada è nera e sanguinante e riesci a stento a muoverla. Dici a tua madre che hai la pozione e lei piange ancora di più, ma stavolta di sollievo. Tua sorella è priva di sensi e respira appena, così tua madre le tiene la bocca aperta e le versa in bocca la pozione curativa, con delicatezza e lentezza.
+
+Tu e tua madre restate al suo capezzale tutta la notte, in attesa di un qualsiasi segno di ripresa.
+
+Al mattino, mentre il buio si dirada, tua sorella si sveglia e chiede dell'acqua.
+
+Vivrà.
+
+Non ti è rimasto niente, tranne ciò che conta di più.
+
+Fine.</Text>
+  </Page>
+  <Page id="120">
+    <Text>Con la schiena contro l'albero, alzi la spada e colpisci il braccio destro dell'ogre. L'ogre ruggisce di rabbia, un grido bestiale che riecheggia nel bosco e fa gracchiare gli uccelli e alzarsi in volo dalle cime degli alberi. Con la mano sinistra ti sbatte la testa contro il tronco.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="11" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="121">
+    <Text>Provi a usare il piatto della spada per impedire all'ogre di colpirti con tutta la sua forza. Ma l'ogre è così forte che rallenti appena la clava, che ti piomba addosso, ti butta a terra e ti stritola la mano della spada. Hai lasciato cadere la spada, ma la afferri con l'altra mano e pugnali il piede sinistro dell'ogre. L'ogre si scosta d'istinto con un salto, mentre già solleva la clava per colpire.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="4" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Scattare via" goto="130" />
+      <Choice text="Schivare la clava per arrivare a distanza utile con la spada" goto="138" />
+    </Choices>
+  </Page>
+  <Page id="122">
+    <Text>Lasci cadere l'arco, e armeggi con la spada mentre precipiti dall'albero.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Lasciare volare via la spada, ma provare ad atterrare senza farti male" goto="139" />
+      <Choice text="Tenere stretta la spada, per quanto duro sia l'impatto col terreno" goto="131" />
+    </Choices>
+  </Page>
+  <Page id="123">
+    <Text>Ti volti per correre via. «Non mi prenderai mai! Lascia che ti dia un dono per Ugromsh e che me ne vada per la mia strada.»
+
+L'ogre ha braccia così lunghe che fa oscillare il tronco dietro di te, costringendoti a fare un passo verso di lui.
+
+«Dammi spada per Ugromsh. Dammi cibo. Dammi corda.»
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Schivare il tronco e infilarti vicino all'ogre" goto="19" />
+      <Choice text="Dargli la spada, il cibo e la corda (dalla tua attrezzatura da avventura)" goto="136" />
+    </Choices>
+  </Page>
+  <Page id="124" ending="true">
+    <Text>Ti getti sulla spada prima ancora che l'ogre si accorga di te e gli affondi la lama nel petto. Ma colpisci l'osso.
+
+Ti afferra la testa con tutte e due le mani. Ti stritola il cranio fra le mani.
+
+Sbatti le palpebre e ancora una volta ti trovi davanti ai Cancelli Neri, tenendo per mano tua sorella.
+
+Le lasci la mano e varchi i Cancelli Neri senza di lei. Sospiri mentre ti volti a guardarla. Presto li attraverserà anche lei e ti raggiungerà.
+
+Fine.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="12" />
+      </Effects>
+    </OnEnter>
+  </Page>
+  <Page id="125">
+    <Text>Allinei una serie di tiri puliti. La prima freccia sfreccia accanto all'orecchio dell'ogre. Le due successive si conficcano nella sua spalla, e lui urla di dolore e di rabbia.
+
+Ruggendo, l'ogre comincia a scuotere l'albero ancora più forte.
+
+Purtroppo hai finito le frecce.
+
+Scendi un poco lungo l'albero, avendo cura di restare fuori dalla portata della clava.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Lasciare l'arco e saltargli addosso, provando a ucciderlo con la spada" goto="132" />
+      <Choice text="Saltare giù dall'albero e provare a scattare via di corsa" goto="91" />
+    </Choices>
+  </Page>
+  <Page id="126">
+    <Text>Ti volti e corri, solo per essere sbattuto a terra dalla clava enorme dell'ogre.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="12" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="127">
+    <Text>Mentre provi a strappare la mano dalla presa dell'ogre, muovi la lama dentro la sua ferita. L'ogre ruggisce, ti lascia la mano e si sfila la spada afferrandola per la guardia. Scatti subito di corsa.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="130" />
+    </Choices>
+  </Page>
+  <Page id="128">
+    <Text>L'ogre scuote l'albero con violenza. In alto sopra di lui, dondoli avanti e indietro insieme ai rami.
+
+L'albero comincia a sbandare. Forse l'ogre riuscirà a sradicarlo.
+
+Provi a vedere se puoi saltare su un altro albero, ma l'albero oscilla troppo in fretta e le altre cime sono troppo lontane. Non c'è altro da fare che riscendere.
+
+Scendi fin poco sopra l'ogre, che non guarda in alto ma è tutto preso a scuotere l'albero.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Saltargli addosso, provando a ucciderlo con la spada" goto="35" />
+      <Choice text="Saltare oltre l'ogre e correre via" goto="91" />
+    </Choices>
+  </Page>
+  <Page id="129">
+    <Text>Gli cavi sangue, ma non lo ferisci abbastanza da fargli mollare la presa.
+
+Ti pesta la testa contro il terreno.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="7" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="130" ending="true">
+    <Text>Senti l'ogre grugnire e mettersi a seguirti, ma i suoi passi si fermano. Non hai il coraggio di voltarti a guardare.
+
+Corri lungo il sentiero per ore, e la stanchezza cresce mano a mano che l'adrenalina dello scontro con l'ogre svanisce.
+
+Alla fine esci dal bosco e arrivi nella prateria, mentre il sole comincia a calare sotto l'orizzonte.
+
+Arrivi alla capanna della tua famiglia con l'ultima luce che arrossa i campi. Corri al capezzale di tua sorella.
+
+La mano della spada è nera e sanguinante e riesci a stento a muoverla. Dici a tua madre che hai la pozione nello zaino, e lei la trova in fretta. Tua sorella è priva di sensi e respira appena, così tua madre le tiene la bocca aperta e le versa in bocca la pozione curativa, con delicatezza e lentezza.
+
+Tu e tua madre restate al suo capezzale tutta la notte, in attesa di un qualsiasi segno di ripresa.
+
+Al mattino, mentre il buio si dirada, tua sorella si sveglia e chiede dell'acqua.
+
+Vivrà.
+
+Fine.</Text>
+  </Page>
+  <Page id="131">
+    <Text>Ti aggrappi alla spada come se ne andasse della tua vita. Colpisci il terreno con violenza, cadendo sulla mano della spada, ma non ti rompi nessun osso e non perdi la spada, per quanto faccia male stringerla.
+
+L'ogre fa già oscillare la clava fra voi due.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Schivare la clava per avvicinarti all'ogre" goto="140" />
+      <Choice text="Scappare" goto="130" />
+    </Choices>
+  </Page>
+  <Page id="132">
+    <Text>Ti tuffi giù dall'albero, la spada corta davanti a te, provando a mozzare la testa dell'ogre. Lui sussulta vedendoti piombare, poi ti afferra e ti scaglia contro l'albero.
+
+Il viso ti brucia sotto il suo fiato caldo, e vedi i suoi denti scoprirsi mentre si prepara a morderti. Gli porti la spada di traverso sulla giugulare. Il sangue schizza addosso a tutti e due mentre l'ogre rantola e scivola a terra.
+
+Resti immobile qualche istante, la schiena dolorante, a riprendere fiato, per capire se l'ogre sia davvero morto. Sembra di sì. Alla fine strisci fino a lui. Con riluttanza gli frughi nel perizoma, e trovi delle razioni e una gemma da 400 monete.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="6" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="102" />
+    </Choices>
+  </Page>
+  <Page id="133">
+    <Text>Con la schiena contro il tronco, i rami dell'albero ti impediscono di girare facilmente intorno all'ogre.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Lasciare la spada e strisciare sotto i rami, sperando che i rami ti riparino da gran parte del colpo di clava" goto="141" />
+      <Choice text="Gridare e caricare dritto sull'ogre, agitando la spada e facendo una finta per provare a sfuggirgli" goto="146" />
+    </Choices>
+  </Page>
+  <Page id="134">
+    <Text>Con l'altra mano frughi nell'attrezzatura da avventura, tasti in giro e tiri fuori lentamente il coltello nascosto, mentre l'ogre ti stringe più forte la mano della spada. Urli di dolore.
+
+Pugnali il braccio dell'ogre, cercando di fargli mollare la presa. L'ogre ti lascia la mano e ti strangola. Boccheggi in cerca d'aria.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="11" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="135">
+    <Text>Cali la spada e gli tagli la coscia ancora più a fondo.
+
+L'ogre ruggisce e ti manca con la clava.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Attaccare ancora una volta con la spada" goto="142" />
+      <Choice text="Offrire all'ogre la vita in cambio della tua libertà" goto="147" />
+    </Choices>
+  </Page>
+  <Page id="136">
+    <Text>Passi un momento imbarazzante a frugare nell'attrezzatura per districare e tirare fuori la corda. Poi dai all'ogre la corda, le razioni e — per ultima — la spada.
+
+Indietreggi lentamente, lasciando l'ogre a sghignazzare sulla sua roba, poi scatti di corsa lungo il sentiero.</Text>
+    <Choices>
+      <Choice text="Se hai dato all'ogre anche la pozione curativa" goto="76" />
+      <Choice text="Altrimenti" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="137">
+    <Text>Ruoti il corpo e scalci ripetutamente con tutte e due le gambe contro il braccio dell'ogre, cercando di liberarti.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Spingerti via con tanta violenza da colpire duro il terreno, ma lontano dall'ogre" goto="143" />
+      <Choice text="Atterrare dolcemente ma a portata dell'ogre" goto="148" />
+    </Choices>
+  </Page>
+  <Page id="138">
+    <Text>Provi a infilarti vicino per pugnalare l'ogre, ma lui ti colpisce forte con la clava.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="10" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="139">
+    <Text>Lasci volare via la spada. Provi a cadere su una zona morbida di foglie e aghi di pino.
+
+Atterri sano e salvo sulle foglie e riesci perfino a restare in piedi.
+
+L'ogre fa oscillare la clava fra te e la tua spada, pronto a schiacciarti con quella.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Scappare di corsa, lasciando lì la spada" goto="144" />
+      <Choice text="Provare a rotolare sotto la clava per riprendere la spada e avvicinarti all'ogre" goto="150" />
+    </Choices>
+  </Page>
+  <Page id="140">
+    <Text>Sei sicuro che, se solo riuscissi ad avvicinarti abbastanza all'ogre, potresti ucciderlo; ma l'ogre è deciso a tenerti a distanza.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Tuffarti addosso a lui malgrado il rischio di prendere la clava pesante" goto="149" />
+      <Choice text="Vivi e lascia vivere: scattare via di corsa" goto="145" />
+    </Choices>
+  </Page>
+  <Page id="141">
+    <Text>Getti la spada a terra verso l'ogre, cadi in ginocchio e cominci a strisciare sotto un ramo grosso. L'ogre cala la clava sul ramo. Il ramo si spezza e ti sbatte sulla schiena.
+
+Strisci fuori da sotto l'albero e scatti di corsa. L'ogre ruggisce e ti segue, mentre tu ti infili dentro e fuori dagli alberi, tornando verso il sentiero. Corri più in fretta che le ferite ti permettono.
+
+Non è molto in fretta, ma per fortuna l'ogre corre ancora più piano.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="142">
+    <Text>L'ogre prova a sbatterti via con la clava, ma tu ti pianti bene per restare in piedi.
+
+Gli riaffondi la spada nella coscia. Con un sospiro l'ogre scivola a terra, e tu ti accasci accanto a lui, troppo allo stremo per strisciare fuori dalla sua portata.
+
+Riposi, ascoltando il tuo respiro, in ascolto di un respiro dell'ogre che non arriva. Allunghi la mano e gli frughi nel perizoma, con riluttanza, e trovi delle razioni e una gemma da 400 monete.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="9" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="102" />
+    </Choices>
+  </Page>
+  <Page id="143">
+    <Text>Ti spingi via con tanta forza che ti inarchi all'indietro e vai a sbattere contro una roccia a terra.
+
+Ti volti e strisci via mentre la clava si abbatte a terra vicino a te. Ti rialzi in piedi e ti allontani barcollando, a stento capace di trottare. Senti i tonfi dell'ogre dietro di te che ti segue, ma appena torni sul sentiero acceleri il passo. Alla fine non senti più i suoi passi alle tue spalle.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="100" />
+    </Choices>
+  </Page>
+  <Page id="144">
+    <Text>Proprio mentre provi a scappare, la clava dell'ogre si abbatte su di te e ti schiaccia dentro il mucchio di foglie.
+
+L'ogre sta già ritirando indietro la clava per piantarti nella fossa.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Rotolare via e scappare" goto="151" />
+      <Choice text="Afferrare l'arco per difenderti dalla clava" goto="157" />
+    </Choices>
+  </Page>
+  <Page id="145">
+    <Text>L'ogre muggisce mentre ti volti e corri verso il sentiero. È un muggito di dolore e di rabbia insieme. Lo senti pestare i piedi dietro di te, ma lo stacchi facilmente e continui a correre di buon passo. Quando finalmente hai il coraggio di voltarti, è lontano dietro di te sul sentiero.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="70" />
+    </Choices>
+  </Page>
+  <Page id="146">
+    <Text>Ti scagli contro l'ogre, cercando di coglierlo impreparato, poi tagli a destra e provi a sfrecciargli accanto. Con la coda dell'occhio hai visto arrivare la clava. Vedi le stelle, e poi tutto si fa nero.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="12" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="147">
+    <Text>«Lasciami passare, e ti lascio a curarti le ferite e a vivere un altro giorno», dici.
+
+L'unica risposta dell'ogre è calarti la clava sul petto. Barcolli all'indietro e quasi cadi a terra, ma tieni l'equilibrio e torni a farti avanti verso l'ogre.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="8" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Scappare di corsa" goto="145" />
+      <Choice text="Provare a uccidere la bestia, senza morirci nel tentativo" goto="152" />
+    </Choices>
+  </Page>
+  <Page id="148">
+    <Text>Riesci a fare una capriola e ad atterrare in piedi, solo perché la clava dell'ogre ti piombi addosso.
+
+La morte ti prende prima ancora che il tuo corpo tocchi terra.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="10" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="149">
+    <Text>Provi a schivare la clava, ma l'ogre ti prende in pieno e ti spinge indietro. Barcolli ma resti in piedi.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="6" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Provare a schivare la clava e avvicinarti abbastanza da attaccare l'ogre" goto="158" />
+      <Choice text="Ritirarti verso il sentiero" goto="145" />
+    </Choices>
+  </Page>
+  <Page id="150">
+    <Text>L'ogre è in preda alla frenesia, la schiuma gli si arriccia intorno alle labbra mentre ringhia. Fa oscillare il tronco avanti e indietro per non lasciarti avvicinare, mentre tu provi a infilarti dentro con la spada.
+
+Che cosa fai?</Text>
+    <Choices>
+      <Choice text="Ripiegare e scappare di corsa" goto="145" />
+      <Choice text="Voltarti e prendere la clava sulla schiena, ma tenere stretta la spada" goto="153" />
+    </Choices>
+  </Page>
+  <Page id="151">
+    <Text>Proprio mentre rotoli, l'ogre ti cala addosso la clava come un martello.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="11" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="152">
+    <Text>Avanzi barcollando e colpisci l'ogre con la spada. Appena un graffio sulla sua pelle spessa.
+
+L'ogre lascia cadere la clava e ti afferra la testa con una mano. Vedi rosso, poi nero.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="7" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="153">
+    <Text>Ti scagli contro l'ogre, proprio mentre lui prova a colpirti con la clava. Ti volti per prendere il grosso del colpo sulla schiena.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="8" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Girarti di scatto e colpire con la spada" goto="156" />
+      <Choice text="Provare a ritirarti fuori dalla portata della clava" goto="159" />
+    </Choices>
+  </Page>
+  <Page id="155">
+    <Text>Tieni insieme i due pezzi dell'arco spezzato per parare il peggio del colpo dell'ogre. L'arco spezzato è peggio che inutile. La clava piomba sui pezzi, li manda in aria e ti butta a terra, fuori dalla portata dell'ogre.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="4" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Non c'è due senza tre: provare a schivare la clava e colpire" goto="158" />
+      <Choice text="Ritirarti e tornare a casa" goto="160" />
+    </Choices>
+  </Page>
+  <Page id="156">
+    <Text>Ti giri di scatto per affondare la spada nella coscia dell'ogre. La sua pelle è spessa e piena di cicatrici, la lama rimbalza e tu arretri di un passo.
+
+L'ogre ti pianta la clava nel petto. Voli via e vai a sbattere contro i rami di un albero, con una forza tale da spezzarli.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="10" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="157">
+    <Text>Rotoli, afferri l'arco e blocchi abbastanza la clava da non sentirne tutta la forza, anche se l'arco si spezza in due.
+
+Che cosa fai?</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Rotolare fuori dalla portata della clava e poi scappare" goto="151" />
+      <Choice text="Rialzarti barcollando, difendendoti con i due pezzi dell'arco tenuti insieme" goto="155" />
+    </Choices>
+  </Page>
+  <Page id="158">
+    <Text>Noti un ritmo nel modo in cui l'ogre fa roteare la clava, fai un passo di lato e ti porti danzando accanto a lui, la spada pronta. Vai per il colpo mortale.
+
+In preda al panico, in punto di morte, l'ogre ti afferra la mano della spada e te la stritola. L'ogre scaglia il tuo corpo lontano da sé. Colpisci il terreno con violenza.
+
+Sembra che stiano arrivando le nuvole, perché si sta facendo buio, mentre resti disteso nel dolore a guardare l'ogre che guarda te.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="159">
+    <Text>Proprio mentre provi a ritirarti al sicuro, evitando la clava, l'ogre ti colpisce forte con la punta del tronco.
+
+Voli via piegato in due, e tutto si fa nero mentre tocchi terra.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="9" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="81" />
+    </Choices>
+  </Page>
+  <Page id="160">
+    <Text>Ti rialzi in piedi con cautela. Sei pesto e malconcio, ma un'improvvisa scarica di adrenalina ti fa correre via dall'ogre più in fretta che puoi.
+
+Non senti alcun rumore di inseguimento da parte del tuo nemico gravemente ferito.
+
+Quando l'adrenalina svanisce, non riesci a correre a lungo. Arranchi lungo il sentiero, prima al trotto, poi di buon passo, poi camminando più veloce che puoi.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="100" />
+    </Choices>
+  </Page>
+</Librogame>
