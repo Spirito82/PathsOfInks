@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<librogame formatVersion="1">
+  <items>
+    <item id="healing-potion" name="Pozione curativa" description="Il motivo per cui hai preso questa strada. È per tua sorella, e berla tu sarebbe una decisione, non un incidente. 0 peso; 50 monete.">
+      <special type="heal" value="20" />
+    </item>
+    <item id="short-sword" name="Spada corta" description="Semplice, tenuta affilata, e l'unica cosa fra te e qualcosa alto otto piedi. Per l'ogre sarebbe un coltello. Mischia; 1 peso; 8 monete.">
+      <special type="equip" value="weapon" />
+      <special type="attackBonus" value="2" />
+    </item>
+    <item id="worn-bow" name="Arco consumato" description="Ha visto stagioni migliori. La corda è stata cambiata due volte e il ventre è pieno di graffi, ma la freccia va ancora dove la mandi. Vicino; 2 pesi; 15 monete.">
+      <special type="equip" value="weapon" />
+      <special type="attackBonus" value="1" />
+    </item>
+    <item id="one-arrow" name="Frecce" description="Poche, e le conti più spesso di quanto vorresti. Quante te ne restino lo dice il racconto, non un numero su un foglio. 1 peso; 1 moneta." />
+    <item id="leather-armor" name="Armatura di cuoio" description="Cuoio bollito, crepato sulla spalla dove l'hai portato bagnato troppe volte. A volte trasforma un colpo mortale in un livido. 1 armatura; 1 peso; 10 monete.">
+      <special type="equip" value="armor" />
+      <special type="defenseBonus" value="1" />
+    </item>
+    <item id="adventuring-gear" name="Attrezzatura da avventura" description="Gesso, pertiche, chiodi, corda, esca da fuoco: le piccole cose utili di cui ti accorgi solo quando non ci sono più. Ci frughi dentro e trovi quello che serve al momento. 1 peso; 20 monete." />
+    <item id="dungeon-rations" name="Razioni da sotterraneo" description="Pane duro e carne sotto sale, cinque pasti, abbastanza tristi da mangiarli solo quando devi. 1 peso; 3 monete.">
+      <special type="heal" value="4" />
+    </item>
+    <item id="three-coins" name="Tre monete" description="Tutto il denaro che hai addosso, e non basta a rimpiazzare nemmeno una delle cose che oggi potresti perdere. 0 peso." />
+    <item id="gem" name="Gemma" description="Quattrocento monete di pietra tagliata, prese dal perizoma dell'ogre. Bastano a portare la tua famiglia in città, se arrivi a casa per raccontarlo." />
+  </items>
+</librogame>
