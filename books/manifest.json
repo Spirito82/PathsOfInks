@@ -7,16 +7,16 @@
       "author": "J. Alan Henning",
       "language": "en",
       "genre": "Dungeon World gamebook",
-      "blurb": "Your sister is dying. The healer gave you the potion and told you that time is everything: the long way round will get you home too late, and the forest path is not safe. You take the forest path. Two hours in, you hear branches breaking. This is a gamebook for the Dungeon World system, and most of your choices are its Basic Moves — so as you read, you also learn how that game is played. The dice have already been rolled for you, and you are shown each roll and what it meant.",
+      "blurb": "Your sister is dying. The healer gave you the potion and told you that time is everything: the long way round will get you home too late, and the forest path is not safe. You take the forest path. Two hours in, you hear branches breaking. What comes out of the pines is eight feet tall, carries a tree trunk, and is not always in the mood to talk. Eighteen hit points, a hundred and fifty-eight scenes, seventeen endings — and some of them are not the one you would call winning.",
       "contentWarnings": "Violence, gore, death, and disappointing a parent.",
-      "version": 5,
+      "version": 6,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v5/librogame.xml",
-        "sha256": "38B214224381AB34014FC31660AC1B7703D1237122B37F5147E53FF4B14B9A63"
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v6/librogame.xml",
+        "sha256": "33D97CB77329224AC97FB8F8E0473D80EDE1069B76CACD8BCD2332CCC0A11C1A"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v5/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v6/items.xml",
         "sha256": "2D828F53EC0305883F537E11B9EDF03009CE123D17F4EDAF521B1E2C4356072A"
       },
       "minAppBuild": 19,
@@ -29,16 +29,16 @@
       "author": "J. Alan Henning",
       "language": "it",
       "genre": "Librogame per Dungeon World",
-      "blurb": "Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco. Dopo due ore senti dei rami spezzarsi. Questo è un librogame per il sistema Dungeon World, e quasi tutte le tue scelte sono le sue Mosse Base: leggendo, impari anche come si gioca a quel gioco. I dadi sono già stati tirati per te, e ogni tiro ti viene mostrato insieme a quello che ha significato.",
+      "blurb": "Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco. Dopo due ore senti dei rami spezzarsi. Quello che esce dai pini è alto due metri e mezzo, porta un tronco d'albero, e non sempre ha voglia di parlare. Diciotto punti ferita, centocinquantotto scene, diciassette finali — e qualcuno non è quello che chiameresti vincere.",
       "contentWarnings": "Violenza, sangue, morte e la delusione di un genitore.",
-      "version": 5,
+      "version": 6,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v5/librogame.xml",
-        "sha256": "F5998BB7A9C10EBBC8AB9E5F078336785915525CADB7F53DB92907A19F6BB553"
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v6/librogame.xml",
+        "sha256": "F6F3202449B7D54890D58673D9ECF1B11FF2621D8483BD6BD66F46F105FADC8E"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v5/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v6/items.xml",
         "sha256": "BDC360D1936F06C4420B70065A01183E09E76F35B479C933C1A6A0AF4228D568"
       },
       "minAppBuild": 19,
