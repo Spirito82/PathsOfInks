@@ -1,0 +1,1524 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="pubblico" id="viperblood-en" workId="viperblood" language="en" title="Viperblood" author="Luke Simonds" checks="dadi" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" endingSummary="true" deathPage="43" genre="Old-school dungeon crawl">
+  <Blurb>The king is dying, and the only cure is a green water that runs somewhere under the crypt of the ancient queens. You are the next volunteer sent down to fetch it — the ones before you did not come back, though their notes did.
+
+Fifteen rooms of jade and cold air, a statue you have to climb through, rabets who trade and ambush in equal measure, and a purple snake asleep on a pile of coin. Everything you carry out is yours to keep, if you carry yourself out with it.</Blurb>
+  <ContentWarnings>Violence, wounds described in detail, and the death of the character.</ContentWarnings>
+  <Changes>
+    <Change>Rewritten for this engine: rooms that the original repeated in different states are single scenes that change with what you have done</Change>
+    <Change>"Return to your previous entry" replaced by explicit exits, and some entries became items or actions</Change>
+    <Change>DEATH &amp; TREASURE is not used: fights, tests and damage were re-tuned for this engine</Change>
+    <Change>Enemy morale is not implemented; the chance of a random encounter is a rule we added</Change>
+    <Change>Abilities renamed Toughness, Agility, Strength, Instinct, and tests the original left open were assigned by us</Change>
+    <Change>Poison strikes once instead of over hours: this engine has no clock</Change>
+    <Change>The west door of the sleeping snake room leads to the pyre room, correcting a contradiction in the original</Change>
+    <Change>Original illustrations and map not included: they are not licensed with the text</Change>
+  </Changes>
+  <CharacterRules skillPoints="6" enemyKnowledgeSkill="instinct">
+    <Skills>
+      <Skill id="toughness" name="Toughness" description="How much poison, gas and exhaustion you can take." maxLevel="5" />
+      <Skill id="agility" name="Agility" description="Squeezing through tight places, slipping past what is watching." maxLevel="5" />
+      <Skill id="strength" name="Strength" description="Shifting stone, forcing what will not move." maxLevel="5" />
+      <Skill id="instinct" name="Instinct" description="Noticing what is out of place, reading a room before it reads you." maxLevel="5" />
+    </Skills>
+  </CharacterRules>
+  <Variables>
+    <Variable id="wealth" name="Coin" type="number" initial="0" min="0" max="100000" visible="true" />
+    <Variable id="yarnPath" name="A thread through the statue" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="poolSnakeDead" name="The pool serpent is dead" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="secretDoor" name="The panel stands open" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="sconcesLit" name="The sconces are burning" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="guardsDead" name="The door guards are dead" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="webKnown" name="You know your way through the web" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="webCut" name="The web is cut" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="webSprung" name="The web has already been sprung" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="rabetsDead" name="The rabets are dead" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="grottoOpen" name="The grotto wall is open" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="purpleSnakeDead" name="The purple snake is dead" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="hasEgg" name="You carry an egg" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="eggDelivered" name="The rabets have their egg" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="puddingBurned" name="The pudding is burnt" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="hasWater" name="The bottle is full of viperblood" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="fromWhere" name="Which side of the statue you crossed from" type="number" initial="1" min="1" max="2" visible="false" />
+    <Variable id="riverSide" name="Which bank of the river you stand on" type="number" initial="1" min="1" max="2" visible="false" />
+    <Variable id="campSearched" name="The camp has been searched" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="purseTaken" name="The dropped purse is yours" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <StartingItems>
+    <Item id="magic-scroll" />
+  </StartingItems>
+  <Tables>
+    <Table id="crypt" dice="8" times="2">
+      <Result range="1" is="rabetsFour" />
+      <Result range="2" is="snakesHunting" />
+      <Result range="3" is="rabetsLost" />
+      <Result range="4" is="snakeAsleep" />
+      <Result range="5-8" />
+      <Outcome when="rabetsFour" goto="102" />
+      <Outcome when="snakesHunting" goto="103" />
+      <Outcome when="rabetsLost" goto="104" />
+      <Outcome when="snakeAsleep" goto="105" />
+      <Outcome when="rabetsFour rabetsFour" goto="106" />
+      <Outcome when="rabetsFour snakesHunting" goto="107" />
+      <Outcome when="rabetsFour rabetsLost" goto="108" />
+      <Outcome when="rabetsFour snakeAsleep" goto="109" />
+      <Outcome when="snakesHunting snakesHunting" goto="110" />
+      <Outcome when="snakesHunting rabetsLost" goto="111" />
+      <Outcome when="snakesHunting snakeAsleep" goto="112" />
+      <Outcome when="rabetsLost rabetsLost" goto="113" />
+      <Outcome when="rabetsLost snakeAsleep" goto="114" />
+      <Outcome when="snakeAsleep snakeAsleep" goto="115" />
+    </Table>
+  </Tables>
+  <Page id="1">
+    <Title>The stair of weathered jade</Title>
+    <Text>VIPERBLOOD, an emerald green water rumoured to be found only in the First Crypt, is said to cure anything that afflicts humankind. The king is deathly ill. One at a time he is sending out "volunteers" from his court to retrieve some for him. It is your turn now. Any treasure you find is yours to keep as a reward for your service.
+
+You have been equipped with a magic scroll on which you can write notes about what you find and record a map of the crypt. It returns to the castle upon the death of its bearer. It already carries a map, and the notes left by previous "volunteers".
+
+Guards escort you to the ancient burial grounds. In the back, far from the paths maintained for mourners of the recent dead, is the crypt of the ancient queens: the First Crypt. They leave you in front of a stair, roughly hewn into weathered jade stone, which passes steeply up to a massive facade, an entryway, and statues looming over you. Cold air wafts slowly down the steps to your feet.</Text>
+    <Choices>
+      <Choice text="Climb the steps and enter the crypt" goto="42" />
+    </Choices>
+  </Page>
+  <Page id="3">
+    <Title>The worn panel</Title>
+    <Text>Carefully inspecting the south wall, you find one panel is different from the others, its sconce empty of oil and the engraved snake face worn down from repeated touch.</Text>
+    <Choices>
+      <Choice text="Touch the snake" goto="28" />
+      <Choice text="Leave the panel alone" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Title>Cutting the web</Title>
+    <Text>You slash through the web of strings, leaving them all hanging loose from their nails as you carve paths through the room. As you finish, you hear a hiss as the room fills with a gas, apparently triggered by the strings.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="webCut" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Hold your breath and endure it" check="toughness" difficulty="2" goto="11" failGoto="16" />
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Title>Clean through the neck</Title>
+    <Text>With a lucky blow, you cut clean through the snake's neck, its head tumbling into the pool with a splash, followed quickly by its body.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="poolSnakeDead" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Stand and look at the water" goto="19" />
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Title>Fangs</Title>
+    <Text>The snake digs its fangs deep into you, and the wound goes cold almost at once. The venom does its work in a rush rather than over hours, and what it leaves behind stays in your blood.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="18" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Stagger out of the chamber" goto="42" />
+      <Choice text="Turn back and keep fighting" goto="8" />
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Title>The serpent in the pool</Title>
+    <Text>A massive emerald serpent emerges from the pool with a burst of energy, spraying the room with water.</Text>
+    <Combat victoryGoto="6" fleeGoto="7" defeatGoto="43">
+      <Enemy name="A massive emerald serpent" hp="36" attack="7" defense="4" loreDifficulty="3" />
+    </Combat>
+  </Page>
+  <Page id="9">
+    <Title>The faun and the pool</Title>
+    <Text>At the end of a short hallway is a small grotto in the wall. A statue of a faun pours a dark liquid into a pool around its feet.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="grottoOpen" operator="eq" value="0" />
+        </Requirements>
+        <Content>Gaps in the stones of the back wall of the grotto allow points of light through, suggesting there is another room on the other side. It appears you could try to move some of the stones to make a passage, but it would be difficult to do so quietly.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="grottoOpen" operator="eq" value="1" />
+        </Requirements>
+        <Content>Stones have been moved from the wall behind the statue to create a passageway to the west.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Try to move the stones quietly" check="strength" difficulty="2" goto="39" failGoto="46">
+        <Requirements>
+          <Variable id="grottoOpen" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Go west through the passage" goto="64">
+        <Requirements>
+          <Variable id="grottoOpen" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Drink the dark liquid" goto="52" />
+      <Choice text="Go east" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Title>Over, under, around</Title>
+    <Text>You work your way carefully over, under and around the intertwining body of the stone snake. It is slow work. You do not recall your exact path, and you will have to spend the same amount of time the next time you move through this room.</Text>
+    <Choices>
+      <Choice text="Come out in the far corner of the hall" goto="27">
+        <Requirements>
+          <Variable id="fromWhere" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Come out beside the entrance" goto="42">
+        <Requirements>
+          <Variable id="fromWhere" operator="eq" value="2" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Title>You hold your breath</Title>
+    <Text>You feel drowsiness beginning to overtake you, but you harden your will and hold your breath. In a few moments the gas dissipates and you find you can breathe safely again.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="webSprung" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Look around the room" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="12">
+    <Title>Light along the walls</Title>
+    <Text>You light the oil in the sconces one by one, filling the room with light and warmth. You find that one sconce on the south wall is empty, and it is immediately apparent that the engravings on this panel are different from the others, the snake's face worn down by repeated touch.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="sconcesLit" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Touch the snake" goto="28">
+        <Requirements>
+          <Variable id="secretDoor" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Turn back to the room" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="13">
+    <Title>Dust and nothing</Title>
+    <Text>You search, but are unable to find anything significant along the south wall, as dust blown on the wind fills your eyes and makes you cough.</Text>
+    <Choices>
+      <Choice text="Turn back to the room" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Title>Warm water</Title>
+    <Text>The water is warm but surprisingly refreshing, soothing your throat as it goes down. You could fill the crystal vial on the table and have the same comfort later.</Text>
+    <OnEnter>
+      <Effects>
+        <heal value="10" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Fill the vial and take it with you" goto="19" grantItem="crystal-vial" />
+      <Choice text="Leave the vial where it is" goto="19" />
+    </Choices>
+  </Page>
+  <Page id="15">
+    <Title>Round on yourself</Title>
+    <Text>Try as you might, you cannot make heads or tails of how to go through this snake. The coils bring you round on yourself, and you eventually find yourself back where you started.</Text>
+    <Choices>
+      <Choice text="Stand again at the eastern entrance" goto="42">
+        <Requirements>
+          <Variable id="fromWhere" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Stand again in the far corner" goto="27">
+        <Requirements>
+          <Variable id="fromWhere" operator="eq" value="2" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Title>Sleep, and a wooden cage</Title>
+    <Text>You feel drowsiness rushing upon you. Although you fight back, you are unable to keep it up, and you soon fall asleep. When you wake up you find yourself locked in a wooden cage, the smell of death and roasting meat filling your nose before your eyes clear and you can see the room.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="webSprung" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Wait to see what they want" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Title>The engraved room</Title>
+    <Text>You are in a large room, fifty feet square. There are double doors on the north wall and a single door on the west wall. The walls are covered in elaborate engraved images, and every ten feet along them stands a bronze sconce.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="sconcesLit" operator="eq" value="0" />
+        </Requirements>
+        <Content>There is no light source, and an odd draft blowing in from the south wall suggests there may be a hidden door in that area.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="sconcesLit" operator="eq" value="1" />
+        </Requirements>
+        <Content>The sconces you lit burn steadily, and the room is bright and warm.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="secretDoor" operator="eq" value="1" />
+        </Requirements>
+        <Content>The panel on the south wall stands open where you touched the snake, a secret door onto a dark passage.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Go north through the double doors" goto="27" />
+      <Choice text="Go west through the single door" goto="25" />
+      <Choice text="Go south through the secret door" goto="50">
+        <Requirements>
+          <Variable id="secretDoor" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Search the south wall" check="instinct" difficulty="2" goto="3" failGoto="13">
+        <Requirements>
+          <Variable id="secretDoor" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Light the sconces" goto="12">
+        <Requirements>
+          <Variable id="sconcesLit" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Inspect the engraved images" goto="21">
+        <Requirements>
+          <Variable id="secretDoor" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Title>Through the holes in the web</Title>
+    <Text>You carefully slide your body through the holes in the web without touching a string. Now that you have done it once, you think you could do it again if you take your time.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="webKnown" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Take the south passageway" goto="23" />
+      <Choice text="Take the east doors" goto="27" />
+      <Choice text="Go west to the grotto" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Title>The pool, and what floats in it</Title>
+    <Text>You stand by the pool, now tinged red with blood from the snake corpse floating on its surface. Inspecting the water more closely, you can see it is not, in fact, emerald, but normal clear water.</Text>
+    <Choices>
+      <Choice text="Drink the water" goto="14" />
+      <Choice text="Go back to the entrance of the chamber" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="21">
+    <Title>Snakes, and rabbits bowing</Title>
+    <Text>The imagery is made up of ten-foot panels, each showing massive snakes in various positions and crowds of rabbits apparently bowing down in worship to them. Each and every one of the snakes is defaced save for one, which appears instead to be worn down from repeated touch.</Text>
+    <Choices>
+      <Choice text="Touch the snake" goto="28" />
+      <Choice text="Turn back to the room" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="22">
+    <Title>Inside the serpent</Title>
+    <Text>You push through the cramped tunnel and find that inside it is much less complicated than it appears from the outside. Rather than twists and turns, it takes you on a relatively straight path north, opening up into a new chamber.</Text>
+    <Choices>
+      <Choice text="Step out into the chamber" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Title>The panel swings inward</Title>
+    <Text>When you touch the snake head, the panel slowly swings inward, revealing a secret door on the south wall.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="secretDoor" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Look through the secret door" goto="50" />
+      <Choice text="Stay in the room" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="30">
+    <Title>The thread holds</Title>
+    <Text>You work your way carefully over, under and around the intertwining body of the snake. It is slow work, but the yarn magically strings itself out as you go, marking a quick path through the statue.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="yarnPath" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Come out in the far corner of the hall" goto="27">
+        <Requirements>
+          <Variable id="fromWhere" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Come out beside the entrance" goto="42">
+        <Requirements>
+          <Variable id="fromWhere" operator="eq" value="2" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="26">
+    <Title>A shadow under the surface</Title>
+    <Text>As you look more carefully, you see a long dark shadow swirling around under the surface of the water. Whatever it is has not noticed you.</Text>
+    <Choices>
+      <Choice text="Back off while you still can" goto="31" />
+      <Choice text="Try to get the water anyway" check="agility" difficulty="2" goto="35" failGoto="8" />
+    </Choices>
+  </Page>
+  <Page id="27">
+    <Title>The far corner of the hall</Title>
+    <Text>In the south-west corner of the hall are two sets of double doors, one on the south wall and one on the west wall. Behind you the jade coils stand between you and the daylight of the entrance.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="yarnPath" operator="eq" value="1" />
+        </Requirements>
+        <Content>Your white thread comes out of the coils here, and runs back the way you came.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Go south through the double doors" goto="17" />
+      <Choice text="Go west through the double doors" goto="53" />
+      <Choice text="Follow the white thread back to the entrance" goto="42">
+        <Requirements>
+          <Variable id="yarnPath" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Work back around the coils" check="agility" difficulty="1" goto="10" failGoto="15" roll="crypt">
+        <Requirements>
+          <Variable id="yarnPath" operator="eq" value="0" />
+        </Requirements>
+        <Effects>
+          <setVariable target="fromWhere" value="2" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="31">
+    <Title>The green chamber</Title>
+    <Text>You are in the entrance of a large round chamber, fifty feet across, lit in a hazy green light from a rough gemstone in the ceiling. Fog fills the room from a large pool of water covering much of the floor. It is impossible to tell if the water itself is green or if it is a trick of the light. Near the edge of the water, a small stone table has a crystal vial on it.</Text>
+    <Choices>
+      <Choice text="Look at what floats in the pool" goto="19">
+        <Requirements>
+          <Variable id="poolSnakeDead" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Inspect the water" goto="26">
+        <Requirements>
+          <Variable id="poolSnakeDead" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Fill the vial" goto="8">
+        <Requirements>
+          <Variable id="poolSnakeDead" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Go back to the hall of the statue" goto="42" />
+    </Choices>
+  </Page>
+  <Page id="34">
+    <Title>A string catches your foot</Title>
+    <Text>Moving carefully through the web of strings, you misstep and your foot catches and pulls a string. You hear a hiss as the room fills with a gas, apparently triggered by the strings.</Text>
+    <Choices>
+      <Choice text="Hold your breath and endure it" check="toughness" difficulty="2" goto="40" failGoto="16" />
+    </Choices>
+  </Page>
+  <Page id="35">
+    <Title>The vial, and what came out of the water</Title>
+    <Text>You quickly fill the vial with water and jump back as a massive snake emerges. When you have time to inspect the vial, you will find the water in it is clear, not emerald. You have enough time to flee the room.</Text>
+    <Choices>
+      <Choice text="Flee to the hall of the statue" goto="42" grantItem="crystal-vial" />
+      <Choice text="Stay and fight" goto="8" grantItem="crystal-vial" />
+    </Choices>
+  </Page>
+  <Page id="37">
+    <Title>The king of the rabets</Title>
+    <Text>After a time, a rabet opens the cage and grabs you by the hand to lead you to their king. You learn this one can speak common, although the others speak only in low barks and growls. Acting as a translator for their king, you learn that they want a snake egg from a nearby room. If you retrieve it for them, they will reward you with treasure. They provide a map of nearby rooms with the egg room marked with an X.</Text>
+    <Choices>
+      <Choice text="Take the map and stand up" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="39">
+    <Title>The stones give way</Title>
+    <Text>You manage to quietly move enough of the stones to make a passage you can crawl through.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="grottoOpen" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Crawl through to the west" goto="64" />
+      <Choice text="Stay in the grotto" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="40">
+    <Title>The gas thins out</Title>
+    <Text>You feel drowsiness beginning to overtake you, but you harden your will and hold your breath. In a few moments the gas dissipates and you find you can breathe safely again. The web hangs loose now, sprung: it will not catch anyone twice.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="webSprung" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Look around the room" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="42">
+    <Title>The hall of the jade serpent</Title>
+    <Text>You stand at the entrance on the east side of a large hall, sixty feet by fifty, lit faintly with light from the opening to the outside. The space is full, wall to wall and floor to ceiling, with an enormous jade statue of a snake, twisting and turning over itself, tying itself in knots, but with space enough to move through them.
+
+The head of the snake is to your right, mouth open, large pointed fangs ready to strike. Behind the fangs, it appears there is a tunnel inside of the snake.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="yarnPath" operator="eq" value="0" />
+        </Requirements>
+        <Content>At your feet is a skein of pure white yarn, glowing with a slightly magical aura.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="yarnPath" operator="eq" value="1" />
+        </Requirements>
+        <Content>A white thread runs away from your feet and disappears among the coils. You laid it yourself, and it still marks the way through.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="hasWater" operator="eq" value="1" />
+        </Requirements>
+        <Content>The bottle at your belt is full of emerald water, and the daylight is behind you.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Walk out of the crypt with the water" goto="101">
+        <Requirements>
+          <Variable id="hasWater" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Climb into the mouth and follow the tunnel inside the snake" goto="22" />
+      <Choice text="Follow the white thread to the far corner" goto="27">
+        <Requirements>
+          <Variable id="yarnPath" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Work around the coils, unspooling the yarn behind you" check="agility" difficulty="1" goto="30" failGoto="15" roll="crypt" grantItem="white-yarn">
+        <Requirements>
+          <Variable id="yarnPath" operator="eq" value="0" />
+        </Requirements>
+        <Effects>
+          <setVariable target="fromWhere" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Work around the coils with nothing but your hands" check="agility" difficulty="1" goto="10" failGoto="15" roll="crypt">
+        <Requirements>
+          <Variable id="yarnPath" operator="eq" value="0" />
+        </Requirements>
+        <Effects>
+          <setVariable target="fromWhere" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="43" ending="true">
+    <Title>You died</Title>
+    <Text>You died in the First Crypt. The magic scroll returns to the castle on its own, carrying your notes and your map. Future adventurers may find your body, and take anything you were carrying.</Text>
+    <Choices>
+      <Choice text="Take a new volunteer from the court and begin again" goto="1" resetAdventure="true" />
+    </Choices>
+  </Page>
+  <Page id="23">
+    <Title>The rabet room, from the north-west</Title>
+    <Text>You are at the entrance in the north-west corner of a very large room, a hundred feet by forty.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+        </Requirements>
+        <Content>The room is full of lanky armoured creatures with pointed faces and tall floppy ears. They move about in the flickering light of a bonfire in the centre of the room, where they are roasting portions of a giant snake. You recognise the creatures as rabets, tricksters known for their cunning ambushes and traps underground.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+          <Variable id="guardsDead" operator="eq" value="0" />
+        </Requirements>
+        <Content>As you realise this, the two guards flanking this passageway notice you.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="guardsDead" operator="eq" value="1" />
+        </Requirements>
+        <Content>The two guards you killed lie in the shadows on either side of the entrance, and nobody has moved them.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="secretDoor" operator="eq" value="1" />
+        </Requirements>
+        <Content>You know there is a secret door in the north-east corner.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="rabetsDead" operator="eq" value="1" />
+        </Requirements>
+        <Content>Rabets lie dead about the room. Portions of giant snake are burning to a crisp over the bonfire in the centre, and nobody is turning them.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="eggDelivered" operator="eq" value="1" />
+          <Variable id="rabetsDead" operator="eq" value="0" />
+        </Requirements>
+        <Content>The room is full of barking and the smell of roasted snake. They do not care that you pass through, but they do not want you close to them either.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Go north to the small room" goto="25" />
+      <Choice text="Go through the secret door in the north-east corner" goto="17">
+        <Requirements mode="any">
+          <Variable id="rabetsDead" operator="eq" value="1" />
+          <Variable id="eggDelivered" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Search the room" goto="65">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="1" />
+          <Variable id="campSearched" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Fight the guards" goto="47">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+          <Variable id="guardsDead" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Announce yourself and deal with the rabets" goto="45">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Slip along the north wall to the secret door" check="agility" difficulty="2" goto="17" failGoto="38">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+          <Variable id="guardsDead" operator="eq" value="1" />
+          <Variable id="secretDoor" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Slip along the north wall to the north-east corner" check="agility" difficulty="2" goto="49" failGoto="38">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+          <Variable id="guardsDead" operator="eq" value="1" />
+          <Variable id="secretDoor" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Title>The room of strings</Title>
+    <Text>You are in a small room, twenty feet square. A short hallway to the east leads to a single door. There is an open passageway to the south. A short hallway to the west dead ends at a grotto, from which you can hear the sound of trickling water.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+        <Content>The room is filled with an intricate web of strings tied off to nails on the floor, ceiling and walls. There is just enough space to squeeze between the strings in some places, but only barely.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+          <Variable id="webKnown" operator="eq" value="1" />
+        </Requirements>
+        <Content>Since you have been through the web before, you remember your path and how to cross safely if you take your time.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="webCut" operator="eq" value="1" />
+        </Requirements>
+        <Content>Strings dangle from the walls and ceiling where you cut them.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="webSprung" operator="eq" value="1" />
+          <Variable id="webCut" operator="eq" value="0" />
+        </Requirements>
+        <Content>The web of strings hangs loose, sprung: you do not think it poses a danger any more.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Go east to the single door" goto="27">
+        <Requirements mode="any">
+          <Variable id="webCut" operator="eq" value="1" />
+          <Variable id="webSprung" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Go south through the passageway" goto="23">
+        <Requirements mode="any">
+          <Variable id="webCut" operator="eq" value="1" />
+          <Variable id="webSprung" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Go west to the grotto" goto="9">
+        <Requirements mode="any">
+          <Variable id="webCut" operator="eq" value="1" />
+          <Variable id="webSprung" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Pick your remembered way east to the single door" check="agility" difficulty="1" goto="27" failGoto="34">
+        <Requirements mode="all">
+          <Variable id="webKnown" operator="eq" value="1" />
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Pick your remembered way south" check="agility" difficulty="1" goto="23" failGoto="34">
+        <Requirements mode="all">
+          <Variable id="webKnown" operator="eq" value="1" />
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Pick your remembered way west to the grotto" check="agility" difficulty="1" goto="9" failGoto="34">
+        <Requirements mode="all">
+          <Variable id="webKnown" operator="eq" value="1" />
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Attempt to move through the strings" check="agility" difficulty="2" goto="18" failGoto="34">
+        <Requirements mode="all">
+          <Variable id="webKnown" operator="eq" value="0" />
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Cut the strings" goto="5">
+        <Requirements mode="all">
+          <Variable id="webCut" operator="eq" value="0" />
+          <Variable id="webSprung" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="38">
+    <Title>A clang in the wrong room</Title>
+    <Text>Attempting to move quietly through the space you misstep, and a clang echoes through the room as your backpack falls to the ground. In a moment you are rushed by ten rabets and their king.</Text>
+    <Combat victoryGoto="59" fleeGoto="48" defeatGoto="48">
+      <Enemy name="Ten rabets" hp="40" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="King Rabet, with two axes" hp="30" attack="6" defense="3" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="41">
+    <Title>Along the north wall</Title>
+    <Text>You move unnoticed along the north wall of the room. You realise quickly it is the only safe area outside the view of the rabets moving about the middle and southern parts of the room. As you near the passageway in the north-west corner, you see it is flanked by guards hiding in the shadows.</Text>
+    <Choices>
+      <Choice text="Attack the guards" goto="47" />
+      <Choice text="Try to find a nonviolent way into the passage" check="instinct" difficulty="3" goto="25" failGoto="47" />
+      <Choice text="Talk to the rabets" goto="45" />
+      <Choice text="Go back to the secret door" goto="50" />
+    </Choices>
+  </Page>
+  <Page id="45">
+    <Title>Speaking with the rabets</Title>
+    <Text>You put your hands where they can see them.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="hasEgg" operator="eq" value="0" />
+        </Requirements>
+        <Content>The rabets are surprised at first, raising their weapons. But when they see you are an adventurer, one rushes forward and grabs you by the hand to lead you to their king. You learn this one can speak common, although the others speak only in low barks and growls. Acting as a translator for their king, you learn that they want a snake egg from a nearby room. If you retrieve it for them, they will reward you with treasure. They provide a map of nearby rooms with the egg room marked with an X.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="hasEgg" operator="eq" value="1" />
+        </Requirements>
+        <Content>The rabets break out in celebration when they see the egg, howling with delight. King Rabet holds out his arms to take it, while his translator holds out a small sack to you. Inside the sack are five gems. The translator explains that they will not bother you if you come to this room again, but they do not want anything else to do with you. Frankly, they do not like your smell. Turns out rabets can be really hurtful.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Take the map and turn back to the room" goto="23">
+        <Requirements>
+          <Variable id="hasEgg" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Hand over the egg and take the sack" goto="23">
+        <Requirements>
+          <Variable id="hasEgg" operator="eq" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="hasEgg" value="0" />
+          <setVariable target="eggDelivered" value="1" />
+          <addVariable target="wealth" value="2000" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="46">
+    <Title>The stone on your foot</Title>
+    <Text>As you are moving the final stone to create a passage, you drop it on your foot and let out a loud scream. A moment later, something appears in the passage you have created.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="grottoOpen" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Turn to face whatever is coming" goto="9" roll="crypt" />
+    </Choices>
+  </Page>
+  <Page id="47">
+    <Title>The two guards</Title>
+    <Text>You are fighting the two rabet guards who flank the passageway. If the fight lasts, the room will hear it.</Text>
+    <Combat victoryGoto="55" fleeGoto="51" defeatGoto="43">
+      <Enemy name="A rabet guard" hp="8" attack="2" defense="1" loreDifficulty="1" />
+      <Enemy name="The second rabet guard" hp="8" attack="2" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+  <Page id="48">
+    <Title>A blow to the back of the head</Title>
+    <Text>With a thud, a blunt object smacks the back of your head and you are knocked out. When you wake up you find yourself locked in a wooden cage, the smell of death and roasting meat filling your nose before your eyes clear and you can see the room.</Text>
+    <Choices>
+      <Choice text="Wait to see what they want" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="49">
+    <Title>The north-east corner</Title>
+    <Text>You move unnoticed along the north wall of the room, and soon arrive at the passage in the north-east corner, where you find there is a secret door on the wall.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="secretDoor" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Go through the secret door" goto="17" />
+      <Choice text="Talk to the rabets" goto="45" />
+      <Choice text="Return to the north-west corner" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="50">
+    <Title>The room seen through the secret door</Title>
+    <Text>You are at the secret door in the north-east corner of a very large room, a hundred feet by forty.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+        </Requirements>
+        <Content>The room is full of lanky armoured creatures with pointed faces and tall floppy ears, moving about in the flickering light of a bonfire in the centre, where they are roasting portions of a giant snake. They have not yet noticed you as you look through the door. There is another open passageway in the north-west corner.</Content>
+      </Text>
+      <Text>
+        <Requirements mode="any">
+          <Variable id="rabetsDead" operator="eq" value="1" />
+          <Variable id="eggDelivered" operator="eq" value="1" />
+        </Requirements>
+        <Content>Nobody in the room is watching this door any more.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Go back into the engraved room" goto="17" />
+      <Choice text="Step into the room" goto="23">
+        <Requirements mode="any">
+          <Variable id="rabetsDead" operator="eq" value="1" />
+          <Variable id="eggDelivered" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Try to move unnoticed through the room" check="agility" difficulty="2" goto="41" failGoto="38">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Talk to the rabets" goto="45">
+        <Requirements mode="all">
+          <Variable id="rabetsDead" operator="eq" value="0" />
+          <Variable id="eggDelivered" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="51">
+    <Title>The room hears the fight</Title>
+    <Text>Hearing the clamour of your fight, eight more rabets and their king rush over to join in.</Text>
+    <Combat victoryGoto="59" fleeGoto="48" defeatGoto="48">
+      <Enemy name="Eight rabets" hp="34" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="King Rabet, with two axes" hp="30" attack="6" defense="3" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="52">
+    <Title>Dark water from the faun</Title>
+    <Text>It is normal water, refreshing but unremarkable. You refill your waterskin.</Text>
+    <Choices>
+      <Choice text="Straighten up and look around the grotto" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="53">
+    <Title>The long hallway</Title>
+    <Text>You are in a hallway, ten feet wide and eighty long. There are doors to the east, south, west and north.</Text>
+    <Choices>
+      <Choice text="Go east" goto="27" />
+      <Choice text="Go south" goto="80" />
+      <Choice text="Go west" goto="92" />
+      <Choice text="Go north" goto="62" />
+    </Choices>
+  </Page>
+  <Page id="54">
+    <Title>The L-shaped hallway</Title>
+    <Text>A long L-shaped hallway opens into a room at the south end and a cavern at the north end.</Text>
+    <Choices>
+      <Choice text="Go south into the room" goto="62" />
+      <Choice text="Go north into the cavern" goto="58" />
+    </Choices>
+  </Page>
+  <Page id="55">
+    <Title>The guards are down</Title>
+    <Text>The two guards lie in the shadows on either side of the entrance, and for the moment nobody in the room has looked this way.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="guardsDead" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Take stock of the room" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="57">
+    <Title>The room of pyres</Title>
+    <Text>You are in a room, sixty feet by forty, dominated by a green stone platform filling most of the floor. Partially burnt wood, ash and bone on the platform indicate it is a place for funeral pyres. The edges of the room are filled with rows of jade urns. One stands next to the platform, partially full of ash, the burnt corpse of a woman in green robes beside it. You may take the robes; you find nothing else of value if you search her.</Text>
+    <Choices>
+      <Choice text="Take the green robes and go east" goto="64" grantItem="green-robes" />
+      <Choice text="Go east" goto="64" />
+      <Choice text="Go west" goto="68" />
+    </Choices>
+  </Page>
+  <Page id="58">
+    <Title>The cavern, north bank</Title>
+    <Text>You are in a large, natural cavern, walls of rough green stone, much unlike the finely carved chambers of the crypt. A river of emerald water rushes through the centre of the cavern, running from a hole in the north-east wall down to the south-west. It would be impossible to cross safely. On the far side of the stream are rows upon rows of jade jars, neatly arranged.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="riverSide" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Inspect the water" goto="76" />
+      <Choice text="Return to the crypt" goto="54" />
+    </Choices>
+  </Page>
+  <Page id="59">
+    <Title>The camp, gone quiet</Title>
+    <Text>The last of them stops moving. Portions of giant snake go on burning to a crisp over the bonfire in the centre, and there is nobody left to turn them.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="rabetsDead" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Look around the room" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="62">
+    <Title>The room of hot mud</Title>
+    <Text>A large room, ninety feet by forty, is full of a thick bed of hot mud, steam rising and filling the air, lit by large glowing eggs in clusters throughout the space.</Text>
+    <Choices>
+      <Choice text="Go north" goto="54" />
+      <Choice text="Go south" goto="53" />
+      <Choice text="Inspect an egg cluster" goto="72" />
+    </Choices>
+  </Page>
+  <Page id="64">
+    <Title>The room of the purple snake</Title>
+    <Text>You are in a dark room, forty feet by fifty.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="purpleSnakeDead" operator="eq" value="0" />
+        </Requirements>
+        <Content>A massive purple snake is curled up sleeping in the northern half of the room. Reaching either exit would mean moving quietly past it.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="purpleSnakeDead" operator="eq" value="1" />
+        </Requirements>
+        <Content>The massive purple snake lies dead, rotting on top of a pile of treasure. The stench of its death ichor is so strong you cannot stay in here long without succumbing and passing out.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="grottoOpen" operator="eq" value="1" />
+        </Requirements>
+        <Content>There is a secret passage in the south-east corner, the one you opened from the grotto.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Go east" goto="80">
+        <Requirements>
+          <Variable id="purpleSnakeDead" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Go west to the room of pyres" goto="57">
+        <Requirements>
+          <Variable id="purpleSnakeDead" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Take the secret passage south-east" goto="9">
+        <Requirements>
+          <Variable id="grottoOpen" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Move quietly east" check="agility" difficulty="1" goto="80" failGoto="95">
+        <Requirements>
+          <Variable id="purpleSnakeDead" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Move quietly west to the room of pyres" check="agility" difficulty="1" goto="57" failGoto="95">
+        <Requirements>
+          <Variable id="purpleSnakeDead" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Search the room" goto="90">
+        <Requirements>
+          <Variable id="purpleSnakeDead" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Look for a way to kill the snake" goto="85">
+        <Requirements>
+          <Variable id="purpleSnakeDead" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Quickly grab treasure before moving on" goto="87">
+        <Requirements>
+          <Variable id="purpleSnakeDead" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="65">
+    <Title>Bones, rags and ash</Title>
+    <Text>Among the snake bones, filthy rags and ash piles of the rabet encampment, you find a thousand coins and five purple gems.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="wealth" value="3000" />
+        <setVariable target="campSearched" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Pocket it and stand up" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="66">
+    <Title>The vines</Title>
+    <Text>A vine lashes out and wraps around your leg, burning your skin where it touches, before you can take an egg. There are four of them, and they move together.</Text>
+    <Combat victoryGoto="73" fleeGoto="67" defeatGoto="43">
+      <Enemy name="Four burning vines" hp="30" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="67">
+    <Title>An egg, and a jump backwards</Title>
+    <Text>You snatch an egg and jump back out of the reach of the vines. It takes both arms to carry.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="hasEgg" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Back away into the room" goto="62" />
+    </Choices>
+  </Page>
+  <Page id="68">
+    <Title>The shifting maze</Title>
+    <Text>In a large room, sixty feet square, panels of jade stone form a constantly shifting maze, panels rising and falling from the floor rhythmically, the pattern of the maze changing with each motion. There are passages at the east and west ends of the room.</Text>
+    <Choices>
+      <Choice text="Work your way through the maze to the east" check="instinct" difficulty="2" goto="75" failGoto="96" />
+      <Choice text="Work your way through the maze to the west" check="instinct" difficulty="2" goto="75" failGoto="96" />
+    </Choices>
+  </Page>
+  <Page id="69">
+    <Title>The emerald water</Title>
+    <Text>The emerald water is healing. The ache goes out of you as you swallow, and whatever was in your blood is not in it any more.</Text>
+    <OnEnter>
+      <Effects>
+        <heal value="999" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Stand up on the north bank" goto="76">
+        <Requirements>
+          <Variable id="riverSide" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Stand up on the south bank" goto="77">
+        <Requirements>
+          <Variable id="riverSide" operator="eq" value="2" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="72">
+    <Title>The egg cluster</Title>
+    <Text>Six large glowing eggs are clustered together in a nest of neon orange vines. As you look, you see the vines are slowly moving on their own around the eggs. With care, you could take an egg, but it would require both arms to carry it.</Text>
+    <Choices>
+      <Choice text="Try to take an egg" check="agility" difficulty="2" goto="79" failGoto="66">
+        <Requirements>
+          <Variable id="hasEgg" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Return to the room" goto="62" />
+    </Choices>
+  </Page>
+  <Page id="73">
+    <Title>The vines in pieces</Title>
+    <Text>The vines lie in pieces, steam rising more strongly from the orange liquid that flows out of them. You can take an egg now, at your leisure.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="hasEgg" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Take an egg and step back" goto="62" />
+    </Choices>
+  </Page>
+  <Page id="74">
+    <Title>It divides</Title>
+    <Text>Your strike causes a smaller pudding to divide from the main blob. There are two of them now, and the small one is quicker.</Text>
+    <Choices>
+      <Choice text="Keep fighting them both" goto="82" />
+    </Choices>
+  </Page>
+  <Page id="75">
+    <Title>Through the maze</Title>
+    <Text>You manage to pass safely through the maze. Along the way you find a purse dropped by a previous adventurer.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="purseTaken" operator="eq" value="1" />
+        </Requirements>
+        <Content>You already took what was in it; the leather lies where you dropped it.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Take the purse and go out to the east" goto="57">
+        <Requirements>
+          <Variable id="purseTaken" operator="eq" value="0" />
+        </Requirements>
+        <Effects>
+          <addVariable target="wealth" value="500" />
+          <setVariable target="purseTaken" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Take the purse and go out to the west" goto="77">
+        <Requirements>
+          <Variable id="purseTaken" operator="eq" value="0" />
+        </Requirements>
+        <Effects>
+          <addVariable target="wealth" value="500" />
+          <setVariable target="purseTaken" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Go out to the east" goto="57" />
+      <Choice text="Go out to the west" goto="77" />
+    </Choices>
+  </Page>
+  <Page id="76">
+    <Title>The water, close up</Title>
+    <Text>On inspection, you can see the water is pure emerald in colour, exactly like that you were sent to find. An empty bottle lies in the sand on the bank.</Text>
+    <Choices>
+      <Choice text="Drink the water" goto="69" />
+      <Choice text="Fill the bottle" goto="97">
+        <Requirements>
+          <Variable id="hasWater" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Leave the bank" goto="54" />
+    </Choices>
+  </Page>
+  <Page id="77">
+    <Title>The cavern, south bank</Title>
+    <Text>You are in a large, natural cavern, walls of rough green stone, much unlike the finely carved chambers of the crypt. A river of emerald water rushes through the centre, running from a hole in the north-east wall down to the west. It would be impossible to cross safely. On the far side of the stream are rows upon rows of jade jars, neatly arranged.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="riverSide" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Collect some water in the bottle" goto="98">
+        <Requirements mode="all">
+          <Variable id="hasWater" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Drink the water" goto="69" />
+      <Choice text="Return to the crypt" goto="68" />
+    </Choices>
+  </Page>
+  <Page id="79">
+    <Title>An egg, quietly</Title>
+    <Text>You grab an egg without being caught by the vines, which lash out at you as you pull away.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="hasEgg" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Step back into the room" goto="62" />
+    </Choices>
+  </Page>
+  <Page id="80">
+    <Title>The room of hot tubs</Title>
+    <Text>You are in a room, sixty feet by forty, full of steam and dimly lit cracks in the tiled floor, under which fires appear to be burning. Marble tubs of hot water are arranged in two rows down the middle. This would be a nice place to rest, but there appears to be nothing else of interest here.</Text>
+    <Choices>
+      <Choice text="Go west" goto="64" />
+      <Choice text="Go north" goto="53" />
+    </Choices>
+  </Page>
+  <Page id="81" ending="true">
+    <Title>Absorbed</Title>
+    <Text>As you die, you are absorbed by the pudding. Except for the magic scroll, which returns to the castle, your inventory is retrievable by future adventurers only if they defeat the pudding.</Text>
+    <Choices>
+      <Choice text="Take a new volunteer from the court and begin again" goto="1" resetAdventure="true" />
+    </Choices>
+  </Page>
+  <Page id="82">
+    <Title>The emerald pudding</Title>
+    <Text>The blob comes on, and where it touches, it takes. You could keep swinging your own weapons, or reach for the torch with the jade handle at your feet.</Text>
+    <Combat victoryGoto="83" fleeGoto="74" defeatGoto="81">
+      <Enemy name="An emerald pudding" hp="34" attack="7" defense="4" loreDifficulty="3" />
+    </Combat>
+  </Page>
+  <Page id="83">
+    <Title>The ring in the goo</Title>
+    <Text>With a final blow of the torch, the pudding goes up in flames, soon leaving only a pile of burnt goo on the floor. Nearly hidden in the goo, you find a gold ring set with a large emerald. The door has reappeared.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="puddingBurned" value="1" />
+        <addVariable target="wealth" value="1500" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Take the ring and leave the room" goto="53" grantItem="emerald-ring" />
+      <Choice text="Leave the room" goto="53" />
+    </Choices>
+  </Page>
+  <Page id="85">
+    <Title>The head among the coils</Title>
+    <Text>You find the snake's head amongst its coiled body. A strike from a big enough hand-to-hand weapon would be enough to kill it here.</Text>
+    <Choices>
+      <Choice text="Try to kill the snake where it sleeps" check="strength" difficulty="3" goto="89" failGoto="94" />
+      <Choice text="Back away" goto="64" />
+    </Choices>
+  </Page>
+  <Page id="87">
+    <Title>What you can carry, quickly</Title>
+    <Text>You are able to collect a handful of coins, but staying longer would make you pass out from the stench of death. You could perhaps try again the next time you pass through this room.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="wealth" value="500" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Get out of the room" goto="64" />
+    </Choices>
+  </Page>
+  <Page id="88">
+    <Title>"I accept this offering"</Title>
+    <Text>As you cross the circle of the candles, a disembodied, deep, raspy voice says: "I accept this offering." The candles flame high, scorching the ceiling. You turn and see the door you entered through is no longer there, only a smooth green wall. The pool congeals and rises up into an amorphous emerald blob lumbering toward you. At your feet you notice a torch with a jade handle.</Text>
+    <Choices>
+      <Choice text="Fight with your weapons" goto="82" />
+      <Choice text="Fight with the jade torch" goto="91" />
+    </Choices>
+  </Page>
+  <Page id="89">
+    <Title>A mighty blow</Title>
+    <Text>With a mighty blow you kill the snake. It begins to let out a putrid odour as ichor flows from its death wound.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="purpleSnakeDead" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Step back from the body" goto="64" />
+    </Choices>
+  </Page>
+  <Page id="90">
+    <Title>What it sleeps on</Title>
+    <Text>You find the snake is sleeping on top of a pile of treasure. With luck you could gather some of it without waking it.</Text>
+    <Choices>
+      <Choice text="Try to collect treasure" check="agility" difficulty="3" goto="86" failGoto="95" />
+      <Choice text="Leave it where it is" goto="64" />
+    </Choices>
+  </Page>
+  <Page id="86">
+    <Title>As much as you dare</Title>
+    <Text>You are able to collect a handful of coins, but you fear any more would wake the snake from the way it is beginning to squirm. You could perhaps try again later, when it has settled.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="wealth" value="500" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Move away from the pile" goto="64" />
+    </Choices>
+  </Page>
+  <Page id="91">
+    <Title>The jade torch</Title>
+    <Text>You take up the torch with the jade handle. It burns hotter than it should, and the blob flinches from the light before you have even swung it.</Text>
+    <Combat victoryGoto="83" fleeGoto="82" defeatGoto="81">
+      <Enemy name="An emerald pudding, shrinking from the flame" hp="26" attack="6" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="92">
+    <Title>The room of black candles</Title>
+    <Text>In a large, semi-rounded room, sixty feet across, jade crystal formations serve as candlestands for smoky black candles.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="puddingBurned" operator="eq" value="0" />
+        </Requirements>
+        <Content>They stand around a pool of dark green liquid.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="puddingBurned" operator="eq" value="1" />
+        </Requirements>
+        <Content>They stand around smears of black goo burnt on the floor. There is nothing of interest here now.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Investigate the liquid" goto="88">
+        <Requirements>
+          <Variable id="puddingBurned" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Leave through the only door" goto="53" />
+    </Choices>
+  </Page>
+  <Page id="94">
+    <Title>Not enough to kill it</Title>
+    <Text>You strike a blow, but it is not enough to kill the snake outright. It comes awake around your arm.</Text>
+    <Choices>
+      <Choice text="Fight it" goto="95" />
+    </Choices>
+  </Page>
+  <Page id="95">
+    <Title>The purple snake, awake</Title>
+    <Text>The snake is awake and it has seen you. Its bite carries a venom that works fast.</Text>
+    <Combat victoryGoto="89" fleeGoto="64" defeatGoto="43">
+      <Enemy name="The massive purple snake" hp="36" attack="7" defense="4" loreDifficulty="3" />
+    </Combat>
+  </Page>
+  <Page id="96">
+    <Title>A panel rises</Title>
+    <Text>You misstep and are knocked by a panel rising from the floor.</Text>
+    <OnEnter>
+      <Effects>
+        <damage value="12" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Pick yourself up and try again" goto="68" />
+    </Choices>
+  </Page>
+  <Page id="97">
+    <Title>The brood</Title>
+    <Text>As you dip the bottle to fill it, a brood of five snakes jumps out of the water, forcing you back, and then moves to attack you.</Text>
+    <Combat victoryGoto="99" fleeGoto="100" defeatGoto="100">
+      <Enemy name="A brood of five snakes" hp="22" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="98">
+    <Title>The bottle fills</Title>
+    <Text>You hold the bottle under the surface until it is full, and stopper it. The water inside it is the colour of the river, and it does not fade.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="hasWater" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Stand up with the bottle" goto="77" grantItem="water-bottle" />
+    </Choices>
+  </Page>
+  <Page id="99">
+    <Title>With the snakes gone</Title>
+    <Text>With the snakes gone, you may safely collect a bottle of water. It is the colour of the river, and it does not fade.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="hasWater" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Stand up with the bottle" goto="58" grantItem="water-bottle" />
+    </Choices>
+  </Page>
+  <Page id="100">
+    <Title>Swept away</Title>
+    <Text>Swooning from the snakebites, you fall into the water and are swept away. The water heals you as you float through a dark tunnel, and a moment later you wash up on the bank in another cavern.</Text>
+    <OnEnter>
+      <Effects>
+        <heal value="999" />
+        <setVariable target="riverSide" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Get to your feet on the far bank" goto="77" />
+    </Choices>
+  </Page>
+  <Page id="101" ending="true">
+    <Title>Out of the cavern</Title>
+    <Text>When you emerge from the cavern, guards meet you on the steps. One takes the bottle of water and mounts a horse, rushing off back to the castle. Another hands you a bag with five thousand coins and a letter releasing you from service to the king.
+
+You are free to pursue further adventures, if you dare.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="wealth" value="5000" />
+      </Effects>
+    </OnEnter>
+  </Page>
+  <Page id="102">
+    <Title>Four rabets, and a dead snake</Title>
+    <Text>Four rabets come round the corner dragging a dead snake by the tail. They stop when they see you. The one at the front lets go of the tail, and the body slaps against the stone.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Four rabets dragging a dead snake" hp="20" attack="4" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+  <Page id="103">
+    <Title>Hunting</Title>
+    <Text>You hear them before you see them: five snakes moving fast and low over the stone, spread out the way things spread out when they are hunting together.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="A pack of five hunting snakes" hp="22" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="104">
+    <Title>Two rabets, lost</Title>
+    <Text>Two rabets come round the corner arguing in low barks, and stop dead. They are not where they meant to be, and neither of them expected you.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Two lost rabets" hp="12" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+  <Page id="105">
+    <Title>A snake taking a nap</Title>
+    <Text>A snake lies coiled in a hollow of the stone, out of the draught, asleep. You could try to get past it. It might not stay asleep.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="A snake woken badly" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="106">
+    <Title>Two parties at once</Title>
+    <Text>Four rabets come round the corner with a dead snake, and behind them, drawn by the noise, four more. Nobody backs off.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Four rabets dragging a dead snake" hp="20" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="Four more rabets, drawn by the noise" hp="20" attack="4" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+  <Page id="107">
+    <Title>Hunters and hunted, both here</Title>
+    <Text>Four rabets are dragging their dead snake past you when the pack that has been following the smell arrives. For a moment nobody is sure who is fighting whom. The moment passes.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Four rabets dragging a dead snake" hp="20" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="A pack of five hunting snakes" hp="22" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="108">
+    <Title>The party and the strays</Title>
+    <Text>Four rabets with a dead snake, and two more who have clearly been looking for them. Finding you first does not improve anybody's temper.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Four rabets dragging a dead snake" hp="20" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="Two lost rabets" hp="12" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+  <Page id="109">
+    <Title>Enough noise to wake it</Title>
+    <Text>Four rabets come round the corner dragging a dead snake. They are not quiet about it, and in a hollow above you something that was asleep stops being asleep.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Four rabets dragging a dead snake" hp="20" attack="4" defense="1" loreDifficulty="1" />
+      <Enemy name="A snake woken badly" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="110">
+    <Title>Two packs, one corridor of stone</Title>
+    <Text>Snakes come from both sides at once. They are not hunting each other, which leaves only you.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="A pack of five hunting snakes" hp="22" attack="5" defense="2" loreDifficulty="2" />
+      <Enemy name="A second pack, coming the other way" hp="22" attack="5" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="111">
+    <Title>The strays run into the pack</Title>
+    <Text>Two lost rabets come round the corner at a trot, see you, and stop. Behind them the hunting pack that has been herding them all along arrives.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="A pack of five hunting snakes" hp="22" attack="5" defense="2" loreDifficulty="2" />
+      <Enemy name="Two lost rabets" hp="12" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+  <Page id="112">
+    <Title>The pack, and what it wakes</Title>
+    <Text>The hunting pack pours over the stone, and the noise brings the sleeper out of its hollow behind you.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="A pack of five hunting snakes" hp="22" attack="5" defense="2" loreDifficulty="2" />
+      <Enemy name="A snake woken badly" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="113">
+    <Title>Four rabets, none of whom know the way</Title>
+    <Text>Two rabets come round one corner, and two more from the other side, all of them lost, all of them relieved to see somebody until they see it is you.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Two lost rabets" hp="12" attack="3" defense="1" loreDifficulty="1" />
+      <Enemy name="Two more lost rabets" hp="12" attack="3" defense="1" loreDifficulty="1" />
+    </Combat>
+  </Page>
+  <Page id="114">
+    <Title>They step on it before you do</Title>
+    <Text>Two lost rabets come round the corner at a bad angle and one of them puts a foot in the hollow where a snake is sleeping. Now none of you have a choice.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="Two lost rabets" hp="12" attack="3" defense="1" loreDifficulty="1" />
+      <Enemy name="A snake woken badly" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="115">
+    <Title>Two hollows, two sleepers</Title>
+    <Text>There is a snake asleep in a hollow ahead of you and another behind, and the stone carries every sound you make to both of them.</Text>
+    <Combat victoryGoto="116" fleeGoto="116" defeatGoto="43">
+      <Enemy name="A snake woken badly" hp="18" attack="4" defense="2" loreDifficulty="2" />
+      <Enemy name="A second snake, woken worse" hp="18" attack="4" defense="2" loreDifficulty="2" />
+    </Combat>
+  </Page>
+  <Page id="116">
+    <Title>You can go on</Title>
+    <Text>When it is over you stand still for a while, listening. Nothing else moves. You pick up where you left off.</Text>
+    <Choices>
+      <Choice text="Come out in the far corner of the hall" goto="27">
+        <Requirements>
+          <Variable id="fromWhere" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Come out beside the entrance of the hall" goto="42">
+        <Requirements>
+          <Variable id="fromWhere" operator="eq" value="2" />
+        </Requirements>
+      </Choice>
+      <Choice text="Turn back to the grotto" goto="9">
+        <Requirements>
+          <Variable id="grottoOpen" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+</Librogame>

@@ -9,16 +9,18 @@
       "genre": "Dungeon World gamebook",
       "blurb": "Your sister is dying. The healer gave you the potion and told you that time is everything: the long way round will get you home too late, and the forest path is not safe. You take the forest path. Two hours in, you hear branches breaking. This is a gamebook for the Dungeon World system, and most of your choices are its Basic Moves — so as you read, you also learn how that game is played. The dice have already been rolled for you, and you are shown each roll and what it meant.",
       "contentWarnings": "Violence, gore, death, and disappointing a parent.",
-      "version": 4,
-      "phase": "test",
+      "version": 5,
+      "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v4/librogame.xml",
-        "sha256": "CEECFB7008D697B455915750F7AA3819AB9E16F04A459CC41B938A8AA8515109"
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v5/librogame.xml",
+        "sha256": "38B214224381AB34014FC31660AC1B7703D1237122B37F5147E53FF4B14B9A63"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v4/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v5/items.xml",
         "sha256": "2D828F53EC0305883F537E11B9EDF03009CE123D17F4EDAF521B1E2C4356072A"
-      }
+      },
+      "minAppBuild": 19,
+      "minAppVersion": "1.17"
     },
     {
       "id": "suddenly-an-ogre-it",
@@ -29,16 +31,18 @@
       "genre": "Librogame per Dungeon World",
       "blurb": "Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco. Dopo due ore senti dei rami spezzarsi. Questo è un librogame per il sistema Dungeon World, e quasi tutte le tue scelte sono le sue Mosse Base: leggendo, impari anche come si gioca a quel gioco. I dadi sono già stati tirati per te, e ogni tiro ti viene mostrato insieme a quello che ha significato.",
       "contentWarnings": "Violenza, sangue, morte e la delusione di un genitore.",
-      "version": 4,
-      "phase": "test",
+      "version": 5,
+      "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v4/librogame.xml",
-        "sha256": "2B941775B0888FDB1C2CF2E373E8789A9E369E7E533295E379F12B6F8A4C0A86"
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v5/librogame.xml",
+        "sha256": "F5998BB7A9C10EBBC8AB9E5F078336785915525CADB7F53DB92907A19F6BB553"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v4/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v5/items.xml",
         "sha256": "BDC360D1936F06C4420B70065A01183E09E76F35B479C933C1A6A0AF4228D568"
-      }
+      },
+      "minAppBuild": 19,
+      "minAppVersion": "1.17"
     },
     {
       "id": "viperblood-en",
@@ -48,16 +52,18 @@
       "language": "en",
       "genre": "Old-school dungeon crawl",
       "blurb": "The king is dying, and the only cure is a green water that runs somewhere under the crypt of the ancient queens. You are the next volunteer sent down to fetch it — the ones before you did not come back, though their notes did. Fifteen rooms of jade and cold air, a statue you have to climb through, rabets who trade and ambush in equal measure, and a purple snake asleep on a pile of coin. Everything you carry out is yours to keep, if you carry yourself out with it.",
-      "version": 1,
-      "phase": "test",
+      "version": 2,
+      "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v1/librogame.xml",
-        "sha256": "692B1C8E618EBA758B849460899CEA293F94C851D06CE84664362DF031EA3B87"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v2/librogame.xml",
+        "sha256": "A36307EF8A387BB04F8EBFD25B409EFB9A484979A98D6501667A9861AA2A8225"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v2/items.xml",
         "sha256": "2C828F6728FEFD89320B4D1ABCB9A6730CDC6A6930A0B8FB6525F761A48476AF"
-      }
+      },
+      "minAppBuild": 16,
+      "minAppVersion": "1.14"
     },
     {
       "id": "viperblood-it",
@@ -68,16 +74,18 @@
       "genre": "Dungeon crawl vecchia scuola",
       "blurb": "Il re sta morendo, e l'unica cura è un'acqua verde che scorre da qualche parte sotto la cripta delle antiche regine. Tocca a te scendere a prenderla: chi è andato prima di te non è tornato, i suoi appunti sì. Quindici stanze di giada e aria fredda, una statua dentro cui devi arrampicarti, rabet che commerciano e tendono agguati in egual misura, e un serpente viola addormentato su un mucchio di monete. Tutto quello che porti fuori è tuo, se porti fuori anche te.",
       "contentWarnings": "Violenza, ferite descritte per esteso, e la morte del personaggio.",
-      "version": 2,
-      "phase": "test",
+      "version": 3,
+      "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v2/librogame.xml",
-        "sha256": "B84FF1921DC9FD4D3A0C174514C695B55364B77C74D7A0450A8907831920F2BC"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v3/librogame.xml",
+        "sha256": "B39F10BBF87280E168F25D1E5777BF3C2856137E09631F171923D14E8497D0F6"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v3/items.xml",
         "sha256": "69F3C2D25CE53552474FBAEF3689523B2EAB36C43D1037CEC3F19AF3835F9CEB"
-      }
+      },
+      "minAppBuild": 16,
+      "minAppVersion": "1.14"
     }
   ]
 }

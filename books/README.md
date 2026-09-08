@@ -14,6 +14,13 @@ books/<id edizione>/v<versione>/items.xml
 cui è nata e continua a leggere quei file: cambiarli sotto di lei significa spostare il lettore in
 un testo che non ha scelto. Una correzione, anche di una virgola, è una versione nuova.
 
+**Ogni riga dichiara quale applicazione serve.** `minAppBuild` è il numero di build minimo,
+`minAppVersion` la stessa cosa scritta per una persona. Il formato dei libri ha un vocabolario
+chiuso: un'app che incontra una parola nata dopo di lei rifiuta il volume intero, e senza questa
+riga chi ha l'app vecchia riceve un errore tecnico in mezzo allo scaricamento invece di un «non
+ancora disponibile». Il numero si sceglie guardando qual è la parola più recente del formato che
+quel volume usa.
+
 **Il manifesto indica versioni precise, non «l'ultima».** Pubblicare è un gesto deliberato:
 aggiungere i file non basta, la riga nel manifesto va scritta a mano. Un manifesto che puntasse al
 ramo corrente farebbe arrivare a tutti, in un istante, qualunque cosa sia stata appena scritta.
