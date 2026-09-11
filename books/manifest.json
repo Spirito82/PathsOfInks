@@ -86,6 +86,30 @@
       },
       "minAppBuild": 16,
       "minAppVersion": "1.14"
+    },
+    {
+      "id": "lanterna-rossa-it",
+      "workId": "lanterna-rossa",
+      "title": "Lanterna Rossa",
+      "author": "Classi 2B e 5D dell'ITI «G. Galilei» di Imperia",
+      "language": "it",
+      "genre": "Giallo storico a Genova",
+      "blurb": "Genova, 1980. Diego è uno studente di economia con la tessera del PCI in tasca e nessuna colpa: è finito nel carcere di Marassi per un arresto preventivo, mentre lo Stato dà la caccia alle Brigate Rosse e basta un sospetto per portare dentro qualcuno.\n\nUn ragazzo che corre nel corridoio gli lancia addosso una palla di carta. Dentro ci sono tre righe di numeri e lettere senza senso e una stella a cinque punte dentro un cerchio. Da quel momento Diego ha due cose da fare: uscire, e capire che cosa c'è scritto — prima che lo riconoscano.\n\nDuecentodiciannove paragrafi, tredici epiloghi, una città da attraversare e un codice vero da decifrare.",
+      "contentWarnings": "Terrorismo, violenza politica, carcere, armi da fuoco e sequestro di persona. Il libro racconta fatti storici italiani degli anni di piombo.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa-it/v1/librogame.xml",
+        "sha256": "8C620A6CC18E02CB957F49C9388F1F6FD5FFD025FF98AABA76F8048F1C45AED7"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa-it/v1/items.xml",
+        "sha256": "8C18CE8A2A12FF974FA5DCCF2D2E8A7AD5599C36F5A2A709D184028D19A88D1B"
+      },
+      "minAppBuild": 25,
+      "minAppVersion": "1.23"
     }
   ]
 }
