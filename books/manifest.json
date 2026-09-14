@@ -98,18 +98,546 @@
       "contentWarnings": "Terrorismo, violenza politica, carcere, armi da fuoco e sequestro di persona. Il libro racconta fatti storici italiani degli anni di piombo.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa-it/v1/librogame.xml",
-        "sha256": "8C620A6CC18E02CB957F49C9388F1F6FD5FFD025FF98AABA76F8048F1C45AED7"
+        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa-it/v2/librogame.xml",
+        "sha256": "33447D6DAB75FB520553C208881FB912BD7F2B4DB672DF7B463990D38C4B5CAF"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa-it/v2/items.xml",
         "sha256": "8C18CE8A2A12FF974FA5DCCF2D2E8A7AD5599C36F5A2A709D184028D19A88D1B"
       },
       "minAppBuild": 25,
       "minAppVersion": "1.23"
+    },
+    {
+      "id": "deep-state-it",
+      "workId": "deep-state",
+      "title": "Deep State",
+      "author": "Luca Mulazzani",
+      "language": "it",
+      "genre": "Distopia, interrogatorio",
+      "blurb": "Sei un comune cittadino, uno studente, un impiegato, scegli tu. Stai camminando per la strada; un gruppo di individui con il volto coperto da un passamontagna esce da un furgone e ti rapisce. Ora sei legato, in un garage.\n\nQueste sono le domande alle quali devi rispondere. Puoi mentire, se lo ritieni utile: nessuno verificherà. Ma alla fine ti sarà chiesto quante volte l'hai fatto.",
+      "contentWarnings": "Rapimento e interrogatorio coercitivo. Le domande sono volutamente invadenti e comprendono la vita sessuale, il voto e i rapporti famigliari. È una satira: non c'è violenza in scena, c'è un apparato che ti tratta come una pratica da evadere.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state-it/v1/librogame.xml",
+        "sha256": "48AE97166754CF15CE7412AAAD79147EE49C77F3E8BE09874AE5701565BD1FF8"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "deep-state-en",
+      "workId": "deep-state",
+      "title": "Deep State",
+      "author": "Luca Mulazzani",
+      "language": "en",
+      "genre": "Dystopia, interrogation",
+      "blurb": "You are an ordinary citizen, a student, an office worker, you choose. You are walking down the street; a group of individuals with their faces covered by balaclavas gets out of a van and abducts you. You are now tied up, in a garage.\n\nThese are the questions you must answer. You may lie, if you find it useful: nobody will check. But at the end you will be asked how many times you did.",
+      "contentWarnings": "Abduction and coercive interrogation. The questions are deliberately intrusive and cover sexual history, voting and family relationships. This is satire: there is no violence on the page, only an apparatus that treats you as a case to be processed.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state-en/v1/librogame.xml",
+        "sha256": "2EC24347DBE0C39BB9F6E6834991BEE0C800ECB1F7AB7050D90E52CD60A9AC2C"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "giacominerloch-it",
+      "workId": "giacominerloch",
+      "title": "Giacominerloch, la voragine dei sussurri",
+      "author": "Alessandro Rubbo",
+      "language": "it",
+      "genre": "Fantastico, folklore",
+      "blurb": "Torni a casa dalla festa di Schella Marz, con il vino ancora nelle vene e la luna piena sull'Altopiano. Vicino al Lèmerle un lamento rompe il silenzio: è una voce di donna, e sembra venire dalla terra stessa.\n\nSi chiama Giacomina, dice di essere la figlia del boscaiolo Hèberle, e di essere là sotto da troppo tempo. Ogni notte che passa la trasformazione avanza: quaranta lune, e di lei non resterà più niente di umano.",
+      "contentWarnings": "Una ragazza rapita e trasformata contro la sua volontà. Un finale racconta una metamorfosi mostruosa vista da vicino, un altro una condanna e una pietrificazione. Ferite, annegamento, vecchiaia e rimpianto.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch-it/v1/librogame.xml",
+        "sha256": "6E3F9CC3387479EB933539CA6DA44BB61DC4E52F0E45015B0800399E090D6A95"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "giacominerloch-en",
+      "workId": "giacominerloch",
+      "title": "Giacominerloch, the Chasm of Whispers",
+      "author": "Alessandro Rubbo",
+      "language": "en",
+      "genre": "Fantasy, folklore",
+      "blurb": "You are walking home from the Schella Marz feast, the wine still in your veins and the full moon over the Altopiano. Near the Lèmerle a moan breaks the silence: a woman's voice, and it seems to come out of the earth itself.\n\nHer name is Giacomina. She says she is the daughter of Hèberle the woodcutter, and that she has been down there far too long. With every night that passes the change advances: forty moons, and nothing human will be left of her.",
+      "contentWarnings": "A girl taken and changed against her will. One ending tells of a monstrous metamorphosis seen close up, another of a sentence and a petrification. Wounds, drowning, old age and regret.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch-en/v1/librogame.xml",
+        "sha256": "5D2C77768146AAD00BCD795DB159FBB2D7AEBA41C955C4E450F644271C7E508B"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "la-grande-fuga-it",
+      "workId": "la-grande-fuga",
+      "title": "La Grande Fuga",
+      "author": "MastroRozen e IsabelFae",
+      "language": "it",
+      "genre": "Favola, comico",
+      "blurb": "Hai organizzato la Grande Caccia alle uova più memorabile di sempre, e per riuscirci hai rubato le uova del Coniglio Pasquale. E anche il suo Libro Parlante, che conosce la strada del ritorno e te la dice in rima.\n\nIl Coniglio però se n'è accorto, e ti corre dietro. Arriva al portale con più uova che puoi, e non fidarti troppo del Libro.",
+      "contentWarnings": "Nessuna. Una fuga per ridere, con conigli da guardia, filastrocche e uova di cioccolato.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga-it/v1/librogame.xml",
+        "sha256": "8EAD8F4A95471CC1005CE3C3D820933AC3D44EC9330322F0FD15DDA6BE006707"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "la-grande-fuga-en",
+      "workId": "la-grande-fuga",
+      "title": "The Great Escape",
+      "author": "MastroRozen e IsabelFae",
+      "language": "en",
+      "genre": "Fable, comedy",
+      "blurb": "You have organised the most memorable Great Egg Hunt ever, and to pull it off you stole the Easter Bunny's eggs. And his Talking Book too, which knows the way back and tells it to you in rhyme.\n\nBut the Bunny has noticed, and he is after you. Reach the portal with as many eggs as you can, and don't trust the Book too much.",
+      "contentWarnings": "None. A chase played for laughs, with guard bunnies, nursery rhymes and chocolate eggs.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga-en/v1/librogame.xml",
+        "sha256": "41E0AE714661801D40464C30FADA821E04741731603AEF4A2F61F3AECC4CCF72"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "mycroft-it",
+      "workId": "mycroft",
+      "title": "L'orologio dei quarant'anni di Mycroft",
+      "author": "Luca Santarelli",
+      "language": "it",
+      "genre": "Giallo, investigativo",
+      "blurb": "Hai appena afferrato il violino quando Lestrade bussa alla porta: un orologio d'oro, dono personale della regina, è sparito dallo studio di Mycroft al Diogenes Club. Al momento del furto nella stanza c'erano tre persone, e tuo fratello è furioso.\n\nInterroga, esamina la scena, fai parlare la servitù. Poi punta il dito. Ogni accusa sbagliata barra una casella: confronta il tuo risultato con quello dei tuoi amici, chi è stato il più bravo?",
+      "contentWarnings": "Nessuna. Un giallo da salotto, senza sangue e senza violenza.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft-it/v1/librogame.xml",
+        "sha256": "423E757220378FE744267BB049F6B9B255C6CB581A814B80BA9FB6ADB9637E6E"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "mycroft-en",
+      "workId": "mycroft",
+      "title": "Mycroft's Fortieth-Birthday Watch",
+      "author": "Luca Santarelli",
+      "language": "en",
+      "genre": "Mystery, detection",
+      "blurb": "You have just reached for the violin when Lestrade knocks at the door: a gold watch, a personal gift from the Queen, has vanished from Mycroft's study at the Diogenes Club. Three people were in the room when it happened, and your brother is furious.\n\nQuestion them, examine the scene, get the servants talking. Then point the finger. Every accusation ticks a box: compare your result with your friends' — who did best?",
+      "contentWarnings": "None. A drawing-room mystery, with no blood and no violence.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft-en/v1/librogame.xml",
+        "sha256": "6C752B7FB11B3C87B00C538B865D03E801D9D9F70CE737CDC91355FB3DB9CB7E"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "quaranta-minuti-a-mezzanotte-it",
+      "workId": "quaranta-minuti-a-mezzanotte",
+      "title": "Quaranta Minuti a Mezzanotte!",
+      "author": "Roberto «Fox» Marcarini",
+      "language": "it",
+      "genre": "Horror classico, fantasmi",
+      "blurb": "Sei un famoso Cacciatore di Fantasmi, e a Baldwin Manor qualcosa è andato storto: qualcuno ti ha colpito alla testa. Rinvieni in una stanza in disuso, con la tua Candela Magica quasi esaurita e un Orologio a Pendolo che segna le 23:20.\n\nA mezzanotte l'attività spiritica sarà al massimo. Ogni stanza consuma una Fiammella della Candela, e quando ne avrai barrate cinque le forze della villa ti prenderanno.",
+      "contentWarnings": "Fantasmi, spettri e una morte del protagonista raccontata senza dettagli. Paura da storia di fantasmi, niente di più.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte-it/v1/librogame.xml",
+        "sha256": "7AFA9EADED6E48579DC4588B136BBD7292E9B9E043FC9376C9445EEA110C31B4"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "quaranta-minuti-a-mezzanotte-en",
+      "workId": "quaranta-minuti-a-mezzanotte",
+      "title": "Forty Minutes to Midnight!",
+      "author": "Roberto «Fox» Marcarini",
+      "language": "en",
+      "genre": "Classic horror, ghosts",
+      "blurb": "You are a famous Ghost Hunter, and at Baldwin Manor something has gone wrong: someone has struck you on the head. You come round in a disused room, with your Magic Candle almost spent and a Grandfather Clock showing 23:20.\n\nAt midnight the spirits will be at their strongest. Every room burns one Flame of your Candle, and when you have crossed off five, the forces of the Manor will take you.",
+      "contentWarnings": "Ghosts, spectres and a death of the protagonist told without detail. Ghost-story fright, nothing more.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte-en/v1/librogame.xml",
+        "sha256": "DFAD5801D15BA9EDE3E7A5B5CDE255F3D096A1E5C6544DF504B33E7642C00CDE"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "quarantesimo-ladrone-it",
+      "workId": "quarantesimo-ladrone",
+      "title": "Il 40° Ladrone",
+      "author": "Matteo Borghesi",
+      "language": "it",
+      "genre": "Avventura, comico",
+      "blurb": "Sei Amir, l'ultimo dei quaranta ladroni, quello a cui toccano i lavori peggiori. Il capo ha dimenticato la scimitarra nella caverna e manda te a riprenderla.\n\nArrivi giusto in tempo per sentire «Chiuditi, Sesamo!» e vedere un tale che scappa nel deserto carico di ricchezze. È Alì Babà, e ha imboccato la strada del palazzo del Sultano. Se ci arriva, siete finiti tutti.",
+      "contentWarnings": "Furti, un paradosso temporale che distrugge l'universo e un rapace gigante che si porta via qualcuno per cena. Tutto raccontato per ridere.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone-it/v1/librogame.xml",
+        "sha256": "44677AD9C6CB4DD3FE2ED832A66315025132465165F8F7C9F2F758853571072E"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "quarantesimo-ladrone-en",
+      "workId": "quarantesimo-ladrone",
+      "title": "The 40th Thief",
+      "author": "Matteo Borghesi",
+      "language": "en",
+      "genre": "Adventure, comedy",
+      "blurb": "You are Amir, the last of the forty thieves, the one who gets all the worst jobs. The chief has left his scimitar in the cave and sends you to fetch it.\n\nYou arrive just in time to hear \"Close, Sesame!\" and to see a man riding off into the desert loaded with riches. It is Ali Baba, and he has taken the road to the Sultan's palace. If he gets there, you are all finished.",
+      "contentWarnings": "Theft, a time paradox that destroys the universe, and a giant bird of prey that carries someone off for dinner. All of it played for laughs.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone-en/v1/librogame.xml",
+        "sha256": "E24AF974E64B6F8CF82F7E3FC82D443378A91E34B8BC10F6893F4D07B4B5A594"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "ti-rimangono-40-secondi-it",
+      "workId": "ti-rimangono-40-secondi",
+      "title": "Ti rimangono 40 secondi",
+      "author": "Andrea Carbone",
+      "language": "it",
+      "genre": "Horror psicologico",
+      "blurb": "Ti rimangono quaranta secondi di vita, e non sai perché. Nello specchio del bagno di un motel vedi solo un alone nero; di là, in camera, c'è Lisa, la tua ragazza, con un coltello in mano.\n\nDevi scoprire perché, e come sopravvivere. Ventuno paragrafi brevi e spezzati, come la mente di chi li vive.",
+      "contentWarnings": "Suicidio chiesto a un'altra persona, schizofrenia e allucinazioni, accoltellamenti, morte del protagonista e della sua compagna, linguaggio volgare. Il racconto è frammentato e disturbante per scelta.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi-it/v1/librogame.xml",
+        "sha256": "F98570A50B54C35C525584960D4B6145BCBF1669BD23E8D07D6CDFD6A3950147"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "ti-rimangono-40-secondi-en",
+      "workId": "ti-rimangono-40-secondi",
+      "title": "40 Seconds Left",
+      "author": "Andrea Carbone",
+      "language": "en",
+      "genre": "Psychological horror",
+      "blurb": "You have forty seconds left to live, and you don't know why. In the bathroom mirror of a motel you see only a black halo; next door, in the bedroom, is Lisa, your girlfriend, with a knife in her hand.\n\nYou must find out why, and how to survive. Twenty-one short, broken paragraphs, like the mind of the man living them.",
+      "contentWarnings": "A suicide asked of another person, schizophrenia and hallucinations, stabbings, the death of the protagonist and of his partner, coarse language. The story is fragmented and disturbing by design.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi-en/v1/librogame.xml",
+        "sha256": "7EAD298EF86C4A01AB1535D194AD49F7EC2D6694B480FFD552388D6D4FB5D6D4"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "40-deuce-it",
+      "workId": "40-deuce",
+      "title": "40 Deuce!",
+      "author": "Luca Santarelli",
+      "language": "it",
+      "genre": "Sportivo, comico",
+      "blurb": "Finale di Wimbledon, quinto set, 5-4 per te: vinci questo game e sei il campione. Il punteggio? 0-40. Dall'altra parte della rete c'è Bjorn Fedorovic, talento norvegese e perfezione svizzera, un robot con la racchetta.\n\nOgni partita persa barra una pallina e si ricomincia dall'inizio. Vinci Wimbledon, e confronta le palline barrate con quelle dei tuoi amici.",
+      "contentWarnings": "Nessuna. Tennis, superstizioni e una peperonata di troppo.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce-it/v1/librogame.xml",
+        "sha256": "B2966161094154488A1B5DF192A459EFC6C58DE2F42BA45E9C89E9F06A711C57"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "40-deuce-en",
+      "workId": "40-deuce",
+      "title": "40 Deuce!",
+      "author": "Luca Santarelli",
+      "language": "en",
+      "genre": "Sport, comedy",
+      "blurb": "Wimbledon final, fifth set, 5-4 to you: win this game and you're champion. The score? 0-40. On the other side of the net is Bjorn Fedorovic, Norwegian talent and Swiss perfection, a robot with a racket.\n\nEvery match you lose ticks off a tennis ball and sends you back to the start. Win Wimbledon, then compare your ticked balls with your friends'.",
+      "contentWarnings": "None. Tennis, superstitions and one peperonata too many.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce-en/v1/librogame.xml",
+        "sha256": "4C9E10C08237A7E1FFAB60A4928527CF3C55D4DAC983688A7AC7C642269F2ED6"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "oggi-o-mai-piu-it",
+      "workId": "oggi-o-mai-piu",
+      "title": "Oggi o mai più",
+      "author": "Andrea Suliani",
+      "language": "it",
+      "genre": "Western",
+      "blurb": "Il sole brucia la terra rossa dello stradone. Siete quattro sotto un porticato, e fra quaranta minuti il treno dell'esercito sarà qui. Elias dice di lasciar perdere; tu dici oggi o mai più.\n\nQuaranta minuti per svaligiare la Bodie's Bank, raggiungere il covo della banda e farla franca. Ogni azione costa minuti, e il conto si fa solo alla fine: anche se sfori, continua a giocare.",
+      "contentWarnings": "Rapina a mano armata. Si può sparare a un ostaggio disarmato e uccidere un impiegato: il libro lo racconta senza compiacimento, ma lo racconta. Linguaggio volgare.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu-it/v1/librogame.xml",
+        "sha256": "93145FAFF7BDB560AAA89ED5698A9328A2AD45AF358C27DD4D0B4975ADC9D526"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "oggi-o-mai-piu-en",
+      "workId": "oggi-o-mai-piu",
+      "title": "Today or Never",
+      "author": "Andrea Suliani",
+      "language": "en",
+      "genre": "Western",
+      "blurb": "The sun burns the red earth of the main street. There are four of you under a porch, and in forty minutes the army train will be here. Elias says drop the whole thing; you say today or never.\n\nForty minutes to rob the Bodie's Bank, reach the gang's hideout and get away with it. Every action costs minutes, and the reckoning comes only at the end: even if you run over, keep playing.",
+      "contentWarnings": "Armed robbery. You can shoot an unarmed hostage and kill a bank clerk: the book tells it without relish, but it tells it. Coarse language.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu-en/v1/librogame.xml",
+        "sha256": "F3D5EB04EDBF40B56CC735A748AC8DF3DC35C28E136B5AFA51041FB7A586B00E"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "edizione-del-quarantennale-it",
+      "workId": "edizione-del-quarantennale",
+      "title": "L'Edizione del Quarantennale",
+      "author": "Daniele Pallozzi",
+      "language": "it",
+      "genre": "Commedia",
+      "blurb": "Aprile 2065, il quarantennale di Play a Bologna. Angelo Andreino, il decano della narrativa interattiva, ha realizzato un'edizione speciale del suo primo librogame: quaranta copie numerate e autografate. Tu e il tuo amico Ale, detto «il Moviola», siete lì per averla.\n\nLe copie finiranno presto, e il Moviola è lento. Lo aspetti, o corri avanti da solo?",
+      "contentWarnings": "Nessuna. Code, robocasse e un amico che soffre il mal di realtà virtuale.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale-it/v1/librogame.xml",
+        "sha256": "DA42DB90E44953C204190DE52C3A476D9955250F3190F557C305B703E9FF8DC8"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "edizione-del-quarantennale-en",
+      "workId": "edizione-del-quarantennale",
+      "title": "The Anniversary Edition",
+      "author": "Daniele Pallozzi",
+      "language": "en",
+      "genre": "Comedy",
+      "blurb": "April 2065, the fortieth anniversary of Play in Bologna. Angelo Andreino, the grand old man of interactive fiction, has produced a special edition of his first gamebook: forty numbered, signed copies. You and your friend Ale, known as \"the Slow-Mo\", are there to get one.\n\nThe copies will soon run out, and the Slow-Mo is slow. Do you wait for him, or run on alone?",
+      "contentWarnings": "None. Queues, robo-tills and a friend who gets virtual-reality sick.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale-en/v1/librogame.xml",
+        "sha256": "3A56C0A26F9FED2676B638DF1EC34B277A0C34917D814A15222E437C0ADE0442"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "toile-it",
+      "workId": "toile",
+      "title": "Tela",
+      "author": "Éric « Skarn » Berthe",
+      "language": "it",
+      "genre": "Fantastico, sentimentale",
+      "blurb": "«Perché la tragedia greca non è riservata al teatro, né recitarvi una parte è un privilegio concesso ai soli attori.»\n\nUna strega vi ha restituito un corpo. Parecchi, anzi: al palazzo di Iolco una maschera cade e un'altra prende il suo posto, e ogni volta siete qualcun altro. Stasera il re Giasone dà un banchetto. Avete una notte per arrivare a quello che lui tiene sotto i piedi, e in fondo alla scala c'è una guardiana.",
+      "contentWarnings": "Violenza sulle donne: il re picchia, umilia e aggredisce sessualmente la protagonista, schiava per una notte. Niente è compiaciuto, tutto è visto dai suoi occhi, e il libro non lascia dubbi su che cosa pensi di quell'uomo. Una belva divora qualcuno. Prostituzione, schiavitù, lutto di figli.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile-it/v1/librogame.xml",
+        "sha256": "537165A144F86E6775C67FA2368DF0E99C518C302FCF80ED548929BEA04D20EF"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile-it/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
+    },
+    {
+      "id": "toile-en",
+      "workId": "toile",
+      "title": "The Weave",
+      "author": "Éric « Skarn » Berthe",
+      "language": "en",
+      "genre": "Fantasy, romance",
+      "blurb": "\"For Greek tragedy is not reserved for the theatre, nor is playing a part in it a privilege granted to actors alone.\"\n\nA witch has given you back a body. Several, in fact: in the palace of Iolcus one mask falls and another takes its place, and each time you are somebody else. Tonight King Jason is holding a banquet. You have one night to reach what he keeps beneath his feet, and there is a guardian at the bottom of the stairs.",
+      "contentWarnings": "Violence against women: the king strikes, humiliates and sexually assaults the protagonist, a slave for the night. Nothing is gratuitous, everything is seen through her eyes, and the book leaves no doubt about what it thinks of this man. A beast devours someone. Prostitution, slavery, the loss of children.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "version": 1,
+      "phase": "test",
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile-en/v1/librogame.xml",
+        "sha256": "9778C168C1D20A72823BE5B07483C9F772AD01AC8C9F84567A140F1CB70003D7"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile-en/v1/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
     }
   ]
 }

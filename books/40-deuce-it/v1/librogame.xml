@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="1" phase="test" id="40-deuce-it" workId="40-deuce" language="it" title="40 Deuce!" author="Luca Santarelli" checks="deterministico" genre="Sportivo, comico" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/">
+  <Blurb>Finale di Wimbledon, quinto set, 5-4 per te: vinci questo game e sei il campione. Il punteggio? 0-40. Dall'altra parte della rete c'è Bjorn Fedorovic, talento norvegese e perfezione svizzera, un robot con la racchetta.
+
+Ogni partita persa barra una pallina e si ricomincia dall'inizio. Vinci Wimbledon, e confronta le palline barrate con quelle dei tuoi amici.</Blurb>
+  <ContentWarnings>Nessuna. Tennis, superstizioni e una peperonata di troppo.</ContentWarnings>
+  <Changes>
+    <Change>Riscritto per questo motore: i diciannove paragrafi, e dove porta ognuno, sono quelli dell'originale</Change>
+    <Change>Il cappello del foglio, che ha già le sue tre uscite, è la scena 1; il paragrafo 1 dell'originale è la scena 20</Change>
+    <Change>Le palline da barrare in fondo al foglio sono un contatore visibile: ogni partita persa ne aggiunge una e riporta all'inizio</Change>
+    <Change>I rimandi fra parentesi non si leggono più: li fanno i pulsanti</Change>
+  </Changes>
+  <Variables>
+    <Variable id="palline" name="Palline barrate" type="number" initial="0" min="0" max="99" visible="true" />
+  </Variables>
+  <Page id="1">
+    <Text>Ti trovi sull’erba sacra di Wimbledon per la finale del torneo più prestigioso del tennis mondiale. Dopo ore di sudore, scivolate e qualche insulto mentale all’arbitro, sei arrivato al 5° set con un 5-4 di vantaggio: vinci questo game e sarai il campione!
+
+Il punteggio attuale? 0-40… è un disastro!!
+
+Hai davanti il tuo acerrimo rivale Bjorn Fedorovic, un misto letale di talento norvegese e perfezione svizzera. Un robot con la racchetta che non ti regala nemmeno un punto. Il pubblico trattiene il fiato, la tensione è palpabile.
+
+Tu? Il tuo cuore batte come un tamburo tribale. Sei allo stremo e le tue gambe stanno per cedere. Non reggeresti un suo pareggio: devi recuperare e vincere adesso… non puoi permetterti errori!
+
+Dove cerchi la carica per la rimonta?</Text>
+    <Choices>
+      <Choice text="Fissi l'arbitro con aria di sfida" goto="17" />
+      <Choice text="Ti rivolgi al calore del pubblico sugli spalti" goto="13" />
+      <Choice text="Lanci un'occhiata verso il tuo coach sperando in un consiglio illuminante" goto="16" />
+    </Choices>
+  </Page>
+  <Page id="2" ending="true">
+    <Text>Carichi un rovescio con entrambe le mani, il mondo rallenta e sembra fermarsi… ma non è il mondo, sei tu! I peperoni ancora lottano nel tuo stomaco. La palla ti passa oltre e la partita è persa.</Text>
+    <Choices>
+      <Choice text="Ricominciare dall'inizio" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="3" ending="true">
+    <Text>Fissi il tuo avversario con lo sguardo glaciale di un killer siberiano, ma lui è un robot norvegese e sei tu a congelarti. Rimani immobile quando ti rimanda la palla in campo e per te è la… FINE.</Text>
+    <Choices>
+      <Choice text="Ricominciare dall'inizio" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4">
+    <Text>Lo scambio che segue è intenso e snervante: Bjorn ribatte ogni tuo colpo. Mentre senti le energie venire meno, ripensi a cosa hai mangiato ieri sera:</Text>
+    <Choices>
+      <Choice text="Un brodino leggero e subito a nanna" goto="10" />
+      <Choice text="La migliore carbonara di Little Italy" goto="19" />
+      <Choice text="La peperonata di zia Adele" goto="2" />
+    </Choices>
+  </Page>
+  <Page id="5" ending="true">
+    <Text>Hai abituato Fedorovic a colpi potenti, non si aspetterà mai una palla curva smorzata. Peccato che, nella tua stanchezza, il tocco sia troppo delicato… la palla si ferma esattamente a metà della rete, oscillando per un momento. Soffi più forte che puoi, ma cade nella tua metà campo. Fedorovic ringrazia.</Text>
+    <Choices>
+      <Choice text="Ricominciare dall'inizio" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Text>Rinvigorito dal guanciale, metti tutta la tua forza nel servizio. La palla schizza come un missile e colpisce la rete… ma la supera comunque! Fedorovic riesce a rispondere, ma tu sei già sotto rete. Schiacci: palla a terra!</Text>
+    <Choices>
+      <Choice text="Continuare" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="7" ending="true">
+    <Text>Cambiare polsino? Sei pazzo?! L’universo tennistico trema al tuo gesto sacrilego. I tuoi sensi di colpa creano un’onda gravitazionale che altera il tuo servizio. Dritto fuori campo.</Text>
+    <Choices>
+      <Choice text="Ricominciare dall'inizio" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>Decidi come affrontare il prossimo scambio:</Text>
+    <Choices>
+      <Choice text="Agilità" goto="15" />
+      <Choice text="Potenza" goto="6" />
+      <Choice text="Astuzia" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>“Match point!” annuncia l’arbitro. È il momento decisivo! Il frastuono dagli spalti per la tua rocambolesca rimonta copre qualsiasi suggerimento possa urlarti il tuo coach. Raduni le poche energie rimaste e decidi da solo la tua ultima giocata.</Text>
+    <Choices>
+      <Choice text="Ti concentri sul respiro, visualizzi il colpo perfetto e ti carichi come un vero campione" goto="14" />
+      <Choice text="Provi a mantenere la concentrazione e giochi un colpo mai visto prima" goto="18" />
+      <Choice text="Provi a intimidire Fedorovic con uno sguardo alla Ivan Drago" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="10" ending="true">
+    <Text>E non solo! Per stare leggero non hai neanche fatto colazione! Ti accasci a terra come un giocattolo dalle pile scariche. La partita finisce qui.</Text>
+    <Choices>
+      <Choice text="Ricominciare dall'inizio" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Text>Con un gesto ormai parte della tua routine, ruoti la fascia sulla testa di 180 gradi. Una carica elettrica attraversa il tuo corpo: forse è autosuggestione, forse è solo il sudore che ti cola negli occhi, ma improvvisamente ti senti più leggero, più rapido. Vai al servizio con una concentrazione mai vista. Segue uno scambio lungo ed estenuante, ma alla fine metti a segno una smorzata letale. Il pubblico esplode: è vantaggio!!</Text>
+    <Choices>
+      <Choice text="Continuare" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="12" ending="true">
+    <Text>Sai che ogni gesto potrebbe alterare il delicato equilibrio del cosmo tennistico: non tocchi nulla, rimani fermo come una statua. Purtroppo anche il tuo braccio segue la stessa filosofia e il tuo servizio esce debole e centrale. Fedorovic non si fa pregare e ti risponde con un dritto a 200 km/h che ti trapassa simbolicamente l’anima.</Text>
+    <Choices>
+      <Choice text="Ricominciare dall'inizio" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="13" ending="true">
+    <Text>Cerchi sguardi amici finché non incontri quello di tre prosperose fan cui avevi regalato un biglietto con la promessa di una uscita romantica… ma poiché sei distratto hai dato loro tre biglietti vicini… parlottano tra di loro mentre ti guardano arrabbiate. L'imbarazzo ti distrae e, in aggiunta alla dignità, perdi il prossimo punto.</Text>
+    <Choices>
+      <Choice text="Ricominciare dall'inizio" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="14" ending="true">
+    <Text>Chiudi gli occhi, respiri profondamente immaginando il servizio perfetto. Lanci la palla, colpisci con precisione millimetrica e… ACE!
+
+Il pubblico esulta! Ti getti a terra in lacrime. Bjorn Fedorovic scuote la testa incredulo, il principe d’Inghilterra applaude con eleganza. Hai vinto Wimbledon!</Text>
+  </Page>
+  <Page id="15" ending="true">
+    <Text>Ti senti inarrestabile e decidi di provare un colpo spettacolare: una veronica tra le gambe alla Roger Federer. Purtroppo non sei Roger Federer ed il guanciale ti dà potenza ma ti fa muovere come un maialetto… colpisci a vuoto, perdi l’equilibrio e finisci gambe all’aria. Punto per Bjorn!</Text>
+    <Choices>
+      <Choice text="Ricominciare dall'inizio" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>Il tuo coach tedesco ti guarda con espressione severa e le braccia conserte. Dal labiale leggi chiaramente: “Datti una svegliata…”
+
+Rinvigorito dal consiglio e ringraziando che non ti abbia lanciato addosso una bottiglietta, servi con decisione e fai punto!
+
+15-40! La rimonta è iniziata!</Text>
+    <Choices>
+      <Choice text="Continuare" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="17" ending="true">
+    <Text>Vi scambiate sguardi profondi, penseresti che si stia quasi creando una intesa, forse anche qualcosa di più, sei pronto a scommettere che stia per farti un occhiolino quando in realtà ti fischia una ammonizione per gioco lento. L'imbarazzo ti porta a un lancio sbilenco e colpisci la palla con il manico della racchetta. La palla schizza in tribuna, colpendo un malcapitato spettatore. Doppio fallo, punto per Fedorovic.</Text>
+    <Choices>
+      <Choice text="Ricominciare dall'inizio" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="18" ending="true">
+    <Text>Opti per un colpo imprevedibile: servi, attendi la risposta, ribatti e corri a rete… esattamente come aveva previsto Fedorovic che ti risponde con un pallonetto perfetto! Corri disperatamente indietro, salti ma nulla! La palla va oltre… la guardi pregando, ma cade precisamente sulla riga di fondo. Bjorn esulta!</Text>
+    <Choices>
+      <Choice text="Ricominciare dall'inizio" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>Diceva Mennea del suo record mondiale: “L'importante è quel che hai dentro”. E tu hai 250 g di guanciale di contrabbando che terminata la digestione si trasformano in pura energia! Sorprendi Fedorovic con un rovescio irraggiungibile… è punto! 30-40!</Text>
+    <Choices>
+      <Choice text="Continuare" goto="8" />
+    </Choices>
+  </Page>
+  <Page id="20">
+    <Text>“40 DEUCE!” urla il cronista italiano prima di venir portato via in ambulanza per l’emozione. Tu però non lo sai perché sei sul campo e l’unica cosa a cui pensi è: sarà forse il momento di un gesto propiziatorio?</Text>
+    <Choices>
+      <Choice text="Cambi polsino" goto="7" />
+      <Choice text="Ruoti la fascia sulla testa" goto="11" />
+      <Choice text="Non tocchi nulla" goto="12" />
+    </Choices>
+  </Page>
+</Librogame>

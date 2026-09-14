@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="1" phase="test" id="mycroft-en" workId="mycroft" language="en" title="Mycroft's Fortieth-Birthday Watch" author="Luca Santarelli" checks="deterministico" genre="Mystery, detection" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/">
+  <Changes>
+    <Change>Rewritten for this engine: the twenty-nine paragraphs, and where each one leads, are those of the original</Change>
+    <Change>The sheet's opening, which already has its own two exits, is scene 1; paragraph 1 of the original, the servants' hub, is scene 30</Change>
+    <Change>The nine boxes at the foot of the sheet are a visible counter, and every accusation adds one</Change>
+    <Change>Each suspect can be accused only once: there are nine boxes and nine suspects</Change>
+    <Change>The cross-references in brackets are no longer read out: the buttons do that work</Change>
+  </Changes>
+  <ContentWarnings>None. A drawing-room mystery, with no blood and no violence.</ContentWarnings>
+  <Blurb>You have just reached for the violin when Lestrade knocks at the door: a gold watch, a personal gift from the Queen, has vanished from Mycroft's study at the Diogenes Club. Three people were in the room when it happened, and your brother is furious.
+
+Question them, examine the scene, get the servants talking. Then point the finger. Every accusation ticks a box: compare your result with your friends' — who did best?</Blurb>
+  <Variables>
+    <Variable id="caselle" name="Boxes ticked" type="number" initial="0" min="0" max="9" visible="true" />
+    <Variable id="accCavendish" name="Has accused Lord Cavendish" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accAdler" name="Has accused Irene Adler" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accWilson" name="Has accused Doctor Wilson" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accLestrade" name="Has accused Inspector Lestrade" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accMycroft" name="Has accused Mycroft" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accSherlock" name="Has accused himself" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accCuoco" name="Has accused the cook" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accStalliere" name="Has accused the stable hand" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accCameriere" name="Has accused the footman" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1">
+    <Text>You are reaching for the violin when Inspector Lestrade knocks at the door. "Holmes, a theft at the Diogenes! A precious gold watch has vanished from Mycroft's study. Three people were present at the time of the theft: Lord Cavendish, Doctor Wilson and Miss Adler. Can we count on your help?" Do you take the case, or refuse?</Text>
+    <Choices>
+      <Choice text="Take the case" goto="3" />
+      <Choice text="Refuse" goto="29" />
+    </Choices>
+  </Page>
+  <Page id="2">
+    <Text>You may question Lord Cavendish, Doctor Wilson, Miss Adler, or make another choice.</Text>
+    <Choices>
+      <Choice text="Lord Cavendish" goto="16" />
+      <Choice text="Doctor Wilson" goto="7" />
+      <Choice text="Miss Adler" goto="14" />
+      <Choice text="Make another choice" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="3">
+    <Text>At the Diogenes. Mycroft is furious: "A theft in my own study! Besides being a personal gift from the Queen, if it is applied as a seal it carries the force of a royal order! I suspect one of the three guests is the culprit. Find the watch and the thief!" The game is afoot!</Text>
+    <Choices>
+      <Choice text="Begin" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="4">
+    <Text>"Miss Adler, are you in such a hurry to leave London?" She laughs. "How do you know, Holmes? Yes, I have a performance in Paris!" But in her bag you catch a suspicious glint.</Text>
+    <Choices>
+      <Choice text="Carry on with the questioning" goto="2" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>"Holmes raised one finger in the great silence: he spoke a name... and high above rang out a whinny!" Watson will write one day in his memoirs.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Text>You find traces of ash on Mycroft's desk: you cannot recall ever seeing him smoke! You also notice a note on the desk: it is handwritten in a very dark blue ink.</Text>
+    <Choices>
+      <Choice text="Read the note" goto="28" />
+      <Choice text="Carry on examining the scene" goto="9" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>Doctor Wilson puts down his pipe as the footman carries away the full ashtray. "I was in the library, absorbed in my studies. Cavendish is in financial difficulty. If I were you I should look there!"</Text>
+    <Choices>
+      <Choice text="Press him on it" goto="19" />
+      <Choice text="Question Cavendish" goto="16" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>The inspector is incredulous; he cannot tell whether you are serious. Your brother steps in.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>Mycroft is curt. "I have left everything exactly as I found it!"</Text>
+    <Choices>
+      <Choice text="Examine the floor" goto="26" />
+      <Choice text="Examine the desk" goto="6" />
+      <Choice text="Examine the open safe" goto="21" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Text>"I shall pretend I did not hear that..." Mycroft is giving you another chance: think again about all the clues!</Text>
+    <Choices>
+      <Choice text="Think again about all the clues" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Text>Lestrade puts a finger to his mouth after touching Wilson's sleeve. He looks at you, puzzled: "It tastes of blueberry..." You have got it wrong, Sherlock!</Text>
+    <Choices>
+      <Choice text="Carry on" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="12" ending="true">
+    <Text>"The clues all point in the same direction..." you say, letting the silence build "...a false trail!" Lestrade, following your instructions, seizes the footman so that you can pull off his mask: it is Moriarty! Mycroft allows you a rare smile. "Well done, Sherlock."</Text>
+  </Page>
+  <Page id="13">
+    <Text>Lestrade grills the cook for hours, and the only thing he gets out of him is his grandmother's cake recipe. "Holmes, that deduction of yours... it smells of burning!"</Text>
+    <Choices>
+      <Choice text="Carry on" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Text>Irene Adler smiles, absently handing an empty glass to the footman. "What am I doing here? Ask your brother! My dear Holmes, I would never steal a man's watch. I did think, however, that I saw Wilson going towards the study. If we have finished..."</Text>
+    <Choices>
+      <Choice text="Suspect she is hiding something" goto="4" />
+      <Choice text="Question Wilson" goto="7" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="15">
+    <Text>"Once you have eliminated the impossible, whatever remains, however improbable, must be the truth!" Your moment has come: at whom do you point the finger?</Text>
+    <Choices>
+      <Choice text="Lord Cavendish" goto="25">
+        <Requirements>
+          <Variable id="accCavendish" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accCavendish" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Irene Adler" goto="18">
+        <Requirements>
+          <Variable id="accAdler" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accAdler" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Doctor Wilson" goto="11">
+        <Requirements>
+          <Variable id="accWilson" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accWilson" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Inspector Lestrade" goto="8">
+        <Requirements>
+          <Variable id="accLestrade" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accLestrade" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Mycroft" goto="10">
+        <Requirements>
+          <Variable id="accMycroft" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accMycroft" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Yourself" goto="27">
+        <Requirements>
+          <Variable id="accSherlock" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accSherlock" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="The cook" goto="13">
+        <Requirements>
+          <Variable id="accCuoco" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accCuoco" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="The stable hand" goto="5">
+        <Requirements>
+          <Variable id="accStalliere" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accStalliere" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="The footman" goto="12">
+        <Requirements>
+          <Variable id="accCameriere" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accCameriere" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Go back to investigating" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>Lord Cavendish, a nobleman come down in the world, twists his moustache as the footman hands him a cup of tea. "I was reading the newspaper, Holmes. I never left the sofa! I did hear the Adler woman arguing with Mycroft shortly before the theft, though."</Text>
+    <Choices>
+      <Choice text="Press him, suspecting he is lying" goto="24" />
+      <Choice text="Question Miss Adler" goto="14" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Text>The footman answers you deferentially. "I saw Doctor Wilson walking up and down outside Mr Mycroft's study, unable to make up his mind."</Text>
+    <Choices>
+      <Choice text="Ask something else" goto="30" />
+      <Choice text="Change your line of approach" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Text>Irene takes two lace gloves from her bag and puts them on, laughing. "My dear Holmes, I had no idea you were fond of silk as well!" You have got it wrong, Sherlock!</Text>
+    <Choices>
+      <Choice text="Carry on" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>You look more closely at Wilson: there is a small, very dark stain on his cuff. "Doctor, you say you were studying, but you have no books with you. What are you hiding?" Wilson stammers: "I-I only wanted to see the watch! But then it was gone..."</Text>
+    <Choices>
+      <Choice text="Carry on with the questioning" goto="2" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="20">
+    <Text>According to the cook, after the theft the footman reported having accidentally bumped into Miss Adler. Something fell out of her dropped bag, and she snatched it up in great haste.</Text>
+    <Choices>
+      <Choice text="Ask something else" goto="30" />
+      <Choice text="Change your line of approach" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="21">
+    <Text>You notice marks of forcing on the lock, but one detail strikes you: a minute scrap of blue cloth caught between the doors of the cabinet. Cavendish is wearing a blue overcoat!</Text>
+    <Choices>
+      <Choice text="Carry on examining the scene" goto="9" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="22">
+    <Text>"The footman told me himself: for some time now Cavendish has been asking a lot of questions about picklocks and suchlike tools! From riches to rags! And if I say so..." the stable hand reveals.</Text>
+    <Choices>
+      <Choice text="Ask something else" goto="30" />
+      <Choice text="Change your line of approach" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="23">
+    <Text>You may question the suspects, examine the scene of the crime, or talk to the servants. When you have finished, make an accusation.</Text>
+    <Choices>
+      <Choice text="Question the suspects" goto="2" />
+      <Choice text="Examine the scene of the crime" goto="9" />
+      <Choice text="Talk to the servants" goto="30" />
+      <Choice text="Make an accusation" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="24">
+    <Text>Under pressure, Cavendish gives way: "All right! I am drowning in debt, I wanted to sell the watch! But somebody took it before I could!"</Text>
+    <Choices>
+      <Choice text="Carry on with the questioning" goto="2" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Text>Lestrade turns Cavendish inside out like a sock, overcoat included, and the overcoat proves to be perfectly whole. You have got it wrong, Sherlock!</Text>
+    <Choices>
+      <Choice text="Carry on" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="26">
+    <Text>You find a black glove on the floor. It is lace, of the kind Irene wears. You try it on: it fits you perfectly.</Text>
+    <Choices>
+      <Choice text="Carry on examining the scene" goto="9" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="27">
+    <Text>"The gentleman here pres—" you are about to finish the sentence when you see Mycroft's glare growing steadily grimmer, and you decide to be serious.</Text>
+    <Choices>
+      <Choice text="Be serious" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Text>... courgettes, potatoes, sweetcorn, two hundred grams of ham, green tea...</Text>
+    <Choices>
+      <Choice text="Carry on examining the scene" goto="9" />
+      <Choice text="Do something else" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="29" ending="true">
+    <Text>"I am playing the violin," you answer, bored. Lestrade shakes his head in disappointment. The case is never solved and the watch vanishes for ever.</Text>
+  </Page>
+  <Page id="30">
+    <Text>Ask about Lord Cavendish, Irene Adler or Doctor Wilson.</Text>
+    <Choices>
+      <Choice text="Ask about Lord Cavendish" goto="22" />
+      <Choice text="Ask about Irene Adler" goto="20" />
+      <Choice text="Ask about Doctor Wilson" goto="17" />
+    </Choices>
+  </Page>
+</Librogame>

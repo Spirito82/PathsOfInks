@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="1" phase="test" id="40-deuce-en" workId="40-deuce" language="en" title="40 Deuce!" author="Luca Santarelli" checks="deterministico" genre="Sport, comedy" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/">
+  <Changes>
+    <Change>Rewritten for this engine: the nineteen paragraphs, and where each one leads, are those of the original</Change>
+    <Change>The sheet's opening, which already has its own three exits, is scene 1; paragraph 1 of the original is scene 20</Change>
+    <Change>The tennis balls to tick off at the foot of the sheet are a visible counter: every lost match adds one and takes you back to the start</Change>
+    <Change>The cross-references in brackets are no longer read out: the buttons do that work</Change>
+  </Changes>
+  <ContentWarnings>None. Tennis, superstitions and one peperonata too many.</ContentWarnings>
+  <Blurb>Wimbledon final, fifth set, 5-4 to you: win this game and you're champion. The score? 0-40. On the other side of the net is Bjorn Fedorovic, Norwegian talent and Swiss perfection, a robot with a racket.
+
+Every match you lose ticks off a tennis ball and sends you back to the start. Win Wimbledon, then compare your ticked balls with your friends'.</Blurb>
+  <Variables>
+    <Variable id="palline" name="Balls ticked off" type="number" initial="0" min="0" max="99" visible="true" />
+  </Variables>
+  <Page id="1">
+    <Text>You are standing on the sacred grass of Wimbledon for the final of the most prestigious tournament in world tennis. After hours of sweat, slides and a few silent insults aimed at the umpire, you have reached the 5th set with a 5-4 lead: win this game and you will be champion!
+
+The current score? 0-40... it's a disaster!!
+
+Facing you is your arch-rival Bjorn Fedorovic, a lethal mix of Norwegian talent and Swiss perfection. A robot with a racket who won't give you a single point. The crowd holds its breath; the tension is palpable.
+
+You? Your heart is pounding like a tribal drum. You are exhausted and your legs are about to give way. You couldn't hold out if he drew level: you have to fight back and win right now... you can't afford a single mistake!
+
+Where do you look for the drive to mount a comeback?</Text>
+    <Choices>
+      <Choice text="You stare at the umpire defiantly" goto="17" />
+      <Choice text="You turn to the warmth of the crowd in the stands" goto="13" />
+      <Choice text="You glance at your coach, hoping for an illuminating piece of advice" goto="16" />
+    </Choices>
+  </Page>
+  <Page id="2" ending="true">
+    <Text>You wind up a two-handed backhand, the world slows down and seems to stop... but it isn't the world, it's you! The peppers are still fighting it out in your stomach. The ball goes past you and the match is lost.</Text>
+    <Choices>
+      <Choice text="Start again from the beginning" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="3" ending="true">
+    <Text>You fix your opponent with the icy stare of a Siberian killer, but he is a Norwegian robot and you are the one who freezes. You stand motionless when he sends the ball back into your court, and for you it's... THE END.</Text>
+    <Choices>
+      <Choice text="Start again from the beginning" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4">
+    <Text>The rally that follows is intense and nerve-racking: Bjorn returns every one of your shots. As you feel your energy draining away, you think back to what you ate last night:</Text>
+    <Choices>
+      <Choice text="A light broth and straight to bed" goto="10" />
+      <Choice text="The best carbonara in Little Italy" goto="19" />
+      <Choice text="Aunt Adele's peperonata" goto="2" />
+    </Choices>
+  </Page>
+  <Page id="5" ending="true">
+    <Text>You have got Fedorovic used to powerful shots; he'll never expect a sliced drop shot. Pity that, in your exhaustion, the touch is too delicate... the ball stops right on top of the net, wobbling for a moment. You blow as hard as you can, but it drops onto your side of the court. Fedorovic says thank you.</Text>
+    <Choices>
+      <Choice text="Start again from the beginning" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Text>Invigorated by the guanciale, you put all your strength into the serve. The ball shoots off like a missile and clips the net... but gets over anyway! Fedorovic manages to return it, but you are already at the net. You smash: the ball is down!</Text>
+    <Choices>
+      <Choice text="Continue" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="7" ending="true">
+    <Text>Change your wristband? Are you mad?! The tennis universe trembles at your sacrilegious gesture. Your guilt creates a gravitational wave that bends your serve. Straight out of court.</Text>
+    <Choices>
+      <Choice text="Start again from the beginning" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>You decide how to play the next rally:</Text>
+    <Choices>
+      <Choice text="Agility" goto="15" />
+      <Choice text="Power" goto="6" />
+      <Choice text="Cunning" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>"Match point!" announces the umpire. This is the decisive moment! The roar from the stands at your breathtaking comeback drowns out anything your coach might shout to you. You gather what little energy you have left and decide your final shot on your own.</Text>
+    <Choices>
+      <Choice text="You focus on your breathing, picture the perfect shot and psych yourself up like a true champion" goto="14" />
+      <Choice text="You try to keep your concentration and play a shot never seen before" goto="18" />
+      <Choice text="You try to intimidate Fedorovic with an Ivan Drago stare" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="10" ending="true">
+    <Text>And that's not all! To stay light you didn't even have breakfast! You collapse on the ground like a toy with flat batteries. The match ends here.</Text>
+    <Choices>
+      <Choice text="Start again from the beginning" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Text>With a gesture that is by now part of your routine, you turn your headband 180 degrees. An electric charge runs through your body: maybe it's autosuggestion, maybe it's just the sweat running into your eyes, but suddenly you feel lighter, faster. You step up to serve with unprecedented concentration. A long, gruelling rally follows, but in the end you land a deadly drop shot. The crowd erupts: advantage!!</Text>
+    <Choices>
+      <Choice text="Continue" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="12" ending="true">
+    <Text>You know that every gesture could upset the delicate balance of the tennis cosmos: you touch nothing and stay as still as a statue. Unfortunately your arm follows the same philosophy and your serve comes out weak and down the middle. Fedorovic doesn't need to be asked twice and answers with a 200 km/h forehand that symbolically pierces your soul.</Text>
+    <Choices>
+      <Choice text="Start again from the beginning" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="13" ending="true">
+    <Text>You look around for friendly faces until you meet those of three buxom fans to whom you had given a ticket with the promise of a romantic date... but, absent-minded as you are, you gave the three of them seats next to each other... they are whispering among themselves as they glare at you. The embarrassment distracts you and, on top of your dignity, you lose the next point.</Text>
+    <Choices>
+      <Choice text="Start again from the beginning" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="14" ending="true">
+    <Text>You close your eyes and breathe deeply, imagining the perfect serve. You toss the ball, strike it with pinpoint precision and... ACE!
+
+The crowd goes wild! You throw yourself to the ground in tears. Bjorn Fedorovic shakes his head in disbelief, the English prince applauds elegantly. You have won Wimbledon!</Text>
+  </Page>
+  <Page id="15" ending="true">
+    <Text>You feel unstoppable and decide to try a spectacular shot: a between-the-legs tweener à la Roger Federer. Unfortunately you are not Roger Federer, and the guanciale gives you power but makes you move like a piglet... you swing at thin air, lose your balance and end up flat on your back. Point to Bjorn!</Text>
+    <Choices>
+      <Choice text="Start again from the beginning" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>Your German coach looks at you sternly, arms folded. You clearly lip-read: "Wake up..."
+
+Invigorated by the advice, and thankful he didn't throw a water bottle at you, you serve decisively and win the point!
+
+15-40! The comeback has begun!</Text>
+    <Choices>
+      <Choice text="Continue" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="17" ending="true">
+    <Text>You exchange deep looks; you'd think some sort of understanding is forming, maybe even something more; you'd bet he's about to wink at you, when in fact he gives you a warning for time-wasting. The embarrassment leads to a wonky toss and you hit the ball with the handle of your racket. The ball flies into the stands, hitting an unlucky spectator. Double fault, point to Fedorovic.</Text>
+    <Choices>
+      <Choice text="Start again from the beginning" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="18" ending="true">
+    <Text>You go for an unpredictable shot: you serve, wait for the return, hit back and rush the net... exactly as Fedorovic had foreseen, and he answers with a perfect lob! You run back desperately, jump, but nothing! The ball sails over... you watch it, praying, but it lands right on the baseline. Bjorn celebrates!</Text>
+    <Choices>
+      <Choice text="Start again from the beginning" goto="1">
+        <Effects>
+          <addVariable target="palline" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>Mennea said of his world record: "What matters is what you have inside." And you have 250 g of smuggled guanciale that, once digested, turns into pure energy! You surprise Fedorovic with an unreachable backhand... point! 30-40!</Text>
+    <Choices>
+      <Choice text="Continue" goto="8" />
+    </Choices>
+  </Page>
+  <Page id="20">
+    <Text>"40 DEUCE!" screams the Italian commentator, before being carried off in an ambulance, overcome with emotion. You don't know that, though, because you're on court and the only thing on your mind is: might this be the moment for a lucky ritual?</Text>
+    <Choices>
+      <Choice text="You change your wristband" goto="7" />
+      <Choice text="You turn your headband round" goto="11" />
+      <Choice text="You touch nothing" goto="12" />
+    </Choices>
+  </Page>
+</Librogame>

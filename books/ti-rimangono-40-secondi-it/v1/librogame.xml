@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="1" phase="test" id="ti-rimangono-40-secondi-it" workId="ti-rimangono-40-secondi" language="it" title="Ti rimangono 40 secondi" author="Andrea Carbone" checks="deterministico" genre="Horror psicologico" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/">
+  <Blurb>Ti rimangono quaranta secondi di vita, e non sai perché. Nello specchio del bagno di un motel vedi solo un alone nero; di là, in camera, c'è Lisa, la tua ragazza, con un coltello in mano.
+
+Devi scoprire perché, e come sopravvivere. Ventuno paragrafi brevi e spezzati, come la mente di chi li vive.</Blurb>
+  <ContentWarnings>Suicidio chiesto a un'altra persona, schizofrenia e allucinazioni, accoltellamenti, morte del protagonista e della sua compagna, linguaggio volgare. Il racconto è frammentato e disturbante per scelta.</ContentWarnings>
+  <Changes>
+    <Change>Riscritto per questo motore: i ventuno paragrafi, e dove porta ognuno, sono quelli dell'originale</Change>
+    <Change>Il PDF è fatto di sole immagini: il testo è stato ricopiato a mano leggendo la pagina</Change>
+    <Change>Le azioni fra cui scegliere sono diventate i pulsanti, con le parole dell'autore</Change>
+    <Change>La frase che spiegava come scegliere un paragrafo non si legge più, e «Vai al 5» è un pulsante</Change>
+    <Change>Grassetti, corsivi e il carattere da macchina da scrivere dell'originale non ci sono: il testo delle scene non ha formattazione</Change>
+  </Changes>
+  <Page id="1">
+    <Text>Ti rimangono 40 secondi di vita. Devi scoprire perchè e come sopravvivere.
+
+Ti guardi allo specchio del bagno, ma vedi solo un alone nero.</Text>
+    <Choices>
+      <Choice text="Pulisci lo specchio" goto="9" />
+      <Choice text="Vai in camera" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="2">
+    <Text>Ti rimangono 10 secondi di vita. Scorgi dall'altro lato, la camera del motel dalla quale provieni. Vedi il tuo corpo e quello di Lisa. La tua ragazza sta per colpirti con un coltello.</Text>
+    <Choices>
+      <Choice text="Urli a entrambi, implorandoli di fermarsi" goto="11" />
+      <Choice text="Ti godi la scena" goto="19" />
+    </Choices>
+  </Page>
+  <Page id="3">
+    <Text>Ti rimangono 20 secondi di vita. Ti affacci alla finestra, siete in un motel al secondo piano. Fa un fottuto freddo gelido, sei a dorso nudo e lo senti in ogni pelo del tuo corpo.
+
+Lisa ti si avvicina col coltello.</Text>
+    <Choices>
+      <Choice text="Ti butti di sotto e cerchi di centrare i cassonetti sperando che possano attutire la caduta" goto="4" />
+      <Choice text="Ti lasci avvicinare da lei" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="4" ending="true">
+    <Text>Atterri sui cassonetti con una spalla. Te la sloghi, ma sei vivo. Come un cane impaurito, scappi via da quel posto.
+
+Sei solo. Sei vivo.</Text>
+  </Page>
+  <Page id="5" ending="true">
+    <Text>Lisa affonda il coltello all'altezza del tuo cuore, proprio come le avevi chiesto un'ora fa. Avevi dovuto convincerla con tutto te stesso. Ora hai ottenuto ciò che desideravi. Passerai i secondi rimanenti a osservare i suoi occhi blu come il mare.
+
+Poi tutto si farà nero.</Text>
+  </Page>
+  <Page id="6">
+    <Text>Hai rimesso insieme i cocci. Bravo. Ora hai compreso dove risiede il problema della tua mente: spezzata. In frantumi.
+
+Sei pronto a rimetterla in sesto.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="7" ending="true">
+    <Text>Finalmente la pace. Chiudi gli occhi e tutto si fa NERO.
+
+Hai terminato i tuoi 40 secondi. Da qualche parte, in un altro universo, un coltello ha penetrato un corpo.</Text>
+  </Page>
+  <Page id="8">
+    <Text>Ti rimangono 30 Secondi di vita. Lisa viene colpita in pieno dalla sedia e si accascia per terra, ma il coltello rimane tra le sue mani. La porta d'uscita è dietro di lei, ma scorgi anche la finestra a due passi da te.</Text>
+    <Choices>
+      <Choice text="Vai verso la porta d'uscita passandole accanto, tanto è tramortita" goto="20" />
+      <Choice text="Vai verso la finestra" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>Ti rimangono 38 secondi di vita. Non era un alone, ma una visione di ombre, le stesse che ti perseguitano. Ah già, sei schizofrenico. Le ombre ti avvolgono.</Text>
+    <Choices>
+      <Choice text="Urli per farle andar via" goto="15" />
+      <Choice text="Sradichi lo specchio e lo butti per terra" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="10" ending="true">
+    <Text>Cadi sul marciapiede di cemento, ci sbatti sopra la testa. Passerai gli ultimi 10 secondi a guardare le luci al neon del motel lampeggiare, prima che tutto si faccia buio.</Text>
+  </Page>
+  <Page id="11" ending="true">
+    <Text>Lisa e te stesso si fermano. Ti guardano sbalorditi. Nel momento esatto in cui incrociate gli sguardi, collassate in una spirale nera dalla quale non potrete più uscire. O b l i o.</Text>
+  </Page>
+  <Page id="12">
+    <Text>Ti rimangono 33 secondi di vita. Lo specchio cade in frantumi. In ognuno dei pezzi, scorgi una parte del tuo corpo. Non ti riconosci. Ti riecheggiano le parole del dottore: "La sua mente è suddivisa in compartimenti stagni che non comunicano tra loro".
+
+Lisa è arrivata alle tue spalle: la tua ragazza tiene in mano un coltello ed è pronta a trapassarti.</Text>
+    <Choices>
+      <Choice text="Afferri uno dei cocci dello specchio e ti difendi con esso mirando al suo ventre" goto="18" />
+      <Choice text="Sai che non lo farà: torni a guardare i cocci e provi a rimetterli insieme per formare una figura integra della tua mente" goto="6" />
+    </Choices>
+  </Page>
+  <Page id="13">
+    <Text>Ti rimangono 35 secondi di vita. In camera c'è Lisa col coltello in mano, che ti si avvicina tremante, ma decisa.</Text>
+    <Choices>
+      <Choice text="Le chiedi spiegazioni" goto="16" />
+      <Choice text="Le tiri addosso una sedia" goto="8" />
+    </Choices>
+  </Page>
+  <Page id="14" ending="true">
+    <Text>Ti rimangono 10 secondi di vita. Lisa stramazza al suolo. La tua arteria femorale è stata recisa di netto. Hai studiato a medicina abbastanza da capire che ti conviene passare i prossimi 10 secondi abbracciato a lei anzichè provare inutilmente a fermare l'emorragia.
+
+Vi addormentate insieme.</Text>
+  </Page>
+  <Page id="15">
+    <Text>Ti rimangono 30 secondi di vita.
+
+Urli e il manto di nero si dissolve. Sei in uno spazio bianco, vuoto. Sembra un batuffolo di cotone. Senti finalmente di poterti riposare.</Text>
+    <Choices>
+      <Choice text="Ti sdrai e ti godi la pace del silenzio" goto="7" />
+      <Choice text="Scorgi un puntino nero, un occhiello fisso nel vuoto. Ti avvicini per guardare dentro" goto="2" />
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>Ti rimangono 20 secondi di vita.
+
+Lei ti dice, incazzata, che sei stato tu prima a convincerla di farlo. Ora non puoi cambiare idea, così, all'improvviso. Ti si avvicina pronta a sferrare il colpo.</Text>
+    <Choices>
+      <Choice text="Ti lasci colpire, tanto non può essere vero. È tutta una fantasia della tua mente malata" goto="5" />
+      <Choice text="Cerchi di scappare verso la finestra" goto="3" />
+      <Choice text="Le tiri addosso una sedia" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Text>Ti rimangono 10 secondi di vita.
+
+Sei troppo agitato per prendere la mira. Lisa schiva la sedia e si avvicina a te.</Text>
+    <Choices>
+      <Choice text="La lasci fare" goto="5" />
+      <Choice text="Ti butti dalla finestra senza guardare cosa c'è sotto" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="18" ending="true">
+    <Text>Colpisci Lisa prima che lei possa farlo a te. Semplice e indolore. Lei ti si accascia vicino. Si addormenta. Tu sei vivo. Ma hai perso anche l'ultimo pezzo di umanità che ti rimaneva.</Text>
+  </Page>
+  <Page id="19" ending="true">
+    <Text>Osservi beato la scena: Lisa ti trafigge al petto e il tuo corpo stramazza a terra. Tu però stai bene, nel tuo mondo ovattato dove niente e nessuno potrà mai più disturbarti. Ti addormenti come un bambino.</Text>
+  </Page>
+  <Page id="20">
+    <Text>Ti rimangono 20 secondi di vita.
+
+Lisa ti afferra per una caviglia proprio quando le passi accanto e ti pianta il coltello sul polpaccio. Urli.</Text>
+    <Choices>
+      <Choice text="La colpisci con tutta la tua forza con l'altra gamba" goto="14" />
+      <Choice text="Cerchi di raggiungere comunque la porta" goto="21" />
+    </Choices>
+  </Page>
+  <Page id="21">
+    <Text>Lisa non ti molla. Anzi, si alza dopo aver estratto il coltello e ti chiama. Ti volti.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="5" />
+    </Choices>
+  </Page>
+</Librogame>
