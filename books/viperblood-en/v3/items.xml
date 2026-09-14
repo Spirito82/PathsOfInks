@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<librogame formatVersion="1">
+  <items>
+    <item id="magic-scroll" name="The magic scroll" description="Parchment carrying a map of the crypt and the notes of the volunteers who came before you. It returns to the castle when its bearer dies."/>
+    <item id="white-yarn" name="Skein of white yarn" description="Pure white wool with a faint glow. It unspools by itself and marks the path you took."/>
+    <item id="crystal-vial" name="Crystal vial" description="Full of clear water from the green chamber. Warm, and better than it looks; it is drunk once."><special type="heal" value="10"/></item>
+    <item id="water-bottle" name="Bottle of viperblood" description="Emerald water from the river under the crypt. The colour does not fade."/>
+    <item id="green-robes" name="Green robes" description="Taken from a burnt corpse beside a funeral pyre. They smell of ash, and they are warmer than what you came in wearing."><special type="equip" value="armor"/><special type="defenseBonus" value="1"/></item>
+    <item id="emerald-ring" name="Gold ring with an emerald" description="Found in the burnt goo of the pudding. Warm to the touch, and it steadies the hand."><special type="equip" value="accessory"/><special type="defenseBonus" value="1"/></item>
+  </items>
+</librogame>

@@ -52,18 +52,18 @@
       "language": "en",
       "genre": "Old-school dungeon crawl",
       "blurb": "The king is dying, and the only cure is a green water that runs somewhere under the crypt of the ancient queens. You are the next volunteer sent down to fetch it — the ones before you did not come back, though their notes did. Fifteen rooms of jade and cold air, a statue you have to climb through, rabets who trade and ambush in equal measure, and a purple snake asleep on a pile of coin. Everything you carry out is yours to keep, if you carry yourself out with it.",
-      "version": 2,
+      "version": 3,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v2/librogame.xml",
-        "sha256": "A36307EF8A387BB04F8EBFD25B409EFB9A484979A98D6501667A9861AA2A8225"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v3/librogame.xml",
+        "sha256": "CEAF68727D4BA66816A9813323ABD90E2E312A02949818062694AEEB480D86A5"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v3/items.xml",
         "sha256": "2C828F6728FEFD89320B4D1ABCB9A6730CDC6A6930A0B8FB6525F761A48476AF"
       },
-      "minAppBuild": 16,
-      "minAppVersion": "1.14"
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
     },
     {
       "id": "viperblood-it",
@@ -74,18 +74,18 @@
       "genre": "Dungeon crawl vecchia scuola",
       "blurb": "Il re sta morendo, e l'unica cura è un'acqua verde che scorre da qualche parte sotto la cripta delle antiche regine. Tocca a te scendere a prenderla: chi è andato prima di te non è tornato, i suoi appunti sì. Quindici stanze di giada e aria fredda, una statua dentro cui devi arrampicarti, rabet che commerciano e tendono agguati in egual misura, e un serpente viola addormentato su un mucchio di monete. Tutto quello che porti fuori è tuo, se porti fuori anche te.",
       "contentWarnings": "Violenza, ferite descritte per esteso, e la morte del personaggio.",
-      "version": 3,
+      "version": 4,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v3/librogame.xml",
-        "sha256": "B39F10BBF87280E168F25D1E5777BF3C2856137E09631F171923D14E8497D0F6"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v4/librogame.xml",
+        "sha256": "3B58A9934B2E967F8962E74B8C835E959F4815AB3109C828A6E7A51DEE265931"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v3/items.xml",
-        "sha256": "69F3C2D25CE53552474FBAEF3689523B2EAB36C43D1037CEC3F19AF3835F9CEB"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v4/items.xml",
+        "sha256": "58A743DBA99419002531D6A2B7283B6D341F6F9689A5D2FCEA218D8AE86333E2"
       },
-      "minAppBuild": 16,
-      "minAppVersion": "1.14"
+      "minAppBuild": 26,
+      "minAppVersion": "1.24"
     },
     {
       "id": "lanterna-rossa-it",
