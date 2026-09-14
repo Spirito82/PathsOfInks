@@ -12,15 +12,17 @@
       "version": 14,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v14/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v14/librogame.xml",
         "sha256": "EA603873B1CEC66D62351D238AF2055B9C0288C16015BE93D7B41570F1E1B819"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-en/v14/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v14/items.xml",
         "sha256": "C570DE201272AC6F7D2546842B286B807916AC3407675AD6F560EF7465471B28"
       },
       "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppVersion": "1.24",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
       "id": "suddenly-an-ogre-it",
@@ -34,15 +36,17 @@
       "version": 14,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v14/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v14/librogame.xml",
         "sha256": "D11399A490F285DF9EC3B8BC6F0405108FABE845CDD0499AB77CADF3F2D0FCCB"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/suddenly-an-ogre-it/v14/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v14/items.xml",
         "sha256": "F1A29A1325A96A2A45BBA562ED95AA0EF6F20841BDBAF8B2880072B15911E217"
       },
       "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppVersion": "1.24",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
       "id": "viperblood-en",
@@ -55,15 +59,17 @@
       "version": 3,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v3/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v3/librogame.xml",
         "sha256": "CEAF68727D4BA66816A9813323ABD90E2E312A02949818062694AEEB480D86A5"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-en/v3/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v3/items.xml",
         "sha256": "2C828F6728FEFD89320B4D1ABCB9A6730CDC6A6930A0B8FB6525F761A48476AF"
       },
       "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppVersion": "1.24",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
       "id": "viperblood-it",
@@ -77,15 +83,17 @@
       "version": 4,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v4/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v4/librogame.xml",
         "sha256": "3B58A9934B2E967F8962E74B8C835E959F4815AB3109C828A6E7A51DEE265931"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood-it/v4/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v4/items.xml",
         "sha256": "58A743DBA99419002531D6A2B7283B6D341F6F9689A5D2FCEA218D8AE86333E2"
       },
       "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppVersion": "1.24",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
       "id": "lanterna-rossa-it",
@@ -98,14 +106,14 @@
       "contentWarnings": "Terrorismo, violenza politica, carcere, armi da fuoco e sequestro di persona. Il libro racconta fatti storici italiani degli anni di piombo.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa-it/v2/librogame.xml",
-        "sha256": "33447D6DAB75FB520553C208881FB912BD7F2B4DB672DF7B463990D38C4B5CAF"
+        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v3/librogame.xml",
+        "sha256": "CB1E4525ED8D815D12744F947F7745C18525A39FC00A27373708B301FAEAD52F"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa-it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v3/items.xml",
         "sha256": "8C18CE8A2A12FF974FA5DCCF2D2E8A7AD5599C36F5A2A709D184028D19A88D1B"
       },
       "minAppBuild": 25,
@@ -125,11 +133,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v1/librogame.xml",
         "sha256": "48AE97166754CF15CE7412AAAD79147EE49C77F3E8BE09874AE5701565BD1FF8"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -149,11 +157,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v1/librogame.xml",
         "sha256": "2EC24347DBE0C39BB9F6E6834991BEE0C800ECB1F7AB7050D90E52CD60A9AC2C"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -173,11 +181,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v1/librogame.xml",
         "sha256": "6E3F9CC3387479EB933539CA6DA44BB61DC4E52F0E45015B0800399E090D6A95"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -197,11 +205,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v1/librogame.xml",
         "sha256": "5D2C77768146AAD00BCD795DB159FBB2D7AEBA41C955C4E450F644271C7E508B"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -221,11 +229,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v1/librogame.xml",
         "sha256": "8EAD8F4A95471CC1005CE3C3D820933AC3D44EC9330322F0FD15DDA6BE006707"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -245,11 +253,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v1/librogame.xml",
         "sha256": "41E0AE714661801D40464C30FADA821E04741731603AEF4A2F61F3AECC4CCF72"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -269,11 +277,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v1/librogame.xml",
         "sha256": "423E757220378FE744267BB049F6B9B255C6CB581A814B80BA9FB6ADB9637E6E"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -293,11 +301,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v1/librogame.xml",
         "sha256": "6C752B7FB11B3C87B00C538B865D03E801D9D9F70CE737CDC91355FB3DB9CB7E"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -317,11 +325,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v1/librogame.xml",
         "sha256": "7AFA9EADED6E48579DC4588B136BBD7292E9B9E043FC9376C9445EEA110C31B4"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -341,11 +349,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v1/librogame.xml",
         "sha256": "DFAD5801D15BA9EDE3E7A5B5CDE255F3D096A1E5C6544DF504B33E7642C00CDE"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -365,11 +373,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v1/librogame.xml",
         "sha256": "44677AD9C6CB4DD3FE2ED832A66315025132465165F8F7C9F2F758853571072E"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -389,11 +397,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v1/librogame.xml",
         "sha256": "E24AF974E64B6F8CF82F7E3FC82D443378A91E34B8BC10F6893F4D07B4B5A594"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -413,11 +421,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v1/librogame.xml",
         "sha256": "F98570A50B54C35C525584960D4B6145BCBF1669BD23E8D07D6CDFD6A3950147"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -437,11 +445,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v1/librogame.xml",
         "sha256": "7EAD298EF86C4A01AB1535D194AD49F7EC2D6694B480FFD552388D6D4FB5D6D4"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -461,11 +469,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v1/librogame.xml",
         "sha256": "B2966161094154488A1B5DF192A459EFC6C58DE2F42BA45E9C89E9F06A711C57"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -485,11 +493,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v1/librogame.xml",
         "sha256": "4C9E10C08237A7E1FFAB60A4928527CF3C55D4DAC983688A7AC7C642269F2ED6"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -509,11 +517,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v1/librogame.xml",
         "sha256": "93145FAFF7BDB560AAA89ED5698A9328A2AD45AF358C27DD4D0B4975ADC9D526"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -533,11 +541,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v1/librogame.xml",
         "sha256": "F3D5EB04EDBF40B56CC735A748AC8DF3DC35C28E136B5AFA51041FB7A586B00E"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -557,11 +565,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale/it/v1/librogame.xml",
         "sha256": "DA42DB90E44953C204190DE52C3A476D9955250F3190F557C305B703E9FF8DC8"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -581,11 +589,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale/en/v1/librogame.xml",
         "sha256": "3A56C0A26F9FED2676B638DF1EC34B277A0C34917D814A15222E437C0ADE0442"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -605,11 +613,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile-it/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v1/librogame.xml",
         "sha256": "537165A144F86E6775C67FA2368DF0E99C518C302FCF80ED548929BEA04D20EF"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile-it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -629,11 +637,11 @@
       "version": 1,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile-en/v1/librogame.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v1/librogame.xml",
         "sha256": "9778C168C1D20A72823BE5B07483C9F772AD01AC8C9F84567A140F1CB70003D7"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile-en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v1/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,

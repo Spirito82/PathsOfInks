@@ -4,9 +4,13 @@ Qui vivono le revisioni pubblicate dei libri, e il manifesto che l'app legge all
 
 ```
 books/manifest.json
-books/<id edizione>/v<versione>/librogame.xml
-books/<id edizione>/v<versione>/items.xml
+books/<opera>/<lingua>/v<versione>/librogame.xml
+books/<opera>/<lingua>/v<versione>/items.xml
 ```
+
+Le cartelle hanno la stessa forma di `Books` nel progetto dell'app: `ogre/it` qui è la copia
+pubblicata di `Books/ogre/it`. L'app non ricostruisce gli indirizzi dalla forma delle cartelle:
+scarica quello che il manifesto indica, quindi una cartella si sposta solo insieme alla sua riga.
 
 ## Regole
 
