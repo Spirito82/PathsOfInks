@@ -1,0 +1,822 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="toile-en" workId="toile" language="en" title="The Weave" author="Éric « Skarn » Berthe" checks="deterministico" genre="Fantasy, romance" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/">
+  <Changes>
+    <Change>Adapted for this app: the structure, the rules and parts of the text were changed or removed to work with its engine</Change>
+    <Change>Translated into English from the original French</Change>
+  </Changes>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <ContentWarnings>Violence against women: the king strikes, humiliates and sexually assaults the protagonist, a slave for the night. Nothing is gratuitous, everything is seen through her eyes, and the book leaves no doubt about what it thinks of this man. A beast devours someone. Prostitution, slavery, the loss of children.</ContentWarnings>
+  <Blurb>"For Greek tragedy is not reserved for the theatre, nor is playing a part in it a privilege granted to actors alone."
+
+A witch has given you back a body. Several, in fact: in the palace of Iolcus one mask falls and another takes its place, and each time you are somebody else. Tonight King Jason is holding a banquet. You have one night to reach what he keeps beneath his feet, and there is a guardian at the bottom of the stairs.</Blurb>
+  <Variables>
+    <Variable id="codiceDetente" name="Code Respite" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceMatriarche" name="Code Matriarch" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceSouffrance" name="Code Suffering" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceMariage" name="Code Marriage" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="colpita" name="The king has struck you" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1">
+    <Text>At every rock your hands take hold of, every crack your fingers sink into, every ledge your heel presses against, you are carried away with wonder. Owning four limbs again is an extraordinary, bewildering experience, and so is seeing the world through a single pair of eyes, tasting the sweat on your lips, filling your lungs with air... So many sensations you had long given up hope of ever knowing again.
+
+And yet, even in the face of such a miracle, you cannot simply close your eyelids and believe that this whole mad story was no more than a bad dream. This muscular body climbing nimbly up a sheer cliff is not the one you used to have. Even the reflexes carved into its flesh are not yours, and although you have never in your life so much as attempted to climb, you find the right notches naturally, the best holds, rising with a steadiness and a speed that would make a young goat jealous.
+
+Far below your feet lies a cave licked by the waves, and in it dwells the one who is the cause of your present state. In that dark cavern, smoky with braziers of mysterious herbs whose scent is heavy and stupefying, the witch was waiting for you. An emaciated, skeletal woman, a thaumaturge who has mastered even the most secret arcana of the art, an old woman ravaged by the years, by grief and by hatred, an enchantress whose power has no equal among mortals, a monster, a heroine.
+
+You do not know by what sly thread of destiny you found yourself in her foam-fringed dwelling, pleading your case before her. But how great was your surprise when you heard her announce that she could indeed help you, and that she was willing to. The exact words she spoke as she laid out the masks before you, five grimacing figures of theatre, still ring in your ears:
+
+"No one has the power to go against the will of the gods. But it is possible, for a time, to escape the part they have set aside for us, to put on a mask and play another character. The piece never lasts more than a handful of scenes, but within that fragment of eternity a man can be a slave, a citizen a hero, a god, a monster, or even a woman.
+
+By that same magic, I can give you back your humanity. For a time, at least."
+
+You did not even consider refusing. After so many years spent pining uselessly for what you had been, hoping in vain that your tormentor might take pity on you, the idea of recovering, even for a fleeting while, the feeling of being a true woman and not a loathed beast, was an irresistible temptation. Whatever the price:
+
+"I ask only one thing in exchange. In the palace above us there is a dark room where the king has piled up the treasures he no longer wishes to see. Among them lies an unfinished canvas. I want you to complete it."
+
+Suddenly your hand catches nothing but air above you, and a glance at the sky tells you that you have arrived. With one last pull you haul yourself over the edge and end up crouching on solid ground. Right in front of you, within arm's reach, rises the rear wall of a vast building of white stone, glittering in the light of the setting sun. Your destination. The summer palace of the king of Iolcus.
+
+You rise smoothly and begin to sidestep along the narrow band of ground that separates the wall from the abyss. Pressed against the building like this, you cannot fail to hear the laughter, the music and the singing escaping from it, along with the sweet smell of good food and the trails of many mingled perfumes. Inside, there is a feast.
+
+Reaching the corner, you take the time to look around. Going on will mean leaving the safety of your precarious position to throw yourself into the wolf's mouth. A few strides back from the cliff and from you, the stores, the outbuildings and the kitchens begin, quivering with frantic activity. Slaves bustle about in every direction, some carrying freshly prepared dishes and many amphorae towards the palace proper, others bringing back out the remains of food and vessels emptied of their contents. The flow is unbroken, chaotic, electric.
+
+As you are weighing up the best way to slip in, a strange dizziness takes you. You feel odd prickling on your face and, running your hand over it, you gather fragments of terracotta. You shake your head hard and the broken pieces of a mask fall to the ground.
+
+You realise then that you have changed. Again. You are smaller, less athletic than you were a minute ago. Your close-cropped hair has grown and is now held up in a bun, and the grime earned during the climb has gone. Your short tunic, which left your legs bare, has given way to simple covering clothes, plain and worn but more in keeping with what is acceptable in good company. A uniform all but identical to the one worn by the servants you are spying on.
+
+Once again you run the scene in the cave through your head, the witch's advice and her warnings:
+
+"I cannot foretell the parts you will play, nor for how long. Sometimes a mask will last only a few heartbeats, sometimes several hours may pass.
+
+At most I can warn you that, one way or another, the piece will end at the next sunrise. My powers are those of the night; they grow as the day dies and perish in their turn when it is reborn. For I draw my strength from the goddesses who came before the gods, from the mistress of the depths, from the huntress of the moon and from the nursing mother, from the pale star, the dark forest and the black earth. The return of the fire of the sky will announce the end of my enchantments, whether you will it or not.
+
+So make haste."
+
+Silent as the forest and swift as the wind, you cross the last few yards that separate you from the bustle and slip into the stream of human beings. In your new shape you are indistinguishable from the other servants, an anonymous maid in a crowd nobody pays attention to, not even the other slaves, too busy with the logistics of the banquet.
+
+Your steps lead you naturally into what seems to be the wine store, where some steward or other shoves an amphora between your fingers, ordering you to go and refill the guests' cups, and faster than that. You obey, running towards the servants' entrance and clutching the earthenware jar against your chest. The guard on duty tonight does not even glance at you, and the next moment you are inside, walking on the border between two worlds, in a narrow corridor, a barrier in spirit if not in function.
+
+Its outer face serves the various rooms of the household's everyday life, from the slaves' quarters to the private chamber of the master of the house. Plunged in shadow just now, unoccupied, silent, those rooms have a sinister look, as though the palace were deserted, forgotten by gods and men alike.
+
+Its inner edge, on the other hand, runs three quarters of the way around the great hall where the banquet is taking place, all lights, noise and scents. A multitude of guests, comfortably sprawled, enjoy the pleasures of the table and of the flesh there, assisted in this by almost as many slaves. The cupbearers, who make sure the cups never stay empty for long, are the least remarkable, eclipsed by the musicians, dancers and pornai of both sexes who strive to please and to indulge.
+
+The king is there, but only his throne makes it possible to tell him apart from his guests. One prostitute on his knees, a second at his right hand serving as his personal attendant, his face reddened by drink and heat, he enjoys the evening more than he presides over it. It is not orders but fat, wine-soaked jokes that come regularly from his lips, setting off waves of equally drunken laughter.
+
+You have no wish to plunge into that scrum for fear of never coming out again, but you also fear that your behaviour will end up drawing attention if you do not make up your mind to play your part. Splitting the difference, you turn your interest to the guests who are keeping their distance, the ones who have deliberately moved away from the centre of attention to take refuge in relative quiet. Two of them stand out at once.
+
+The first is impossible to miss, quite simply because he is not human: from the waist down, the man gives way to the horse. A centaur. Although you have heard countless stories about them, this is the first time you have seen one with your own eyes. And while the rumours about his kind speak of barbarous brutes, this particular specimen is clean, well groomed, and generally carries himself with far more elegance and uprightness than the two-legged citizens in the same room.
+
+The second is a hoary old man who has tucked himself into a corner with a little wine and food. His eyes are milk-white, and his blindness obvious. But more than his age and his infirmity, it is his behaviour that surprises you. He is strung tight as a bow, picking nervously at his plate, seemingly ready to take to his heels at any moment.</Text>
+    <Choices>
+      <Choice text="Go and look at the chimerical being more closely" goto="19" />
+      <Choice text="Approach the blind man" goto="26" />
+      <Choice text="Slip away without serving anyone" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="2">
+    <Text>Your question achieves the feat of sinking the centaur's spirits even lower, but he answers you all the same.
+
+"War has broken out. Very soon I shall go and kill my brothers by blood alongside my brothers by heart. Before that, I wanted to see each of my disciples at least one more time. For however low they have fallen, they remain my children."
+
+On that conclusion the beast-man thanks you in a tone that makes it plain you would do better to leave him alone with his cup, and you obey his unspoken command.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="3">
+    <Text>You slip out of his embrace.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="21">
+        <Requirements>
+          <Variable id="codiceDetente" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="7">
+        <Requirements>
+          <Variable id="codiceDetente" operator="lte" value="0" />
+          <Variable id="colpita" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="25">
+        <Requirements>
+          <Variable id="codiceDetente" operator="lte" value="0" />
+          <Variable id="colpita" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4">
+    <Text>A flash of mingled, contradictory emotions crosses the king's eyes when he hears your answer, and then he begins to study you with suspicion.
+
+"If you come from Corinth, you must know that it is there that my children died. How dare you speak that name in front of me?
+
+"It was you who asked me, my lord."
+
+Did you say it boldly, provokingly, or on the contrary with a frightened, conciliating air?</Text>
+    <Choices>
+      <Choice text="Boldly, provokingly" goto="25" />
+      <Choice text="With a frightened, conciliating air" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>The man hesitates to answer you, then murmurs:
+
+"The spectre of a violent death hangs over everyone gathered here at this very moment."
+
+The terror coming off his whole being, crossed now and then by nervous movements, confirms to you that he believes what he is saying.</Text>
+    <Choices>
+      <Choice text="Ask him how he can be so sure" goto="14" />
+      <Choice text="Offer to warn the king" goto="39" />
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Text>You try to buy time, if only to recover your composure after the initial shock of meeting such a being here. Bending your knee deferentially, you pitch your voice to load it with respect:
+
+"O wise sphinx, I did not know you were present in this place, or I should have brought a fitting offering. It is an honour to be able to converse with one as mythical as yourself. Which obliging deity must I thank for this meeting?"
+
+"Thank your own greed," the monster answers, amused by your sudden unctuousness, though not displeased by it. "I am the guardian of this place, charged with protecting the treasures it holds. Only their rightful owner may enter here without facing my riddle."
+
+"A noble task, but one that seems small indeed beside your greatness. By what fortune did it fall to you?"
+
+The creature studies you closely, weighing the insolence of your question, before answering with a hiss of rage:
+
+"As always with humans, the cause is cowardice.
+
+After letting myself be driven out of Thebes so that the parricide could fulfil his incestuous destiny, I had but one desire: to go home to the warm sands of the south, where my place is and where the people treat me with the devotion owed to me.
+
+But as I was making my way from island to island, my road crossed that of that band of jokers carrying home that sheepskin."
+
+She points with a disdainful movement of one hind paw at the shining fleece behind her.
+
+"Their wisdom not being the equal of their courage, I crunched a few of them between my teeth before that lunatic with his lyre appeared. He plucked the strings of his instrument, and I lost all sense of reality at once under the spell of his bewitching music. In my trance he made me reveal the answer to my own riddle, and I was forced to spare them.
+
+The story might have ended there, had their leader, who now wears the crown, not judged me too dangerous to be left at liberty. His witch of a companion then contrived to bind me to them. By an ancient magic she forced me to serve as their watchdog, defending their freshly acquired treasure against all thieves and usurpers."
+
+Anger, rage and hatred fill the sphinx's words as she unrolls her story. You ask her accordingly whether there might not be some way to free her from this thankless task.
+
+At these words the creature comes closer, towering over you at her full height, her bared teeth shining like deadly jewels, a wicked flame in her eyes. After an eternity she lowers her head so that her face is right in front of yours and speaks again, silkily:
+
+"Of course there is a way. Nothing is more fragile than a charm. But are you truly offering to free me, to let the man-eating beast run the world again? Do you truly wish history to remember you as the wretch who woke the scourge, as the new Pandora? That infamy — are you ready to accept it if it serves your ends?"
+
+Your eyes sink into the chimera's, reflected in that abyss of shadow which has seen all the grandeur and the decadence of humankind across its centuries of existence, slide over the symbols of her physical power — muscles, claws, fangs — and stop at her most formidable weapon: her sharpened tongue.</Text>
+    <Choices>
+      <Choice text="Yes, I am ready to accept it" goto="41" />
+      <Choice text="No" goto="35" />
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>Your refusal is light as a feather, but it is the spark that sets off the blaze. The king turns redder still, roars and strikes you with the back of his closed fist. Another blow catches you in the stomach, folding you in two, and then he begins to pound you frantically like a sandbag.
+
+His words are nothing but an unbroken flood of abuse and insult, in which he identifies you with every woman in the world in your insolence, your debauchery and your countless other supposed failings.
+
+From what you glimpse through tears of pain, even the other guests are shocked by such a display, but nobody lifts a finger to help you.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>The seer seems relieved that the conversation is turning to another subject, however grim.
+
+"You will have heard of it already, twisted by a thousand rumours, but here is what comes closest to the truth: he had everything. Glory. Wealth. Power. Love. All of it he owed almost entirely to one woman, who became for him a traitor to her own people, a thief of her people's treasures, a fratricidal demon.
+
+And for all reward, he abandoned her. He turned his back on the woman whom love had already once turned into the worst of monsters.
+
+What followed is a long tragedy. She destroyed everything he held dear, even if she had to destroy herself in doing so.
+
+Now neither of them has anything left but bitter memories of a time that will never come again, forgotten under the guard of the queen of the gods."
+
+After so long a speech from so frail a body, the old man sighs and folds in on himself, his arms around his knees. He asks you to let him rest, and you obey.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMatriarche" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>Worn teeth shape a smile and he nods.
+
+"You are probably right," he says, holding out his cup. "Shaking like a leaf will hardly help me. One cup cannot do me any harm."
+
+You pour, and he then savours his drink slowly, regaining a little colour as he goes.
+
+"I suppose every kindness calls for a reward, even if you are only doing your work. Let me see..."
+
+He racks his brains, then declaims with a tight grimace:
+
+"When gods, or their envoys, put a question to you, arrange matters so that you do not answer it. For neither frankness nor falsehood will bring you anything good."
+
+He clicks his tongue against his palate to punctuate the pronouncement:
+
+"A lesson I should very much have liked to know in my own day."
+
+Then he goes back to sipping his drink delicately.</Text>
+    <Choices>
+      <Choice text="Leave him in peace" goto="12" />
+      <Choice text="Ask him what he is so anxious about" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Text>Despite the taste of blood in your mouth, you find the strength to move your tongue for one last reckless sally:
+
+"And the Golden Fleece, Jason? And that throne you strut about on? And all your glory, all your legend — do you not owe it to her?"
+
+At these words the king stoops, seizes you by the shoulders and, with obvious difficulty brought on by his age and his physical decay, lifts you to shoulder height before flinging you into the middle of the tables and benches. You come within a hair of smashing head first against a stone edge, but you cannot avoid grazing yourself as you slide across the ceramic, setting your fresh wounds burning still more.
+
+The king then strides towards you while the company gets out of the way, more or less discreetly.
+
+"None of that means anything to me. She can keep her poisoned gifts. Everything she gave me, and has not already taken back with a bloodied knife, I renounce gladly. The Golden Fleece and all the marvels of the voyage to Colchis — I want no more of them. They bear her emblem, and I would rather see them rot or burn than keep them."
+
+His hand closes on your throat and he pins you against one of the benches, leaving you barely enough air to breathe before bellowing to the room:
+
+"Someone fetch me a whip! I have a slut here who needs a good correction!"
+
+But the answer he gets is not the one he hoped for.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Text>The king allows himself a knowing smile.
+
+"Thebes? Not a good place to live just now, indeed. I understand your preferring a change of air. Do they have yet another new king? Are they under the yoke of some new divine curse? Famine, plague, monsters... The Labyrinth of Minos sounds like a holiday resort next to a city like that!"</Text>
+    <Choices>
+      <Choice text="Reassure him" goto="37" />
+      <Choice text="Paint the picture of a ruined city" goto="16" />
+    </Choices>
+  </Page>
+  <Page id="12">
+    <Text>You move calmly away from the strange guest, puzzled by what he has said.</Text>
+    <Choices>
+      <Choice text="Go and see the centaur" goto="19" />
+      <Choice text="Move towards the blind man" goto="26" />
+      <Choice text="Leave quietly" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="13">
+    <Text>The riddle comes, spoken with eagerness and malice:
+
+"Who is the best weaver in the world?"
+
+Those few words stop you dead. Frozen, you take in the pure malevolence on the creature's face. She knows. She knows who you are. She is toying with you, revelling in your suffering and your fear. A lioness playing with her prey.
+
+Forcing yourself to ignore the butterflies in your stomach, you concentrate on finding the answer she wants.</Text>
+    <Choices>
+      <Choice text="Answer &quot;Athena&quot;" goto="18" />
+      <Choice text="Answer that it is you" goto="29" />
+      <Choice text="Look for a way not to answer" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Text>A small hiss that might pass for a laugh escapes the mouth of the man you are speaking to when you cast doubt on his powers.
+
+"What would I not give for my predictions to prove fallible now and then!
+
+But it is a gift Zeus granted me, and error is foreign to him.
+
+I have seen in the night a wild beast, all fangs and claws and hatred, spill blood at this banquet, and it will be so. I have seen an eight-armed monster turn the memory of glory into a hymn to despair, and it will be so. I have seen a king on his knees gazing into the abyss, and it will be so!"
+
+After such a tirade, ending in the high notes, his breathing comes in jerks, and if you strain your ears you can hear the frantic beating of his heart.</Text>
+    <Choices>
+      <Choice text="Press him for more" goto="20" />
+      <Choice text="Offer to warn the king" goto="39" />
+      <Choice text="Leave before you give him a fatal shock" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="15">
+    <Text>Your fears prove unfounded, and no conscientious overseer comes to stop you as you vanish further and further into the house. You soon understand why, for the place is not as empty as you first supposed. Certain guests in search of a little more privacy have withdrawn here and there, and it seems plausible that you are running an errand for one or another of them.
+
+Free as you are to move about, you still have only a vague idea of where the mysterious treasure room might be, and asking the way strikes you as delicate. So you search patiently, exploring one room after another.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="38">
+        <Requirements>
+          <Variable id="codiceMatriarche" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="27">
+        <Requirements>
+          <Variable id="codiceMatriarche" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>You give your imagination free rein in describing a city given over to anarchy, disease, crime and the punishments of heaven, where the innocent escape the bandits and the corrupt guards only to end up in a monster's stomach. The king bursts out laughing at your words.
+
+"You exaggerate. That city is in a bad way, but not as bad as you make out. Monsters in particular are nothing but memories now, fit only to frighten toddlers."
+
+Punctuating the sentence with a thump on his chest, he adds:
+
+"Besides, I myself put an end to the Sphinx once and for all on my way back from Colchis!"</Text>
+    <Choices>
+      <Choice text="Open your eyes wide in wonder" goto="30" />
+      <Choice text="Cast doubt on it" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Text>This time it is a closed fist that strikes you full in the face. The impact throws you to the ground, your lip split. Then the king stands up, scarlet, swaying, and begins to kick and beat you under the stunned gaze of the guests and the terrified gaze of the slaves.
+
+"Never. Speak. Of her."
+
+You try to shield yourself as best you can from his assault, curled into a foetal position, your forearms guarding your face, but fists and feet keep finding you all the same, covering you in bruises and spreading a dark pain through your whole body.
+
+"That woman... That demon... Never brought me anything but trouble, tears, curses. I should have left her to rot in her backward country!"
+
+Almost every word is marked by a fresh blow, in a downpour that seems as though it will never stop.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceSouffrance" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Stay down and hope he calms himself" goto="43" />
+      <Choice text="Try to provoke him further" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Text>"A diplomatically deft answer."
+
+She adds nothing aloud to this pronouncement, but the smile of a thousand shining teeth on her face is enough to complete it with a "But wrong."</Text>
+    <Choices>
+      <Choice text="Carry on" goto="33" />
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>Even leaving aside what lies below his torso, the being does not seem to belong here. Whether it is his abundant curly hair shot through with silver, his sun-browned skin, his wind-carved features, his thick calloused hands, everything about him speaks of the steppe, the endless flat expanse where men and beasts, forever at the mercy of Helios and Aeolus, have no masters but themselves. How strange it is to see him here, sitting quietly, turning his empty cup between his fingers out of habit.
+
+And yet his ancient eyes hold a deep boredom, contempt even, as they take in the orgy unfolding a few paces away, and his muscles twitch at regular intervals, as though he were only just holding himself back from springing.
+
+When you offer him a little wine, he does what no other guest has done so far: he raises his head to look you straight in the eye before accepting and thanking you politely. Then he begins to speak, more to himself than to you:
+
+"There was a time when the healer himself would have served me. A time when he was nothing but an adventurer in exile, with very few connections but a few faithful friends, without gold or power but with courage, will and humility."
+
+With the rim of his cup he indicates the crowned man sprawled on his throne, and goes on, without an ounce of anger but with resignation:
+
+"Now he has become what he once fought. An idle, corrupt king, wanting only to satisfy his own desires and protect his position."
+
+He swallows a mouthful of wine, but not his bitterness, and continues:
+
+"I shall have had only two kinds of pupil: those who died young, and those who lived long enough to disappoint me."</Text>
+    <Choices>
+      <Choice text="Leave him alone with his thoughts" goto="12" />
+      <Choice text="Tell him he did have one pupil worthy of him" goto="23" />
+      <Choice text="Ask him to say more about the king's youth" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="20">
+    <Text>The man lets out a long sigh, then straightens where he sits, his dead eyes fixed on you. When he speaks again, it is in a learned, weary voice:
+
+"It is with men and women as it is with flies. Watching the flames from a distance is not enough for them; they must come close enough to burn. In Thebes, Oedipus asked me to see until he lost his eyes for it, and still no one has learned anything from his example.
+
+But since you so desire to know, I shall grant your wish. It will then be for you to bear the consequences."
+
+He begins to breathe rhythmically, in short jerks. His face gazes at nothing through you, and soon a low, sepulchral chant comes from his lips:
+
+"Your last remnants of honour you shall sacrifice to reach your ends. The beast you shall feed with human flesh. Your fatal pride you shall embrace once more. Your triumph will have the taste of tears, the sound of sobbing, the smell of blood."
+
+Then nothing but one last word: "Go."
+
+You hasten to obey.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="21">
+    <Text>You gently move his hand aside. "The night has barely begun, my king. Your guests have need of you a while longer."
+
+He answers with a smile. "To the devil with these spongers. I have already given them too much of my time."
+
+"Perhaps you should dismiss them properly all the same," you counter gently.
+
+He nods, and laboriously sets about getting up. Unsteady on his legs as he is, he does not miss the chance to grab a handful of your backside, nor to lay his other hand on the shoulder of the prostitute he chased off to make room for you.
+
+Finally upright, he gropes for his words through the fumes of his stupor, and you — coaxing, wheedling, charming — whisper what he must say, an obliging and diplomatic helper. And so he calls out loud and clear:
+
+"To all those I currently shelter under my roof: your king is going to put away his crown for the night. You are released from your obligations towards me, and may go or stay as you please."
+
+Laughter, raised cups and whistles answer his declaration.
+
+Among them that of one unwilling resident who very much does want to leave.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="22">
+    <Text>A candle in your hand, descending slowly towards the dark depths of the earth, you no longer look much like a serving maid. By the time you reach the last step, you do not look like one at all.
+
+Your modest slave's tunic has given way to a single piece of cloth draped around your body, a whole lion skin without cut or seam, held in place by an iron brooch. The chaotic cascade of your long hair mingles with the dead beast's mane, and your shoulder, both arms and most of your legs are left bare by this rudimentary garment. Intricate tattoos clothe the flesh thus exposed, abstract arabesques that nonetheless remind you of certain crooked runes glimpsed at the witch's. You do not know their exact meaning, but the instinct that came with your new part whispers that they are an offering, a homage, a mark of respect to the forces that govern mortals.
+
+Your new appearance is doubtless most impressive, but in the underground dark, faintly lit by your meagre flame, there is hardly anyone to admire it. Only solid stone foundations, and a few crates overflowing with old trinkets. You are about to search them when you see them.
+
+First you notice the square of golden wool hanging on the wall, which your small flame contrives to set shimmering with a thousand glints.
+
+And then you become aware of the massive shape resting at its foot.
+
+The lion's paws make not the slightest sound as it comes towards you step by step. Their powerful muscles and sharp claws twitch with every movement, ready for use. The wings are folded, useless underground, but their span can be guessed from their long train of white feathers. The human head — though the word is probably an exaggeration, since no human has teeth like those — is smiling, with the sadistic smile of a predator who knows its prey is doomed. The beast as a whole is larger, more supple, better furnished with cutting edges and more terrifying than any of the legends would lead you to suppose.
+
+Suddenly you understand why the ways into this room were so lightly defended. With a guardian like this, the treasures have nothing to fear; the bolts serve only to protect thieves from a violent and rather unpleasant death.
+
+You expect it to leap on you there and then, but the Sphinx stops a pace away and murmurs in a voice charged with excitement: "You know the story. Answer my riddle correctly and your life is spared. Get it wrong, and you will feed me."</Text>
+    <Choices>
+      <Choice text="Take to your heels" goto="33" />
+      <Choice text="Interrupt the Sphinx" goto="6" />
+      <Choice text="Wait meekly for the riddle" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="23">
+    <Text>He turns your question over in his mind.
+
+"Among the old ones, I cannot think of any. Even Alcides spent most of his existence atoning for his own wanderings. The only blameless heroes are the ones lucky enough not to have had me as a master, like Orpheus. Even if misfortune hounds them in other ways."
+
+He points an accusing finger at the king.
+
+"Do you realise that this lout, so quick to arrange a drinking bout, did not even travel as far as nearby Pimpleia for the wedding of one of his old companions? While the man who was one of his closest friends was weeping for his bride, he was sleeping off his wine here."
+
+He folds his arm back, gripping his cup with all ten fingers.
+
+"No, truly, I cannot think of any. Perhaps among the new generation. I have great hopes of my new charge, young Achilles. Most likely the last I shall ever train, for my years weigh on me, immortal though I am."</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMariage" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Leave him to his thoughts" goto="12" />
+      <Choice text="Ask him why he is here tonight" goto="2" />
+    </Choices>
+  </Page>
+  <Page id="24">
+    <Text>You cast about for some trick to dodge the question, but your manoeuvring is cut short by a gleeful roar, followed by an amused pronouncement:
+
+"Too late. No way out now. The riddle has been asked, and it is waiting for an answer. But do take your time. I have all eternity ahead of me. Unlike you."
+
+And the beast stretches out in a comfortable position without ever stopping devouring you with her eyes, licking her lips in her mind.</Text>
+    <Choices>
+      <Choice text="Use her slackness to make a run for it" goto="33" />
+      <Choice text="Say &quot;Athena&quot;" goto="18" />
+      <Choice text="Point to yourself" goto="29" />
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Text>A flash of pain runs through you as the king's palm cracks against your cheek. Then both his hands close on the neck of your dress and he pulls you violently towards him, pressing his ruddy face a few inches from yours. You breathe the ragged gasps of his wine-soaked breath, and see far too closely the dangerous flame burning at the back of his bloodshot eyes.
+
+"What have we here? A whore with a temper? My girl, perhaps some of your clients like that, but it is not the house style here. So behave like a civilised woman: submissive and respectful."</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="colpita" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Nod meekly" goto="37" />
+      <Choice text="Go on standing up to him" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="26">
+    <Text>You come closer and offer a little wine to the old cripple. He answers, doing his best to look relaxed:
+
+"No, thank you. I would rather stay sober and quick on my legs tonight. That is the wiser course, if the omens are to be believed."</Text>
+    <Choices>
+      <Choice text="Move on without pressing him" goto="12" />
+      <Choice text="Ask what omens he means" goto="5" />
+      <Choice text="Press him to take a cup" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="27">
+    <Text>You feel as though you have turned this house over stone by stone by the time you finally find a way into mysterious cellars at the back of a cramped store room. They seem to be old dungeons, from the days when this place was a stronghold. Although they are partly filled in, it is still possible to move through them, and by slipping along you eventually reach a staircase of more recent make, though thick with dust.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Text>You leave behind a deeply sleeping king who has not had the delicacy to declare on the pillow that he releases the Sphinx from all her obligations towards him.
+
+To be exact, he has not said much of anything intelligible since the moment he exchanged the discomfort of his throne for the softness of his bed. And short of waking him with bucketfuls of water, you will get nothing more out of him before noon tomorrow.
+
+Your one remaining chance of reaching your goal within the time allotted is to solve the riddle. Now that you know the way, it takes you only a few minutes of hurried walking to find yourself facing the Sphinx, who is amused by your failure but does not seem surprised by it.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="29" ending="true">
+    <Text>The monster neither confirms nor denies your answer. She merely smiles, a sadistic pleasure plastered across her face.
+
+A moment of silence passes. Then your mask falls. Followed by another. And then another. The charm broken, you regain the shape that is the consequence of your hubris. The Sphinx seems to grow, and grow, but you know perfectly well that it is you who are shrinking. Soon you no longer make her out by sight but only through the vibrations she sets up in the air and the ground, her laughter carrying the force of a hurricane at your new size.
+
+You flee quickly on your eight legs before she takes it into her head to crush you, going smartly back to spinning your web in the dark corners you should never have left, condemned never again to escape your destiny as an eater of flies.</Text>
+  </Page>
+  <Page id="30">
+    <Text>Nothing pleases the king more than recounting his exploits, however dubious they may be:
+
+"It was that beast's bad luck to cross the path of me, Jason. I did not trouble myself to answer her stupid riddle. I took up my sword and chopped her fine, like the big kitten she was. I would gladly have kept her head as a trophy, but Atalanta convinced me that a woman's severed head on a wall was in poor taste!"
+
+And off he goes laughing again.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceDetente" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="31">
+    <Text>Astonishment is what wins out in the man you are speaking to.
+
+"Pimpleia? At the foot of Olympus? That is not common. Apart from Orpheus, I know nobody from that quarter. Is it true that they have renamed every fountain in the city in his honour?"
+
+You have not the faintest idea, but you confirm it all the same. The king lets out an unhealthy, hollow burst of laughter.
+
+"That idiot lost everything for not knowing how to look straight ahead of him, and they make a cult of him. I crossed the world and performed a thousand feats, and what was my reward? This."
+
+He takes in the feast with an open palm, his mouth and his eyes creased with contempt. You notice that several of the guests are watching you now, some of them with villainous expressions.</Text>
+    <Choices>
+      <Choice text="Declare that it is a great injustice" goto="37" />
+      <Choice text="Set out the beauty of Orpheus and Eurydice's love" goto="42" />
+      <Choice text="Remind him of what he owes to others, and to Orpheus" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="32">
+    <Text>Jason brushes your remark aside with a grimace.
+
+"I took him aboard, that is true. But all he ever did was sing louder than a few sirens and charm two or three little beasts. Him, an Argonaut? Dead weight, more like. Besides, it is time the truth was put straight."
+
+He rises with difficulty, swaying, and addresses in a thick voice a gathering far too drunk to argue:
+
+"Ladies, gentlemen, I wish to correct an error that is far too widespread. Orpheus was never an Argonaut. He was nothing but a snivelling little virgin lost in the middle of a band of real men. The second woman of the crew!"
+
+After a silence, a few wine-soaked laughs answer him, but without conviction, with a trace of embarrassment at a sally insulting in more ways than one.
+
+But at least one person is glad he said it.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="33" ending="true">
+    <Text>There is no chronicle, no history, no legend telling of anyone who ever defeated a sphinx on the purely physical plane. Perhaps an exceptionally strong hero like Heracles would have stood a chance. You? None.
+
+One lightning bound and you are on the ground, crushed under several hundred kilos of muscle. With the energy of despair, despite the unbearable pain of your broken ribs, you still try to crawl, to twist out of her grip, but sharpened claws pin you to the floor, just before a terrible bite immobilises you for good, tearing flesh and crushing bone.
+
+The last image of this existence you will carry away will be the beast drinking as from a fountain the blood spurting from your severed artery in time with your final heartbeats.</Text>
+  </Page>
+  <Page id="34" ending="true">
+    <Text>You are in pain. However hard you brace your will against the assaults of your senses, you are in pain. You are in pain when the thread vibrates under your fingers, you are in pain when you move the shuttle, you are in pain at every stroke of the needle. Your senses are numbed by the pain, your movements slowed by weakness.
+
+And time passes. Inexorably.
+
+When dawn takes you, you will have almost finished. Almost.
+
+But a work almost finished is a work unfinished all the same, a book with pages missing, a gap in a melody, a beheaded sculpture.
+
+A failure.</Text>
+  </Page>
+  <Page id="35">
+    <Text>The Sphinx sighs and remarks on your refusal with a touch of irony:
+
+"A wise decision, most certainly. In that case, only the riddle remains."</Text>
+    <Choices>
+      <Choice text="Carry on" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="36">
+    <Text>A powerful, triumphant roar, a bestial laugh rising from the depths of the earth, rings through the whole room, followed a few moments later by human screams of terror, by the din of a struggle, of overturned objects, of people running and shoving.
+
+The king stands frozen for a few seconds, then gathers his wits and orders everyone to arm themselves before setting off himself at a run towards what you identified as the armoury during your exploration earlier in the night. Taking advantage of the general confusion, you slip away in the direction of the treasure room instead.
+
+This time no mythological creature bars your way. Only a rancid smell bears witness that a living being lodged here until very recently. You have the cellar and all its marvels to yourself.
+
+You begin to search the crates one by one, turning up rather few treasures but a great many assorted objects, worn, sometimes broken. Navigational instruments, a chart of the sky, trinkets, a handful of feathers, a bronze nail... The reflection of your face in a dull shield tells you that you have changed shape once again. Into an appearance you know well. One you never imagined seeing again. The one you wore in your previous life, before the fatal confrontation.
+
+It fills you with joy, it fascinates you, it raises a great many questions. But you do not stop searching for all that, pressed by time and by the bargain you struck with a thaumaturge powerful enough to give even the illusion of having undone what the gods have done.
+
+At the very bottom of the last crate, beneath the others and a layer of dust, you finally uncover a jumble of belongings that once belonged to a woman. Clothes as well as the tools of ordinary life, knives, combs and the indispensable loom, but also more esoteric accessories, talismans, pots of mysterious powders and herbs.
+
+And in the middle of it all, the object of your quest. You draw it out, you unfold it, you examine it. A canvas barely begun, yet already worn by the poor conditions in which it has been kept. A faded rough draft, a long way from completion.
+
+You understand at once why you are now playing your own part. Why the witch helped you and not another. Why you alone could carry out this last act.
+
+It would take a genius of the art to repair, finish and give splendour to this hint of a start of a beginning of something in less than a single night. At a level to make the gods jealous.
+
+It takes you.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="34">
+        <Requirements>
+          <Variable id="codiceSouffrance" operator="gte" value="1" />
+          <Variable id="codiceMatriarche" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="45">
+        <Requirements mode="any">
+          <Variable id="codiceMatriarche" operator="eq" value="1" />
+          <Variable id="codiceSouffrance" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="37">
+    <Text>Jason relaxes.
+
+"Good. Enough talk. Show me what you are worth, then."
+
+And suiting the action to the word, he opens the front of your dress, studying your breasts like merchandise.
+
+"Not bad. Not bad at all," he remarks approvingly.
+
+And he starts to paw at you.</Text>
+    <Choices>
+      <Choice text="Let him do it" goto="28" />
+      <Choice text="Try to pull free" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="38">
+    <Text>In the course of your exploration you come upon a curiosity that surprises you. In a room that is shut but not locked, a dead end with no window and bare walls, stands a statue of Hera, wife of Zeus, goddess of marriage and protectress of women.
+
+The sculpture is splendid, life-sized, full-length, worthy of standing in a temple. It is perfectly kept, with even some recent offerings, but such an effigy in a private house, even a king's, and above all in an out-of-the-way room that is hard to reach, nags at you.
+
+Remembering the words of the melancholy guest linking the goddess to the king's forgotten treasures, you search the place thoroughly, and it is not long before you find a secret hatch in the floor, right behind the statue. You open it, not without some difficulty, sealed as it is by dust, but no padlock or bar stands in your way besides, and a staircase plunging into darkness soon reveals itself to you.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="39">
+    <Text>The old man lets out a grunt of contempt.
+
+"Do you think I have not done so already? That fool will hear none of it. Or rather, he hopes I am right, that the waters of Lethe will soon close over him and put an end to his torments. Since the death of his wife and his children, he has never stopped calling the underworld down on himself with all his heart, in his deeds if not in his words."
+
+He gestures at the sprawled royal carcass with an equally disdainful movement of the hand.
+
+"But he is not fated to die from excess of everything, and he would know it already if he deigned to listen to me beyond what suits him."</Text>
+    <Choices>
+      <Choice text="Learn more about the death of the royal family" goto="8" />
+      <Choice text="Ask more about his grim prediction" goto="20" />
+      <Choice text="Take your leave" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="40">
+    <Text>The centaur's gaze drifts as he calls better days to mind.
+
+"In his youth it was his charisma that made him strong. Who else can boast of having gathered the greatest heroes in the world under one banner, fifty legends for a single quest? When they set sail, I thought they were going to write the finest of epics. In the end, through his fault alone, they composed a tragedy."
+
+He spreads his arms to take in the room around him.
+
+"And here is the last act."</Text>
+    <Choices>
+      <Choice text="Bring his attention back to the happy days" goto="44" />
+      <Choice text="Ask him why he is in this house" goto="2" />
+      <Choice text="Leave this cheerless companion" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="41">
+    <Text>The bestial laugh echoes through the whole cellar, bouncing off the solid stone walls until it fills the entire space.
+
+"So be it," she declares with malice.
+
+Then the beast sits back down, taking up a pose that is only slightly less intimidating, and explains:
+
+"The chains that hold me here are made of words."
+
+And she recites:
+
+Daughter of Echidna, in a few notes your riddle was pierced, and your true name laid bare,
+
+By it, Sphinx, I command you, in the name of the ancient laws,
+
+To serve the one who has triumphed over you,
+
+Orpheus the enchanter, son of Calliope, first of the Muses,
+
+And if he does not desire your strength for himself,
+
+To entrust it to the one who commands him this day,
+
+Jason, first of the Argonauts.
+
+And she goes on, with an evil look:
+
+"My imprisonment is bound to the truth and the endurance of that oath. Let a single one of those solemn declarations be found invalid, and my liberty will be returned to me. Let Jason give up his hold over me, or break that pact in one way or another, and at last I shall be able to leave this squalid cellar."
+
+She casts an eye towards the way you came in.
+
+"I let you go because I know your steps will bring you back here one way or another, for you cannot turn down a chance like this. It is for you to try to persuade our dear king to spare you from ending up in my stomach."
+
+You bow and, before the beast changes her mind, you hurry away.
+
+As you climb back up the stairs, your heart hammering, your thoughts whirl in your head. How are you going to persuade Jason of Iolcus to release such a monster? Even with a good deal of drink in him, you can hardly hope he will simply nod if you ask him such a favour.
+
+Lost in your thoughts, you do not notice at once that your appearance has changed yet again, and you almost trip in your new platform sandals.
+
+The warm fur has given way to a light dress, and you have the unpleasant impression of wearing nothing underneath. Your hair is impeccably arranged into a helmet of cheerful curls, and brushing your face with your fingertips, you feel the presence of make-up lightening your complexion, colouring your lips and darkening your brows.
+
+There is no need of a mirror to know what you look like now, and you are not sure you like what it implies.
+
+Your steps lead you back into the great hall, where the lateness of the hour has quietened the noise remarkably. The musicians are playing calmer melodies now, a mere background; a good many of the guests have slipped away, either gone home or withdrawn into the other rooms, and a number of the rest are sunk in the stupor of their excesses.
+
+The king on his throne goes on presiding over the gathering, egging on the last revellers still going, but he too is showing signs of exhaustion. His cup wobbles in his hand, his eyes are glassy. He clutches one of the prostitutes to him in a possessive gesture, yet ignores her completely, not sparing her so much as a glance.
+
+When you melt in at his side, he turns his head with difficulty, then shoves aside his companion of the moment without ceremony before catching you by the waist and pulling you to him.
+
+"Solon did not tell me he had a new girl. Perfect, I was starting to get bored. Where do you come from, then, my beauty?"
+
+What are you going to answer to that:
+
+From Corinth?
+
+From Thebes?</Text>
+    <Choices>
+      <Choice text="From Corinth" goto="4" />
+      <Choice text="From Thebes" goto="11" />
+      <Choice text="From Pimpleia" goto="31">
+        <Requirements>
+          <Variable id="codiceMariage" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="42">
+    <Text>"Love?"
+
+The hoarse, forced laugh that rings out is almost painful to hear.
+
+"Love is a wild flame. At first its warmth is pleasant, but soon the blaze spreads and burns everything without distinction, leaving nothing but charred bones. If Eurydice had lived, Orpheus would no doubt have drunk hemlock in despair after catching his wife in bed with some satyr or other. Not that it would have stopped every idiot in the world from singing his praises."</Text>
+    <Choices>
+      <Choice text="Tell him he is being hard on an old companion" goto="32" />
+      <Choice text="Change the subject" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="43">
+    <Text>When his own knuckles are ruined from striking, the king finally stops beating you and contemptuously orders his servants to clean up. Two sturdy slaves carry you into one of the adjoining rooms while others wipe away the traces of what has just happened.
+
+Abandoned on a straw mattress, you get up with difficulty, leaning on the wall, and walk in small steps towards the treasure room. You hurt everywhere, a dull unbroken pain that rises to a scream with every movement. Simply keeping your balance takes conscious, intense effort.
+
+By sheer will you manage nonetheless to drag yourself, yard by yard, step by step, to the sphinx's room. The creature is there waiting for you, looking down at you without the smallest ounce of pity.
+
+"A failure, then. The riddle remains," she declares evenly.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="44">
+    <Text>For a very brief moment, the centaur almost smiles.
+
+"A magnificent time. The heroes lined up on the deck at the departure. Several dozen handsome young men, a few hardened veterans, and even a woman. All of them shone, confident in the future and in their destiny. On the quay, their families, their regents, their masters. We saw them off with a thousand cheers and almost as many gifts. I myself gave them a chart of the heavens drawn by my own hand, so that they should never lose the way to Colchis."
+
+A pause, then his dark melancholy takes hold of him again:
+
+"That chart, I believe he still has it. Buried somewhere in the dark along with the other mementoes of that blessed time, far from his eyes and his heart. Only the statue of Hera has he not dared throw into the dungeon, for he has enough sense left not to anger the gods beyond measure."
+
+And the being sinks back into a sorrowful silence.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMatriarche" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="45" ending="true">
+    <Text>Jason lives. With one hand he presses his side to hold in the bleeding, where the monster's claws ploughed through him. With the other he leans on a sword marked with that same beast's blood. The fight lasted all night and cost the lives of a number of his guards and slaves, as well as a few guests, but at daybreak the victory was theirs and the creature had fled.
+
+How many years have passed since the last time he had to fight anyone capable of fighting back, to look straight into the eyes of a true monster strong enough to crush him like a wisp of straw, king though he is, to face death head on with fear in his belly, he cannot even remember. It must go back to the expedition. As always.
+
+Despite the pain and the weakness, he refuses all treatment. He has no time. Before anything else he must make sure that the worst has not happened. If the guardian of his remains has failed at her post, it means that she is behind all this.
+
+She. Always she. He will have loved, and even married, others, but when people speak of his wife, his queen, it is always she who is meant. Her name is bound to his by bloody chains that he has never stopped trying to break, only to find them stronger again the next day. Regularly, in the darkest hours of the night, he imagines that she is there waiting for him with a dagger in her hand, ready to finish it. But the blow never comes.
+
+The hatch does indeed show signs of recent use. Lifting it in his state costs him considerable effort, but by sheer will he manages it. A cloud of dust and a spider escape as the square of wood falls heavily back, and then he sets off down the stairs, holding a lantern awkwardly between two fingers stained red by his wound.
+
+Down below, chaos reigns. Everything the room held is turned upside down. Every memory he had striven to keep away from himself without daring to destroy it lies exposed to his gaze, a naked fragment of his past. Every member of the Argo's crew has left a part of himself here, even the most insignificant, the ones legend has forgotten. But not him.
+
+Not even the fleece has been spared. Its priceless wool has been used as raw material to spin a thread just as golden, whose last fragments still hang from the loom.
+
+And on the wall a work of art is displayed.
+
+Its beauty is staggering. It is without any doubt the magnum opus of a master, her most accomplished work, her most exceptional, the one that will cross the centuries and keep the legend alive. In a last gesture of defiance and pride, its maker has even signed it, and reading that name the king is visited by the sacrilegious thought that perhaps her claims were not unfounded after all.
+
+Too perfect to be burned. Too impious ever to leave the shadows. A piece in perfect keeping with this place.
+
+The tapestry itself is a magnificent scene showing a group of euphoric young people on a ship. The design is rich in figures at every depth and in every corner, shadows lost in the rigging, silhouettes leaning on the rail, busts in the foreground.
+
+To Jason, who actually knew them, it is obvious that the artist gave her imagination free rein, drawing sometimes on other depictions but often working from nothing at all. Certain minor heroes simply bear no resemblance to what they really looked like. And yet, through a deft symbol slipped into the fold of a garment, a particular shadow, a well-chosen expression or posture, it is possible to recognise every one of them, to guess the reasons for their being there. Divine command, a hunger for glory, simple friendship, a thirst for adventure... From every figure comes an impression of realism, of life, of existence, of purpose, of a future.
+
+Their old commander's throat tightens. It seems to him that by merely reaching out his arm he could touch them, return to that blessed time when everything was possible, when the world lay open to them. But his fingers meet nothing but the weave of the cloth.
+
+Despite that crowd, the picture is so composed that every line, every gaze, converges on the central couple, resplendent in their golden clothes.
+
+A triumphant hero, at the height of his physical strength and his glory, brimming with joy, holding his companion against him, his so precious plunder carelessly abandoned on the ground at his feet.
+
+Him. Before.
+
+And in his arms, returning his smile and clinging to him as to life itself, an eastern beauty transfixed with love, her belly rounded by a child yet to be born.
+
+Medea.
+
+Two happy lovers to whom the future holds out its arms.
+
+A past buried for ever, a lost utopia.
+
+And Jason, father of Mermerus and Pheres, falls to his knees and bursts into tears.</Text>
+  </Page>
+</Librogame>

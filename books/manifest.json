@@ -106,14 +106,14 @@
       "contentWarnings": "Terrorismo, violenza politica, carcere, armi da fuoco e sequestro di persona. Il libro racconta fatti storici italiani degli anni di piombo.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 3,
+      "version": 4,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v3/librogame.xml",
-        "sha256": "CB1E4525ED8D815D12744F947F7745C18525A39FC00A27373708B301FAEAD52F"
+        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v4/librogame.xml",
+        "sha256": "9664EF5B8FCA701BD85F080268D5730D5179CB8FABB0C2B635773D955B1D27F8"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v3/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v4/items.xml",
         "sha256": "8C18CE8A2A12FF974FA5DCCF2D2E8A7AD5599C36F5A2A709D184028D19A88D1B"
       },
       "minAppBuild": 25,
@@ -130,14 +130,14 @@
       "contentWarnings": "Rapimento e interrogatorio coercitivo. Le domande sono volutamente invadenti e comprendono la vita sessuale, il voto e i rapporti famigliari. È una satira: non c'è violenza in scena, c'è un apparato che ti tratta come una pratica da evadere.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v1/librogame.xml",
-        "sha256": "48AE97166754CF15CE7412AAAD79147EE49C77F3E8BE09874AE5701565BD1FF8"
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v2/librogame.xml",
+        "sha256": "117EF392232FC9CCA625471BE4997C54440703BE39C172F214AC3F8CD2B79F87"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -154,14 +154,14 @@
       "contentWarnings": "Abduction and coercive interrogation. The questions are deliberately intrusive and cover sexual history, voting and family relationships. This is satire: there is no violence on the page, only an apparatus that treats you as a case to be processed.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v1/librogame.xml",
-        "sha256": "2EC24347DBE0C39BB9F6E6834991BEE0C800ECB1F7AB7050D90E52CD60A9AC2C"
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v2/librogame.xml",
+        "sha256": "4DC2B208DAAA0A579293E5CC5A9534A6D199B5B6F4BDF23C8D94EBF58D491589"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -178,14 +178,14 @@
       "contentWarnings": "Una ragazza rapita e trasformata contro la sua volontà. Un finale racconta una metamorfosi mostruosa vista da vicino, un altro una condanna e una pietrificazione. Ferite, annegamento, vecchiaia e rimpianto.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v1/librogame.xml",
-        "sha256": "6E3F9CC3387479EB933539CA6DA44BB61DC4E52F0E45015B0800399E090D6A95"
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v2/librogame.xml",
+        "sha256": "8CD08702AAD7CCFAF4408A4A4CF045E55912ABF689CE6CD9E206CBB7CE6FDFD4"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -202,14 +202,14 @@
       "contentWarnings": "A girl taken and changed against her will. One ending tells of a monstrous metamorphosis seen close up, another of a sentence and a petrification. Wounds, drowning, old age and regret.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v1/librogame.xml",
-        "sha256": "5D2C77768146AAD00BCD795DB159FBB2D7AEBA41C955C4E450F644271C7E508B"
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v2/librogame.xml",
+        "sha256": "A7B8A11E90FC4A0F7C97C9218C798EDE1532B3D499F9224EEC9F7E5DB15FC04C"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -226,14 +226,14 @@
       "contentWarnings": "Nessuna. Una fuga per ridere, con conigli da guardia, filastrocche e uova di cioccolato.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v1/librogame.xml",
-        "sha256": "8EAD8F4A95471CC1005CE3C3D820933AC3D44EC9330322F0FD15DDA6BE006707"
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v2/librogame.xml",
+        "sha256": "DF3F5297BCE35A9CAAEFBE3FDAB0D5FAEE6394F672523021C18ED03D004ABB98"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -250,14 +250,14 @@
       "contentWarnings": "None. A chase played for laughs, with guard bunnies, nursery rhymes and chocolate eggs.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v1/librogame.xml",
-        "sha256": "41E0AE714661801D40464C30FADA821E04741731603AEF4A2F61F3AECC4CCF72"
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v2/librogame.xml",
+        "sha256": "3ED392C1532DD66D0F2F622C4B452741CB8BA9AFA5A51F025388E9DC61168F39"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -274,14 +274,14 @@
       "contentWarnings": "Nessuna. Un giallo da salotto, senza sangue e senza violenza.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v1/librogame.xml",
-        "sha256": "423E757220378FE744267BB049F6B9B255C6CB581A814B80BA9FB6ADB9637E6E"
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v2/librogame.xml",
+        "sha256": "D0FE06FE1F4A7739F0AFEF19C26FC86C5EB4A9330D8537E8218A6E4B03222421"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -298,14 +298,14 @@
       "contentWarnings": "None. A drawing-room mystery, with no blood and no violence.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v1/librogame.xml",
-        "sha256": "6C752B7FB11B3C87B00C538B865D03E801D9D9F70CE737CDC91355FB3DB9CB7E"
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v2/librogame.xml",
+        "sha256": "151A534971351626D22808BDE2FDCDDC0D1334F9453FC4C227CA8B63157F2630"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -322,14 +322,14 @@
       "contentWarnings": "Fantasmi, spettri e una morte del protagonista raccontata senza dettagli. Paura da storia di fantasmi, niente di più.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v1/librogame.xml",
-        "sha256": "7AFA9EADED6E48579DC4588B136BBD7292E9B9E043FC9376C9445EEA110C31B4"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v2/librogame.xml",
+        "sha256": "B7D6A05D0FE15AF3BFEA27B77AC9B98C21B1A3FD07408EB88FA2262E356018DB"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -346,14 +346,14 @@
       "contentWarnings": "Ghosts, spectres and a death of the protagonist told without detail. Ghost-story fright, nothing more.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v1/librogame.xml",
-        "sha256": "DFAD5801D15BA9EDE3E7A5B5CDE255F3D096A1E5C6544DF504B33E7642C00CDE"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v2/librogame.xml",
+        "sha256": "959CF22DAAD9E7FCB02763A134C58BE62FFE66812A151D310E1BB07D49151A0F"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -370,14 +370,14 @@
       "contentWarnings": "Furti, un paradosso temporale che distrugge l'universo e un rapace gigante che si porta via qualcuno per cena. Tutto raccontato per ridere.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v1/librogame.xml",
-        "sha256": "44677AD9C6CB4DD3FE2ED832A66315025132465165F8F7C9F2F758853571072E"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v2/librogame.xml",
+        "sha256": "5C42D9C32EC4D29845F26E78021A067439537C095DFC6D15602E62F8EE31A551"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -394,14 +394,14 @@
       "contentWarnings": "Theft, a time paradox that destroys the universe, and a giant bird of prey that carries someone off for dinner. All of it played for laughs.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v1/librogame.xml",
-        "sha256": "E24AF974E64B6F8CF82F7E3FC82D443378A91E34B8BC10F6893F4D07B4B5A594"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v2/librogame.xml",
+        "sha256": "6B4C2A4946B92294D98AB3ABA3550F5F868C63570DA0FF686F7039220CC2AB46"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -418,14 +418,14 @@
       "contentWarnings": "Suicidio chiesto a un'altra persona, schizofrenia e allucinazioni, accoltellamenti, morte del protagonista e della sua compagna, linguaggio volgare. Il racconto è frammentato e disturbante per scelta.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v1/librogame.xml",
-        "sha256": "F98570A50B54C35C525584960D4B6145BCBF1669BD23E8D07D6CDFD6A3950147"
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v2/librogame.xml",
+        "sha256": "035C714528F89C7356EDF4FA4C610BDAE85E1424F539775158812C3149F15AE7"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -442,14 +442,14 @@
       "contentWarnings": "A suicide asked of another person, schizophrenia and hallucinations, stabbings, the death of the protagonist and of his partner, coarse language. The story is fragmented and disturbing by design.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v1/librogame.xml",
-        "sha256": "7EAD298EF86C4A01AB1535D194AD49F7EC2D6694B480FFD552388D6D4FB5D6D4"
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v2/librogame.xml",
+        "sha256": "A79F21C30FFF3DB4943BB34B16E536CFF351016D5A41CFDDEABE6D012233724B"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -514,14 +514,14 @@
       "contentWarnings": "Rapina a mano armata. Si può sparare a un ostaggio disarmato e uccidere un impiegato: il libro lo racconta senza compiacimento, ma lo racconta. Linguaggio volgare.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v1/librogame.xml",
-        "sha256": "93145FAFF7BDB560AAA89ED5698A9328A2AD45AF358C27DD4D0B4975ADC9D526"
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v2/librogame.xml",
+        "sha256": "154A2071F1615243B13310226BF6FB9E629F328520E8AB37FA3F9513D3528FF4"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -538,14 +538,14 @@
       "contentWarnings": "Armed robbery. You can shoot an unarmed hostage and kill a bank clerk: the book tells it without relish, but it tells it. Coarse language.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v1/librogame.xml",
-        "sha256": "F3D5EB04EDBF40B56CC735A748AC8DF3DC35C28E136B5AFA51041FB7A586B00E"
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v2/librogame.xml",
+        "sha256": "AD6C2D32E297A4771573599AE15DB8ACF7B66D84187D9542CC8CB6536F94505E"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -562,14 +562,14 @@
       "contentWarnings": "Violenza sulle donne: il re picchia, umilia e aggredisce sessualmente la protagonista, schiava per una notte. Niente è compiaciuto, tutto è visto dai suoi occhi, e il libro non lascia dubbi su che cosa pensi di quell'uomo. Una belva divora qualcuno. Prostituzione, schiavitù, lutto di figli.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v1/librogame.xml",
-        "sha256": "537165A144F86E6775C67FA2368DF0E99C518C302FCF80ED548929BEA04D20EF"
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v2/librogame.xml",
+        "sha256": "ED6321A5064B3830CBF17933591641F34AA0213098ACD4EC8C1AAE0201C4D973"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,
@@ -586,14 +586,14 @@
       "contentWarnings": "Violence against women: the king strikes, humiliates and sexually assaults the protagonist, a slave for the night. Nothing is gratuitous, everything is seen through her eyes, and the book leaves no doubt about what it thinks of this man. A beast devours someone. Prostitution, slavery, the loss of children.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 2,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v1/librogame.xml",
-        "sha256": "9778C168C1D20A72823BE5B07483C9F772AD01AC8C9F84567A140F1CB70003D7"
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v2/librogame.xml",
+        "sha256": "7960F288F446119CC616FE6045A29D55EB9B265EC798EC4EAB97F59B00D5ACB0"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v2/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
       "minAppBuild": 26,

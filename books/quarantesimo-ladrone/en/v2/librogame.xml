@@ -1,0 +1,651 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="quarantesimo-ladrone-en" workId="quarantesimo-ladrone" language="en" title="The 40th Thief" author="Matteo Borghesi" checks="deterministico" genre="Adventure, comedy" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/">
+  <Changes>
+    <Change>Adapted for this app: the structure, the rules and parts of the text were changed or removed to work with its engine</Change>
+    <Change>Translated into English from the original Italian</Change>
+  </Changes>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <ContentWarnings>Theft, a time paradox that destroys the universe, and a giant bird of prey that carries someone off for dinner. All of it played for laughs.</ContentWarnings>
+  <Blurb>You are Amir, the last of the forty thieves, the one who gets all the worst jobs. The chief has left his scimitar in the cave and sends you to fetch it.
+
+You arrive just in time to hear "Close, Sesame!" and to see a man riding off into the desert loaded with riches. It is Ali Baba, and he has taken the road to the Sultan's palace. If he gets there, you are all finished.</Blurb>
+  <Variables>
+    <Variable id="clessidra" name="Hourglasses" type="number" initial="0" min="0" max="5" visible="true" />
+    <Variable id="tessera" name="Carpet hire card" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="tappeto" name="Flying carpet" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="lampada" name="The Genie's lamp" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="fischietto" name="Call-whistle" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="mangime" name="Birdseed" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="mangimeAli" name="Ali Baba is carrying the birdseed" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1">
+    <Text>You are Amir, the last of the forty thieves, the outcast of the band who gets all the worst jobs. After yet another raid, the chief realises he has left his scimitar inside the cave and, so as not to waste time on the raids in the diary, decides to send you to fetch it. You are heading grumpily for the cave when a voice makes you jump: — Close, Sesame! —
+
+What is going on? A man on his dromedary is riding off into the desert loaded with riches: it is Ali Baba, and he has just taken the path that leads to the Sultan's palace. You must stop him before he reveals the hiding place to the royal guards!
+
+Ali Baba has a good head start. It will be hard to catch him.</Text>
+    <Choices>
+      <Choice text="Chase Ali Baba" goto="4">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Run to the nearby village" goto="7">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="2">
+    <Text>It is the annual subscription to the Rentalcarpet flying-carpet hire service. Without asking yourself any questions, you go to the nearest branch and collect a fine 8-cylinder twin-turbo carpet. Now you have a flying carpet.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="tappeto" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Go to the bazaar" goto="5">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="3">
+    <Text>As you pass by, you slip the object away with the ease of the professional you are. Who knows whether the legend is true? You rub the lamp and a Genie comes out of it: — Greetings, master. I am here to… —
+
+— Grant my wishes? —
+
+— No, I only have the power to take you back in time. Call me when you need it. —</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="lampada" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="10">
+        <Requirements>
+          <Variable id="tessera" operator="gte" value="1" />
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Carry on" goto="5">
+        <Requirements>
+          <Variable id="tessera" operator="lte" value="0" />
+          <Variable id="tappeto" operator="gte" value="1" />
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Carry on" goto="12">
+        <Requirements>
+          <Variable id="tessera" operator="lte" value="0" />
+          <Variable id="tappeto" operator="lte" value="0" />
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4">
+    <Text>Even though you are spurring your dromedary as hard as you can, you gain no ground.</Text>
+    <Choices>
+      <Choice text="Keep at it" goto="9">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Go to the village" goto="7">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>The village bazaar is full of bargains, but you have no time to lose just now. In front of you is a dealer in animal accessories.</Text>
+    <Choices>
+      <Choice text="Go up to the stall" goto="6">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Text>You go up to the stall: cushioned saddles for dromedaries, climate-controlled baskets for snakes, nothing useful… except for a birdwatching kit with a call-whistle and some quality birdseed: perfect!
+
+You take the whistle and the birdseed.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="fischietto" value="1" />
+        <setVariable target="mangime" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Go back to the bazaar" goto="5">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>Along the main street you run into that show-off Aladdin, strutting about. He has a golden lamp dangling from his belt and a flashy sapphire ring on his finger.</Text>
+    <Choices>
+      <Choice text="Steal the lamp" goto="3">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Lift the ring off him" goto="8">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>You pretend to trip and grab Aladdin's robes to keep from falling. Surprised, he puts out his arms to hold you up; quick as lightning you take his hand and slide the ring off: a master stroke. You apologise and take your leave.
+
+Pleased with yourself, you examine the haul: the sapphire in the ring pulses with energy and an Efreet comes out of it, a magical spirit.
+
+— Who disturbs me? What can I do for you? —
+
+— Can you carry me to Ali Baba? —
+
+— You are too heavy; I can only carry small objects —</Text>
+    <Choices>
+      <Choice text="Carry on" goto="14">
+        <Requirements>
+          <Variable id="mangime" operator="gte" value="1" />
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Carry on" goto="5">
+        <Requirements>
+          <Variable id="mangime" operator="lte" value="0" />
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>Stubborn as you are, you go on chasing Ali Baba for the rest of the day; by now it is too late to change your mind. For all your efforts, though, you cannot catch him.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Text>On the other side of the street you see yourself go past! Or rather your past self. It might be wiser to avoid him so as not to run into complications; on the other hand, the carpet hire card could come in handy for him.</Text>
+    <Choices>
+      <Choice text="Stop yourself" goto="11">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Walk on" goto="13">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Text>You wrap your face in your keffiyeh so as not to be recognised and stop yourself.
+
+— Here, take this card! You will need it —
+
+You/he look at you in surprise, but you accept your own gift. You no longer have the hire card, and you walk off towards the bazaar.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="tessera" value="0" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Walk off towards the bazaar" goto="5">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="12">
+    <Text>Further along the street a hooded man stops you; you cannot make out his face.
+
+— Here, take this card! You will need it —</Text>
+    <Choices>
+      <Choice text="Accept the card" goto="2">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <setVariable target="tessera" value="1" />
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Walk on towards the bazaar" goto="5">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="13">
+    <Text>You run away from yourself, but all of a sudden you feel strange: the space around you warps, and you realise you have made a very grave mistake.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="17">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Text>You speak to the Efreet: — Pour this feed into the baskets on Ali Baba's dromedary. You will find him on the road to the Sultan's palace —
+
+Now Ali Baba is carrying birdseed.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="mangimeAli" value="1" />
+        <setVariable target="mangime" value="0" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Go to the bazaar" goto="5">
+        <Requirements>
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Use the flying carpet to catch up with Ali Baba" goto="15">
+        <Requirements>
+          <Variable id="tappeto" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="15">
+    <Text>In a few minutes you catch up with the rascal (not that you are much better): the time has come to make him pay!</Text>
+    <Choices>
+      <Choice text="Carry on" goto="19">
+        <Requirements>
+          <Variable id="fischietto" operator="gte" value="1" />
+          <Variable id="mangimeAli" operator="gte" value="1" />
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Carry on" goto="18">
+        <Requirements>
+          <Variable id="fischietto" operator="gte" value="1" />
+          <Variable id="mangimeAli" operator="lte" value="0" />
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Carry on" goto="16">
+        <Requirements>
+          <Variable id="fischietto" operator="lte" value="0" />
+          <Variable id="clessidra" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="clessidra" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ali Baba has reached the palace" goto="16">
+        <Requirements>
+          <Variable id="clessidra" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Call the Genie and go back in time" goto="1">
+        <Requirements>
+          <Variable id="lampada" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="lampada" value="0" />
+          <setVariable target="clessidra" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16" ending="true">
+    <Text>Sadly, you did not manage to stop Ali Baba, who reaches the palace and reports what happened. The royal guards are mobilised and, within a few days, you and your companions are caught and thrown into the Sultan's dungeons to rot. Your adventure ends here.</Text>
+  </Page>
+  <Page id="17" ending="true">
+    <Text>You missed the handover of the subscription to your past self, causing a space-time paradox that destroys the universe. If it is any consolation, you can say you stopped Ali Baba, in a manner of speaking.</Text>
+  </Page>
+  <Page id="18" ending="true">
+    <Text>The moment you sound the call, a gigantic winged shape drops out of the sky and heads for you: it is a Roc, a bird of prey of gargantuan size. It seizes you in its mighty talons and carries you off to its nest.
+
+You have earned a place of honour at tonight's dinner... as the main course.</Text>
+  </Page>
+  <Page id="19" ending="true">
+    <Text>The moment the call is sounded, a gigantic winged shape heads your way: it is a Roc, a bird of prey of gargantuan size. Drawn by the birdseed, it dives on Ali Baba, who comes to a sticky end.
+
+You have saved your band and you can celebrate with your fellow thieves: congratulations!</Text>
+  </Page>
+</Librogame>

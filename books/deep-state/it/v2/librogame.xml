@@ -1,0 +1,499 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="deep-state-it" workId="deep-state" language="it" title="Deep State" author="Luca Mulazzani" checks="deterministico" genre="Distopia, interrogatorio" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/">
+  <Blurb>Sei un comune cittadino, uno studente, un impiegato, scegli tu. Stai camminando per la strada; un gruppo di individui con il volto coperto da un passamontagna esce da un furgone e ti rapisce. Ora sei legato, in un garage.
+
+Queste sono le domande alle quali devi rispondere. Puoi mentire, se lo ritieni utile: nessuno verificherà. Ma alla fine ti sarà chiesto quante volte l'hai fatto.</Blurb>
+  <ContentWarnings>Rapimento e interrogatorio coercitivo. Le domande sono volutamente invadenti e comprendono la vita sessuale, il voto e i rapporti famigliari. È una satira: non c'è violenza in scena, c'è un apparato che ti tratta come una pratica da evadere.</ContentWarnings>
+  <Changes>
+    <Change>Adattato per questa app: la struttura, le regole e alcune parti del testo sono state modificate o tolte per funzionare con il suo motore</Change>
+  </Changes>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <Variables>
+    <Variable id="bugie" name="Bugie" type="number" initial="0" min="0" max="99" visible="true" />
+    <Variable id="fichi" name="Problemi con i fichi condominiali" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="spiato" name="Ha negato di aver mai spiato qualcuno" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1">
+    <Text>Sei un comune cittadino, uno studente, un impiegato, scegli tu. Scegli ora lo Stato in cui vivi; meglio uno che conosci bene.
+
+Stai camminando per la strada; un gruppo di individui con il volto coperto da un passamontagna esce da un furgone e ti rapisce. Ora sei legato, in un garage.
+
+Queste sono le domande alle quali devi rispondere; puoi mentire, se lo ritieni utile.
+
+Nome e cognome:</Text>
+    <Choices>
+      <Choice text="Dici il tuo nome" goto="2" />
+      <Choice text="Ne dai un altro" goto="2">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="2">
+    <Text>Cognome della madre da nubile:</Text>
+    <Choices>
+      <Choice text="Lo dici" goto="3" />
+      <Choice text="Dici quello di un'altra" goto="3">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="3">
+    <Text>Età:</Text>
+    <Choices>
+      <Choice text="La dici giusta" goto="4" />
+      <Choice text="Ti togli qualche anno" goto="4">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4">
+    <Text>Età al primo rapporto sessuale:</Text>
+    <Choices>
+      <Choice text="La dici giusta" goto="5" />
+      <Choice text="Dici un'età più comoda" goto="5">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>Età della persona con cui hai avuto il primo rapporto sessuale:</Text>
+    <Choices>
+      <Choice text="La dici giusta" goto="6" />
+      <Choice text="Dici un'età più prudente" goto="6">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Text>Queste domande t’infastidiscono? Perché? Tranquillo. Stiamo solo tarando il sistema.</Text>
+    <Choices>
+      <Choice text="Sì, m'infastidiscono" goto="7">
+        <Requirements>
+          <Variable id="bugie" operator="lt" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Sì, m'infastidiscono" goto="10">
+        <Requirements>
+          <Variable id="bugie" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="No, per niente" goto="10">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>Hai mai complottato contro lo Stato? Contro i partiti? Contro la chiesa? Contro i genitori? Gli zii materni? Le maestre?</Text>
+    <Choices>
+      <Choice text="Ammetti gli zii materni" goto="8" />
+      <Choice text="Neghi tutto" goto="8">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>Forse lo hai fatto solo, o anche, o soprattutto, preferibilmente, ma non necessariamente, col pensiero? Col pensiero di gruppo? Senza pensarlo? Senza volerlo?</Text>
+    <Choices>
+      <Choice text="Col pensiero, forse sì" goto="9" />
+      <Choice text="Nemmeno col pensiero" goto="9">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>Per chi hai votato alle ultime elezioni? Te ne vergogni?</Text>
+    <Choices>
+      <Choice text="Lo dici, e sì, un po’ te ne vergogni" goto="10" />
+      <Choice text="Fai il nome di un altro partito" goto="11">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Text>Vuoi un avvocato? Pensi che ci sia stato uno scambio di persona? Chi credi che avremmo dovuto prendere al tuo posto? Fa tre nomi che verificheremo:</Text>
+    <Choices>
+      <Choice text="Fai il nome di un tuo amico" goto="13" />
+      <Choice text="Fai il nome di un politico" goto="17" />
+      <Choice text="Fai tre nomi presi dall'elenco del telefono" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Text>In che modo ti sei creato una coscienza politica? Attraverso la frequentazione di gruppi socialmente impegnati? Giocando a bigliardino? Su TikTok? Dal barbiere/parrucchiera/igienista dentale/intermediario finanziario/istruttore di yoga?</Text>
+    <Choices>
+      <Choice text="Dici la verità: dal barbiere" goto="12" />
+      <Choice text="Dici: frequentando gruppi socialmente impegnati" goto="12">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="12">
+    <Text>Abbiamo dimenticato di chiederti se hai una coscienza politica: ce l’hai?</Text>
+    <Choices>
+      <Choice text="Sì, ce l’hai" goto="22" />
+      <Choice text="No, non ce l’hai" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="13">
+    <Text>Credi nel libero arbitrio? Perché?</Text>
+    <Choices>
+      <Choice text="Sì, e spieghi perché" goto="14" />
+      <Choice text="No, e non lo pensi davvero" goto="14">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Text>Credi in qualche forma di potere soprannaturale/paranormale/sottonormale/anormale?</Text>
+    <Choices>
+      <Choice text="Sì, in qualcuna" goto="15" />
+      <Choice text="In nessuna" goto="15">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="15">
+    <Text>Temi che questo potere, anche se non ci credi, e forse soprattutto perché non ci credi, possa punirti di quanto hai commesso in vita?</Text>
+    <Choices>
+      <Choice text="Sì, un po’ lo temi" goto="16" />
+      <Choice text="Per niente" goto="16">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>Credi che noi siamo i buoni o i cattivi? E voi?</Text>
+    <Choices>
+      <Choice text="Voi siete i cattivi, io sono fra i buoni" goto="17" />
+      <Choice text="Non sei sicuro di essere fra i buoni" goto="29" />
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Text>Elenca tre personalità che rispetti e che vorresti imitare?</Text>
+    <Choices>
+      <Choice text="Ne elenchi tre" goto="18" />
+      <Choice text="Ne inventi tre" goto="18">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Text>Credi davvero di poterle imitare?</Text>
+    <Choices>
+      <Choice text="Sì, credi di poterle imitare" goto="19" />
+      <Choice text="Dici di sì, ma non ci credi" goto="19">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>Che altri possano imitarle?</Text>
+    <Choices>
+      <Choice text="Sì, altri sì" goto="20" />
+      <Choice text="No, nessun altro" goto="20">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="20">
+    <Text>Queste persone esistono veramente?</Text>
+    <Choices>
+      <Choice text="Esistono" goto="21" />
+      <Choice text="Dici di sì, ma le hai inventate tu" goto="21">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="21">
+    <Text>Sei stanco di rispondere a queste domande?</Text>
+    <Choices>
+      <Choice text="Sì, sei stanco" goto="1">
+        <Effects>
+          <setVariable target="bugie" value="0" />
+          <setVariable target="fichi" value="0" />
+          <setVariable target="spiato" value="0" />
+        </Effects>
+      </Choice>
+      <Choice text="No, vai avanti" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="22">
+    <Text>Hai capito qual è il senso di queste domande? Preferiresti domande diverse? Ad esempio? “Qual è la tua squadra del cuore”? “La musica trap è veramente musica”? “Chi ci sarà al prossimo Eurovision Song Contest (ESG)”? “Perché sono invitate alcune nazioni che non sono europee”? “Perché fino a dieci anni fa non gliene fregava niente a nessuno dell’ESG”?</Text>
+    <Choices>
+      <Choice text="Sì, l’hai capito" goto="23" />
+      <Choice text="No, ma dici di sì" goto="23">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="23">
+    <Text>Pensi sia in atto un grande complotto mondiale in questo momento? È possibile che tu ti trovi dalla parte giusta del complotto?</Text>
+    <Choices>
+      <Choice text="Rispondi, e in qualche modo hai mentito" goto="24">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Rispondi, e non hai mentito" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="24">
+    <Text>Rispetti le idee politiche di tuo padre?</Text>
+    <Choices>
+      <Choice text="Sì, le rispetti" goto="25" />
+      <Choice text="Dici di sì per chiudere il discorso" goto="25">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Text>Ti senti mai spiato? Da chi? Dai colleghi di lavoro? Dal partner? Lo stesso con cui hai avuto il primo rapporto sessuale? Dalla rete? Da soggetti che non riesci a identificare?</Text>
+    <Choices>
+      <Choice text="Sì, da soggetti che non riesci a identificare" goto="26" />
+      <Choice text="Da nessuno" goto="26">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="26">
+    <Text>Ti trovi più a disagio fra gli amici o fra i nemici?</Text>
+    <Choices>
+      <Choice text="Fra gli amici" goto="27" />
+      <Choice text="Fra i nemici" goto="27" />
+    </Choices>
+  </Page>
+  <Page id="27">
+    <Text>Te la sentiresti di farci il nome di tre nemici?</Text>
+    <Choices>
+      <Choice text="Sì, tre nomi" goto="28" />
+      <Choice text="Dici di non avere nemici" goto="28">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Text>Accetteresti un nostro aiuto contro i tuoi nemici? Ci hai pensato bene? Certe occasioni non si ripresentano due volte nella vita.</Text>
+    <Choices>
+      <Choice text="Sì, accetti il loro aiuto" goto="35" />
+      <Choice text="No, grazie" goto="29" />
+    </Choices>
+  </Page>
+  <Page id="29">
+    <Text>Credi di aver mai perso un treno importante nella tua vita? Eri distratto/addormentato/in ritardo/al bagno? Qualcuno ti ha rubato il posto o ingannato o fatto l’occhiolino?</Text>
+    <Choices>
+      <Choice text="Sì, un treno l’hai perso" goto="35" />
+      <Choice text="No, non ne hai persi" goto="30" />
+    </Choices>
+  </Page>
+  <Page id="30">
+    <Text>Il questionario è scritto troppo piccolo? Sei stanco di rispondere a queste domande?</Text>
+    <Choices>
+      <Choice text="Sì, sei stanco" goto="1">
+        <Effects>
+          <setVariable target="bugie" value="0" />
+          <setVariable target="fichi" value="0" />
+          <setVariable target="spiato" value="0" />
+        </Effects>
+      </Choice>
+      <Choice text="No, vai avanti" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="31">
+    <Text>Supponiamo sia in atto un complotto: che dimensione avrebbe? Globale? Nazionale? Famigliare? Condominiale?</Text>
+    <Choices>
+      <Choice text="Globale" goto="32" />
+      <Choice text="Nazionale" goto="32" />
+      <Choice text="Famigliare" goto="32" />
+      <Choice text="Condominiale" goto="32" />
+    </Choices>
+  </Page>
+  <Page id="32">
+    <Text>Hai mai avuto problemi con i tuoi condomini? Di che tipo? Lavori di ristrutturazione? Bonus edilizio? Gestione dei parcheggi? Raccolta dei fichi condominiali?</Text>
+    <Choices>
+      <Choice text="Lavori di ristrutturazione" goto="33" />
+      <Choice text="Bonus edilizio" goto="33" />
+      <Choice text="Gestione dei parcheggi" goto="33" />
+      <Choice text="Raccolta dei fichi condominiali" goto="33">
+        <Effects>
+          <setVariable target="fichi" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Nessun problema" goto="33" />
+    </Choices>
+  </Page>
+  <Page id="33">
+    <Text>Sai cos’è la tragedia dei beni comuni?</Text>
+    <Choices>
+      <Choice text="Sì, lo sai" goto="34" />
+      <Choice text="Dici di saperlo" goto="34">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="34">
+    <Text>Ti spaventa di più l’intelligenza artificiale o la stupidità umana?</Text>
+    <Choices>
+      <Choice text="L'intelligenza artificiale" goto="40">
+        <Requirements>
+          <Variable id="fichi" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="L'intelligenza artificiale" goto="38">
+        <Requirements>
+          <Variable id="fichi" operator="lt" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="La stupidità umana" goto="40">
+        <Requirements>
+          <Variable id="fichi" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="La stupidità umana" goto="38">
+        <Requirements>
+          <Variable id="fichi" operator="lt" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="35">
+    <Text>Hai mai spiato qualcuno? Mai fatto la spia quando un compagno di classe copiava? Mai rivelato le scappatelle di un amico, i suoi errori, le cose per cui provava vergogna?</Text>
+    <Choices>
+      <Choice text="Sì, l’hai fatto" goto="36" />
+      <Choice text="Mai, in vita tua" goto="36">
+        <Effects>
+          <setVariable target="spiato" value="1" />
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="36">
+    <Text>Non ti senti per questo autore di un complotto?</Text>
+    <Choices>
+      <Choice text="Sì, un piccolo complotto" goto="37">
+        <Requirements>
+          <Variable id="spiato" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Sì, un piccolo complotto" goto="38">
+        <Requirements>
+          <Variable id="spiato" operator="lt" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="No, niente affatto" goto="37">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="37">
+    <Text>Saresti disposto a combattere per qualcosa che ritieni molto importante? Combattere in senso letterale, con le armi, a uccidere qualcuno?</Text>
+    <Choices>
+      <Choice text="Ti rifiuti di rispondere" goto="38" />
+      <Choice text="Sì, saresti disposto" goto="40" />
+      <Choice text="No, non lo saresti" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="38">
+    <Text>Saresti disposto a lavorare per noi? Anche se non sai chi siamo noi, soprattutto perché non lo sai?</Text>
+    <Choices>
+      <Choice text="Sì, lavoreresti per loro" goto="39" />
+      <Choice text="No — ma ci stai pensando" goto="39">
+        <Effects>
+          <addVariable target="bugie" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="39">
+    <Text>Credi che ora ti lasceremo libero? Che ti denunceremo/uccideremo/baceremo (come Giuda)? Ti faremo l’occhiolino?</Text>
+    <Choices>
+      <Choice text="Sì, credi che ti lasceranno libero" goto="40" />
+      <Choice text="No, non lo credi" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="40">
+    <Text>Hai mentito a qualcuna delle precedenti domande? Abbiamo concluso; forse.</Text>
+    <Choices>
+      <Choice text="Sì, hai mentito" goto="41">
+        <Requirements>
+          <Variable id="bugie" operator="lte" value="3" />
+        </Requirements>
+      </Choice>
+      <Choice text="No, non hai mentito" goto="41">
+        <Requirements>
+          <Variable id="bugie" operator="lte" value="3" />
+        </Requirements>
+      </Choice>
+      <Choice text="Sì, hai mentito" goto="1">
+        <Requirements>
+          <Variable id="bugie" operator="gte" value="4" />
+        </Requirements>
+        <Effects>
+          <setVariable target="bugie" value="0" />
+          <setVariable target="fichi" value="0" />
+          <setVariable target="spiato" value="0" />
+        </Effects>
+      </Choice>
+      <Choice text="No, non hai mentito" goto="1">
+        <Requirements>
+          <Variable id="bugie" operator="gte" value="4" />
+        </Requirements>
+        <Effects>
+          <setVariable target="bugie" value="0" />
+          <setVariable target="fichi" value="0" />
+          <setVariable target="spiato" value="0" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="41" ending="true">
+    <Text>Abbiamo finito, puoi tornare alla tua vita e ricominciare a fare quello che facevi prima, a fingere di essere libero. Forse in qualche momento dell’interrogatorio hai intuito la verità, ma è troppo scomoda e complessa perché tu possa cambiare. Non fare domande, dormi sereno guarda l’ESG.</Text>
+  </Page>
+</Librogame>

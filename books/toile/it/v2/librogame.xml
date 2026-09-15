@@ -1,0 +1,822 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="toile-it" workId="toile" language="it" title="Tela" author="Éric « Skarn » Berthe" checks="deterministico" genre="Fantastico, sentimentale" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/">
+  <Changes>
+    <Change>Adattato per questa app: la struttura, le regole e alcune parti del testo sono state modificate o tolte per funzionare con il suo motore</Change>
+    <Change>Tradotto in italiano dall'originale francese</Change>
+  </Changes>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <ContentWarnings>Violenza sulle donne: il re picchia, umilia e aggredisce sessualmente la protagonista, schiava per una notte. Niente è compiaciuto, tutto è visto dai suoi occhi, e il libro non lascia dubbi su che cosa pensi di quell'uomo. Una belva divora qualcuno. Prostituzione, schiavitù, lutto di figli.</ContentWarnings>
+  <Blurb>«Perché la tragedia greca non è riservata al teatro, né recitarvi una parte è un privilegio concesso ai soli attori.»
+
+Una strega vi ha restituito un corpo. Parecchi, anzi: al palazzo di Iolco una maschera cade e un'altra prende il suo posto, e ogni volta siete qualcun altro. Stasera il re Giasone dà un banchetto. Avete una notte per arrivare a quello che lui tiene sotto i piedi, e in fondo alla scala c'è una guardiana.</Blurb>
+  <Variables>
+    <Variable id="codiceDetente" name="Codice Distensione" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceMatriarche" name="Codice Matriarca" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceSouffrance" name="Codice Sofferenza" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceMariage" name="Codice Matrimonio" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="colpita" name="Il re vi ha colpita" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1">
+    <Text>A ogni roccia che le vostre mani afferrano, a ogni fessura in cui le dita affondano, a ogni sporgenza su cui il tallone fa presa, vi prende una meraviglia che non sapete contenere. Possedere di nuovo quattro membra è un'esperienza straordinaria e sconcertante, come lo è vedere il mondo attraverso un solo paio d'occhi, sentire il sapore del sudore sulle labbra, respirare a pieni polmoni... Tante sensazioni che da moltissimo tempo non speravate più di ritrovare.
+
+Eppure, perfino davanti a un simile miracolo, non potete semplicemente chiudere le palpebre e credere che tutta questa storia folle sia stata soltanto un brutto sogno. Questo corpo muscoloso che sale agile lungo una parete a strapiombo non è quello che avevate prima. Nemmeno i riflessi incisi nella sua carne sono i vostri, e benché non abbiate mai in vita vostra praticato l'arrampicata, trovate naturalmente gli appigli giusti, le prese migliori, e salite con una costanza e una rapidità da far invidia a un capretto.
+
+Lontano sotto i vostri piedi c'è una grotta lambita dalle onde, e là dentro abita colei che è all'origine del vostro stato presente. In quella caverna buia, affumicata da bracieri di erbe misteriose dal profumo pesante e inebriante, vi aspettava la strega. Una donna emaciata, scheletrica, una taumaturga che ha padroneggiato perfino gli arcani più segreti dell'arte, una vecchia devastata dagli anni, dal dolore e dall'odio, un'incantatrice dal potere senza pari fra i mortali, un mostro, un'eroina.
+
+Non sapete per quale filo maligno del destino siate finita nella sua dimora orlata di schiuma a perorare la vostra causa. Quale non fu però la vostra sorpresa nel sentirle annunciare che poteva davvero aiutarvi, e che era disposta a farlo. Le parole esatte che pronunciò mentre stendeva le maschere davanti a voi, cinque figure di teatro dalle smorfie fisse, vi risuonano ancora nelle orecchie:
+
+«Nessuno ha il potere di andare contro la volontà degli dèi. Ma è possibile, per un tempo, sfuggire al ruolo che ci hanno assegnato, infilarsi una maschera e incarnare un altro personaggio. La recita non dura mai più di una manciata di scene, ma dentro quel frammento d'eternità un uomo può essere uno schiavo, un cittadino un eroe, un dio, un mostro o persino una donna.
+
+Con la stessa magia posso restituirti la tua umanità. Per un tempo, almeno.»
+
+Non avete nemmeno preso in considerazione l'idea di rifiutare. Dopo tanti anni passati a struggervi inutilmente per quello che eravate stata, a sperare invano che la vostra aguzzina avesse pietà di voi, l'idea di ritrovare, sia pure per una durata effimera, la sensazione di essere una donna vera e non una bestia aborrita era una tentazione irresistibile. Non importava il prezzo:
+
+«Chiedo una cosa sola in cambio. Nel palazzo sopra di noi c'è una sala buia dove il re ha ammucchiato i tesori che non vuole più vedere. Fra quelli riposa una tela incompiuta. Voglio che tu la finisca.»
+
+La vostra mano d'un tratto non afferra più che il vuoto, e uno sguardo al cielo vi annuncia che siete arrivata. Con un'ultima trazione vi issate sul bordo e finite accovacciata sulla terraferma. Proprio davanti a voi, a portata di braccio, si alza il muro posteriore di un vasto edificio di pietra bianca, che scintilla nella luce del sole al tramonto. La vostra meta. Il palazzo d'estate del re di Iolco.
+
+Vi rialzate con agilità e cominciate a scivolare di lato lungo la stretta striscia di terreno che separa la parete dall'abisso. Incollata così all'edificio, non potete non sentire le risate, la musica e i canti che ne escono, insieme al profumo dolce delle vivande e alle scie di mille essenze intrecciate. Dentro c'è festa.
+
+Arrivata alla svolta, vi prendete il tempo di osservare i dintorni. Proseguire vorrà dire lasciare la sicurezza della vostra posizione precaria per gettarvi nella bocca del lupo. A pochi passi indietro rispetto al ciglio e a voi stessa cominciano le dispense, le dipendenze e le cucine, che fremono di un'attività frenetica. Gli schiavi si agitano in tutte le direzioni, chi porta verso il palazzo vero e proprio i piatti appena preparati e anfore su anfore, chi ne riporta fuori avanzi e recipienti vuotati. Il flusso è ininterrotto, caotico, elettrico.
+
+Mentre riflettete sul modo migliore di infiltrarvi, vi coglie una vertigine strana. Sentite formicolii bizzarri sul viso e, passandoci sopra la mano, raccogliete frammenti di terracotta. Scuotete forte la testa e cadono a terra i pezzi rotti di una maschera.
+
+Vi rendete conto allora di essere cambiata. Di nuovo. Siete più bassa, meno atletica di un minuto prima. I vostri capelli rasati sono cresciuti e adesso sono raccolti in uno chignon, e la sporcizia guadagnata durante la salita è sparita. La tunica corta che lasciava le gambe nude ha ceduto il posto a vesti semplici e coprenti, sobrie e consumate ma più nel tono di ciò che è accettabile in buona compagnia. Una divisa che somiglia in modo impressionante a quella che portano i servi che state spiando.
+
+Di nuovo vi ripassate nella testa la scena della grotta, i consigli e gli avvertimenti della strega:
+
+«Non posso prevedere i ruoli che incarnerai, né per quanto tempo. A volte una maschera durerà solo qualche battito di cuore, a volte potranno passare parecchie ore.
+
+Tutt'al più posso avvertirti che, in un modo o nell'altro, la recita finirà al prossimo sorgere del sole. I miei poteri sono quelli della notte, crescono mentre muore il giorno e muoiono a loro volta quando il giorno rinasce. Perché traggo la mia forza dalle dee di prima degli dèi, dalla signora delle profondità, dalla cacciatrice lunare e dalla madre nutrice, dall'astro pallido, dalla foresta scura e dalla terra nera. Il ritorno del fuoco del cielo annuncerà la fine dei miei incantesimi, che tu lo voglia o no.
+
+Perciò sbrigati.»
+
+Silenziosa come la foresta e rapida come il vento, superate gli ultimi metri che vi separano dal viavai e vi infilate nel flusso di esseri umani. Sotto il vostro nuovo aspetto siete indistinguibile dagli altri domestici, serva anonima in mezzo a una folla a cui nessuno bada, nemmeno gli altri schiavi, troppo presi dalla logistica del banchetto.
+
+I vostri passi vi guidano naturalmente in quella che sembra essere la dispensa del vino, dove un qualche intendente vi caccia fra le dita un'anfora ordinandovi di andare a riempire le coppe degli invitati, e più in fretta di così. Ubbidite, correndo verso l'ingresso dei servi e stringendovi l'urna di terracotta contro il petto. La guardia di turno stasera non vi degna nemmeno di uno sguardo, e l'istante dopo siete dentro, e camminate sul confine fra due mondi, in uno stretto corridoio, barriera nell'animo se non nella funzione.
+
+La sua faccia esterna serve le varie stanze della vita di tutti i giorni della casa, dagli alloggi degli schiavi alla camera privata del padrone. Adesso immerse nell'ombra, disabitate, silenziose, quelle sale hanno un aspetto sinistro, come se il palazzo fosse deserto, dimenticato dagli dèi e dagli uomini.
+
+Il suo bordo interno circonda invece per tre quarti la grande sala dove si svolge il banchetto, tutta luci, rumori e profumi. Una moltitudine di convitati comodamente sdraiati vi gode i piaceri della tavola e della carne, spalleggiata in questo da schiavi quasi altrettanto numerosi. I coppieri, che si assicurano che le coppe non restino mai vuote a lungo, sono i meno appariscenti, eclissati dai musicisti, dai danzatori e dalle pornai dei due sessi che si sforzano di piacere e di compiacere.
+
+Il re c'è, ma solo il trono permette di distinguerlo dai suoi invitati. Una prostituta sulle ginocchia, una seconda alla destra a fargli da serva personale, il viso arrossato dall'alcol e dal caldo, gode della serata più di quanto la comandi. Non sono ordini ma grasse battute da ubriaco quelle che gli escono regolarmente dalle labbra, e provocano ondate di risate altrettanto alcoliche.
+
+Non avete nessuna voglia di tuffarvi in quella mischia per paura di non uscirne più, ma temete anche che il vostro comportamento finisca per attirare l'attenzione se non vi decidete a recitare la vostra parte. Tagliando la pera a metà, vi interessate agli invitati che se ne stanno in disparte, quelli che si sono allontanati apposta dal centro dell'attenzione per rifugiarsi in una calma relativa. Due di loro si distinguono subito.
+
+Il primo è impossibile da non vedere, semplicemente perché non è umano: dalla vita in giù l'uomo lascia il posto al cavallo. Un centauro. Benché abbiate sentito innumerevoli storie sul loro conto, è la prima volta che ne vedete uno con i vostri occhi. E se le voci sulla sua specie parlano di bruti barbari, questo esemplare è pulito, pettinato, e in generale sta molto più elegante e diritto dei cittadini a due gambe che stanno nella stessa stanza.
+
+Il secondo è un vecchio canuto che si è infilato in un angolo con un po' di vino e di cibo. I suoi occhi sono bianchi come il latte, e la sua cecità evidente. Ma, più ancora dell'età e dell'infermità, è il suo comportamento a stupirvi. È teso come un arco, beccucchia nervosamente nel piatto, sembra pronto a darsela a gambe da un momento all'altro.</Text>
+    <Choices>
+      <Choice text="Andare a vedere da vicino l'essere chimerico" goto="19" />
+      <Choice text="Avvicinare il cieco" goto="26" />
+      <Choice text="Svignarvela senza servire nessuno" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="2">
+    <Text>La vostra domanda riesce nell'impresa di far cadere ancora più in basso il morale del centauro, ma lui vi risponde lo stesso.
+
+«È scoppiata la guerra. Molto presto partirò per uccidere i miei fratelli di sangue accanto ai miei fratelli di cuore. Prima di allora volevo rivedere almeno una volta ciascuno dei miei discepoli. Perché per quanto in basso siano caduti, restano i miei figli.»
+
+Su questa conclusione l'uomo-bestia vi ringrazia con un tono che lascia intendere che fareste meglio a lasciarlo solo col suo bicchiere, e voi ubbidite alla sua ingiunzione implicita.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="3">
+    <Text>Vi sottraete alla sua stretta.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="21">
+        <Requirements>
+          <Variable id="codiceDetente" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuare" goto="7">
+        <Requirements>
+          <Variable id="codiceDetente" operator="lte" value="0" />
+          <Variable id="colpita" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuare" goto="25">
+        <Requirements>
+          <Variable id="codiceDetente" operator="lte" value="0" />
+          <Variable id="colpita" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4">
+    <Text>Un lampo di emozioni contraddittorie e mescolate passa negli occhi del re quando sente la vostra risposta, poi comincia a osservarvi con sospetto.
+
+«Se vieni da Corinto devi sapere che è là che sono morti i miei figli. Come osi pronunciare quel nome davanti a me?
+
+— Siete stato voi a chiedermelo, mio signore.»
+
+L'avete detto sfrontata, provocante, o al contrario con aria impaurita, conciliante?</Text>
+    <Choices>
+      <Choice text="Sfrontata, provocante" goto="25" />
+      <Choice text="Con aria impaurita, conciliante" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>L'uomo esita a rispondervi, poi mormora:
+
+«Lo spettro di una morte violenta aleggia su tutti quelli che sono riuniti qui in questo momento.»
+
+Il terrore che emana da tutto il suo essere, attraversato a tratti da movimenti nervosi, vi conferma che crede a quello che annuncia.</Text>
+    <Choices>
+      <Choice text="Chiedergli come fa a esserne così sicuro" goto="14" />
+      <Choice text="Proporgli di avvertire il re" goto="39" />
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Text>Cercate di guadagnare tempo, non fosse che per ritrovare la calma dopo la sorpresa iniziale di incontrare un essere simile qui. Piegando il ginocchio con deferenza, modulate il timbro della voce per caricarlo di rispetto:
+
+«O saggia sfinge, ignoravo che foste presente in questi luoghi, altrimenti avrei portato un'offerta appropriata. È un onore poter conversare con una persona mitica quanto voi. Quale divinità complice devo ringraziare per questo incontro?
+
+— Ringrazia la tua cupidigia» risponde il mostro, divertito dalla vostra improvvisa untuosità, ma non scontento. «Sono la guardiana di questi luoghi, incaricata di proteggere i tesori che racchiudono. Solo il loro legittimo proprietario può entrare qui senza affrontare il mio enigma.
+
+— Un compito nobile, ma che sembra ben piccolo in confronto alla vostra grandezza. Per quale sorte vi è toccato?»
+
+La creatura vi osserva attentamente, soppesando l'insolenza della vostra domanda, prima di rispondere sibilando di rabbia:
+
+«Come sempre con gli umani, la causa è la vigliaccheria.
+
+Dopo essermi lasciata cacciare da Tebe per permettere al parricida di compiere il suo destino incestuoso, non avevo che un desiderio: tornarmene a casa nelle sabbie calde del mezzogiorno, dove è il mio posto e dove gli abitanti mi trattano con la devozione che mi è dovuta.
+
+Ma mentre procedevo di isola in isola, la mia strada incrociò quella di quella banda di buffoni che si riportavano a casa quella pelle di pecora.»
+
+Indica con un movimento sdegnoso di una delle zampe posteriori il vello lucente dietro di sé.
+
+«Siccome la loro saggezza non eguagliava il loro coraggio, ne sgranocchiai qualcuno prima che spuntasse quell'energumeno con la sua lira. Pizzicò le corde dello strumento, e io persi all'istante ogni senso della realtà sotto l'influenza della sua musica incantatrice. Nella mia trance mi fece rivelare la risposta al mio stesso enigma, e fui costretta a risparmiarli.
+
+La storia avrebbe potuto fermarsi lì, se il loro capo, che adesso porta la corona, non mi avesse giudicata troppo pericolosa per essere lasciata libera. La sua compagna strega si arrangiò allora per legarmi a loro. Con un'antica magia mi costrinse a fare loro da cane da guardia, a difendere il tesoro appena conquistato contro tutti i ladri e gli usurpatori.»
+
+Collera, rabbia, odio riempiono le parole della sfinge mentre srotola la sua storia. Le chiedete di conseguenza se non esista un modo per liberarla da questo compito ingrato.
+
+A queste parole la creatura si avvicina, dominandovi con tutta la sua statura, i denti scoperti che brillano come gioielli mortali, una fiamma maligna negli occhi. Dopo un'eternità abbassa la testa perché il suo viso sia proprio davanti al vostro e riprende la parola, suadente:
+
+«Certo che c'è un modo. Niente è più fragile di un incantesimo. Ma proponi davvero di liberarmi, di lasciar correre di nuovo per il mondo la bestia mangiatrice di uomini? Desideri davvero che la storia si ricordi di te come dell'infame che ha risvegliato il flagello, come della nuova Pandora? Questa ignominia, sei pronta ad accettarla se serve ai tuoi scopi?»
+
+I vostri occhi affondano in quelli della chimera, si riflettono in quell'abisso d'ombra che ha visto tutta la grandezza e la decadenza dell'umanità nel corso dei suoi secoli di esistenza, scivolano sui simboli del suo potere fisico — muscoli, artigli, zanne — e si fermano sulla sua arma più temibile: la lingua affilata.</Text>
+    <Choices>
+      <Choice text="Sì, sono pronta ad accettarla" goto="41" />
+      <Choice text="No" goto="35" />
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>Il vostro rifiuto è leggero come una piuma, ma è la scintilla che fa divampare l'incendio. Il re diventa ancora più rosso, urla e vi colpisce con un rovescio del pugno chiuso. Un altro colpo vi raggiunge allo stomaco, piegandovi in due, poi comincia a picchiarvi freneticamente come un sacco di sabbia.
+
+Le sue parole non sono che un flusso continuo di ingiurie e di insulti, in cui vi identifica con tutte le donne del mondo nella vostra insolenza, nella vostra dissolutezza e negli innumerevoli altri difetti che vi attribuisce.
+
+Da quel che intravedete fra le lacrime di dolore, perfino gli altri invitati sono scandalizzati da uno spettacolo simile, ma nessuno muove un dito per aiutarvi.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>L'indovino sembra sollevato che la conversazione devii su un altro argomento, per quanto lugubre.
+
+«Ne avrai già sentito parlare, deformato da mille voci, ma ecco quello che più si avvicina alla verità: lui aveva tutto. La gloria. La ricchezza. Il potere. L'amore. Tutto questo lo doveva quasi interamente a una donna sola, diventata per lui una traditrice dei suoi, una ladra dei tesori del suo popolo, una demone fratricida.
+
+E per tutta ricompensa la abbandonò. Voltò le spalle a colei che l'amore aveva già trasformato una volta nel peggiore dei mostri.
+
+Il seguito è una lunga tragedia. Lei distrusse tutto ciò a cui lui teneva, anche se così doveva distruggere se stessa.
+
+Adesso non restano a nessuno dei due che amari ricordi di un tempo che non tornerà mai più, dimenticati sotto la custodia della regina degli dèi.»
+
+Dopo un discorso tanto lungo per un corpo tanto fragile, il vecchio sospira e si richiude su se stesso, le braccia intorno alle ginocchia. Vi chiede di lasciarlo riposare, e voi ubbidite.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMatriarche" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>Denti consumati disegnano un sorriso e lui annuisce:
+
+«Hai ragione, probabilmente» dice tendendo il bicchiere. «Tremare come una foglia non mi servirà a molto. Una coppa non può farmi male.»
+
+Versate, e lui assapora poi lentamente la bevanda, riprendendo un po' di colore.
+
+«Immagino che ogni gentilezza richieda una ricompensa, anche se non fai che il tuo lavoro. Vediamo...»
+
+Si scervella, poi declama con una smorfia contratta:
+
+«Quando gli dèi, o i loro inviati, ti fanno una domanda, fa' in modo di non rispondere. Perché né la franchezza né la menzogna ti porteranno qualcosa di buono.»
+
+Schiocca la lingua contro il palato per dare il tono alla sua dichiarazione:
+
+«Una lezione che avrei tanto voluto conoscere ai miei tempi.»
+
+Poi si rimette a sorseggiare delicatamente la sua bevanda.</Text>
+    <Choices>
+      <Choice text="Lasciarlo in pace" goto="12" />
+      <Choice text="Interrogarlo sul motivo della sua agitazione" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Text>Nonostante il sapore del sangue in bocca, trovate la forza di muovere la lingua per un'ultima sortita temeraria:
+
+«E il Vello d'Oro, Giasone? E questo trono su cui ti pavoneggi? E tutta la tua gloria, tutta la tua leggenda, non le devi forse a lei?»
+
+A queste parole il re si abbassa, vi afferra per le spalle e, con una fatica evidente dovuta all'età e alla decrepitezza fisica, vi solleva all'altezza delle spalle prima di scagliarvi in mezzo ai tavoli e alle panche. Per poco non vi schiantate a testa avanti contro un bordo di pietra, ma non potete evitare di scorticarvi scivolando sulla ceramica, e le ferite appena ricevute bruciano ancora di più.
+
+Poi il re avanza verso di voi a grandi falcate mentre i presenti si scansano più o meno discretamente.
+
+«Di tutto questo non me ne importa niente. I suoi regali avvelenati può tenerseli. Tutto quello che mi ha dato, e che non si è già ripresa con un coltello insanguinato, ci rinuncio di buon grado. Il Vello d'Oro e tutte le meraviglie del viaggio in Colchide, non le voglio più. Portano il suo emblema, e preferisco vederle marcire o bruciare che conservarle.»
+
+La sua mano si chiude sul vostro collo e vi schiaccia contro una delle panche, lasciandovi appena l'aria per respirare, prima di urlare a tutti:
+
+«Che qualcuno mi vada a prendere una frusta! Ho qui una baldracca che ha bisogno di una buona correzione!»
+
+Ma la risposta che riceve non è quella sperata.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Text>Il re si concede un sorriso da intenditore:
+
+«Tebe? Non è un posto dove si vive bene di questi tempi, in effetti. Capisco che tu abbia preferito cambiare aria. Hanno ancora un nuovo re? Sono sotto il giogo di una nuova maledizione divina? Carestia, peste, mostri... Il Labirinto di Minosse sembra un luogo di villeggiatura in confronto a una città simile!»</Text>
+    <Choices>
+      <Choice text="Rassicurarlo" goto="37" />
+      <Choice text="Dipingere il quadro di una città devastata" goto="16" />
+    </Choices>
+  </Page>
+  <Page id="12">
+    <Text>Vi allontanate tranquillamente dallo strano invitato, perplessa su quello che ha detto.</Text>
+    <Choices>
+      <Choice text="Andare a vedere il centauro" goto="19" />
+      <Choice text="Avanzare verso il cieco" goto="26" />
+      <Choice text="Andarsene senza farsi notare" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="13">
+    <Text>L'enigma arriva, pronunciato con trepidazione e malizia:
+
+«Chi è la migliore tessitrice del mondo?»
+
+Quelle poche parole vi bloccano di colpo. Osservate, impietrita, la malvagità pura sul viso della creatura. Lo sa. Sa chi siete. Si prende gioco di voi, si diletta delle vostre sofferenze e della vostra paura. Una leonessa che gioca con la preda.
+
+Sforzandovi di ignorare le farfalle nello stomaco, vi concentrate per trovare la risposta che lei desidera.</Text>
+    <Choices>
+      <Choice text="Rispondere «Atena»" goto="18" />
+      <Choice text="Rispondere che siete voi" goto="29" />
+      <Choice text="Cercare un modo per non rispondere" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Text>Un piccolo sibilo che potrebbe assomigliare a una risata esce dalla bocca del vostro interlocutore quando mettete in dubbio le sue capacità:
+
+«Che cosa non darei perché le mie previsioni si rivelassero ogni tanto fallibili!
+
+Ma si tratta di un dono che Zeus mi ha concesso, e l'errore gli è estraneo.
+
+Ho visto nella notte una bestia feroce, tutta zanne, artigli e odio, far scorrere il sangue a questo banchetto, e questo sarà. Ho visto un mostro a otto braccia trasformare il ricordo della gloria in un inno alla disperazione, e questo sarà. Ho visto un re in ginocchio che contemplava l'abisso, e questo sarà!»
+
+Dopo una tirata simile conclusa sugli acuti, il suo respiro è spezzato e, tendendo l'orecchio, sentite i battiti frenetici del suo cuore.</Text>
+    <Choices>
+      <Choice text="Insistere per saperne di più" goto="20" />
+      <Choice text="Proporgli di avvertire il re" goto="39" />
+      <Choice text="Andarsene prima di procurargli un'emozione fatale" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="15">
+    <Text>I vostri timori si rivelano infondati, e nessun sorvegliante coscienzioso viene a fermarvi mentre sparite sempre più in fondo alla dimora. Capite presto il perché, perché i locali non sono vuoti come supponevate all'inizio. Certi invitati in cerca di un po' più di intimità si sono ritirati qua e là, e sembra credibile che stiate facendo una commissione per l'uno o per l'altro.
+
+Se potete muovervi liberamente, avete però ancora un'idea vaga di dove si trovi la misteriosa sala del tesoro, e vi pare delicato chiedere la strada. Perciò cercate con pazienza, esplorando stanza dopo stanza.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="38">
+        <Requirements>
+          <Variable id="codiceMatriarche" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuare" goto="27">
+        <Requirements>
+          <Variable id="codiceMatriarche" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>Date briglia sciolta all'immaginazione nel descrivere una città in preda all'anarchia, alla malattia, al crimine e ai castighi celesti, dove l'innocente sfugge ai banditi e alle guardie corrotte solo per finire nello stomaco di un mostro. Il re scoppia a ridere alle vostre parole:
+
+«Esageri. Quella città sta male, ma non quanto racconti tu. I mostri in particolare non sono più che ricordi buoni giusto a spaventare i marmocchi.»
+
+Sottolineando la frase con un colpo sul petto, aggiunge:
+
+«Del resto sono stato io stesso a eliminare una volta per tutte la Sfinge, al ritorno dalla Colchide!»</Text>
+    <Choices>
+      <Choice text="Spalancare gli occhi meravigliata" goto="30" />
+      <Choice text="Metterlo in dubbio" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Text>Questa volta è un pugno chiuso a colpirvi in pieno viso. L'impatto vi getta a terra, il labbro spaccato. Poi il re si alza, scarlatto, barcollante, e comincia a tempestarvi di colpi sotto lo sguardo attonito degli invitati e terrorizzato degli schiavi.
+
+«Non. Parlare. Mai. Di lei.»
+
+Cercate di proteggervi come potete dai suoi assalti, raggomitolata in posizione fetale, gli avambracci a guardia del viso, ma pugni e piedi continuano lo stesso a raggiungervi, coprendovi di lividi e spargendo un dolore cupo in tutto il corpo.
+
+«Quella donna... Quel demone... Non mi ha mai portato altro che problemi, lacrime, maledizioni. Avrei dovuto lasciarla crepare nel suo paese arretrato!»
+
+Quasi ogni parola è scandita da un colpo nuovo, in un diluvio che sembra non doversi fermare mai.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceSouffrance" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Restare prostrata sperando che si calmi" goto="43" />
+      <Choice text="Cercare di provocarlo ancora di più" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Text>«Una risposta diplomaticamente abile.»
+
+Non aggiunge nulla ad alta voce a questa dichiarazione, ma il sorriso dai mille denti lucenti sul suo viso basta a completarla con un «Ma sbagliata.»</Text>
+    <Choices>
+      <Choice text="Continuare" goto="33" />
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>Anche ignorando quello che si trova sotto il suo torso, quell'essere non sembra al suo posto qui. Che si tratti dell'abbondante capigliatura riccia venata d'argento, della pelle abbrunita dal sole, dei tratti scavati dal vento, delle mani spesse e callose, tutto in lui evoca la steppa, la distesa piatta e infinita dove uomini e bestie, alla mercé costante di Elio e di Eolo, non hanno altri padroni che se stessi. Come pare strano vederlo qui, seduto composto, a far girare macchinalmente la coppa vuota fra le dita.
+
+Eppure i suoi occhi secolari esprimono una noia profonda, e perfino disprezzo, mentre contemplano l'orgia che si svolge a pochi passi da lì, e i suoi muscoli fremono a intervalli regolari, come se si trattenesse a gran fatica dal balzare.
+
+Quando gli offrite un po' di vino, fa quello che nessun altro invitato ha fatto finora: alza la testa per guardarvi dritto negli occhi prima di accettare e ringraziarvi con garbo. Poi si mette a parlare, più a se stesso che a voi:
+
+«C'è stato un tempo in cui perfino il guaritore mi avrebbe servito. Un tempo in cui non era che un avventuriero in esilio, con ben poche aderenze ma qualche amico fedele, senza oro né potere ma con coraggio, volontà e umiltà.»
+
+Con il bordo della coppa indica l'uomo coronato spaparanzato sul trono, e prosegue, senza un'oncia di collera ma con fatalismo:
+
+«Adesso è diventato quello che un tempo combatteva. Un re ozioso, corrotto, che vuole solo soddisfare i propri desideri e proteggere la propria posizione.»
+
+Manda giù un sorso di vino, ma non la sua amarezza, e prosegue:
+
+«Non avrò avuto che due specie di allievi: quelli che sono morti giovani, e quelli che sono vissuti abbastanza a lungo da deludermi.»</Text>
+    <Choices>
+      <Choice text="Lasciarlo solo con i suoi pensieri" goto="12" />
+      <Choice text="Dirgli che un allievo all'altezza l'ha avuto" goto="23" />
+      <Choice text="Chiedergli di dire di più sulla giovinezza del re" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="20">
+    <Text>L'uomo si lascia sfuggire un lungo sospiro, poi si raddrizza a sedere, gli occhi morti puntati su di voi. Quando riprende a parlare, è con una voce dotta e stanca:
+
+«Degli uomini e delle donne è come delle mosche. Contemplare le fiamme da lontano non basta loro: devono avvicinarsi fino a bruciare. A Tebe, Edipo mi ha chiesto di vedere fino a perderci gli occhi, eppure nessuno ha imparato nulla dal suo esempio.
+
+Ma poiché desideri tanto sapere, ti concederò il tuo desiderio. Poi starà a te assumerne le conseguenze.»
+
+Si mette a respirare ritmicamente, a scatti brevi. Il suo viso contempla il nulla attraverso di voi, e presto una cantilena grave, sepolcrale, gli esce dalle labbra:
+
+«I tuoi ultimi resti d'onore sacrificherai per arrivare al tuo scopo. La bestia nutrirai di carne umana. Il tuo orgoglio fatale di nuovo abbraccerai. Il tuo trionfo avrà il sapore delle lacrime, il suono dei singhiozzi, l'odore del sangue.»
+
+Poi nient'altro che un'ultima parola: «Va'.»
+
+Vi affrettate a ubbidire.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="21">
+    <Text>Scostate delicatamente la sua mano: «La notte è appena cominciata, mio re. I vostri invitati hanno ancora bisogno di voi per un po'.»
+
+Lui vi risponde con un sorriso: «Al diavolo questi scrocconi. Ho già concesso loro troppo tempo.
+
+— Forse dovreste comunque congedarli come si deve» ribattete con dolcezza.
+
+Annuisce, e intraprende a fatica il tentativo di alzarsi. Se è instabile sulle gambe, non perde però l'occasione di afferrarvi una natica né di posare la seconda mano sulla spalla della prostituta che ha cacciato per farvi posto.
+
+Finalmente in piedi, cerca le parole fra i fumi dell'ottundimento e voi, carezzevole, seducente, affascinante, gli suggerite quello che deve dire, come un'aiutante servizievole e diplomatica. Ed ecco che lui esclama forte e chiaro:
+
+«A tutti quelli che ospito attualmente sotto il mio tetto: il vostro re va a riporre la corona per la notte. Eccovi liberati dai vostri obblighi verso di me, e potete partire o restare come più vi aggrada.»
+
+Risate, coppe alzate e fischi rispondono alla sua dichiarazione.
+
+Fra cui quello di un residente forzato che ha davvero una gran voglia di andarsene.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="22">
+    <Text>Una candela in mano, mentre scendete lentamente verso le profondità oscure della terra, non somigliate più molto a una serva. Quando raggiungete l'ultimo gradino, non le somigliate più per niente.
+
+La vostra composta tunica da schiava ha lasciato il posto a un unico pezzo di stoffa drappeggiato intorno al corpo, una pelle di leone intera senza tagli né cuciture, tenuta ferma da una fibbia di ferro. La cascata caotica dei vostri capelli lunghi si mescola alla criniera della bestia morta, e la spalla, le due braccia, gran parte delle gambe restano nude sotto quell'abito sommario. Tatuaggi complessi vestono la carne così visibile, arabeschi astratti che però non mancano di ricordarvi certe rune contorte intraviste dalla strega. Ne ignorate il senso esatto, ma l'inconscio acquisito con il vostro nuovo ruolo vi suggerisce che sono un'offerta, un omaggio, un segno di rispetto verso le forze che governano i mortali.
+
+Il vostro nuovo aspetto è senza dubbio assai impressionante, ma nel buio sotterraneo debolmente illuminato dal vostro misero lume non c'è molta gente ad ammirarlo. Solo solide fondamenta di pietra, e qualche cassa traboccante di ninnoli antichi. Vi apprestate a frugarle quando li vedete.
+
+Prima di tutto notate il quadrato di lana d'oro appeso al muro, che la vostra semplice fiammella riesce a far scintillare di mille bagliori.
+
+E poi vi accorgete della presenza della sagoma imponente che riposa ai suoi piedi.
+
+Le zampe di leone non fanno il minimo rumore mentre si avvicina a voi passo dopo passo. I loro muscoli potenti e gli artigli affilati fremono a ogni movimento, pronti all'uso. Le ali sono ripiegate, inutili sottoterra, ma la loro apertura si indovina dalla lunga scia di piume bianche. La testa umana — benché la parola sia probabilmente esagerata, perché nessun umano ha denti simili — sorride, del sorriso sadico del predatore che sa la preda condannata. La bestia nel suo insieme è più grossa, più agile, più fornita di estremità taglienti, più terrificante di quanto tutte le leggende lascino supporre.
+
+Capite d'un tratto perché gli accessi a questa sala erano difesi così poco. Con un guardiano simile i tesori non hanno niente da temere: i catenacci servono solo a proteggere i ladri da una morte violenta e poco piacevole.
+
+Vi aspettate che vi salti addosso all'istante, ma la Sfinge si ferma a un passo e sussurra con una voce carica di eccitazione: «Conosci la storia. Rispondi giusto al mio enigma e avrai salva la vita. Sbaglia, e mi darai da mangiare.»</Text>
+    <Choices>
+      <Choice text="Scappare a gambe levate" goto="33" />
+      <Choice text="Interrompere la Sfinge" goto="6" />
+      <Choice text="Aspettare buona l'enigma" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="23">
+    <Text>Medita sulla vostra domanda.
+
+«Fra gli antichi non saprei. Perfino Alcide ha passato la maggior parte della sua esistenza a espiare i propri errori. Gli unici eroi irreprensibili sono quelli che hanno avuto la fortuna di non avere me come maestro, come Orfeo. Anche se la sventura si accanisce su di loro in altri modi.»
+
+Punta un dito accusatore verso il re.
+
+«Vi rendete conto che questo energumeno così pronto a organizzare bevute non si è nemmeno mosso fino alla vicinissima Pimplea per il matrimonio di uno dei suoi vecchi compagni? Mentre colui che fu uno dei suoi migliori amici piangeva la sua promessa sposa, lui smaltiva il vino qui.»
+
+Ripiega il braccio, stringendo la coppa con tutte e dieci le dita.
+
+«No, davvero, non saprei. Forse fra la nuova generazione. Ripongo grandi speranze nel mio nuovo protetto, il giovane Achille. Molto probabilmente l'ultimo che allenerò mai, perché l'età mi pesa, per quanto io sia immortale.»</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMariage" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Lasciarlo alle sue riflessioni" goto="12" />
+      <Choice text="Chiedergli il motivo della sua presenza stasera" goto="2" />
+    </Choices>
+  </Page>
+  <Page id="24">
+    <Text>Cercate un espediente per svicolare, ma i vostri maneggi sono interrotti da un ruggito ilare, seguito da una dichiarazione divertita:
+
+«È troppo tardi. Niente più scappatoie. L'enigma è stato posto, e adesso aspetta una risposta. Ma non esitare a prenderti il tuo tempo. Io ho davanti tutta l'immortalità. Al contrario di te.»
+
+E la bestia si allunga in una posizione comoda senza mai smettere di divorarvi con gli occhi, leccandosi i baffi col pensiero.</Text>
+    <Choices>
+      <Choice text="Approfittare del suo rilassamento per fuggire" goto="33" />
+      <Choice text="Dire «Atena»" goto="18" />
+      <Choice text="Indicare voi stessa" goto="29" />
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Text>Un lampo di dolore vi trapassa quando il palmo del re vi colpisce la guancia con fragore. Poi le sue due mani si chiudono sul collo della vostra veste e vi tirano verso di lui con violenza, schiacciando il suo viso rubicondo a pochi centimetri dal vostro. Respirate gli ansiti spezzati del suo fiato avvinazzato, contemplate troppo da vicino la fiamma pericolosa che brilla in fondo ai suoi occhi iniettati di sangue.
+
+«Ma che cosa abbiamo qui? Una puttana con il caratterino? Piccola mia, forse a qualcuno dei tuoi clienti piace così, ma qui non è il genere della casa. Perciò comportati da donna civile, sottomessa e rispettosa.»</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="colpita" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Annuire docilmente" goto="37" />
+      <Choice text="Continuare a tenergli testa" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="26">
+    <Text>Vi avvicinate e offrite un po' di vino al vecchio infermo. Vi risponde sforzandosi di mostrare un'aria distesa:
+
+«No, grazie. Preferisco restare sobrio e lesto sulle gambe, stasera. È meglio così, se devo credere ai presagi.»</Text>
+    <Choices>
+      <Choice text="Ripartire senza insistere" goto="12" />
+      <Choice text="Chiedergli di quali presagi parli" goto="5" />
+      <Choice text="Insistere perché prenda una coppa" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="27">
+    <Text>Avete l'impressione di aver rivoltato questa casa pietra per pietra quando scoprite finalmente un accesso verso misteriosi sotterranei in fondo a una cantina stretta. Sembrano antiche segrete, dell'epoca in cui questo luogo era una piazzaforte. Benché siano in parte ostruite, è ancora possibile circolarvi e, infilandovi attraverso, finite per raggiungere una scala di fattura più recente, per quanto coperta di polvere.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Text>Abbandonate un re profondamente addormentato che non ha avuto la delicatezza di dichiarare sul cuscino che liberava la Sfinge da tutti i suoi obblighi verso di lui.
+
+A essere esatti, non ha pronunciato granché di intelligibile dal momento in cui ha lasciato lo scomodo trono per la morbidezza del letto. E a meno di svegliarlo a secchiate d'acqua, non ne caverete più niente prima del prossimo mezzogiorno.
+
+L'unica possibilità che vi resta di raggiungere il vostro obiettivo nel tempo concesso è risolvere l'enigma. Adesso che conoscete la strada, vi bastano pochi minuti di passo affrettato per ritrovarvi davanti alla Sfinge, che si diverte del vostro fallimento ma non ne sembra stupita.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="29" ending="true">
+    <Text>Il mostro non conferma né smentisce la vostra risposta. Si limita a sorridere, con un piacere sadico stampato sul viso.
+
+Passa un istante di silenzio. Poi la vostra maschera cade. Seguita da un'altra. E da un'altra ancora. Rotto l'incantesimo, ritrovate l'aspetto che è la conseguenza della vostra hybris. La Sfinge sembra crescere, crescere, ma sapete benissimo che siete voi a rimpicciolire. Presto non la riconoscete più con la vista ma solo grazie alle vibrazioni dell'aria e del suolo che genera, e la sua risata ha la forza di un uragano per la vostra nuova taglia.
+
+Fuggite in fretta sulle vostre otto zampe prima che le venga voglia di schiacciarvi, e tornate svelta a tessere la vostra tela negli angoli oscuri che non avreste mai dovuto lasciare, condannata a non sfuggire mai più al vostro destino di mangiatrice di mosche.</Text>
+  </Page>
+  <Page id="30">
+    <Text>Niente fa più piacere al re che raccontare le sue imprese, per quanto discutibili:
+
+«Fu questione di sfortuna, per quella bestia, incrociare me, Giasone, sulla sua strada. Non mi presi la briga di rispondere al suo stupido enigma. Afferrando la spada la feci a pezzetti come il gattone che era. Avrei anche preso la sua testa come trofeo, ma Atalanta mi convinse che una testa mozzata di donna appesa a un muro era di cattivo gusto!»
+
+E torna a sghignazzare.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceDetente" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="31">
+    <Text>Nel vostro interlocutore prevale lo stupore:
+
+«Pimplea? Ai piedi dell'Olimpo? Non è cosa comune. A parte Orfeo, non conosco nessuno di quelle parti. È vero che hanno ribattezzato tutte le fontane della città in suo onore?»
+
+Non ne avete la minima idea, ma confermate lo stesso. Il re si lascia sfuggire una risata gialla e malsana.
+
+«Quell'idiota ha perso tutto per non aver saputo guardare dritto davanti a sé, e gli tributano un culto. Io ho attraversato il mondo e compiuto mille imprese, e quale è stata la mia ricompensa? Questa.»
+
+Abbraccia la festa con il palmo aperto, la bocca e lo sguardo increspati di disprezzo. Notate che parecchi invitati adesso vi osservano, alcuni con facce patibolari.</Text>
+    <Choices>
+      <Choice text="Dichiarare che è una grande ingiustizia" goto="37" />
+      <Choice text="Mettere avanti la bellezza dell'amore di Orfeo ed Euridice" goto="42" />
+      <Choice text="Ricordargli quello che deve agli altri, e a Orfeo" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="32">
+    <Text>Giasone respinge la vostra osservazione con una smorfia.
+
+«L'ho accettato a bordo, questo è vero. Ma insomma, tutto quello che ha fatto è stato cantare più forte di qualche sirena e ammansire due o tre bestiole. Lui un Argonauta? Piuttosto un peso morto. Del resto è ora di ristabilire la verità.»
+
+Si alza a fatica, barcollante, e si rivolge con lingua impastata a un'assemblea troppo ubriaca per contestare:
+
+«Signore, signori, tengo a correggere un errore troppo diffuso. Orfeo non è mai stato un Argonauta. Non era che una piccola verginella piagnucolona persa in mezzo a una banda di uomini veri. La seconda donna dell'equipaggio!»
+
+Dopo un silenzio, gli rispondono alcune risate avvinazzate, ma senza convinzione, con una punta di imbarazzo davanti a una sortita ingiuriosa sotto più di un aspetto.
+
+Però almeno una persona è contenta che l'abbia pronunciata.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="33" ending="true">
+    <Text>Non esiste nessuna cronaca, nessuna storia, nessuna leggenda che racconti di qualcuno che abbia mai sconfitto una sfinge sul piano puramente fisico. Forse un eroe di forza eccezionale come Eracle avrebbe avuto una possibilità. Voi? Nessuna.
+
+Un balzo fulmineo e siete a terra, schiacciata da parecchie centinaia di chili di muscoli. Con l'energia della disperazione, nonostante il dolore insostenibile delle costole rotte, provate ancora a strisciare, a divincolarvi dalla sua presa, ma artigli affilati vi inchiodano al suolo, un attimo prima che un morso terribile vi immobilizzi definitivamente, strappando le carni e stritolando le ossa.
+
+L'ultima immagine di questa esistenza che vi porterete via sarà la bestia che beve come a una fontana il sangue che sgorga dalla vostra carotide recisa al ritmo dei vostri ultimi battiti di cuore.</Text>
+  </Page>
+  <Page id="34" ending="true">
+    <Text>Avete male. Per quanto tendiate la volontà contro gli assalti dei sensi, avete male. Avete male quando il filo vibra sotto le dita, avete male quando spostate la spola, avete male a ogni colpo d'ago. I vostri sensi sono intorpiditi dal dolore, i vostri gesti rallentati dalla debolezza.
+
+E il tempo passa. Inesorabilmente.
+
+Quando l'alba vi coglierà avrete quasi finito. Quasi.
+
+Ma un'opera quasi terminata resta comunque un'opera incompiuta, un libro a cui mancano delle pagine, un vuoto dentro una melodia, una scultura decapitata.
+
+Un fallimento.</Text>
+  </Page>
+  <Page id="35">
+    <Text>La Sfinge sospira e commenta il vostro rifiuto con una punta di ironia:
+
+«Una decisione saggia, senza alcun dubbio. In questo caso non resta che l'enigma.»</Text>
+    <Choices>
+      <Choice text="Continuare" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="36">
+    <Text>Un potente ruggito trionfale, una risata bestiale venuta dalle profondità della terra, risuona per tutta la sala, seguito qualche istante dopo da grida di terrore umane, da un fracasso di lotta, di oggetti rovesciati, di gente che corre e si spintona.
+
+Il re resta impietrito per qualche secondo, poi si riprende e ordina che tutti si armino, prima di correre lui stesso a gambe levate verso quella che avevate identificato come l'armeria durante la vostra esplorazione, più presto nella notte. Approfittando della confusione generale, voi scappate invece in direzione della sala del tesoro.
+
+Questa volta nessuna creatura mitologica vi sbarra la strada. Solo un odore rancido testimonia che un essere vivente alloggiava qui fino a poco fa. Avete la cantina e tutte le sue meraviglie per voi sola.
+
+Cominciate a frugare le casse una per una, scoprendo pochi tesori ma molti oggetti diversi, consumati, a volte rotti. Strumenti di navigazione, una carta del cielo, ciondoli, una manciata di piume, un chiodo di bronzo... Il riflesso del vostro viso su uno scudo opaco vi rivela che vi siete metamorfosata un'altra volta. Per prendere un aspetto che conoscete bene. Uno che non avreste mai immaginato di rivedere. Quello che avevate nella vostra vita precedente, prima del confronto funesto.
+
+Questo vi riempie di gioia, vi affascina, solleva molte domande. Ma non per questo smettete di frugare, incalzata dal tempo e dall'impegno preso con una taumaturga abbastanza potente da dare anche solo l'illusione di aver disfatto quello che hanno fatto gli dèi.
+
+In fondo all'ultima cassa, sotto le altre e uno strato di polvere, finite per scoprire un guazzabuglio di cose appartenute a una donna. Tanto vesti quanto attrezzi della vita ordinaria, coltelli, pettini e l'indispensabile telaio, ma anche accessori più esoterici, talismani, vasetti di polveri e di erbe misteriose.
+
+E in mezzo a tutto questo, l'oggetto della vostra ricerca. Lo tirate fuori, lo aprite, lo esaminate. Una tela appena cominciata, ma già rovinata dalle cattive condizioni in cui è stata conservata. Un abbozzo sbiadito, lontanissimo dal suo compimento.
+
+Capite subito perché adesso recitate la vostra parte. Perché la strega ha aiutato voi e non un'altra. Perché voi sola potevate compiere quest'ultimo atto.
+
+Bisognerebbe essere un genio dell'arte per riparare, finire e dare splendore a questo accenno di inizio di principio di qualcosa in nemmeno una notte sola. Di un livello da far ingelosire gli dèi.
+
+Bisogna essere voi.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="34">
+        <Requirements>
+          <Variable id="codiceSouffrance" operator="gte" value="1" />
+          <Variable id="codiceMatriarche" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuare" goto="45">
+        <Requirements mode="any">
+          <Variable id="codiceMatriarche" operator="eq" value="1" />
+          <Variable id="codiceSouffrance" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="37">
+    <Text>Giasone si rilassa.
+
+«Bene. Basta chiacchiere. Fammi vedere quanto vali.»
+
+E unendo il gesto alla parola vi apre il davanti della veste, contemplando i vostri seni come merce.
+
+«Niente male. Niente male davvero» commenta con aria di apprezzamento.
+
+E comincia a palpare.</Text>
+    <Choices>
+      <Choice text="Lasciarlo fare" goto="28" />
+      <Choice text="Cercare di divincolarvi" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="38">
+    <Text>Nel corso dell'esplorazione vi imbattete in una curiosità che vi stupisce. In una stanza chiusa ma non serrata a chiave, un vicolo cieco senza finestre dalle pareti nude, riposa una statua di Era, sposa di Zeus, dea del matrimonio e protettrice delle donne.
+
+La scultura è splendida, a grandezza naturale, a figura intera, degna di stare in un tempio. È tenuta perfettamente, con perfino delle offerte recenti, ma un'effigie simile in casa di un privato, fosse pure un re, e soprattutto in una sala periferica e difficile da raggiungere, vi insospettisce.
+
+Ricordandovi le parole del triste invitato che collegava la dea ai tesori dimenticati del re, frugate il luogo in ogni dettaglio, e non tardate a scoprire una botola segreta nel pavimento, proprio dietro la statua. La aprite non senza qualche difficoltà, sigillata com'è dalla polvere, ma nessun catenaccio o sbarra vi ostacola in più, e presto vi si rivela una scala che sprofonda nelle tenebre.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="39">
+    <Text>Il vecchio si lascia sfuggire un grugnito di disprezzo:
+
+«Credi che non l'abbia già fatto? Quell'idiota non vuole sentire ragioni. O meglio: spera che io abbia ragione, che le acque del Lete si richiudano presto su di lui e mettano fine ai suoi tormenti. Dalla morte della moglie e dei figli non ha smesso un istante di invocare gli Inferi con tutto se stesso, nei fatti se non nelle parole.»
+
+Indica la regale carcassa spaparanzata con un movimento della mano altrettanto sdegnoso.
+
+«Ma non è destinato a morire per eccesso di tutto, e questo lo saprebbe già se si degnasse di ascoltarmi oltre quello che gli fa comodo.»</Text>
+    <Choices>
+      <Choice text="Saperne di più sulla morte della famiglia reale" goto="8" />
+      <Choice text="Chiedergli di più sulla sua funesta predizione" goto="20" />
+      <Choice text="Congedarsi" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="40">
+    <Text>Lo sguardo del centauro si perde nel vuoto mentre ricorda giorni migliori.
+
+«Da giovane la sua forza era il carisma. Chi altro può vantarsi di aver riunito sotto la propria insegna i più grandi eroi del mondo, cinquanta leggende per una sola impresa? Quando si imbarcarono pensavo che avrebbero scritto la più bella delle epopee. Alla fine, per colpa sua soltanto, composero una tragedia.»
+
+Allarga le braccia per indicare la sala tutta intorno a sé.
+
+«E questo ne è l'ultimo atto.»</Text>
+    <Choices>
+      <Choice text="Riportare la sua attenzione sui giorni felici" goto="44" />
+      <Choice text="Chiedergli i motivi della sua presenza in questo luogo" goto="2" />
+      <Choice text="Abbandonare questo compagno di poca allegria" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="41">
+    <Text>La risata bestiale si ripercuote per tutta la cantina, rimbalzando sui solidi muri di pietra fino a riempire ogni spazio.
+
+«E così sia» dichiara con malizia.
+
+Poi la bestia si risiede, riprendendo una posa appena meno intimidatoria, e spiega:
+
+«Le catene che mi trattengono qui sono fatte di parole.»
+
+E recita:
+
+Figlia di Echidna, in poche note il tuo enigma fu forzato, e il tuo vero nome svelato,
+
+Per questo, Sfinge, ti ordino, in nome delle antiche leggi,
+
+Di servire colui che ha trionfato su di te,
+
+Orfeo l'incantatore, figlio di Calliope, prima fra le Muse,
+
+E se egli non desidera la tua forza per sé,
+
+Di affidarla a colui che lo comanda in questo giorno,
+
+Giasone, primo fra gli Argonauti.
+
+E riprende con aria cattiva:
+
+«La mia prigionia è legata alla verità e alla durata di quel giuramento. Che una sola di quelle solenni dichiarazioni si riveli non valida, e la mia libertà mi sarà restituita. Che Giasone rinunci alla sua presa su di me, o che rompa quel patto in un modo o nell'altro, e finalmente potrò andarmene da questa cantina sordida.»
+
+Getta un'occhiata verso la strada da cui siete arrivata:
+
+«Ti lascio andare perché so che i tuoi passi ti riporteranno qui in un modo o nell'altro, perché non puoi rinunciare a un'occasione simile. Sta a te provare a convincere il nostro caro re a evitarti di finire nel mio stomaco.»
+
+Vi inchinate e, prima che la bestia cambi idea, vi affrettate a filarvela.
+
+Mentre risalite la scala, il cuore che batte a rompersi, i pensieri vi turbinano in testa. Come farete a convincere Giasone di Iolco a liberare un mostro simile? Anche con una bella dose di vino nel sangue, è difficile sperare che si limiti ad annuire se gli chiedete un favore del genere.
+
+Persa nelle vostre riflessioni, non vi accorgete subito che il vostro aspetto è appena cambiato un'altra volta, e per poco non inciampate nei vostri nuovi sandali con la zeppa.
+
+La calda pelliccia ha lasciato il posto a una veste leggera, e avete la spiacevole impressione di non portare niente sotto. I capelli sono pettinati in modo impeccabile in un elmo di riccioli allegri e, sfiorandovi il viso con la punta delle dita, sentite la presenza del trucco che vi schiarisce l'incarnato, colora le labbra e accentua le sopracciglia.
+
+Non c'è bisogno di uno specchio per sapere a che cosa somigliate adesso, e non siete sicura che vi piaccia quello che comporta.
+
+I vostri passi vi riportano nella grande sala, dove l'ora tarda ha calmato straordinariamente il rumore. I musicisti adesso suonano melodie più tranquille, un semplice sottofondo; buona parte degli invitati se n'è andata, o rientrata a casa o ritiratasi nelle altre stanze, e molti altri sono immersi nell'ebetudine dei loro eccessi.
+
+Il re sul trono continua a presiedere l'assemblea, incoraggiando gli ultimi festaioli ancora attivi, ma mostra anche lui segni di sfinimento. La coppa gli ciondola in mano, gli occhi sono vitrei. Stringe a sé una delle prostitute con gesto possessivo, ma la ignora del tutto, senza degnarla nemmeno di uno sguardo.
+
+Quando vi insinuate al suo fianco, gira la testa con fatica, poi respinge senza riguardi la compagna del momento prima di afferrarvi per la vita e attirarvi a sé:
+
+«Solone non mi aveva detto che aveva una ragazza nuova. È perfetto, cominciavo a stancarmi. Da dove vieni, bella mia?»
+
+Che cosa risponderete a questo:
+
+Da Corinto?
+
+Da Tebe?</Text>
+    <Choices>
+      <Choice text="Da Corinto" goto="4" />
+      <Choice text="Da Tebe" goto="11" />
+      <Choice text="Da Pimplea" goto="31">
+        <Requirements>
+          <Variable id="codiceMariage" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="42">
+    <Text>«L'amore?»
+
+La risata rauca e forzata che risuona è quasi dolorosa da sentire.
+
+«L'amore è una fiamma selvatica. All'inizio il suo calore è piacevole, ma presto il rogo si allarga e brucia tutto senza distinzione, e non lascia che ossa calcinate. Se Euridice fosse vissuta, Orfeo avrebbe probabilmente bevuto la cicuta per la disperazione dopo aver sorpreso la moglie a letto con un satiro qualunque. Il che non avrebbe impedito a tutti gli idioti del mondo di cantarne le lodi.»</Text>
+    <Choices>
+      <Choice text="Dirgli che è ben duro con un vecchio compagno" goto="32" />
+      <Choice text="Cambiare discorso" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="43">
+    <Text>Quando le sue stesse nocche sono rovinate a forza di colpire, il re smette finalmente di pestarvi e ordina con disprezzo ai servi di pulire. Due schiavi robusti vi trasportano in una delle stanze attigue mentre altri cancellano le tracce di quello che è appena successo.
+
+Abbandonata su un pagliericcio, vi rialzate a fatica, appoggiandovi al muro, e camminate a piccoli passi in direzione della sala del tesoro. Avete male dappertutto, un dolore sordo e continuo che sale agli acuti a ogni movimento. Perfino tenere l'equilibrio richiede sforzi consapevoli e intensi.
+
+A forza di volontà riuscite però a trascinarvi, metro dopo metro, gradino dopo gradino, fino alla sala della sfinge. La creatura è là che vi aspetta, e vi guarda dall'alto senza la minima oncia di pietà.
+
+«Un fallimento, dunque. Resta l'enigma» dichiara con calma.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="44">
+    <Text>Per un istante brevissimo il centauro quasi sorride:
+
+«Un'epoca magnifica. Gli eroi si allineavano sul ponte alla partenza. Parecchie decine di bei giovanotti, qualche veterano indurito, e perfino una donna. Tutti risplendevano, fiduciosi nel futuro e nel proprio destino. Sulla banchina le loro famiglie, i loro reggenti, i loro maestri. Salutammo la loro partenza con mille incoraggiamenti e con quasi altrettanti doni. Io personalmente regalai loro una carta dei cieli tracciata di mia mano, perché non perdessero mai la strada della Colchide.»
+
+Una pausa, poi la sua cupa malinconia lo riprende:
+
+«Quella carta, credo che la possieda ancora. Sepolta da qualche parte nel buio insieme agli altri ricordi di quel tempo benedetto, lontano dai suoi occhi e dal suo cuore. C'è solo la statua di Era che non ha osato buttare nelle segrete, perché gli resta abbastanza buonsenso da non far arrabbiare gli dèi oltre misura.»
+
+E l'essere sprofonda di nuovo in un triste mutismo.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMatriarche" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="45" ending="true">
+    <Text>Giasone vive. Con una mano si preme il fianco per contenere l'emorragia, là dove gli artigli del mostro l'hanno arato. Con l'altra si appoggia a una spada segnata dal sangue di quella stessa bestia. Il combattimento è durato tutta la notte ed è costato la vita a parecchie delle sue guardie e dei suoi schiavi, oltre che a qualche invitato, ma allo spuntare del giorno la vittoria è stata loro e la creatura è fuggita.
+
+Quanti anni siano passati dall'ultima volta in cui ha dovuto combattere qualcuno capace di difendersi, guardare dritto negli occhi un mostro vero, abbastanza forte da stritolarlo come un fuscello per quanto re egli sia, affrontare la morte in faccia con la paura nella pancia, non se lo ricorda nemmeno. Deve risalire alla spedizione. Come sempre.
+
+Nonostante il dolore e la debolezza rifiuta ogni cura. Non ha tempo. Prima di tutto deve verificare che non sia successo il peggio. Se la guardiana dei suoi resti ha mancato al suo posto, vuol dire che dietro a tutto questo c'è lei.
+
+Lei. Sempre lei. Ne avrà amate, e perfino sposate, altre, ma quando la gente parla di sua moglie, della sua regina, si tratta sempre di lei. Il suo nome è legato al suo da catene insanguinate che non ha smesso di cercare di spezzare per ritrovarle ogni giorno più robuste. Regolarmente, nelle ore più buie della notte, si immagina che lei sia là ad aspettarlo con un pugnale in mano, pronta a farla finita. Ma il colpo non arriva mai.
+
+La botola mostra in effetti tracce di un uso recente. Sollevarla nel suo stato gli richiede uno sforzo notevole, ma ci riesce a forza di volontà. Una nuvola di polvere e un ragno scappano fuori quando il quadrato di legno ricade pesantemente, poi lui si incammina giù per la scala, reggendo goffamente una lanterna con la punta di due dita tinte di rosso dalla ferita.
+
+Là sotto regna il caos. Tutto quello che conteneva la stanza è sottosopra. Ogni ricordo che si era sforzato di tenere lontano da sé senza osare distruggerlo è esposto al suo sguardo, frammento nudo del suo passato. Ogni membro dell'equipaggio dell'Argo ha lasciato qui una parte di sé, anche i più insignificanti, quelli che la leggenda ha dimenticato. Ma non lui.
+
+Nemmeno il vello è stato risparmiato. La sua lana senza prezzo è stata usata come materia prima per produrre un filo altrettanto dorato, i cui ultimi frammenti pendono ancora dal telaio.
+
+E al muro campeggia un'opera d'arte.
+
+La sua bellezza è sbalorditiva. È senza alcun dubbio il magnum opus di una maestra, la sua opera più compiuta, la più eccezionale, quella che attraverserà i secoli e terrà viva la leggenda. In un ultimo gesto di sfida e di orgoglio la sua creatrice l'ha perfino firmata, e leggendo quel nome al re viene il pensiero sacrilego che forse le sue pretese non erano ingiustificate.
+
+Troppo perfetta per essere bruciata. Troppo empia per uscire mai dall'ombra. Un pezzo in perfetto accordo con questo luogo.
+
+L'arazzo è di per sé un magnifico affresco che rappresenta un gruppo di giovani euforici su una nave. Il disegno è ricco di personaggi a tutte le profondità e in ogni angolo, ombre perse nel sartiame, sagome appoggiate alla battagliola, busti in primo piano.
+
+Per Giasone, che li ha conosciuti davvero, è evidente che l'autrice ha dato libero corso alla propria immaginazione, ispirandosi a volte ad altre raffigurazioni ma lavorando spesso dal nulla. Certi eroi minori non hanno proprio niente in comune con quello a cui somigliavano davvero. Eppure, grazie a un simbolo abile infilato nella piega di una veste, a un'ombra particolare, a un'espressione o a una posizione ben scelta, è possibile riconoscerli tutti, indovinare i motivi della loro presenza lassù. Ordine divino, ricerca di gloria, semplice amicizia, sete di avventura... Da ogni protagonista emana un'impressione di realismo, di vita, di esistenza, di scopo, di futuro.
+
+Il loro vecchio comandante ha un nodo alla gola. Gli sembra che, semplicemente tendendo il braccio, potrebbe toccarli, tornare a quel tempo benedetto in cui tutto era possibile, in cui il mondo si offriva a loro. Ma le sue dita non incontrano che l'intreccio della tela.
+
+Nonostante quella folla, il quadro è concepito in modo che tutte le linee, tutti gli sguardi, convergano verso la coppia centrale, splendente nei suoi abiti d'oro.
+
+Un eroe trionfante, al culmine della forza fisica e della gloria, traboccante di gioia, che stringe a sé la compagna, il suo bottino tanto prezioso abbandonato con noncuranza a terra ai suoi piedi.
+
+Lui. Prima.
+
+E fra le sue braccia, che gli restituisce il sorriso e si aggrappa a lui come alla vita stessa, una bellezza orientale trafitta d'amore, col ventre arrotondato da un figlio che deve nascere.
+
+Medea.
+
+Due amanti felici ai quali l'avvenire tende le braccia.
+
+Un passato sepolto per sempre, un'utopia perduta.
+
+E Giasone, padre di Mermero e di Ferete, cade in ginocchio e scoppia in lacrime.</Text>
+  </Page>
+</Librogame>
