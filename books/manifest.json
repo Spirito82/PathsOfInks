@@ -552,54 +552,6 @@
       "minAppVersion": "1.24"
     },
     {
-      "id": "edizione-del-quarantennale-it",
-      "workId": "edizione-del-quarantennale",
-      "title": "L'Edizione del Quarantennale",
-      "author": "Daniele Pallozzi",
-      "language": "it",
-      "genre": "Commedia",
-      "blurb": "Aprile 2065, il quarantennale di Play a Bologna. Angelo Andreino, il decano della narrativa interattiva, ha realizzato un'edizione speciale del suo primo librogame: quaranta copie numerate e autografate. Tu e il tuo amico Ale, detto «il Moviola», siete lì per averla.\n\nLe copie finiranno presto, e il Moviola è lento. Lo aspetti, o corri avanti da solo?",
-      "contentWarnings": "Nessuna. Code, robocasse e un amico che soffre il mal di realtà virtuale.",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
-      "phase": "test",
-      "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale/it/v1/librogame.xml",
-        "sha256": "DA42DB90E44953C204190DE52C3A476D9955250F3190F557C305B703E9FF8DC8"
-      },
-      "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale/it/v1/items.xml",
-        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
-      },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
-    },
-    {
-      "id": "edizione-del-quarantennale-en",
-      "workId": "edizione-del-quarantennale",
-      "title": "The Anniversary Edition",
-      "author": "Daniele Pallozzi",
-      "language": "en",
-      "genre": "Comedy",
-      "blurb": "April 2065, the fortieth anniversary of Play in Bologna. Angelo Andreino, the grand old man of interactive fiction, has produced a special edition of his first gamebook: forty numbered, signed copies. You and your friend Ale, known as \"the Slow-Mo\", are there to get one.\n\nThe copies will soon run out, and the Slow-Mo is slow. Do you wait for him, or run on alone?",
-      "contentWarnings": "None. Queues, robo-tills and a friend who gets virtual-reality sick.",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
-      "phase": "test",
-      "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale/en/v1/librogame.xml",
-        "sha256": "3A56C0A26F9FED2676B638DF1EC34B277A0C34917D814A15222E437C0ADE0442"
-      },
-      "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/edizione-del-quarantennale/en/v1/items.xml",
-        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
-      },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
-    },
-    {
       "id": "toile-it",
       "workId": "toile",
       "title": "Tela",
