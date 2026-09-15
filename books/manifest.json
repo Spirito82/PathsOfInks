@@ -56,14 +56,14 @@
       "language": "en",
       "genre": "Old-school dungeon crawl",
       "blurb": "The king is dying, and the only cure is a green water that runs somewhere under the crypt of the ancient queens. You are the next volunteer sent down to fetch it — the ones before you did not come back, though their notes did. Fifteen rooms of jade and cold air, a statue you have to climb through, rabets who trade and ambush in equal measure, and a purple snake asleep on a pile of coin. Everything you carry out is yours to keep, if you carry yourself out with it.",
-      "version": 7,
+      "version": 8,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v7/librogame.xml",
-        "sha256": "21E9AF612AF1A0483B612EA5FB0D84331984BF95625DDFA4E52E4C12864DD66F"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v8/librogame.xml",
+        "sha256": "60B8AAEC7E1E27FF9DDEE031E152D660B8BC85AE68F61BB27F8AB54F3A422B87"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v7/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v8/items.xml",
         "sha256": "7F018AE51C44D4B59A20B0902B2299232E2771AF60CDB66DBC1024B4870377C9"
       },
       "minAppBuild": 27,
