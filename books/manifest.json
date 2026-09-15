@@ -56,14 +56,14 @@
       "language": "en",
       "genre": "Old-school dungeon crawl",
       "blurb": "The king is dying, and the only cure is a green water that runs somewhere under the crypt of the ancient queens. You are the next volunteer sent down to fetch it — the ones before you did not come back, though their notes did. Fifteen rooms of jade and cold air, a statue you have to climb through, rabets who trade and ambush in equal measure, and a purple snake asleep on a pile of coin. Everything you carry out is yours to keep, if you carry yourself out with it.",
-      "version": 3,
+      "version": 4,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v3/librogame.xml",
-        "sha256": "CEAF68727D4BA66816A9813323ABD90E2E312A02949818062694AEEB480D86A5"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v4/librogame.xml",
+        "sha256": "0AD533781F0CA48DDBF058D130D586D360E20969DFB55870EB9A4C4EDDA5E9AD"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v3/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v4/items.xml",
         "sha256": "2C828F6728FEFD89320B4D1ABCB9A6730CDC6A6930A0B8FB6525F761A48476AF"
       },
       "minAppBuild": 26,
@@ -80,14 +80,14 @@
       "genre": "Dungeon crawl vecchia scuola",
       "blurb": "Il re sta morendo, e l'unica cura è un'acqua verde che scorre da qualche parte sotto la cripta delle antiche regine. Tocca a te scendere a prenderla: chi è andato prima di te non è tornato, i suoi appunti sì. Quindici stanze di giada e aria fredda, una statua dentro cui devi arrampicarti, rabet che commerciano e tendono agguati in egual misura, e un serpente viola addormentato su un mucchio di monete. Tutto quello che porti fuori è tuo, se porti fuori anche te.",
       "contentWarnings": "Violenza, ferite descritte per esteso, e la morte del personaggio.",
-      "version": 4,
+      "version": 5,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v4/librogame.xml",
-        "sha256": "3B58A9934B2E967F8962E74B8C835E959F4815AB3109C828A6E7A51DEE265931"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v5/librogame.xml",
+        "sha256": "1CF138C6F773879C9395DDD48AF577CB53BCEAEB25D47D3B81C0B73CDB12C11C"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v4/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v5/items.xml",
         "sha256": "58A743DBA99419002531D6A2B7283B6D341F6F9689A5D2FCEA218D8AE86333E2"
       },
       "minAppBuild": 26,
