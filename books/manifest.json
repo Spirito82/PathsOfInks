@@ -56,18 +56,18 @@
       "language": "en",
       "genre": "Old-school dungeon crawl",
       "blurb": "The king is dying, and the only cure is a green water that runs somewhere under the crypt of the ancient queens. You are the next volunteer sent down to fetch it — the ones before you did not come back, though their notes did. Fifteen rooms of jade and cold air, a statue you have to climb through, rabets who trade and ambush in equal measure, and a purple snake asleep on a pile of coin. Everything you carry out is yours to keep, if you carry yourself out with it.",
-      "version": 5,
+      "version": 6,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v5/librogame.xml",
-        "sha256": "4B2D9D74DE75BC08FBE8608BE8127419A598BFAA6E774F167BFCA2DD58B79DE6"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v6/librogame.xml",
+        "sha256": "361A400CAF725A627ADBE9F1EF8EBC2716B1453DC7DE06886FEBEEE91869D0DF"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v5/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v6/items.xml",
         "sha256": "7F018AE51C44D4B59A20B0902B2299232E2771AF60CDB66DBC1024B4870377C9"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24",
+      "minAppBuild": 27,
+      "minAppVersion": "1.25",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
@@ -80,18 +80,18 @@
       "genre": "Dungeon crawl vecchia scuola",
       "blurb": "Il re sta morendo, e l'unica cura è un'acqua verde che scorre da qualche parte sotto la cripta delle antiche regine. Tocca a te scendere a prenderla: chi è andato prima di te non è tornato, i suoi appunti sì. Quindici stanze di giada e aria fredda, una statua dentro cui devi arrampicarti, rabet che commerciano e tendono agguati in egual misura, e un serpente viola addormentato su un mucchio di monete. Tutto quello che porti fuori è tuo, se porti fuori anche te.",
       "contentWarnings": "Violenza, ferite descritte per esteso, e la morte del personaggio.",
-      "version": 6,
+      "version": 7,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v6/librogame.xml",
-        "sha256": "EC9CF06C29E5467A2548958FF5D9B4D350473AD9FF3A63351D3A35C7E88BD52A"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v7/librogame.xml",
+        "sha256": "DC80474237949E182643532956E4FA92F6277200F89FDEE6CE3AD08A678679FC"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v6/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v7/items.xml",
         "sha256": "890C2F4A5051949D6ADE09003563DCB3AAE4485025CFAAE51AC02891EBABF36E"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24",
+      "minAppBuild": 27,
+      "minAppVersion": "1.25",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
