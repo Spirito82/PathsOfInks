@@ -54,22 +54,23 @@
       "title": "Viperblood",
       "author": "Luke Simonds",
       "language": "en",
-      "genre": "Old-school dungeon crawl",
-      "blurb": "The king is dying, and the only cure is a green water that runs somewhere under the crypt of the ancient queens. You are the next volunteer sent down to fetch it — the ones before you did not come back, though their notes did. Fifteen rooms of jade and cold air, a statue you have to climb through, rabets who trade and ambush in equal measure, and a purple snake asleep on a pile of coin. Everything you carry out is yours to keep, if you carry yourself out with it.",
-      "version": 9,
+      "genre": "Dungeon crawl",
+      "blurb": "The king is dying, and the only cure is a green water that runs somewhere under the crypt of the ancient queens. You are the next volunteer sent down to fetch it — the ones before you did not come back, though their notes did.\n\nFifteen rooms of jade and cold air, a statue you have to climb through, rabets who trade and ambush in equal measure, and a purple snake asleep on a pile of coin. Everything you carry out is yours to keep, if you carry yourself out with it.",
+      "version": 10,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v9/librogame.xml",
-        "sha256": "ED54BE6D00EF288651F5902DF32F655E259F624D75CA5E51C54EBAA2E9217C1C"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v10/librogame.xml",
+        "sha256": "95635BAD55CD6E00A32901123FA73E3598E839DE378F44716364AB510D0B0760"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v9/items.xml",
-        "sha256": "7F018AE51C44D4B59A20B0902B2299232E2771AF60CDB66DBC1024B4870377C9"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v10/items.xml",
+        "sha256": "B58E432BB8B0347398D1BE017E7BDB739269A4F71AAA489314ED52B633733FDA"
       },
       "minAppBuild": 28,
       "minAppVersion": "1.26",
       "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "contentWarnings": "Violence, wounds described in detail, and the death of the character."
     },
     {
       "id": "viperblood-it",
@@ -77,18 +78,18 @@
       "title": "Sangue di Vipera",
       "author": "Luke Simonds",
       "language": "it",
-      "genre": "Dungeon crawl vecchia scuola",
-      "blurb": "Il re sta morendo, e l'unica cura è un'acqua verde che scorre da qualche parte sotto la cripta delle antiche regine. Tocca a te scendere a prenderla: chi è andato prima di te non è tornato, i suoi appunti sì. Quindici stanze di giada e aria fredda, una statua dentro cui devi arrampicarti, rabet che commerciano e tendono agguati in egual misura, e un serpente viola addormentato su un mucchio di monete. Tutto quello che porti fuori è tuo, se porti fuori anche te.",
+      "genre": "Dungeon crawl",
+      "blurb": "Il re sta morendo, e l'unica cura è un'acqua verde che scorre da qualche parte sotto la cripta delle antiche regine. Tocca a te scendere a prenderla: chi è andato prima di te non è tornato, i suoi appunti sì.\n\nQuindici stanze di giada e aria fredda, una statua dentro cui devi arrampicarti, rabet che commerciano e tendono agguati in egual misura, e un serpente viola addormentato su un mucchio di monete. Tutto quello che porti fuori è tuo, se porti fuori anche te.",
       "contentWarnings": "Violenza, ferite descritte per esteso, e la morte del personaggio.",
-      "version": 9,
+      "version": 10,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v9/librogame.xml",
-        "sha256": "A15DB8A0528898ADF85CE1BEA5B2F67DFC7B82BA30EC32C3D17246D99FB3C3A2"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v10/librogame.xml",
+        "sha256": "1E0BDB4981456FB44EFDA81556075F2F9EDEF9512E2AEE031FA274BF16AAE699"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v9/items.xml",
-        "sha256": "890C2F4A5051949D6ADE09003563DCB3AAE4485025CFAAE51AC02891EBABF36E"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v10/items.xml",
+        "sha256": "20CAFA2B58D213E68CE2CFD768EA6EE14B69ADC553EA499984C16E39114E4372"
       },
       "minAppBuild": 28,
       "minAppVersion": "1.26",
