@@ -370,14 +370,14 @@
       "contentWarnings": "Furti, un paradosso temporale che distrugge l'universo e un rapace gigante che si porta via qualcuno per cena. Tutto raccontato per ridere.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 3,
+      "version": 4,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v3/librogame.xml",
-        "sha256": "5827BDC8AC6529C977141B7539DB30B88B4F6C3F60BE657AF161E553A85DA632"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v4/librogame.xml",
+        "sha256": "6A2883EE59C932E8A716C7EC5A51C7D971BA62D1CA2FFF36A57DCF42E34FC383"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v3/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v4/items.xml",
         "sha256": "A4D6FA7B1C977B1D14B3B08D9EC6269F50E6AE313EA5ECDCE4F9D0DD02EF2081"
       },
       "minAppBuild": 26,
@@ -394,14 +394,14 @@
       "contentWarnings": "Theft, a time paradox that destroys the universe, and a giant bird of prey that carries someone off for dinner. All of it played for laughs.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 3,
+      "version": 4,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v3/librogame.xml",
-        "sha256": "7935C26CB648E4F9A8AC52AA25CBCE8D65A931EE5ABEE2DCD078954C186D8777"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v4/librogame.xml",
+        "sha256": "98B9CBECEF738E7F72D5FEE95878E04710F3FB12CA6D6D6A4CF11934CC39CF81"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v3/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v4/items.xml",
         "sha256": "2827626F99CD018AFB98C670BD497E055294FBF864E941FBAD2887E4A69FE213"
       },
       "minAppBuild": 26,

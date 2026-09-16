@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<librogame formatVersion="1">
+  <items>
+    <item id="tessera-noleggio" name="Rentalcarpet hire card" description="Annual subscription to the flying-carpet hire service. With this in hand, the nearest branch asks no questions." />
+    <item id="tappeto-volante" name="Eight-cylinder flying carpet" description="Twin-turbo, collected from the Rentalcarpet branch. Between one entry and the next you can use it to catch up with Ali Baba." />
+    <item id="lampada-del-genio" name="The Genie's lamp" description="Lifted from Aladdin's belt. The Genie inside grants no wishes: he takes you back in time, and then leaves with the lamp." />
+    <item id="fischietto-richiamo" name="Birdwatching call-whistle" description="Part of a birdwatching kit bought at the bazaar. It calls whatever flies, without telling a sparrow from a Roc." />
+    <item id="mangime-per-uccelli" name="Birdseed" description="Quality feed, bought together with the whistle. In the right baskets it attracts the wrong attention." />
+  </items>
+</librogame>
