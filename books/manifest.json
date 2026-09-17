@@ -6,18 +6,18 @@
       "title": "Suddenly an Ogre",
       "author": "J. Alan Henning",
       "language": "en",
-      "genre": "Dungeon World gamebook",
-      "blurb": "Your sister is dying. The healer gave you the potion and told you that time is everything: the long way round will get you home too late, and the forest path is not safe. You take the forest path. Two hours in, you hear branches breaking. What comes out of the pines is eight feet tall, carries a tree trunk, and is not always in the mood to talk. Eighteen hit points, a hundred and fifty-eight scenes, seventeen endings — and some of them are not the one you would call winning.",
+      "genre": "Fantasy, adventure",
+      "blurb": "Your sister is dying. The healer gave you the potion and told you that time is everything: the long way round will get you home too late, and the forest path is not safe. You take the forest path.\n\nTwo hours in, you hear branches breaking. What comes out of the pines is eight feet tall, carries a tree trunk, and is not always in the mood to talk. Eighteen hit points, a hundred and fifty-eight scenes, seventeen endings — and some of them are not the one you would call winning.",
       "contentWarnings": "Violence, gore, death, and disappointing a parent.",
-      "version": 14,
+      "version": 15,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v14/librogame.xml",
-        "sha256": "EA603873B1CEC66D62351D238AF2055B9C0288C16015BE93D7B41570F1E1B819"
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v15/librogame.xml",
+        "sha256": "08682D74B6B5ADCEE86F4080CC8C1D1E29766305B926903E49A3EDAC47873452"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v14/items.xml",
-        "sha256": "C570DE201272AC6F7D2546842B286B807916AC3407675AD6F560EF7465471B28"
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v15/items.xml",
+        "sha256": "578CA9BCBCD78EAC2B3CC8B45A32BB1E76D07E8A586C196A5B47EC6B708AB79F"
       },
       "minAppBuild": 26,
       "minAppVersion": "1.24",
@@ -30,18 +30,18 @@
       "title": "All'improvviso un ogre",
       "author": "J. Alan Henning",
       "language": "it",
-      "genre": "Librogame per Dungeon World",
-      "blurb": "Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco. Dopo due ore senti dei rami spezzarsi. Quello che esce dai pini è alto due metri e mezzo, porta un tronco d'albero, e non sempre ha voglia di parlare. Diciotto punti ferita, centocinquantotto scene, diciassette finali — e qualcuno non è quello che chiameresti vincere.",
+      "genre": "Fantastico, avventura",
+      "blurb": "Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco.\n\nDopo due ore senti dei rami spezzarsi. Quello che esce dai pini è alto due metri e mezzo, porta un tronco d'albero, e non sempre ha voglia di parlare. Diciotto punti ferita, centocinquantotto scene, diciassette finali — e qualcuno non è quello che chiameresti vincere.",
       "contentWarnings": "Violenza, sangue, morte e la delusione di un genitore.",
-      "version": 14,
+      "version": 15,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v14/librogame.xml",
-        "sha256": "D11399A490F285DF9EC3B8BC6F0405108FABE845CDD0499AB77CADF3F2D0FCCB"
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v15/librogame.xml",
+        "sha256": "4206368A58EB13F17F3F6CF68C5FA89A75789BE09162718096B17B0EC8FFF8EF"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v14/items.xml",
-        "sha256": "F1A29A1325A96A2A45BBA562ED95AA0EF6F20841BDBAF8B2880072B15911E217"
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v15/items.xml",
+        "sha256": "7B6D98D9757BF136AAF82E3ED70CA6F1424D9EA73505E01DC043188EEC979A85"
       },
       "minAppBuild": 26,
       "minAppVersion": "1.24",
