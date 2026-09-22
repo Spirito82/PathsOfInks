@@ -1,0 +1,1308 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="un-poignard-dans-le-dos-it" workId="un-poignard-dans-le-dos" language="it" title="Un pugnale nella schiena" author="Skarn" checks="dadi" genre="Fantasy medievale" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="corridoi_di_pietra">
+  <Changes>
+    <Change>Adattato per questa app: la struttura, le regole e alcune parti del testo sono state modificate o tolte per funzionare con il suo motore</Change>
+    <Change>Tradotto in italiano dall'originale francese</Change>
+    <Change>Aggiunti suoni e musiche di sottofondo, che arrivano insieme al libro</Change>
+  </Changes>
+  <Audio>
+    <Sound name="gemito_ferita" file="gemito_ferita.ogg" />
+    <Sound name="lama_fendente" file="lama_fendente.ogg" />
+    <Sound name="materializzazione_ectoplasma" file="materializzazione_ectoplasma.ogg" />
+    <Sound name="passi_armatura" file="passi_armatura.ogg" />
+    <Sound name="sussurro_lama" file="sussurro_lama.ogg" />
+    <Music id="bosco_notturno" file="bosco_notturno.ogg" />
+    <Music id="corridoi_di_pietra" file="corridoi_di_pietra.ogg" />
+    <Music id="il_colpo_perfetto" file="il_colpo_perfetto.ogg" />
+    <Music id="l_ombra_alle_spalle" file="l_ombra_alle_spalle.ogg" />
+    <Music id="la_fine_dell_eroe" file="la_fine_dell_eroe.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <ContentWarnings>Omicidi, sangue, cadaveri, un drago sventrato. Il punto di vista è quello di un assassino che prova piacere a uccidere: la violenza è costante, mai però gratuita.</ContentWarnings>
+  <Blurb>Vi ricordate del pugnale spettrale che insegue l'eroe per tutta l'avventura nei Cavalieri del Destino? Ecco. Solo che qui il pugnale siete voi. In un contesto tutto diverso: non serve aver letto quel libro per godersi questa storia.</Blurb>
+  <Variables>
+    <Variable id="energia" name="Energia" type="number" initial="7" min="-99" max="99" visible="true" />
+    <Variable id="ferite" name="Ferite del bersaglio" type="number" initial="0" min="0" max="99" visible="true" />
+    <Variable id="somma" name="Ferite + Energia" type="number" initial="7" min="-99" max="199" visible="false" />
+    <Variable id="indizi" name="Codici di logoramento ottenuti" type="number" initial="0" min="0" max="5" visible="false" />
+    <Variable id="codiceBois" name="Codice Bois" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceBoucan" name="Codice Boucan" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceBruit" name="Codice Bruit" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceChambre" name="Codice Chambre" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceDecouvert" name="Codice Découvert" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceDepourvu" name="Codice Dépourvu" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceDetente" name="Codice Détente" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceEscalier" name="Codice Escalier" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceInsomnie" name="Codice Insomnie" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceNuit" name="Codice Nuit" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceOuverture" name="Codice Ouverture" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codicePortail" name="Codice Portail" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Tables>
+    <Table id="daga" dice="6" times="1">
+      <Result is="esito0" range="1-3" />
+      <Result is="esito1" range="4-6" />
+      <Outcome when="esito0" goto="47" />
+      <Outcome when="esito1" goto="38" />
+    </Table>
+    <Table id="dragon" dice="6" times="1">
+      <Result is="esito0" range="1-3" />
+      <Result is="esito1" range="4-6" />
+      <Outcome when="esito0" goto="45" />
+      <Outcome when="esito1" goto="14" />
+    </Table>
+    <Table id="escalier" dice="6" times="1">
+      <Result is="esito0" range="1-3" />
+      <Result is="esito1" range="4-6" />
+      <Outcome when="esito0" goto="34" />
+      <Outcome when="esito1" goto="9" />
+    </Table>
+  </Tables>
+  <Page id="1" sound="sussurro_lama" soundDelay="1" music="l_ombra_alle_spalle">
+    <Text>Tornate all'esistenza.
+
+La formulazione è contorta, ma la lingua dei mortali non è stata concepita per descrivere esseri come voi, ricordi sparsi strappati al limbo e agglutinati fino a formare un'entità indipendente.
+
+Non sapreste nemmeno dire se, parlando di voi, si debba usare il singolare o il plurale. Fisicamente siete uno, ma la vostra mente ospita immagini che vengono da una moltitudine di persone. Scene ripulite di tutti quei dettagli inutili che sono i nomi, gli umori, i contesti, le motivazioni e le conseguenze. Non ne resta che l'esperienza e la competenza necessaria a compiere al meglio la vostra funzione.
+
+E in primo luogo l'estasi dell'omicidio.
+
+Abbozzereste un sorriso, se la vostra forma attuale ve lo permettesse. Adesso però non siete che una nebbia sottile, invisibile agli umani ordinari, intangibile per chiunque. Al massimo siete capace, raccogliendo tutta la vostra energia, di concentrare temporaneamente la vostra sostanza in una scheggia solida che vi permette di interagire con quello che vi sta intorno.
+
+Una manifestazione che ha sempre lo stesso aspetto. Quello di un pugnale finemente affilato e privo di guardia. Una lama pura, che esiste solo per tagliare.
+
+Il vostro strumento. Il vostro corpo. La vostra anima.
+
+Non vi serve di più, non vi serve essere di più. Esistete per un solo scopo, e quell'arma è tutto quello che vi serve per raggiungerlo. Siete il miglior assassino che ci sia.
+
+Siete un'Ombra Cacciatrice.
+
+E siete a caccia.
+
+Il vostro bersaglio si trova proprio davanti a voi, a pochi metri appena. D'altronde non potreste allontanarvi più di tanto l'uno dall'altro. Siete legati a lui da un'invisibile catena di energia intrecciata dal vostro evocatore, che limita i vostri spostamenti nello spazio al suo perimetro immediato.
+
+Sarete liberati da questa fastidiosa prossimità solo una volta compiuto il vostro incarico. Quando il vostro bersaglio esalerà l'ultimo respiro, la vostra energia sarà liberata e tornerete all'etere in una sfolgorante apoteosi, riassorbiti dal nulla in un istante.
+
+A voler essere del tutto esatti, se il vostro evocatore revocasse l'incantesimo, o non fosse più in grado di mantenerlo in un modo o nell'altro, una volta esaurite le vostre magre riserve personali di potere vi disgreghereste ugualmente, lentamente, penosamente, indebolendovi a poco a poco come un uomo che muore di fame.
+
+Esistono anche alcuni potenti sortilegi capaci di bandirvi immediatamente dal piano fisico, e nemmeno quelli sono comodi.
+
+Ma non sono ipotesi che amiate contemplare. Alla sofferenza quasi fisica si aggiunge l'altrettanto mordente umiliazione del fallimento. Questo non vi è accaduto — e questo «vi» comprende tutte le ombre — che in pochissime occasioni, e ognuna resta impressa a fuoco nella vostra memoria collettiva come altrettanti errori da non ripetere mai.
+
+Perché, se tecnicamente fra una missione e l'altra non esistete più, a ogni rinascita recuperate non solo i ricordi di mortali morti nel frattempo, ma anche quelli di tutti i contratti portati a termine dagli altri membri della vostra specie.
+
+Anche qui la nozione di individualità è discutibile. Potreste benissimo essere un'entità unica dotata del dono dell'ubiquità.
+
+Non che questo abbia una qualche importanza. In realtà lasciate semplicemente vagabondare la vostra mente per ammazzare il tempo, essendo il non poter smettere di pensare uno dei molti fardelli dell'esistenza cosciente.
+
+Il vostro bersaglio ha infatti per il momento la fortuna di trovarsi in un luogo chiuso da una rete per ombre, una protezione magica concepita apposta per fermare gli esseri privi di sostanza come voi.
+
+Sono cose che capitano. Non spesso, ma qualche caso in passato l'avete già avuto, quando eravate stati evocati per uccidere questo o quel mago particolarmente attento alla propria sicurezza. Per fortuna le difese di questo tipo sono complicate da intrecciare tanto quanto voi siete difficili da evocare, e perfino gli stregoni più misantropi non possono passare l'intera esistenza dentro una di quelle bolle.
+
+L'ultimo che ci ha provato ha ceduto dopo una settimana di digiuno. Perché se non potevate raggiungerlo direttamente, eravate però in grado di impedire ai suoi servitori di portargli i pasti.
+
+Oggi però non avrete bisogno di ricorrere a metodi tanto sottili. Perché il vostro bersaglio sta distruggendo da solo, in tutta innocenza, l'unico suo baluardo.
+
+Ammirate quasi la disinvoltura con cui questo umano si precipita verso la propria morte. Non solo ha appena trucidato colui che sospettate, per l'abbigliamento eccentrico, essere l'autore di quella superba difesa, ma per giunta sta strappando gli ancoraggi d'argento che ne assicurano l'integrità, ammucchiandoli in un sacco dove non serviranno più a niente.
+
+Certo, probabilmente non può né vederla né sentirla, essendo la rete tanto invalicabile per voi quanto immateriale per lui, ma resta il fatto che vi sta dando una bella mano.
+
+Ed ecco fatto. Niente più protezione. Non vi resta che materializzarvi per colpire.
+
+Più facile a pensarsi che a farsi, però. L'universo fisico è restio a lasciar sorgere le cose dal nulla. Siete capaci di prendere forma solo nei gas, perché i solidi e i liquidi vi respingono con troppa forza, e anche allora unicamente dopo aver espulso ogni particella di materia già presente in un vortice visibile, sibilante e crepitante.
+
+Non solo la cosa non è esattamente discreta, ma consuma moltissima energia. Una risorsa preziosa, per la quale dipendete interamente dalla buona volontà del vostro evocatore, non avendo alcun modo di produrla o di recuperarla da soli. Al massimo potete riceverla e accumularla.
+
+Al momento disponete di sette punti di Energia. Questo punteggio può salire oltre il totale di partenza, oppure scendere sotto lo zero: finché è negativo o nullo, siete costretti a rifiutare qualunque materializzazione.
+
+Con le riserve attuali potrete materializzarvi solo una manciata di volte per periodi brevissimi, oppure una volta sola un po' più a lungo, ma senza superare il minuto. Per questo è cruciale scegliere con cura il vostro momento, attendere pazientemente l'istante in cui la vittima sarà vulnerabile, incapace di difendersi da un assalto tanto fulmineo quanto letale.
+
+E quale momento migliore di adesso? Guardatelo, quest'uomo, tutto sfinito, che porta ancora sull'armatura le tracce del combattimento appena concluso, troppo occupato a soddisfare la propria avidità per badare alla propria sicurezza. Ha perfino avuto la cortesia di togliersi l'elmo (e, purtroppo per lui, i tappi per le orecchie e la benda che portava sotto) per esporvi la carotide fremente.
+
+Il vostro bersaglio, dal canto suo, non porta ancora alcuna Ferita.</Text>
+    <Choices>
+      <Choice text="Colpire subito" goto="15" />
+      <Choice text="Aspettare ancora un poco" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="2" music="il_colpo_perfetto">
+    <Text>Aspettate che l'imboscata cominci. Non tarda. I pellverde lanciano la loro rete, mancano il bersaglio, ma si lanciano all'assalto lo stesso.
+
+Comparite allora nel vostro solito rullo di tuono.
+
+L'uomo ha un breve, ma pericoloso, istante di esitazione.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="1" />
+        <subtractVariable target="somma" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="19">
+        <Requirements mode="any">
+          <Variable id="codiceEscalier" operator="eq" value="1" />
+          <Variable id="codiceOuverture" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="41">
+        <Requirements>
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceEscalier" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="3" sound="materializzazione_ectoplasma" music="il_colpo_perfetto">
+    <Text>Vi materializzate in cima agli alberi, proprio sopra la testa dell'uomo ma in parte nascosti dai rami spinosi.
+
+Il fenomeno non passa però inosservato, rumoroso come sempre e capace di far piovere aghi di pino. Vi mescolate a quella cascata pungente, cadendo con essa sul vostro bersaglio, punta in avanti.
+
+La vostra picchiata è fermata da un rovescio d'acciaio.
+
+Malgrado la posizione scomoda, l'uomo ha ripreso l'arma in mano e ha deviato il vostro attacco con bravura. Per quanto i calzoni abbassati limitino i movimenti delle gambe, gli resta abbastanza fluidità nelle braccia per tenervi a bada senza sforzo.
+
+Dal suo comportamento deducete che è abituato a essere attaccato in posizioni di debolezza come questa.
+
+Venuta a mancare la sorpresa che contavate di avere, tornate subito nebbia.
+
+Dopodiché l'uomo, non volendo più lasciare l'arma, impiega un po' a finire quel che stava facendo, ma i suoi guai si fermano lì.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="3" />
+        <subtractVariable target="somma" value="3" />
+        <setVariable target="codiceBois" value="1" />
+        <addVariable target="indizi" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="35">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="43">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4" music="corridoi_di_pietra">
+    <Text>Come ha potuto essere tanto rapido da reagire? Anche con un udito acuto, riflessi marziali profondamente radicati e un po' di fortuna, non avrebbe dovuto avere il tempo di proteggersi.
+
+Se foste fatti di carne potreste accusare una vostra debolezza. Un risveglio difficile, la stanchezza, cose del genere. Ma non è il caso, e quindi la chiave del mistero deve per forza stare dalla parte del vostro bersaglio.
+
+La vostra preda, diffidente, si è riarmata completamente, fino alla visiera dell'elmo che ha calato davanti al viso. Certo, nessuna protezione è perfetta, e la sua corazza presenta decine di falle sfruttabili, ma sarebbe uno spreco di energia del tutto inutile tornare alla carica adesso, mentre è all'erta e al meglio delle sue difese.
+
+Dopo aver atteso un certo tempo con la lama sguainata, la ripone e riprende il suo metodico saccheggio del luogo.</Text>
+    <Choices>
+      <Choice text="Continua" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="5" music="la_fine_dell_eroe" ending="true">
+    <Text>Il vostro bersaglio si alza di scatto, arma in pugno. I suoi occhi iniettati di sangue frugano freneticamente i dintorni in cerca di qualcosa.
+
+Non sapreste dire di che cosa, perché non vi materializzate da diverse ore, e i vostri sensi, pur ben più affilati, non hanno rilevato niente di particolare.
+
+C'è da credere che l'uomo sia arrivato a un punto in cui la sua stessa paranoia, sapientemente alimentata dai vostri sforzi, basti a svegliarlo di notte, dove i mostri dei suoi incubi si confondono con quelli della realtà.
+
+Vaga intorno al punto in cui si è accasciato, tutto vestito, armatura compresa, per provare a dormire, agitando l'arma con aria minacciosa, e urla la propria rabbia a pieni polmoni:
+
+«Vieni a batterti! Vieni a batterti, spettro! Vieni a batterti se sei un uomo! Ti aspetto!»
+
+Questa provocazione incoerente offre un bel campione delle capacità intellettuali ancora a sua disposizione dopo tanto tempo passato con così poco sonno.
+
+Lo lasciate sgolarsi invano, gli lasciate spendere le poche forze di cui dispone ancora.
+
+Alla fine smette la sua sceneggiata e si lascia ricadere in un surrogato di riposo.
+
+È allora che vi materializzate.
+
+Ci mette un po' a reagire. Il corpo è stanco, la mente anche, non sa se siate davvero lì o se siate solo un prodotto della sua immaginazione.
+
+Quel breve ritardo è tutto ciò che vi serve. In un istante attraversate l'aria, scivolate fra due giunture della sua armatura in disordine, e gli recidete un'arteria.
+
+Si agita, tenta di spogliarsi, di fermare l'emorragia con quello che ha. Ma i suoi movimenti in preda al panico sono imprecisi e caotici, e ogni goccia di sangue persa li rende più lenti e inefficaci.
+
+Presto non ha più la forza di fare niente, e poco dopo trovate entrambi il riposo.</Text>
+  </Page>
+  <Page id="6" sound="materializzazione_ectoplasma" soundDelay="2" music="il_colpo_perfetto">
+    <Text>L'uomo si avvicina alla porta. Lo osservate rallentare, spostare la mano verso l'elsa della spada. In un modo o nell'altro i suoi sensi devono aver percepito il pericolo davanti a lui.
+
+È allora che vi materializzate alle sue spalle.
+
+La sua confusione è totale. Si volta di scatto, immergendo lo sguardo nel sonoro vortice. Anche i pellverde, allertati dal rumore, lanciano la loro rete, che cade solo a metà sul bersaglio, ma si slanciano dietro di lui con entusiasmo, pigolando un grido di guerra.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="1" />
+        <subtractVariable target="somma" value="1" />
+        <setVariable target="codiceBoucan" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Completare la materializzazione e intervenire fisicamente" goto="19" />
+      <Choice text="Interrompere il processo per risparmiare energia" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>L'uomo può correre quanto vuole, per la vostra stessa natura gli è del tutto impossibile sfuggirvi. Appena pienamente materializzati, sfrecciate in aria al suo inseguimento, più rapidi della più rapida delle frecce.
+
+Lo raggiungete in pochi istanti e lo colpite in pieno dietro il ginocchio. L'armatura lo protegge dal danno diretto, ma perde l'equilibrio, e la gravità fa il resto. Cade in avanti, e finisce la discesa scivolando alla meno peggio sulla pancia, fermandosi, assai malconcio, solo al pianerottolo successivo.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="2" />
+        <subtractVariable target="somma" value="2" />
+        <addVariable target="ferite" value="4" />
+        <addVariable target="somma" value="4" />
+        <setVariable target="codiceEscalier" value="1" />
+        <addVariable target="indizi" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="8" music="l_ombra_alle_spalle">
+    <Text>Una volta seduti entrambi, il vostro bersaglio apre la conversazione in un modo assai strano.
+
+«Mago Yoztramo, vi ricorderete dei consigli che mi avete dato in vista dello scontro con Zogar?
+
+— Certo, che domanda è? Attaccarlo di giorno perché la notte è sua alleata. Guardarlo soltanto attraverso una sottile striscia di seta per sventare le sue illusioni visive, e tapparsi le orecchie per sfuggire a quelle sonore.
+
+— Sì, è proprio a questo che penso. A posteriori mi chiedo se non voleste semplicemente impedirmi di comunicare con lui.
+
+— E perché mai avrei dovuto farlo?»
+
+Accompagna la risposta alzando gli occhi al cielo, in un gesto apparentemente sprezzante. Ma in realtà punta lo sguardo dritto su di voi.
+
+Sentite allora il vostro legame con l'evocatore rinsaldarsi, e un'ondata di potenza nuova invadervi.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="energia" value="2" />
+        <addVariable target="somma" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Materializzarvi adesso" goto="21" />
+      <Choice text="Aspettare ancora" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>A voler correre per una scala con un peso simile sulle spalle, l'uomo finisce per inciampare e conclude la discesa sulla pancia. Si distende lungo disteso sul pianerottolo qualche decina di gradini più in basso.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="3" />
+        <addVariable target="somma" value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="10" sound="passi_armatura" music="corridoi_di_pietra">
+    <Text>A giudicare dalle dimensioni e dall'architettura della sala in cui il vostro bersaglio si inoltra, rispetto a quella da cui viene, deducete che eravate in una torretta e che siete appena entrati nell'edificio principale.
+
+Si vedono d'altronde diverse gabbie di scale simili a quella da cui è appena uscito. Scorgete anche il cadavere ancora caldo di un drago.
+
+Non è la prima volta che contemplate un drago, e nemmeno un drago morto. Ma è la prima volta che ne scoprite uno ucciso da ferite simili.
+
+È coperto da una moltitudine di tagli, per lo più semplici graffi, alcuni abbastanza profondi perché il sangue possa uscirne liberamente, ma nessuno davvero pericoloso, e ancor meno mortale, di per sé. È il loro accumularsi, è l'emorragia crescente provocata da tutte quelle lacerazioni, ad averlo avuto vinto.
+
+In altre parole, questa formidabile creatura è stata abbattuta da una persona che l'ha colpita con una spada, o un'arma equivalente, ancora e ancora finché non è crollata. Una tecnica di prodigiosa inefficienza, ma che dimostra da parte dell'esecutore una resistenza e una determinazione fuori dal comune.
+
+Il quale, e non avete molti dubbi al riguardo vista la sua totale mancanza di reazione davanti a quel mastodonte fulminato, non è altri che il vostro bersaglio.
+
+Cominciate a farvi molte domande. La spiegazione più logica sarebbe che il drago fosse immobilizzato, drogato, reso in un modo o nell'altro incapace di difendersi.
+
+Altrimenti bisognerebbe supporre che questo essere umano sia stato capace di schivare senza cedere zanne, artigli e fiamme di un drago adulto per tutta la durata di un lungo combattimento di logoramento.
+
+Ipotesi ridicola. Torniamo alle cose serie. Un drago è un animale che dispone di certi organi unici nel loro genere, capaci di produrre diverse sostanze che, una volta mescolate, generano una fiamma di potenza incomparabile.
+
+Un drago morto non può ovviamente più mettere in opera da sé un'alchimia tanto meravigliosa, ma se una lama affilata recidesse qualche elemento ben scelto del suo organismo, potrebbe darsi che i fluidi necessari entrino in contatto liberando un vero torrente di fiamme.</Text>
+    <Choices>
+      <Choice text="Fare un po' di chirurgia" goto="33" />
+      <Choice text="Non sprecare le forze in un approccio indiretto" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="11" music="l_ombra_alle_spalle">
+    <Text>«Mago Yoztramo, ho un problema. Al momento sono inseguito da un'Ombra Cacciatrice. Un ultimo regalo di Zogar, temo.»
+
+Il cosiddetto Yoztramo si immobilizza un breve istante, poi si accarezza pensosamente la barba.
+
+«Sì, è proprio il genere di perfidia di cui sarebbe capace. Devo immergermi nei miei volumi per saperne di più.
+
+— Inutile.»
+
+Il vostro bersaglio tira fuori dal sacco un grimorio.
+
+«Ho trovato questo libro fra le cose di Zogar. Spiega come esorcizzare queste bestiacce.»
+
+Yoztramo prende il volume e lo sfoglia fino al segnalibro. Poi legge attentamente il passo incriminato.
+
+«In effetti. Ma questo rituale è pericoloso. Costringe soltanto lo spettro ad adottare una forma fisica sotto la quale è possibile distruggerlo. Poi dovrai batterlo in singolar tenzone.
+
+— Vi preoccupate troppo, mago Yoztramo. Ho appena ucciso un drago, penso di potermela cavare con un fantasma.»
+
+Conclude con un sorriso sufficiente. Un'ombra di contrarietà passa sul viso del mago, ma lui annuisce.
+
+«Molto bene. Andiamo nel cortile.»
+
+I due uomini escono di nuovo all'aria aperta. Il mago traccia con la punta del piede un cerchio nella terra smossa, poi si mette ad arricchirlo di rune complesse con l'aiuto di un bastone.</Text>
+    <Choices>
+      <Choice text="Intervenire subito" goto="46" />
+      <Choice text="Aspettare che il rituale sia più avanti" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="12" music="il_colpo_perfetto">
+    <Text>Il rumore, il soffio, la combinazione dei due svegliano subito l'uomo. Si getta di lato, compie un mezzo giro su se stesso, si riceve, afferra l'arma.
+
+Lo accompagnate nel movimento, ma riuscite solo a solleticargli leggermente le costole prima che vi respinga con un colpo secco della lama.
+
+Persa l'occasione, tornate nebbia. Il vostro bersaglio resta in posizione di combattimento per un certo tempo, ispezionando la zona in cerca di indizi sul suo misterioso aggressore. Non trovando niente, finisce per ricoricarsi, stringendo l'arma ancora più vicina.
+
+Gli occhi tardano a richiudersi, ma la stanchezza finisce per vincere il nervosismo, e presto l'uomo torna al sonno.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="3" />
+        <subtractVariable target="somma" value="3" />
+        <addVariable target="ferite" value="1" />
+        <addVariable target="somma" value="1" />
+        <setVariable target="codiceNuit" value="1" />
+        <addVariable target="indizi" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Riprovarci" goto="48" />
+      <Choice text="Lasciarlo al suo riposo" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="13" music="l_ombra_alle_spalle">
+    <Text>«Non saprei dire che cosa voglio, mago Yoztramo. Da quando ho letto quel volume mi sono reso conto che non ricordo niente di ciò che precede il momento in cui mi avete mandato in missione. Niente di personale, intendo. Ho molti ricordi tecnici, impressioni confuse e a volte contraddittorie su quello che devo fare per uccidere nel modo più efficace possibile uno stregone, ma nessun filo conduttore, nessun sentimento. Se non la rabbia.
+
+— Ti rendi conto che forse sei semplicemente sotto l'influsso di un incantesimo di Zogar? Può darsi che tu non l'abbia nemmeno sconfitto, che ti abbia solo stregato per darti questa impressione e rivoltarti contro di me.
+
+— Che importanza ha, mago Yoztramo? In ogni caso non sono più che un guscio vuoto capace soltanto di uccidere stregoni. E conto proprio di continuare a fare quello che mi riesce meglio.»
+
+Sguaina.
+
+Sentite allora il sibilo caratteristico di una balestra. Uno di quegli arnesi, nascosto nel caos della stanza, si è messo in funzione da solo, con una piccola spinta magica.
+
+Il proiettile però rimbalza sull'armatura del bersaglio.
+
+«È splendida, vero? Non so dove l'abbiate presa, ma mi ha salvato la vita molte volte. Senza di lei sarei stato ucciso dal primo pellverde un po' fortunato.»
+
+Si pavoneggia.
+
+«Niente di meglio in magazzino? Non so, trasformatemi in un rospo, qualcosa del genere. A meno che, ovviamente, non possiate, avendomi reso troppo bene resistente a questo genere di malefici perché il vostro rivale potesse appunto servirsene per eliminarmi.»
+
+Numerosi oggetti contenuti nella stanza si mettono allora a volare, altrettanti proiettili che lui schiva, para, incassa, mentre altri elementi dell'arredo si agglutinano in forme vagamente umanoidi, golem di fortuna.
+
+Con un urlo folle il guerriero si getta su questi nuovi avversari, sciabola sguainata.
+
+Il mago si rivolge allora direttamente a voi:
+
+«Fa' il tuo lavoro!»</Text>
+    <Choices>
+      <Choice text="Materializzarvi" goto="26" />
+      <Choice text="Restare nebbia" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Text>L'uomo si mette a correre con tutte le sue forze, ma le fiamme sono più rapide di lui. In un istante si ritrova circondato dalla bianca fornace.
+
+Decide allora di gettarsi immediatamente attraverso le fiamme piuttosto che lasciare che gli piombino addosso, e riesce così, al prezzo di terribili ustioni, ad aprirsi un varco fino a una gabbia di scale ancora risparmiata.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="5" />
+        <addVariable target="somma" value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="15" sound="materializzazione_ectoplasma" soundDelay="2" music="il_colpo_perfetto">
+    <Text>Scivolate dietro il vostro bersaglio mentre è in ginocchio, con la metà superiore del corpo immersa in un baule. E vi concentrate.
+
+L'aria si lacera e fugge urlando la propria agonia mentre la vostra lama ritaglia la realtà per aprirsi un varco. Una reazione abituale per voi, ma che non mancherà di sorprendere la vostra vittima.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="3" />
+        <subtractVariable target="somma" value="3" />
+        <setVariable target="codiceOuverture" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Vedere se la sorpresa funziona" goto="47" roll="daga" />
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>Allentate la concentrazione e lasciate che l'aria torni al suo posto conformemente alle leggi della fisica. Il vostro bersaglio corre come un ossesso per le scale, ma, per la vostra stessa natura, gli è impossibile seminarvi.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceBruit" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Guardarlo precipitarsi giù per i gradini" goto="34" roll="escalier" />
+    </Choices>
+  </Page>
+  <Page id="17" music="" ending="true">
+    <Text>Dopo aver inciso un certo numero di simboli, il mago si scosta per lasciar passare il vostro bersaglio, che posa una mano al centro del cerchio.
+
+Subito cominciate a materializzarvi senza averlo voluto. Non potete interrompere il processo, di rara violenza. Tutta la vostra sostanza è costretta a prendere forma solida, senza possibilità di conservare la minima riserva. Diventate davvero, interamente, il pugnale che vi rappresenta, fino all'ultima particella.
+
+Assomigliate del resto più a una spada che a un pugnale, artificialmente allungati da quella orribile magia.
+
+Il vostro bersaglio sguaina e incrocia il ferro con la vostra materia. Provate un surrogato di dolore mentre pezzi di voi stessi si staccano sotto l'urto, senza possibilità di ritorno.
+
+E il combattimento si impegna. Uno scontro uno contro uno, in pieno giorno, alla leale.
+
+Vale a dire che, malgrado la vostra capacità di muovervi a piacimento nelle tre dimensioni dello spazio, non siete in vantaggio. Non riuscite a toccare l'avversario, e ogni colpo che vi porta vi danneggia un po' di più. E quando non è lui, è semplicemente il tempo che passa, l'universo fisico che vi rode a poco a poco, distruggendo quella materia che non dovrebbe esistere.
+
+Presto andate in pezzi, i pezzi cadono in polvere, la polvere svanisce in fumo, e tornate al nulla.</Text>
+  </Page>
+  <Page id="18" music="l_ombra_alle_spalle">
+    <Text>Vi limitate a due, al massimo tre apparizioni fra un'alba e l'altra, e per giunta la maggior parte non arriva alla materializzazione completa. A forza di apparizioni effimere ma stressanti, eccolo che si tende al minimo soffio d'aria, al minimo scricchiolio di ramoscello.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="3" />
+        <subtractVariable target="somma" value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="32">
+        <Requirements mode="any">
+          <Variable id="codiceDepourvu" operator="eq" value="1" />
+          <Variable id="codiceInsomnie" operator="eq" value="1" />
+          <Variable id="indizi" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="25">
+        <Requirements>
+          <Variable id="codiceInsomnie" operator="lte" value="0" />
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>Malgrado la posizione scomoda, è a voi che accorda tutta la sua attenzione, concedendosi appena un'occhiata all'indietro per deviare un attacco o lacerare senza fatica uno dei suoi assalitori.
+
+Vi proiettate verso di lui zigzagando in aria, sfruttando al massimo la vostra mobilità in tre dimensioni e la vostra velocità.
+
+Para senza difficoltà il vostro assalto col rovescio della lama, ma la vostra stravagante distrazione offre a un pellverde l'occasione di colpirlo. Niente di grave, comunque, e si sbarazza dell'assalitore con un semplice calcio energico.
+
+Poco desiderosi di prolungare un faccia a faccia a vostro svantaggio, tornate nebbia.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="2" />
+        <subtractVariable target="somma" value="2" />
+        <addVariable target="ferite" value="1" />
+        <addVariable target="somma" value="1" />
+        <setVariable target="codicePortail" value="1" />
+        <addVariable target="indizi" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="20" music="bosco_notturno">
+    <Text>Messi in rotta gli ultimi pellverde abbastanza coraggiosi da opporglisi, l'uomo apre la postierla. La luce del giorno lo abbaglia ma non lo ferma, e mette subito piede nel mondo esterno.
+
+Siete in cima a un'altura in una regione di valloni boscosi. Approfittate di non essere soggetti alla gravità per prendere un po' di quota ed esaminarla più in dettaglio, ma non trovate niente da aggiungere alla vostra descrizione iniziale. Siete in mezzo al nulla, e l'unica costruzione visibile è il fortino da cui siete appena usciti.
+
+Il sentiero che vi porta è abbastanza largo da lasciar passare un carro, e alcune tracce fanno pensare che ne veda passare davvero. È quindi fin troppo sgombro per i vostri gusti. Troppo facile schivare un attacco a sorpresa, ben poche probabilità di cadere nel precipizio adiacente.
+
+Perciò portate pazienza mentre l'uomo avanza tranquillamente sulla terra battuta.
+
+Questo tempo di inazione forzata non è del tutto perso, perché vi permette di recuperare un po' delle vostre forze, grazie al potere che il vostro evocatore vi infonde di continuo finché il patto non è rotto.
+
+Cala la notte e le alture sono diventate un avvallamento boscoso quando il vostro bersaglio si ferma finalmente. Depone a terra quel che gli resta delle sue cose, pianta l'arma nella terra smossa, a portata di mano, e si mette a togliersi l'armatura mentre l'accecante luce del giorno finisce di morire a favore del pallido chiarore della luna.
+
+Tolto l'ultimo strato di metallo, l'uomo raccoglie l'arma, si addentra un po' più nella foresta, ripianta l'arma nel terreno e si mette a fare i propri bisogni.
+
+Non sorprendentemente, per voi si tratta di un'occasione ideale per operare.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="energia" value="2" />
+        <addVariable target="somma" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Colpire" goto="3" />
+      <Choice text="Conservare le forze" goto="35">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Conservare le forze" goto="43">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="21" music="" ending="true">
+    <Text>La vostra materializzazione interrompe la loro discussione. L'uomo si volta verso di voi e para il vostro attacco con rabbia.
+
+«Ancora un altro dei tuoi maneggi, stregone? Gliela farò mordere, la polvere, come l'ho fatta mordere a tutti quelli che hanno osato mettersi in mezzo alla mia strada.»
+
+Ma il suo interlocutore non lo ascolta. Approfittando del diversivo che portate, se la dà a gambe, salendo a quattro a quattro la scala della sua torre. Il guerriero se ne accorge benissimo, ma non può correre il rischio di voltarvi le spalle.
+
+Perciò mena fendenti finché non siete costretti ad abbandonare la forma fisica per conservare l'energia. Cosa che non tarda a succedere, dato che uno scontro faccia a faccia non è a vostro vantaggio.
+
+Appena sparite, si lancia all'inseguimento del mago. La corsa lo porta in una stanza senza uscita ma sul cui pavimento sono incisi numerosi sigilli. I vostri sensi vi informano che poco fa in quel luogo è stato lanciato un potente sortilegio, il che conferma che il vecchio si è quasi certamente teletrasportato lontano da lì.
+
+Il guerriero arriva alla stessa conclusione e si lascia sfuggire un grido di rabbia.
+
+Nei giorni che seguono fruga la torre in cerca di qualcosa che possa aiutarlo a compiere la sua vendetta. Quanto a voi, vi esaurite a poco a poco. Il vostro contratto è stato revocato dal vostro evocatore, e senza il suo apporto di energia dovete consumare le riserve.
+
+Provate sì ad approfittare della situazione per finire la missione, ma l'uomo dorme nella camera del mago, ovviamente protetta da una rete per ombre, e di giorno sta in guardia.
+
+Finite per non potervi più materializzare, poi vi disgregate a poco a poco fino a cessare finalmente di esistere, in una lunga e penosa agonia.</Text>
+  </Page>
+  <Page id="22" music="la_fine_dell_eroe" ending="true">
+    <Text>L'uomo racconta al suo ospite tutto quello che gli è capitato fra la partenza e il ritorno in quel luogo. I combattimenti contro i lupi nella foresta. I combattimenti contro i pellverde. Il combattimento contro il drago. Il combattimento contro lo stregone.
+
+Niente di appassionante. La sua storia non è che una successione di scontri, e qualunque sia l'avversario la sua strategia sembra consistere semplicemente nel colpirlo con la spada finché non smette di muoversi. Un approccio monomaniacale apparentemente efficace.
+
+A un certo punto il suo interlocutore va infine a prendere il proprio decotto e ne versa una tazza per ciascuno. La vostra attenzione si ravviva allora.
+
+Perché, in mezzo alle erbe aromatiche e al leggero eccitante abituali in una bevanda simile, i sensi particolari della vostra specie hanno individuato una dose da cavallo di un veleno fulminante il cui sapore e il cui odore sono perfettamente dissimulati dagli altri ingredienti.
+
+Il vostro bersaglio invece non si accorge di niente, e vuota avidamente il suo bicchiere mentre l'avvelenatore esegue un piccolo gioco di prestigio per dare l'illusione di consumarlo senza berne in realtà una sola goccia.
+
+L'effetto non si fa attendere. Appena qualche minuto dopo l'uomo comincia a sudare abbondantemente. Informa subito il vecchio del proprio malessere. Questi assume un'aria preoccupata e lo rassicura, ma si guarda bene dal portargli un qualsiasi aiuto.
+
+La sua vittima tenta allora di rialzarsi, perde l'equilibrio, crolla con fracasso sugli oggetti che la circondano, prova a rialzarsi ma non ne ha già più la forza e agonizza lì, in mezzo agli utensili rotti dalla sua caduta, rifiuto fra i rifiuti.
+
+Il vecchio alza allora gli occhi verso di voi con aria annoiata.
+
+«Bisogna proprio fare tutto da sé, non è possibile.»
+
+Lo ignorate. Morto il vostro bersaglio, anche senza un vostro intervento, siete liberi. Le catene che vi tenevano al mondo fisico si spezzano, e tornate al nulla con delizia.</Text>
+  </Page>
+  <Page id="23" sound="passi_armatura" soundDelay="3" music="corridoi_di_pietra">
+    <Text>L'uomo non smette il suo eclettico saccheggio, ammassando sia le materie preziose, i libri e le pergamene sia i ninnoli dall'uso tanto incerto quanto il loro valore, se non dopo aver riempito il sacco fino a far soffrire le cuciture. Fa d'altronde una gran fatica a sollevarlo, ed esprime un sollievo evidente quando cinghie e muscoli dorsali danno il cambio alle braccia.
+
+Compie poi un primo passo maldestro, distribuisce un po' meglio il carico sulle spalle, si riaggiusta l'elmo, rimette un piede davanti all'altro, più sicuro stavolta, e infine apre la porta, rivelando una scala a chiocciola che si mette subito a scendere.
+
+Davvero, questo tizio si dà da fare per facilitarvi il compito. Difficilmente potreste immaginare una situazione più favorevole, mentre si inoltra, carico come un asino, in un posto in cui non può manovrare e in cui una brutta caduta potrebbe conciarlo per le feste senza nemmeno che dobbiate intaccargli la carne di persona.</Text>
+    <Choices>
+      <Choice text="Materializzarvi" goto="27" />
+      <Choice text="Aspettare ancora un poco" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="24" music="l_ombra_alle_spalle">
+    <Text>Un'altra scala, che stavolta porta a quello che dev'essere il piano terra e la grande sala di questa dimora. E un'altra scena di violenza la cui lurida brutalità vi stupisce.
+
+Ci sono cadaveri di pellverde dappertutto. In massa all'imbocco del passaggio da cui venite, sparsi lungo il percorso che vi porta, sul pavimento, di traverso sulle panche, sulla grande tavola, e perfino uno nel camino, mezzo carbonizzato. Sono soprattutto soldati in uniforme, ma scorgete anche qualche civile con armi improvvisate, qui una mannaia, là un attizzatoio. Tutti trucidati a gran colpi di spada.
+
+E il vostro bersaglio cammina attraverso questo carnaio come se fosse tutto perfettamente naturale e ordinario. Il che vi sorprende un poco. Grazie ai ricordi di persone morte di recente che avete dentro di voi conoscete i costumi di questo tempo, e sapete quindi che spettacoli simili non sono moneta corrente.
+
+Inoltre, proprio come per il drago, non riuscite a eliminare del tutto l'ipotesi che quest'uomo abbia fatto quella carneficina tutto da solo, semplicemente a forza di braccia. Teoria che solleva sempre altrettante domande.
+
+Dato che questa stanza sgombra sembra poco adatta a un assalto, vi portate leggermente avanti al vostro bersaglio in cerca di un posto simile.
+
+E non restate delusi. Una banda di pellverde superstiti si è messa in imboscata proprio dall'altra parte dell'ingresso lavorato che porta al vestibolo.
+
+Il loro piano d'attacco è evidente: hanno recuperato una rete e delle lance, e contano quasi certamente di lanciare la prima sull'uomo appena sarà abbastanza vicino, prima di conficcargli le seconde nel corpo così immobilizzato.
+
+Uno stratagemma che funzionerebbe probabilmente se fossero meno rumorosi, ma, stando così le cose, saranno con ogni probabilità individuati ben prima di poterlo mettere in atto.</Text>
+    <Choices>
+      <Choice text="Lasciarli fallire l'assalto, poi colpire a sorpresa" goto="2" />
+      <Choice text="Comparire in anticipo di fase per deviare la sua attenzione" goto="6" />
+      <Choice text="Conservare la vostra energia" goto="44" />
+    </Choices>
+  </Page>
+  <Page id="25" music="l_ombra_alle_spalle">
+    <Text>Come ogni sera, il vostro bersaglio fa l'inventario dei propri averi, e si sforza di scorrere qualcuno dei volumi che ha recuperato. Leggete da sopra la sua spalla, ma non vedete passare niente di interessante.
+
+E poi, all'improvviso, in mezzo a un mucchio di testi inconsistenti, scoprite un articolo dedicato alle Ombre Cacciatrici. E ai modi di proteggersene.
+
+Il vostro bersaglio sta quasi per saltarlo distrattamente, ma qualche frase deve avergli attirato l'attenzione, perché la sua concentrazione si affila di colpo e si mette a leggerlo e rileggerlo avidamente.
+
+Mantenete la calma. Le diverse soluzioni proposte, a cominciare dalla rete per ombre, possono essere messe in atto solo da maghi di alto livello. Cosa che il vostro bersaglio non è, o altrimenti nasconde davvero molto bene il proprio gioco.
+
+Tuttavia, il semplice fatto che adesso ne sappia molto di più sul vostro modus operandi è fastidioso.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceDecouvert" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="32" />
+    </Choices>
+  </Page>
+  <Page id="26" music="il_colpo_perfetto">
+    <Text>Aggiungete la vostra presenza al caos, vortice nella tempesta, meteora nella pioggia di proiettili.
+
+Il vostro primo assalto è sventato. Anche il secondo. L'uomo è come posseduto, respinge gli attacchi senza darlo a vedere, senza smettere di ridere. Il suo viso cambia continuamente espressione, aspetto, riflettendo le molteplici vite di cui è fatto. Gli ultimi artifici che gli davano una parvenza di identità stanno saltando, lasciando solo un mostro avido di combattimento.
+
+Avete un po' l'impressione di affrontare una versione degenerata e organica di voi stessi. Il vostro fratello mal riuscito, in piena crisi adolescenziale.
+
+Il vostro padre comune vi sostiene con un apporto costante di energia e con le raffiche di sortilegi che scatena. La sua magia è solo debolmente efficace, ma porta un diversivo benvenuto.</Text>
+    <Choices>
+      <Choice text="Continua" goto="50">
+        <Requirements>
+          <Variable id="somma" operator="gte" value="15" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="30">
+        <Requirements>
+          <Variable id="somma" operator="lte" value="14" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="27">
+    <Text>Con la corazza di tesori che porta sulla schiena, dubitate che abbia sentito il soffio dell'aria. Impossibile però che non l'abbia udito. Il sibilo della realtà che si lacera si è ripercosso in echi per tutta la scala, oscura minaccia venuta dalla sua sommità.
+
+La sua reazione è immediata, ed è mettersi a correre, precipitandosi giù per i gradini a due a due.
+
+Vi viene in mente che sarebbe benissimo capace di ammazzarsi da solo, carico com'è.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="1" />
+        <subtractVariable target="somma" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Interrompere la materializzazione e ammirare lo spettacolo" goto="16" />
+      <Choice text="Immischiarvi fisicamente" goto="7" />
+    </Choices>
+  </Page>
+  <Page id="28" music="bosco_notturno">
+    <Text>Una nuova giornata comincia per entrambi.
+
+Nel corso della mattinata l'uomo fa una deviazione fuori dal sentiero per procurarsi della frutta e l'ingrediente principale di uno stufato di coniglio, ma questa attività non lo mette affatto in una situazione che potreste sfruttare.
+
+Approfittate di questo riposo forzato per recuperare le forze.
+
+A inizio pomeriggio incrocia un lupo, ma l'animale si limita a ringhiare un po' prima di ripartire in cerca di una preda più facile.
+
+Se il viaggio continua così tranquillo, le occasioni davvero interessanti rischiano di mancare crudelmente.
+
+Vi si offrono quindi diverse strategie.
+
+La prima è semplicemente attendere pazientemente la vostra ora, sperando che il vostro evocatore non si stanchi prima.
+
+La seconda è tormentare il bersaglio a ogni piccolo momento di vulnerabilità, indebolendolo a poco a poco, ma col rischio di non disporre più di riserve sufficienti per portare il colpo di grazia al momento opportuno.
+
+L'ultima è un compromesso fra le due precedenti, e consiste nel limitarvi a qualche attacco puntuale e irregolare, per mantenere la tensione senza esaurirvi.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="energia" value="4" />
+        <addVariable target="somma" value="4" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="La pazienza" goto="49" />
+      <Choice text="L'economia" goto="18" />
+      <Choice text="L'aggressività" goto="42" />
+    </Choices>
+  </Page>
+  <Page id="29" sound="gemito_ferita" soundDelay="2" music="la_fine_dell_eroe" ending="true">
+    <Text>Il colpo di grazia. Già indebolita dai vostri sforzi calcolati, la vostra vittima non può impedirvi di tracciarvi un cammino fino al suo cuore, che trafiggete con delizia.
+
+La sua agonia è breve, intensa e deliziosa. Cessate di esistere in un oceano di beatitudine mentre lui esala l'ultimo respiro.</Text>
+  </Page>
+  <Page id="30" music="" ending="true">
+    <Text>Anche così, due contro uno, non riuscite a portare un colpo fatale a questo eroe artificiale. Il vostro creatore si esaurisce a poco a poco, e presto non è più in grado di alimentarvi di energia. Perdete la forma fisica, e non potete che contemplare la morte del vostro evocatore, decapitato da un colpo tanto furioso quanto trionfante.
+
+Privati di sostentamento, già troppo esausti per materializzarvi anche solo un'ultima volta, vi disgregate a poco a poco nei giorni che seguono, immersi in un amaro sentimento di fallimento e impotenza, finché il ritorno al nulla non vi libera finalmente dal fardello delle emozioni.</Text>
+  </Page>
+  <Page id="31" music="corridoi_di_pietra">
+    <Text>Anche impigliato in una rete e solo contro una mezza dozzina, la superiorità marziale del vostro bersaglio è fin troppo incontestabile perché sia mai davvero in pericolo. Si sbarazza dei suoi assalitori come se fossero altrettanti granelli di polvere sui vestiti, senza smettere di lanciare regolari occhiate indagatrici nella direzione in cui gli siete comparsi.
+
+Tornato a essere l'unico essere che respiri in quel luogo, riprende posatamente il cammino, ancora più in guardia di prima.</Text>
+    <Choices>
+      <Choice text="Continua" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="32" music="corridoi_di_pietra">
+    <Text>Nel corso del quarto giorno la novità fa finalmente capolino, sotto forma di una torre.
+
+Una torre quanto di più classico ci sia, circolare, alta e stretta, concepita per poter guardare lontano stando sulla sua sommità.
+
+In pieno mezzo ai boschi. Nell'incavo di una regione montuosa. Circondata da alberi che quasi la superano.
+
+L'incongruenza di una simile costruzione non disturba apparentemente il vostro bersaglio, che bussa alla sua porta con abbastanza energia da svegliare tutta la foresta.
+
+Poco dopo un vecchio viene ad aprirgli brontolando. Appena riconosce il suo ospite, il viso gli si ricompone in un sorriso:
+
+«Missione compiuta, presumo.
+
+— In effetti, mago Yoztramo. Il vile stregone Zogar non nuocerà più a nessuno.
+
+— Sia lodato il cielo! Entra dunque e raccontami tutto.»
+
+Li seguite mentre si avventurano in un caos monumentale. Si ammassano per terra, senza logica alcuna, mobili, stoviglie, attrezzi, scarti di cibo, libri, vestiti, armi, ninnoli, e un piccione in gabbia. Il disordine non si limita d'altronde a questa stanza, e trabocca anche nella cucina attigua. Il pavimento vero e proprio si vede ormai solo lungo una sottile striscia intorno al camino.
+
+La cosa però non disturba affatto l'occupante del luogo, che fa emergere da quell'insieme eteroclito due sgabelli, due bicchieri, qualche erba, una brocca d'acqua e un bollitore. Scivola fino al focolare, mette a scaldare la sua mistura e torna a chiacchierare con il vostro bersaglio.</Text>
+    <Choices>
+      <Choice text="Continua" goto="11">
+        <Requirements>
+          <Variable id="codiceDecouvert" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="22">
+        <Requirements>
+          <Variable id="codiceDecouvert" operator="lte" value="0" />
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="22">
+        <Requirements>
+          <Variable id="codiceDecouvert" operator="lte" value="0" />
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="codiceInsomnie" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="8">
+        <Requirements>
+          <Variable id="codiceDecouvert" operator="lte" value="0" />
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="codiceInsomnie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="33">
+    <Text>La vostra apparizione non è meno fragorosa del solito, ma è in parte nascosta e attutita dalla massa del drago interposto fra voi e il vostro bersaglio.
+
+L'uomo la percepisce lo stesso, e reagisce. Ma il suo riflesso non è quello adatto alla situazione: sguaina e si mette in guardia, come se pensasse che la bestia non fosse del tutto morta, che stesse per rialzarsi e riprendere il combattimento.
+
+Questo errore di valutazione vi dà l'occasione di operare in tutta tranquillità. Vi tuffate abilmente nelle viscere del drago, recidendo qualche sacca ben scelta il cui contenuto si mescola in una colossale esplosione di fiamme.
+
+Abbandonate subito la forma fisica e ammirate il lavoro. Il drago ha dato vita alla propria pira funebre. Le fiamme, invece di uscire soltanto dalle fauci, sfuggono da ogni orifizio, ferite comprese, in molteplici cascate di un fuoco così puro da essere di un bianco sfolgorante.
+
+Il calore è tale che tutto diventa combustibile, perfino il sangue coagulato del drago sul pavimento. In pochi istanti la stanza si trasforma in un oceano di fiamme in mezzo al quale la vostra vittima si ritrova immersa.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="3" />
+        <subtractVariable target="somma" value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="45">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="45" roll="dragon">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="4" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="34">
+    <Text>Benché inciampi più volte, il vostro bersaglio riesce a raggiungere il pianerottolo successivo senza cadere.
+
+Si appiattisce subito contro il muro accanto. Sguaina. Aspetta pazientemente che la fonte del rumore si mostri per assalirla.
+
+Ovviamente non succede niente. Lasciate che la vostra vittima sguazzi tranquillamente nel proprio stress. Resta così sulla difensiva, tesa all'estremo, per un tempo oggettivamente brevissimo ma che deve esserle sembrato molto più lungo.</Text>
+    <Choices>
+      <Choice text="Continua" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="35" sound="sussurro_lama" soundDelay="3" music="bosco_notturno">
+    <Text>L'uomo passa gran parte della serata a procurarsi legna per il fuoco e cibo da cuocerci sopra. Solo tardi si spoglia e si corica, su un materasso d'erba improvvisato, con il poco equipaggiamento ancora in suo possesso a portata di mano.
+
+Aspettate tranquillamente che sprofondi nel sonno profondo.</Text>
+    <Choices>
+      <Choice text="Approfittare della sua vulnerabilità" goto="12">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="3" />
+        </Requirements>
+        <Effects>
+          <addVariable target="ferite" value="1" />
+          <addVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Approfittare della sua vulnerabilità" goto="12">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="2" />
+        </Requirements>
+      </Choice>
+      <Choice text="Conservare la vostra energia" goto="28">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="3" />
+        </Requirements>
+        <Effects>
+          <addVariable target="ferite" value="1" />
+          <addVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Conservare la vostra energia" goto="28">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="2" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="36" music="l_ombra_alle_spalle">
+    <Text>Il vostro bersaglio riporta posatamente la mano vicino al pomo della spada.
+
+«Beh, su questo ho una teoria. Vedete, Yoztramo, sulla strada del ritorno ho avuto il tempo di sfogliare qualche volume preso in prestito dalla collezione di Zogar. Della maggior parte non ho capito niente, ma ce n'è uno che ho trovato affascinante.»
+
+Tira fuori un fascicolo di poco conto che effettivamente l'avete visto consultare.
+
+«È una specie di raccolta di riflessioni sui diversi modi che i maghi usano per battersi fra loro. E anche se non si dilunga sull'argomento, il suo contenuto lascia fortemente intendere che è da molto, moltissimo tempo che i maghi si affrontano, direttamente o indirettamente, allearsi e tradirsi di continuo alla ricerca di sempre più potere.
+
+— Niente di nuovo. I maghi neri sono sempre stati squali che si mangiano fra loro.
+
+— Non me ne intendo di colori della magia, Yoztramo. In compenso, una descrizione mi ha davvero colpito in mezzo alle altre. Ve la leggo.»
+
+Si alza, prende un gran respiro e si lancia.
+
+«Dopo un certo periodo in cui gli assassini spettrali erano di moda, si assiste a un ritorno in forze del fisico. Colpa del moltiplicarsi delle reti per ombre, dei sortilegi di esorcismo, di tutto quell'armamentario di cui dispongono ormai anche gli stregoni di più basso livello.
+
+Oggigiorno, per sbarazzarsi di un rivale scocciatore, bisogna di nuovo, come ai vecchi tempi, mandare qualcuno dotato di un'esistenza solida a tempo pieno a infilare una lama fra le costole del seccatore.
+
+Tuttavia i mercenari umani sono cari e spesso poco efficaci. Perciò ci preoccupiamo di migliorarli.
+
+I miei esperimenti in questo campo mi hanno permesso di ottenere guerrieri di una potenza propriamente assurda. Se proprio bisogna quantificarla, diciamo che là dove un soldato standard dispone di un'abilità in combattimento di 8 e un troll di 10, loro si aggirano piuttosto intorno a 11 o 12.
+
+Il prezzo da pagare sta nella loro incredibile instabilità. Sul piano fisico, il gonfiamento artificiale delle loro capacità muscolari e della loro velocità di rigenerazione incide fortemente sulla sopravvivenza a lungo termine. Sul piano mentale, l'iniezione di ricordi di antichi cacciatori di stregoni per svilupparne le competenze di combattimento e di sopravvivenza tende ad alterarne la memoria e la percezione di sé.
+
+Ho dovuto così eliminare la totalità dei miei soggetti sperimentali dopo che si furono tutti, uno a uno, rivoltati contro di me. Con qualche difficoltà, devo dire, tanto mi erano riusciti bene.»
+
+L'uomo richiude il volume. L'atmosfera nella stanza è glaciale. Il mago prende la parola con voce poco amichevole.
+
+«E sia. E dunque che cosa vuoi?»
+
+Di nuovo sentite la potenza affluire, accompagnata da un'occhiataccia che potrebbe benissimo essere un ordine.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="energia" value="4" />
+        <addVariable target="somma" value="4" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Intervenire" goto="21" />
+      <Choice text="Pazientare ancora" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="37" music="la_fine_dell_eroe" ending="true">
+    <Text>Siete il miglior assassino che esista. Aspettate sempre il momento ideale per colpire.
+
+Nel caso presente questo significa lasciare che il combattimento si svolga, lasciare che il vostro bersaglio si esaurisca in uno scontro spettacolare contro un mago astuto che usa tutti gli artifici a sua disposizione per averla vinta contro una creatura che ha creato allo scopo di distruggere la gente come lui.
+
+Si difende bene, benissimo anzi. Più volte passa a un capello dal finire il lavoro al posto vostro. Ma la sua creazione lo sorprende ogni volta, rivelandosi più terribile di quanto avesse immaginato.
+
+Il suo capolavoro finisce per trafiggerlo da parte a parte, e lui crolla in mezzo alle rovine di quella che fu la sua casa. Il suo assassino trionfante, ferito, sfinito, lo contempla stupidamente. Passata la rabbia, probabilmente non ha la minima idea di che cosa farà adesso.
+
+Voi lo liberate da questo tormento. Anche se il vostro evocatore è morto, vi ha lasciato energia più che sufficiente per materializzarvi un'ultima volta.
+
+Comparite in mezzo alle fiamme, al fumo e ai detriti, e vi slanciate dritti verso la sua gola. Ha a malapena ancora la forza di reagire, con la spada incastrata nel cadavere del suo padrone, l'armatura a pezzi, la sua ragione d'essere scomparsa.
+
+Recidete gli ultimi fili della sua vita, e la marionetta raggiunge il burattinaio.</Text>
+  </Page>
+  <Page id="38" sound="lama_fendente" soundDelay="2">
+    <Text>Al primo rumore l'uomo si volta di scatto, ruotando su un piede mentre la mano si chiude sull'impugnatura della spada.
+
+Per quanto quella prontezza vi sorprenda, vi tuffate prima che abbia potuto sguainare, mirando al viso scoperto.
+
+Schiva, sempre con gli stessi riflessi straordinari, tanto che gli infliggete soltanto uno sfregio lungo la guancia. L'istante dopo ha estratto la lama e si è messo in guardia.
+
+Non avendo nessuna voglia di ingaggiare con lui una costosa prova di scherma, abbandonate subito la forma fisica, sparendo davanti ai suoi occhi.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="1" />
+        <addVariable target="somma" value="1" />
+        <setVariable target="codiceChambre" value="1" />
+        <addVariable target="indizi" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="39">
+    <Text>Vi sforzate di liberarvi, ma la stretta di ferro dell'uomo si rivela tanto metaforica quanto letterale. Vi estrae completamente dalla propria carne, e conclude con una torsione del polso pensata per far mollare l'arma a un assalitore che la tenga in mano.
+
+Su un essere come voi, questo non ha altro effetto che farvi compiere un inconseguente giro completo su voi stessi.
+
+Tuttavia continua a stringervi, e siete costretti ad abbandonare la forma fisica per liberarvi finalmente dalla sua presa.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="1" />
+        <subtractVariable target="somma" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="40">
+    <Text>Purtroppo non si è spaccato il cranio nella caduta, perché l'elmo ha fatto il suo lavoro. Comunque scosso, si rialza con prudenza, esaminando la gabbia di scale dietro di sé, come se si aspettasse di vederne uscire un mostro da un momento all'altro.
+
+Ma, ovviamente, non succede niente.</Text>
+    <Choices>
+      <Choice text="Continua" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="41" sound="lama_fendente" soundDelay="1">
+    <Text>Sceglie di sbrigare prima gli avversari che gli stanno di fronte. Gli bastano pochi istanti, ma a voi non ne servono di più per completare la materializzazione e colpirlo alla schiena, in una falla dell'armatura.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="11" />
+        </Requirements>
+        <Content>Vous passez à un cheveu de vous enfoncez suffisamment pour atteindre le cœur, mais il réussit à vous attraper de sa main libre avant cela, vous arrachant à lui en une libératrice giclée de sang.
+
+Il lui reste encore assez de forces pour vous maintenir prisonnier de sa poigne alors qu’il termine d’éliminer ses autres adversaires. Comprenant que votre moment est passé, vous redevenez brume et lui glissez entre les doigts.</Content>
+      </Text>
+    </ConditionalTexts>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="5" />
+        <addVariable target="somma" value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="29">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="12" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="20">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="11" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="2" />
+          <subtractVariable target="somma" value="2" />
+          <setVariable target="codicePortail" value="1" />
+          <addVariable target="indizi" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="42" music="l_ombra_alle_spalle">
+    <Text>Colpite nel cuore della notte, mentre il suo corpo non aspira che al riposo. Colpite alle prime luci, mentre si disseta, riflesso torbido sulla superficie dell'acqua. Colpite allo zenit, mentre caccia e la preda gli sfugge.
+
+Una catena di piccole cose che contribuiscono ad accrescere la sua stanchezza, la sua debolezza e la sua irritazione, ma che costano enormemente anche a voi.</Text>
+    <Choices>
+      <Choice text="Continua" goto="5">
+        <Requirements>
+          <Variable id="energia" operator="gte" value="11" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="10" />
+          <subtractVariable target="somma" value="10" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="32">
+        <Requirements>
+          <Variable id="energia" operator="gte" value="5" />
+          <Variable id="energia" operator="lte" value="10" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="10" />
+          <subtractVariable target="somma" value="10" />
+          <setVariable target="codiceInsomnie" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="32">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="4" />
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="10" />
+          <subtractVariable target="somma" value="10" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="32">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="4" />
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="codiceInsomnie" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="10" />
+          <subtractVariable target="somma" value="10" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="25">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="4" />
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="codiceInsomnie" operator="lte" value="0" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="10" />
+          <subtractVariable target="somma" value="10" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="43" music="bosco_notturno">
+    <Text>Una volta tornato, l'uomo svuota completamente il sacco, in una cascata di ricchezze e ciondoli, per ritrovare infine, proprio in fondo, un sacchetto contenente l'occorrente per accendere il fuoco e qualche provvista. Recupera anche una coperta, raccoglie un po' di legna e allestisce così rapidamente, in mezzo al disordine, un accampamento rudimentale.
+
+Una volta sistemato, si mette, masticando la sua carne secca ora abbrustolita sui carboni ardenti, a fare l'inventario dei nuovi possessi.
+
+Dopo un certo tempo passato a esaminare cianfrusaglie e a sfogliare manoscritti, ricaccia tutto quel guazzabuglio nel sacco e si distende per dormire, l'arma nel fodero a portata di mano.
+
+Lo osservate sprofondare a poco a poco nel sonno profondo al calore del fuoco morente.</Text>
+    <Choices>
+      <Choice text="Colpire" goto="12">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="2" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="2" />
+          <subtractVariable target="somma" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Colpire" goto="12">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="1" />
+          <Variable id="ferite" operator="lte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="1" />
+          <subtractVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Colpire" goto="12">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Conservare la vostra energia" goto="28">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="2" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="2" />
+          <subtractVariable target="somma" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Conservare la vostra energia" goto="28">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="1" />
+          <Variable id="ferite" operator="lte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="1" />
+          <subtractVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Conservare la vostra energia" goto="28">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="44" music="corridoi_di_pietra">
+    <Text>Senza alcun vostro intervento, l'imboscata si trasforma in un macello. L'uomo schiva la rete, e decapita, sgozza e storpia senza la minima esitazione i pellverde abbastanza temerari da scendere comunque a battersi.</Text>
+    <Choices>
+      <Choice text="Continua" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="45">
+    <Text>Il vostro bersaglio resta immobile per un istante, poi lascia cadere a terra il pesante sacco che lo ingombra prima di darsela a gambe.
+
+Così alleggerito, riesce a gettarsi in un'altra gabbia di scale prima che tutte le uscite siano coperte da una cortina di fiamme, cavandosela con sole ustioni superficiali.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="2" />
+        <addVariable target="somma" value="2" />
+        <setVariable target="codiceDepourvu" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="46" music="il_colpo_perfetto">
+    <Text>Vi materializzate. La vostra apparizione non ha niente di sorprendente, e il vostro bersaglio si è già messo in guardia.
+
+Tentate comunque il tutto per tutto. Senza gran successo. In pieno giorno, in terreno scoperto, davanti a un avversario che conosce le vostre debolezze, siete troppo svantaggiati. Esaurite la vostra energia e dovete abbandonare la forma solida senza avergli fatto gran male.
+
+Yoztramo scoppia a ridere:
+
+«Beh, non avevi bisogno di me per risolvere il tuo piccolo problema, a quanto pare.
+
+— Oh, non è davvero pericoloso. L'ho già messo in fuga diverse volte. È solo noioso.»
+
+Si asciuga il sudore dalla fronte come se niente fosse.
+
+«Ma non mi dire. Facciamo una pausa, il tempo che tu mi racconti tutto. Tanto non tornerà subito. Completeremo il rituale dopo.»
+
+L'uomo annuisce, e rientra dentro con il suo ospite.</Text>
+    <Choices>
+      <Choice text="Continua" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="47" sound="lama_fendente" soundDelay="2">
+    <Text>Il vostro bersaglio si rivela molto più pronto di quanto avevate supposto. Al primo rumore si getta di lato a forza di braccia, spostandosi di un buon mezzo metro dalla posizione di partenza.
+
+Sforzo irrisorio. Piegate leggermente la vostra traiettoria, e il vostro filo affilato morde la sua carne, fa schizzare il sangue, intacca la vita stessa.
+
+E poi il contatto freddo dell'acciaio mette fine a tutto questo. Dita rinchiuse nel metallo si sono strette sulla vostra lama e l'hanno scostata dalla sua nuca prima che potesse affondare abbastanza da infliggere una ferita sicuramente mortale.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="3" />
+        <addVariable target="somma" value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Provare a liberarvi" goto="39" />
+      <Choice text="Tornare intangibili immediatamente" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="48">
+    <Text>Non avete ancora finito di materializzarvi che lui è già in piedi, e mena nervosamente fendenti nell'aria con l'arma. Fermate il processo, sapendo che in un faccia a faccia non avrete la meglio.
+
+La vostra sparizione non rassicura affatto l'uomo, che fa di nuovo il giro dell'accampamento, si rinfila l'armatura, poi si appoggia a un tronco, ben deciso a montare la guardia tutta la notte.
+
+Lo lasciate spendere inutilmente le sue energie. Quando finalmente spunta il giorno, il vostro bersaglio recupera le proprie cose e riprende la strada con l'occhio arrossato dalla stanchezza.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="2" />
+        <subtractVariable target="somma" value="2" />
+        <setVariable target="codiceInsomnie" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="49" music="bosco_notturno">
+    <Text>Per tre giorni e tre notti non succede niente di interessante. Voi recuperate forze, perché il vostro evocatore continua a rispettare la sua parte del contratto, ma lo stesso vale per il vostro bersaglio.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="energia" value="8" />
+        <addVariable target="somma" value="8" />
+        <setVariable target="codiceDetente" value="1" />
+        <setVariable target="codiceInsomnie" value="0" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continua" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+          <Variable id="ferite" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="1" />
+          <subtractVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+          <Variable id="ferite" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="25">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="gte" value="2" />
+          <Variable id="ferite" operator="gte" value="3" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="3" />
+          <subtractVariable target="somma" value="3" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="25">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="gte" value="2" />
+          <Variable id="ferite" operator="gte" value="2" />
+          <Variable id="ferite" operator="lte" value="2" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="2" />
+          <subtractVariable target="somma" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="25">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="gte" value="2" />
+          <Variable id="ferite" operator="gte" value="1" />
+          <Variable id="ferite" operator="lte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="1" />
+          <subtractVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="25">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="gte" value="2" />
+          <Variable id="ferite" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continua" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="lte" value="1" />
+          <Variable id="ferite" operator="gte" value="3" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="3" />
+          <subtractVariable target="somma" value="3" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="lte" value="1" />
+          <Variable id="ferite" operator="gte" value="2" />
+          <Variable id="ferite" operator="lte" value="2" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="2" />
+          <subtractVariable target="somma" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="lte" value="1" />
+          <Variable id="ferite" operator="gte" value="1" />
+          <Variable id="ferite" operator="lte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="1" />
+          <subtractVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continua" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="lte" value="1" />
+          <Variable id="ferite" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="50" sound="gemito_ferita" soundDelay="4" music="la_fine_dell_eroe" ending="true">
+    <Text>Non potete provare stanchezza. Non potete essere uccisi. Questi vantaggi finiscono per avere ragione del vostro avversario. Al termine di una lunga prova di scherma riuscite finalmente ad aggirare le sue difese e a infliggergli un serio sfregio.
+
+Da lì in poi tutto si concatena molto in fretta. Quella prima ferita importante lo indebolisce, permettendovi di infliggergliene un'altra, e un'altra ancora. Tardate a portare il colpo di grazia perché si difende ancora con l'energia della disperazione, ma l'esito dello scontro è inevitabile.
+
+Un'ultima bravata, e crolla. Il vostro evocatore tira un sospiro di sollievo e vi rivolge una frecciata:
+
+«Meglio tardi che mai.»
+
+Lo ignorate. Il vostro bersaglio è appena spirato, e con il suo ultimo soffio di vita cedono i vincoli che vi tengono in questo mondo fisico.
+
+Tornate al nulla con delizia, il vostro dovere compiuto.</Text>
+  </Page>
+</Librogame>

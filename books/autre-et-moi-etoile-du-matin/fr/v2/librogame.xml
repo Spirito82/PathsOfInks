@@ -1,0 +1,1987 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="autre-et-moi-etoile-du-matin-fr" workId="autre-et-moi-etoile-du-matin" language="fr" title="L’autre et moi – L’étoile du matin" author="Skarn" checks="deterministico" genre="Fantastique" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="fogne_caccia">
+  <Blurb>– Tu crois pas qu’on jacasse trop ?
+
+– Tant qu’on peut se parler, c’est qu’on est en vie.
+
+– Quand même, j’ai l’impression qu’on fait que parler.
+
+– Pas de raison que le format du dialogue soit uniquement réservé à la philo pépère.
+
+– Discussion et baston ?
+
+– Discussion et baston.</Blurb>
+  <ContentWarnings>Violence, combats, une secte et son autel sacrificiel. Rien n’est décrit avec complaisance : l’aventure est entièrement en dialogue, et son ton reste celui de la comédie d’action.</ContentWarnings>
+  <Changes>
+    <Change>Adapté pour cette application : la structure, les règles et certaines parties du texte ont été modifiées ou retirées pour fonctionner avec son moteur</Change>
+    <Change>Sons et musiques d'ambiance ajoutés, livrés avec le livre</Change>
+  </Changes>
+  <Audio>
+    <Sound name="artigli_mostro" file="artigli_mostro.ogg" />
+    <Sound name="fiamma_demone" file="fiamma_demone.ogg" />
+    <Sound name="passi_tetto" file="passi_tetto.ogg" />
+    <Sound name="piuma_magica" file="piuma_magica.ogg" />
+    <Sound name="scatto_fogna" file="scatto_fogna.ogg" />
+    <Music id="cielo_notturno" file="cielo_notturno.ogg" />
+    <Music id="duetto" file="duetto.ogg" />
+    <Music id="fogne_caccia" file="fogne_caccia.ogg" />
+    <Music id="riposo" file="riposo.ogg" />
+    <Music id="scontro_magico" file="scontro_magico.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <Variables>
+    <Variable id="energia" name="Cases Énergie cochées" type="number" initial="0" min="0" max="5" visible="true" />
+    <Variable id="codiceAme" name="Code Âme" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceCorps" name="Code Corps" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceEsprit" name="Code Esprit" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceQuintessence" name="Code Quintessence" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceAcide" name="Code Acide" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceConte" name="Code Conte" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceCouchette" name="Code Couchette" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceFroid" name="Code Froid" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceLivre" name="Code Livre" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceMerlin" name="Code Merlin" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceMorgane" name="Code Morgane" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceSucre" name="Code Sucré" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceTapis" name="Code Tapis" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceTouche" name="Code Touche" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1" sound="scatto_fogna">
+    <Text>– Rappelle-moi pourquoi je fais tout ça ?
+
+– Parce que tu y es forcée par le pacte que nous avons signé ?
+
+– Pas ça. Ça. Pourquoi je me balade en ce moment-même au milieu d’un égout puant, enfoncée jusqu’aux mollets dans un liquide dont je ne veux surtout pas connaître la composition ?
+
+– Ah, ça. J’ai senti qu’une des plumes devait se trouver par ici.
+
+– T’es sûr que tu n’as pas le nez bouché ? Ou que tu deviens pas gâteux ? Tu me soutiens mordicus depuis le début que tes plumes affectent leur environnement de façon à en devenir l’élément central, en première ligne, bien visible, sous les projecteurs. Et maintenant tu me dis qu’en fait, parfois, elles finissent dans la cuvette des chiottes par inadvertance ?
+
+– J’ai dit que les plumes se retrouvaient toujours à terme encastrées dans la poitrine d’une liche cherchant à dominer le monde, dans le moteur d’un robot géant menaçant une mégalopole, et autres scénarios qui ne brillent pas par leur sobriété. Cependant, des aléas intermédiaires se produisent parfois.
+
+– Comme de faire tomber un des objets les plus puissants du monde en allant aux toilettes ?
+
+– Tu sautes un peu vite aux conclusions qui te permettent de râler. Si tu me laissais t’expliquer, tu te rendrais bien compte que sa présence ici obéit à une certaine logique.
+
+– Puisqu’on en parle, si tu pouvais arrêter d’être aussi cachottier et d’attendre la dernière minute, voire trop tard, pour me filer les informations cruciales, peut-être que je serais de meilleure humeur.
+
+– Je ne fais pas ça que pour t’embêter. C’est juste que je saute sur les pistes quand elles sont encore brûlantes, et qu’en conséquence le seul moment où je peux caser le briefing, c’est sur le tas.
+
+– Et bien vas-y, briefe-moi.
+
+– Nous sommes actuellement dans un souterrain sommaire conduisant à la mer, creusé pour servir de poubelle à un laboratoire d’avant-garde top-secret dédié à l’étude d’une de mes plumes, et à ses applications potentielles dans le domaine des mutations génétiques.
+
+– Laisse-moi deviner : Ça a mal fini.
+
+– Bien évidemment. Il ne reste plus qu’un gros cratère encore fumant au-dessus de nos têtes. C’est ce qui m’a mis la puce à l’oreille pour enquêter sur ce coin d’ailleurs.
+
+– Donc, avec un peu de chance, la plume a juste été emportée par leur tout-à-l’égout sauvage et n’est pas devenue le cœur d’une horrible chimère baignant dans une mare acide six pieds sous terre.
+
+– Arrête d’ironiser et prépare-toi à te battre sérieusement.
+
+– C’est bon, ce truc tient à peine debout sur ses onze jambes.
+
+– Esquive sa langue préhensible au lieu de te moquer.
+
+– Hé mais c’est n’importe quoi, quel genre d’animal à des dents sur sa langue ?
+
+– Le canard.
+
+– Sérieux ?
+
+– Oui.
+
+– Tu as raison, on va arrêter ce cours sur les pires horreurs de Mère Nature et passer aux choses sérieuses. Je vais te le vaporiser fissa.
+
+– Je t’ai déjà dit de ne pas utiliser cette attaque à tout bout de champ.
+
+– Et à chaque fois je me retrouve à devoir l’utiliser quand même quand je suis dos au mur après avoir galéré une demi-heure pour rien. Tu veux pas qu’on abrège cette fois-ci ?
+
+– J’admets que j’ai peut-être sous-estimé la dangerosité de certaines situations antérieures mais…
+
+– Mais ?
+
+– Déjà, esquive ce crachat aussi venimeux que visqueux. Ensuite, les objections que j’ai soulevées par le passé sont toujours d’actualité. Non seulement dépenser autant d’énergie en une fois nécessite de puiser dans mes réserves, qui sont loin d’être infinies, surtout à ce stade où je ne parviens qu’à tirer des broutilles de plumes…
+
+– Mais en plus un tel déluge de puissance revient à envoyer un mail avec notre position à tout un tas de gens dont on n’a vraiment pas envie qu’ils sachent qu’on est là. Comme par exemple ton ex-ami pour la vie qui a failli nous faire la peau la dernière fois.
+
+– Si tu as bien retenu la leçon, pourquoi refuses-tu de l’appliquer ?
+
+– Parce si une telle situation devait se reproduire, je préférerais que ce soit sans que le monstre du jour ait au préalable fait de la charpie de mon pauvre moi. C’est quand même plus simple de s’enfuir sur ses deux jambes qu’à cloche-pied.
+
+– Qu’est-ce que tu veux que je te dise, je ne peux pas totalement te donner tort. Mais bon, cette abomination, quand même, elle paraît pas si costaude. Je pense que tu peux te la faire à l’épée.
+
+– Toujours aussi fier de ton couteau enflammé, Ouro. Je t’accorde qu’il coupe n’importe quoi comme du beurre, et que c’est bien pratique pour les ennuis du quotidien… Mais ça vaut pas une bonne désintégration en règle.
+
+– C’est toi qui décide. Les termes du pacte ne m’autorisent qu’à exprimer mon avis, pas à te refuser mon soutien.</Text>
+    <Choices>
+      <Choice text="Je pense que tu peux te la faire à l’épée" goto="21" />
+      <Choice text="Mais ça vaut pas une bonne désintégration en règle" goto="41">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="3" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="2" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="2" music="fogne_caccia">
+    <Text>– C’est sale, mais au moins c’est de la saleté produite par des êtres vivants, pas des êtres mourants.
+
+– C’est même pas assez sale si tu veux mon avis. Où sont les traces des combats ? L’équipage s’est laissé trucider sans réagir ?
+
+– Ça, c’est un peu ce que j’attendais que tu m’expliques.
+
+– J’ai quelques centaines de théories en tête.
+
+– Autant dire que tu n’en as aucune idée.
+
+– Tu as tout compris.
+
+– Voyons si ceci peut aider.
+
+– C’est le troisième portable que tu ramasses, qu’est-ce qui te fait croire que celui-ci contiendra quoi que ce soit d’utile ?
+
+– Ça te prend quelque chose comme cinq secondes d’en absorber le contenu, y’a pas de raison de pas essayer.
+
+– Je te ferai savoir que c’est aussi désagréable que de lire une très mauvaise encyclopédie de bout en bout.
+
+– Et moi, que c’est moi qui vais prendre les coups si on se méprend sur la menace.
+
+– Tu as de la chance, c’est une bonne pioche.
+
+– Tu as trouvé quoi ?
+
+– Beaucoup de code informatique indigeste, des distractions diverses, et une série de photos documentant partiellement la vie à bord et ses événements marquants.
+
+– Et donc ?
+
+– Et donc je sais qui est derrière tout ça.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="32">
+        <Requirements>
+          <Variable id="codiceMerlin" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="26">
+        <Requirements>
+          <Variable id="codiceMerlin" operator="lte" value="0" />
+        </Requirements>
+        <Effects>
+          <setVariable target="codiceCouchette" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="3" music="scontro_magico">
+    <Text>– Tu savais qu’Abaddon avait une fois tenté de conquérir le monde ?
+
+– Ils ont tous essayé plusieurs fois. Celui-là sans doute un peu moins que les autres parce que c’est pas le plus dynamique.
+
+– En effet. Même son plan il avait pas eu la force de l’inventer. C’était un mélange ne pouvant pas prendre d’idées piquées à droite à gauche, jetées les unes contre les autres dans l’espoir d’une étincelle miraculeuse.
+
+– Ça me dit quelque chose. Nos services de renseignements nous avaient remonté un plan si abracadabrantesque que nous avions décidé de le laisser s’effondrer de lui-même.
+
+– Vous intervenez dans ce genre d’affaires ?
+
+– Parfois, quand notre philosophie converge avec l’urgence du moment.
+
+– Vos intérêts tu veux dire.
+
+– Les deux à la fois, c’est l’idéal. Et je commence à voir où tu veux en venir. Les froufrous roses, c’est ça ?
+
+– La tenue, c’est pas vraiment ce qui m’a marquée. D’avoir été recrutée de force parce que je passais dans la mauvaise rue au mauvais moment avant d’être envoyée me fritter des démons avec un pouième de pouvoir, plus.
+
+– Je me demande comment tu as pu survivre à ça. L’Orochi ?
+
+– Non, non, ma rencontre avec Ouro, c’est bien après. Il s’avère que pour fainéant qu’il est Abaddon n’est pas totalement idiot. Ses pouvoirs sont liés au rêve, et par extension à la fiction. La situation avait beau être ridicule, elle émulait des schémas narratifs bien connus, et, à condition de jouer le jeu correctement, il était possible de réaliser des miracles avec les miettes d’énergie qu’il nous avait confiés.
+
+– Tu aurais donc fait triompher l’amour et la justice ? Je croyais que toute cette opération avait été un désastre pour Abaddon.
+
+– Elle l’a été. J’en ai réchappé en jouant sur le syndrome de l’épisode où l’héroïne rencontre le nouveau méchant mais parvient tout de même à s’enfuir sans trop de dommages via un deux ex machina.
+
+– L’Orochi ?
+
+– Toujours pas. Je me suis téléportée.
+
+– Tu ne peux pas te téléporter. Enfin, du moins pas toute seule. Il faut avoir le niveau d’un prince démon pour réaliser pareil miracle.
+
+– Dans la logique du rêveur, je pouvais.
+
+– Je ferai contrôler ton histoire. Elle est pour le moins intrigante. Et a réussi à me captiver. Mais pour tous tes talents de conteuse Shéhérazade, tu ne vivras pas une nuit de plus.</Text>
+    <Choices>
+      <Choice text="Tu ne vivras pas une nuit de plus" goto="42">
+        <Effects>
+          <setVariable target="codiceConte" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4" sound="passi_tetto" music="scontro_magico">
+    <Text>Un instant passe.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="11">
+        <Requirements mode="any">
+          <Variable id="codiceAcide" operator="eq" value="1" />
+          <Variable id="codiceSucre" operator="eq" value="1" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Continuer" goto="27">
+        <Requirements>
+          <Variable id="codiceAcide" operator="lte" value="0" />
+          <Variable id="codiceSucre" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="5" music="scontro_magico">
+    <Text>– Je devrais avoir des remords non ?
+
+– Pourquoi tu penses ça ?
+
+– Bah je suis à peu près certaine d’avoir cassé le bras de ce type.
+
+– Celui qui te mitraillait ? Je suis même étonné que tu ne lui aies pas fracassé le crâne.
+
+– J’ai hésité, puis je me suis dit que, quand même, ce serait pas très sympa.
+
+– Tu vois que tu as encore des remords.
+
+– Oui et non. Je dois vraiment faire un effort conscient pour me rappeler que tuer les gens, c’est pas bien, et retenir mes coups. Alors que bon, avant, cela m’aurait révolté au plus profond de mon moi.
+
+– Je crois que tu idéalises ton passé. Tu ne t’étais jamais retrouvée dans une situation où des êtres humains en voulaient activement à ta vie avant notre rencontre.
+
+– C’est pas faux, mais je persiste à croire que j’ai changé.
+
+– Évidemment que tu as changé. Ton organisme a subi une transformation en profondeur. Ton système nerveux, tes hormones, n’ont plus rien à voir avec ce que tu étais avant.
+
+– Je ne serais donc qu’un monstre qui rêve avoir été humaine ?
+
+– Disons qu’il y autant de différence entre ton toi actuel et ton toi passé qu’entre ton toi adulte et ton toi enfant.
+
+– Hein ?
+
+– Hé, la puberté, c’est pas rien.
+
+– Je soupçonne une tentative osée de noyer le poisson.
+
+– Allons, comme si c’était… GRENADE !
+
+– Je déteste ça ?
+
+– Les grenades ?
+
+– Non, quand la situation se fige parce que je fais face à un danger imminent qui nécessite de prendre une décision.
+
+– Techniquement, rien se s’arrête. Au contraire, ton cerveau tourne à toute vitesse pour effectuer en une fraction de secondes l’équivalent de plusieurs minutes de réflexion.
+
+– Je sais. Mais ça n’empêche que j’ai la très désagréable impression d’être une statue dans un monde figé.
+
+– Allons, tu es plus rapide qu’un être humain normal, mais quand même pas rapide à ce point. Pas encore du moins. Ton corps et tes sens sont dans l’état où tu les a laissés quand ce que tu as dans le crâne a passé la septième d’un coup.
+
+– Je crois que le fait que toi tu arrives encore à me parler rend l’expérience encore plus insupportable. Comme si on avait coupé toutes les chaînes sauf la pire.
+
+– Tu veux pas t’occuper de cette grenade plutôt que de déblatérer ?
+
+– Ça va, on est pas si pressé. À force, je peux tenir presque cinq minutes relatives dans cet état. J’ai pas de masse de possibilités en plus. Elle est trop proche pour que je puisse l’esquiver. Je devrais cependant avoir juste le temps de la désintégrer avant qu’elle n’explose.
+
+– Ou alors, tu peux simplement encaisser. Il risque d’y avoir de la casse, mais j’ai toute confiance en tes capacités de régénération.
+
+– Ton degré de confiance me paraît fortement biaisé par ton intérêt.</Text>
+    <Choices>
+      <Choice text="Je devrais cependant avoir juste le temps de la désintégrer avant qu’elle…" goto="22">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="4" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ou alors, tu peux simplement encaisser" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="6" music="scontro_magico">
+    <Text>– Il est plutôt du genre à se défausser de toute responsabilité en prétextant qu’il n’y a pas meilleure école que la pratique. Heureusement pour lui que je pige vite.
+
+– Tu…
+
+– Tu vas pas me dire que j’ai les chevilles surdimensionnées. Déjà, c’est pas vrai. Ensuite, tu es très clairement sur le point de défaillir. Et pour que ça soit clair alors que tu ressembles déjà à la base à un vieux fantôme tout fumeux, c’est vraiment que t’es au bout de ta vie.
+
+– Ta…
+
+– Ton charabia magique, c’est une sorte de virus. Ça force mon organisme à agir d’une façon dont il ne devrait pas, et mon cerveau fabrique des anticorps pour le combattre. Manque de bol pour toi, mon cerveau tourne très très vite.
+
+– Cette comparaison est incorrecte à presque tous les niveaux, mais tu as saisi l’idée générale.
+
+– Tu es de retour toi ?
+
+– Je ne suis jamais parti. Son sortilège avait juste brouillé nos canaux de communication, te rendant sourde et aveugle à mes appels.
+
+– J’ai jamais vraiment été en danger alors.
+
+– Cela m’aurait navré d’avoir à intervenir personnellement pour un adversaire de ce niveau. Tu as cependant de la chance qu’il n’ait pas eu plus de temps pour raffiner son enchantement, ou t’en défaire se serait révélé nettement plus délicat.
+
+– Ça, c’est une façon de dire que j’aurais réussi quand même, mais que j’aurais dû puiser plus profond dans tes réserves. Quel radin tu fais.
+
+– Je préfère me considérer comme quelqu’un de pragmatique qui pense sur le long terme.
+
+– T’inquiète pas, je vais te rembourser de suite. Donne-moi un instant pour démontrer à ce mage de pacotille que l’épée est plus forte que l’esprit, et tu pourras encaisser les intérêts de la plume.</Text>
+    <Choices>
+      <Choice text="Et tu pourras encaisser les intérêts de la plume" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="7" music="riposo">
+    <Text>– C’était osée comme manœuvre. Tu t’es intégralement exposée pour la réaliser. Si j’avais mis ne serait-ce qu’une fraction d’une seconde de plus à t’évacuer, l’effet de surprise passé, tu aurais perdu la tête.
+
+– Mes bras et jambes étaient sur le point de cramer. Il me fallait que je m’extraie du cœur des flammes avant de partir en morceaux. Je pouvais pas me permettre de demi-mesure.
+
+– Je réalise bien. Je constate, je ne juge pas. Et j’admire ton timing parfait. Tu m’as senti arriver ?
+
+– J’ai senti notre lien se reforger oui.
+
+– Isa a dû également sentir qu’elle perdait le contrôle, mais a sous-estimé ta capacité à en profiter.
+
+– Faut avouer que j’ai géré de la distraction.
+
+– En effet. Elle ne peut toutefois s’en prendre qu’à elle-même. Elle n’avait qu’à regarder sa montre au lieu de t’écouter.
+
+– C’est là où tu me dis qu’elle va sérieusement m’en vouloir de m’être jouée d’elle, et qu’elle ne commettra pas deux fois la même erreur.
+
+– Tu as tout compris.</Text>
+    <Choices>
+      <Choice text="Tu as tout compris" goto="50" />
+    </Choices>
+  </Page>
+  <Page id="8" music="scontro_magico">
+    <Text>– Ça faisait bien cinq minutes que personne m’avait tiré dessus, je commençais à me dire qu’il leur était poussé un cerveau et qu’ils avaient décampé.
+
+– Je crois que quelques-uns l’ont fait. Mais apparemment, y’en a au moins deux qui se sont plutôt décidés pour un baroud d’honneur derrière une barricade improvisée dans le dernier couloir avant notre objectif.
+
+– On est d’accord qu’à cette distance, si une des mines qu’ils ont bricolées avec des élastiques, des tours de cou et leurs dernières grenades pètent, ils risquent d’y passer aussi ?
+
+– Eux, nous, tout l’étage, peut-être même leur employeur. Ce sont les plus braves, pas les plus malins.
+
+– J’ai bien envie de désintégrer toute leur camelote. Ce sera d’autant plus facile que c’est pour une fois une cible immobile.
+
+– Il faut vraiment que tu arrêtes de voir la désintégration comme une solution universelle à tous tes problèmes.
+
+– En guise d’alternative, je peux tenter de passer ce couloir de la mort en quelques bonds gracieux. Mais une seule erreur, une seule balle qui ricoche là où il faut pas, et la situation va vite dégénérer.
+
+– Je t’accorde que c’est peut-être une situation où le mieux est l’ennemi du bien, et où il faut savoir dépenser dix pour éviter de perdre cent.
+
+– Un jour j’arriverai à t’arracher plus qu’un demi-acquiescement alambiqué. Un jour.</Text>
+    <Choices>
+      <Choice text="J’ai bien envie de désintégrer toute leur camelote" goto="37">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="4" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Je peux tenter de passer ce couloir de la mort en quelques bonds gracieux" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="9" music="scontro_magico">
+    <Text>– Une courageuse tentative. Idiote, mais courageuse.
+
+– J’avais jamais été brûcérée moi-même. La vache, ça fait mal.
+
+– Et pourtant la blessure n’est que superficielle pour un être de ta constitution.
+
+– Tu n’as pas relevé « brûcéré » ?
+
+– Nous nous sommes renseignés sur toi.
+
+– Je sais pas pourquoi, mais le fait que vous ayez creusé jusqu’à ce niveau de détail me fait plus flipper que tout ce qu’a pu me raconter Ouro jusqu’ici.
+
+– Tu as bien raison de nous craindre.</Text>
+    <Choices>
+      <Choice text="Tu as bien raison de nous craindre" goto="44">
+        <Effects>
+          <setVariable target="codiceTouche" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="10" sound="piuma_magica" soundDelay="1" music="duetto">
+    <Text>– C’est quand même bizarre de te voir manger une plume.
+
+– Tu sais très bien que je ne les mange pas vraiment, et que ce ne sont pas vraiment des plumes. D’ailleurs, tu ne me vois pas vraiment faire ça. Tu ressens que je suis en train de l’absorber via notre lien, et ton cerveau se sert de cette connaissance pour extrapoler une scène de repas à partir de l’orgie de couleurs qui parvient à ton œil.
+
+– Je remarque surtout que tu ne changes pas d’un iota alors que tu m’avais juré que tu gagnerais en prestance et en puissance au fur et à mesure que tu récupérerais ta comestible parure.
+
+– C’est plus un système par paliers. J’ai besoin d’atteindre une certaine masse critique pour que les plumes en moi cessent de se comporter comme des entités individuelles et fusionnent entre elles et avec moi.
+
+– Ça ne fait pas grand sens.
+
+– Je sais. C’est une approximation grossière de concepts physiques et mathématiques qui me demanderaient des années pour te les expliquer correctement. Un peu comme d’essayer de résumer la gravité à une pomme qui tombe par terre.
+
+– Je vais te la faire simple moi : Ton fameux palier, j’y croirai quand je le verrai.
+
+– Là-dessus, j’ai une bonne nouvelle pour toi : Tu n’auras pas à attendre bien longtemps pour m’aider à en paver le chemin. Je sais où se trouve la plume suivante.
+
+– Déjà ?
+
+– En fait, elle est liée à celle que tu viens de ramasser. En faisant mes recherches, j’ai découvert que la mégacorporation derrière feu ce labo avait également fait main basse sur un autre plume, laquelle trône encore à ce jour en trophée dans le bureau de son directeur.
+
+– Jusqu’ici, ça paraît presque facile.
+
+– En effet. Suite aux événements récents, son conseil d’administration lui a enjoint d’envoyer ce dangereux objet moisir dans leur entrepôt le plus reculé. Ça n’a pas plu au roitelet en costume trois-pièces, et, de fil en aiguille…
+
+– Oui ?
+
+– Son gratte-ciel est désormais une forteresse où ne circule plus que sa milice personnelle. Il vit retranché dans son bureau, passant ses journées à vouer un véritable culte à cet échantillon de moi-même.
+
+– Qu’est-ce qui lui est arrivé ?
+
+– Rien que du très classique. L’exposition continue au rayonnement de la plume a stimulé sa paranoïa naturelle et sa conscience de sa propre vieillesse et mortalité. Il est désormais terrorisé à l’idée de s’écarter de son précieux sésame régénérateur ne serait-ce qu’un instant, persuadé que la camarde en profiterait pour l’embarquer.
+
+– Comment tu sais tout ça s’il est enfermé ?
+
+– Les murs ne peuvent arrêter les remugles de sa peur et de son orgueil.
+
+– J’arrive pas à me faire à l’idée que la super-empathie soit dans ton panel de pouvoirs. C’est plutôt un truc qu’on associe aux gentils d’habitude.
+
+– Mais nous sommes les gentils.
+
+– Tout est une question de point de vue.</Text>
+    <Choices>
+      <Choice text="Tout est une question de point de vue" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="11" music="duetto">
+    <Text>– J’ai mal.
+
+– Crois-moi, pas autant que tu devrais. J’ai juste rafistolé le minimum de nerfs pour que tu puisses reprendre conscience, la plupart de tes récepteurs à douleur sont encore déconnectés.
+
+– Et je suis aveugle.
+
+– Tes yeux n’ont pas fini de se réparer.
+
+– L’explosion m’a pas ratée n’est-ce pas ?
+
+– Disons qu’elle m’a permis de tester les limites à partir desquelles tu peux encore repartir.
+
+– Bilan ?
+
+– Heureusement pour toi, elles sont très très larges.
+
+– Et ils font quoi les gardes pendant que je suis convalescente ?
+
+– Oh, ils ont mis ce qu’il restait de toi dans le congélateur à bières et ils sont repartis à leurs postes.
+
+– Je sens au ton de ta voix qu’il y a un mais.
+
+– Quelqu’un d’autre a mis la main sur la plume depuis.
+
+– Ta famille ?
+
+– Je me suis fait tout petit pour pas qu’il nous repère, mais je suis à peu près sûr que c’était un de sous-fifres de Raguel.
+
+– Celui avec le fouet ?
+
+– Oui. Ils ont dû nous repérer à l’énergie que j’ai dépensée pour te sauver, et ont envoyé quelqu’un faire le ménage.
+
+– Qu’est-ce que tu veux que je te dise… On fera mieux la prochaine fois.</Text>
+    <Choices>
+      <Choice text="On fera mieux la prochaine fois" goto="45">
+        <Effects>
+          <setVariable target="codiceCorps" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="12" music="fogne_caccia">
+    <Text>– Tu ne sais toujours pas où il est n’est-ce pas ?
+
+– Non, désolé. Son sortilège de désorientation est puissamment implanté. L’absence totale de réactions des membres d’équipage sur les photos alors que leurs camarades disparaissent un par un laisse suggérer qu’il l’a tracé au premier jour, et n’a fait que le renforcer depuis.
+
+– On est ensorcelés ?
+
+– Le maléfice ne t’affecte que superficiellement, mais oui, tu es ensorcelée. Moi je suis juste une victime collatérale car, ne disposant pas d’un corps physique, je suis contraint d’utiliser tes sens comme extension des miens.
+
+– Et tu peux rien faire pour me débarrasser de ça ?
+
+– En théorie, je pourrais prendre le temps de construire un contre-sort. En pratique, c’est à la fois plus rapide et plus simple de fouiller le bateau de long en large.
+
+– Et ça va pas me causer d’autres ennuis ?
+
+– Tu serais une humaine ordinaire, tu pourrais errer à l’infini. Dans notre cas cependant, le sort nous empêche simplement de le repérer depuis l’autre bout du navire. À titre de comparaison, c’est comme si on regardait un écran de surveillance avec une image brouillée, alors que ses victimes elles voyaient une vidéo trafiquée.
+
+– On sait qu’il y a un problème, mais on sait pas exactement quoi.
+
+– Voilà.
+
+– Et donc ?
+
+– Va falloir continuer à le chercher à l’ancienne, en te servant de tes jambes et de tes yeux.
+
+– Bref, comme je le disais, tu ne sais rien de plus, même si tu peux en parler longuement. Bon. On aura peut-être plus de chance dans l’usine ou l’entrepôt.
+
+– S’il m’était possible d’oublier quoi que ce soit, j’aurais du mal à me rappeler qu’on est dans un bateau quand tu présentes les choses comme ça.</Text>
+    <Choices>
+      <Choice text="On aura peut-être plus de chance dans l’usine" goto="36">
+        <Requirements>
+          <Variable id="codiceTapis" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Ou l’entrepôt" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="13" sound="piuma_magica" soundDelay="3" music="duetto">
+    <Text>– Je l’achève ou… ?
+
+– C’est toi qui vois.
+
+– Mais il lui est arrivé quoi exactement ?
+
+– Je soupçonne que ça fasse déjà plusieurs semaines que le rayonnement de la plume lui tient lieu d’alimentation et de sommeil.
+
+– Et quand je la lui ai arrachée des doigts, il a dû payer sa dette rétroactivement ?
+
+– Ah non, du tout. C’est juste que ne pas dormir rend complètement dingue, plume ou pas plume. Il est au dernier stade de la démence paranoïaque là.
+
+– Je croyais qu’il n’avait pété un câble que ce matin-même ?
+
+– Il a franchi un cap lorsqu’il a compris que sa drogue de choix était menacée, mais ça ne veut pas dire que ce n’était pas une loque humaine avant. Il est probable que ses sous-fifres ont mis autant de temps à se rendre compte qu’un truc clochait parce qu’il n’était déjà pas étranger à la consommation de drogues de performances auparavant.
+
+– Tant mieux pour nous. Un minable, c’est plus simple à gérer qu’un monstre.
+
+– En effet. La prochaine fois ne sera pas forcément aussi facile.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="47">
+        <Requirements>
+          <Variable id="codiceCorps" operator="lte" value="0" />
+          <Variable id="codiceEsprit" operator="lte" value="0" />
+          <Variable id="codiceQuintessence" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="45">
+        <Requirements mode="any">
+          <Variable id="codiceCorps" operator="eq" value="1" />
+          <Variable id="codiceEsprit" operator="eq" value="1" />
+          <Variable id="codiceQuintessence" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="14" music="" ending="true">
+    <Text>– Tu as fait vite Orochi. Mais pas assez vite.
+
+– Je fondais beaucoup d’espoir sur cette petite, Isa.
+
+– Alors tu aurais dû mieux la préparer à notre rencontre.
+
+– Ouais. Sans trop de surprise, j’ai péché par orgueil, j’ai trop fait confiance à mes sources, et j’ai sous-estimé l’ingéniosité de mes ennemis. Je croyais vraiment que tu étais hors-jeu pour un bon moment après ta rencontre avec Gabi.
+
+– Comme tout bon mensonge, il est basé sur une étincelle de vérité. Il m’a fallu un mois pour retrouver la vue, et six de plus pour récupérer le reste de mes capacités.
+
+– Plutôt des bons scores par rapport à la puissance du bonhomme. Dis-moi, ça t’intéressait pas de bosser pour moi ?
+
+– J’ai plus de quatre cents ans. Tes protégées survivent rarement plus d’une année une fois dans tes filets.
+
+– Une vie courte, mais glorieuse.
+
+– C’est non, Orochi.
+
+– Bon, bah, va falloir que j’en trouve une autre.</Text>
+  </Page>
+  <Page id="15" music="scontro_magico">
+    <Text>– Bon, je t’informe que le lanceur a pris ses jambes à son cou en voyant que tu étais encore d’une seule pièce après avoir pris une explosion pareille de plein fouet.
+
+– Je suis pas tout à fait sûre de réellement avoir tous mes morceaux.
+
+– Suffisamment pour tenir debout en tout cas. Le non strictement nécessaire va repousser d’ici une heure ou deux.
+
+– Contente de savoir que la moitié de mon ventre est superflu.
+
+– Depuis que tu n’as plus besoin de manger, c’est quand même nettement moins indispensable.
+
+– Je croyais que tu avais recyclé mon système digestif en des organes bizarres liés à mes nouvelles capacités ?
+
+– Oui, mais rien de critique dans la situation actuelle.
+
+– Tu sais qu’un jour tu seras bien obligé de m’expliquer ça en détails plutôt que de continuellement botter en touche.
+
+– Ce n’est pas tant que je ne veuille pas te l’expliquer que c’est horriblement compliqué à expliquer. Bon, on y va ?</Text>
+    <Choices>
+      <Choice text="Bon, on y va" goto="8">
+        <Effects>
+          <setVariable target="codiceSucre" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16" music="cielo_notturno">
+    <Text>– Tu pouvais pas nous déposer plus près ?
+
+– Je ne peux pas nous téléporter en toute discrétion que vers des nexus que j’ai préalablement sécurisés. Estime-toi plutôt heureuse que j’ai eu la présence d’esprit de tisser ma toile aussi sur la banquise, au cas où.
+
+– On aurait fait comment sinon ?
+
+– Je me serais arrangé pour un plus séculier transport par bateau. Cela nous aurait pris des jours pour atteindre ce coin, au lieu d’un instant et une poignée d’heures d’une marche revigorante.
+
+– Tu ressens le froid toi ?
+
+– Je peux si j’ai envie, en me connectant à tes sens.
+
+– Autant dire non, puisque c’est à peine si je trouve que le fond de l’air est frais.
+
+– Pouvoir t’adapter à des conditions climatiques extrêmes sans sourciller est un des nombreux avantages de ton nouveau corps. Évite quand même de traîner au cœur de l’Antarctique en hiver.
+
+– Ça me tuerait ?
+
+– Non. Mais ton corps devrait dépenser énormément d’énergie pour compenser, ce qu’il te fera savoir selon les désagréables canaux habituels. Tu serais également nettement plus vulnérable à de lourds dommages en cas d’attaque ennemie, tes capacités de régénération déjà saturées.
+
+– Et si ça m’arrivait, je pourrais finir sous la forme d’un cadavre-trophée constellé de glace ?
+
+– Si cette très hypothétique situation venait à se produire, j’espère que tu ne croiserais pas quelqu’un avec aussi peu de goût que l’auteur de cette œuvre d’art.
+
+– La composition est médiocre, mais avoue que voir autant de corps attachés le long de la coque d’un de ces immenses navires-usines, ça fait son petit effet.
+
+– Disons que c’est original d’utiliser un chalut pour plaquer des humains à des plaques de métal, façon toile d’araignée industrielle. Y’a du monde d’ailleurs. Je ne peux pas jurer que tout l’équipage est là, mais si ce n’est pas le cas, peu s’en faut.
+
+– Faut bien qu’il en reste encore un, ils se sont pas installés là tous seuls.
+
+– Peut-être.
+
+– Toi, tu as une autre hypothèse en tête.
+
+– Pas encore, mais je creuse mes souvenirs pour en étayer une. Y’a un truc qui cloche.
+
+– En tout cas, ça sera pas trop difficile de monter. Même si j’aurais préféré qu’ils aient descendu la passerelle, ce filet décoré fait une échelle correcte.
+
+– …
+
+– OK, maintenant tu me fais flipper. Tu avais au moins quinze façons de rebondir de façon narquoise là-dessus, et tu ne l’as pas fait.
+
+– Désolé, j’étais concentré pour essayer d’identifier la source de mon malaise. J’ignore combien de temps ça va me prendre pour l’apaiser ou le confirmer.
+
+– Et si tu devais donner une fourchette ?
+
+– Quelques heures.
+
+– Tu m’as habitué à être plus rapide à la comprenette.
+
+– Parce que j’ai le plus souvent déjà passé cette étape quand je prends contact avec toi. J’ai dans la caboche plusieurs millénaires de souvenirs personnels, ainsi qu’un accès aux connaissances de tous les peuples qui ont foulé cette terre depuis l’apparition de la vie consciente. Retrouver une information précise à partir de quelques vagues indices revient à arpenter une bibliothèque façon tour de Babel à la recherche d’un livre dont je ne connaîtrais que la couleur de la couverture.
+
+– La tour de Babel était une bibliothèque ?
+
+– Elle a été beaucoup de choses avant de s’effondrer sous son propre manque d’ambition. Mais ce n’est pas le sujet.
+
+– Si je résume, soit je joue la prudence et j’attends que tes réflexions aboutissent, sachant que le responsable de ce spectacle m’a très certainement repéré, car je suis visible comme une idiote seule au milieu de la banquise…
+
+– Soit au contraire tu fonces sans attendre, pour ne pas lui laisser le temps de se préparer plus avant à ta visite, quitte à te jeter dans un piège déjà tendu à l’avance.</Text>
+    <Choices>
+      <Choice text="Soit je joue la prudence et j’attends que tes réflexions aboutissent" goto="34" />
+      <Choice text="Soit au contraire tu fonces sans attendre" goto="29" />
+    </Choices>
+  </Page>
+  <Page id="17" music="scontro_magico">
+    <Text>– Pourquoi j’ai la sensation d’être dos au mur alors qu’il devrait y avoir l’encadrure d’une porte ouverte derrière moi ?
+
+– Mes compagnons ont dressé une barrière spirituelle tout autour de notre arène. À l’instant où tu en as franchi le seuil, aucune de nous deux ne pouvait plus en sortir.
+
+– C’est aussi ce qui retient Ouro dehors ?
+
+– Tu n’as pas grande estime pour l’Orochi si tu penses que cela suffirait à l’arrêter. Ce n’est que dernière ligne de défense de la fractale de protections qui nous isolent de lui.
+
+– C’est facile de mettre quelqu’un dos au mur quand on construit le mur directement derrière lui.
+
+– Construire un piège aussi complexe n’a rien eu de facile.
+
+– En attendant, c’est moi qui dois me battre les bras contre le corps et les talons qui cognent contre l’air solide, mon amplitude de mouvement réduite à peau de chagrin.
+
+– C’était l’un des buts recherchés.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="30">
+        <Requirements>
+          <Variable id="codiceQuintessence" operator="gte" value="1" />
+          <Variable id="codiceMorgane" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="9">
+        <Requirements mode="any">
+          <Variable id="codiceMorgane" operator="eq" value="0" />
+          <Variable id="codiceQuintessence" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="18" music="scontro_magico">
+    <Text>– …
+
+– Je n’aime jamais beaucoup quand tu t’arrêtes soudain de parler au milieu d’une phrase.
+
+– …
+
+– Et j’aime encore moins quand le silence se prolonge comme ça.
+
+– …
+
+– Okay. On panique pas. J’ai encore l’épée de feu. C’est pas très clair si je peux désintégrer des trucs sans le soutien de jamais-là-quand-il-faut, mais on va faire preuve d’optimisme et supposer que si. Je vais aussi partir du principe que ma régénération fonctionne encore, même si j’ai aucune envie de le vérifier. Mon odorat se la joue discret. Trop discret. Et je crois bien que je suis en train de perdre l’ouïe. Oui, confirmé, je m’entends encore penser, mais je hurle en silence. Pas bon du tout ça. Au moins je peux encore bouger, et donc trucider quiconque est derrière tout ça.
+
+– Ton courage est admirable, disciple du Grand Serpent.
+
+– Si tu le dis voix dans ma tête qui n’est pas la voix dans ma tête à laquelle je suis habituée.
+
+– Le Serpent Primordial ne peut plus rien pour toi ici. Tu es en mon domaine maintenant.
+
+– Ton domaine ressemble furieusement à une table bricolée avec des boîtes de thon et un matelas.
+
+– Les matériaux nobles m’ont manqué, mais l’autel n’en reste pas moins fonctionnel.
+
+– Il le sera beaucoup moins une fois que je l’aurais brûcéré.
+
+– Brûcéré ?
+
+– Brûlé et lacéré. Ravagé avec une épée de feu si tu préfères.
+
+– Je ne crois pas que tu aies encore la force d’exécuter même un plan aussi basique. Dès l’instant où tu as pénétré mon territoire, tu es devenue ma marionnette, avançant inéluctablement vers ta destinée.
+
+– Ton domaine, c’est tout le bateau ou juste ce frigo ?
+
+– Fut un temps où le monde civilisé tout entier était mon domaine. Une trahison a réduit cet empire à un cercueil de pierre pendant des siècles et des siècles. Les événements récents ont fait de cette péninsule glacée ma contrée, de ce bateau ma capitale et de ce réduit mon palais. Ton sang chargé du pouvoir du Serpent va cependant me permettre de déplacer mes terres vers un endroit plus digne de moi.
+
+– Splendide. Dis-m’en plus.
+
+– Ne crois pas que je sois aveugle à tes manigances. Tu cherches à gagner du temps dans l’espoir de trouver une échappatoire. Il n’y en a pas. Tu gaspilles tes dernières forces en ce moment-même, luttant contre moi pour le contrôle de tes derniers sens et muscles. Tu n’es plus qu’à deux pas de l’autel, mais lorsque tu l’atteindras, ce sera toute entière en mon pouvoir, et tu t’y allongeras sourire aux lèvres, toute ouverte au glas funeste.
+
+– C’est toi la silhouette noire floue derrière le matelas ?
+
+– Point flou je ne suis, c’est ta vision qui t’abandonne. Et cette grandiose ombre est belle et bien mon avatar, et entre ses mains reposent le poignard sacrificiel sacré.
+
+– On dirait que tu n’as pas trop confiance en ta capacité à me maintenir hors de combat bien longtemps, au point de prendre le risque de t’exposer physiquement pour boucler le travail avant que je m’énerve.
+
+– La raison te quitte avec tes dernières forces.
+
+– Je ne crois pas non. Tu sais, je suis plutôt contente que tu m’aies coupé d’Ouro au final. Ce combat est tellement ridicule qu’il m’aurait charrié à ce sujet pendant des semaines. On ressemble à quoi de l’extérieur, deux mimes au ralenti ?
+
+– Il ne tient qu’à toi d’accélérer.
+
+– Non merci, je préfère te faire transpirer. Dis-moi, tu galères autant parce que toutes tes forces passent dans mon immobilisation, ou c’est moi qui te bloque via le lien que tu as tissé ?
+
+– Le Serpent ne t’a donc rien enseigné ?
+
+– Ouro ? M’apprendre des trucs ?</Text>
+    <Choices>
+      <Choice text="Me rappeler un des conseils d’Ouro" goto="25">
+        <Requirements>
+          <Variable id="codiceAme" operator="gte" value="1" />
+          <Variable id="codiceMerlin" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Me débrouiller toute seule" goto="6">
+        <Requirements>
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceCouchette" operator="lte" value="0" />
+          <Variable id="codiceTapis" operator="lte" value="0" />
+          <Variable id="codiceMerlin" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Me débrouiller toute seule" goto="6">
+        <Requirements>
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceMerlin" operator="lte" value="0" />
+          <Variable id="codiceCouchette" operator="gte" value="1" />
+          <Variable id="energia" operator="lte" value="4" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Me débrouiller toute seule" goto="6">
+        <Requirements>
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceMerlin" operator="lte" value="0" />
+          <Variable id="codiceTapis" operator="gte" value="1" />
+          <Variable id="energia" operator="lte" value="4" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Me débrouiller toute seule" goto="6">
+        <Requirements>
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceMerlin" operator="gte" value="1" />
+          <Variable id="energia" operator="lte" value="3" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Attendre qu’Ouro force le passage" goto="49">
+        <Requirements>
+          <Variable id="codiceEsprit" operator="lte" value="0" />
+          <Variable id="codiceMerlin" operator="lte" value="0" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="3" />
+        </Effects>
+      </Choice>
+      <Choice text="Attendre qu’Ouro force le passage" goto="49">
+        <Requirements>
+          <Variable id="codiceEsprit" operator="lte" value="0" />
+          <Variable id="codiceMerlin" operator="gte" value="1" />
+          <Variable id="codiceAme" operator="lte" value="0" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="3" />
+        </Effects>
+      </Choice>
+      <Choice text="Attendre qu’Ouro force le passage" goto="49">
+        <Requirements>
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceMerlin" operator="lte" value="0" />
+          <Variable id="codiceCouchette" operator="gte" value="1" />
+          <Variable id="energia" operator="gte" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="3" />
+        </Effects>
+      </Choice>
+      <Choice text="Attendre qu’Ouro force le passage" goto="49">
+        <Requirements>
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceMerlin" operator="lte" value="0" />
+          <Variable id="codiceCouchette" operator="lte" value="0" />
+          <Variable id="codiceTapis" operator="gte" value="1" />
+          <Variable id="energia" operator="gte" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="3" />
+        </Effects>
+      </Choice>
+      <Choice text="Attendre qu’Ouro force le passage" goto="49">
+        <Requirements>
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceMerlin" operator="gte" value="1" />
+          <Variable id="codiceAme" operator="lte" value="0" />
+          <Variable id="energia" operator="gte" value="4" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="3" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="19" music="scontro_magico">
+    <Text>– Une contre-attaque téméraire pour éviter d’être acculée dès la première seconde. J’apprécie la manœuvre et son exécution sans flancher.
+
+– De l’audace, encore de l’audace, toujours de l’audace, et ma vie sera sauvée.
+
+– Je n’irais pas jusque là. Le coup est inattendu et pas totalement idiot, mais il ne fait pas non plus basculer la partie. Je suis toujours en position dominante.
+
+– Analogie d’échecs ?
+
+– Je suis plus go.
+
+– Bon niveau ?
+
+– J'ai beaucoup d’expérience mais ce n’est pas une compétence que j’ai particulièrement cherché à affûter avec les années.
+
+– Laisse-moi deviner : Tu as préféré t’entraîner à l’escrime.
+
+– J'ai appris, maîtrisé et adapté à mes besoins un large éventail d’arts martiaux. Kagutsuchi n’est pas une lame ordinaire, et les capacités données par les plumes serpentines font fi du carcan de l'humanité. Les sublimer nécessite de forger sa propre voie à partir d’une multitude d’expériences.
+
+– Tu as donné un nom à ton épée ?
+
+– Pas moi. Celle qui l’a reforgée pour la libérer de l’influence du démon.
+
+– Ça me fait penser, que sont devenues les autres épées ? Celles que tu as prises sur les autres filles que tu as tuées ?
+
+– Tu te poses les bonnes questions.
+
+– Et ?
+
+– Il y a des secrets qui doivent le rester.</Text>
+    <Choices>
+      <Choice text="Il y a des secrets qui doivent le rester" goto="44" />
+    </Choices>
+  </Page>
+  <Page id="20" music="fogne_caccia">
+    <Text>– C’est la plus grande collection de boîtes de thon surgelé que j’ai jamais vu, et pourtant j’en ai vu des choses au cours de ma très longue existence.
+
+– Elles sont vraiment rangées n’importe comment en revanche.
+
+– Je crois que c’est une tentative malhabile de reproduire l’architecture intérieure d’un temple en pierres taillées à l’aide de briques de carton.
+
+– Pas très impressionnant comme temple.
+
+– Dans les religions auxquelles je pense, les simples fidèles n’entraient pas dans les lieux de cultes, uniquement les prêtres et les sacrifices. Le budget déco était donc tout entier dévolu à la façade.
+
+– Humains les sacrifices ?
+
+– Parfois. Pour une double dose de fun, j’ai d’ailleurs plusieurs exemples en tête où la victime devait aller devant l’autel en apparence de son plein gré, sur ses propres jambes, histoire de soulager la conscience du public.
+
+– Comment ils s’assuraient qu’elle ne gâche pas la cérémonie en craquant à la dernière seconde et en prenant ses jambes à son cou ?
+
+– Beaucoup de pression sociale. Un peu de drogue. Et…</Text>
+    <Choices>
+      <Choice text="Continuer" goto="28">
+        <Requirements>
+          <Variable id="codiceMorgane" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="18">
+        <Requirements>
+          <Variable id="codiceMorgane" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="21" sound="artigli_mostro" soundDelay="2" music="scontro_magico">
+    <Text>– Je vais tellement le regretter. Sers-moi d’yeux de secours tu veux ?
+
+– Je t’ai déjà dit cent fois que je ne peux pas faire ça parce que je ne suis pas physiquement présent.
+
+– Je reformule, juste pour te faire plaisir. Cher Ouro, voudrais-tu bien compenser la limitation de mes sens humains en me transmettant les pulsations de la plume ?
+
+– Ah, ça, bien évidemment.
+
+– Des bras rétractiles avec des avant-bras rétractiles se terminant par des griffes rétractiles, sérieusement ? C’est pas un peu inutilement complexe ce télescopage ?
+
+– Peut-être mais c’est efficace. Tu serais morte si tu étais encore uniquement de chair et de sang. Gaffe à gauche, le bout que tu as coupé est encore vivant et cherche à te prendre à revers.
+
+– Merci. Comment c’est possible biologiquement ?
+
+– Certains insectes ont plusieurs cerveaux, et la plume doit leur fournir une régénération accrue, même si rien de comparable avec la tienne.
+
+– Ça m’empêche pas de douiller grave.
+
+– La douleur est un signal d’alerte crucial. Tu serais beaucoup plus vulnérable en combat si je te la retirais.
+
+– Ça, ou tu es un sadique, hypothèse que je n’exclue mais alors pas du tout. Dis-moi plutôt où je dois frapper ce truc pour qu’il arrête de faire repousser les morceaux que je lui enlève.
+
+– Une seconde. Localiser précisément la plume après qu’elle ait fusionné avec un être vivant n’est pas évident, même d’aussi près. Elle résonne en écho dans tout son organisme.
+
+– J’ai les jambes bouffées par l’acide, le torse façon gruyère et la seule chose qui m’empêche de hurler, c’est que j’ai plus de mâchoire inférieure, alors dépêche.
+
+– Mais tu es encore tout à fait capable d’exprimer ton agacement par le biais de notre lien psychique, donc ça va probablement pas si mal que ça.
+
+– Si tu attends que je sois plus en état de râler pour m’aider, c’est sûr qu’il sera trop tard pour que ça serve à quoi que ce soit.
+
+– … La plume bouge en fait, c’est pour ça que j’avais du mal. Mais là elle doit être… À droite… Plus haut… Là !
+
+– Enfin ! Mais pourquoi il bouge encore l’autre ?
+
+– Il va pas tenir très longtemps sans la plume avec des difformités pareilles, mais il n’y a aucune raison qu’il meurt quand on lui retire. Ce n’est pas un organe vital en soit.
+
+– Mais ça y est, il peut plus se régénérer ?
+
+– En effet. Tu peux te lâcher.
+
+– Ah, ça fait du bien.
+
+– Je n’arrive plus à différencier ton sang du sien.
+
+– Je viens de pulvériser un cœur plus grand que ma tête au corps-à-corps, c’est normal.
+
+– C’est un look.
+
+– Pas bien grave, je serai de nouveau resplendissante d’ici quelques minutes.
+
+– Compte plutôt quelques heures. Ta capacité à te restaurer intégralement a d’autres priorités que la lessive là.
+
+– La plume peut pas aider ?
+
+– Uniquement de façon infinitésimale, vu que tu recevras une fraction de la fraction que je parviendrais à en absorber. Autrement dit : Non.</Text>
+    <Choices>
+      <Choice text="La plume" goto="10">
+        <Effects>
+          <setVariable target="codiceAcide" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="22" music="scontro_magico">
+    <Text>– C’était joli.
+
+– Et instructif. Je savais pas que je pouvais désintégrer une explosion.
+
+– Matière et énergie sont la même chose. Il s’en est cependant fallu d’un cheveu pour que le souffle soit au-delà de la sphère que tu as retirée de l’existence.
+
+– J’aurais pu englober une plus grande zone pour être certaine de tout faire disparaître, mais ça m’a pas paru nécessaire.
+
+– Ça me fait mal de le dire, mais ta manie de désintégrer à tout va a quand même comme avantage que tu maîtrises de mieux en mieux ce pouvoir.
+
+– Qu’est-ce que tu crois, tout ça fait partie du plan.
+
+– Mouais. En tout cas, après cette petite démonstration de tes capacités, l’auteur de ce lancer franc ne semble plus très motivé pour t’arrêter.
+
+– Tout était calculé.
+
+– Re-mouais. Au moins, la voie est libre.</Text>
+    <Choices>
+      <Choice text="Au moins, la voie est libre" goto="8" />
+    </Choices>
+  </Page>
+  <Page id="23" music="scontro_magico">
+    <Text>– Fleur ? C’est une blague sur la tendance de l’Orochi à toutes vous affubler d’un pseudonyme floral ?
+
+– Oui. J’ai failli être renommée Églantine, mais j’ai réussi à le convaincre de passer au nom suivant sur la liste.
+
+– Euphorbe ?
+
+– Non. Non. Le premier nom portable. Fleur.
+
+– Ce n’est pas vraiment beaucoup moins ridicule. Juste plus simple. Je ne comprendrais jamais pourquoi une entité primordiale aussi vieille que l’humanité affuble ses championnes de noms aussi impossibles à prendre au sérieux.
+
+– Faut pas chercher trop loin. Je crois qu’il a commencé avec un nom hautement symbolique comme Rose, puis qu’il a continué sur sa lancée juste parce que ça le faisait marrer. Il peut être assez gamin en dépit de son âge supra-vénérable.
+
+– J’ai gagné mon propre nom après avoir maîtrisé quatre plumes et vaincu en combat singulier quatre élues du serpent. Tu dois le tien à une mauvaise blague qui ne veut pas mourir. J’aurais presque pitié.
+
+– Assez pour ne pas me tuer ?
+
+– Assez pour m’efforcer de faire vite.</Text>
+    <Choices>
+      <Choice text="J’aurais presque pitié" goto="46">
+        <Requirements>
+          <Variable id="codiceAme" operator="gte" value="1" />
+          <Variable id="codiceMerlin" operator="gte" value="1" />
+          <Variable id="codiceMorgane" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Assez pour m’efforcer de faire vite" goto="42">
+        <Requirements mode="any">
+          <Variable id="codiceAme" operator="eq" value="0" />
+          <Variable id="codiceMerlin" operator="eq" value="0" />
+          <Variable id="codiceMorgane" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="24" music="fogne_caccia">
+    <Text>– Il chatouille ton contre-sort.
+
+– Tu le ressens ? Physiquement ? Ou c’est juste une blague ?
+
+– J’ai pas forcément le sens de l’humour le plus pointu qui soit, mais même pour moi ça serait sacrément nul comme blague.
+
+– Intéressant. Il semblerait qu’à force de faire joujou avec mon énergie, tu sois devenu plus sensible au pouvoir dans ses aspects qui échappent aux humains ordinaires.
+
+– Mais encore ?
+
+– C’est l’équivalent d’avoir développé une sensibilité explicite aux ondes radio ou aux infrarouges. Tu détectes consciemment des choses qui t’échappaient totalement auparavant.
+
+– Tout ça parce que j’ai abusé des désintégrations ?
+
+– C’est pas forcément la peine de me le rappeler, mais oui. Tu es comme une parfumeuse qui à force de travailler avec les arômes parvient désormais à repérer les odeurs subtiles cachées derrière les fragrances les plus fortes.
+
+– La désintégration, c’est de la magie qui pue ?
+
+– Il n’y a pas de magie au sens miraculeux du terme. Juste des manipulations énergétiques plus ou moins comprises par la science et plus ou moins fidèlement modélisées par les mathématiques. La désintégration pue, pour reprendre ton terme, parce que ton cerveau en a une bonne vision des principes fondamentaux.
+
+– Et ta magie chatouille parce que ?
+
+– Parce que ton cerveau a assez d’expérience pour savoir qu’il se passe quelque chose de bizarre sans pouvoir dire quoi exactement. Alors il te transmet cette information un peu comme il peut.
+
+– J’espère qu’il va pas assimiler d’autres de tes bricolages à de la nausée ou pire.
+
+– Je veux pas te déprimer, mais il est probable que ça t’arrive à un moment donné. J’ai quelques pouvoirs bien crades en réserve.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="20">
+        <Effects>
+          <setVariable target="codiceMorgane" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="25" music="scontro_magico">
+    <Text>– Pour le citer : « Les sortilèges complexes sont une superbe toile d’araignée. La meilleure façon de s’en dépêtrer est de la briser d’un coup sec. »
+
+– Je m’attendais à mieux de la part de pareil professeur.
+
+– Ouais, ses conseils, ils puent un peu. Un autre qui sert à rien par exemple : Il m’a dit un jour qu’il y avait un truc très simple pour neutraliser n’importe quel magicien. Il suffit de prononcer son nom véritable à haute et intelligible voix. Ça court-circuite totalement ses sortilèges, il peut plus rien faire.
+
+– Un enfant aurait pu t’en dire autant. C’est une règle élémentaire, et tout digne pratiquant du noble art commence son apprentissage en effaçant toute trace de son nom secret.
+
+– Tu m’en diras tant mon bon Ootzli Gootzli. Si tu me permets, je vais maintenant ramasser mon épée magique, et voir si elle fonctionne contre un démon de fumée. Apparemment, oui.
+
+– Il n’est pas exactement un démon. Pas selon la définition moderne du terme en tout cas. Juste un homme qui a progressivement fusionné avec une plume jusqu’à acquérir des caractéristiques simili-démoniaques.
+
+– Tiens, tu es de retour toi ?
+
+– Je ne suis jamais parti. Il avait simplement obstrué les canaux nous permettant d’échanger. Et je retire ce que j’ai dit, tes nouvelles aptitudes psychiques ne sont pas totalement inutiles en situation de combat.
+
+– Il avait un peu le cerveau labyrinthique, mais comme tu m’avais raconté sa vie, ça a pas été trop compliqué d’en comprendre le plan et de trouver dans quel recoin il avait planqué son nom.
+
+– N’empêche, c’est du beau travail.
+
+– C’était facile, j’ai beaucoup d’expérience avec les démons manipulateurs.
+
+– Finis-le au lieu de plaisanter.
+
+– C’est bon, les types comme ça, une fois leurs plans machiavéliques en pièces, ils sont plus bons à rien.
+
+– Ne donne pas toi aussi dans le cliché de la suffisance s’il te plaît.
+
+– Et c’est toi le divin orgueilleux qui me dis ça… C’est marrant, à chaque fois qu’il perd un bout, il se contracte pour retrouver sa forme de départ, en plus petit.
+
+– À ce stade, il n’est plus qu’un amas d’énergie à peine conscient autour d’une plume. Plus tu enlèves de matière, plus ce qui reste s’accroche au centre de gravité, c’est normal.
+
+– Pour une certaine définition de normal.
+
+– Tout ça pour dire, continue à creuser, et une plume de plus…
+
+– … Te tombera entre les mains.</Text>
+    <Choices>
+      <Choice text="Te tombera entre les mains" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="26" music="fogne_caccia">
+    <Text>– Raconte.
+
+– Tu sais que certaines de mes plumes sont dans la nature depuis très longtemps.
+
+– Tu vas pas encore me raconter l’histoire de ta chute ?
+
+– Non, je parle d’événements plus récents que ça quand même. Rien qui ne remonte au-delà de 5000 ans. À cette époque, une de mes plumes était tombée dans les mains d’un type plutôt malin qui avait également eu la chance d’observer personnellement les effets secondaires néfastes d’une absorption rapide et incontrôlée de ce pouvoir.
+
+– Assez intelligent pour prendre son temps, pas assez sage pour la balancer immédiatemment dans l’océan ?
+
+– Tu as tout compris. Il a expérimenté pendant des années, a appris à maîtriser certaines de ses propriétés, jusqu’à devenir un puissant thaumaturge. À ce stade, il a fait ce que fait tout sorcier suffisamment puissant : s’emparer du trône.
+
+– Et il régna jusqu’à l’inéluctable trahison qui scella sa chute.
+
+– Exactement. Après de longues années de pouvoir absolu où il acheva de fusionner avec la plume, il fut défait par la ruse, enfermé dans un sarcophage de pierre couvert d’inscriptions indiquant de qui il s’agissait et qu’il ne devait jamais, jamais, être libéré…
+
+– Dans une langue que plus personne ne parle aujourd’hui. Pas que ça aurait changé quoi que ce soit si ça avait été compréhensible. Qui écoute les avertissements de ce genre ?
+
+– Ses contemporains comptaient sans doute surtout sur le fait que cet encombrant paquet ne remonterait jamais du fond de l’océan où ils l’avaient jeté. Mais, l’évolution des technologies aidant, il a fini par être repêché.
+
+– Ils auraient pas pu juste le trucider bien évidemment.
+
+– Les sorciers malins commencent par se rendre invulnérables aux armes traditionnelles et au poison. Puis à la faim, à l’absence d’oxygène, etc.
+
+– Dis-moi qu’il n’est pas insensible aux épées enflammées et à la désintégration.
+
+– Bien sûr que non. J’ai conçu ces armes spécialement pour rappeler leur mortalité à ces enquiquineurs.
+
+– Donc, selon toi, ils auraient repêché un sorcier plus qu’antique, qui aurait eu le réveil bougon. Mais de là à tuer tout le monde ?
+
+– Oh, il pratiquait déjà les sacrifices de masse avant son séjour dans l’eau. Je suppose qu’il n’avait pas les idées très claires après plusieurs millénaires de coma et que ce n’est qu’une fois pleinement rassasié d’énergie vitale qu’il s’est rendu compte qu’il ne restait plus personne pour le servir.
+
+– L’équivalent d’une petite ville comme casse-croûte ?
+
+– Il y a une raison pour laquelle les rois-sorciers règnent rarement plus d’une poignée d’années. Quand un être humain a une petite contrariété, même si c’est quelqu’un de très posé d’habitude, il lui arrive de casser un petit objet. Quand un monarque magique est de mauvaise humeur, même si c’est plutôt un suzerain éclairé et respecté en temps normal, et bien il lui arrive de casser une cité et tous ses habitants.
+
+– Et celui-là, il avait souvent des mauvais jours ?
+
+– Oui, de ce que j’en ai lu, c’était plutôt un nerveux pas très sympathique.
+
+– Bon, maintenant qu’on n’a plus trop de doute sur le fait que ce soit un méchant, on va le tuer ?
+
+– Bien sûr.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="12">
+        <Requirements>
+          <Variable id="codiceCouchette" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="codiceMerlin" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continuer" goto="33">
+        <Requirements>
+          <Variable id="codiceCouchette" operator="lte" value="0" />
+        </Requirements>
+        <Effects>
+          <setVariable target="codiceMerlin" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="27" music="scontro_magico">
+    <Text>– C’était impressionnant. Belle gestion de la vitesse supérieure de ton cerveau.
+
+– À défaut de prévoir les ricochets, ça me donnait le temps nécessaire pour agir en conséquence.
+
+– J’ai cru le pire quand cette balle est passée à un cheveu de la grenade, mais tu as su la parer au dernier moment.
+
+– J’aurais préféré la parer plus tôt si j’en avais été physiquement capable.
+
+– Bientôt, bientôt. Quand on aura récupéré assez de plumes. En attendant, j’ai la nette impression que tu t’habitues de mieux en mieux à tes capacités inhumaines, cela augure de bonnes choses pour la suite.
+
+– Tes compliments ont un écho sinistre. Comme si tu me préparais moralement pour l’étape suivante de mon irréversible transformation en abomination infernale.
+
+– Je parle d’expérience quand je te dis que la plupart des créatures chthoniennes sont plus agréables à regarder que ce qui nous attend derrière cette porte.</Text>
+    <Choices>
+      <Choice text="Je parle d’expérience quand je te dis que la plupart des créatures chthoniennes…" goto="13">
+        <Effects>
+          <setVariable target="codiceEsprit" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="28" sound="piuma_magica" soundDelay="4" music="scontro_magico">
+    <Text>– Et des sorts de contrôle ridicules.
+
+– Ridicules comment ?
+
+– Comme d’essayer de diriger la charge d’un rhinocéros en lui collant quelques ficelles dessus.
+
+– Et qu’est-ce qui arrive au marionnettiste d’opérette dans ton histoire ?
+
+– Il tente de fuir quand il comprend que le rhinocéros n’a aucune intention de s’arrêter ou de changer de direction.
+
+– Il est plus rapide qu’un rhinocéros ?
+
+– Non, comme il finit par le réaliser. Alors il tente de se cacher.
+
+– Et est-ce que ça fonctionne ?
+
+– Non, car les ficelles sont restées collées à ses doigts, traçant une piste bien visible jusqu’à lui.
+
+– Souhaite-tu décrire ce qui arrive quand le rhinocéros rattrape finalement ce marionnettiste loin d’être aussi aussi malin qu’il le pensait ?
+
+– Je vais laisser cette scène-là à l’imagination de l’auditoire. Disons simplement que c’est brutal, rapide, et qu’il ne reste plus qu’une plume brillante une fois le travail effectué.</Text>
+    <Choices>
+      <Choice text="Rapide, et qu’il ne reste plus qu’une plume brillante" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="29" music="fogne_caccia">
+    <Text>– C’est du sang sur le sol ?
+
+– Oui et non. Y’a bien du sang dans le tas, mais de poisson. Ce sont des débris de la pêche laissés là à pourrir.
+
+– T’as pas moyen de désactiver mon odorat ?
+
+– Je peux l’atténuer fortement sans difficulté. C’est mieux là ?
+
+– Bien mieux, merci. Je peux enfin me concentrer sur autre chose. Comme trouver le responsable de ce gâchis.
+
+– Plus facile à dire qu’à faire. Le pont est désert. Et le navire gigantesque.
+
+– Si seulement l’un de nous avait supposément le pouvoir de détecter les plumes.
+
+– Mes sens sont brouillés par quelque chose à bord de ce bateau, et crois-moi, c’est aussi agréable que si toi tu ne pouvais rien entendre parce qu’un nuage d’abeilles vrombissait dans tes oreilles.
+
+– Bon. Qu’est-ce que tu peux me dire sur ce bateau ?
+
+– Que ce mastodonte peut se résumer à quatre grands ensembles : La partie pêche et navigation, que tu contemples en ce moment. La partie usine, qui transforme le poisson frais en boîtes. Une immense cale frigorifiée et compartimentée pour stocker ces boîtes. Et un vrai petit village pour loger tous les gens nécessaires pour produire ces boîtes.</Text>
+    <Choices>
+      <Choice text="La partie usine, qui transforme le poisson frais en boîtes" goto="36" />
+      <Choice text="Une immense cale frigorifiée et compartimentée pour stocker ces boîtes" goto="20" />
+      <Choice text="Et un vrai petit village" goto="2" />
+    </Choices>
+  </Page>
+  <Page id="30" music="scontro_magico">
+    <Text>– Je suis impressionnée. Tu as réussi à plier le kekkai pendant quelques instants, juste ce qu’il te fallait pour esquiver mon attaque et te dégager.
+
+– La peur de mourir est un excellent motivateur.
+
+– Et la maîtrise de la matière par la pensée un talent dont j’ignorais que tu pouvais l’exploiter sans l’aide de l’Orochi.
+
+– Crois-moi, si j’avais réellement accès à ma désintégration, tu ferais pas autant la maligne.
+
+– Oh, j’en suis parfaitement consciente. Lors d’un de mes combats précédents, nous n’avions qu’imparfaitement séparé ton protecteur de sa championne d’alors. La moitié de mon corps est parti en poussière en un instant.
+
+– Tu as survécu à une désintégration ?
+
+– Partielle. Heureusement pour moi, elle a dégainé cette arme ultime un instant trop tard. Mes compagnons ont réussi à l’achever et à me sauver.
+
+– C’est là que je regrette qu’Ouro ait pas une équipe complète pour le soutenir.
+
+– Selon certaines sources, il aurait essayé d’en constituer une à plusieurs reprises.
+
+– Qu’est-ce qui a mal tourné ?
+
+– Il a beau prétendre le contraire, l’Orochi est extrêmement mauvais dès qu’il s’agit de comprendre et de coopérer avec des humains.
+
+– Et moi ? Et les autres filles avant ?
+
+– C’est ce que je dis. Il doit opérer une sélection minutieuse, suivie d’une transformation physique en profondeur, pour parvenir à agir en harmonie avec une personne.
+
+– C’est vrai qu’il est pas facile à vivre tous les jours, alors même qu’on communique par l’esprit sans quiproquo possible. À moins qu’on le fasse exprès pour la blague bien sûr.
+
+– Je suis persuadée qu’une certaine compatibilité des sens de l’humour fait partie de ses critères.</Text>
+    <Choices>
+      <Choice text="Je suis persuadée qu’une certaine compatibilité des sens de l’humour fait…" goto="44" />
+    </Choices>
+  </Page>
+  <Page id="31" music="duetto">
+    <Text>– De retour pour une nouvelle aventure.
+
+– Une qui sent le tuyau percé.
+
+– Mais encore ?
+
+– En théorie, c'est une plume facile. Elle est en stase, ce qui signifie que son pouvoir n’est pas accessible au commun des mortels.
+
+– C’est possible ça ?
+
+– Compliqué, mais possible. Ça revient à utiliser la plume comme batterie d’un champ de force qui l’isole du monde extérieur. En-dehors de toi, moi, et des cadors habituels, y’a pas grand monde capable de briser une telle coquille.
+
+– C’est quoi l’intérêt de la manœuvre ?
+
+– Retirer, au moins temporairement, une plume du grand jeu. Dans le cas qui nous intéresse, elle a été l’élément moteur d’un demi-siècle de guerre entre cinq seigneuries féodales, changeant de camp après chaque défaite ou victoire sans qu’aucun parti ne la conserve assez longtemps pour réellement exploiter son pouvoir.
+
+– Ça s’est fini comment ? Un pacifiste héros est venu de loin voler la plume et la sceller dans un sanctuaire au fond des montagnes ? Ou l’un des belligérants a juste été mauvais perdant et a décidé que s’il ne l’avait pas, personne ne l’aurait ?
+
+– Ça dépend de qui raconte l’histoire. En tout cas, la plume a fini comme ornement décoratif loin des regards, y compris du mien, pendant de longues années. Mais tu sais comment c’est avec les plumes, elles ne restent jamais cachées éternellement.
+
+– Heureusement, sinon ma servitude serait elle aussi éternelle.
+
+– Certains démons mineurs n’hésitent pas à faire signer des contrats pareillement vérolés mais je suis au-dessus de tout ça.
+
+– Genre, je vais te… Pourquoi je suis passé dans mon état où j’ai l’impression que le temps s’est arrêté ?
+
+– Parce que tu es en danger de mort.</Text>
+    <Choices>
+      <Choice text="Parce que tu es en danger de mort" goto="39" />
+    </Choices>
+  </Page>
+  <Page id="32" music="fogne_caccia">
+    <Text>– Tu le savais pas déjà ?
+
+– Disons que je suis passé d’une hypothèse éclairée à une certitude absolue.
+
+– Ça change quelque chose dans la pratique ?
+
+– Oui et non. La confirmation elle-même est anecdotique, mais en croisant mes connaissances sur le sujet avec les traces photographiques, je suis en mesure de deviner à quoi notre gus a occupé ses journées jusqu’à la disparition du dernier témoin.
+
+– Pas à tresser des couronnes de fleurs pour nous souhaiter la bienvenue je suppose.
+
+– Non. À se construire, mètre après mètre, un sanctuaire, une zone enchantée dans laquelle les gens disparaissaient discrètement, en ne laissant qu’un souvenir confus de leur existence aux autres membres d’équipage.
+
+– Tu as vu ça à quoi exactement ?
+
+– À un tas de petits détails, mais la photo où un type se fait égorger dans l’ombre en arrière-plan sans que personne au premier plan ne semble s’en soucier a bien aidé.
+
+– Laisse-moi deviner : Il a étendu sa zone d’influence à tout le navire et nous observe en ce moment-même.
+
+– Je pense même qu’il nous regarde depuis que je nous ai matérialisés sur la banquise. Il est cependant loin d’être assez puissant pour nous affecter en-dehors du cœur de son domaine. Lequel devrait se situer, si je me fie à l’emplacement de ses premières attaques, au fin fond de la cale frigorifique.
+
+– Contraposée de ton affirmation précédente : Est-ce que je risque quelque chose à aller là-bas une main sur le cœur et l’autre sur la poignée de mon épée ?
+
+– Difficile à dire. La puissance d’un être ne se quantifie pas aisément. Je ne m’avancerais même pas à donner plus qu’une estimation de la tienne alors que je te fréquente au quotidien, alors un type sur lequel je n’ai que des témoignages indirects, mystère.
+
+– Tu ne me rassures guère.
+
+– Je ne le suis pas moi-même. Même si cela me navre, il pourrait être plus prudent de dépenser un peu de mon énergie accumulée pour renforcer temporairement tes défenses mystiques. J’ai assez d’informations pour tisser des enchantements de protection adéquats à moindre coût.
+
+– De meilleure qualité que ce que tu m’as proposé dehors ?
+
+– Non, similaire. Inutile de cumuler les deux, ce serait une perte d’énergie.</Text>
+    <Choices>
+      <Choice text="Au fin fond de la cale frigorifique" goto="20">
+        <Effects>
+          <setVariable target="codiceCouchette" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Accepter le renfort mystique" goto="20">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="4" />
+          <Variable id="codiceMorgane" operator="lte" value="0" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="1" />
+          <setVariable target="codiceMorgane" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Lui demander comment ça marche" goto="24">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="4" />
+          <Variable id="codiceQuintessence" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="33" music="cielo_notturno">
+    <Text>– Puisqu’on n’était plus à la minute près, j’ai également profité de l’occasion pour me rafraîchir la mémoire au sujet d’un certain nombre de contre-sorts qui devraient réduire sa magie à une brise printanière.
+
+– Je suppose qu’il y a un « mais » sinon tu m’aurais dit que tu avais déjà incanté tout ça, pas que tu pouvais le faire.
+
+– Mes informations sont imparfaites, ce qui m’oblige à viser large si je veux couvrir tous les cas de figures. Autrement dit, à puiser dans mes réserves pour arriver à un résultat satisfaisant.
+
+– Tu me demandes de choisir entre assurer cette mission dans le grand froid de la façon la moins impressionnante possible ou me garder la possibilité de désintégrer un truc de plus plus tard ?
+
+– Je vais reformuler pour que cette décision te demande quelque réflexion : Accepter une perte d’énergie calculée ici pour éviter une éventuelle perte d’énergie plus grande plus tard, et donc peut-être maximiser le nombre de désintégrations à long terme.
+
+– Ah, oui, là c’est un vrai choix.</Text>
+    <Choices>
+      <Choice text="De la façon la moins impressionnante possible" goto="29">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="3" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="2" />
+          <setVariable target="codiceMorgane" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Me garder la possibilité de désintégrer un truc de plus" goto="29" />
+    </Choices>
+  </Page>
+  <Page id="34" music="cielo_notturno">
+    <Text>– Tu t’en tires ? Ça fait genre trois heures là.
+
+– Tu te rends compte qu’en cette durée éphémère, je suis parvenu à croiser l’historique des courants marins, toute la littérature sur les enchantements à base de cercles macabres de cadavres, et l’histoire ésotérique d’un quart d’hémisphère sur plus de 10 000 ans ?
+
+– Non, je me rends pas compte. Et je m’en fous. Tu as trouvé quelque chose ?
+
+– Oh oui. Je sais exactement qui nous attend.</Text>
+    <Choices>
+      <Choice text="Je sais exactement qui nous attend" goto="26">
+        <Effects>
+          <setVariable target="codiceFroid" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="35" music="scontro_magico">
+    <Text>Le temps d’un souffle.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="19">
+        <Requirements>
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="energia" operator="lte" value="3" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="9">
+        <Requirements mode="any">
+          <Variable id="codiceEsprit" operator="eq" value="0" />
+          <Variable id="energia" operator="eq" value="4" />
+          <Variable id="energia" operator="eq" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="36" music="fogne_caccia">
+    <Text>– J’ai l’impression de me balader dans le décor d’un film d’horreur.
+
+– En même temps, tu longes des machines destinées à déchiqueter plusieurs tonnes de chair par heure, 24 heures sur 24. Estime-toi heureuse qu’elles soient à l’arrêt et que tu ne sois pas attachée au tapis roulant.
+
+– Donne pas des idées à notre méchant du jour.
+
+– Fais pas genre que c’est pas exactement la première chose à laquelle tu as pensé en arrivant ici.
+
+– Si, évidemment. C’est pour ça que j’ai enfoncé un grand coup l’interrupteur d’urgence, au cas où.
+
+– Et coupé les fils de l’alimentation électrique en prime.
+
+– On sait jamais.
+
+– Résultat, on se retrouve dans le noir avec juste les loupiottes d’urgence.
+
+– C’est pas vraiment gênant vu que t’as trafiqué mes yeux pour que j’y vois quand même parfaitement.
+
+– Tu me rendrais presque nostalgique du début de nos aventures, quand tu t’émerveillais de la moindre petite chose.
+
+– Si j’étais resté cette fille-là, je ne serais plus que poussière aujourd’hui.
+
+– Je sais bien. Je suis un papa gâteux, qui se plaint que sa progéniture ne soit plus aussi choupie qu’avant mais est en réalité bien content de ne plus avoir à changer ses couches.
+
+– Comparaison gênante mise à part, le coin est vide de chez vide.
+
+– Oui. En dépit du contexte parfait pour un affrontement d’anthologie, c’est une mauvais pioche.
+
+– Reste potentiellement les quartiers de l’équipage ou la cale-entrepôt.</Text>
+    <Choices>
+      <Choice text="Reste potentiellement les quartiers de l’équipage" goto="2">
+        <Requirements>
+          <Variable id="codiceCouchette" operator="lte" value="0" />
+        </Requirements>
+        <Effects>
+          <setVariable target="codiceTapis" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Ou la cale-entrepôt" goto="20">
+        <Effects>
+          <setVariable target="codiceTapis" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="37" sound="fiamma_demone" music="scontro_magico">
+    <Text>– Sans surprise, un explosif qui n’existe plus ne peut plus exploser.
+
+– Et je n’ai même pas eu besoin de les secouer pour qu’ils libèrent le passage. Y’a plus qu’à franchir la porte.
+
+– En même temps, tu serais à leur place, tu flipperais tout pareil. Ils ont vu tout le fatras dont ils avaient couvert le couloir se volatiliser.
+
+– Évite de me rappeler qu’il nous arrive de croiser des types avec ce genre de pouvoirs dans le camp d’en face ou je vais nous faire une dépression.
+
+– Si tu continues à en l’utiliser aussi souvent, tu seras bientôt aussi forte qu’eux à ce petit jeu. Et moi une outre vidée.
+
+– En tout cas, ce sont pas tes compliments passifs-agressifs qui vont me convaincre d’arrêter.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="13">
+        <Requirements>
+          <Variable id="codiceAcide" operator="lte" value="0" />
+          <Variable id="codiceSucre" operator="lte" value="0" />
+        </Requirements>
+        <Effects>
+          <setVariable target="codiceQuintessence" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continuer" goto="13">
+        <Requirements>
+          <Variable id="codiceAcide" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="13">
+        <Requirements>
+          <Variable id="codiceAcide" operator="lte" value="0" />
+          <Variable id="codiceSucre" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="38" music="scontro_magico">
+    <Text>– Vas-tu donc mourir ? Tu n’es plus qu’un squelette carbonisé et pourtant tu continues à te dérober à ma lame.
+
+– Ça manque d’un miroir, mais je suis persuadée que ta description est légèrement exagérée. Je ne pourrais plus bouger si mes muscles étaient en cendres.
+
+– Bien sûr que si ! En utilisant l’énergie de l’Orochi pour compenser tes absences physiques.
+
+– Ah ? Je savais que c’était techniquement possible, j’espérais que j’avais réussi à développer mes capacités jusqu’à être en mesure de le faire, mais j’étais vraiment pas sûre de mon coup. C’est cool que tu confirmes, même si j’aurais préféré que ce soit en d’autres circonstances.
+
+– Tu te moques de moi ?
+
+– Moins que tu ne le penses. Je ne suis pas aussi extrême quand je m’entraîne.
+
+– C’est une erreur.
+
+– Je préfère ne pas mourir à l’entraînement à briller sur le terrain. En même temps, j’ai besoin de ça pour être brillante comme tu peux le remarquer.
+
+– Je confesse que nous vous avons sous-estimés toi et l’Orochi. Il sera de retour d’un instant à l’autre, et nous n’avons pas à disposition immédiate la puissance de feu pour t’éliminer avant ça. Nous ne commettrons pas cette erreur deux fois.
+
+– Alors tu ne m’en voudras pas si je passe les derniers instants avant qu’Ouro m’emmène loin d’ici à souhaiter qu’on ne se revoit jamais.</Text>
+    <Choices>
+      <Choice text="Alors tu ne m’en voudras pas si je passe les derniers instants avant qu’Ouro…" goto="50" />
+    </Choices>
+  </Page>
+  <Page id="39" music="scontro_magico">
+    <Text>– À ce point-là ?
+
+– Oh que oui. Décris-moi ce que tu vois.
+
+– Un parking souterrain. Beaucoup trop vide même à cette heure de la nuit.
+
+– Oui, supposément, nous aurions dû y trouver un camion rempli d’antiquités à deux sous parmi lesquelles se serait cachée la plume. Maintenant, arrête de plaisanter, et décris-moi ce qui est juste devant tes yeux.
+
+– Ça va, j’essaye juste de détendre l’atmosphère. Je suppose que le danger vient de la silhouette en armure militaire moderne en position de combat avec ce qui ressemble furieusement à mon épée de feu entre les mains.
+
+– C’est normal, c’est virtuellement la même aux défauts de forge près. Les ajouts que tu vois sont juste destinés à la couper totalement de mon contrôle.
+
+– Tu peux contrôler mon épée ?
+
+– Je peux juste moduler l’intensité de la flamme ou la faire s’autodétruire. Justement pour éviter un coup comme celui-là. Mais j’ai manqué le timing à l’époque.
+
+– Une ancienne apprentie à toi qui a trouvé une faille dans le contrat et t’en veux un peu ?
+
+– D’un certain point de vue. Et par là, je veux dire que la mort est une clause échappatoire valide et qu’elle m’en veut sans doute de s’être fait désarmer et tuer par sa propre arme tandis que je regardais impuissant.
+
+– Il s’est passé quoi ?
+
+– J’ai péché par orgueil.
+
+– Je vais retenir toutes les blagues faciles que je pourrais faire car je la vois imperceptiblement bouger, ce qui signifie soit que ton tueur est extrêmement rapide, soit que mon temps suspendu arrive à ses limites.
+
+– Un peu des deux. Et tueuse techniquement. Son nom de guerre est beaucoup trop prétentieux à mon goût alors je l’appelle juste Isa.
+
+– Tu sais te faire apprécier.
+
+– Toujours. Il y a peu près 400 ans, je suis tombé dans un piège. Je suis assez bon pour les éviter en général, mais j’ai aussi beaucoup d’ennemis, donc statistiquement il faut bien que je me rate une fois de temps en temps. Cette tentative avait ceci de particulier, même si ce n’était pas exactement la première fois, que c’était des humains qui cherchaient à m’attraper, et non les huluberlus habituels des deux camps.
+
+– Résume s’il te plaît.
+
+– Le contexte est malheureusement important. J’aurais probablement pu m’en tirer si je n’avais pas complètement sous-estimé leurs capacités. Mais j’étais resté relativement hermétique aux dernières évolutions technologiques, dans tous les domaines, et fus complètement pris de court par un ingénieux sceau complété en un instant par quelques explosifs bien placés. Je perdis alors le contact avec ma protégée d’alors, et ne le retrouvais jamais.
+
+– Parce qu’elle s’était faite tuer entre-temps.
+
+– Oui. Par recoupements, j’ai fini par découvrir qu’elle avait été submergée par un assaut simultané au cours duquel quelqu’un a réussi à lui arracher son arme. Sans mon soutien direct, elle n’a pas réussi à survivre à sa décapitation par une lame enflammée.
+
+– Je vois. Tu me préviens donc que je risque d’être brûcérée très bientôt, et de façon totalement mortelle en ton absence.
+
+– Oui. Pas de désintégration, pas de téléportation, une régénération limitée. Ne cherche même pas à la battre. Gagne du temps jusqu’à ce que je revienne et puisse t’évacuer. Fais-la parler si tu peux. Elle adore s’écouter parler.
+
+– Si tu la connais personnellement alors qu’elle est responsable d’un incident vieux de quatre siècles…
+
+– Je ne suis pas sûr qu’elle ait été la tête pensante ou le bras derrière le premier meurtre, mais c’est elle qui a l’épée depuis, et elle en a personnellement assassiné plusieurs autres. Ah, et elle est liée de façon assez complexe à au moins trois plumes, ce qui la rend à peu près immortelle.
+
+– Joie.
+
+– Profite de l’avantage que tu as de pouvoir choisir ton approche du problème calmement. Ce sera peut-être ta dernière action si tu te plantes.
+
+– J’ai bien compris. Fondamentalement, vu qu’elle cherche très clairement à me décapiter en un coup, et que je suis déjà trop proche pour esquiver totalement, il ne me reste que deux possibilités : parer selon les standards défensifs, en faisant un pas en arrière ou au contraire bloquer sa lame en avant de mon corps pour amener le combat à elle.
+
+– Rappelle-moi de t’arranger de vrais cours d’escrime si par miracle on en réchappe. Et…
+
+– Oui ?
+
+– Bonne chance.</Text>
+    <Choices>
+      <Choice text="En faisant un pas en arrière" goto="17" />
+      <Choice text="Ou au contraire bloquer sa lame en avant de mon corps pour amener le combat à…" goto="35" />
+    </Choices>
+  </Page>
+  <Page id="40" music="scontro_magico">
+    <Text>– Isa ? Isa ? L’Orochi t’a dit que je m’appelais Isa ?
+
+– Euh, oui ?
+
+– C’est à la fois insultant et perturbant. Qu’il sache que j’ai acquis le titre d’Izanami no mikoto depuis notre dernière rencontre indique que ses sources d’informations sont toujours aussi excellentes. Qu’il révèle ce savoir aussi facilement, et réduise ce nom prestigieux à un diminutif aussi banal, cela ne fait que souligner son infini mépris.
+
+– Il est fait d’orgueil tu sais. Je crois bien qu’il est physiquement incapable de traiter quelqu’un sans condescendance.
+
+– On pourrait penser qu’il apprendrait à force de se brûler les ailes à la flamme de sa propre morgue.
+
+– Je ne sais pas trop si les êtres comme lui sont capables d’évoluer. Ils me donnent l’impression d’acteurs prisonniers de leur rôle.
+
+– Tu en as côtoyé d’autres que l’Orochi ?
+
+– J’ai eu une vie mouvementée.
+
+– Mais encore ?
+
+– Je sais pas trop. J’ai pas vraiment envie d’en parler. Mais en même temps, peut-être que je devrais.</Text>
+    <Choices>
+      <Choice text="J’ai pas vraiment envie d’en parler" goto="48" />
+      <Choice text="Mais en même temps, peut-être que je devrais" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="41" sound="fiamma_demone" music="scontro_magico">
+    <Text>– Tu sais Ouro, autant je déteste tout ce dans quoi tu m’entraînes, autant faut bien avouer que ce pouvoir-là, il déchire grave.
+
+– Oh, je pense que je peux comprendre, au moins intellectuellement, la fascination que peut exercer sur un être purement physique la capacité d’anéantir la matière à un niveau si fondamental qu’elle en devient pure lumière. Je suis juste convaincu que ton amour immodéré pour la désintégration ne fait pas de toi une juge impartiale quand il s’agit de savoir s’il faut y recourir ou non.
+
+– Fais pas le rabat-joie et admire. Plus de monstre, et ta plume flotte paisiblement au milieu du rien, intacte, attendant juste qu’on la ramasse.
+
+– Techniquement, elle a été détruite pendant une fraction d’instant, avant de se recomposer à l’identique à partir de son énergie diffuse et de son souvenir rémanent.
+
+– Est-ce que quelque chose qui s’est déroulé durant un intervalle temporel si petit qu’aucune technologie sur cette planète, et dans une moindre mesure mes sens, ne sont capables de le saisir a réellement de l’importance pour notre affaire ?
+
+– Veux-tu vraiment te lancer dans un débat philosophique à ce sujet ?
+
+– Non.
+
+– Alors laisse-moi faire le deuil de réserves patiemment accumulées années après années et vidées en un moment si court que tu te refuses même à le concevoir.
+
+– C’est bon, arrête de râler, tu sais très bien que tu vas en récupérer de suite, via la plume, une partie de ce que tu viens de dépenser, et qu’elle t’en redonnera bien plus à long terme.</Text>
+    <Choices>
+      <Choice text="Tu sais très bien que tu vas en récupérer de suite, via la plume" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="42" sound="fiamma_demone" soundDelay="1" music="scontro_magico">
+    <Text>– Hé, je croyais qu’on était parti pour un duel honorable en un contre un !
+
+– L’heure tourne.
+
+– Je veux bien croire qu’Ouro va débarquer d’une seconde à l’autre, mais des lance-flammes ? Sérieusement ?
+
+– Tais-toi et reste au croisement des faisceaux.
+
+– Et puis quoi encore ? Et tu es aussi en train de cramer je te signale.
+
+– Si je décroche de notre corps-à-corps, tu pourras fuir.
+
+– Et ça te dérange pas plus que ça toi de finir en bougie fondue ?
+
+– Je survivrai. Ma tenue est partiellement ignifugée et le pouvoir des plumes soignera les brûlures au pire sous quelques semaines.
+
+– Et ton honneur de guerrière ?
+
+– Je crois que tu te trompes de film. Il n’a jamais été question d'honneur, juste de pragmatisme. Si j’avais été en mesure de me débarrasser de toi dans les délais par l’épée, nous aurions réalisé de substantielles économies matérielles et temporelles. Sois plutôt fière de m’avoir poussée dans mes retranchements.</Text>
+    <Choices>
+      <Choice text="M’arracher au croisement des faisceaux" goto="7">
+        <Requirements>
+          <Variable id="codiceLivre" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Tenir encore, coûte que coûte" goto="38">
+        <Requirements>
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="energia" operator="lte" value="4" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="M’arracher au croisement des faisceaux" goto="7">
+        <Requirements>
+          <Variable id="codiceTouche" operator="lte" value="0" />
+          <Variable id="codiceConte" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Ne plus rien pouvoir faire" goto="14">
+        <Requirements>
+          <Variable id="codiceLivre" operator="lte" value="0" />
+          <Variable id="codiceCorps" operator="lte" value="0" />
+          <Variable id="codiceTouche" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Ne plus rien pouvoir faire" goto="14">
+        <Requirements>
+          <Variable id="codiceLivre" operator="lte" value="0" />
+          <Variable id="codiceCorps" operator="lte" value="0" />
+          <Variable id="codiceTouche" operator="lte" value="0" />
+          <Variable id="codiceConte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Ne plus rien pouvoir faire" goto="14">
+        <Requirements>
+          <Variable id="codiceLivre" operator="lte" value="0" />
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="energia" operator="gte" value="5" />
+          <Variable id="codiceTouche" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Ne plus rien pouvoir faire" goto="14">
+        <Requirements>
+          <Variable id="codiceLivre" operator="lte" value="0" />
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="energia" operator="gte" value="5" />
+          <Variable id="codiceTouche" operator="lte" value="0" />
+          <Variable id="codiceConte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="43" music="scontro_magico">
+    <Text>Une seconde, à peine.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="11">
+        <Requirements>
+          <Variable id="codiceAcide" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <addVariable target="energia" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Continuer" goto="15">
+        <Requirements>
+          <Variable id="codiceAcide" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="44" music="scontro_magico">
+    <Text>– Okay. Et sinon, comment tu fais pour parler dans ma tête au fait ?
+
+– Le canal qui te lie en temps normal à l’Orochi est désormais branché sur moi.
+
+– Cette ligne ne sert pas qu’à parler tu sais.
+
+– Actuellement, si. Notre indésirable connaissance commune a obstrué en urgence toutes les autres canaux juste avant sa visite forcée aux royaumes infernaux. Il a sans doute eu peur que je trouve moyen de les utiliser contre toi.
+
+– Oh, est-ce que par hasard tu aurais déjà vaincu une autre fille par ce biais ?
+
+– Il vous forme décidément toujours aussi mal. La réponse est oui, bien sûr, et les détails sont un secret que je garde pour moi.
+
+– Allez, fais pas ta maline, raconte.
+
+– À quoi bon ? Tes extraordinaires capacités physiques ne compensent pas entièrement ton manque total de technique. Tu es condamnée à me laisser une ouverture d’un instant à l’autre, et à payer cette erreur de ta vie.
+
+– C’est obligé cette seconde étape ? On peut pas juste s’asseoir et discuter ?
+
+– Oh, je n’ai rien contre toi personnellement. Tu as juste la malchance d’être la marionnette dont le démon a besoin pour interagir avec le monde physique. Ton trépas signifie des années, peut-être même des décennies, où il ne sera pas dans nos pattes, le temps qu’il trouve et élève une remplaçante.
+
+– Si je promets de plus l’aider, c’est totalement pas crédible n’est-ce pas ?
+
+– Sachant que tu es contrainte par ton pacte à faire exactement cela, en effet.
+
+– Allons, Isa, je suis sûre que tu peux me faire une fleur.</Text>
+    <Choices>
+      <Choice text="Allons, Isa" goto="40" />
+      <Choice text="Je suis sûre que tu peux me faire une fleur" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="45" music="riposo">
+    <Text>– Bien reposée ?
+
+– Franchement non. De savoir que tu pouvais réapparaître à n’importe quel moment pour m’envoyer vers une nouvelle mission urgente m’a pourri tout mon temps libre. Plus les jours passaient et plus j’avais l’impression qu’un truc terrible allait me tomber sur le museau et que je devais être prête au départ à tout moment.
+
+– Oui, j’ai cru comprendre que tu étais pas mal stressée. J’ai même eu l’impression que tu t’entraînais.
+
+– Dans la mesure du possible. J’ai pas besoin de cardio ou de muscu avec ce corps, et, puisque tu ne veux rien me dire, je n’ai aucune idée de comment développer efficacement mes nouvelles capacités.
+
+– Parce que je n’en sais rien. Le pacte affecte tout un chacun différemment. Et je n’ai aucune idée de comment t’apprendre des compétences qui sont pour moi aussi instinctives que de respirer.
+
+– Je respire encore moi ?
+
+– Oui, même si ce n’est plus vraiment de l’oxygène et du dioxyde de carbone que tu échanges avec l’atmosphère. Mais on s’éloigne du sujet. J’ai une nouvelle piste.
+
+– Quand tu commences comme ça au lieu d’annoncer que tu sais où se trouve une plume, c’est que tu n’es pas sûr de ton coup du tout, et qu’il y a neuf chances sur dix que je me tape un aller-retour pour du beurre.
+
+– Tu me connais bien. En effet, je n’ai que des indices circonstanciels sur ce coup-ci. Un chalutier s’est échoué sur les glaces du pôle, et ne répond plus depuis. Les deniers messages radio reçus sont confus, mais suggèrent à demi-mots que la situation a peu à peu échappé à tout contrôle suite à une pêche parfaitement illégale ayant raclé les fonds marins et remonté des débris en plus des poissons.
+
+– La relation avec ton plumage ne saute pas aux yeux.
+
+– Attacher une de mes plumes à un gros caillou et jeter le tout à l’eau est une méthode simple mais en apparence efficace pour se débarrasser d’une de mes plumes.
+
+– En apparence ?
+
+– Elles remontent toujours par d’improbables coïncidences. Enfin, improbables uniquement pour ceux qui comptent en excluant leur influence des calculs.
+
+– C’est encore pire que ce que je pensais. Tu n’as vraiment rien de plus qu’un soupçon à partir d’une anecdote qui pourrait s’expliquer de bien d’autres façons ?
+
+– Tu préfères ne pas aller vérifier, que le bateau coule, que la plume qui s’y trouve peut-être retourne passer encore quelques décennies voire siècles au fond de l’océan, durée durant laquelle tu resteras à ma disposition parce que tu t’es engagée à m’épauler jusqu’à j’ai récupéré toutes mes plumes ?
+
+– Quand tu le présentes comme ça, je suis d’un coup plus motivée. Qu’est-ce qu’on attend ?</Text>
+    <Choices>
+      <Choice text="Qu’est-ce qu’on attend" goto="16" />
+    </Choices>
+  </Page>
+  <Page id="46" music="scontro_magico">
+    <Text>– C’est une jolie histoire ce quatre fois quatre. Dommage que ça soit complètement faux.
+
+– Quoi ? Qu’est-ce que tu racontes ?
+
+– Votre petit groupe ? Ordre ? Organisation ? Bref, toi et ces autres types avaient bien réussi à mettre la main sur quatre plumes, cinq en comptant celle avec laquelle vous nous avez appâtés. Mais tu n’es pas capable d’en utiliser réellement plus deux à la fois.
+
+– Mais comment ?
+
+– Et tu as tué de tes mains trois championnes en comptant large, une seule si on exclut celles où tu as été fortement aidée.
+
+– Tu…
+
+– Et tes grands amis qui nous tournent autour en ce moment n’étaient pas au courant de tout ça, parce que l’avantage d’avoir 400 ans, c’est qu’il reste plus beaucoup de témoins pour te contredire, et que votre petite propagande interne a tout intérêt à te mettre sur un piédestal.
+
+– 臭婊子 ! Tu es une télépathe mineure. Tu peux lire mes pensées superficielles. Tu te contentes de répéter ce qui me vient à l’esprit.
+
+– Fallait pas être aussi mauvaise menteuse. Quand tu as tenté de me bluffer, ton cerveau a pratiquement hurlé la vérité dans mon crâne.
+
+– Je savais que l’Orochi avait ce genre de pouvoirs, pas que tu en avais hérité.
+
+– Je crois que ça existe à l’état dormant dans la pochette surprise qu’il nous refile à toutes à la signature du pacte, mais qu’en général les autres filles préfèrent développer des compétences plus directement utiles en combat.
+
+– Et elles ont bien raison. Qu’est-ce qui t’a pris de pousser dans cette direction ?
+
+– J’aime varier mes stratégies, et donc disposer d’un large éventail de compétences.
+
+– D’habitude, vous ôter la tête ne m’apporte que la satisfaction du travail accompli, mais là je vais le faire avec un plaisir non dissimulé.
+
+– Viens la chercher.</Text>
+    <Choices>
+      <Choice text="Viens la chercher" goto="42">
+        <Effects>
+          <setVariable target="codiceLivre" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="47" music="duetto">
+    <Text>– Dingue de se dire qu’alors qu’il est basiquement en train de mourir du sevrage brutal, c’est encore la valeur de ses actions qui l’obsède.
+
+– Comment est-ce que tu… Oh, tu as récupéré ce pouvoir-là.
+
+– C’était pas prévu ?
+
+– Avec l’expérience, et le renforcement de notre lien via l’obtention de nouvelles plumes, tu allais tôt ou tard développer de nouvelles capacités. Mais je m’attendais à ce qu’elles soient plus martiales.
+
+– Hé, j’aime la variété. Ce qui est frustrant, c’est que ça a pas l’air de marcher sur toi.
+
+– Ce qui te va vraiment te frustrer, c’est quand tu vas te rendre compte que ça marche pas non plus sur les gros bonnets d’en face. De façon générale, c’est anecdotique comme compétence. Je sais même pas trop à quoi elle va pouvoir te servir par la suite.</Text>
+    <Choices>
+      <Choice text="Je sais même pas trop à quoi elle va pouvoir te servir par la suite" goto="45">
+        <Effects>
+          <setVariable target="codiceAme" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="48" music="scontro_magico">
+    <Text>– Mauvaise expérience ?
+
+– Ça existe les bonnes expériences avec des démons ?
+
+– Y’a pas mal de légendes où le démon se fait pigeonner.
+
+– Oui, j’ai jamais trop compris la morale de ces histoires-là. On peut manipuler et humilier des gens s’ils sont eux-mêmes méchants et manipulateurs ?
+
+– La morale est une chose complexe et changeante. Je dois cependant t’informer que dans le cas présent, je ne sais pas si je suis la gentille, mais je ne compte en tout cas pas te laisser me manipuler plus longtemps.</Text>
+    <Choices>
+      <Choice text="Mais je ne compte en tout cas pas te laisser me manipuler plus longtemps" goto="42" />
+    </Choices>
+  </Page>
+  <Page id="49" music="duetto">
+    <Text>– Ah bah quand même !
+
+– Ça va. J’ai dû briser l’enchantement de bannissement à la force brute, et tu sais à quel point cela m’est coûteux.
+
+– Oui, je le sais. C’est d’ailleurs pour ça que d’habitude c’est moi qui effectue toutes ces tâches subalternes nécessitant d’interagir directement avec le monde physique.
+
+– Et donc ?
+
+– Et donc quoi ? C’est toi le spécialiste en tous ces machins magiques. Si même toi tu t’es fait avoir comme un bleu, tu vas pas me faire la morale derrière.
+
+– Je t’accorde que je n’ai pas brillé. J’ai probablement trop sous-estimé ce minable.
+
+– T’inquiète, c’est pas comme s’il sera encore en état témoigner après ce que je suis en train de lui mettre.
+
+– Ma réputation m’importe peu. Je suis plutôt inquiet de ce qui va nous arriver la prochaine fois que l’on croisera quelqu’un de vraiment dangereux si je bafouille déjà face à un second couteau.
+
+– Dis-toi qu’au moins tu disposeras d’une plume de plus pour cette hypothétique future rencontre que j’apprécierais de repousser autant que possible.
+
+– Tu as raison, recentrons-nous sur ce qui compte vraiment.</Text>
+    <Choices>
+      <Choice text="Dis-toi qu’au moins tu disposeras d’une plume de plus" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="50" music="riposo" ending="true">
+    <Text>– Ouro, va falloir qu'on revoit notre stratégie. Je risque un peu trop ma vie en ce moment.
+
+– Comment te dire… Est-ce que tu préfères une illusion confortable ou la vérité ?
+
+– Vas pour la vérité.
+
+– J’ai volontairement privilégié les pistes présentant le moins de risques au début de notre collaboration, histoire de te laisser le temps de t’adapter. Manquer d’y passer à chaque fois est en fait nettement plus proche de la normale dans ce corps de métier.
+
+– Attends, c’était censé être facile l’espèce de monstre de cauchemar du mois dernier qui m’a vaporisé la moitié du corps d'un regard que je sais même pas comment j’ai pu me régénérer après ça ?
+
+– Barachiel ? Non, lui, c’était une erreur de calcul. Et tu n’as pas pu, j’ai recréé les morceaux perdus de zéro avec mon énergie propre. Bon réflexe en revanche d’avoir continué à courir même avec une partie du torse et un bras en moins.
+
+– La flatterie ne t’amènera nulle part aujourd’hui. Tu m’avais promis alors qu’en faisant profil bas, ça ne risquait plus d’arriver.
+
+– Me connaissant, j’ai dû formuler ça de façon plus ambigu.
+
+– Bien évidemment. Et te connaissant, je n’y ai de toute façon pas cru.
+
+– Compréhensible, même si j’étais totalement sérieux. Je pensais réellement que j’allais pouvoir continuer à zigzaguer entre les ennuis véritables encore quelque temps si je choisissais mes interventions avec soin.
+
+– Mais ?
+
+– Je ne peux pas tout prévoir. Heureusement d’ailleurs, parce que la prescience c’est vraiment un pouvoir pourri, une des pires malédictions possibles.
+
+– Tu t’en tireras avec une digression cette fois-ci, Lux Ferre.
+
+– Ça balance direct les grands noms, t’es vraiment en rogne. Oui, je me suis planté. J’ai sous-estimé tous les camps, je pensais qu’ils mettraient plus de temps à s’adapter à mon retour et à ton arrivée, et ça a failli dégénérer.
+
+– Et donc ?
+
+– Et donc on va accélérer la cadence.
+
+– Quoi ?
+
+– Ce n’est pas un jeu où on peut se permettre d’être prudent. Si des gens comme Isa commencent à pouvoir prévoir nos mouvements, c’est qu’on a max deux coups d’avance sur Michou. Et crois-moi, tu veux pas croiser Michou avant qu’on ait mis la main sur encore une bonne vingtaine de plumes.
+
+– Il est dangereux comment ?
+
+– C’est lui qui m’a arraché mes ailes au début des temps. Depuis cet incident originel, il a retourné à la poussière plus de mes protégées que toutes les autres menaces réunies.
+
+– Et donc, ton plan magnifique pour m’éviter de mourir à coup sûr, c’est ?
+
+– De faire des gambits qui en valent la peine plutôt que de risquer de tout perdre pour une seule plume.
+
+– Autrement dit ?
+
+– Autrement dit, on va aller rendre visite à ma famille.
+
+– De quel côté ?
+
+– Hé, je compte jouer gros, pas t’envoyer pour rien au casse-pipe. On va donc rester un minimum raisonnable, et se contenter d’aller faire un tour en Enfer.</Text>
+  </Page>
+</Librogame>

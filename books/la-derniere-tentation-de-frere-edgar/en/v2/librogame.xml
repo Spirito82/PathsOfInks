@@ -1,0 +1,994 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="la-derniere-tentation-de-frere-edgar-en" workId="la-derniere-tentation-de-frere-edgar" language="en" title="The Last Temptation of Brother Edgar" author="Julien Brice (Meneldur)" checks="dadi" genre="Historical comedy" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="abbazia">
+  <Changes>
+    <Change>Adapted for this app: the structure, the rules and parts of the text were changed or removed to work with its engine</Change>
+    <Change>Translated into English from the original French</Change>
+    <Change>Added sounds and background music, delivered together with the book</Change>
+  </Changes>
+  <Audio>
+    <Sound name="brontolio_stomaco" file="brontolio_stomaco.ogg" />
+    <Sound name="campana_convento" file="campana_convento.ogg" />
+    <Sound name="chiavistello_dispensa" file="chiavistello_dispensa.ogg" />
+    <Sound name="formaggio_taglio" file="formaggio_taglio.ogg" />
+    <Sound name="passi_sandali" file="passi_sandali.ogg" />
+    <Music id="abbazia" file="abbazia.ogg" />
+    <Music id="banchetto_segreto" file="banchetto_segreto.ogg" />
+    <Music id="fuga_nel_chiostro" file="fuga_nel_chiostro.ogg" />
+    <Music id="penitenza" file="penitenza.ogg" />
+    <Music id="tentazione" file="tentazione.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <ContentWarnings>One slap, one kick in the shin and a great deal of cheese. Nothing worse: the adventure is a monastic comedy.</ContentWarnings>
+  <Blurb>At the abbey of Goulacq, Brother Edgar loves the little goat's cheeses rather more than is reasonable. The prior has caught him at the cellar door at last: not one cheese until further notice, on pain of expulsion.
+
+All that remains is to hold out for a day. One day. From lauds to vigils, between the morning chores, the afternoon in the scriptorium and Brother Guilhem's whispering, your gluttony will rise, fall and rise again. Can you resist temptation?</Blurb>
+  <Variables>
+    <Variable id="gula" name="Gula" type="number" initial="3" min="0" max="6" visible="true" />
+    <Variable id="tibia" name="Sore shin" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="amico" name="A new friend" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="secondaParte" name="After terce" type="number" initial="0" min="0" max="2" visible="false" />
+  </Variables>
+  <Tables>
+    <Table id="fromages1" dice="6" times="1">
+      <Result is="esito0" range="1-6" />
+      <Outcome when="esito0" goto="43" />
+    </Table>
+    <Table id="fromages2" dice="6" times="1">
+      <Result is="esito0" range="1-1" />
+      <Result is="esito1" range="2-6" />
+      <Outcome when="esito0" goto="32" />
+      <Outcome when="esito1" goto="43" />
+    </Table>
+    <Table id="fromages3" dice="6" times="1">
+      <Result is="esito0" range="1-2" />
+      <Result is="esito1" range="3-6" />
+      <Outcome when="esito0" goto="32" />
+      <Outcome when="esito1" goto="43" />
+    </Table>
+    <Table id="fromages4" dice="6" times="1">
+      <Result is="esito0" range="1-3" />
+      <Result is="esito1" range="4-6" />
+      <Outcome when="esito0" goto="32" />
+      <Outcome when="esito1" goto="43" />
+    </Table>
+    <Table id="fromages5" dice="6" times="1">
+      <Result is="esito0" range="1-4" />
+      <Result is="esito1" range="5-6" />
+      <Outcome when="esito0" goto="32" />
+      <Outcome when="esito1" goto="43" />
+    </Table>
+    <Table id="vigiles1" dice="6" times="1">
+      <Result is="esito0" range="1-1" />
+      <Result is="esito1" range="2-6" />
+      <Outcome when="esito0" goto="52" />
+      <Outcome when="esito1" goto="51" />
+    </Table>
+    <Table id="vigiles2" dice="6" times="1">
+      <Result is="esito0" range="1-2" />
+      <Result is="esito1" range="3-6" />
+      <Outcome when="esito0" goto="52" />
+      <Outcome when="esito1" goto="51" />
+    </Table>
+    <Table id="vigiles3" dice="6" times="1">
+      <Result is="esito0" range="1-3" />
+      <Result is="esito1" range="4-6" />
+      <Outcome when="esito0" goto="52" />
+      <Outcome when="esito1" goto="51" />
+    </Table>
+    <Table id="vigiles4" dice="6" times="1">
+      <Result is="esito0" range="1-4" />
+      <Result is="esito1" range="5-6" />
+      <Outcome when="esito0" goto="52" />
+      <Outcome when="esito1" goto="51" />
+    </Table>
+    <Table id="vigiles5" dice="6" times="1">
+      <Result is="esito0" range="1-5" />
+      <Result is="esito1" range="6-6" />
+      <Outcome when="esito0" goto="52" />
+      <Outcome when="esito1" goto="51" />
+    </Table>
+  </Tables>
+  <Page id="1" music="penitenza">
+    <Text>… et ne nos inducas in tentationem, sed libera nos a malo.
+
+"Amen!"
+
+The word, spoken by a hundred and fifty voices, rings through the abbey church of Goulacq for several seconds before fading slowly away. The assembled brethren rise unhurriedly and begin to leave in good order and in silence, ready to start another day of work, of study and of prayer. As you are preparing to fall in behind your neighbour at the prie-dieu, a firm but calm voice is raised.
+
+"Brother Edgar! A little of your time, if you please."
+
+It is Brother Paulin's, the prior of the abbey. With his silver hair and his rangy frame, he radiates an air of quiet authority that very few of your brethren are able to resist. His election as prior surprised nobody, and everyone expects him to succeed Father Ambrose at the head of your community within a year or two, if indeed your venerable abbot takes that long to join the Lord.
+
+"Yes, father prior, what can I do for you?"
+
+"It is high time this stopped, Brother Edgar."
+
+"Eh? What is this about, father prior?"
+
+"Do not play the innocent, Brother Edgar, and do not forget that lying is a sin. The sacristans on watch have reported seeing you prowling around the refectory a little after matins. I enquired into the state of our stores with the brother cellarer, who confirmed to me the disappearance of a good dozen of our little cheeses. You have been feasting again in the night, have you not, Brother Edgar?"
+
+Your throat tightens and tears come to your eyes, tears of shame and guilt. Brother Paulin is right, of course. But how is one to resist the delicious little cheeses your abbey's serfs make from their goats' milk? They are so creamy, so soft!
+
+"It is stronger than I am, father prior. However hard I try to reason with myself, nothing helps, I cannot stop myself. And once I have eaten one, it is impossible not to take another, and then another, and another still… But after all, did somebody not say that the best way to resist temptation is to yield to it?"
+
+"Well, I never! And what savage was able to utter such horrors?"
+
+"I do not remember, I must have read it somewhere."
+
+"Brother Edgar, you ought to know that if there is one thing in this world I loathe more than anachronisms, it is the praise of sin! Put that idea out of your head at once."
+
+Brother Paulin thinks for a moment, then goes on:
+
+"I set you a penance: you are forbidden to touch the smallest cheese until further notice. Take that as said! If I ever learn that you have so much as sniffed a rind left on the ground, if I ever find the smallest crumb on your chin, I shall see to it that the abbot pronounces your expulsion. We cannot tolerate such behaviour at Goulacq."
+
+Without giving you time to answer, Brother Paulin walks away, leaving you alone in a church that has never seemed so empty to you as on this sad summer morning.
+
+A single sound comes to break the silence: the rumbling of your hungry stomach.
+
+It is going to be a long day.
+
+Goulacq is a small abbey where news travels fast, all the more so with gossips like Brother Guilhem around. If it were not a sin (another one!), you would swear you saw him trotting away as you came out of the church behind the father prior. No doubt he had been listening at the door again… In any case, you seem to hear whispers and stifled laughter behind your back already. Until now your weakness for good cheese was known only to Brother Paulin, but the secret will soon be out, if it is not out already. Perhaps your brethren will help you resist temptation? Or perhaps they will drag you down…
+
+Before your conversation with the father prior, the day promised to be a thoroughly ordinary one. A few cleaning chores in the morning, dinner, a copying session in the scriptorium in the afternoon, supper and back to the dormitory for the night, all of it punctuated by the usual prayers of prime (at sunrise), terce (mid-morning), sext (around noon), none (mid-afternoon), vespers (in the early evening) and compline (at sundown). Now, who knows what the Lord has in store for you…
+
+While you wait for prime, you have a short spell of rest.</Text>
+    <Choices>
+      <Choice text="Try to sleep" goto="41" />
+      <Choice text="Take the air" goto="26" />
+    </Choices>
+  </Page>
+  <Page id="2" music="abbazia">
+    <Text>The end of the morning is always a busy time in the refectory. The room has to seat a hundred and fifty hungry monks, and everything must be ready before sext rings. You are not the only one lending Brother Joseph a hand, then: three of your fellows are bustling about as well. One of them is none other than that gossip Brother Guilhem… and more than once you hear stifled giggles when your back is turned and Brother Joseph is out of the room.</Text>
+    <Choices>
+      <Choice text="Ignore him" goto="37" />
+      <Choice text="Ask him politely what he finds so funny" goto="5" />
+      <Choice text="Order him to stop sniggering" goto="27" />
+    </Choices>
+  </Page>
+  <Page id="3" music="abbazia">
+    <Text>The office of none passes without incident, and it is now time for your work as a copyist. The soothing air of the scriptorium seems just the thing to ease the torments of your soul. The scratch of quills on vellum is a sound you have always liked, perhaps precisely because it breaks the silence that so often reigns supreme in the monastery, or perhaps because it stirs your imagination, who knows?
+
+At your last copying session, a few days ago, you put the finishing touches to a chapter of the Legenda platina (the new edition of the Legenda aurea, with fifty extra saints' lives and an exclusive commentary by the Venerable Bede — every scriptorium is fighting over it) recounting the edifying story of Saint Lucy of Syracuse. You hope the task assigned to you today will be every bit as pleasant.
+
+The schoolmaster has left a note on your lectern. Written in his usual spidery hand, it is a list of the chapters he would like to see you copy out over the coming days. Since nothing says that the order is the one you must follow, you are free to begin with whichever you please. Which will it be?</Text>
+    <Choices>
+      <Choice text="The story of Saint James the Greater" goto="34" />
+      <Choice text="The story of Saint Mammes" goto="24" />
+      <Choice text="The story of Saint Pantaleon" goto="18" />
+    </Choices>
+  </Page>
+  <Page id="4" music="tentazione">
+    <Text>It takes you a good while to track down Brother Barnabé. He is near the door of the guesthouse, deep in conversation with a layman of villainous appearance.
+
+The gardener waves you over and introduces you to his companion. He is none other than one of his countless cousins, taking advantage of a journey through the region to pay him a visit. Now that you look, you can indeed make out a family resemblance between Brother Barnabé and his cousin Pierre. Close up, he does not even look all that villainous! By way of conversation, you ask him what his trade is.
+
+"Oh, well, me, I'm a goatherd, I look after my goats and all that. I've got a whole load of cheeses waiting outside for the market at Acédiac, and I said to myself I could leave a few with my favourite cousin. Fancy a look?"
+
+Heaven above! Temptation really is everywhere today!</Text>
+    <Choices>
+      <Choice text="See whether you resist temptation" goto="43" roll="fromages1">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="1" />
+          <Variable id="gula" operator="lte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="See whether you resist temptation" goto="32" roll="fromages2">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="2" />
+          <Variable id="gula" operator="lte" value="2" />
+        </Requirements>
+      </Choice>
+      <Choice text="See whether you resist temptation" goto="32" roll="fromages3">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="3" />
+          <Variable id="gula" operator="lte" value="3" />
+        </Requirements>
+      </Choice>
+      <Choice text="See whether you resist temptation" goto="32" roll="fromages4">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="4" />
+          <Variable id="gula" operator="lte" value="4" />
+        </Requirements>
+      </Choice>
+      <Choice text="See whether you resist temptation" goto="32" roll="fromages5">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="5" />
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>Brother Guilhem greets your question with a smirk.
+
+"We were thinking of those poor gluttons who cannot resist the sin of greed. The fools! When it is surely the easiest of the sins to fight!"
+
+You mutter something inaudible.
+
+"Happily, we monks are well placed to fight our baser instincts. I would even say that if one of us proved incapable of it, his place among us would be thoroughly usurped. What do you think, Brother Edgar?"
+
+You mutter all the louder.
+
+"I beg your pardon, Brother Edgar? I did not quite catch that.
+
+— I said, Brother Guilhem, that if the abbey expelled the monks who do not deserve to be here, you would already be on the far side of the great door!"
+
+Your retort chills the air. The squabble goes no further: Brother Joseph's return reduces you all to silence until the bell rings for sext.</Text>
+    <Choices>
+      <Choice text="Continue" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Text>You open the book. Looking up, you catch sight of Alain the sexton, sitting in a corner, giving you a wink. Beside him, Brother Guilhem and his cronies look put out. Apparently they had a nasty trick in store for you, but Alain kept his promise and their plans have come to nothing. You can begin the reading with no trouble beyond your own stage fright.</Text>
+    <Choices>
+      <Choice text="Continue" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="7" music="penitenza">
+    <Text>"… I am furious! Not content with ignoring my admonition, you have persisted in the way of sin! I ought to drive you out this instant — your very presence here is an insult to the Lord! I promise you that…
+
+— Now, now, what is going on here?"
+
+It is of course the father abbot who has just interrupted Brother Paulin. Nobody else would have dared. For as far back as you can remember, Father Ambroise has always been an old man bent by the years, with snow-white hair and a perpetual smile, never in the least put out. You have never quite known what year he was elected abbot, nor even what century. In everyone's eyes he is a constant of nature, like the sun or the moon.
+
+"Ah, it is you, Brother Edgar! How are you keeping, my boy? You know, Brother Paulin, I knew our Brother Edgar's father well, Edwin the miller of Invidiac, a fine strapping fellow! Ah, I still remember that business with the churchwarden — it was the year of the great winter, you know the one I mean?"
+
+You exchange a look with Brother Paulin. Neither he nor you have the faintest idea what Father Ambroise is talking about.
+
+"Ah, those were the days. It puts me in mind of that affair with Edmond the miller, Edwin's brother, back when he was the one running the mill at Invidiac, before the great flood — no, not that one, the one before. How he managed to get all his cows onto the roof of his mill, now that I never did find out!"
+
+Brother Paulin coughs.
+
+"Ah, it is you, Brother Paulin! And Brother Edgar! How are you keeping, my boy?
+
+— Precisely, the prior manages to put in, we were considering his case. It so happens…
+
+— A good monk, our Brother Edgar, I have always said so!
+
+— … that I was minded…
+
+— But have I ever told you the story of the churchwarden and the miller? It really is rather droll.
+
+— … to ask at the next meeting of the chapter…
+
+— Who would have thought a man could cross the Barguelonne so fast? Mind you, it was frozen over at the time, it was the year of the great winter, was it not?
+
+— … for his expulsion.
+
+— Eh, what, how is that? Come now, what nonsense is this, Brother Paulin, we are not going to start expelling people, are we? It is quite the wrong moment, and besides, my dear little monks are all so good! I cannot see what would justify the least expulsion at the present time. Come along, my children, bedtime has come round, I think, it is time for each of us to go back to his own quarters. Off you go, off you go!"
+
+Brother Paulin has no time to intervene. He barely manages to shoot you a black look before leaving. Apparently pleased with himself, Father Ambroise does the same, humming under his breath. As for you, nothing remains but to make your way to the dormitory.</Text>
+    <Choices>
+      <Choice text="Continue" goto="44" />
+    </Choices>
+  </Page>
+  <Page id="8" sound="formaggio_taglio" music="banchetto_segreto">
+    <Text>Without a second thought, you sink your teeth into the top of Brother Paulin's skull, and he goes on scolding you as though nothing were amiss. Mouthful after mouthful, you devour the whole cheese. The prior's voice now comes from the depths of your stomach, and your appetite seems to trouble him only from a strictly theological point of view.
+
+You wake up as bewildered as you are full — which does nothing to lessen the bewilderment.</Text>
+    <Choices>
+      <Choice text="Continue" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="9" music="penitenza">
+    <Text>The sermon at terce took gluttony for its subject. You feel rather got at.</Text>
+    <Choices>
+      <Choice text="Head for the garden" goto="47">
+        <Requirements>
+          <Variable id="secondaParte" operator="gte" value="1" />
+          <Variable id="secondaParte" operator="lte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Head for the refectory" goto="2">
+        <Requirements>
+          <Variable id="secondaParte" operator="gte" value="2" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="10" music="abbazia">
+    <Text>Unlike lauds, the office of prime passes without incident. You take care not to meet Brother Paulin's eye, and he ignores you just as carefully. On the way out of the church you are waylaid by Brother Barnabé, who is in charge of the abbey gardens.
+
+"Ah, Brother Edgar! You have not forgotten me, I hope?"
+
+Brother Barnabé is hard to forget. As broad as he is tall, with a permanently ruddy face and a voice that rolls like thunder, he is not the sort of man one can overlook. Were he not wearing the same plain homespun habit as you, nobody would guess they were dealing with a humble monk with a passion for horticulture. In his case, the habit really does make the monk.
+
+"Of course not, Brother Barnabé. It was a matter of clearing the flower beds, was it not?
+
+— Just so! The weeds are as determined as ever to strangle our flowers and our herbs. We would not want Pharaoh's dream coming true in our garden!"
+
+Pleased with his own joke, he bursts into thunderous laughter that echoes down the corridors. It earns him black looks from several brothers who have little taste for such displays of mirth, but as usual Barnabé pays no heed. One of them, however, comes over to you. It is Brother Joseph, the refectorer, who plants himself between Barnabé and you.
+
+"One moment! I believe Brother Edgar owes me a turn of work."
+
+He is right. You had undertaken to help him prepare the refectory for dinner. In exchange he had promised to look the other way if he happened to see you prowling near the stores of an evening…
+
+The tension between the gardener and the refectorer is palpable: they look ready to embark on a struggle whose prize will be how you spend your working morning. Brother Joseph may look like a dwarf beside Brother Barnabé, but he is his equal in strength of character, even though calm and moderation are usually his dominant traits. Their quarrels have become legendary in the abbey and beyond it, where some do not hesitate to call them Esau and Jacob.</Text>
+    <Choices>
+      <Choice text="Help Brother Barnabé" goto="36">
+        <Effects>
+          <setVariable target="secondaParte" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Help Brother Joseph" goto="38">
+        <Effects>
+          <setVariable target="secondaParte" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Try to split the difference" goto="16" />
+    </Choices>
+  </Page>
+  <Page id="11" sound="passi_sandali" music="fuga_nel_chiostro">
+    <Text>The sextons you pass in the corridors give you curious looks. They are hardly used to seeing monks skip the hour of the siesta! But you can feel that sleep will elude you today, and the thought of turning over and over on your pallet waiting in vain to succumb to it holds no appeal at all.
+
+One of the sextons greets you with a wave of the hand.</Text>
+    <Choices>
+      <Choice text="Talk with the sexton" goto="33" />
+      <Choice text="Go on your way" goto="29" />
+    </Choices>
+  </Page>
+  <Page id="12" music="penitenza">
+    <Text>"… I must say I am disappointed. I had hoped that my admonition would be enough to set you back on the straight path, but it seems impure thoughts continue to corrupt you. You will have to try harder, Brother Edgar."
+
+With a frown, Brother Paulin leaves you alone. You had the feeling you had done your best, but the prior plainly takes a different view. It is somewhat crestfallen that you make your way to the dormitory for a well-earned night's sleep.</Text>
+    <Choices>
+      <Choice text="Continue" goto="44" />
+    </Choices>
+  </Page>
+  <Page id="13" music="penitenza">
+    <Text>At the end of this last office of the day, your brethren make ready to go up to the dormitory for the night, but you know that one trial still awaits you. You catch Brother Paulin's eye, and he signals you to wait for him at the church door, on the very spot where you spoke this morning.
+
+"Brother Edgar. I have kept an eye on you all day, and…"</Text>
+    <Choices>
+      <Choice text="Hear him out" goto="46">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="2" />
+        </Requirements>
+      </Choice>
+      <Choice text="Hear him out" goto="21">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="3" />
+          <Variable id="gula" operator="lte" value="3" />
+        </Requirements>
+      </Choice>
+      <Choice text="Hear him out" goto="12">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="4" />
+          <Variable id="gula" operator="lte" value="4" />
+        </Requirements>
+      </Choice>
+      <Choice text="Hear him out" goto="7">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="14" music="tentazione">
+    <Text>The cover does not move. Puzzled, you put more force into the gesture, to no greater effect. You push harder still… and the book finally opens on a distressing sight. Its pages are glued to one another by a substance you know only too well: melted goat's cheese! Somebody has poured the stuff over the precious volume and rendered it completely unusable. You are at once outraged and rooted to the spot at the sight of a fine book and good cheese spoiled together for such an act of vandalism, as delightful to the nose as it is revolting to the eye and the hand.
+
+You look up. Bafflement reigns in the room, with two exceptions. In the front row, Brother Paulin is frowning. Right at the back, Brother Guilhem and his cronies can hardly hide their smirks as they dig their elbows into each other's ribs.
+
+Brother Paulin rises and announces that, exceptionally, the reading will not take place, and invites your brethren to go straight to the church for the office of compline. He gives you a blood-chilling look before leaving the room. You follow at a safe distance.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="gula" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="13">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="49">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="6" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="15" sound="brontolio_stomaco" soundDelay="4" music="penitenza">
+    <Text>Being asleep does not make temptation any easier to resist, even when the object of that temptation is a goat's cheese that speaks with your superior's voice. You have to draw on your last reserves of moral strength not to give in to the fierce urge to devour that lactic monstrosity.
+
+On waking, you have the unpleasant surprise of discovering that in your fury you have been chewing keenly on your blanket. Your mouth full of fibres and your stomach empty and crying famine, you feel worse than ever.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="gula" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="10">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="49">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="6" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>Phew! It was hard going, but you have pulled off a feat worthy of King Solomon: bringing Barnabé the gardener and Joseph the refectorer, the two most stubborn monks in the monastery, to an agreement. You have settled on giving each of them half your morning, with the office of terce marking the change of master. You have even secured the right to choose the order in which you will accompany them.</Text>
+    <Choices>
+      <Choice text="The garden first, with Brother Barnabé" goto="30">
+        <Effects>
+          <setVariable target="secondaParte" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="The refectory first, with Brother Joseph" goto="19">
+        <Effects>
+          <setVariable target="secondaParte" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Text>The dovecote tower is no great sight beside the far more imposing towers of the abbey church. Built of plain brick, it houses a few pairs of carrier pigeons which help to keep your monastery in touch with the rest of the world. Messages are rarer than they once were, which makes the building somewhat oversized for your needs. Brother Paulin has more than once raised the question of pulling it down, but so far Abbot Ambroise has chosen to ignore the matter, no doubt so as not to grieve Brother Laurent, who loves his little charges so dearly that it would break his heart never to see them again.
+
+The ground around the dovecote is never busy, and at the hour of the siesta it is quite deserted. It is just the setting for your need of quiet. You push the door open without a sound and climb the stair that leads to the nests. Two pigeons are asleep in theirs, and you leave them in peace and go over to a window. From there you look out over the whole abbey and the surrounding countryside, resplendent in green and gold under the summer sun.
+
+A rustle of wings makes you turn round. Suddenly there are no longer two pigeons with you in the dovecote: a whole flock of birds has arrived in the deepest silence and is watching you through a billion black and witless eyes. Your astonishment redoubles when they open their beaks and launch into a cacophony of cooing in which you seem to make out the words "cheese, cheese!"
+
+The birds hurl themselves at you in a whirl of wings and claws. You step smartly back… so smartly that you topple through the open window and fall into the void!</Text>
+    <Choices>
+      <Choice text="Continue" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Text>Pantaleon of Nicomedia was personal physician to the Roman emperor Maximian. Having embraced the Christian faith, he carries on his work of healing with great success. Out of jealousy, the disciples of Aesculapius denounce him to the emperor, who tries to have him executed in six different ways, but neither fire, nor molten lead, nor drowning, nor wild beasts, nor the wheel can finish him off. Only when Pantaleon consents to be beheaded does his executioner manage to complete the task.
+
+It is not the most gripping story in the Legenda platina, but the way Pantaleon escapes the various torments the emperor has in store for him is interesting enough to keep you busy all afternoon.
+
+Absorbed in your work, you are surprised to hear vespers ring. Within moments the scriptorium empties of every one of its occupants.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="gula" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="42">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="50">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>Under Brother Joseph's inquisitorial eye, you wash yesterday evening's dishes and sweep the refectory floor. He does not leave you for a second, and you wonder whether he is expecting to see you slip into the stores to steal a little cheese. Does he even know about your conversation this morning? He is not the sort to take an interest in Brother Guilhem's gossip. If he knows your situation, at any rate he says nothing of it, and you exchange no more than ten words in the two hours that pass in the refectory.
+
+You greet the ringing of the bells with relief. The office of terce will be a welcome distraction.</Text>
+    <Choices>
+      <Choice text="Continue" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="20" sound="campana_convento" soundDelay="4">
+    <Text>The morning goes by slowly, barely punctuated by the song of the blackbird and the chaffinch. Monotonous though it is, your task demands precisely the degree of concentration needed to stop your mind wandering off in dangerous directions. After the upsets of daybreak, you find a certain pleasure in doing something simple in peace and quiet.
+
+The sound of the bell finally pulls you out of your reverie: it is terce, the hour of the third office of the day.</Text>
+    <Choices>
+      <Choice text="Continue" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="21" music="abbazia">
+    <Text>"… I am glad to see that you have not fallen back into your old ways. Keep it up, Brother Edgar! I am certain that with faith and will you will get the better of this dreadful gluttony that poisons your soul."
+
+With that, Brother Paulin leaves. The joy of having escaped his wrath contends with the weariness that suddenly falls upon you. It is high time you went to bed.</Text>
+    <Choices>
+      <Choice text="Continue" goto="44" />
+    </Choices>
+  </Page>
+  <Page id="22" sound="campana_convento" soundDelay="3" music="abbazia">
+    <Text>You wake with a start. You are lying on a stone bench along the church wall, and the sun is gently warming your head from behind a few welcome clouds. So it was all a dream?
+
+You are bewildered, but you have no time to think about it further, for the bell is ringing none. It is time to join your brethren for the office of the ninth hour.</Text>
+    <Choices>
+      <Choice text="Continue" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="23" music="abbazia">
+    <Text>The sun is high in the sky now, and its rays light the church windows in a thousand colours during the office of sext. It makes this moment of communion more solemn still.
+
+Once the office is over, you all file in good order to the refectory for dinner, the first meal of the day. The fare amounts to a dish of broad beans with a little black bread. It goes without saying that where your fellows are allowed a little cheese, you are not. Thankless though it is, the diet is enough to quiet the hunger stirred up by your morning's doings.
+
+It is now the hour of the siesta.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="gula" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Follow your brethren to the dormitory" goto="25">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Do something else" goto="11">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="50">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="24" music="tentazione">
+    <Text>Mammes of Caesarea is one of those humble saints of early Christianity whose story deftly mixes feeling and wonder. You take pleasure in retracing it with the tip of your quill, blackening the parchment letter by letter. This little shepherd boy of Cappadocia was saved by an angel from the torment the terrible governor Democritus had in store for him. The angel carried him off to a lonely mountain where he survived with the help of the wild animals. He became the friend of does and goats and made himself cheese from their milk…
+
+… cheese…
+
+Mmm…
+
+A sharp noise suddenly pulls you out of your reverie. Somebody must have dropped a writing desk. You realise you have spent an indeterminate time daydreaming over your copy. It has got no further than the word cheese, apart from a small blot formed at the tip of your quill.
+
+Before you can get back to work, the bell rings. It is vespers, the hour of the evening office. Your brethren leave their seats, some of them wincing at having sat bent over their work too long. You fall in behind them.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="gula" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="42">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="49">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="6" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Text>The morning has proved more tiring than you would have thought. You have barely lain down on your pallet before you sink into a deep and dreamless sleep. You emerge from that black hole only after Brother Paul has spent several minutes patting and then shaking your shoulder.
+
+You feel restored and ready to face another half-day's work.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="gula" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="3">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="50">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="26" sound="passi_sandali" music="abbazia">
+    <Text>You take the corridors that lead to the cloister and come out into the open air. The night air is pleasantly cool, and you can still make out the stars on one side of the sky, the side not yet bathed in the mauve glow of the sun's first rays. The silence is broken only by the thrush's melodious song. A deep sense of calm fills you.</Text>
+    <Choices>
+      <Choice text="Continue" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="27" sound="brontolio_stomaco" music="fuga_nel_chiostro">
+    <Text>"Come now, Brother Edgar, what is the matter with you? We have known you more agreeable. Feeling a little peckish, are we?"
+
+The slap comes without warning, and Brother Guilhem stares at you, dumbfounded, tears in his eyes and a fine red mark on his cheek. Such an act would doubtless earn you at least 5 points of ira, if the rules of this adventure took account of wrath and the five other deadly sins as well as gluttony.
+
+One of Brother Guilhem's acolytes responds by landing a nasty kick square on your shin. You let out a yelp of pain.
+
+Drawn by the noise, Brother Joseph comes back into the refectory. He is surprised to find the four monks who are supposed to be working for him in the middle of a brawl. With surprising strength for so small a man, he pulls you apart by main force and lectures you on your conduct. Brother Paulin will be hearing about this one…
+
+The bell for sext rings in time to spare you too long an embarrassment. You make for the church at a safe distance from Brother Guilhem and his henchmen. The fact is that anger has taken your mind off things.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="tibia" value="1" />
+        <subtractVariable target="gula" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="23">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="50">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Text>The passage Brother Roger had chosen was remarkably convoluted, but you manage to extricate yourself from it at the cost of a few stumbles. It is with a certain relief all the same that you reach the end of your reading, just as the hour of compline rings.</Text>
+    <Choices>
+      <Choice text="Continue" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="29">
+    <Text>Your wanderings have led you outside the main monastery building. You are facing the gatehouse, which is the point of access to the outside world. On your right rises the tall dovecote tower and, beyond it, the little hut of rough stone that shelters Brother Élisée, a monk who has chosen to live in almost complete seclusion.</Text>
+    <Choices>
+      <Choice text="Go into the dovecote" goto="17" />
+      <Choice text="Pay Brother Élisée a visit" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="30">
+    <Text>It is always a pleasure to spend time with Brother Barnabé. The stout monk is almost always in good spirits, except perhaps in Brother Joseph's presence, and he likes nothing better than passing on news of the outside world brought to the abbey by travellers.</Text>
+    <Choices>
+      <Choice text="Ask him for a story to pass the time" goto="31" />
+      <Choice text="Stay wrapped up in your thoughts" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="31" music="tentazione">
+    <Text>You know Brother Barnabé well: a man wholly without guile and full of curiosity, who never stoops to the level of the tittle-tattle Brother Guilhem peddles.
+
+So when he begins telling you the tale of a master cheesemaker obliged, by circumstances as improbable as they were pressing, to eat his entire output himself in the space of a single day, you have no doubt it is pure coincidence.
+
+It does not help you set aside your persistent hunger, though, and you almost fancy you can see little rounds of goat's cheese waddling about among the tufts of bindweed you are pulling up.
+
+The bell for the office of terce rings at last. You had begun to think the moment would never come.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="gula" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="9">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="49">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="6" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="32">
+    <Text>Petrified by contradictory feelings — astonishment, hunger and terror — you cannot bring yourself to answer. Barnabé's cousin takes your silence for agreement and pulls from his pocket a small parcel whose wrapping paper is quite unable to hold back the smell, which reaches your nostrils all at once. Your mouth waters; you dig your nails into your palms to keep from throwing yourself on the superb little round of cheese this tempter of a cousin has just unwrapped.
+
+Happily, the Lord is with you. Just as you feel your will giving way, the figure of a monk crossing the courtyard catches your eye. You meet his gaze. It is Brother Paulin! He frowns, and that is enough to remind you that touching that cheese would be the worst mistake of your life. Stammering, you take your leave of Brother Barnabé and his cousin.
+
+The bell for sext rings at that very moment, which gives you the perfect excuse to make yourself scarce.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="gula" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="23">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="49">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="6" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="33">
+    <Text>The sexton's name is Alain. He arrived at Goulacq only a few weeks ago, which explains why his face meant nothing to you. Before that he worked at the abbey of Irac, until that terrible day when the relics of Saint Gundomir were stolen from under the monks' noses. In a fury, the abbot dismissed on the spot every sexton who had until then been in his service. By good fortune, Alain benefited from Abbot Ambroise's kindness of heart, and was taken in at Goulacq.
+
+Warming to him, you decide to tell Alain your own troubles. On learning that you are no longer allowed the least scrap of cheese, his eyes light up and he asks whether you would agree to make over to him the ration of cheese now forbidden you.</Text>
+    <Choices>
+      <Choice text="Accept" goto="35" />
+      <Choice text="Refuse" goto="39" />
+    </Choices>
+  </Page>
+  <Page id="34">
+    <Text>James the Greater is one of the twelve Apostles. As such he appears in the Bible, of course, but the chapter you are copying deals with his later adventures. After spending some time in Spain, the saint returned to Judea and opposed a false magician named Hermogenes, who was doing his best to put a spoke in the wheel of his work of conversion. Naturally James foiled every one of the crafty magician's plans, to the point of persuading him to embrace the Christian faith in the end.
+
+It is an entertaining story and you enjoy copying it. You feel in fine form, the words flow from your quill like water, and you set the final full stop to the chapter at a dizzying speed. Only on rereading do you discover, horrified, that you have written Hermogenes the cheese throughout in place of Hermogenes the mage, save for one instance where you went so far as to write Cheesogenes the cheese.
+
+You are appalled. What a waste! You will have to scrape, scrape and scrape again at the offending ink before you can put the mistake right. And since the bell has just rung for vespers, you will not have time to do it today. Uneasy, you leave the scriptorium behind your fellow copyists.</Text>
+    <Choices>
+      <Choice text="Continue" goto="42" />
+    </Choices>
+  </Page>
+  <Page id="35">
+    <Text>Your agreement delights Alain. In exchange, he undertakes to come to your aid should you have troubles his skills might help to resolve. You seal the bargain with a warm handshake. It seems you have made a new friend.
+
+When the bell rings for none, you go to the church together to attend the office.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="amico" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="36">
+    <Text>Brother Joseph is furious. His thin face tightens and you sense that he is only just holding back a cry of rage. He slips away without a word, however. Surprised, you exchange a look with Brother Barnabé, but the refectorer is soon back in the company of the cellarer. The latter is the direct superior of them both, which makes him the obvious man to settle the dispute. Besides, Brother Nestor is used to this sort of situation. It is said that it was precisely his ability to put an end to the endless quarrels between Brothers Barnabé and Joseph that earned him his appointment.
+
+You look on in silence at the long conference that follows between the three men, until it concludes in Brother Barnabé's favour. Brother Joseph does, however, win a concession: you are to put yourself at his service for the whole of tomorrow. Until then, you set off for the gardens.</Text>
+    <Choices>
+      <Choice text="Continue" goto="30" />
+    </Choices>
+  </Page>
+  <Page id="37" sound="chiavistello_dispensa" soundDelay="3" music="tentazione">
+    <Text>Brother Guilhem and his two cronies keep up their muttering all morning long. The constant whispering gets on your nerves and stops you concentrating on your tasks. Several times you let slip pieces of cutlery, which clatter onto the stone floor of the refectory. The tension does nothing to help you set aside the thought that a single door separates you from the cellar and its provisions, foremost among them your beloved goat's cheeses.
+
+Another peal of the bell announces the office of sext, the last before dinner. You let the other brothers go on ahead, having no wish to keep their company any longer than necessary.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="gula" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="23">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="49">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="6" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="38">
+    <Text>Brother Barnabé is outraged. The colour rises in his cheeks and you sense he is about to explode. Yet he chooses to walk away without a word, which surprises you as much as it does Brother Joseph. The gardener is soon back, however, and he is not alone: Brother Nestor is with him. Nestor is the abbey's cellarer, which makes him the direct superior of gardener and refectorer alike. Rumour has it that he was appointed precisely for his ability to soothe the ceaseless bickering of Brothers Barnabé and Joseph, a task which, they say, often takes him longer than his actual duties as cellarer.
+
+At the end of a long conference, Brother Nestor demonstrates his skills as an arbitrator once again by ruling in Brother Joseph's favour. Brother Barnabé will nonetheless have the satisfaction of your company for the whole of tomorrow. Until then, you fall in behind the refectorer.</Text>
+    <Choices>
+      <Choice text="Continue" goto="19" />
+    </Choices>
+  </Page>
+  <Page id="39">
+    <Text>Alain is disappointed by your refusal and takes his leave abruptly. A few moments later the bell rings for the office of none, and you go to join your brethren in the church.</Text>
+    <Choices>
+      <Choice text="Continue" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="40">
+    <Text>Even for a recluse, Brother Élisée has a reputation for being… odd. You have no idea how long he has lived in his hut, but over the years countless rumours have gathered about him. They say he has the gift of prophecy, and that bishops, cardinals and kings have visited him in his cell. They say he foretold the death of one king and the accession of another, and that he divined the spot where the queen had lost her right stocking. You and your brethren tend to avoid him, except when it is your turn to bring him his single daily meal: a jug of water and a hunk of stale bread. On the few occasions when the task has fallen to you, you did not exchange a single word with Brother Élisée.
+
+Today, however, the hermit seems open to conversation. You find him sitting on the ground before the entrance to his lair, as though he had been expecting you. His features are hard to make out beneath the thick layer of grime that covers his face, but his eyes shine with a brightness hard to meet. Seeing you approach, he straightens up and looks deep into your eyes. Fearing that he might touch you, you make to step back, but he merely opens his mouth and says:
+
+"If your shin hurts, do not open the book."
+
+An angel passes.
+
+"… I beg your pardon?
+
+– Yes, Edgar, listen to me carefully. If your shin hurts, do not open the book."
+
+You are completely at a loss. What is this gibberish without head or tail? And Brother Élisée's steel-coloured eyes, fixed stubbornly on yours, so that you cannot look away… and that strange sentence going round and round in your head…</Text>
+    <Choices>
+      <Choice text="Continue" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="41" music="tentazione">
+    <Text>All your brethren have got to the common dormitory before you. As far as you can judge in the gloom, they have got to sleep before you as well. Without delay you make for your pallet, lie down and pull your coarse cloth blanket over you out of habit, even though it is not really cold. As you do so, a familiar smell reaches your nose… the smell of cheese! You should have washed your hands better after your feast, for the good smell of goat's milk is now firmly soaked into your bedding.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="gula" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Try to get to sleep all the same" goto="45">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Go and take the air" goto="26">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="49">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="6" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="42" music="abbazia">
+    <Text>Of the eight canonical hours, vespers is surely the most important. It is the last to take place in daylight, and the rays of the setting sun bathe the whole ceremony in orange light.
+
+On the way out of the church, as your brethren file in good order to the refectory, the prior waves you over. His impassive face gives nothing away of his intentions. With a knot in your stomach, you obey.
+
+"Brother Edgar, we have a small difficulty. Brother Roger was stung on the cheek by a bee earlier, and he is strictly incapable of uttering a single word. I should like you to take his place and give this evening's reading. He had already chosen a passage from the City of God; I have no doubt you will lend Saint Augustine's words the same gravity Brother Roger would have given them."
+
+Without waiting for your answer, Brother Paulin walks off, turning back only long enough to say:
+
+"Oh, and do not imagine I have forgotten our little matter, Brother Edgar. We shall speak of it again after compline."
+
+You have little appetite for supper, which consists simply of what was left at midday: beans and black bread. Public speaking is not your strong point, least of all at short notice. You hope you will not stumble too badly. Your anxiety is such that you very nearly fail to notice the absence of cheese at the end of the meal.
+
+Once the meal is over, everyone files out of the refectory in good order and makes for the chapter house, where the evening readings are traditionally held. Your brethren line up on the wooden benches and wait impatiently for you to begin. Seized by stage fright, you tremble a little as you walk up the room to the lectern, on which a massive volume rests. You lay a trembling hand on the cover…</Text>
+    <Choices>
+      <Choice text="Open the book" goto="6">
+        <Requirements>
+          <Variable id="tibia" operator="gte" value="1" />
+          <Variable id="amico" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Open the book" goto="14">
+        <Requirements>
+          <Variable id="tibia" operator="gte" value="1" />
+          <Variable id="amico" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Open the book" goto="28">
+        <Requirements>
+          <Variable id="tibia" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="43" music="fuga_nel_chiostro">
+    <Text>Stammering an excuse, you beat a retreat into the abbey. Only once several stone walls stand between you and Barnabé and his cousin do you begin to breathe calmly again. Why is the Lord so cruel to you today? Does He prefer cow's milk cheeses? Does He hold emmental to be the only kind fit to be eaten by the faithful? You do not recall the Bible saying a word about His preferences in cheese, but perhaps you ought to check.
+
+The ringing of sext interrupts your mind's wanderings. You make for the church, frowning hard to drive off every stray thought.</Text>
+    <Choices>
+      <Choice text="Continue" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="44" sound="campana_convento" soundDelay="4" music="abbazia">
+    <Text>Indifferent to your absence, your brethren have all fallen asleep without waiting for you. You lie down on your pallet in your turn, your mind seething as never before. The day's misadventures have worn you out, but sleep will not come. The hours pass, slow as pitch, and when the church bell strikes the first stroke of the office of vigils, you feel the ultimate trial approaching, the one that will decide the fate of your mortal soul.</Text>
+    <Choices>
+      <Choice text="Face the ultimate trial" goto="52" roll="vigiles1">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="1" />
+          <Variable id="gula" operator="lte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Face the ultimate trial" goto="52" roll="vigiles2">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="2" />
+          <Variable id="gula" operator="lte" value="2" />
+        </Requirements>
+      </Choice>
+      <Choice text="Face the ultimate trial" goto="52" roll="vigiles3">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="3" />
+          <Variable id="gula" operator="lte" value="3" />
+        </Requirements>
+      </Choice>
+      <Choice text="Face the ultimate trial" goto="52" roll="vigiles4">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="4" />
+          <Variable id="gula" operator="lte" value="4" />
+        </Requirements>
+      </Choice>
+      <Choice text="Face the ultimate trial" goto="52" roll="vigiles5">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="5" />
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="45" music="tentazione">
+    <Text>Sleep eludes you for what feels like hours. At last you manage to drop off, only to find yourself in a dream in which you live through your conversation with the father prior all over again. Except that his head has been replaced by an enormous round of goat's cheese… which does not seem to hinder his scolding in the slightest.</Text>
+    <Choices>
+      <Choice text="Eat Brother Paulin's head" goto="8" />
+      <Choice text="Refrain" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="46" music="abbazia">
+    <Text>"… I am delighted to see that you took my warning this morning to heart and have conducted yourself in exemplary fashion today. Keep it up, Brother Edgar! You are an example to the whole community."
+
+Brother Paulin pats you on the shoulder with a smile before going on his way. You are dumbfounded. Rack your brains as you may, you cannot recall ever having seen the prior smile.
+
+It is more than time to go to sleep now.</Text>
+    <Choices>
+      <Choice text="Allow yourself that small respite" goto="44">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="2" />
+          <Variable id="gula" operator="lte" value="2" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="gula" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Leave your score as it is" goto="44">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="2" />
+          <Variable id="gula" operator="lte" value="2" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="44">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="47" music="abbazia">
+    <Text>A visitor having required Brother Barnabé's presence, it is alone that you go back to work. The weeds scratch your skin, your knees and back suffer from the position you have to adopt to pull them up, and the sun, nearing its zenith, beats down hard on your tonsured head. The discomfort helps to keep your mind serene, though, and you are almost surprised to reach the end of your flower bed, now clear of every unwanted plant.
+
+After drinking a draught of cool water drawn from the well by a sympathetic brother, you consider going to find Brother Barnabé and spending the rest of the morning in his company.</Text>
+    <Choices>
+      <Choice text="Go and find Brother Barnabé" goto="4" />
+      <Choice text="Stay in the garden until sext" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="48" sound="chiavistello_dispensa" soundDelay="4" music="banchetto_segreto" ending="true">
+    <Text>Exhausted, you sit up on your cot. You have spent the day suffering, fighting against your basest instinct, that devouring desire to give in to temptation and let your gluttony run free. You hoped to please the prior and draw nearer to divine grace. In the end you feel nothing but a great emptiness where an unshakeable faith once lit up your heart.
+
+Sick at heart, you slip out of the dormitory in silence. Your mind is made up.
+
+Long practice lets you steal unseen into the cellar, where you hurriedly fill a knapsack with a few provisions – including, yes, a few cheeses. That same discretion, by now a genuine second nature, then lets you leave the abbey without being seen. What good would farewells do? You have nothing more in common with the monks who live there.
+
+Above your head shines a moon colder than ever. You stride out along the road, not knowing whether it will lead you to heaven, to hell, or simply to the nearest goat farm. Your fate will most likely not be one of those the chronicles speak of, but it will be yours and yours alone.</Text>
+  </Page>
+  <Page id="49" sound="formaggio_taglio" soundDelay="3" music="fuga_nel_chiostro" ending="true">
+    <Text>You have the strange feeling that something has just snapped clean inside you. Suddenly your mind is incapable of the least reasoning, your body of the least movement. One thing alone fills your whole being, one idea: cheese.
+
+You need cheese. At once!
+
+And woe betide whoever stands in your way!
+
+… and in that year there occurred the third of the great fires that ravaged the abbey. The very old brothers who still remembered it when I came to gather their recollections explained to me that the flames had been kindled in the hope of driving out of the kitchens a brother who, so they told me, had barricaded himself in there with the monastery's entire store of cheese. To this day, several decades later and despite extensive restoration work, the abbey of Goulacq is renowned for the smell of burnt cheese that comes off its walls.
+
+Chronicon abbatiæ Golacum, translated from the medieval Latin by Professor Evariste Rudite (1908)</Text>
+  </Page>
+  <Page id="50" music="abbazia" ending="true">
+    <Text>You suddenly feel strangely light. Somehow or other, your taste for cheese seems to have passed off entirely. The very idea of tasting any leaves you completely indifferent now.
+
+What a curious sensation!
+
+You could almost believe you were flying…
+
+… and in that year Brother Edgar rose up to heaven, as I was told by those who stood at his side to witness the miracle, not by dying as wretched mortals do, but by rising from the ground exactly as though his earthly frame had lost all its weight. Since the day of that miracle his relics have been kept beneath the altar of the abbey church of Goulacq, where the faithful still come in great numbers to gather in prayer and to ask Saint Edgar to intercede for them and deliver them from the dreadful sin of gluttony.
+
+Chronicon abbatiæ Golacum, translated from the medieval Latin by Professor Evariste Rudite (1908)</Text>
+  </Page>
+  <Page id="51" music="abbazia">
+    <Text>At the end of a silent struggle, hunger finally loosens its grip, and you slip into a dreamless sleep.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="gula" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="48">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="50">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="52" sound="brontolio_stomaco" soundDelay="1" music="tentazione">
+    <Text>The harder you drive the image of those little cheeses from your mind, the more it comes back, creamy and melting, and the further sleep retreats.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="gula" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="48">
+        <Requirements>
+          <Variable id="gula" operator="lte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="49">
+        <Requirements>
+          <Variable id="gula" operator="gte" value="6" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+</Librogame>

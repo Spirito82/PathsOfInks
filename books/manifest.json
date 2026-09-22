@@ -2527,6 +2527,2356 @@
       "genre": "Gothic dark fantasy",
       "blurb": "A metal ship rams the frozen shore and leaves you at the foot of the storm. Somewhere inside the white something is calling you, and you have wanted to answer it since the day you read that the king of the imperium was dead.\n\nThree sacrifices stand between you and the centre of the storm. The second one costs you a hand, and the book remembers whether you paid it: what you can still do with your arms, later, in the dark, depends on that night in the cathedral.",
       "contentWarnings": "Mutilation, body horror, wounds described in detail, and the death of the character."
+    },
+    {
+      "id": "autre-et-moi-etoile-du-matin-it",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/librogame.xml",
+        "sha256": "9DA48C60DF5616439C04FB481C8D6E666B047EBC1DDF0C21E536129DDC124F2C"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "artigli_mostro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/audio/artigli_mostro.ogg",
+          "sha256": "01C8F5D28211D6EE08BD4A9BEAF26722EA74CAFF38C05B103E5B04E2CABD5E92",
+          "bytes": 18564
+        },
+        {
+          "name": "fiamma_demone",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/audio/fiamma_demone.ogg",
+          "sha256": "40E1F6F4393116936381F2F77540E3F303C730606973925A7E9CB3ABB52946DC",
+          "bytes": 19896
+        },
+        {
+          "name": "passi_tetto",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/audio/passi_tetto.ogg",
+          "sha256": "0040352C0637F8D339674A30E4698BE8510BA7308E1BEDC8E9195B75D7EA4973",
+          "bytes": 10666
+        },
+        {
+          "name": "piuma_magica",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/audio/piuma_magica.ogg",
+          "sha256": "8BF16DDE5F9BFCCB3B72D5D02001AF7E164DCC15EC69F08CBCA00694B523A75F",
+          "bytes": 22490
+        },
+        {
+          "name": "scatto_fogna",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/audio/scatto_fogna.ogg",
+          "sha256": "6F7A6A102BA7222AB2F0327BE43F458877B60F0C35F4BF4C2EC354567319B76C",
+          "bytes": 12750
+        },
+        {
+          "name": "cielo_notturno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/audio/cielo_notturno.ogg",
+          "sha256": "64178FEA48BA679CBCFBF50B84E70D547E7437E405A5A1E952CFAA28842D9F7A",
+          "bytes": 765187
+        },
+        {
+          "name": "duetto",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/audio/duetto.ogg",
+          "sha256": "30359F72CAD601F871B44AAE1832BA6D79DDB6DB95E59FF8EC6D40AD2431BAA0",
+          "bytes": 762685
+        },
+        {
+          "name": "fogne_caccia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/audio/fogne_caccia.ogg",
+          "sha256": "AFF42690AEC5DDD2DA50ACC80E70ECCDF7048029FDB7DA60013550686F0D0976",
+          "bytes": 765461
+        },
+        {
+          "name": "riposo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/audio/riposo.ogg",
+          "sha256": "7AF95C35D431CA74CBCDCD8C00751EAE2EA5C2DFFE9B9270FCFBB06ED04C33E7",
+          "bytes": 700972
+        },
+        {
+          "name": "scontro_magico",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/it/v2/audio/scontro_magico.ogg",
+          "sha256": "32621D5E5AA6585B3DE98D1152F6AE61D26968D0DD2B44FAB82864D9F3845666",
+          "bytes": 827866
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "L’altro e me – La stella del mattino",
+      "author": "Skarn",
+      "genre": "Fantastico",
+      "blurb": "– Non credi che chiacchieriamo troppo?\n\n– Finché possiamo parlarci, vuol dire che siamo vivi.\n\n– Però ho l'impressione che non facciamo altro che parlare.\n\n– Non c'è motivo per cui la forma del dialogo debba essere riservata solo alla filosofia da poltrona.\n\n– Chiacchiere e mazzate?\n\n– Chiacchiere e mazzate.",
+      "contentWarnings": "Violenza, combattimenti, una setta e il suo altare sacrificale. Niente è descritto con compiacimento: l'avventura è interamente in dialogo, e il suo tono resta quello della commedia d'azione.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "autre-et-moi-etoile-du-matin-fr",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/librogame.xml",
+        "sha256": "673CE58AC12A3CD66E2E42861B512AE7E538B3DF6F4C276936A9AC013BEBEACE"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "artigli_mostro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/audio/artigli_mostro.ogg",
+          "sha256": "01C8F5D28211D6EE08BD4A9BEAF26722EA74CAFF38C05B103E5B04E2CABD5E92",
+          "bytes": 18564
+        },
+        {
+          "name": "fiamma_demone",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/audio/fiamma_demone.ogg",
+          "sha256": "40E1F6F4393116936381F2F77540E3F303C730606973925A7E9CB3ABB52946DC",
+          "bytes": 19896
+        },
+        {
+          "name": "passi_tetto",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/audio/passi_tetto.ogg",
+          "sha256": "0040352C0637F8D339674A30E4698BE8510BA7308E1BEDC8E9195B75D7EA4973",
+          "bytes": 10666
+        },
+        {
+          "name": "piuma_magica",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/audio/piuma_magica.ogg",
+          "sha256": "8BF16DDE5F9BFCCB3B72D5D02001AF7E164DCC15EC69F08CBCA00694B523A75F",
+          "bytes": 22490
+        },
+        {
+          "name": "scatto_fogna",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/audio/scatto_fogna.ogg",
+          "sha256": "6F7A6A102BA7222AB2F0327BE43F458877B60F0C35F4BF4C2EC354567319B76C",
+          "bytes": 12750
+        },
+        {
+          "name": "cielo_notturno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/audio/cielo_notturno.ogg",
+          "sha256": "64178FEA48BA679CBCFBF50B84E70D547E7437E405A5A1E952CFAA28842D9F7A",
+          "bytes": 765187
+        },
+        {
+          "name": "duetto",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/audio/duetto.ogg",
+          "sha256": "30359F72CAD601F871B44AAE1832BA6D79DDB6DB95E59FF8EC6D40AD2431BAA0",
+          "bytes": 762685
+        },
+        {
+          "name": "fogne_caccia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/audio/fogne_caccia.ogg",
+          "sha256": "AFF42690AEC5DDD2DA50ACC80E70ECCDF7048029FDB7DA60013550686F0D0976",
+          "bytes": 765461
+        },
+        {
+          "name": "riposo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/audio/riposo.ogg",
+          "sha256": "7AF95C35D431CA74CBCDCD8C00751EAE2EA5C2DFFE9B9270FCFBB06ED04C33E7",
+          "bytes": 700972
+        },
+        {
+          "name": "scontro_magico",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/fr/v2/audio/scontro_magico.ogg",
+          "sha256": "32621D5E5AA6585B3DE98D1152F6AE61D26968D0DD2B44FAB82864D9F3845666",
+          "bytes": 827866
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "L’autre et moi – L’étoile du matin",
+      "author": "Skarn",
+      "genre": "Fantastique",
+      "blurb": "– Tu crois pas qu’on jacasse trop ?\n\n– Tant qu’on peut se parler, c’est qu’on est en vie.\n\n– Quand même, j’ai l’impression qu’on fait que parler.\n\n– Pas de raison que le format du dialogue soit uniquement réservé à la philo pépère.\n\n– Discussion et baston ?\n\n– Discussion et baston.",
+      "contentWarnings": "Violence, combats, une secte et son autel sacrificiel. Rien n’est décrit avec complaisance : l’aventure est entièrement en dialogue, et son ton reste celui de la comédie d’action.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "autre-et-moi-etoile-du-matin-en",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/librogame.xml",
+        "sha256": "1E7516B15FD82E58E63D1445256249181E67239B46FC60C9937600356C8035F9"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "artigli_mostro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/audio/artigli_mostro.ogg",
+          "sha256": "01C8F5D28211D6EE08BD4A9BEAF26722EA74CAFF38C05B103E5B04E2CABD5E92",
+          "bytes": 18564
+        },
+        {
+          "name": "fiamma_demone",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/audio/fiamma_demone.ogg",
+          "sha256": "40E1F6F4393116936381F2F77540E3F303C730606973925A7E9CB3ABB52946DC",
+          "bytes": 19896
+        },
+        {
+          "name": "passi_tetto",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/audio/passi_tetto.ogg",
+          "sha256": "0040352C0637F8D339674A30E4698BE8510BA7308E1BEDC8E9195B75D7EA4973",
+          "bytes": 10666
+        },
+        {
+          "name": "piuma_magica",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/audio/piuma_magica.ogg",
+          "sha256": "8BF16DDE5F9BFCCB3B72D5D02001AF7E164DCC15EC69F08CBCA00694B523A75F",
+          "bytes": 22490
+        },
+        {
+          "name": "scatto_fogna",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/audio/scatto_fogna.ogg",
+          "sha256": "6F7A6A102BA7222AB2F0327BE43F458877B60F0C35F4BF4C2EC354567319B76C",
+          "bytes": 12750
+        },
+        {
+          "name": "cielo_notturno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/audio/cielo_notturno.ogg",
+          "sha256": "64178FEA48BA679CBCFBF50B84E70D547E7437E405A5A1E952CFAA28842D9F7A",
+          "bytes": 765187
+        },
+        {
+          "name": "duetto",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/audio/duetto.ogg",
+          "sha256": "30359F72CAD601F871B44AAE1832BA6D79DDB6DB95E59FF8EC6D40AD2431BAA0",
+          "bytes": 762685
+        },
+        {
+          "name": "fogne_caccia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/audio/fogne_caccia.ogg",
+          "sha256": "AFF42690AEC5DDD2DA50ACC80E70ECCDF7048029FDB7DA60013550686F0D0976",
+          "bytes": 765461
+        },
+        {
+          "name": "riposo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/audio/riposo.ogg",
+          "sha256": "7AF95C35D431CA74CBCDCD8C00751EAE2EA5C2DFFE9B9270FCFBB06ED04C33E7",
+          "bytes": 700972
+        },
+        {
+          "name": "scontro_magico",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-etoile-du-matin/en/v2/audio/scontro_magico.ogg",
+          "sha256": "32621D5E5AA6585B3DE98D1152F6AE61D26968D0DD2B44FAB82864D9F3845666",
+          "bytes": 827866
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "The Other and Me – The Morning Star",
+      "author": "Skarn",
+      "genre": "Fantasy",
+      "blurb": "– Don't you think we chatter too much?\n\n– As long as we can talk to each other, it means we're alive.\n\n– All the same, I get the feeling all we do is talk.\n\n– No reason the dialogue form should be reserved for cosy philosophy.\n\n– Talk and fisticuffs?\n\n– Talk and fisticuffs.",
+      "contentWarnings": "Violence, fighting, a cult and its sacrificial altar. Nothing is described with complacency: the adventure is entirely in dialogue, and its tone stays that of action comedy.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "autre-et-moi-l-oeil-it",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/librogame.xml",
+        "sha256": "3F5E8CA693748353609B43BBE37E0685A0D22929546C87041C58F5031B1673B8"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "battito_irregolare",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/audio/battito_irregolare.ogg",
+          "sha256": "8CED6697721EE796E63FC7463558805A6A9BE410440F6E5EF9C232326B348206",
+          "bytes": 9315
+        },
+        {
+          "name": "clessidra_sabbia",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/audio/clessidra_sabbia.ogg",
+          "sha256": "D6D073851A1ADCC44B1850291B9DAEE1D3E7953E22F890873AA984C6354366E7",
+          "bytes": 18277
+        },
+        {
+          "name": "sibilo_occhio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/audio/sibilo_occhio.ogg",
+          "sha256": "3ED4E0796C914C0E9A4A1D4A04FAE958437A3406A7A4B545CD4A795E3CF3F2D8",
+          "bytes": 11798
+        },
+        {
+          "name": "sussurro_ombra",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/audio/sussurro_ombra.ogg",
+          "sha256": "9C47C53CCEF193C277B654AEDD396013721808997BEFA426EDD1D3E5A575B89B",
+          "bytes": 16473
+        },
+        {
+          "name": "vetro_frantumato",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/audio/vetro_frantumato.ogg",
+          "sha256": "204C7AE045436975777F7E575C8C44A356927518A9802BFB83D6931EAED17EB1",
+          "bytes": 19878
+        },
+        {
+          "name": "abisso_mentale",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/audio/abisso_mentale.ogg",
+          "sha256": "B49A75B84A3C9627DA03051A000AC8E869C68A84B4937092EC789A9CB95581BF",
+          "bytes": 202944
+        },
+        {
+          "name": "chiarezza_o_rovina",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/audio/chiarezza_o_rovina.ogg",
+          "sha256": "1E2E0ED703B8D4B6E97E2607CED7F6EFE1FB948C0916290061FD7E382976A71C",
+          "bytes": 198490
+        },
+        {
+          "name": "corsa_del_tempo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/audio/corsa_del_tempo.ogg",
+          "sha256": "57D600834F5C9E1F57EDBECFE6A6023D16693ECC2146F7757A6CBB0A8FDF356E",
+          "bytes": 167041
+        },
+        {
+          "name": "frammenti_memoria",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/audio/frammenti_memoria.ogg",
+          "sha256": "E2C19B67EDE76B5269E22E7EF1E2CAE83A126832774C7AFD54CF3A28A136BC73",
+          "bytes": 191261
+        },
+        {
+          "name": "lo_sguardo_antico",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/it/v2/audio/lo_sguardo_antico.ogg",
+          "sha256": "4901A0148D483265DBD16A3F12B6784A2B2A458CD90F4835E164AAE1DCBB68DC",
+          "bytes": 266573
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "L’altro e me – L’occhio",
+      "author": "Skarn",
+      "genre": "Fantastico, azione",
+      "blurb": "– Bene, e insomma, non sono morta.\n\n– Un'affermazione intrigante, per qualcuno che in questo preciso momento va alla deriva nel limbo.\n\nSariel vi ha marchiata, l'occhio si è puntato su di voi e la vostra anima è andata a brandelli. Per svegliarvi bisogna ricucirla: rivisitare i vostri ricordi, capire quali falle l'occhio ha sfruttato, e farlo prima che il tempo finisca. Una sconosciuta vi accompagna in questo vuoto. Il suo primo enigma è lei stessa.\n\nEpisodio speciale della serie L'altro e me, indipendente dagli altri: non c'è niente da riportare da un episodio all'altro.",
+      "contentWarnings": "Rimorsi, morti violente raccontate a posteriori, un combattimento contro l'avatar del proprio potere. Il tono resta quello della serie: due voci che bisticciano, anche in fondo al nulla.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "autre-et-moi-l-oeil-fr",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/librogame.xml",
+        "sha256": "EF972F737C7C9999F63D45F1880FBDAF26C6E061CA289678AC8CEA8DCA31093A"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "battito_irregolare",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/audio/battito_irregolare.ogg",
+          "sha256": "8CED6697721EE796E63FC7463558805A6A9BE410440F6E5EF9C232326B348206",
+          "bytes": 9315
+        },
+        {
+          "name": "clessidra_sabbia",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/audio/clessidra_sabbia.ogg",
+          "sha256": "D6D073851A1ADCC44B1850291B9DAEE1D3E7953E22F890873AA984C6354366E7",
+          "bytes": 18277
+        },
+        {
+          "name": "sibilo_occhio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/audio/sibilo_occhio.ogg",
+          "sha256": "3ED4E0796C914C0E9A4A1D4A04FAE958437A3406A7A4B545CD4A795E3CF3F2D8",
+          "bytes": 11798
+        },
+        {
+          "name": "sussurro_ombra",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/audio/sussurro_ombra.ogg",
+          "sha256": "9C47C53CCEF193C277B654AEDD396013721808997BEFA426EDD1D3E5A575B89B",
+          "bytes": 16473
+        },
+        {
+          "name": "vetro_frantumato",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/audio/vetro_frantumato.ogg",
+          "sha256": "204C7AE045436975777F7E575C8C44A356927518A9802BFB83D6931EAED17EB1",
+          "bytes": 19878
+        },
+        {
+          "name": "abisso_mentale",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/audio/abisso_mentale.ogg",
+          "sha256": "B49A75B84A3C9627DA03051A000AC8E869C68A84B4937092EC789A9CB95581BF",
+          "bytes": 202944
+        },
+        {
+          "name": "chiarezza_o_rovina",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/audio/chiarezza_o_rovina.ogg",
+          "sha256": "1E2E0ED703B8D4B6E97E2607CED7F6EFE1FB948C0916290061FD7E382976A71C",
+          "bytes": 198490
+        },
+        {
+          "name": "corsa_del_tempo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/audio/corsa_del_tempo.ogg",
+          "sha256": "57D600834F5C9E1F57EDBECFE6A6023D16693ECC2146F7757A6CBB0A8FDF356E",
+          "bytes": 167041
+        },
+        {
+          "name": "frammenti_memoria",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/audio/frammenti_memoria.ogg",
+          "sha256": "E2C19B67EDE76B5269E22E7EF1E2CAE83A126832774C7AFD54CF3A28A136BC73",
+          "bytes": 191261
+        },
+        {
+          "name": "lo_sguardo_antico",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/fr/v2/audio/lo_sguardo_antico.ogg",
+          "sha256": "4901A0148D483265DBD16A3F12B6784A2B2A458CD90F4835E164AAE1DCBB68DC",
+          "bytes": 266573
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "L’autre et moi – L’œil",
+      "author": "Skarn",
+      "genre": "Fantastique, action",
+      "blurb": "– Bon, et bah, je suis pas morte.\n\n– Une intrigante affirmation pour quelqu'un qui dérive en ce moment-même dans les limbes.\n\nSariel vous a marquée, l'œil s'est braqué sur vous, et votre âme est partie en lambeaux. Pour vous réveiller, il faut la recoudre : revisiter vos souvenirs, comprendre quelles failles l'œil a exploitées, et le faire avant que le temps ne manque. Une inconnue vous accompagne dans ce vide. Sa première énigme, c'est elle-même.\n\nÉpisode spécial de la série L'autre et moi, indépendant des autres : rien à reporter d'un épisode à l'autre.",
+      "contentWarnings": "Remords, morts violentes racontées après coup, un combat contre l'avatar de son propre pouvoir. Le ton reste celui de la série : deux voix qui se chamaillent, même au fond du néant.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "autre-et-moi-l-oeil-en",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/librogame.xml",
+        "sha256": "37F77E3D361BE661A91B6D2D45F9CFAD4BFC15F550173802A82640DBCB6CA62C"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "battito_irregolare",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/audio/battito_irregolare.ogg",
+          "sha256": "8CED6697721EE796E63FC7463558805A6A9BE410440F6E5EF9C232326B348206",
+          "bytes": 9315
+        },
+        {
+          "name": "clessidra_sabbia",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/audio/clessidra_sabbia.ogg",
+          "sha256": "D6D073851A1ADCC44B1850291B9DAEE1D3E7953E22F890873AA984C6354366E7",
+          "bytes": 18277
+        },
+        {
+          "name": "sibilo_occhio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/audio/sibilo_occhio.ogg",
+          "sha256": "3ED4E0796C914C0E9A4A1D4A04FAE958437A3406A7A4B545CD4A795E3CF3F2D8",
+          "bytes": 11798
+        },
+        {
+          "name": "sussurro_ombra",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/audio/sussurro_ombra.ogg",
+          "sha256": "9C47C53CCEF193C277B654AEDD396013721808997BEFA426EDD1D3E5A575B89B",
+          "bytes": 16473
+        },
+        {
+          "name": "vetro_frantumato",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/audio/vetro_frantumato.ogg",
+          "sha256": "204C7AE045436975777F7E575C8C44A356927518A9802BFB83D6931EAED17EB1",
+          "bytes": 19878
+        },
+        {
+          "name": "abisso_mentale",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/audio/abisso_mentale.ogg",
+          "sha256": "B49A75B84A3C9627DA03051A000AC8E869C68A84B4937092EC789A9CB95581BF",
+          "bytes": 202944
+        },
+        {
+          "name": "chiarezza_o_rovina",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/audio/chiarezza_o_rovina.ogg",
+          "sha256": "1E2E0ED703B8D4B6E97E2607CED7F6EFE1FB948C0916290061FD7E382976A71C",
+          "bytes": 198490
+        },
+        {
+          "name": "corsa_del_tempo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/audio/corsa_del_tempo.ogg",
+          "sha256": "57D600834F5C9E1F57EDBECFE6A6023D16693ECC2146F7757A6CBB0A8FDF356E",
+          "bytes": 167041
+        },
+        {
+          "name": "frammenti_memoria",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/audio/frammenti_memoria.ogg",
+          "sha256": "E2C19B67EDE76B5269E22E7EF1E2CAE83A126832774C7AFD54CF3A28A136BC73",
+          "bytes": 191261
+        },
+        {
+          "name": "lo_sguardo_antico",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/autre-et-moi-l-oeil/en/v2/audio/lo_sguardo_antico.ogg",
+          "sha256": "4901A0148D483265DBD16A3F12B6784A2B2A458CD90F4835E164AAE1DCBB68DC",
+          "bytes": 266573
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "The Other and Me – The Eye",
+      "author": "Skarn",
+      "genre": "Fantasy, action",
+      "blurb": "– Right, well, I'm not dead.\n\n– An intriguing claim, for someone currently adrift in limbo.\n\nSariel set the mark upon you, the eye turned on you, and your soul came apart. To wake up, it has to be stitched back together: revisit your memories, work out which flaws the eye exploited, and do it before the time runs out. A stranger keeps you company in this void. Her first riddle is herself.\n\nA special episode of the series The Other and Me, independent of the rest: nothing to carry over from one episode to another.",
+      "contentWarnings": "Remorse, violent deaths recounted after the fact, a fight against the avatar of one's own power. The tone remains that of the series: two voices bickering, even at the bottom of the void.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "dans-l-angle-mort-it",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/librogame.xml",
+        "sha256": "BBACB5A3AC850B33A02E07ACACC972FA73D0099A9AB9C7C5B317A1FA4D2F220D"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "autobus_motore",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/audio/autobus_motore.ogg",
+          "sha256": "A5ABD846698A4A08D09B555D120F2962E605103F6B471F035CA8ABAEBCC98810",
+          "bytes": 14858
+        },
+        {
+          "name": "fotocamera_meccanica",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/audio/fotocamera_meccanica.ogg",
+          "sha256": "C7ED72831974035B478936AF49299E47CBDD20FB05E9D928A54F23CDBC4561BE",
+          "bytes": 8717
+        },
+        {
+          "name": "macchina_scrivere",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/audio/macchina_scrivere.ogg",
+          "sha256": "ED2BE5960518C9B7CF62581EADCA70A47DD5D351CB7C5BFF5EC2B4D2083381FC",
+          "bytes": 15850
+        },
+        {
+          "name": "timbro_dogana",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/audio/timbro_dogana.ogg",
+          "sha256": "BF7FB7DE203241C60FD57CA137CA799EFF6828404A9985E72F747EB5B9C7ACDA",
+          "bytes": 10089
+        },
+        {
+          "name": "vento_polvere",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/audio/vento_polvere.ogg",
+          "sha256": "BDDC618DF68CBA7B58A172162E6997C4ED935844B20F0AA9543DF6DBA0790710",
+          "bytes": 26874
+        },
+        {
+          "name": "cittadella",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/audio/cittadella.ogg",
+          "sha256": "ACF92917A4C4E7FFC8CAAC1E2B985BDDE406266E7F798858B48123F21D777FA0",
+          "bytes": 798032
+        },
+        {
+          "name": "frontiera",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/audio/frontiera.ogg",
+          "sha256": "D4AFCBEAD58D3C552C0D928FF20CFAD399C3A730186C165759C3361C63ADCF37",
+          "bytes": 765312
+        },
+        {
+          "name": "ricerca",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/audio/ricerca.ogg",
+          "sha256": "A1B9445A27A4BE728A6FDF81DB88B705E9FA38EDB5EBC37C45AD01135D76FA81",
+          "bytes": 792848
+        },
+        {
+          "name": "ritrovamento",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/audio/ritrovamento.ogg",
+          "sha256": "EC24348336465F6002E3A8BC556A3D9295F467E6DAC3E85F78DD55B3524EE296",
+          "bytes": 746718
+        },
+        {
+          "name": "sorveglianza_umana",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/it/v2/audio/sorveglianza_umana.ogg",
+          "sha256": "39090370083055E7179248A404206460CAC7E9D0C76F7067869E29F53571E31D",
+          "bytes": 759041
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Nell'angolo cieco",
+      "author": "Jérôme Wirth",
+      "genre": "Fantascienza",
+      "blurb": "2041. Un padre di famiglia parte alla ricerca della figlia fuggita di casa, scomparsa nella Repubblica Socialista del Messico. Quel padre di famiglia siete VOI.\n\nLaggiù le tecnologie nomadi sono vietate. Il braccialetto si lascia alla dogana, si comunica da postazioni ad accesso libero, si telefona da apparecchi fissi. Avete una fotografia, un nome falso e nessuno di cui fidarvi.",
+      "contentWarnings": "Droga, minacce, transfobia e omofobia espresse da alcuni personaggi, violenze poliziesche evocate, malattia mentale di una persona cara. Il narratore è un padre che non capisce, e il libro non gli dà sempre ragione.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "dans-l-angle-mort-fr",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/librogame.xml",
+        "sha256": "6DE02413D82D590418692DFE6629757B50BCD7B69401D3859D7B32ACD0F13731"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "autobus_motore",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/audio/autobus_motore.ogg",
+          "sha256": "A5ABD846698A4A08D09B555D120F2962E605103F6B471F035CA8ABAEBCC98810",
+          "bytes": 14858
+        },
+        {
+          "name": "fotocamera_meccanica",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/audio/fotocamera_meccanica.ogg",
+          "sha256": "C7ED72831974035B478936AF49299E47CBDD20FB05E9D928A54F23CDBC4561BE",
+          "bytes": 8717
+        },
+        {
+          "name": "macchina_scrivere",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/audio/macchina_scrivere.ogg",
+          "sha256": "ED2BE5960518C9B7CF62581EADCA70A47DD5D351CB7C5BFF5EC2B4D2083381FC",
+          "bytes": 15850
+        },
+        {
+          "name": "timbro_dogana",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/audio/timbro_dogana.ogg",
+          "sha256": "BF7FB7DE203241C60FD57CA137CA799EFF6828404A9985E72F747EB5B9C7ACDA",
+          "bytes": 10089
+        },
+        {
+          "name": "vento_polvere",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/audio/vento_polvere.ogg",
+          "sha256": "BDDC618DF68CBA7B58A172162E6997C4ED935844B20F0AA9543DF6DBA0790710",
+          "bytes": 26874
+        },
+        {
+          "name": "cittadella",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/audio/cittadella.ogg",
+          "sha256": "ACF92917A4C4E7FFC8CAAC1E2B985BDDE406266E7F798858B48123F21D777FA0",
+          "bytes": 798032
+        },
+        {
+          "name": "frontiera",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/audio/frontiera.ogg",
+          "sha256": "D4AFCBEAD58D3C552C0D928FF20CFAD399C3A730186C165759C3361C63ADCF37",
+          "bytes": 765312
+        },
+        {
+          "name": "ricerca",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/audio/ricerca.ogg",
+          "sha256": "A1B9445A27A4BE728A6FDF81DB88B705E9FA38EDB5EBC37C45AD01135D76FA81",
+          "bytes": 792848
+        },
+        {
+          "name": "ritrovamento",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/audio/ritrovamento.ogg",
+          "sha256": "EC24348336465F6002E3A8BC556A3D9295F467E6DAC3E85F78DD55B3524EE296",
+          "bytes": 746718
+        },
+        {
+          "name": "sorveglianza_umana",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/fr/v2/audio/sorveglianza_umana.ogg",
+          "sha256": "39090370083055E7179248A404206460CAC7E9D0C76F7067869E29F53571E31D",
+          "bytes": 759041
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Dans l’Angle mort",
+      "author": "Jérôme Wirth",
+      "genre": "Anticipation",
+      "blurb": "2041. Un père de famille part à la recherche de sa fille fugueuse, disparue en République Socialiste du Mexique. Ce père de famille, c'est VOUS.\n\nLà-bas, les technologies nomades sont interdites. On laisse son bracelet à la douane, on communique par des bornes en accès libre, on téléphone depuis des combinés fixes. Vous avez une photographie, un faux nom, et personne à qui faire confiance.",
+      "contentWarnings": "Drogue, menaces, transphobie et homophobie exprimées par des personnages, violences policières évoquées, maladie mentale d'un proche. Le narrateur est un père dépassé, et le livre ne lui donne pas toujours raison.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "dans-l-angle-mort-en",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/librogame.xml",
+        "sha256": "DBD1024E77F9A19646FAECFE5195FE807C6F3FF74F1A2A672C3A30432ECA1A3D"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "autobus_motore",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/audio/autobus_motore.ogg",
+          "sha256": "A5ABD846698A4A08D09B555D120F2962E605103F6B471F035CA8ABAEBCC98810",
+          "bytes": 14858
+        },
+        {
+          "name": "fotocamera_meccanica",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/audio/fotocamera_meccanica.ogg",
+          "sha256": "C7ED72831974035B478936AF49299E47CBDD20FB05E9D928A54F23CDBC4561BE",
+          "bytes": 8717
+        },
+        {
+          "name": "macchina_scrivere",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/audio/macchina_scrivere.ogg",
+          "sha256": "ED2BE5960518C9B7CF62581EADCA70A47DD5D351CB7C5BFF5EC2B4D2083381FC",
+          "bytes": 15850
+        },
+        {
+          "name": "timbro_dogana",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/audio/timbro_dogana.ogg",
+          "sha256": "BF7FB7DE203241C60FD57CA137CA799EFF6828404A9985E72F747EB5B9C7ACDA",
+          "bytes": 10089
+        },
+        {
+          "name": "vento_polvere",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/audio/vento_polvere.ogg",
+          "sha256": "BDDC618DF68CBA7B58A172162E6997C4ED935844B20F0AA9543DF6DBA0790710",
+          "bytes": 26874
+        },
+        {
+          "name": "cittadella",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/audio/cittadella.ogg",
+          "sha256": "ACF92917A4C4E7FFC8CAAC1E2B985BDDE406266E7F798858B48123F21D777FA0",
+          "bytes": 798032
+        },
+        {
+          "name": "frontiera",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/audio/frontiera.ogg",
+          "sha256": "D4AFCBEAD58D3C552C0D928FF20CFAD399C3A730186C165759C3361C63ADCF37",
+          "bytes": 765312
+        },
+        {
+          "name": "ricerca",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/audio/ricerca.ogg",
+          "sha256": "A1B9445A27A4BE728A6FDF81DB88B705E9FA38EDB5EBC37C45AD01135D76FA81",
+          "bytes": 792848
+        },
+        {
+          "name": "ritrovamento",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/audio/ritrovamento.ogg",
+          "sha256": "EC24348336465F6002E3A8BC556A3D9295F467E6DAC3E85F78DD55B3524EE296",
+          "bytes": 746718
+        },
+        {
+          "name": "sorveglianza_umana",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/dans-l-angle-mort/en/v2/audio/sorveglianza_umana.ogg",
+          "sha256": "39090370083055E7179248A404206460CAC7E9D0C76F7067869E29F53571E31D",
+          "bytes": 759041
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "In the Blind Spot",
+      "author": "Jérôme Wirth",
+      "genre": "Science fiction",
+      "blurb": "2041. A father sets off in search of his runaway daughter, who has vanished into the Socialist Republic of Mexico. That father is YOU.\n\nDown there, mobile technology is banned. You leave your bracelet at customs, you communicate through free-access terminals, you telephone from landlines. You have a photograph, a false name, and nobody to trust.",
+      "contentWarnings": "Drugs, threats, transphobia and homophobia voiced by characters, police violence referred to, the mental illness of a loved one. The narrator is a father out of his depth, and the book doesn't always take his side.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "disruption-it",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/librogame.xml",
+        "sha256": "BCD50C5CEF0DE15CF4A561899DEF2EFC00D53957B0E34E207DDA6B515089BBC4"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "applauso_sintetico",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/audio/applauso_sintetico.ogg",
+          "sha256": "28607A2766EA5058D3EE8FFCF6512689F1882382CC3648D8C97937403A65EB1B",
+          "bytes": 15951
+        },
+        {
+          "name": "criogenesi",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/audio/criogenesi.ogg",
+          "sha256": "7601DF34A02D246A964A0B8F1E5D9E9D1E7EAA064E08C29DC56CC82387508DB9",
+          "bytes": 24495
+        },
+        {
+          "name": "drone_ronzio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/audio/drone_ronzio.ogg",
+          "sha256": "4ED396B19AC1055ECBA08CF27D3DE33A86E294EC44EDD22E3C58D5175E75F0EA",
+          "bytes": 14233
+        },
+        {
+          "name": "notifica_glitch",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/audio/notifica_glitch.ogg",
+          "sha256": "0DEB3D68B9D668E1F4C877D1D2438ECC40556E9458BA7812507867E5A9D6E764",
+          "bytes": 13234
+        },
+        {
+          "name": "tornello",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/audio/tornello.ogg",
+          "sha256": "BE840B26D00E5442B9FAF2F06DF439C005B2136AA2035540993F6C14ECBC0235",
+          "bytes": 9154
+        },
+        {
+          "name": "burocrazia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/audio/burocrazia.ogg",
+          "sha256": "21DD54A0DCA414DD84A166FEEE3158E9CB2E3761499CB8952026373F463B4551",
+          "bytes": 786951
+        },
+        {
+          "name": "crisi_di_governo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/audio/crisi_di_governo.ogg",
+          "sha256": "9DED1AF933E5CC721140247C198449D088EF638AAF84311D9A6CC12F1C6DDD68",
+          "bytes": 835192
+        },
+        {
+          "name": "futuro_presente",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/audio/futuro_presente.ogg",
+          "sha256": "8CFE04779E1C1692B387E317EC2E24B180BEA2A05270CB84930EE4A0C105412D",
+          "bytes": 787974
+        },
+        {
+          "name": "liquidazione",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/audio/liquidazione.ogg",
+          "sha256": "EADBC614B9014BF8C3EDE82D9C95CE8F057ABB51638D249FCF3AB16B518C1CFA",
+          "bytes": 665631
+        },
+        {
+          "name": "propaganda",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/it/v2/audio/propaganda.ogg",
+          "sha256": "30E8D2BFD88C91545B5C375C37AE9B3C41079EBF10DFA554417F83FEAE1760C6",
+          "bytes": 786038
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Disruption, ovvero l’Umano dopo",
+      "author": "Jérôme Wirth",
+      "genre": "Fantascienza, satira politica",
+      "blurb": "«La disruption creatrice è la Francia del 2080!» L'avete detto dal palco, davanti alla stampa di tutto il mondo, e avete mantenuto la parola: vi siete fatto criogenizzare per venire a contemplare il paese che le vostre riforme avrebbero costruito.\n\nSiamo nel 2080. Il vetro del sarcofago si apre, una voce metallica vi dà il benvenuto, e quello di vostra moglie non c'è più. Vi resta una giornata per capire che cosa è diventata la Francia prima di presentarvi davanti a lei. Avete 3 punti di Salute e 5 punti di Volontà.",
+      "contentWarnings": "Satira politica: il narratore è un presidente della Repubblica francese scongelato nel 2080, ricalcato su un capo di Stato reale, nominato nell'esergo dell'originale. È cinico, misogino e sprezzante, e il libro non gli dà mai ragione. Scena di sesso, infedeltà, esecuzione sommaria, violenza poliziesca, razzismo di classe nello sguardo del narratore, e un orrore organico: esseri umani coltivati per diventare mobili.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "disruption-fr",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/librogame.xml",
+        "sha256": "CFA0363AD8B23E00E95D7FC76CC3187B07C7152068DD0CC1FC5BAA8380AE8C0E"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "applauso_sintetico",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/audio/applauso_sintetico.ogg",
+          "sha256": "28607A2766EA5058D3EE8FFCF6512689F1882382CC3648D8C97937403A65EB1B",
+          "bytes": 15951
+        },
+        {
+          "name": "criogenesi",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/audio/criogenesi.ogg",
+          "sha256": "7601DF34A02D246A964A0B8F1E5D9E9D1E7EAA064E08C29DC56CC82387508DB9",
+          "bytes": 24495
+        },
+        {
+          "name": "drone_ronzio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/audio/drone_ronzio.ogg",
+          "sha256": "4ED396B19AC1055ECBA08CF27D3DE33A86E294EC44EDD22E3C58D5175E75F0EA",
+          "bytes": 14233
+        },
+        {
+          "name": "notifica_glitch",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/audio/notifica_glitch.ogg",
+          "sha256": "0DEB3D68B9D668E1F4C877D1D2438ECC40556E9458BA7812507867E5A9D6E764",
+          "bytes": 13234
+        },
+        {
+          "name": "tornello",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/audio/tornello.ogg",
+          "sha256": "BE840B26D00E5442B9FAF2F06DF439C005B2136AA2035540993F6C14ECBC0235",
+          "bytes": 9154
+        },
+        {
+          "name": "burocrazia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/audio/burocrazia.ogg",
+          "sha256": "21DD54A0DCA414DD84A166FEEE3158E9CB2E3761499CB8952026373F463B4551",
+          "bytes": 786951
+        },
+        {
+          "name": "crisi_di_governo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/audio/crisi_di_governo.ogg",
+          "sha256": "9DED1AF933E5CC721140247C198449D088EF638AAF84311D9A6CC12F1C6DDD68",
+          "bytes": 835192
+        },
+        {
+          "name": "futuro_presente",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/audio/futuro_presente.ogg",
+          "sha256": "8CFE04779E1C1692B387E317EC2E24B180BEA2A05270CB84930EE4A0C105412D",
+          "bytes": 787974
+        },
+        {
+          "name": "liquidazione",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/audio/liquidazione.ogg",
+          "sha256": "EADBC614B9014BF8C3EDE82D9C95CE8F057ABB51638D249FCF3AB16B518C1CFA",
+          "bytes": 665631
+        },
+        {
+          "name": "propaganda",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/fr/v2/audio/propaganda.ogg",
+          "sha256": "30E8D2BFD88C91545B5C375C37AE9B3C41079EBF10DFA554417F83FEAE1760C6",
+          "bytes": 786038
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Disruption ou l’Humain après",
+      "author": "Jérôme Wirth",
+      "genre": "Science-fiction, satire politique",
+      "blurb": "« La disruption créatrice, c'est la France de 2080 ! » Vous l'avez dit à la tribune, devant la presse du monde entier, et vous avez tenu parole : vous vous êtes fait cryogéniser pour venir contempler le pays que vos réformes auraient bâti.\n\nNous sommes en 2080. La vitre du sarcophage s'ouvre, une voix métallique vous souhaite la bienvenue, et celui de votre épouse n'est plus là. Il vous reste une journée pour comprendre ce que la France est devenue avant de paraître devant elle. Vous avez 3 points de Santé et 5 points de Volonté.",
+      "contentWarnings": "Satire politique : le narrateur est un président de la République française décongelé en 2080, calqué sur un chef d'État réel, nommé dans l'exergue de l'original. Il est cynique, misogyne et méprisant, et le livre ne lui donne jamais raison. Scène de sexe, infidélité, exécution sommaire, violence policière, racisme de classe dans le regard du narrateur, et une horreur organique : des humains cultivés pour devenir des meubles.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "disruption-en",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/librogame.xml",
+        "sha256": "10720D6493FBFCA34DDA080D49ABB63B13440C8D9DDE4EDC2FCD7507100F3F7A"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "applauso_sintetico",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/audio/applauso_sintetico.ogg",
+          "sha256": "28607A2766EA5058D3EE8FFCF6512689F1882382CC3648D8C97937403A65EB1B",
+          "bytes": 15951
+        },
+        {
+          "name": "criogenesi",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/audio/criogenesi.ogg",
+          "sha256": "7601DF34A02D246A964A0B8F1E5D9E9D1E7EAA064E08C29DC56CC82387508DB9",
+          "bytes": 24495
+        },
+        {
+          "name": "drone_ronzio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/audio/drone_ronzio.ogg",
+          "sha256": "4ED396B19AC1055ECBA08CF27D3DE33A86E294EC44EDD22E3C58D5175E75F0EA",
+          "bytes": 14233
+        },
+        {
+          "name": "notifica_glitch",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/audio/notifica_glitch.ogg",
+          "sha256": "0DEB3D68B9D668E1F4C877D1D2438ECC40556E9458BA7812507867E5A9D6E764",
+          "bytes": 13234
+        },
+        {
+          "name": "tornello",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/audio/tornello.ogg",
+          "sha256": "BE840B26D00E5442B9FAF2F06DF439C005B2136AA2035540993F6C14ECBC0235",
+          "bytes": 9154
+        },
+        {
+          "name": "burocrazia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/audio/burocrazia.ogg",
+          "sha256": "21DD54A0DCA414DD84A166FEEE3158E9CB2E3761499CB8952026373F463B4551",
+          "bytes": 786951
+        },
+        {
+          "name": "crisi_di_governo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/audio/crisi_di_governo.ogg",
+          "sha256": "9DED1AF933E5CC721140247C198449D088EF638AAF84311D9A6CC12F1C6DDD68",
+          "bytes": 835192
+        },
+        {
+          "name": "futuro_presente",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/audio/futuro_presente.ogg",
+          "sha256": "8CFE04779E1C1692B387E317EC2E24B180BEA2A05270CB84930EE4A0C105412D",
+          "bytes": 787974
+        },
+        {
+          "name": "liquidazione",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/audio/liquidazione.ogg",
+          "sha256": "EADBC614B9014BF8C3EDE82D9C95CE8F057ABB51638D249FCF3AB16B518C1CFA",
+          "bytes": 665631
+        },
+        {
+          "name": "propaganda",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/disruption/en/v2/audio/propaganda.ogg",
+          "sha256": "30E8D2BFD88C91545B5C375C37AE9B3C41079EBF10DFA554417F83FEAE1760C6",
+          "bytes": 786038
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Disruption, or the Human After",
+      "author": "Jérôme Wirth",
+      "genre": "Science fiction, political satire",
+      "blurb": "\"Creative disruption is the France of 2080!\" You said it from the podium, before the world's press, and you kept your word: you had yourself cryogenised in order to come and contemplate the country your reforms would have built.\n\nIt is 2080. The glass of the sarcophagus opens, a metallic voice welcomes you back, and your wife's sarcophagus is gone. You have one day to work out what France has become before you appear before it. You have 3 points of Health and 5 points of Will.",
+      "contentWarnings": "Political satire: the narrator is a President of the French Republic thawed out in 2080, modelled on a real head of state, named in the original's epigraph. He is cynical, misogynistic and contemptuous, and the book never takes his side. A sex scene, infidelity, a summary execution, police violence, class racism in the narrator's gaze, and one piece of organic horror: humans grown to become furniture.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "la-derniere-tentation-de-frere-edgar-it",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/librogame.xml",
+        "sha256": "DC15B3F72484CC0A6DA06515480B6030773587DE976D8A5239BCB089A5014DC5"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "brontolio_stomaco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/audio/brontolio_stomaco.ogg",
+          "sha256": "E259012C9E1FB5C51887B1D4037DF48FDAA56B436F68821822087EAF659FE089",
+          "bytes": 11068
+        },
+        {
+          "name": "campana_convento",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/audio/campana_convento.ogg",
+          "sha256": "D3C354638304D7D08859A62CAC63DFE818151D9D4D760C7A81A94E8DFE75D9C5",
+          "bytes": 15575
+        },
+        {
+          "name": "chiavistello_dispensa",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/audio/chiavistello_dispensa.ogg",
+          "sha256": "7A03AF1EEA94C80F55BB7C8E1F06D2A2CB71B81055E3782E3B865C2EA45BD19B",
+          "bytes": 11393
+        },
+        {
+          "name": "formaggio_taglio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/audio/formaggio_taglio.ogg",
+          "sha256": "998853FAD9E062BC715D61C4D64DA15C2031A47EDD9669AF642B87211B8F557F",
+          "bytes": 12478
+        },
+        {
+          "name": "passi_sandali",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/audio/passi_sandali.ogg",
+          "sha256": "853ECE77DD334BA2C05853D66EAF4B9325871C571F055D195C1D32CCDD7B93A5",
+          "bytes": 16711
+        },
+        {
+          "name": "abbazia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/audio/abbazia.ogg",
+          "sha256": "819C5F90F5F1877465C4B42DD62F0A95F7722381483B9406AA79FD7298EDDDE9",
+          "bytes": 744844
+        },
+        {
+          "name": "banchetto_segreto",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/audio/banchetto_segreto.ogg",
+          "sha256": "A03E31F99265BB9597C2CB67276D538E735B797936D241250AB96737124DC487",
+          "bytes": 788258
+        },
+        {
+          "name": "fuga_nel_chiostro",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/audio/fuga_nel_chiostro.ogg",
+          "sha256": "0A62CB2398658CC0DAADA980F5B27236E9A5CC0EA574585CB3283DDC986AF2E4",
+          "bytes": 824509
+        },
+        {
+          "name": "penitenza",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/audio/penitenza.ogg",
+          "sha256": "A818F848EE33A0E19A07E6666F0807966573129833573B8D42325B42E6C20C38",
+          "bytes": 731639
+        },
+        {
+          "name": "tentazione",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/it/v2/audio/tentazione.ogg",
+          "sha256": "125A4F1CC0C6C2C16587B134119AB143FFEE5677FEC64BE7D211E7A913F25C31",
+          "bytes": 767610
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "L'ultima tentazione di frate Edgar",
+      "author": "Julien Brice (Meneldur)",
+      "genre": "Storico, umoristico",
+      "blurb": "All'abbazia di Goulacq, frate Edgar ama i formaggini di capra più di quanto sia ragionevole. Il priore l'ha finalmente colto con le mani nella dispensa: vietato toccarne uno fino a nuovo ordine, pena l'espulsione.\n\nResta da tenere duro una giornata. Una sola. Dalle lodi alle vigilie, fra le faccende del mattino, lo scriptorium del pomeriggio e i mormorii di frate Guglielmo, la vostra gola salirà, scenderà, risalirà. Saprete resistere alla tentazione?",
+      "contentWarnings": "Uno schiaffo, un calcio negli stinchi e moltissimo formaggio. Nient'altro: l'avventura è una commedia monastica.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "la-derniere-tentation-de-frere-edgar-fr",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/librogame.xml",
+        "sha256": "6334080B1E2626CE7EDAF15762D8D213AF998C589A2BF47AC492ADB51895599E"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "brontolio_stomaco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/audio/brontolio_stomaco.ogg",
+          "sha256": "E259012C9E1FB5C51887B1D4037DF48FDAA56B436F68821822087EAF659FE089",
+          "bytes": 11068
+        },
+        {
+          "name": "campana_convento",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/audio/campana_convento.ogg",
+          "sha256": "D3C354638304D7D08859A62CAC63DFE818151D9D4D760C7A81A94E8DFE75D9C5",
+          "bytes": 15575
+        },
+        {
+          "name": "chiavistello_dispensa",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/audio/chiavistello_dispensa.ogg",
+          "sha256": "7A03AF1EEA94C80F55BB7C8E1F06D2A2CB71B81055E3782E3B865C2EA45BD19B",
+          "bytes": 11393
+        },
+        {
+          "name": "formaggio_taglio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/audio/formaggio_taglio.ogg",
+          "sha256": "998853FAD9E062BC715D61C4D64DA15C2031A47EDD9669AF642B87211B8F557F",
+          "bytes": 12478
+        },
+        {
+          "name": "passi_sandali",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/audio/passi_sandali.ogg",
+          "sha256": "853ECE77DD334BA2C05853D66EAF4B9325871C571F055D195C1D32CCDD7B93A5",
+          "bytes": 16711
+        },
+        {
+          "name": "abbazia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/audio/abbazia.ogg",
+          "sha256": "819C5F90F5F1877465C4B42DD62F0A95F7722381483B9406AA79FD7298EDDDE9",
+          "bytes": 744844
+        },
+        {
+          "name": "banchetto_segreto",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/audio/banchetto_segreto.ogg",
+          "sha256": "A03E31F99265BB9597C2CB67276D538E735B797936D241250AB96737124DC487",
+          "bytes": 788258
+        },
+        {
+          "name": "fuga_nel_chiostro",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/audio/fuga_nel_chiostro.ogg",
+          "sha256": "0A62CB2398658CC0DAADA980F5B27236E9A5CC0EA574585CB3283DDC986AF2E4",
+          "bytes": 824509
+        },
+        {
+          "name": "penitenza",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/audio/penitenza.ogg",
+          "sha256": "A818F848EE33A0E19A07E6666F0807966573129833573B8D42325B42E6C20C38",
+          "bytes": 731639
+        },
+        {
+          "name": "tentazione",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/fr/v2/audio/tentazione.ogg",
+          "sha256": "125A4F1CC0C6C2C16587B134119AB143FFEE5677FEC64BE7D211E7A913F25C31",
+          "bytes": 767610
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "La dernière tentation de frère Edgar",
+      "author": "Julien Brice (Meneldur)",
+      "genre": "Historique, humoristique",
+      "blurb": "À l'abbaye de Goulacq, frère Edgar aime les petits fromages de chèvre plus que de raison. Le prieur l'a enfin pris la main dans le cellier : interdiction d'y toucher jusqu'à nouvel ordre, sous peine d'exclusion.\n\nReste à tenir une journée. Une seule. Des laudes aux vigiles, entre les corvées du matin, le scriptorium de l'après-midi et les messes basses de frère Guilhem, votre gourmandise va monter, descendre, remonter. Saurez-vous résister à la tentation ?",
+      "contentWarnings": "Une gifle, un coup de pied dans le tibia et beaucoup de fromage. Rien de plus : l'aventure est une comédie monastique.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "la-derniere-tentation-de-frere-edgar-en",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/librogame.xml",
+        "sha256": "97BC8218A020363D268E004146FBE691A56F9DC03F308B0E9701C6B6012CFC14"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "brontolio_stomaco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/audio/brontolio_stomaco.ogg",
+          "sha256": "E259012C9E1FB5C51887B1D4037DF48FDAA56B436F68821822087EAF659FE089",
+          "bytes": 11068
+        },
+        {
+          "name": "campana_convento",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/audio/campana_convento.ogg",
+          "sha256": "D3C354638304D7D08859A62CAC63DFE818151D9D4D760C7A81A94E8DFE75D9C5",
+          "bytes": 15575
+        },
+        {
+          "name": "chiavistello_dispensa",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/audio/chiavistello_dispensa.ogg",
+          "sha256": "7A03AF1EEA94C80F55BB7C8E1F06D2A2CB71B81055E3782E3B865C2EA45BD19B",
+          "bytes": 11393
+        },
+        {
+          "name": "formaggio_taglio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/audio/formaggio_taglio.ogg",
+          "sha256": "998853FAD9E062BC715D61C4D64DA15C2031A47EDD9669AF642B87211B8F557F",
+          "bytes": 12478
+        },
+        {
+          "name": "passi_sandali",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/audio/passi_sandali.ogg",
+          "sha256": "853ECE77DD334BA2C05853D66EAF4B9325871C571F055D195C1D32CCDD7B93A5",
+          "bytes": 16711
+        },
+        {
+          "name": "abbazia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/audio/abbazia.ogg",
+          "sha256": "819C5F90F5F1877465C4B42DD62F0A95F7722381483B9406AA79FD7298EDDDE9",
+          "bytes": 744844
+        },
+        {
+          "name": "banchetto_segreto",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/audio/banchetto_segreto.ogg",
+          "sha256": "A03E31F99265BB9597C2CB67276D538E735B797936D241250AB96737124DC487",
+          "bytes": 788258
+        },
+        {
+          "name": "fuga_nel_chiostro",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/audio/fuga_nel_chiostro.ogg",
+          "sha256": "0A62CB2398658CC0DAADA980F5B27236E9A5CC0EA574585CB3283DDC986AF2E4",
+          "bytes": 824509
+        },
+        {
+          "name": "penitenza",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/audio/penitenza.ogg",
+          "sha256": "A818F848EE33A0E19A07E6666F0807966573129833573B8D42325B42E6C20C38",
+          "bytes": 731639
+        },
+        {
+          "name": "tentazione",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-derniere-tentation-de-frere-edgar/en/v2/audio/tentazione.ogg",
+          "sha256": "125A4F1CC0C6C2C16587B134119AB143FFEE5677FEC64BE7D211E7A913F25C31",
+          "bytes": 767610
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "The Last Temptation of Brother Edgar",
+      "author": "Julien Brice (Meneldur)",
+      "genre": "Historical comedy",
+      "blurb": "At the abbey of Goulacq, Brother Edgar loves the little goat's cheeses rather more than is reasonable. The prior has caught him at the cellar door at last: not one cheese until further notice, on pain of expulsion.\n\nAll that remains is to hold out for a day. One day. From lauds to vigils, between the morning chores, the afternoon in the scriptorium and Brother Guilhem's whispering, your gluttony will rise, fall and rise again. Can you resist temptation?",
+      "contentWarnings": "One slap, one kick in the shin and a great deal of cheese. Nothing worse: the adventure is a monastic comedy.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "liens-invalides-it",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/librogame.xml",
+        "sha256": "9EABC3A2167641BCC5C7981D333457A71AFEC624E7572A30F43485F4A7C50F9B"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/items.xml",
+        "sha256": "1F9E606FCA88D7DA87F3024336EE05FE04EE8D4BD7C2225D42A2C0B0833CC160"
+      },
+      "audio": [
+        {
+          "name": "accendino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/audio/accendino.ogg",
+          "sha256": "5BA4BC1518FC5434072F45505242306D6E83D265F662D618F8F7B57164133E87",
+          "bytes": 12275
+        },
+        {
+          "name": "bicchiere_vodka",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/audio/bicchiere_vodka.ogg",
+          "sha256": "395444F76DE4F8618E64B3A7F28E2FCAFEE24154BC424E1FF7D2E0C991F3A46C",
+          "bytes": 10999
+        },
+        {
+          "name": "colpo_pistola",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/audio/colpo_pistola.ogg",
+          "sha256": "313E0F319629A00EE7D9E8FDCDF0AD2D946D640EE7CC061E4EB8588DF8CF3D3C",
+          "bytes": 13530
+        },
+        {
+          "name": "telefono_disco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/audio/telefono_disco.ogg",
+          "sha256": "48CE03E8A7A99934854B47F89184328B71AF77F41A3120461ECBBB0C304BFB6C",
+          "bytes": 9649
+        },
+        {
+          "name": "tergicristalli",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/audio/tergicristalli.ogg",
+          "sha256": "3506E072C5B9FF663971694F853A38ECE4B219F90D6F63E1DA7CBF027E685A22",
+          "bytes": 11858
+        },
+        {
+          "name": "fine_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/audio/fine_notte.ogg",
+          "sha256": "305FBCCE8FDBCBC0F023DEB76E0A65C2B16536703E198137EAA0BD933BE1386F",
+          "bytes": 681255
+        },
+        {
+          "name": "indagine",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/audio/indagine.ogg",
+          "sha256": "439EDE327E2FA28F39DAD220868E23FAC1BBCA089D6611515A95F96E00EA2902",
+          "bytes": 754193
+        },
+        {
+          "name": "minaccia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/audio/minaccia.ogg",
+          "sha256": "F034F2DF7C2D5DDA4C1E114C53F61A2A8B20245B7864ED124D9A55725C9EF1BC",
+          "bytes": 819100
+        },
+        {
+          "name": "naklo_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/audio/naklo_notte.ogg",
+          "sha256": "9773ADF34FD85E4FE9A5F37F693C57E3744D66057ACAA5BA7955EE4B652E8DE2",
+          "bytes": 575437
+        },
+        {
+          "name": "san_valentino",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/it/v2/audio/san_valentino.ogg",
+          "sha256": "251201461F4034BC400C6511B1578814E63171A8B4DCF5A8422100F32B9A4633",
+          "bytes": 723152
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Legami non validi",
+      "author": "Jérôme Wirth",
+      "genre": "Poliziesco",
+      "blurb": "Siete il commissario K., responsabile della cittadina polacca di Naklo, che non si distingue per altro se non per l'economia della barbabietola e la sua distilleria di etanolo, incaricata di rifornire di carburante le truppe sul fronte bielorusso. Stasera è Walentynki, la festa degli innamorati, e avete tre buone ragioni per essere depresso: siete un poliziotto, un alcolizzato e un divorziato.\n\nE soprattutto, stasera, un gruppo terroristico che si fa chiamare «le Grandi Lupe Cattive» ha deciso di trasformare la serata in un incubo. E voi siete in prima linea. A maggior ragione da quando sapete che il vostro vecchio amico, il dottor Andreszj Szulesk, ginecologo del paese, risulta scomparso. Sono le 23:40 e la vostra notte è appena cominciata.",
+      "contentWarnings": "Violenza sessuale evocata, suicidio, terrorismo, alcolismo, droga, morte di personaggi. L'autore avverte lui stesso che alcune scene possono turbare. Nulla è descritto con compiacimento, ma l'avventura è scritta per adulti.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "liens-invalides-fr",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/librogame.xml",
+        "sha256": "CFA3825633C77BBD78E849A3C8886340E43D1092C6060E4B10012D03E1DB04DD"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/items.xml",
+        "sha256": "49EB328735402DA5AE9570D62AACAC3FD5A97264B67D8A7C5E2B96B47BE9CA95"
+      },
+      "audio": [
+        {
+          "name": "accendino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/audio/accendino.ogg",
+          "sha256": "5BA4BC1518FC5434072F45505242306D6E83D265F662D618F8F7B57164133E87",
+          "bytes": 12275
+        },
+        {
+          "name": "bicchiere_vodka",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/audio/bicchiere_vodka.ogg",
+          "sha256": "395444F76DE4F8618E64B3A7F28E2FCAFEE24154BC424E1FF7D2E0C991F3A46C",
+          "bytes": 10999
+        },
+        {
+          "name": "colpo_pistola",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/audio/colpo_pistola.ogg",
+          "sha256": "313E0F319629A00EE7D9E8FDCDF0AD2D946D640EE7CC061E4EB8588DF8CF3D3C",
+          "bytes": 13530
+        },
+        {
+          "name": "telefono_disco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/audio/telefono_disco.ogg",
+          "sha256": "48CE03E8A7A99934854B47F89184328B71AF77F41A3120461ECBBB0C304BFB6C",
+          "bytes": 9649
+        },
+        {
+          "name": "tergicristalli",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/audio/tergicristalli.ogg",
+          "sha256": "3506E072C5B9FF663971694F853A38ECE4B219F90D6F63E1DA7CBF027E685A22",
+          "bytes": 11858
+        },
+        {
+          "name": "fine_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/audio/fine_notte.ogg",
+          "sha256": "305FBCCE8FDBCBC0F023DEB76E0A65C2B16536703E198137EAA0BD933BE1386F",
+          "bytes": 681255
+        },
+        {
+          "name": "indagine",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/audio/indagine.ogg",
+          "sha256": "439EDE327E2FA28F39DAD220868E23FAC1BBCA089D6611515A95F96E00EA2902",
+          "bytes": 754193
+        },
+        {
+          "name": "minaccia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/audio/minaccia.ogg",
+          "sha256": "F034F2DF7C2D5DDA4C1E114C53F61A2A8B20245B7864ED124D9A55725C9EF1BC",
+          "bytes": 819100
+        },
+        {
+          "name": "naklo_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/audio/naklo_notte.ogg",
+          "sha256": "9773ADF34FD85E4FE9A5F37F693C57E3744D66057ACAA5BA7955EE4B652E8DE2",
+          "bytes": 575437
+        },
+        {
+          "name": "san_valentino",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/fr/v2/audio/san_valentino.ogg",
+          "sha256": "251201461F4034BC400C6511B1578814E63171A8B4DCF5A8422100F32B9A4633",
+          "bytes": 723152
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Liens invalides",
+      "author": "Jérôme Wirth",
+      "genre": "Polar",
+      "blurb": "Vous êtes le commissaire K., en charge de la petite ville de Naklo en Pologne, qui ne se distingue guère que par l'économie de la betterave et sa distillerie d'éthanol, en charge d'approvisionner les troupes en carburant sur le front biélorusse. Ce soir c'est Walentynki, la fête des amoureux, et vous avez trois bonnes raisons d'être déprimé : vous êtes flic, alcoolique et divorcé.\n\nEt surtout, ce soir, un groupe terroriste du nom des « Grandes Méchantes Louves » a décidé de faire de cette soirée un cauchemar. Et vous êtes sur le pont. À plus forte raison depuis que vous savez que votre ancien ami le docteur Andreszj Szulesk, gynécologue de la bourgade, est porté disparu. Il est 23h40 et votre nuit ne fait que commencer.",
+      "contentWarnings": "Violences sexuelles évoquées, suicide, terrorisme, alcoolisme, drogue, mort de personnages. L'auteur prévient lui-même que certaines scènes peuvent choquer. Rien n'est décrit avec complaisance, mais l'aventure est écrite pour des adultes.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "liens-invalides-en",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/librogame.xml",
+        "sha256": "85642E7E253F06CDABF86B62ADC68AF9A513C641FA95F6A9E8B55849A38C49C8"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/items.xml",
+        "sha256": "EF8CC2EEDDE09D9533C7729E7B935AF219AB1CC471AA689F9A0DC570760BB0A8"
+      },
+      "audio": [
+        {
+          "name": "accendino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/audio/accendino.ogg",
+          "sha256": "5BA4BC1518FC5434072F45505242306D6E83D265F662D618F8F7B57164133E87",
+          "bytes": 12275
+        },
+        {
+          "name": "bicchiere_vodka",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/audio/bicchiere_vodka.ogg",
+          "sha256": "395444F76DE4F8618E64B3A7F28E2FCAFEE24154BC424E1FF7D2E0C991F3A46C",
+          "bytes": 10999
+        },
+        {
+          "name": "colpo_pistola",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/audio/colpo_pistola.ogg",
+          "sha256": "313E0F319629A00EE7D9E8FDCDF0AD2D946D640EE7CC061E4EB8588DF8CF3D3C",
+          "bytes": 13530
+        },
+        {
+          "name": "telefono_disco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/audio/telefono_disco.ogg",
+          "sha256": "48CE03E8A7A99934854B47F89184328B71AF77F41A3120461ECBBB0C304BFB6C",
+          "bytes": 9649
+        },
+        {
+          "name": "tergicristalli",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/audio/tergicristalli.ogg",
+          "sha256": "3506E072C5B9FF663971694F853A38ECE4B219F90D6F63E1DA7CBF027E685A22",
+          "bytes": 11858
+        },
+        {
+          "name": "fine_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/audio/fine_notte.ogg",
+          "sha256": "305FBCCE8FDBCBC0F023DEB76E0A65C2B16536703E198137EAA0BD933BE1386F",
+          "bytes": 681255
+        },
+        {
+          "name": "indagine",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/audio/indagine.ogg",
+          "sha256": "439EDE327E2FA28F39DAD220868E23FAC1BBCA089D6611515A95F96E00EA2902",
+          "bytes": 754193
+        },
+        {
+          "name": "minaccia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/audio/minaccia.ogg",
+          "sha256": "F034F2DF7C2D5DDA4C1E114C53F61A2A8B20245B7864ED124D9A55725C9EF1BC",
+          "bytes": 819100
+        },
+        {
+          "name": "naklo_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/audio/naklo_notte.ogg",
+          "sha256": "9773ADF34FD85E4FE9A5F37F693C57E3744D66057ACAA5BA7955EE4B652E8DE2",
+          "bytes": 575437
+        },
+        {
+          "name": "san_valentino",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/liens-invalides/en/v2/audio/san_valentino.ogg",
+          "sha256": "251201461F4034BC400C6511B1578814E63171A8B4DCF5A8422100F32B9A4633",
+          "bytes": 723152
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Invalid Links",
+      "author": "Jérôme Wirth",
+      "genre": "Crime",
+      "blurb": "You are Commissioner K., in charge of the small Polish town of Naklo, which is distinguished by little beyond the beet economy and its ethanol distillery, tasked with supplying fuel to the troops on the Belarusian front. Tonight is Walentynki, the lovers' feast, and you have three good reasons to be depressed: you are a cop, an alcoholic and a divorcé.\n\nAnd above all, tonight a terrorist group calling itself \"the Big Bad Wolves\" has decided to turn the evening into a nightmare. And you are on duty. All the more so since you learned that your old friend Doctor Andreszj Szulesk, the town's gynaecologist, has been reported missing. It is 11.40 p.m. and your night has only just begun.",
+      "contentWarnings": "Sexual violence referred to, suicide, terrorism, alcoholism, drugs, the death of characters. The author himself warns that some scenes may shock. Nothing is described with complacency, but the adventure is written for adults.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ultima-dea-it",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/librogame.xml",
+        "sha256": "9C528EA4D5AE96C11AD9D312E1D0F4EED6E4B78C73B2BBACC664E95E4EC98EAF"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "impatto_armatura_divina",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/audio/impatto_armatura_divina.ogg",
+          "sha256": "A7234748557DE94EE23B31759023C53BD109170F08546A51587383780C8144A6",
+          "bytes": 6983
+        },
+        {
+          "name": "lampo_intuizione",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/audio/lampo_intuizione.ogg",
+          "sha256": "1A75663339A27DA0A53B5A13275558969067D17BE5C942DBBE4426708AB219BB",
+          "bytes": 8585
+        },
+        {
+          "name": "riavvolgimento_temporale",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/audio/riavvolgimento_temporale.ogg",
+          "sha256": "46F2AE5CC8E7BD752E4818E1DE14D1C77BC475DFA871B6B4754A1A3F2A8E084A",
+          "bytes": 16817
+        },
+        {
+          "name": "spada_delle_origini",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/audio/spada_delle_origini.ogg",
+          "sha256": "62B96B02B420BBF664D8658CF837FFC8A53090E854BA5A9AF1D62CB33963BB10",
+          "bytes": 10301
+        },
+        {
+          "name": "trono_crollo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/audio/trono_crollo.ogg",
+          "sha256": "15B41FBF90566BC716CBE5B3DAC007424FBC9DE1DACB7764A66FD7EC0C64172A",
+          "bytes": 17203
+        },
+        {
+          "name": "frammenti_di_memoria",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/audio/frammenti_di_memoria.ogg",
+          "sha256": "3531EEC3685CE7A98D706728933B78289368AD23D7067DB457EA8ABEF1E1AF71",
+          "bytes": 208430
+        },
+        {
+          "name": "il_filo_del_tempo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/audio/il_filo_del_tempo.ogg",
+          "sha256": "DE6D158EB341D8F6B069E6F1C592783E1C8AEC51C87E5E7FD7718AFF8515DAF1",
+          "bytes": 223526
+        },
+        {
+          "name": "l_imperatore_eterno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/audio/l_imperatore_eterno.ogg",
+          "sha256": "2EF26CA296F042387A1E3BACEEA97F34564115446C665DB1654D359C05D99517",
+          "bytes": 167615
+        },
+        {
+          "name": "la_caduta_degli_dei",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/audio/la_caduta_degli_dei.ogg",
+          "sha256": "02BE5B3275D1397E9E7C678A30092EDF62B088E7E9B92C50F3D2C81B18FB5957",
+          "bytes": 168182
+        },
+        {
+          "name": "sala_del_trono",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/it/v2/audio/sala_del_trono.ogg",
+          "sha256": "035CA1F786B022AA6D6397114F02FF7C78CCAD720E4038BCFD0701420DE4D3A5",
+          "bytes": 176438
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Ultima Dea",
+      "author": "Skarn",
+      "genre": "Fantastico, eroico",
+      "blurb": "«Ma quello che quattro hanno creato, quattro possono distruggerlo.»\n\nL'Imperatore è immortale: quattro dèi hanno voluto così, e da mille lune conquista e regna. Siete solo con lui nella sala del trono, la Spada delle Origini in pugno, e state per perdere.\n\nAvete già perso. Parecchie volte. Non ve ne ricordate — solo impressioni, intuizioni che niente spiega. Perché un dio vi ha concesso di ricominciare, e l'ha fatto a modo suo.",
+      "contentWarnings": "Un duello di spada che dura tutto il libro: ferite descritte da vicino, ossa rotte, sangue. Parecchi finali raccontano la morte del protagonista. Un anello temporale vissuto come una disperazione che si approfondisce a ogni giro.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ultima-dea-fr",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/librogame.xml",
+        "sha256": "6B8CB96B0427B05F43EB13D3BBD0CA13B658700CB62C19AC8B70225B742B2F8D"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "impatto_armatura_divina",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/audio/impatto_armatura_divina.ogg",
+          "sha256": "A7234748557DE94EE23B31759023C53BD109170F08546A51587383780C8144A6",
+          "bytes": 6983
+        },
+        {
+          "name": "lampo_intuizione",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/audio/lampo_intuizione.ogg",
+          "sha256": "1A75663339A27DA0A53B5A13275558969067D17BE5C942DBBE4426708AB219BB",
+          "bytes": 8585
+        },
+        {
+          "name": "riavvolgimento_temporale",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/audio/riavvolgimento_temporale.ogg",
+          "sha256": "46F2AE5CC8E7BD752E4818E1DE14D1C77BC475DFA871B6B4754A1A3F2A8E084A",
+          "bytes": 16817
+        },
+        {
+          "name": "spada_delle_origini",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/audio/spada_delle_origini.ogg",
+          "sha256": "62B96B02B420BBF664D8658CF837FFC8A53090E854BA5A9AF1D62CB33963BB10",
+          "bytes": 10301
+        },
+        {
+          "name": "trono_crollo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/audio/trono_crollo.ogg",
+          "sha256": "15B41FBF90566BC716CBE5B3DAC007424FBC9DE1DACB7764A66FD7EC0C64172A",
+          "bytes": 17203
+        },
+        {
+          "name": "frammenti_di_memoria",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/audio/frammenti_di_memoria.ogg",
+          "sha256": "3531EEC3685CE7A98D706728933B78289368AD23D7067DB457EA8ABEF1E1AF71",
+          "bytes": 208430
+        },
+        {
+          "name": "il_filo_del_tempo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/audio/il_filo_del_tempo.ogg",
+          "sha256": "DE6D158EB341D8F6B069E6F1C592783E1C8AEC51C87E5E7FD7718AFF8515DAF1",
+          "bytes": 223526
+        },
+        {
+          "name": "l_imperatore_eterno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/audio/l_imperatore_eterno.ogg",
+          "sha256": "2EF26CA296F042387A1E3BACEEA97F34564115446C665DB1654D359C05D99517",
+          "bytes": 167615
+        },
+        {
+          "name": "la_caduta_degli_dei",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/audio/la_caduta_degli_dei.ogg",
+          "sha256": "02BE5B3275D1397E9E7C678A30092EDF62B088E7E9B92C50F3D2C81B18FB5957",
+          "bytes": 168182
+        },
+        {
+          "name": "sala_del_trono",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/fr/v2/audio/sala_del_trono.ogg",
+          "sha256": "035CA1F786B022AA6D6397114F02FF7C78CCAD720E4038BCFD0701420DE4D3A5",
+          "bytes": 176438
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Ultima Dea",
+      "author": "Skarn",
+      "genre": "Fantastique, héroïque",
+      "blurb": "« Mais ce que quatre ont créé, quatre peuvent détruire. »\n\nL'Empereur est immortel : quatre dieux l'ont voulu ainsi, et depuis mille lunes il conquiert et il règne. Vous êtes seul avec lui dans la salle du trône, l'Épée des Origines à la main, et vous allez perdre.\n\nVous avez déjà perdu. Plusieurs fois. Vous ne vous en souvenez pas — seulement des impressions, des intuitions que rien n'explique. Car un dieu vous a accordé de recommencer, et il l'a fait à sa manière.",
+      "contentWarnings": "Un duel à l'épée qui dure tout le livre : blessures décrites de près, os brisés, sang. Plusieurs fins racontent la mort du protagoniste. Une boucle temporelle vécue comme un désespoir qui s'approfondit à chaque tour.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "ultima-dea-en",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/librogame.xml",
+        "sha256": "AC1D641B4012511B1184909780CDB790EEC31FD15506494B85983F405915BE36"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "impatto_armatura_divina",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/audio/impatto_armatura_divina.ogg",
+          "sha256": "A7234748557DE94EE23B31759023C53BD109170F08546A51587383780C8144A6",
+          "bytes": 6983
+        },
+        {
+          "name": "lampo_intuizione",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/audio/lampo_intuizione.ogg",
+          "sha256": "1A75663339A27DA0A53B5A13275558969067D17BE5C942DBBE4426708AB219BB",
+          "bytes": 8585
+        },
+        {
+          "name": "riavvolgimento_temporale",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/audio/riavvolgimento_temporale.ogg",
+          "sha256": "46F2AE5CC8E7BD752E4818E1DE14D1C77BC475DFA871B6B4754A1A3F2A8E084A",
+          "bytes": 16817
+        },
+        {
+          "name": "spada_delle_origini",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/audio/spada_delle_origini.ogg",
+          "sha256": "62B96B02B420BBF664D8658CF837FFC8A53090E854BA5A9AF1D62CB33963BB10",
+          "bytes": 10301
+        },
+        {
+          "name": "trono_crollo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/audio/trono_crollo.ogg",
+          "sha256": "15B41FBF90566BC716CBE5B3DAC007424FBC9DE1DACB7764A66FD7EC0C64172A",
+          "bytes": 17203
+        },
+        {
+          "name": "frammenti_di_memoria",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/audio/frammenti_di_memoria.ogg",
+          "sha256": "3531EEC3685CE7A98D706728933B78289368AD23D7067DB457EA8ABEF1E1AF71",
+          "bytes": 208430
+        },
+        {
+          "name": "il_filo_del_tempo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/audio/il_filo_del_tempo.ogg",
+          "sha256": "DE6D158EB341D8F6B069E6F1C592783E1C8AEC51C87E5E7FD7718AFF8515DAF1",
+          "bytes": 223526
+        },
+        {
+          "name": "l_imperatore_eterno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/audio/l_imperatore_eterno.ogg",
+          "sha256": "2EF26CA296F042387A1E3BACEEA97F34564115446C665DB1654D359C05D99517",
+          "bytes": 167615
+        },
+        {
+          "name": "la_caduta_degli_dei",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/audio/la_caduta_degli_dei.ogg",
+          "sha256": "02BE5B3275D1397E9E7C678A30092EDF62B088E7E9B92C50F3D2C81B18FB5957",
+          "bytes": 168182
+        },
+        {
+          "name": "sala_del_trono",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ultima-dea/en/v2/audio/sala_del_trono.ogg",
+          "sha256": "035CA1F786B022AA6D6397114F02FF7C78CCAD720E4038BCFD0701420DE4D3A5",
+          "bytes": 176438
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Ultima Dea",
+      "author": "Skarn",
+      "genre": "Fantasy, heroic",
+      "blurb": "\"But what four have made, four can unmake.\"\n\nThe Emperor is immortal: four gods willed it so, and for a thousand moons he has conquered and ruled. You are alone with him in the throne room, the Sword of Origins in your hand, and you are going to lose.\n\nYou have lost already. Several times. You do not remember it — only impressions, intuitions that nothing explains. For a god granted you the power to begin again, and he did it his own way.",
+      "contentWarnings": "A sword duel that lasts the whole book: wounds described closely, broken bones, blood. Several endings tell of the protagonist's death. A time loop lived as a despair that deepens with every turn.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "un-poignard-dans-le-dos-it",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/librogame.xml",
+        "sha256": "A56E8C096B92F0999ED2550A9A2D010A81AF192F851F93D941102F9182012092"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "gemito_ferita",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/audio/gemito_ferita.ogg",
+          "sha256": "A6CFF21CDCBE7DA0051FB4F96DF126CDC7DC9E8EDD9A18921F73EBB7F285C5D8",
+          "bytes": 7334
+        },
+        {
+          "name": "lama_fendente",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/audio/lama_fendente.ogg",
+          "sha256": "ABCC710EC20E886653B6CF086CD1055CF3A1AB1EE6AE357099C788C37DE335AA",
+          "bytes": 6502
+        },
+        {
+          "name": "materializzazione_ectoplasma",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/audio/materializzazione_ectoplasma.ogg",
+          "sha256": "4D492676D1F4E70AFE49B59FFBD87F2E6D85C8410F0397425424743B635CD746",
+          "bytes": 15122
+        },
+        {
+          "name": "passi_armatura",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/audio/passi_armatura.ogg",
+          "sha256": "E940BB1493DE4BBEAB8B332530AF711D6787D266B22938A5DD6FACF40D29830E",
+          "bytes": 7967
+        },
+        {
+          "name": "sussurro_lama",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/audio/sussurro_lama.ogg",
+          "sha256": "59375D09202AF7E5254CDA91867E5DFCA67AFC13A643E93D5CE8E382EBB9384A",
+          "bytes": 10983
+        },
+        {
+          "name": "bosco_notturno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/audio/bosco_notturno.ogg",
+          "sha256": "A2EB179BB98EE2505D00B6AE3049CB6A613D712D26DF829B368E9CDE9A8F0E54",
+          "bytes": 253649
+        },
+        {
+          "name": "corridoi_di_pietra",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/audio/corridoi_di_pietra.ogg",
+          "sha256": "51DDF66C62F70035ED5ACFD415D6455CF6B485FE753415B6F84495FEAB20E735",
+          "bytes": 169555
+        },
+        {
+          "name": "il_colpo_perfetto",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/audio/il_colpo_perfetto.ogg",
+          "sha256": "FA63BEA046F90EB44B4FEC8D1A0B6BC64F238CCFE0CE9A6DA5923F02B6EC3795",
+          "bytes": 282574
+        },
+        {
+          "name": "l_ombra_alle_spalle",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/audio/l_ombra_alle_spalle.ogg",
+          "sha256": "273BE26F9B61E886358AD3ABF540CFA71A8CF0B0CD171E3BDDC5DA262D775C2A",
+          "bytes": 171909
+        },
+        {
+          "name": "la_fine_dell_eroe",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/it/v2/audio/la_fine_dell_eroe.ogg",
+          "sha256": "F7011F16AABA7ADF25F77BB85793D1CD56E6FA2C76304B753FDBF2F5BFB1E1C5",
+          "bytes": 204314
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Un pugnale nella schiena",
+      "author": "Skarn",
+      "genre": "Fantasy medievale",
+      "blurb": "Vi ricordate del pugnale spettrale che insegue l'eroe per tutta l'avventura nei Cavalieri del Destino? Ecco. Solo che qui il pugnale siete voi. In un contesto tutto diverso: non serve aver letto quel libro per godersi questa storia.",
+      "contentWarnings": "Omicidi, sangue, cadaveri, un drago sventrato. Il punto di vista è quello di un assassino che prova piacere a uccidere: la violenza è costante, mai però gratuita.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "un-poignard-dans-le-dos-fr",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/librogame.xml",
+        "sha256": "9433A0378A74DE848E5FAF896BB84A5C4619DD3D950C760CABAF62F34B7FEA08"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "gemito_ferita",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/audio/gemito_ferita.ogg",
+          "sha256": "A6CFF21CDCBE7DA0051FB4F96DF126CDC7DC9E8EDD9A18921F73EBB7F285C5D8",
+          "bytes": 7334
+        },
+        {
+          "name": "lama_fendente",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/audio/lama_fendente.ogg",
+          "sha256": "ABCC710EC20E886653B6CF086CD1055CF3A1AB1EE6AE357099C788C37DE335AA",
+          "bytes": 6502
+        },
+        {
+          "name": "materializzazione_ectoplasma",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/audio/materializzazione_ectoplasma.ogg",
+          "sha256": "4D492676D1F4E70AFE49B59FFBD87F2E6D85C8410F0397425424743B635CD746",
+          "bytes": 15122
+        },
+        {
+          "name": "passi_armatura",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/audio/passi_armatura.ogg",
+          "sha256": "E940BB1493DE4BBEAB8B332530AF711D6787D266B22938A5DD6FACF40D29830E",
+          "bytes": 7967
+        },
+        {
+          "name": "sussurro_lama",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/audio/sussurro_lama.ogg",
+          "sha256": "59375D09202AF7E5254CDA91867E5DFCA67AFC13A643E93D5CE8E382EBB9384A",
+          "bytes": 10983
+        },
+        {
+          "name": "bosco_notturno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/audio/bosco_notturno.ogg",
+          "sha256": "A2EB179BB98EE2505D00B6AE3049CB6A613D712D26DF829B368E9CDE9A8F0E54",
+          "bytes": 253649
+        },
+        {
+          "name": "corridoi_di_pietra",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/audio/corridoi_di_pietra.ogg",
+          "sha256": "51DDF66C62F70035ED5ACFD415D6455CF6B485FE753415B6F84495FEAB20E735",
+          "bytes": 169555
+        },
+        {
+          "name": "il_colpo_perfetto",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/audio/il_colpo_perfetto.ogg",
+          "sha256": "FA63BEA046F90EB44B4FEC8D1A0B6BC64F238CCFE0CE9A6DA5923F02B6EC3795",
+          "bytes": 282574
+        },
+        {
+          "name": "l_ombra_alle_spalle",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/audio/l_ombra_alle_spalle.ogg",
+          "sha256": "273BE26F9B61E886358AD3ABF540CFA71A8CF0B0CD171E3BDDC5DA262D775C2A",
+          "bytes": 171909
+        },
+        {
+          "name": "la_fine_dell_eroe",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/fr/v2/audio/la_fine_dell_eroe.ogg",
+          "sha256": "F7011F16AABA7ADF25F77BB85793D1CD56E6FA2C76304B753FDBF2F5BFB1E1C5",
+          "bytes": 204314
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Un poignard dans le dos",
+      "author": "Skarn",
+      "genre": "Médiéval-fantastique",
+      "blurb": "Vous vous souvenez du poignard spectral qui poursuit le héros à travers toute l'aventure dans les Chevaliers du Destin ? Et bien voilà. Sauf que vous jouez le poignard. Dans un tout autre contexte : nul besoin d'avoir lu le livre suscité pour apprécier cette histoire-ci.",
+      "contentWarnings": "Meurtres, sang, cadavres, un dragon éventré. Le point de vue est celui d'un assassin qui prend plaisir à tuer : la violence est constante, jamais gratuite pour autant.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "un-poignard-dans-le-dos-en",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/librogame.xml",
+        "sha256": "35F3D1E19B322CB15B41360B7964CDAF5AAB5A5CED18DAB23D525CBD13723C4D"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "gemito_ferita",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/audio/gemito_ferita.ogg",
+          "sha256": "A6CFF21CDCBE7DA0051FB4F96DF126CDC7DC9E8EDD9A18921F73EBB7F285C5D8",
+          "bytes": 7334
+        },
+        {
+          "name": "lama_fendente",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/audio/lama_fendente.ogg",
+          "sha256": "ABCC710EC20E886653B6CF086CD1055CF3A1AB1EE6AE357099C788C37DE335AA",
+          "bytes": 6502
+        },
+        {
+          "name": "materializzazione_ectoplasma",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/audio/materializzazione_ectoplasma.ogg",
+          "sha256": "4D492676D1F4E70AFE49B59FFBD87F2E6D85C8410F0397425424743B635CD746",
+          "bytes": 15122
+        },
+        {
+          "name": "passi_armatura",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/audio/passi_armatura.ogg",
+          "sha256": "E940BB1493DE4BBEAB8B332530AF711D6787D266B22938A5DD6FACF40D29830E",
+          "bytes": 7967
+        },
+        {
+          "name": "sussurro_lama",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/audio/sussurro_lama.ogg",
+          "sha256": "59375D09202AF7E5254CDA91867E5DFCA67AFC13A643E93D5CE8E382EBB9384A",
+          "bytes": 10983
+        },
+        {
+          "name": "bosco_notturno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/audio/bosco_notturno.ogg",
+          "sha256": "A2EB179BB98EE2505D00B6AE3049CB6A613D712D26DF829B368E9CDE9A8F0E54",
+          "bytes": 253649
+        },
+        {
+          "name": "corridoi_di_pietra",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/audio/corridoi_di_pietra.ogg",
+          "sha256": "51DDF66C62F70035ED5ACFD415D6455CF6B485FE753415B6F84495FEAB20E735",
+          "bytes": 169555
+        },
+        {
+          "name": "il_colpo_perfetto",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/audio/il_colpo_perfetto.ogg",
+          "sha256": "FA63BEA046F90EB44B4FEC8D1A0B6BC64F238CCFE0CE9A6DA5923F02B6EC3795",
+          "bytes": 282574
+        },
+        {
+          "name": "l_ombra_alle_spalle",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/audio/l_ombra_alle_spalle.ogg",
+          "sha256": "273BE26F9B61E886358AD3ABF540CFA71A8CF0B0CD171E3BDDC5DA262D775C2A",
+          "bytes": 171909
+        },
+        {
+          "name": "la_fine_dell_eroe",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/un-poignard-dans-le-dos/en/v2/audio/la_fine_dell_eroe.ogg",
+          "sha256": "F7011F16AABA7ADF25F77BB85793D1CD56E6FA2C76304B753FDBF2F5BFB1E1C5",
+          "bytes": 204314
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "A Dagger in the Back",
+      "author": "Skarn",
+      "genre": "Medieval fantasy",
+      "blurb": "You remember the spectral dagger that pursues the hero throughout the adventure in the Knights of Destiny? Well, there you are. Except that you play the dagger. In an entirely different setting: no need to have read that book to enjoy this story.",
+      "contentWarnings": "Killings, blood, corpses, a disembowelled dragon. The point of view is that of an assassin who takes pleasure in killing: the violence is constant, though never gratuitous.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "toile-fr",
+      "phase": "test",
+      "version": 3,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/librogame.xml",
+        "sha256": "A110F72F59625B95AE01A9C8E7FE232DC4D140E19C437BF1E2F2667936326094"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/items.xml",
+        "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
+      },
+      "audio": [
+        {
+          "name": "braciere_bronzo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/audio/braciere_bronzo.ogg",
+          "sha256": "4D51F6C16E9236E9143AD1EA0F4D103B15AACBCD8A3FC1B37B36A0F61649E373",
+          "bytes": 21752
+        },
+        {
+          "name": "canto_sirena",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/audio/canto_sirena.ogg",
+          "sha256": "B0E846E32BF627FD101A993878392B49FA11BC8293DC8349B38FEDF07E3C8BDD",
+          "bytes": 12171
+        },
+        {
+          "name": "coppa_vino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/audio/coppa_vino.ogg",
+          "sha256": "08D550713CB8401DFA3D4CBEEA997380AC34449CCB29B2D92983377F9C34C5BB",
+          "bytes": 9771
+        },
+        {
+          "name": "frantumi_maschera",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/audio/frantumi_maschera.ogg",
+          "sha256": "6812C3E49B80E9F7843225AADAA016B65205DA4035E825841534B1471284E2DB",
+          "bytes": 13226
+        },
+        {
+          "name": "ruggito_sfinge",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/audio/ruggito_sfinge.ogg",
+          "sha256": "BB3212763E12801BCA3B6323ECBF58A655256041D7FD7AA81E2F6A8020E4AB06",
+          "bytes": 10667
+        },
+        {
+          "name": "il_banchetto_di_giasone",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/audio/il_banchetto_di_giasone.ogg",
+          "sha256": "BF284C354B6E413A438CE5E0ACFD0CCF604717757D70C7E03B098B526E7D9FFA",
+          "bytes": 217105
+        },
+        {
+          "name": "il_prezzo_della_carne",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/audio/il_prezzo_della_carne.ogg",
+          "sha256": "3F2A207BD268EE5077D6CCF87E6988B4BC9BB6ABF3A1A55CC83B5152454A8521",
+          "bytes": 225714
+        },
+        {
+          "name": "iolco_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/audio/iolco_notte.ogg",
+          "sha256": "7159D0177EB2C7A9B93D7C5925A697F7B6EEA6EF3F65CC3042B3C7DE107F8745",
+          "bytes": 271762
+        },
+        {
+          "name": "la_sfinge_sotterranea",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/audio/la_sfinge_sotterranea.ogg",
+          "sha256": "C9A6AC40A40A893D805BB183B45347BA21DEC14AB97A79777AFCE25B8D94DE99",
+          "bytes": 173859
+        },
+        {
+          "name": "le_maschere_di_argilla",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/fr/v3/audio/le_maschere_di_argilla.ogg",
+          "sha256": "8D5645E0E281616A25200FAFA4E59CCCF56EBE34BE9D147CE259DF05B779D4F7",
+          "bytes": 215810
+        }
+      ],
+      "minAppBuild": 35,
+      "minAppVersion": "1.33",
+      "title": "Toile",
+      "author": "Éric « Skarn » Berthe",
+      "genre": "Fantastique, sentimental",
+      "blurb": "« Car la tragédie grecque n'est pas réservée qu'au théâtre, et y jouer un rôle un privilège accordé aux seuls comédiens. »\n\nUne sorcière vous a rendu un corps. Plusieurs, même : au palais d'Iolcos, un masque tombe et un autre prend sa place, et chaque fois vous êtes quelqu'un d'autre. Ce soir, le roi Jason donne un banquet. Vous avez une nuit pour atteindre ce qu'il garde sous ses pieds, et il y a une gardienne en bas de l'escalier.",
+      "contentWarnings": "Violences faites aux femmes : le roi frappe, humilie et agresse sexuellement la protagoniste, esclave pour la nuit. Rien n'est complaisant, tout est vu de ses yeux à elle, et le livre ne laisse aucun doute sur ce qu'il pense de cet homme. Un fauve dévore quelqu'un. Prostitution, esclavage, deuil d'enfants.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     }
   ]
 }

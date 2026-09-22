@@ -1,0 +1,1127 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="ultima-dea-en" workId="ultima-dea" language="en" title="Ultima Dea" author="Skarn" checks="deterministico" genre="Fantasy, heroic" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="l_imperatore_eterno">
+  <Changes>
+    <Change>Adapted for this app: the structure, the rules and parts of the text were changed or removed to work with its engine</Change>
+    <Change>Translated into English from the original French</Change>
+    <Change>Added sounds and background music, delivered together with the book</Change>
+  </Changes>
+  <Audio>
+    <Sound name="impatto_armatura_divina" file="impatto_armatura_divina.ogg" />
+    <Sound name="lampo_intuizione" file="lampo_intuizione.ogg" />
+    <Sound name="riavvolgimento_temporale" file="riavvolgimento_temporale.ogg" />
+    <Sound name="spada_delle_origini" file="spada_delle_origini.ogg" />
+    <Sound name="trono_crollo" file="trono_crollo.ogg" />
+    <Music id="frammenti_di_memoria" file="frammenti_di_memoria.ogg" />
+    <Music id="il_filo_del_tempo" file="il_filo_del_tempo.ogg" />
+    <Music id="l_imperatore_eterno" file="l_imperatore_eterno.ogg" />
+    <Music id="la_caduta_degli_dei" file="la_caduta_degli_dei.ogg" />
+    <Music id="sala_del_trono" file="sala_del_trono.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <ContentWarnings>A sword duel that lasts the whole book: wounds described closely, broken bones, blood. Several endings tell of the protagonist's death. A time loop lived as a despair that deepens with every turn.</ContentWarnings>
+  <Blurb>"But what four have made, four can unmake."
+
+The Emperor is immortal: four gods willed it so, and for a thousand moons he has conquered and ruled. You are alone with him in the throne room, the Sword of Origins in your hand, and you are going to lose.
+
+You have lost already. Several times. You do not remember it — only impressions, intuitions that nothing explains. For a god granted you the power to begin again, and he did it his own way.</Blurb>
+  <Variables>
+    <Variable id="codicePossible" name="Word Possible" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceCertain" name="Word Certain" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceLegende" name="Word Légende" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceVie" name="Word Vie" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceMort" name="Word Mort" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceSablier" name="Word Sablier" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceCorps" name="Word Corps" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceEsprit" name="Word Esprit" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceUnique" name="Word Unique" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceSecousse" name="Word Secousse" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codicePluie" name="Word Pluie" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceSucces" name="Word Succès" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceFissure" name="Word Fissure" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceFaille" name="Word Faille" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceDifficulte" name="Word Difficulté" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codicePerdu" name="Word Perdu" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceOuverture" name="Word Ouverture" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1">
+    <Text>And the Emperor fell silent, his plea ended.
+
+And the divine assembly pondered his words.
+
+Most of the gods decided to ignore this mad mortal.
+
+Some flew into a rage at such presumption.
+
+But four were won over and blessed him.
+
+"Neither sickness, nor age, nor poison shall you ever fear again," proclaimed the Healer.
+
+"No weapon of wood, of stone, of glass, of bone, of horn or of metal
+
+Shall from now on do you the slightest harm," added the Warrior.
+
+"Water, earth and air shall never choke you nor fail you,
+
+And fire and lightning shall be a danger no longer, but allies," added the Elemental Queen.
+
+"And what we offer you this day, no being, be he god or man,
+
+Shall ever take from you. So have I decided!" concluded the Father of All.
+
+(...)
+
+And for a thousand moons the Emperor conquered.
+
+And for a thousand moons the Emperor reigned. (twice)
+
+But what four have made, four can unmake.
+
+And a valiant arm, armed by four, over the Emperor
+
+Eternal shall triumph.
+
+Chance and Destiny shall open him a road to success,
+
+The Hero of All Times shall give him courage,
+
+The First Goddess, born with the universe and who shall vanish with it,
+
+Shall entrust him with absolute power, the power even the other gods fear.
+
+But it is the Last Goddess ever to be called upon, the frailest and the strongest,
+
+She and she alone who shall scatter the darkness and bring him victory.
+
+Deeds of the Imperial Age (extracts)
+
+*****
+
+Once upon a time there was an emperor. He had seized the crown by force, and by force he kept himself in power. He ruled over the greatest territory any man had ever conquered, but it was not enough for him. Had he possessed every known land he would not have stopped for that, and would have set about enslaving the peoples of the seas and the skies.
+
+This emperor had, however, one advantage over all the other men who had come before him with such ambitions: immortality. The decades went by without age, steel or poison touching him, and yet no one ever ceased to harry him.
+
+But if time had no hold on him, it had a hold on the world around him. The fear he inspired was little by little replaced by anger, by rage, by hatred, and the day came when his own soldiers turned against him. A thousand arrows were loosed, a thousand blades came down. Without doing him the slightest harm.
+
+And then the emperor took up his sword. And the slaughter began.
+
+Calmly, methodically, tirelessly, he wiped out the rebels one by one, stopping only when all his adversaries were dead or in flight.
+
+The terror born of that grim feat restored the status quo for long and numerous years. But once again time did its work. Memories of that slaughter thinned, and revolt rumbled anew.
+
+This time, however, the rebellion too held a trump card able to change everything: the living legend, the being blessed by the gods:
+
+YOU.
+
+Once again the Emperor's massive black greatsword misses you by inches. Your leading hand may grip the Sword of Origins, the first blade ever to exist, born at the dawn of time, and your other the Perfect Shield, made to be able to stop the first, and your body may be clad in the finest armour ever forged by man, but you cut a poor figure beside your adversary. Legend has it that he was once a being of flesh and blood, but there is nothing human left in this tireless giant, three heads taller than you and bundled up in enough black steel plate to equip an army. Between the layers of metal you can make out nothing to suggest that a man is hiding under there, rather than a spectre or a demon.
+
+His fighting technique, by contrast, is simplicity itself. It rests on broad cutting strokes, aiming to knock you down and hack you apart, relying on his strength and on the reach his outsized blade gives him. No feint, no trick, no cunning. He has no need of any. He relies on his armour, on his divine protections, on the weariness that will take you in the end.
+
+And you circle in the deserted throne room, exchanging pass after pass, a pair of dancers armoured in steel, lit in strange coloured hues by the light filtering through the stained glass on which the chronicles of your adversary's long life are set out.
+
+And the imperial blade rises again, thrown back in preparation for a particularly wide stroke.</Text>
+    <Choices>
+      <Choice text="Dodge" goto="6" />
+      <Choice text="Parry with your shield" goto="11" />
+      <Choice text="Drive in a violent thrust" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="2" sound="impatto_armatura_divina">
+    <Text>Your weapon strikes the Emperor's armour with a crash... without doing it the slightest visible damage. His own attack is far more effective. It is only thanks to the quickness of your reflexes that you are not cut in two. His blade still scores across your chest, cutting through your armour and your flesh. You fall back a step, and your adversary presses his advantage.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceDifficulte" value="1" />
+        <setVariable target="codiceFaille" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="3" music="la_caduta_degli_dei" ending="true">
+    <Text>You collapse to the floor, clutching the wound in your belly. The Emperor, for his part, stays motionless, frozen in the posture of an attack, his weapon dripping with your blood. The Sword of Origins slides slowly out of the skull it was driven into and falls.
+
+It has not touched the ground before the Emperor begins to move again. Slowly and in jerks, like machinery long out of use, but his movements are looser, faster, with every instant.
+
+You pick the Sword up, take it in both hands and get to your feet. Taking advantage of your adversary's clumsiness, you hurl yourself at him and drive your weapon with all your strength through the caved-in metal of his helm. The imperial blade bites into your flesh again as you do it, but you hold on and, throwing your whole weight into it, you manage to tip the Emperor over backwards. He crashes to the floor with a clang of metal, dragging you down with him.
+
+*****
+
+Somewhere in the depths of the earth, the heavy stone lid of a sarcophagus falls noisily to the floor, disturbing dust that has been quietly accumulating for centuries. The explorer puts away his crowbar, satisfied. Inside lies an enormous suit of armour, in whose skull somebody has violently driven a sword. The man is disappointed. He had hoped that a tomb so well defended would at least have held a little gold. Ah well, this meagre haul will probably interest collectors. It will take him several trips to carry off that cuirass, piece by piece. So he decides to start with the easiest part, and pulls out the sword...
+
+Ending 4: A sealed evil
+
+V: Go then to the number</Text>
+    <Choices>
+      <Choice text="Try your luck one last time" goto="4" ask="The number hidden in these lines?" answer="4|four|IV|fourth" failGoto="3" />
+    </Choices>
+  </Page>
+  <Page id="4" sound="riavvolgimento_temporale" music="il_filo_del_tempo">
+    <Text>At the crossroads, a traveller is talking with two strange figures. By the fireside, a child is listening to tales of knights cutting down necromancers. A warrior encased in charred armour faces a dragon. A youth wakes in the straw, his head still hazy from last night's excesses. A gravely wounded man walks resolutely among the frozen images of his past.
+
+Seated on his throne, a bearded giant contemplates the past, the present and the future of the visitor approaching him through an infinity of crystals floating in the air, each one holding a minute slice of his existence. This colossus is dressed in a coarse tunic, a simple squared-off animal hide, and his seat is so rough that it seems to have been cut straight out of the rock by wind and rain. And yet not even the maddest of madmen, backed by an army of a million giants, would dare call him primitive, so plainly does his power show through his whole domain.
+
+This time the little worm that so amuses him hesitates. After so many loops, it seems to him that he has explored every road, every possibility. None is perfect, so he ought to choose the lesser evil. And yet something in his gut tells him that he has missed a branching, a possibility, that there is something else still. And suddenly it clicks in his mind. And then he bursts out laughing at the simplicity, but also the madness, of the solution he has just conceived. And the god towering over him, for all his power, shivers at the sound.
+
+*****
+
+The same figures, the same place. The god listens to the request of the madman who has dared break every law of nature to come and speak to him, here, outside time and space. The feat, however, impresses him far less than it irritates him, for it testifies to this mortal's boundless pride. So he decides to grant him his wish, but in his own way.
+
+This wretch will indeed obtain the power to begin again, the strength to travel back up the flow of time to the moment when he made his mistake, and correct it. But the choice will not be a conscious one. If at any single moment he doubts his past decisions, if he judges that a better future is possible, then he will automatically be flung into the past. And he will keep no exact memory of his previous journey, only vague impressions, intuitions that make no sense and are nonetheless right. But in his unconscious will go on residing every regret, every sorrow, every misfortune of his failed attempts. And with each loop, while his body keeps its age, his mind will sink little by little into the darkness of despair without even understanding why. And since man is incapable of contenting himself with what he has, this cycle will in truth never end.
+
+*****
+
+He had given the peasants surrounding his fortress until sunrise to flee. They chose instead to attack in the middle of the night. Stones have been raining on the castle for several hours, and one of the walls has been badly damaged by a barrel of that new discovery, eastern powder. The first regiments have already gone out to meet the attackers, but they will plainly not be numerous enough to hope to prevail against the enemy multitude. So he will have to finish the work himself. When will these fools understand that in daring to defy him they are only running to their own deaths?
+
+Drawing his blade, the giant in armour passes through the gate, already partly destroyed, at the head of his personal guard. The crowd of his enemies faces him. To him, merely an army of insects. But suddenly his instinct, sharpened by a very, very long life, picks out one woodlouse different from the rest. Escorting the enemy general is a warrior who does not match those around him. Neither militiaman nor professional soldier, he wears equipment of the finest quality, but made up of mismatched pieces. Shield, helm and armour bear witness to forging techniques from the four corners of the empire, most of them long fallen out of use. But that is nothing beside the sword.
+
+It is still asleep in its scabbard, yet its quiet power radiates all the way here. It is not a mere piece of sharpened metal but a genuine tear in the fabric of reality, existing in far more dimensions than the eye can perceive. That blade can in theory cut anything — matter, sound, light, concepts — with no regard for the rules laid down by nature, by the gods and by men. Its only weakness is its owner, who is subject to his own limits and cannot reach the abstraction needed to unfold its true potential. But even the tiny fragment currently unfolded places it far above other weapons, ordinary or legendary. It is not certain that it would be enough to wound him, but if there exists a single weapon capable of doing him harm, it will be that one and no other.
+
+Its owner, as one might expect, has received the blessing of at least two deities, if not more. The conflicting auras are perceptible, mingling and clashing, creating a chaos that prevents him from guessing their source. It is a mere wisp of straw compared with the four major gifts the man possesses, but it has its importance. He is, like him, a player in the great celestial game, and not an extra like the thousands upon thousands of men around them.
+
+So the Emperor makes his decision. He orders his guard to fall back into the castle and await his orders, to leave the great door undefended. The guard grumbles, but obedience is second nature to it, and it complies. Then the Emperor returns to the great hall and sits on the throne, waiting for the only worthwhile distraction he has had in many years.
+
+*****
+
+"What sort of strategy is this? It looks as though he is inviting us in! He may as well roll out the red carpet!"
+
+The rebel general is fuming. Until now everything was going too well. And now suddenly the Emperor withdraws his defenders. The gaping door seems to be waiting just for them, but the whole thing reeks of a trap. What else does that devil have in reserve? Perhaps he has connected that gateway to the lower planes, and merely crossing it will pitch him and his men straight into hell? Or perhaps he is simply clearing the way to let out the terrifying creatures his cellars are said to be full of? Unless he is so confident that he genuinely believes he has no need to defend himself?
+
+"I will go."
+
+The man who has spoken is of course that mystical daredevil who serves as their trump card. Oh, the fellow is gifted, no question. But he would greatly have preferred that, instead of equipment only he can use, the man had brought back a dozen arrows capable of piercing the Emperor's shell. That would have given him a fallback in case the fellow failed. All the more since the fellow very nearly turned up late.
+
+"I have already sent scouts. I was not going to risk your being killed by three miserable soldiers lying in wait behind the door. According to their report, to all appearances the way is clear to the throne room, where the Emperor sits alone. Which does not mean that the world will not fall in on us the moment we cross the threshold."
+
+"Then it is time for me to try my luck. Give me an hour."
+
+The general sighs. No point arguing. The man he is speaking to cut his teeth infiltrating the mountain fortress of an imperial vassal, a powerful sorcerer at that, and eliminating its owner. Getting into enemy territory and coming out alive is something he knows how to do.
+
+*****
+
+As he goes down alone towards the castle, the man wonders whether he made the right choice. He found only two of the four deities he was supposed to meet. He could have gone on searching a little longer, but he preferred to ride without stopping, arriving just in time to take part in the final battle. He had the feeling that if he were even one day late, thousands of people would die for nothing, which of course he could not tolerate, even if it meant sacrificing an advantage.
+
+He passes through the open gates. No trouble, no ambush. He walks up the great hall. Nothing to report. He comes before the Emperor, in the armour that never leaves him, seated on his throne. The Emperor rises at his approach, without a word, and raises his outsized weapon. And steel meets steel, and the fight begins.
+
+A failed feint. A successful parry. Two cuts blocked. A thrust missed. A draw, for now. And as the giant prepares to strike again, YOU are ready to dodge.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceLegende" value="1" />
+        <setVariable target="codiceUnique" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="6" />
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>Blows rain down on you. Your adversary keeps you on the defensive, having no fear of fatigue himself. You will not get out of this without taking a risk. And suddenly you see it. The perfect opening, the moment you have been waiting for. Abandoning all caution, you launch a superb thrust. As though moved by a will of its own, your blade sinks into one of the armour's few vulnerable points: the narrow slit that serves for sight. It continues on its way, passing through something before coming out the other side of the skull. At the same moment the Emperor's sword runs you through with insane violence. The fight seems to stop then. The two of you stay frozen, impaled on one another.
+
+The Emperor does not fall; he simply stands motionless. You throw yourself backwards in one violent movement to get free. Blood pours out as soon as the metal leaves the wound. The pain is unbearable. You have survived worse, but that worse was very close to your present state, and you had received care of supernatural origin then.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceSucces" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="6" music="frammenti_di_memoria">
+    <Text>The strange couple crossed your path at a crossroads like so many others. The place itself was of no importance. You were bound to meet them sooner or later, whether here, in an inn or on a rooftop on a stormy night. He saw to it that it happened, and she made sure you could not foresee where or when. Dressed, groomed and shaved with military rigour, everything about him speaks of precision, a maniacal desire for order. Even his face, perfectly symmetrical, without so much as a beauty spot to break its continuity. His companion is his exact opposite. She is dressed in the most mismatched and incoherent assortment of clothes imaginable: a slender slipper next to a heavy metal boot, a square of purple silk patching a hood of sackcloth, a slashed sleeve revealing cloth of gold, another of a very bright green, wool, straw, and enough further oddities to spend a whole lifetime listing. Her own appearance follows the same absence of logic: every hair on her head is a different colour from its neighbours, and together they run the full spectrum of the rainbow.
+
+The man consults a thick volume, written by hand in strict columns in a cramped script, like a ledger, and begins to read out a detailed description of your life, your birth, your youth, your first steps, the beginning of this quest. He reaches the moment of this meeting, then starts listing your future, up to your defeat and your death before the Emperor.
+
+"Such is your destiny, and such it will remain if we do not interfere," he declares. "I have the power to rewrite this ending. I can forge you a road to success. It will be certain, but it will be the only one. Take it, and you will triumph. Miss a turning, and you die."
+
+"Or I can simply take you out of the old bore's pages altogether," the woman adds. "The universe will no longer guide you, for good or ill, and you will be left to the torments of chance, sometimes kind, sometimes contemptuous. Perhaps that will be enough, perhaps not. But where would the fun be otherwise?"
+
+Destiny and Chance are offering you a hard choice, the first of a long series.</Text>
+    <Choices>
+      <Choice text="Destiny's offer" goto="30" />
+      <Choice text="Chance's offer" goto="14" />
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>You avoid the attack by a hair's breadth, falling back a single step. The blade scythes the air in front of you, close enough for you to feel the wind of it, but it misses you all the same. Then you deliver a thrust of your own.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>You strike the Emperor at the shoulder joint with superhuman precision. The point of your weapon slips right into the join of the armour, between the two metal plates. You lever it, and the two pieces come slightly apart, opening a gap in the armour. There already is a first weakness to exploit.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="9" sound="lampo_intuizione" soundDelay="5" music="frammenti_di_memoria">
+    <Text>You have put an enormous amount of energy into this first act of the duel, and you suspect, or rather you hope, that the Emperor has done the same. The results of that strategy have proved mixed for both sides, though: neither has managed to take a decisive advantage. Your adversary changes tactics then and simply keeps to the defensive, attacking only now and then to keep you under pressure.
+
+A famous master-at-arms once said that a fight, however long and spectacular, is decided entirely in the first exchange, the rest being no more than a pointless trading of blows between a winner and a loser already settled. You do not share that view, but you will grant him that, in the case of a human fighter facing a tireless adversary, the former must build himself an advantage before exhaustion overtakes him. The Emperor knows it too, and will keep this chain of attacks and parries going as long as it takes to make you bite the dust.
+
+To put an end to this little game, you decide to force the attack before your body presents its bill. But that obliges you to take risks, and the imperial blade bites into your flesh more than once.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="22">
+        <Requirements>
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceFissure" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="36">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="gte" value="1" />
+          <Variable id="codiceVie" operator="gte" value="1" />
+          <Variable id="codiceCorps" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="36">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="gte" value="1" />
+          <Variable id="codiceVie" operator="gte" value="1" />
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceFissure" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="27">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="gte" value="1" />
+          <Variable id="codiceCorps" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="27">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="gte" value="1" />
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceFissure" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="22">
+        <Requirements>
+          <Variable id="codiceCorps" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="22">
+        <Requirements>
+          <Variable id="codiceCorps" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="22">
+        <Requirements>
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceFissure" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="22">
+        <Requirements>
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceFissure" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Text>You bend your knees at the last moment. Had it not been for your helm, the enemy blade would have scalped you, but it merely glances off the metal. Before the Emperor can come back on guard, you straighten up and spring.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceOuverture" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="11" sound="spada_delle_origini" soundDelay="2" music="frammenti_di_memoria">
+    <Text>A lead cube as tall as a man: that is the present scabbard of the Sword of Origins. Forged at the Dawn of Ages out of pure light, it is said to be able to cleave the darkness itself. A weapon of such power that it frightens even the gods, who decided to seal it in the deepest part of the earth, guarded by the worst monsters and demons of creation. Some of them you defeated, others you outwitted, and from the fangs of most you escaped by a hair. Only two obstacles now stand between you and your goal: its sarcophagus of raw metal, and one last adversary.
+
+He is a man, tall, muscular and long-haired. He wears leather armour that has clearly seen use but nonetheless looks solid enough to take a mace blow without failing. At his belt hangs a bare blade, so perfect that you would swear it is the object of your quest. The most astonishing thing, though, is his complete lack of a face. Not that it is smooth like a mannequin's — you simply cannot make out its features, as though a perpetual fog concealed them. As you study him, a thunderous voice bursts out from where his mouth ought to be:
+
+"Congratulations! It is a pleasure to see someone walk the hero's road with such conviction and such fire! It has not happened in far too long. It all used to be simpler. A sorcerer threatened a city, a dragon burned villages, a king reduced his people to bondage, and at once some brave young man, or sometimes some brave young woman, grabbed a sword, an axe, a bow or a spellbook and went off to settle the matter. Nowadays everything is more complicated. One must find pacifist and politically workable solutions, one must be realistic... But in the end it always comes back to the fundamentals."
+
+He makes his sword leap out in a theatrical gesture and points it at you.
+
+"A hero..."
+
+He takes in the world with a sweep of his free hand.
+
+"An enemy..."
+
+Gripping the pommel in both hands, he raises the weapon above his head and brings it down hard on the block of steel. The block is cut in two from end to end and opens like a toy, revealing a perfect blade, the mirror of the warrior's. It hangs in the air a moment before planting itself in the ground, perfectly upright.
+
+"And a sword!"
+
+You do not hesitate for a single second. You reach it in a few resolute strides, take its pommel in both hands and pull. The sword comes out of the stone without difficulty, as light as a feather. You cannot resist trying a few passes with it. Its fluidity and its precision are beyond comparison to a degree you can no longer describe. Setting it beside your old weapon would be like comparing a tree branch to the finest creation of the most skilled smith in the land.
+
+"The best there is," the faceless man remarks. "And now, I suppose it is time for you to receive the heroes' blessing. So, which do you prefer: a steady hand, never to miss your target, or a will of iron, always to find the strength to get up again?"
+
+You cannot help thinking that both would be preferable to one.
+
+"Obviously! But to win without risk is to triumph without glory. It is the choices that make the adventure interesting. Is it better to favour the body or the mind? Attack or defence? To turn right or left? A hero is not a man who follows a road already laid out, but on the contrary the one who does not hesitate to leave the path and wade into the unknown marshes. So, what is your choice?"</Text>
+    <Choices>
+      <Choice text="Skill" goto="29" />
+      <Choice text="Will" goto="16" />
+    </Choices>
+  </Page>
+  <Page id="12">
+    <Text>You counter-attack with one of the few tricks you have left in reserve. The stroke is a fine one, but not fine enough to slip into the minute imperfections of the imperial armour. The point of your weapon does, however, manage to score the metal.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="31">
+        <Requirements>
+          <Variable id="codiceFaille" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="9">
+        <Requirements>
+          <Variable id="codiceFaille" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="13" music="frammenti_di_memoria">
+    <Text>You have arrived too late. Far too late. The battle has been over for three days. The enemy redoubts have been reduced to heaps of blackened stone; the castle's broken gates still gape. All the Emperor's faithful are dead or fled. But the rebel troops have not triumphed for all that, unable to finish the monarch, just as in the past.
+
+You make your way among the corpses. The luckier ones are being carried to pyres by desperate survivors; others have already been picked to the bone by carrion birds. Nobody speaks to you, but you feel their reproach. You should have been here. In a few hours, if you are still alive, you will have to face your responsibilities. But for now you have a quest to finish, one last aim to accomplish. So you carry on along the road, wading through blood and mud.
+
+In the middle of the battlefield, where the bodies are so many that they form the base of a macabre hill, someone is waiting for you. Her appearance is simplicity itself: a skeleton, a black sheet, a scythe. You go to meet her and greet her. She answers, and draws a small hourglass from the folds of her garment. At first glance the sand seems to have run out entirely, but if you squint you notice that one last grain remains in the upper half, held back by a flaw in the glass.
+
+"Your time. Your life. Both at an end."
+
+And with those words the skeletal hand closes on the hourglass and crushes it to pieces.
+
+"And now you are dead."
+
+And you are no longer on the battlefield. You are in darkness. You see your body, you see Death, but the rest of the world is nothing but absolute black. The deity conjures two more objects out of nothing. They look like astonishingly worked hourglasses, spirals of metal forming intricate symbols across the surface of the glass. One is painted white, the other black, and you cannot see how much sand they hold.
+
+"And now you will be resurrected, in a body that will no longer be quite that of an ordinary human. But which gift do you prefer? The gift of Life? Or the gift of Death?"</Text>
+    <Choices>
+      <Choice text="The gift of Life" goto="39" />
+      <Choice text="The gift of Death" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="14" music="sala_del_trono">
+    <Text>Chance snaps her fingers and the ink of the volume begins to run, turning what had been words into shapeless blots. Destiny closes his soiled book with a sigh and, the next moment, you are alone again at the crossroads.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codicePossible" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="33">
+        <Requirements>
+          <Variable id="codiceSecousse" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="24">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="10">
+        <Requirements>
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="15" music="sala_del_trono">
+    <Text>You are back on the battlefield. No trace of the one you were speaking to remains. Nor do you feel any different. You take up your road again.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMort" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="34">
+        <Requirements>
+          <Variable id="codicePluie" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="32">
+        <Requirements>
+          <Variable id="codiceSucces" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="20">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSucces" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="19">
+        <Requirements>
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSucces" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16" music="sala_del_trono">
+    <Text>"So be it."
+
+The Hero brings the flat of his sword down on your shoulder, as though dubbing you a knight, but with insane force. A mountain could lean on you there and you would not notice the difference. And yet you do not even bend your knees; you stay upright, looking steadily at his non-face. You would swear you can make out a smile there, and the next moment you are alone again.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceEsprit" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="12">
+        <Requirements>
+          <Variable id="codiceOuverture" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="20">
+        <Requirements>
+          <Variable id="codiceCertain" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="20">
+        <Requirements>
+          <Variable id="codicePossible" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="20">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+          <Variable id="codicePossible" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="18">
+        <Requirements>
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+          <Variable id="codicePossible" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="17" music="la_caduta_degli_dei" ending="true">
+    <Text>The Emperor strikes again, missing you narrowly, and suddenly collapses. He goes down all at once, in one piece, like a puppet whose strings have been cut. A moment earlier he stood before you, as formidable as he has been throughout this fight, and now he lies face down, inert in his all but intact armour, his hand still gripping his sword. You come back on guard, expecting some trick, but nothing happens. Then the first eternal appears before you again, scythe in hand. She watches you from her empty sockets, seeming to wait for some reaction from you.
+
+"Is he... dead?" you finally ask, hardly daring to believe it.
+
+"He has been dead since the first blow in which your blade touched him. My power cares nothing for armour, be it steel or divine. You desired his death, you struck him, and your wish was granted. But like every mortal, he refused that fate and fought it to the last. And in his case his particular condition let him keep up the illusion a little longer than most. Even now he resists, clinging to the last fragments of what he was. But it is time to finish."
+
+Death bends down then and brushes him with the tips of her finger bones. The imperial armour cracks at once, bursting into pieces that fall in their turn to dust. Out of that vessel escapes a dense black clinging mist, which seems to want to form a monstrous shape in the air but ends up scattering and dissolving without managing it. At last the body of a man is revealed, old, very old, whom decomposition overtakes within moments, leaving nothing but a handful of yellowed bones. In the end all that remains is a transparent ghost, a young adult of the high nobility, wearing robes and a crown worthy of an emperor. Death holds out her hand to him. He seems to hesitate, then agrees to take it and slowly fades away until he has gone entirely.
+
+*****
+
+"For the last time, are you quite sure you want me to leave you here?" the captain asks again. "You are at Solstice Cape, the one place in the White Hell that sees the sun, and then only once a year. Beyond it there is nothing but frozen land inhabited by the worst of demons, the ones banished from hell itself. You will have no friends out there. It will be kill or be killed. Even the late Demon Emperor could do no better than ring the area off. Once, one of his companies put ashore there one evening to set up a base camp. Only one man came back, the very next day, and even he was completely cracked."
+
+"I know. That is exactly why I am going."
+
+"Forgive me for saying so, but you are completely mad yourself."
+
+"Probably. Now imagine you had the power to kill anything at all as easily as blowing out a candle. Could you live a quiet little life knowing that a single moment's inattention, a single loss of control, would be enough to kill your family, your friends? Would you not rather go to the one place in the world where a gift like that is useful, where you could give it everything without risking killing someone dear to you?"
+
+The captain is left perplexed, lets out a sigh and shakes the madman's hand. The madman climbs over the ship's rail and jumps from the deck onto the hard frozen ground. After raising a hand in farewell, he walks off into the frozen lands.
+
+Ending 3: The Eternal Fighter
+
+VI: Hidden in these very lines</Text>
+    <Choices>
+      <Choice text="Risk your luck one final time" goto="4" ask="The number hidden in these lines?" answer="4|four|IV|fourth" failGoto="17" />
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Text>The blade strikes your shield like a ram against a castle gate. You grit your teeth, every muscle braced, as the Emperor strives to knock you over, failing to cut through your protection. You hold firm nonetheless, and his weapon begins to bend, coming dangerously close to breaking point. He pulls back sharply then, and you take the chance to seize the initiative.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="19" sound="impatto_armatura_divina">
+    <Text>Your weapon strikes the Emperor's armour with a crash. Metal hits metal, without your blade getting through the protection. The Emperor has a strange moment of hesitation, though, during which his movements seem slowed. Only a fraction of a second, but it is a long enough delay to let you raise your shield and parry his next assault.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceFaille" value="1" />
+        <setVariable target="codiceSablier" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="20" sound="impatto_armatura_divina" soundDelay="2">
+    <Text>You press your own attack. Your angle is not bad, and you strike hard, but the blow is not exceptional enough to be effective against such an adversary. Your blade glances off the metal without managing to pierce it.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="23">
+        <Requirements>
+          <Variable id="codiceFaille" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="9">
+        <Requirements>
+          <Variable id="codiceFaille" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="21" music="l_imperatore_eterno">
+    <Text>And the lightning strikes. Strikes you.
+
+The fire of the sky is the near-universal symbol of divine wrath, an inexorable power wholly beyond man, able to reduce him to nothing in an instant. If the gods are often wrongly blamed for the accidents of nature, this bolt plainly aimed at you. The Emperor was a far more perfect target: taller, more metallic.
+
+Such would be the thoughts you might have had if a discharge of electricity had not just passed through your body. You felt immense pain for only the tiniest moment, before all your nerves, overloaded, gave up the struggle. Every muscle you have, your heart included, is locked rigid, and you stay there, on your feet, paralysed.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="38">
+        <Requirements mode="any">
+          <Variable id="codiceUnique" operator="eq" value="1" />
+          <Variable id="codiceVie" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="36">
+        <Requirements>
+          <Variable id="codiceVie" operator="gte" value="1" />
+          <Variable id="codiceUnique" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="22" music="sala_del_trono">
+    <Text>Your repeated attacks do eventually tell on the Emperor, even if their effects are trivial. If you have not managed to wound him, his armour nonetheless bears the marks of your blows, and is even pierced at the left shoulder. It is not much, but it seems to convince your adversary that he will not necessarily win a drawn-out fight, the divine enchantments on his cuirass looking less and less effective against the edge of your legendary weapon. So he goes back on the attack, working to keep you at a distance and make use of his greater reach.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="23">
+    <Text>Your weapon strikes the armour again without managing to damage it. This time, though, superficial as it is, the mark of your blow is visible: a clean scratch on the black steel.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceFissure" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="24">
+    <Text>The Emperor rains blows on you, making sure you do not get up. Nearly all of them bounce off your shield, but you still take a few light wounds. To put an end to this untenable situation, you make a risky wager on the rest of the fight: in the short gap between two attacks, you hurl your shield into your adversary's face. The move buys you the precious seconds you need to break free, but as the Emperor sends your best defence flying, you are not certain the stake was worth it.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codicePerdu" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="20">
+        <Requirements>
+          <Variable id="codiceMort" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="13">
+        <Requirements>
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceMort" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="11">
+        <Requirements>
+          <Variable id="codiceMort" operator="lte" value="0" />
+          <Variable id="codiceCorps" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="25" sound="trono_crollo" soundDelay="3" music="sala_del_trono">
+    <Text>You feel a strange sensation you cannot place. And suddenly it dawns on you: the earth is shaking! And this is no minor tremor, far from it. The castle walls, a thousand years old and of solid stone, crack; the stained-glass window above the throne bursts into pieces; the flagstones split; the ceiling collapses in sheets, preceded in its fall by the chandeliers that hung from it, and one of the heavy beams even works loose and crashes down, missing you narrowly. True, the whole structure was badly weakened by the violent fighting of recent days, but the damage is exceptional to say the least. Never has such a cataclysm fallen on this part of the world.
+
+You take in the spectacle from the corner of the room where the force of the shock threw you with as much ease and as little consideration as a child throwing down her doll. The Emperor, meanwhile, is still standing, untouched by the fury of the earth. He advances on you with a sure step, his sword held level, like an executioner preparing for the block. You have little belief in coincidences on this scale, and suspect that one of his divine protectors is not at all pleased to see his champion in difficulty.
+
+Ironically, your spirits rise, for that spectacular intervention proves that someone who knows your adversary's strengths and weaknesses well has judged that you stand a chance of winning. It is with a smile on your lips, though still on the ground, that you parry your enemy's attack. Your weapon blocks the imperial cleaver without failing, despite your awkward position.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceSecousse" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="33">
+        <Requirements>
+          <Variable id="codicePossible" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="28">
+        <Requirements>
+          <Variable id="codiceCertain" operator="gte" value="1" />
+          <Variable id="codicePossible" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="6">
+        <Requirements>
+          <Variable id="codicePossible" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="26">
+    <Text>You block the attack with your shield. Its strength is undeniable, but the Emperor's charge is closer to a rhinoceros's than a boar's. You cannot hold in a contest of brute force and are obliged to break away sharply. Your adversary presses his advantage at once.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceDifficulte" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="24">
+        <Requirements>
+          <Variable id="codiceMort" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="6">
+        <Requirements>
+          <Variable id="codiceMort" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="27" music="l_imperatore_eterno" ending="true">
+    <Text>There are several kinds of hero. Some are marked out by superhuman strength, others by a cunning able to deceive even the gods. A few possess exceptional charisma, and sometimes extraordinary luck is enough to enter the legend.
+
+Your own speciality? Not dying.
+
+You have lived a dangerous life, to say the least, and you have always come through. Not always very gloriously, often in pain, sometimes by running away, a few times by making heavy sacrifices, but you have come through every time.
+
+Even you, however, have limits. And today you have passed them. Blood is flowing from the last wound you took, as it still flows from all the earlier ones. Since most of your senses are already numbed by blood loss, the pain is less sharp than you would have expected, but you fall to your knees all the same and try to keep the scarlet liquid inside your body with both hands. The Emperor, with his customary pragmatism, does not of course give you time to improve matters, to hope for a magic potion out of a hidden pocket. He simply raises his cleaver. And brings it down.
+
+*****
+
+The alarm sounds. One bell at first, then a second, a third, and at last the tocsin itself. The townsfolk come out in panic; the guards try both to hold back the crowd and to find out where the trouble is. Only one figure seems untouched by the general panic. An indistinct shadow, it moves through the darkness with ease, avoiding every encounter despite the crowd filling the streets. Humanoid, rather small, it carries on its back an outsized sword, a blade larger than itself, but that cumbersome bundle does not seem to hinder it even as it dives into the river. It surfaces only a few minutes later, far downstream, going straight into a forge through its water intake. There, two men are waiting. One is by all appearances the owner of the place; the other is dressed like a traveller returned from very far away. The shadow sets down its burden before them, then vanishes at once the way it came.
+
+"God's teeth," swore the smith, "I know well it is better to have him on our side than the other, but that thing is terrifying. What region of hell did you fetch him from?"
+
+"He does a job that he alone can carry out," his companion answered. "How long to free the sword from its casing?"
+
+"Were it an ordinary blade, I would say a few hours would do, but in this particular case, if I manage it in less than a day I shall be the happiest man alive. Are you sure of this? The Sword of Origins was really set inside that great cleaver?"
+
+"Yes, I am sure. Keep your friends close, and your enemies closer still. And the Emperor has had no friends for a very long time. Be as quick as you can. My charge will come for it as soon as it is ready."
+
+"Is he really the one who will have to fight him? I tell you plainly, he has more the look of one of theirs than one of ours."
+
+"Every generation has its heroes. They do not all have the same style, nor the same qualities, nor the same faults, but they are always the ones whose story deserves to be written."
+
+Ending 5: Chronicles of another hero
+
+IV: Risk your luck one final time</Text>
+    <Choices>
+      <Choice text="Risk your luck one final time" goto="4" ask="The number hidden in these lines?" answer="4|four|IV|fourth" failGoto="27" />
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Text>As you struggle to free yourself from the heavy blade pinning you to the floor, the earth shakes again. You lose what little balance you had, your sword leaves the path of the Emperor's attack and the stroke carries on. It misses your head, but cuts a bloody furrow across your chest, slicing through plate and mail without difficulty. With pain goading your reflexes, you throw yourself backwards in an ungainly but effective leap and manage to get to your feet. You parry the next attack with the greatest difficulty, but you parry it.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="27">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceUnique" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="36">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceVie" operator="gte" value="1" />
+          <Variable id="codiceUnique" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="27">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceUnique" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="37">
+        <Requirements mode="any">
+          <Variable id="codiceDifficulte" operator="eq" value="0" />
+          <Variable id="codiceEsprit" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="29" music="sala_del_trono">
+    <Text>"So be it."
+
+The Hero then executes a lightning trick, a surprising attack you have never seen before. And yet you block it with the back of your blade without the slightest difficulty. You raise your eyes to the deity's invisible face, and would swear you can make out a smile there. The next moment, you are alone again.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceCorps" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="8">
+        <Requirements>
+          <Variable id="codiceOuverture" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="12">
+        <Requirements>
+          <Variable id="codiceCertain" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="12">
+        <Requirements>
+          <Variable id="codicePossible" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="12">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+          <Variable id="codicePossible" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="26">
+        <Requirements>
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+          <Variable id="codicePossible" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="30" music="sala_del_trono">
+    <Text>Destiny takes note of your decision. The ink of his volume slides across the paper, erasing words and creating others you cannot read. Once satisfied, he closes the book and, the next moment, you are alone again at the crossroads.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceCertain" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="28">
+        <Requirements>
+          <Variable id="codiceSecousse" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="5">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="7">
+        <Requirements>
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="31">
+    <Text>Your attack strikes an already weakened part of the armour hard enough to tear a piece away. Merely a ribbon of steel, a crack a few centimetres long, but a first opening all the same.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="32" music="la_caduta_degli_dei" ending="true">
+    <Text>You collapse to the floor, clutching the wound in your belly. The Sword of Origins slides slowly out of the skull it was driven into and falls. For a moment a superstitious terror takes you, as though pulling out the sword were enough to bring the Emperor back to life. But on the contrary, his armour begins to break apart, plate by plate. The dust this makes is carried off by the wind, revealing a clinging black mist which is swept away in its turn, dispersing in wisps. All that remains is the corpse of an extremely old man, decomposing at speed until nothing is left but a few bones. The Eternal Emperor is dead, his last remains stained red by a flow of blood your desperate efforts cannot hold back.
+
+*****
+
+"And the Hero triumphed over the Emperor with a single stroke, a stroke delivered with the strength of the Spirit of Heroes, guided by Destiny, and made fatal by Death," Destiny read from his endless volume.
+
+"I have no wish to hear the rest, Destiny," Chance cut in with a sulky pout. "With you it is always the same. What you give with one hand you take back with the other, in the name of Balance. And you are utterly incapable of conceiving what a mortal's life might be once he has carried out your mission."
+
+"However, that was his last exploit, for he would not survive the wounds the Emperor had dealt him. And he would always be remembered as the legend who sacrificed his life, in more senses than one, for the sole purpose of defeating evil," his interlocutor concluded nonetheless. Then he turned to his companion and rival and declared in a schoolmasterly tone, like a teacher to an unruly pupil: "The conclusion is the most important part of the tale. A hero must fall at the height of his glory, weapon in hand, in one last exploit more extraordinary than all the rest, so as to stay in people's minds for generations. That too is part of his role, of his destiny."
+
+Ending 2: A Hero's Destiny
+
+III: Upon closing this book at last</Text>
+    <Choices>
+      <Choice text="Risk your luck one final time" goto="4" ask="The number hidden in these lines?" answer="4|four|IV|fourth" failGoto="32" />
+    </Choices>
+  </Page>
+  <Page id="33" sound="trono_crollo" soundDelay="1" music="sala_del_trono">
+    <Text>Another tremor shakes the room, a feeble aftershock of the first. This time, though, it turns in your favour. A piece of the ceiling crashes down onto the Emperor. The stone bounces off him with an unreal physics, as though it were made of marshmallow, but it distracts him just long enough for you to break free of his attack. You straighten up, springing like a jack from its box, and your weapons clash again as you stand face to face, almost helm to helm.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="34" music="frammenti_di_memoria">
+    <Text>You never found the last goddess.
+
+At first you did not even look for her. The first two entities had after all put themselves in your path of their own accord, and you assumed it would be the same for the last two. But once you had gathered everything useful for the fight against the Emperor, in equipment as well as in knowledge and allies, you began to doubt. Would it really be possible to triumph without the strength of all four? You took on other quests, searched and searched again, wanting to prove yourself worthy of the two missing deities.
+
+That was a mistake. Every moment lost that way was paid for with a life. When you realised it you took to the road again, determined to put an end to all this one way or another. The third goddess was waiting for you just before the final trial, and that lifted your heart.
+
+But one is still missing. The last. The one of victory.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="35">
+        <Requirements>
+          <Variable id="codiceLegende" operator="gte" value="1" />
+          <Variable id="codicePossible" operator="gte" value="1" />
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="21">
+        <Requirements mode="any">
+          <Variable id="codiceEsprit" operator="eq" value="0" />
+          <Variable id="codiceLegende" operator="eq" value="0" />
+          <Variable id="codicePossible" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="35" music="la_caduta_degli_dei" ending="true">
+    <Text>There are things that are theoretically possible but in practice impossible. Cleaving lightning, for instance. Even supposing a sword capable of it existed and that you owned it, the speed of a bolt is such that you would have to know in advance where it would strike in order to be ready at the right moment. And even then, superhuman luck would be needed for the blade to be in the exact, unforeseeable position where the edge actually cuts the current, rather than the metal simply conducting the electricity. To say nothing of the nerve required even to conceive such a plan, and the absolute trust in the future required even to hope it might work.
+
+You do not know what instinct makes you raise your arm at that precise moment. Your blade is held crosswise, describing an arc as though to cut down an enemy in the air. And it meets that enemy. The lightning falls and strikes the edge of the blade. And the flow of pure energy follows your movement, defying every law of physics possible and unimaginable. The bolt that was to strike you is turned from its target and hurled at the Emperor.
+
+The flood of energy hits him full on. His weapon is pulverised; all his protections burst into tiny fragments. The divine current passes through the defensive layers as though they did not exist, sparing only their owner by virtue of the legendary pact. In the space of a flash, where a terrifying giant of steel stood the instant before, there now lies nothing but a naked, trembling old man.
+
+*****
+
+In an endless cavern, a giant furiously shatters millions upon millions of crystals. It cannot happen like this. It cannot be. It breaks every rule. No future can be unknown to him. The very concept cannot be imagined.
+
+In the middle of an enormous graveyard, where every tomb bears an epitaph to the glory of some past hero, a faceless man bursts into hysterical, uncontrollable laughter at what he has brought about.
+
+In a palace where delicate ice sculptures and uncontrollable fires are forever contending, a man and a woman are quarrelling violently while a torn book lies at their feet.
+
+At a banquet among the clouds, countless figures argue, shout and take sides, but not one of them is indifferent.
+
+And somewhere, a young optimist and an old reaper go on with their work, for such trifles are no concern of theirs.
+
+*****
+
+In the corner of the inn, the two men, one old, one young, but each out of the ordinary in his own way, are talking eagerly:
+
+"Your theory is most interesting, but all but impossible to prove. By your account you did fulfil the prophecy, but by substituting one deity for another. And what of the last goddess?"
+
+"Oh, I think I received her blessing at the very start of my existence without even realising it."
+
+"And if I follow the reasoning: you looped through any number of existences, you set half the pantheon against you, you overturned every established rule completely, just to find an ending that in the end changes nothing for you. Just for a handful of nobodies whose fate matters little."
+
+"Obviously. Because that is what I am. A fool who fights against forces beyond him in order to change an inexorable destiny. A hero."
+
+Ending 7: Legend</Text>
+  </Page>
+  <Page id="36" sound="riavvolgimento_temporale" soundDelay="4" music="il_filo_del_tempo">
+    <Text>Over the course of your career you have often come close to your limits, and you are beginning to know them well. Well enough to know that you ought already to be breathing your last. You have just made the one effort too many, taken the last wound you could bear. Your time has come. You see Death over your adversary's shoulder.
+
+This is not a figure of speech. The Reaper is here, with you, apparently invisible to your enemy. She is contemplating the white hourglass she gave you, whose last grain is running through. But before it joins its brothers, she turns the vessel over with a sharp movement. And your life starts again, quickly, inexorably.
+
+Your wounds do not heal, your suffering does not lessen. But you do not die. Not yet. Your body simply holds in that blurred region where physicians give you up for lost but do not yet dare bury you, because there exists a tiny, incomprehensible chance that your body will repair itself.
+
+The Reaper of Souls then raises a skeletal forefinger and crooks it. Even in the absence of facial muscles you manage to read her expression: once, but not twice. And she disappears.
+
+This second meeting with a deity one normally crosses paths with only once in a lifetime will have lasted no more than an instant. An instant that felt like centuries to you, but an instant all the same.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceUnique" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="40">
+        <Requirements>
+          <Variable id="codicePluie" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="37">
+        <Requirements>
+          <Variable id="codiceSecousse" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="3">
+        <Requirements>
+          <Variable id="codiceSucces" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="22">
+        <Requirements>
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+          <Variable id="codiceSucces" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="37" music="sala_del_trono">
+    <Text>The Emperor and you cross blades again while the debris goes on raining down. The chances that the walls or the load-bearing beams will give way and the whole castle come down, crushing you under tons upon tons of rock and timber, are far from nil, and it is more than likely that your adversary would survive it. You would not.
+
+So you carry on your steel ballet in a cloud of dust, trying to finish as fast as you can. Your feet dance over the broken ground, your heels grind glass and ceramic, your shoulders and your back take the sudden blows of falling masonry. Although it is the middle of the day, the room sinks little by little into gloom as heavy storm clouds gather at unnatural speed above the castle. You have to admit that the gods have a sense of staging.
+
+Your body is no more than a machine kept artificially running by your hormones and your will, its limits long since passed. Pain is no longer a sharp, precise sensation but a vague, diffuse notion. Your field of vision has narrowed to a thin cone in front of you. You barely hear the first drops of rain ringing on the fighters' armour.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codicePluie" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="17">
+        <Requirements>
+          <Variable id="codiceSablier" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="34">
+        <Requirements>
+          <Variable id="codiceVie" operator="gte" value="1" />
+          <Variable id="codiceSablier" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="34">
+        <Requirements>
+          <Variable id="codiceMort" operator="gte" value="1" />
+          <Variable id="codiceSablier" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="34">
+        <Requirements>
+          <Variable id="codiceUnique" operator="gte" value="1" />
+          <Variable id="codiceSablier" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+          <Variable id="codiceMort" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="13">
+        <Requirements>
+          <Variable id="codiceSablier" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+          <Variable id="codiceMort" operator="lte" value="0" />
+          <Variable id="codiceUnique" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="38" music="il_filo_del_tempo" ending="true">
+    <Text>There is a mountain whose summit is lost in the clouds.
+
+There is a stairway that begins at its foot and climbs, apparently, all the way to that summit. Apparently, because no mortal has ever managed to complete the ascent and come back to confirm it. That does not stop the brave from trying, like the man now standing at the bottom of the steps. He has all the trappings of a mountaineer, his pack bulging with provisions, but the strange sword at his belt sets him apart from the other adventurers who have tried their luck here. He is deep in conversation with a being of far greater strangeness, having no face at all, which does not stop him looking extremely amused.
+
+"Now there is a bold undertaking," the faceless one declared. "Reckless, I would even say. Do you not think there is some less drastic way to your ends?"
+
+"Are you meaning to talk me out of it?" the climber answered, on his guard, his hand on the pommel of his blade.
+
+A frank, massive laugh escaped the being's non-mouth, echoing through the whole valley.
+
+"You may as well ask the god of Fire to put out a blaze! Even if it means signing my own death warrant, this is the sort of exploit I exist for. No, no, no. On the contrary, I am impressed. When I think that barely a few centuries ago cutting down ten of your own kind in one fight was reckoned a great deed, and defeating a dragon an insurmountable task, I take pride in your progress. But are you sure you have what it takes for such a task? Your predecessor far surpassed you, and he failed at something far simpler."
+
+"If I am to die struck by lightning, it may as well be facing the cause of our troubles rather than their consequences. As for the rest, I keep my advantages to myself."
+
+"Very well then, go! And let me find out whether the blade you carry really lives up to its reputation! Whether it can truly kill a god!"
+
+Ending 6: The one who fights the gods
+
+II: Once every road is walked</Text>
+    <Choices>
+      <Choice text="Risk your luck one final time" goto="4" ask="The number hidden in these lines?" answer="4|four|IV|fourth" failGoto="38" />
+    </Choices>
+  </Page>
+  <Page id="39" music="sala_del_trono">
+    <Text>You are back on the battlefield. No trace of the one you were speaking to remains. You do not feel any different from before. You could almost believe you had dreamed the whole thing awake. You take up your road again.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceVie" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="34">
+        <Requirements>
+          <Variable id="codicePluie" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="36">
+        <Requirements>
+          <Variable id="codiceSucces" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="20">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSucces" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="2">
+        <Requirements>
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSucces" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="40" sound="spada_delle_origini" soundDelay="4" music="la_caduta_degli_dei" ending="true">
+    <Text>You are dead. You should be dead. You have just been struck full on by lightning! Nobody should be able to survive that.
+
+And yet your heart starts beating again, your brain working, your muscles relax and take up their normal mechanics. Oh, you are not at your best, and you are suffering from serious burns, searing and horribly painful. You can hear nothing any more and there is a strange feeling in your stomach. It is entirely possible that your organs are damaged beyond repair and that you will collapse screaming within the minute. But now, at this precise moment, you are alive. You are alive!
+
+So you take the grip of your weapon in both hands, force your joints back on guard, and advance on your adversary, trying to walk straight while your sense of balance plays tricks on you. The Emperor is motionless, and though you cannot see his face beneath his helm, you can guess at the astonishment, if not the fear.
+
+You have understood at last. You are alive. Not far from death, certainly, but alive all the same. And as long as you are alive, you will fight. For while there is life, there is hope. It is as simple as that.
+
+You have found her. Spes, Ultima Dea. Hope, the last goddess.
+
+There are no longer two of you in the room, but three. The newcomer is a young girl, small and thin. Her hair is white and extremely fine, her skin an unhealthy pale. She wears nothing but a white robe tied close. Her whole body gives an impression of fragility, of weakness. But there are her eyes. Eyes that have seen every misery of existence, that have seen the end of the world, that have seen absolute nothingness, and that nonetheless still shine and will never go out.
+
+The apparition vanishes as though she had never been there. But the rain gradually stops falling, and you no longer fear another bolt. The Emperor then comes out of his torpor. You can feel his confusion, but his wits return quickly and he takes his last decision. He charges you with his blade drawn, and you receive him as you should. Yet you both know the outcome is already settled. Hope cannot lose. It can suffer, it can weaken, but in the end it is reborn, again and always.
+
+Your weapons clash again and again while the clouds disperse. Light then floods into the castle and, for the first time since this era began, it strikes the Emperor directly, passing through his armour by the opening you made in it. Something stirs then in his depths. Bulges appear on the metal plates, as though someone were striking the cuirass from inside, and smoke escapes from the joints.
+
+You take your weapon in both hands then and strike with all your strength. A direct blow, without feint, without caution, which nonetheless lands and cuts the armour like butter, opening it in two down the whole length of the chest. The breastplate bursts, revealing a black, muddy mass that the sunlight reduces to wisps of smoke as soon as it touches. The rest of the imperial cuirass falls to pieces, and the cocoon of darkness is soon reduced to almost nothing. All that remains is a naked old man, a being of flesh and blood who falls to his knees amid the wreckage.
+
+***** *****
+
+The man attacked his beef with a fierce appetite. The innkeeper watched him out of the corner of his eye, as he did every armed customer, openly armed or not. All the more since he had noticed the second sword, carefully wrapped, that the man carried in his bag. It was probably an ornamental weapon, of great value, perhaps stolen. This customer did not look like the sort of man anyone would entrust with a precious object. His suspicions were only confirmed when a strange old man sat down at the same table and struck up a conversation. The snatches he caught, however, brought him more questions than answers:
+
+"And why would I? I had not gone there to kill a defenceless old man. I had done what had to be done. The Emperor is dead, you remember?"
+
+"I could start again. Rebuild it all. I still have the means."
+
+"But not the will. That, after all, is why you are here talking to me instead of plotting in the shadows."
+
+"Will you put the sword back where it belongs?"
+
+"I must. It is not the kind of weapon that should be used when two men fight."
+
+Too powerful. To be kept for tough cases like you.
+
+"And afterwards?"
+
+"Afterwards? I would like to say I shall settle on a quiet little farm with a wife and children, but I know I would not last ten days before taking to the roads again. So I shall go on doing the only thing I know how to do: let the winds carry me, live from day to day and accept the company of those who, like me, are completely out of step with their world. Can you cook?"
+
+Ending 1: The Life of an Anonymous Hero
+
+I: For when all seems spent</Text>
+    <Choices>
+      <Choice text="Risk your luck one final time" goto="4" ask="The number hidden in these lines?" answer="4|four|IV|fourth" failGoto="40" />
+    </Choices>
+  </Page>
+</Librogame>

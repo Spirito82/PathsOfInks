@@ -1,0 +1,834 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="3" phase="test" id="toile-fr" workId="toile" language="fr" title="Toile" author="Éric « Skarn » Berthe" checks="deterministico" genre="Fantastique, sentimental" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="iolco_notte">
+  <Blurb>« Car la tragédie grecque n'est pas réservée qu'au théâtre, et y jouer un rôle un privilège accordé aux seuls comédiens. »
+
+Une sorcière vous a rendu un corps. Plusieurs, même : au palais d'Iolcos, un masque tombe et un autre prend sa place, et chaque fois vous êtes quelqu'un d'autre. Ce soir, le roi Jason donne un banquet. Vous avez une nuit pour atteindre ce qu'il garde sous ses pieds, et il y a une gardienne en bas de l'escalier.</Blurb>
+  <ContentWarnings>Violences faites aux femmes : le roi frappe, humilie et agresse sexuellement la protagoniste, esclave pour la nuit. Rien n'est complaisant, tout est vu de ses yeux à elle, et le livre ne laisse aucun doute sur ce qu'il pense de cet homme. Un fauve dévore quelqu'un. Prostitution, esclavage, deuil d'enfants.</ContentWarnings>
+  <Changes>
+    <Change>Adapté pour cette application : la structure, les règles et certaines parties du texte ont été modifiées ou retirées pour fonctionner avec son moteur</Change>
+    <Change>Sons et musiques d'ambiance ajoutés, livrés avec le livre</Change>
+  </Changes>
+  <Audio>
+    <Sound name="braciere_bronzo" file="braciere_bronzo.ogg" />
+    <Sound name="canto_sirena" file="canto_sirena.ogg" />
+    <Sound name="coppa_vino" file="coppa_vino.ogg" />
+    <Sound name="frantumi_maschera" file="frantumi_maschera.ogg" />
+    <Sound name="ruggito_sfinge" file="ruggito_sfinge.ogg" />
+    <Music id="il_banchetto_di_giasone" file="il_banchetto_di_giasone.ogg" />
+    <Music id="il_prezzo_della_carne" file="il_prezzo_della_carne.ogg" />
+    <Music id="iolco_notte" file="iolco_notte.ogg" />
+    <Music id="la_sfinge_sotterranea" file="la_sfinge_sotterranea.ogg" />
+    <Music id="le_maschere_di_argilla" file="le_maschere_di_argilla.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <Variables>
+    <Variable id="codiceDetente" name="Code Détente" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceMatriarche" name="Code Matriarche" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceSouffrance" name="Code Souffrance" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceMariage" name="Code Mariage" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="colpita" name="Le roi vous a frappée" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1" sound="frantumi_maschera" soundDelay="5">
+    <Text>À chaque rocher que vos mains agrippent, chaque faille où vos doigts s'enfoncent, chaque rebord sur lequel votre talon s'appuie, vous êtes transportée d'émerveillement. Posséder de nouveau quatre membres est une expérience extraordinaire et déroutante, tout comme voir le monde à travers une unique paire d'yeux, goûter la sueur sur vos lèvres, respirer à pleins poumons... Tant de sensations que vous n'espériez plus retrouver depuis bien longtemps.
+
+Toutefois, même face à un tel miracle, vous ne pouvez simplement clore vos paupières et croire que tout cette folle histoire n'était qu'un mauvais rêve. Ce corps musclé qui grimpe agilement à une falaise à-pic n'est pas celui dont vous disposiez auparavant. Même les réflexes gravés dans sa chair ne sont pas les vôtres, et malgré votre absence de toute expérience antérieure dans la pratique de l'escalade, vous trouvez naturellement les bonnes encoches, les meilleures prises, progressant avec une constance et une rapidité à rendre jaloux un cabri.
+
+Loin sous vos pieds se trouve une grotte léchée par les vagues dans laquelle réside celle qui est à l'origine de votre état actuel. Dans cette caverne sombre, enfumée par des brûloirs d'herbes mystérieuses au parfum lourd et entêtant vous attendait la sorcière. Une femme émaciée, squelettique, une thaumaturge ayant maîtrisé jusqu'aux arcanes les plus secrètes de l'art, une vieillarde ravagée par les années, le chagrin et la haine, une enchanteresse au pouvoir sans pareil parmi les mortels, un monstre, une héroïne.
+
+Vous ignorez par quelle ficelle maligne de la destinée vous vous êtes retrouvée dans sa demeure bordée d'écume à plaider votre cause auprès d'elle. Quelle ne fut cependant votre surprise de l'entendre vous annoncer qu'elle pouvait effectivement vous aider, et qu'elle était prête à le faire. Les paroles exactes qu'elle prononça alors qu'elle étalait les masques devant vous, cinq figures grimaçantes de théâtre, retentissent encore dans vos oreilles :
+
+« Nul n'a le pouvoir d'aller contre la volonté des dieux. Mais il est possible pour un temps d'échapper au rôle qu'ils nous ont réservé, d'enfiler un masque et d'incarner un autre personnage. La pièce ne dure jamais qu'une poignée de scènes, mais durant ce fragment d'éternité, un homme peut être un esclave, un citoyen un héros, un dieu, un monstre ou même une femme.
+
+Par la même magie, je peux te rendre ton humanité. Pour un temps du moins. »
+
+Vous n'avez même pas envisagé de refuser. Après tant d'années à vous languir inutilement de ce que vous fûtes, à espérer vainement que votre tourmenteuse vous prenne en pitié, l'idée de retrouver, même pour une durée éphémère, la sensation d'être une véritable femme et non une bête honnie, était irrésistible tentation. Qu'importe le prix :
+
+« Je ne demande qu'une seule chose en échange. Dans le palais au-dessus de nous se trouve une salle obscure où le roi a entassé les trésors qu'il ne veut plus voir. Parmi ceux-ci repose une toile inachevée. Je désire que tu la complètes. »
+
+Votre main n'accroche soudain plus que le vide au-dessus, et un regard vers les cieux vous annonce que vous êtes arrivée. D'une ultime traction, vous vous hissez sur le rebord, finissant accroupie sur la terre ferme. Juste devant vous, à portée de bras, se dresse le mur arrière d'une vaste bâtisse de pierre blanche, étincelant dans la lumière du soleil couchant. Votre destination. Le palais d'été du roi d'Iolcos.
+
+Vous vous relevez souplement et commencez à glisser en pas chassés sur l'étroite bande de sol qui sépare la paroi de l'abîme. Ainsi collée au bâtiment, vous ne pouvez manquer d'entendre les rires, la musique et les chants qui s'en échappent, accompagnés de la douce odeur de la bonne chère et des senteurs de multiples parfums entremêlés. À l'intérieur, c'est la fête.
+
+Arrivée au tournant, vous prenez le temps d'observer les alentours. Continuer vous amènera à quitter la sécurité de votre position précaire pour vous jeter dans la gueule du loup. À quelques enjambements en retrait de la falaise et de vous-même démarre les réserves, les dépendances et les cuisines, frémissant d'une activité frénétique. Des esclaves s'y agitent en tous sens, d'aucuns portant des plats fraîchement préparés et de nombreuses amphores vers le palais proprement dit, d'autres en ressortant reliefs de nourriture et récipients vidés de leur contenu. Le flot est ininterrompu, chaotique, électrique.
+
+Alors que vous réfléchissez à la meilleure manière de vous infiltrer, vous êtes prise d'un étrange vertige. Vous sentez des picotements bizarres sur votre visage et en passant la main dessus, vous ramassez des débris de terre cuite. Vous secouez vivement la tête et tombent sur le sol les morceaux brisés d'un masque.
+
+Vous vous rendez alors compte que vous avez changé. À nouveau. Vous êtes plus petite, moins athlétique que la minute précédente. Vos cheveux coupés ras ont poussé et sont maintenant retenus par un chignon, et la crasse gagnée durant l'ascension a disparu. Votre tunique courte laissant les jambes à nu a cédé la place à des vêtements simples et couvrants, sobres et usés mais plus dans le ton de ce qui est acceptable en bonne compagnie. Un uniforme qui ressemble à s'y méprendre à celui que portent les serviteurs que vous épiez.
+
+À nouveau, vous repassez la scène de la grotte dans votre tête, les conseils et les mises en garde de la sorcière :
+
+« Je ne peux prédire les rôles que tu vas incarner, ni pendant combien de temps. Parfois un masque ne durera que quelques battements de cœur, parfois plusieurs heures pourront s'écouler.
+
+Tout au plus puis-je t'avertir que, d'une façon ou d'une autre, la pièce prendra fin au prochain lever du soleil. Mes pouvoirs sont ceux de la nuit, grandissent alors que se meurt le jour mais périssent à leur tour quand il renaît. Car je tire ma force des déesses d'avant les dieux, de la maîtresse des profondeurs, de la chasseresse lunaire et de la mère nourricière, de l'astre pâle, la forêt sombre et la terre noire. Le retour du feu du ciel annoncera la fin de mes enchantements, que tu le veuilles ou non.
+
+Alors hâte-toi. »
+
+Silencieuse comme la forêt et rapide comme le vent, vous franchissez les derniers mètres qui vous séparent de l'agitation et vous glissez dans le flot d'humains. Sous votre nouvelle apparence, vous êtes indiscernable des autres domestiques, servante anonyme parmi la foule à laquelle personne ne prête attention, même pas les autres esclaves, trop occupés par la logistique du banquet.
+
+Vos pas vous guident naturellement dans ce qui semble être la réserve de vin, où un quelconque intendant vous fourre entre les doigts une amphore, en vous ordonnant d'aller resservir les invités, et plus que vite que cela. Vous vous exécutez, courant vers l'entrée des serviteurs en serrant l'urne de terre cuite contre votre poitrine. Le garde de faction ce soir ne vous jette même pas un regard et l'instant suivant vous êtes dans la place, marchant à la frontière entre deux mondes, dans un étroit couloir, barrière en âme sinon en fonction.
+
+Sa face extérieure dessert les différentes pièces de la vie de tous les jours de la maisonnée, des logements des esclaves à la chambre privée du maître des lieux. Actuellement plongées dans l'ombre, inoccupées, silencieuses, ces salles offrent un aspect sinistre, comme si le palais était désert, oublié des dieux et des hommes.
+
+Sa bordure intérieure encercle elle aux trois quarts la grande salle où se déroule le banquet, toute de lumières, de bruits et de senteurs. Une multitude de convives confortablement avachis y profitent des plaisirs de la chère et de la chair, épaulés en cela par de presque aussi nombreux esclaves. Les échansons s'assurant que les coupes ne restent jamais vides longtemps sont les moins remarquables, éclipsés par les musiciens, danseurs et pornai des deux sexes qui s'efforcent de plaire et de complaire.
+
+Le roi est présent, mais seul son trône permet de le différencier de ses invités. Une prostituée sur les genoux, une seconde à main droite en guise de servante personnelle, le visage rougi par l'alcool et la chaleur, il profite de la soirée plus qu'il ne la commande. Ce ne sont point des ordres mais de grasses plaisanteries avinées qui s'échappent régulièrement de ses lèvres, provoquant des vagues de rire tout aussi alcoolisés.
+
+Vous n'avez guère envie de plonger dans cette mêlée de peur de ne jamais en ressortir, mais vous craignez aussi que votre comportement ne finisse par attirer l'attention si vous ne vous décidez pas à jouer votre rôle. Coupant la poire en deux, vous vous intéressez aux invités qui se tiennent en retrait, ceux qui se sont volontairement éloignés du centre de l'attention pour se réfugier dans un calme relatif. Deux d'entre eux se démarquent immédiatement.
+
+Le premier est impossible à manquer, tout simplement car il n'est pas humain : à partir de la taille, l'homme laisse place au cheval. Un centaure. Bien que vous ayez entendu d'innombrables histoires à leur sujet, c'est la première fois que vous en voyez un de vos yeux. Et si les rumeurs sur son espèce parlent de brutes barbares, ce représentant particulier est propre, coiffé, et se tient de façon générale avec bien plus d'élégance et de droiture que les citoyens à deux jambes de cette même pièce.
+
+Le second est un vieil homme chenu qui s'est glissé dans un recoin avec un peu de vin et de nourriture. Ses yeux sont blancs comme le lait, et sa cécité évidente. Mais, plus encore que son âge et son infirmité, c'est son comportement qui vous étonne. Il est tendu comme un arc, picore nerveusement dans son assiette, semble prêt à prendre ses jambes à son cou à tout moment.</Text>
+    <Choices>
+      <Choice text="Aller voir l’être chimérique de plus près" goto="19" />
+      <Choice text="Approcher l’aveugle" goto="26" />
+      <Choice text="Vous esquiver sans servir qui que ce soit" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="2">
+    <Text>Votre question réussit l'exploit de faire tomber encore plus bas le moral du centaure, mais il vous répond tout de même.
+
+« La guerre a éclaté. Très bientôt, je partirai tuer mes frères de sang auprès de mes frères de cœur. Avant cela, je désirais revoir au moins une fois chacun des mes disciples. Car aussi bas soient-ils tombés, ils restent mes enfants. »
+
+Sur cette conclusion, l'homme-bête vous remercie d'un ton qui laisse entendre que vous feriez mieux de le laisser seul avec son verre, et vous obéissez à son implicite injonction.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="3">
+    <Text>Vous vous dérobez à son étreinte.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="21">
+        <Requirements>
+          <Variable id="codiceDetente" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="7">
+        <Requirements>
+          <Variable id="codiceDetente" operator="lte" value="0" />
+          <Variable id="colpita" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="25">
+        <Requirements>
+          <Variable id="codiceDetente" operator="lte" value="0" />
+          <Variable id="colpita" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4">
+    <Text>Un éclair d'émotions contradictoires mêlées passe dans les yeux du roi lorsqu'il entend votre réponse, puis il se met à vous observer avec suspicion.
+
+« Si tu viens de Corinthe, tu dois savoir que c'est là que mes enfants sont morts. Comment oses-tu évoquer ce nom devant moi ?
+
+- C'est vous qui me l'avez demandé mon seigneur. »
+
+Avez-vous annoncé ceci crânement, provocante, ou au contraire d'un air apeuré, conciliante ?</Text>
+    <Choices>
+      <Choice text="Crânement, provocante" goto="25" />
+      <Choice text="D’un air apeuré, conciliante" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>L'homme hésite à vous répondre, puis murmure :
+
+« Le spectre d'une mort violente plane sur tous ceux qui sont réunis ici en ce moment-même. »
+
+La terreur qui émane de tout son être, traversé irrégulièrement de mouvements nerveux, vous confirme qu'il croit à ce qu'il annonce.</Text>
+    <Choices>
+      <Choice text="Lui demander comment il peut en être aussi sûr" goto="14" />
+      <Choice text="Lui proposer d’avertir le roi" goto="39" />
+    </Choices>
+  </Page>
+  <Page id="6">
+    <Text>Vous tentez de gagner du temps, ne serait-ce que pour retrouver votre calme après la surprise initiale de croiser un tel être ici. Pliant le genou avec déférence, vous modulez le timbre de votre voix pour le charger de respect :
+
+« Ô sage sphinx, j'ignorais que vous étiez présent en ces lieux sinon j'aurais apporté une offrande appropriée. C'est un honneur de pouvoir converser avec une personne aussi mythique que vous-même. Quelle divinité complice dois-je remercier pour cette rencontre ?
+
+- Remercie ta cupidité, répond le monstre, amusé par, mais pas mécontent de, votre soudaine onctuosité. Je suis la gardienne des ces lieux, chargée de protéger les trésors qu'ils renferment. Seul leur légitime propriétaire peut entrer ici sans affronter mon énigme.
+
+- Une noble tâche, mais une qui semble bien petite comparée à votre grandeur. Par quelle fortune vous a-t-elle échue ? »
+
+La créature vous observe attentivement, soupesant l'insolence de votre question, avant d'y répondre en persiflant de rage :
+
+« Comme toujours avec les humains, c'est la veulerie qui est en cause.
+
+Après m'être laissé chasser de Thèbes pour permettre au parricide d'accomplir son incestueuse destinée, je n'avais qu'un désir : rentrer chez moi dans les sables chauds du midi, là où est ma place et les habitants me traitent avec la dévotion qui m'est due.
+
+Mais alors que je progressais d'île en île, mon chemin croisa celui de cette bande de drôles ramenant chez eux cette peau de mouton. »
+
+Elle indique d'un mouvement dédaigneux d'une de ses pattes postérieures la toison brillante derrière elle.
+
+« Leur sagesse n'égalant pas leur courage, j'en croquais quelques-uns sous la dent avant que cet énergumène avec sa lyre n'apparaisse. Il pinça les cordes de son instrument, et je perdis aussitôt tout sens des réalités sous l'influence de son envoûtante musique. Dans ma transe, il me fit révéler la réponse à ma propre énigme, et je fus forcé de les épargner.
+
+L'histoire aurait pu s'arrêter là si leur chef, qui porte dorénavant la couronne, ne m'avait pas jugée trop dangereuse pour être laissée en liberté. Sa sorcière de compagne s'arrangea alors pour me lier à eux. Par une ancienne magie, elle me força à leur servir de chien de garde, défendant leur trésor fraîchement acquis contre tous les voleurs et usurpateurs. »
+
+Colère, rage, haine emplissent les mots du sphinx alors qu'elle déroule son histoire. Vous lui demandez en conséquence s'il n'existerait pas une méthode pour la libérer de cette tâche ingrate.
+
+À ces mots la créature s'approche, vous dominant de toute sa taille, ses dents retroussées brillant comme de mortels joyaux, une flamme maligne dans ses yeux. Après une éternité, elle baisse la tête pour que son visage soit juste en face du vôtre et reprend la parole, suave :
+
+« Bien sûr qu'il y a un moyen. Rien n'est plus fragile qu'un charme. Mais proposes-tu réellement de me libérer, de laisser à nouveau la bête mangeuse d'hommes courir le monde ? Désires-tu vraiment que l'histoire se souvienne de toi comme de l'infâme qui a réveillé le fléau, comme de la nouvelle Pandore ? Cette ignominie, es-tu prête à l'accepter si cela sert tes desseins ? »
+
+Vos yeux plongent dans ceux de la chimère, se reflétant dans cette abîme d'ombre qui a vu toute la grandeur et la décadence de l'humanité au cours de ses siècles d'existence, glissent sur les symboles de son pouvoir physique - muscles, griffes, crocs - s'arrêtant sur son arme la plus redoutable : sa langue affûtée.</Text>
+    <Choices>
+      <Choice text="Oui, je suis prête à l’accepter" goto="41" />
+      <Choice text="Non" goto="35" />
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>Votre rejet est léger comme une plume, mais c'est l'étincelle qui déclenche l'incendie. Le roi devient encore plus rouge, hurle et vous frappe d'un revers de son poing fermé. Un autre coup vous atteint à l'estomac, vous pliant en deux, puis il commence à vous cogner frénétiquement comme un sac de sable.
+
+Ses paroles ne sont qu'un flot continu d'injures et d'insultes, où il vous identifie à toutes les femmes du monde dans votre insolence, votre débauche et vos innombrables autres défauts supposés.
+
+De ce que vous apercevez entre les larmes de douleur, même les autres invités sont choqués par un tel spectacle, mais personne ne lève le petit doigt pour vous aider.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="43" />
+    </Choices>
+  </Page>
+  <Page id="8" sound="canto_sirena" soundDelay="2">
+    <Text>Le devin semble soulagé que la conversation dévie sur un autre sujet, aussi lugubre soit-il.
+
+« Tu as déjà dû en entendre parler, déformé par mille rumeurs, mais voilà ce qui se rapproche le plus de la vérité : Il avait tout. La gloire. La richesse. Le pouvoir. L'amour. Tout cela, il le devait presque entièrement à une seule femme, devenue pour lui une traîtresse des siens, une voleuse des trésors de son peuple, une démone fratricide.
+
+Et pour toute récompense, il l'abandonna. Il tourna le dos à celle que l'amour avait déjà changé une fois en le pire des monstres.
+
+La suite est une longue tragédie. Elle détruisit tout ce à quoi il tenait, même si elle devait se détruire elle-même ainsi.
+
+Maintenant, ils ne leur restent plus à tous deux que d'amères souvenirs d'une époque qui jamais ne reviendra, oubliés sous la garde de la reine des dieux. »
+
+Après un si long discours pour un corps si frêle, le vieillard soupire et se replie sur lui-même, les bras autour des genoux. Il vous demande de le laisser se reposer, et vous obéissez.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMatriarche" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="9" sound="coppa_vino" soundDelay="2">
+    <Text>Des dents usées dessinent un sourire et il hoche la tête :
+
+« Tu as sans doute raison, dit-il en tendant son verre. Tremblez comme une feuille ne m'aidera guère. Une coupe ne peut pas me faire de mal. »
+
+Vous versez, et il savoure ensuite lentement sa boisson, reprenant quelques couleurs au passage.
+
+« Je suppose que toute bonté requiert récompense, même si tu ne fais que ton travail. Voyons... »
+
+Il se creuse la tête, puis déclame avec une grimace crispée :
+
+« Quand des dieux, ou leurs envoyés, te posent une question, arrange-toi pour ne pas y répondre. Car ni la franchise, ni le mensonge ne t'apporteront quoi que ce soit de bon. »
+
+Il claque la langue contre son palais pour ponctuer sa déclaration :
+
+« Une leçon que j'aurais bien aimé connaître en mon temps. »
+
+Il se remet ensuite à siroter délicatement sa boisson.</Text>
+    <Choices>
+      <Choice text="Le laisser tranquille" goto="12" />
+      <Choice text="L’interroger sur la raison de son stress" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Text>Malgré le goût du sang dans votre bouche, vous trouvez la force d'agiter votre langue pour une ultime saillie téméraire :
+
+« Et la Toison d'Or Jason ? Et ce trône sur lequel tu te pavanes ? Et toute ta gloire, toute ta légende, ne lui dois-tu donc pas ? »
+
+À ces mots, le roi se baisse, vous saisit par les épaules, et, avec une difficulté certaine causée par son âge et sa décrépitude physique, vous soulève à hauteur d'épaules avant de vous jeter au milieu des tables et des bancs. Vous manquez de peu de vous écraser tête la première contre un rebord de pierre mais ne pouvez éviter de vous écorcher en glissant sur la céramique, enflammant encore plus vos blessures récentes.
+
+Le roi marche ensuite vers vous à grandes enjambées tandis que l'assistance s'esquive plus ou moins discrètement.
+
+« Tout cela, je m'en moque. Ses cadeaux empoisonnés, elle peut se les garder. Tout ce qu'elle m'a offert, et qu'elle ne m'a déjà repris avec un couteau ensanglanté, j'y renonce de bonne grâce. La Toison d'Or et toutes les merveilles du voyage à Colchide, je n'en veux plus. Elles sont marquées de son emblème, et je préfère les voir pourrir ou brûler que de les conserver. »
+
+Sa main se referme sur votre cou et il vous plaque contre un des bancs, vous laissant à peine assez d'air pour respirer avant de hurler à la ronde :
+
+« Qu'on aille me chercher un fouet ! J'ai ici une catin qui a besoin d'une bonne correction ! »
+
+Mais la réponse qu'il reçoit n'est pas celle espérée.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Text>Le roi se permet un sourire connaisseur :
+
+« Thèbes ? Pas un endroit où il fait bon vivre en ce moment effectivement. Je comprends que tu aies préféré changer d'air. Ont-ils encore un nouveau roi ? Sont-ils le joug d'une nouvelle malédiction divine ? Famine, peste, monstres... Le Labyrinthe de Minos paraît une villégiature à côté d'une cité pareille ! »</Text>
+    <Choices>
+      <Choice text="Le rassurer" goto="37" />
+      <Choice text="Dresser le tableau d’une ville ravagée" goto="16" />
+    </Choices>
+  </Page>
+  <Page id="12" music="il_banchetto_di_giasone">
+    <Text>Vous vous éloignez tranquillement de l'étrange invité, perplexe sur ses dires.</Text>
+    <Choices>
+      <Choice text="Aller voir le centaure" goto="19" />
+      <Choice text="Avancer vers l’aveugle" goto="26" />
+      <Choice text="Partir discrètement" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="13" music="la_sfinge_sotterranea">
+    <Text>L'énigme vient, prononcée avec trépidation et malice :
+
+« Qui est la meilleure tisserande du monde ? »
+
+Ces quelques mots vous figent net. Vous observez, tétanisée, la malveillance pure sur le visage de la créature. Elle sait. Elle sait qui vous êtes. Elle se joue de vous, se délecte de vos souffrances et de votre peur. Une lionne qui s'amuse avec sa proie.
+
+Vous efforçant d'ignorer les papillons dans votre estomac, vous vous concentrez pour trouver la réponse qu'elle désire.</Text>
+    <Choices>
+      <Choice text="Répondre « Athéna »" goto="18" />
+      <Choice text="Répondre que c’est vous-même" goto="29" />
+      <Choice text="Chercher un moyen de ne pas répondre" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Text>Un petit sifflement qui pourrait s'apparenter à un rire s'échappe de la bouche de votre interlocuteur quand vous mettez en doute ses capacités :
+
+« Que ne donnerais-je pas pour que mes prédictions se révèlent parfois faillibles !
+
+Mais il s'agit d'un don que Zeus m'a accordé, et l'erreur lui est étrangère.
+
+J'ai vu dans la nuit une bête féroce, toute de crocs, de griffes et de haine, faire couler le sang à ce banquet, et cela sera. J'ai vu un monstre à huit bras changer le souvenir de la gloire en une hymne au désespoir, et cela sera. J'ai vu un roi à genoux contemplant l'abysse, et cela sera ! »
+
+Après une telle tirade conclue dans les aigus, sa respiration est saccadée, et, en tendant l'oreille, vous entendez les battements frénétiques de son cœur.</Text>
+    <Choices>
+      <Choice text="Insister pour en savoir plus" goto="20" />
+      <Choice text="Lui proposer d’avertir le roi" goto="39" />
+      <Choice text="Partir avant de lui infliger une émotion fatale" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="15" sound="braciere_bronzo" music="iolco_notte">
+    <Text>Vos craintes se révèlent infondées, et nul contremaître consciencieux ne vient vous arrêter alors que vous disparaissez toujours plus loin dans la demeure. Vous comprenez rapidement pourquoi, car les lieux ne sont pas aussi vides que vous le supposiez de prime abord. Certains invités en quête d'un peu plus d'intimité se sont repliés ci et là, et il paraît crédible que vous effectuiez une course pour l'un ou l'autre.
+
+Si vous pouvez vous déplacer librement, vous n'avez toujours qu'une idée floue de l'endroit où se trouve la mystérieuse salle au trésor, et il vous semble délicat de demander votre chemin. Aussi cherchez-vous patiemment, explorant pièce après pièce.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="38">
+        <Requirements>
+          <Variable id="codiceMatriarche" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="27">
+        <Requirements>
+          <Variable id="codiceMatriarche" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>Vous lâchez la bride à votre imagination dans votre description d'une cité en proie à l'anarchie, à la maladie, au crime et aux châtiments célestes, où l'innocent n'échappe aux bandits et aux gardes corrompus que pour tomber dans l'estomac d'un monstre. Le roi s'esclaffe à vos paroles :
+
+« Tu exagères. Cette ville va mal, mais pas autant que tu le racontes. Les monstres en particulier ne sont plus que des souvenirs juste bons à effrayer les marmots. »
+
+En ponctuant sa phrase d'une frappe sur sa poitrine, il ajoute :
+
+« J'ai d'ailleurs moi-même éliminé une bonne fois pour toute le Sphinx à mon retour de Colchide ! »</Text>
+    <Choices>
+      <Choice text="Ouvrir de grands yeux émerveillés" goto="30" />
+      <Choice text="Le mettre en doute" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Text>Cette fois c'est un poing fermé qui vous frappe en plein visage. L'impact vous jette à terre, la lèvre éclatée. Puis le roi se lève, écarlate, titubant et commence à vous ruer de coups sous le regard médusé des invités et terrifié des esclaves.
+
+« Ne. Parle. Jamais. D'elle. »
+
+Vous essayez de vous protéger de votre mieux de ses assauts, repliée en position fœtale, vos avant-bras gardant votre visage, mais poings et pieds ne cessent pour autant de vous heurter, vous couvrant d'ecchymoses et répandant une sombre douleur dans votre corps tout entier.
+
+« Cette femme... Ce démon... Ne m'a jamais apporté que des problèmes, des larmes, des malédictions. J'aurais dû la laisser crever dans son pays arriéré ! »
+
+Chaque mot ou presque est ponctué d'un nouveau coup, dans un déluge qui ne semble jamais devoir s'arrêter.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceSouffrance" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Rester prostrée en espérant qu’il se calme" goto="43" />
+      <Choice text="Essayer de le provoquer encore plus" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Text>« Une réponse diplomatiquement adroite. »
+
+Elle n'ajoute rien de vive voix à cette déclaration, mais le sourire aux mille dents brillantes sur son visage suffit à la compléter d'un « Mais fausse. »</Text>
+    <Choices>
+      <Choice text="Continuer" goto="33" />
+    </Choices>
+  </Page>
+  <Page id="19" music="il_banchetto_di_giasone">
+    <Text>Même en ignorant ce qui se trouve sous son torse, l'être ne semble pas à sa place ici. Que ce soit son abondante chevelure bouclée teintée d'argent, sa peau brunie par le soleil, ses traits burinés par le vent, ses épaisses mains calleuses, tout en lui évoque la steppe, l'infinie étendue plate où hommes et bêtes à la merci constante d'Hélios et d'Éole n'ont d'autres maîtres qu'eux-mêmes. Comme il paraît étrange de le voir ici, sagement assis, faisant machinalement tourner sa coupe vide entre ses doigts.
+
+Toutefois, ses yeux séculaires expriment un profond ennui, du mépris même, alors qu'ils contemplent l'orgie qui se déroule à quelques pas de là, et ses muscles frémissent régulièrement, comme s'il se retenait à grande peine de bondir.
+
+Lorsque vous lui proposez un peu de vin, il fait ce qu'aucun autre invité n'a fait jusqu'à présent : il relève la tête pour vous regarder droit dans les yeux avant d'accepter et de vous remercier poliment. Puis il se met à parler, plus à lui-même qu'à vous :
+
+« Fut un temps où le guérisseur lui-même m'aurait servi. Un temps où il n'était qu'un aventurier en exil, avec bien peu d'entregent mais quelques amis fidèles, sans or ni pouvoir mais avec du courage, de la volonté et de l'humilité. »
+
+Du rebord de sa coupe il indique l'homme couronné étalé sur son trône, et continue, sans une once de colère mais avec fatalisme :
+
+« Maintenant, il est devenu ce qu'il combattait jadis. Un roi oisif, corrompu, seulement désireux de subvenir à ses désirs personnels et de protéger sa position. »
+
+Il ravale une gorgée de vin, mais pas son amertume, et continue :
+
+« Je n'aurai eu que deux sortes d'élèves : Ceux qui sont morts jeunes, et ceux qui ont vécu assez vieux pour me décevoir. »</Text>
+    <Choices>
+      <Choice text="Le laisser seul dans sa contemplation" goto="12" />
+      <Choice text="Lui dire qu’il a bien eu un élève à la hauteur" goto="23" />
+      <Choice text="Lui demander d’en dire plus sur la jeunesse du roi" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="20">
+    <Text>L'homme laisse échapper un long soupir, puis se redresse sur son séant, ses yeux morts braqués sur vous. Lorsqu'il parle de nouveau, c'est d'une voix docte et fatiguée :
+
+« Il en est des hommes et des femmes comme des mouches. Contempler les flammes de loin ne leur suffit pas, il faut qu'ils s'en approchent jusqu'à brûler. À Thèbes, Œdipe m'a demandé à voir jusqu'à en perdre les yeux, et cependant nul n'a rien appris de son exemple.
+
+Mais puisque tu désires tant savoir, je vais t'accorder ton souhait. À toi ensuite d'en assumer les conséquences. »
+
+Il se met à respirer rythmiquement, par courtes saccades. Son visage contemple le néant à travers vous, et bientôt une mélopée grave, sépulcrale, s'échappe de ses lèvres :
+
+« Tes derniers vestiges d'honneur tu sacrifieras pour parvenir à tes fins. La bête tu nourriras de chair humaine. Ton orgueil fatal de nouveau tu embrasseras. Ton triomphe aura le goût des larmes, le son des sanglots, l'odeur du sang. »
+
+Puis plus rien qu'un dernier mot : « Va. »
+
+Vous vous hâtez d'obéir.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="21">
+    <Text>Vous écartez délicatement sa main : « La nuit est à peine commencée mon roi. Vos invités ont encore besoin de vous pour un temps. »
+
+Il vous répond avec un sourire : « Au diable ces pique-assiettes. Je leur ai déjà accordé trop de temps.
+
+- Peut-être devriez-vous tout de même les congédier proprement. » lui rétorquez-vous avec douceur.
+
+Il hoche la tête, et entreprend péniblement de se lever. S'il est instable sur ses jambes, il ne rate pas l'occasion de vous agripper une fesse ni de poser sa deuxième main sur l'épaule de la prostituée qu'il a chassée pour vous faire de la place.
+
+Finalement debout, il cherche ses mots dans les remugles de l'abrutissement, et, cajoleuse, enjôleuse, charmante, vous lui soufflez ce qu'il doit dire, en obligeante et diplomate aide. Voilà donc qu'il s'exclame haut et fort :
+
+« À tous ceux que j'héberge actuellement sous mon toit, votre roi va ranger sa couronne pour la nuit. Vous voilà libérés de vos obligations envers moi, et vous pouvez partir ou rester comme cela vous chante. »
+
+Rires, coupes levées et sifflements répondent à sa déclaration.
+
+Dont celui d'un résident forcé qui a effectivement très envie de partir.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="22" sound="frantumi_maschera" soundDelay="1" music="la_sfinge_sotterranea">
+    <Text>Une bougie à la main, descendant lentement vers les profondeurs obscures de la terre, vous ne ressemblez guère plus à une servante. Quand vous atteignez la dernière marche, vous n'y ressemblez plus du tout.
+
+Votre sage tunique d'esclave a laissé place à une unique pièce de tissu drapée autour de votre corps, une peau de lion entière sans coupure ni couture maintenue en place par une broche de fer. La chaotique cascade de vos cheveux longs se mélange à la crinière de la bête morte, et votre épaule, vos deux bras, la plus grande partie de vos jambes, sont laissés à nu par cette sommaire tenue. Des tatouages complexes habillent la chair ainsi visible, arabesques abstraites qui ne sont cependant pas sans vous rappeler certaines runes biscornues entraperçues chez la sorcière. Vous ignorez leur sens exact, mais l'inconscient acquis avec votre nouveau rôle vous souffle qu'elles sont une offrande, un hommage, une marque de respect envers les forces qui gouvernent les mortels.
+
+Votre nouvelle apparence est sans doute fort impressionnante, mais dans le noir souterrain faiblement illuminé par votre maigre fanal, il n'y a pas grand monde pour l'admirer. Seulement de solides fondations de pierre, et quelques caisses débordant de bibelots anciens. Vous vous apprêtez à les fouiller quand vous les voyez.
+
+Tout d'abord, vous remarquez le carré de laine d'or accroché au mur que votre simple flammèche réussit à faire miroiter de mille éclats.
+
+Et ensuite, vous réalisez la présence de la silhouette imposante qui repose à ses pieds.
+
+Les pattes de lion ne font pas le moindre bruit alors qu'elle s'approche de vous pas à pas. Leurs puissants muscles et griffes acérées frémissent à chaque mouvement, prêts à l'emploi. Les ailes sont repliées, inutiles sous terre, mais leur envergure se devine à leur longue traîne de plumes blanches. La tête humaine, bien que ce qualificatif soit probablement exagéré car aucun humain ne dispose de dents pareils, sourit, du sourire sadique du prédateur sachant sa proie condamnée. La bête dans son entièreté est plus grosse, plus souple, plus équipée en extrémités tranchantes, plus terrifiante que toutes les légendes ne le laissent supposer.
+
+Vous comprenez soudain pourquoi les accès à cette salle étaient aussi peu défendus. Avec un tel gardien, les trésors n'ont rien à craindre, les verrous ne servent qu'à protéger les voleurs d'une mort violente et peu agréable.
+
+Vous vous attendez à ce qu'il se jette sur vous sur le champ, mais le Sphinx s'arrête à un pas et susurre d'une voix chargée d'excitation : « Tu connais l'histoire. Réponds juste à mon énigme et tu auras la vie sauve. Trompe-toi, et tu me nourriras. »</Text>
+    <Choices>
+      <Choice text="Décamper à toutes jambes" goto="33" />
+      <Choice text="Interrompre le Sphinx" goto="6" />
+      <Choice text="Attendre sagement l’énigme" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="23">
+    <Text>Il médite sur votre question.
+
+« Parmi les anciens, je ne vois pas. Même Alcide a passé la plupart de son existence à expier ses propres errements. Les seuls héros irréprochables sont ceux qui ont eu de la chance de ne pas m'avoir comme maître, tel Orphée. Même si le malheur s'acharne sur eux d'autres façons. »
+
+Il pointe un doigt accusateur vers le roi.
+
+« Vous rendez-vous compte que cet énergumène si prompt à organiser des beuveries ne s'est même pas déplacé jusqu'à la toute proche Pimpleia pour le mariage d'un de ses anciens compagnons ? Alors que celui qui fut un de ses meilleurs amis pleurait sa fiancée, il cuvait son vin ici. »
+
+Il replit son bras, enserrant sa coupe de ses dix doigts.
+
+« Non vraiment, je ne vois pas. Peut-être parmi la nouvelle génération. Je fonde de grands espoirs en mon nouveau protégé, le jeune Achille. Le dernier que j'entraînerais jamais très probablement, car l'âge me pèse, tout immortel que je sois. »</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMariage" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Le laisser à ses réflexions" goto="12" />
+      <Choice text="Lui demander la raison de sa présence ce soir" goto="2" />
+    </Choices>
+  </Page>
+  <Page id="24" sound="ruggito_sfinge" soundDelay="1">
+    <Text>Vous cherchez une astuce pour botter en touche, mais vos manigances sont interrompues par un rugissement hilare, suivi d'une déclaration amusée :
+
+« Il est trop tard. Plus d'échappatoire. L'énigme a été posée, elle attend maintenant une réponse. Mais n'hésite pas à prendre ton temps. J'ai toute l'immortalité devant moi. Contrairement à toi. »
+
+Et à la bête de s'allonger dans une position confortable sans jamais cesser de vous dévorer des yeux, se pourléchant les babines en esprit.</Text>
+    <Choices>
+      <Choice text="Profiter de son relâchement pour vous enfuir" goto="33" />
+      <Choice text="Dire « Athéna »" goto="18" />
+      <Choice text="Vous désigner vous-même" goto="29" />
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Text>Un éclair de douleur vous transperce quand la paume du roi heurte votre joue avec fracas. Puis ses deux mains se referment sur le col de votre robe et il vous tire vers lui avec violence, plaquant son visage rubicond à quelques centimètres du vôtre. Vous respirez les halètements saccadés de son souffle aviné, contemplez de trop près la dangereuse flamme qui brille au fond de ses yeux injectés de sang.
+
+« Mais qu'avons-nous là ? Une pute caractérielle ? Ma petite, peut-être que certains de tes clients aiment ça, mais ici ce n'est pas le genre de la maison. Alors comporte-toi comme une femme civilisée, soumise et respectueuse. »</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="colpita" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Hocher la tête sagement" goto="37" />
+      <Choice text="Continuer à lui tenir tête" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="26" sound="coppa_vino" music="il_banchetto_di_giasone">
+    <Text>Vous vous approchez et proposez un peu de vin au vieil infirme. Il vous répond en s'efforçant d'afficher un air détendu :
+
+« Non merci. Je préfère rester sobre et leste sur mes jambes ce soir. Cela vaut mieux si j'en crois les présages. »</Text>
+    <Choices>
+      <Choice text="Repartir sans insister" goto="12" />
+      <Choice text="Lui demander de quels présages il veut parler" goto="5" />
+      <Choice text="Insister pour qu’il prenne une coupe" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="27" music="la_sfinge_sotterranea">
+    <Text>Vous avez l'impression d'avoir retourné cette maison pierre par pierre quand vous découvrez enfin un accès vers de mystérieux souterrains au fond d'une cave étriquée. Il semble s'agir d'anciennes oubliettes datant de l'époque où ce lieu était une place forte. Bien qu'elles soient partiellement comblées, il est encore possible d'y circuler, et, en vous glissant à travers elles, vous finissez par atteindre un escalier d'une facture plus récente bien que couvert de poussière.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="28" music="la_sfinge_sotterranea">
+    <Text>Vous abandonnez un roi profondément endormi qui n'a pas eu la délicatesse de déclarer sur l'oreiller qu'il libérait le Sphinx de toutes ses obligations envers lui.
+
+Pour être exact, il n'a pas prononcé grand chose d'intelligible à partir du moment où il a quitté l'inconfort de son trône pour le moelleux de son lit. Et à moins de le réveiller à grands seaux d'eau, vous n'en tirerez plus rien avant le prochain zénith.
+
+Votre seule chance restante de parvenir à votre objectif dans le temps accordé est de résoudre l'énigme. Maintenant que vous connaissez le chemin, il ne vous faut que quelques minutes d'une démarche précipitée pour vous retrouver face au Sphinx, qui s'amuse de votre échec, mais n'en paraît pas étonné.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="29" sound="frantumi_maschera" soundDelay="2" music="le_maschere_di_argilla" ending="true">
+    <Text>Le monstre ne confirme ni n'infirme votre réponse. Il se contente juste de sourire, un plaisir sadique placardé sur son visage.
+
+Un instant de silence s'écoule. Puis votre masque tombe. Suivi d'un autre. Et d'encore un autre. Le charme rompu, vous retrouvez l'apparence conséquence de votre hybris. Le Sphinx paraît grandir, grandir, mais vous savez pertinemment que c'est vous qui rapetissez. Bientôt vous ne l'identifiez plus à la vue mais uniquement grâce aux vibrations de l'air et du sol qu'il engendre, son rire ayant la force d'un ouragan pour votre nouvelle taille.
+
+Vous vous enfuyez vite sur vos huit pattes avant que ne lui prenne l'envie de vous écraser, retournant prestement tisser votre toile dans les recoins obscurs que vous n'auriez jamais dû quitter, condamnée à ne plus jamais échapper à votre destin de mangeuse de mouches.</Text>
+  </Page>
+  <Page id="30">
+    <Text>Rien ne fait plus plaisir au roi que de raconter ses exploits, aussi douteux soient-ils :
+
+« Ce fut affaire de pas de chance pour cette bête que de me croiser, moi, Jason, sur sa route. Je ne m'embarrassais pas de répondre à son énigme stupide. Saisissant mon épée, je la hachais menue comme le gros chaton qu'elle était. J'aurais bien pris sa tête comme trophée, mais Atalante me convainquit qu'une tête décapitée de femme sur un mur, c'était de mauvais goût ! »
+
+Et de s'esclaffer à nouveau.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceDetente" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="31">
+    <Text>C'est l'étonnement qui prédomine chez votre interlocuteur :
+
+« Pimpleia ? Au pied de l'Olympe ? Ce n'est pas courant. À par Orphée, je ne connais personne de ce coin-là. Est-il vrai qu'ils ont renommé toutes les fontaines de la cité en son honneur ? »
+
+Vous n'en avez pas la moindre idée, mais confirmez cependant. Le roi laisse échapper un malsain éclat de rire jaune.
+
+« Cet idiot a tout perdu pour ne pas avoir su regarder droit devant lui, et on lui voue un culte. J'ai traversé le monde et accompli mille exploits, et quelle a été ma récompense ? Ça. »
+
+Il englobe la fête de sa paume ouverte, sa bouche et son regard plissés de mépris. Vous remarquez que plusieurs des invités vous observent dorénavant, certains avec des mines patibulaires.</Text>
+    <Choices>
+      <Choice text="Déclarer qu’il s’agit d’une grande injustice" goto="37" />
+      <Choice text="Mettre en avant la beauté de l’amour d’Orphée et Eurydice" goto="42" />
+      <Choice text="Lui rappeler ce qu’il doit aux autres, et à Orphée" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="32" sound="canto_sirena" soundDelay="1">
+    <Text>Jason rabroue votre remarque d'une moue.
+
+« Je l'ai accepté à mon bord, cela est vrai. Mais bon, tout ce qu'il a fait, ce n'est jamais que chanter plus fort que quelques sirènes et charmer deux ou trois bestioles. Lui un Argonaute ? Plutôt un poids mort. D'ailleurs il est temps de rétablir la vérité. »
+
+Il se lève péniblement, chancelant et s'adresse pâteusement à une assemblée bien trop ivre pour contester :
+
+« Mesdames, messieurs, je tiens à rectifier une erreur trop répandue. Orphée n'a jamais été un Argonaute. Ce n'était qu'une petite pucelle pleurnicharde perdue au milieu d'une bande de vrais hommes. La seconde femme de l'équipage ! »
+
+Après un silence, quelques rires avinés lui répondent, mais sans conviction, avec une pointe de gêne devant cette saillie injurieuse à plus d'un titre.
+
+Cependant une personne au moins est contente qu'il l'ait prononcée.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="33" music="la_sfinge_sotterranea" ending="true">
+    <Text>Il n'existe aucune chronique, aucune histoire, aucune légende relatant que quiconque ait jamais défait un sphinx sur le plan purement physique. Peut-être un héros exceptionnellement fort comme Héraclès aurait-il eu une chance. Vous ? Aucune.
+
+Un bond fulgurant et vous êtes à terre, écrasée par plusieurs centaines de kilos de muscles. Avec l'énergie du désespoir, malgré la douleur insoutenable de vos côtes brisées, vous tentez encore de ramper, de vous tortiller hors de sa prise, mais des griffes effilées vous clouent au sol, juste avant qu'une morsure terrible ne vous immobilise définitivement, arrachant les chairs et broyant les os.
+
+La dernière image de cette existence que vous emporterez sera la bête buvant comme à une fontaine le sang jaillissant de votre carotide sectionnée au rythme de vos ultimes battements de cœur.</Text>
+  </Page>
+  <Page id="34" music="le_maschere_di_argilla" ending="true">
+    <Text>Vous avez mal. Vous avez beau bander votre volonté contre les assauts de vos sens, vous avez mal. Vous avez mal quand le fil vibre sous vos doigts, vous avez mal quand vous déplacez la navette, vous avez mal à chaque coup d'aiguille. Vos sens sont engourdis par la douleur, vos gestes ralentis par la faiblesse.
+
+Et le temps passe. Inexorablement.
+
+Lorsque l'aube vous cueillera, vous aurez presque fini. Presque.
+
+Mais une œuvre presque terminée n'en reste pas moins une œuvre inachevée, un livre auquel il manque des pages, un blanc dans une mélodie, une sculpture décapitée.
+
+Un échec.</Text>
+  </Page>
+  <Page id="35">
+    <Text>Le Sphinx soupire et commente votre refus avec une pointe d'ironie :
+
+« Une sage décision très certainement. Dans ce cas ne reste que l'énigme. »</Text>
+    <Choices>
+      <Choice text="Continuer" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="36" sound="ruggito_sfinge" music="il_prezzo_della_carne">
+    <Text>Un puissant rugissement triomphal, un rire bestial venu des profondeurs de la terre, résonne dans toute la pièce, suivi quelques instants plus tard de cris de terreur humains, d'un vacarme de lutte, d'objets renversés, de gens courant, se bousculant.
+
+Le roi reste tétanisé quelques secondes, puis reprend ses esprits et ordonne que tous s'arment avant de lui même partir à toutes jambes vers ce que vous aviez identifié comme l'armurerie lors de votre exploration plus tôt dans la nuit. Profitant de la confusion générale, vous vous échappez vous en direction de la salle du trésor.
+
+Cette fois-ci, nulle créature mythologique ne vous barre la route. Seule une odeur rance témoigne qu'un être vivant logeait ici encore récemment. Vous avez la cave et toutes ses merveilles pour vous seule.
+
+Vous commencez à fouiller les caisses une par une, découvrant assez peu de trésors, mais beaucoup d'objets divers, usagés, parfois brisés. Des instruments de navigation, une carte du ciel, des colifichets, une poignée de plumes, un clou de bronze... Le reflet de votre visage sur un boulier terne vous apprend que vous vous êtes encore une fois métamorphosée. Pour prendre une apparence que vous connaissez bien. Une que vous n'auriez jamais imaginé revoir. Celle que vous arboriez dans votre vie précédente, avant la confrontation funeste.
+
+Cela vous transporte de joie, vous fascine, soulève de nombreuses questions. Mais vous ne cessez pas pour autant de fouiller, pressée par le temps et votre engagement auprès d'une thaumaturge assez puissante pour donner ne serait-ce que l'illusion d'avoir défait ce qu'on fait les dieux.
+
+Tout au fond de la dernière caisse, sous les autres et une couche de poussière, vous finissez par découvrir un fatras d'affaires ayant appartenu à une femme. Aussi bien des vêtements que des outils de la vie ordinaire, couteaux, peignes et l'indispensable métier à tisser, mais aussi des accessoires plus ésotériques, des talismans, des pots de poudres et d'herbes mystérieuses.
+
+Et au milieu de tout cela, l'objet de votre quête. Vous le sortez, vous le dépliez, vous l'examinez. Une toile à peine entamée, mais déjà usée par les mauvaises conditions dans lesquelles elle a été conservée. Un brouillon défraîchi bien loin de sa complétion.
+
+Vous comprenez aussitôt pourquoi vous jouez dorénavant votre propre rôle. Pourquoi la sorcière vous a aidée vous et pas une autre. Pourquoi vous seule pouviez accomplir ce dernier acte.
+
+Il faudrait être une génie dans l'art pour réparer, terminer et donner de la superbe à cette amorce de début de commencement de quelque chose en même pas une seule nuit. D'un niveau à rendre jaloux les dieux.
+
+Il faut être vous.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="34">
+        <Requirements>
+          <Variable id="codiceSouffrance" operator="gte" value="1" />
+          <Variable id="codiceMatriarche" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="45">
+        <Requirements mode="any">
+          <Variable id="codiceMatriarche" operator="eq" value="1" />
+          <Variable id="codiceSouffrance" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="37">
+    <Text>Jason se détend.
+
+« Bien. Assez de parlotes. Montre-moi donc ce que tu vaux. »
+
+Et joignant le geste à la parole, il ouvre la devanture de votre robe, contemplant vos seins comme des marchandises.
+
+« Pas mal. Pas mal du tout. » commente-t-il appréciateur.
+
+Et de commencer à tripoter.</Text>
+    <Choices>
+      <Choice text="Vous laisser faire" goto="28" />
+      <Choice text="Essayer de vous dégager" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="38" sound="braciere_bronzo" soundDelay="2">
+    <Text>Au cours de votre exploration, vous tombez sur une curiosité qui vous étonne. Dans une pièce fermée mais pas verrouillée, un cul-de-sac sans fenêtre aux murs nus, repose une statue d'Héra, épouse de Zeus, déesse du mariage et protectrice des femmes.
+
+La sculpture est splendide, à échelle humaine, en plein pied, digne de figurer dans un temple. Elle est parfaitement entretenue, avec même des offrandes récentes, mais une telle effigie chez un particulier, fut-il roi, et surtout dans une salle excentré et difficile d'accès vous titille.
+
+Vous rappelant des paroles du triste invité reliant la déesse aux trésors oubliés du roi, vous fouillez en détails le lieu, et ne tardez à découvrir une trappe secrète dans le sol, juste derrière la statue. Vous l'ouvrez non sans quelques difficultés, scellée par la poussière qu'elle est, mais nul cadenas ou barre ne vous gêne en sus, et un escalier plongeant dans les ténèbres se révèle bientôt à vous.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="39">
+    <Text>Le vieillard laisse échapper un grognement de mépris :
+
+« Crois-tu que je ne l'ai déjà fait ? Cet idiot ne veut rien entendre. Ou plutôt, il espère que j'ai raison, que les eaux du Léthé se refermeront bientôt sur lui et mettront un terme à ses tourments. Depuis la mort de sa femme et de ses enfants, il n'a cessé d'appeler les Enfers de tous ses vœux, dans ses actions sinon dans ses paroles. »
+
+Il désigne la royale carcasse avachie d'un mouvement de main tout aussi dédaigneux.
+
+« Mais il n'est pas destiné à mourir par excès de tout, et cela il le saurait déjà s'il daignait m'écouter au-delà de ce qui l'arrange. »</Text>
+    <Choices>
+      <Choice text="En savoir plus sur la mort de la famille royale" goto="8" />
+      <Choice text="En demander davantage sur sa funeste prédiction" goto="20" />
+      <Choice text="Prendre congé" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="40">
+    <Text>Le regard du centaure se perd dans le vague alors qu'il se remémore des jours meilleurs.
+
+« Dans sa jeunesse, c'était son charisme qui faisait sa force. Qui d'autre peut se vanter d'avoir rassemblé sous sa bannière les plus grands héros du monde, cinquante légendes pour une seule quête ? Quand ils embarquèrent, je pensais qu'ils allaient écrire la plus belle des épopées. Au final, par sa seule faute, ils composèrent une tragédie. »
+
+Il écarte les bras pour désigner la pièce tout autour de lui.
+
+« Dont voici le dernier acte. »</Text>
+    <Choices>
+      <Choice text="Ramener son attention sur les jours heureux" goto="44" />
+      <Choice text="Lui demander les raisons de sa présence en ces lieux" goto="2" />
+      <Choice text="Abandonner ce compagnon de peu de joie" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="41" sound="ruggito_sfinge" music="il_banchetto_di_giasone">
+    <Text>Le rire bestial se répercute à travers toute la cave, rebondissant sur les solides murs de pierre jusqu'à emplir tout l'espace.
+
+« Ainsi soit-il. » déclare-t-elle avec malice.
+
+La bête se rassoit ensuite, reprenant une pose à peine moins intimidante, et explique :
+
+« Les chaînes qui me retiennent ici sont faites de mots. »
+
+Et de réciter :
+
+Fille d'Échidna, en quelques notes, ton énigme fut percée, et ton vrai nom dévoilé,
+
+Par celui-ci, Sphinx, je t'ordonne, au nom des anciennes lois,
+
+De servir celui qui de toi a triomphé,
+
+Orphée l'enchanteur, fils de Calliope, première des Muses,
+
+Et s'il ne désire point ta force pour lui-même,
+
+De la confier à celui qui le commande en ce jour,
+
+Jason, premier des Argonautes.
+
+Et de reprendre d'un air mauvais :
+
+« Mon emprisonnement est attaché à la vérité et à la pérennité de ce serment. Qu'une seule de ces solennelles déclarations se retrouve invalidée, et ma liberté me sera rendue. Que Jason renonce à son emprise sur moi, ou qu'il rompe ce pacte d'une façon ou d'une autre, et enfin je pourrais partir de cette cave sordide. »
+
+Elle jette un œil en direction du chemin par lequel vous êtes arrivée :
+
+« Je te laisse partir car je sais que tes pas te ramèneront ici d'une façon ou d'une autre, car tu ne peux renoncer à pareille chance. À toi d'essayer de convaincre notre cher roi de t'éviter de finir dans mon estomac. »
+
+Vous vous inclinez, et, avant que la bête ne change d'avis, vous hâtez de décamper.
+
+Alors que vous remontez l'escalier, votre cœur battant à tout rompre, vos pensées tourbillonnent dans votre tête. Comment allez-vous persuader Jason d'Iolcos de relâcher un tel monstre ? Même avec un sacré coup dans le sang, vous espérez difficilement qu'il va simplement hocher la tête si vous lui demandez un tel service.
+
+Perdue dans vos réflexions, vous ne réalisez pas immédiatement que votre apparence vient encore une fois de se modifier et manquez de trébucher dans vos nouvelles sandales à semelles compensées.
+
+La chaude fourrure a laissé place à une robe légère, et vous avez la désagréable impression de ne rien porter en-dessous. Vos cheveux sont impeccablement coiffés en un casque de boucles joyeuses, et en effleurant du bout des doigts votre visage, vous sentez la présence du maquillage pour éclaircir votre teint, colorer vos lèvres et accentuer vos sourcils.
+
+Nul besoin d'un miroir pour savoir à quoi vous ressemblez actuellement, et vous n'êtes pas sûre d'aimer ce que cela implique.
+
+Vos pas vous reconduisent dans la grande salle où l'avancement de la soirée a formidablement calmé le bruit. Les musiciens jouent maintenant des mélodies plus tranquilles, un simple fond sonore, une bonne partie des invités se sont éclipsés, soit rentrés chez eux soit repliés dans les autres pièces, et nombre d'autres sont plongés dans l'hébétude de leurs excès.
+
+Le roi sur son trône continue à présider l'assemblée, encourageant les derniers fêtards encore actifs, mais il montre lui aussi des signes d'épuisement. Sa coupe dandine dans sa main, ses yeux sont vitreux. Il sert contre lui une des prostitués dans un geste possessif, mais l'ignore cependant totalement, ne lui accordant même pas un regard.
+
+Lorsque vous vous fondez à ses côtés, il tourne la tête avec difficulté, puis repousse sa compagne du moment sans ménagement avant de vous attraper par la taille et de vous attirer à lui :
+
+« Solon ne m'avait pas dit qu'il avait une nouvelle fille. C'est parfait, je commençais à me lasser. D'où viens-tu donc ma belle ? »
+
+Qu'allez-vous donc répondre à cela :
+
+De Corinthe ?
+
+De Thèbes ?</Text>
+    <Choices>
+      <Choice text="De Corinthe" goto="4" />
+      <Choice text="De Thèbes" goto="11" />
+      <Choice text="De Pimpleia" goto="31">
+        <Requirements>
+          <Variable id="codiceMariage" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="42">
+    <Text>« L'amour ? »
+
+Le rire rauque et forcé qui retentit est presque douloureux à entendre.
+
+« L'amour est une flamme sauvage. Au début, sa chaleur est agréable, mais rapidement le brasier s'étend et brûle tout sans distinction, ne laissant que des os calcinés. Si Eurydice avait vécu, Orphée aurait sans doute bu la cigüe de désespoir après avoir surpris sa femme au lit avec un quelconque satyre. Non que cela aurait empêché tous les idiots du monde de chanter ses louanges. »</Text>
+    <Choices>
+      <Choice text="Lui dire qu’il est bien dur avec un ancien compagnon" goto="32" />
+      <Choice text="Changer de sujet" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="43" music="la_sfinge_sotterranea">
+    <Text>Lorsque ses propres phalanges sont abîmées à force de frapper, le roi cesse enfin de vous passer à tabac et ordonne avec mépris à ses serviteurs de nettoyer. Deux robustes esclaves vous transportent dans une des pièces attenantes tandis que d'autres effacent les traces de ce qui vient de se passer.
+
+Abandonnée sur une paillasse, vous vous relevez avec difficulté, vous appuyant sur le mur et marchez à petits pas en direction de la salle du trésor. Vous avez mal partout, une sourde douleur permanente passant dans les aigües à chaque action. Simplement conserver votre équilibre demande des efforts conscients et intenses.
+
+À force de volonté, vous parvenez cependant à vous traîner, mètre après mètre, marche après marche, jusqu'à la salle du sphinx. La créature est là qui vous attend, vous regardant de haut sans la moindre once de pitié.
+
+« Un échec donc. Reste l'énigme. » déclare-t-elle posément.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="44">
+    <Text>Pendant un très bref instant, le centaure sourit presque :
+
+« Une époque magnifique. Les héros s'alignaient sur le pont lors du départ. Plusieurs dizaines de beaux jeunes hommes, quelques vétérans endurcis, et même une femme. Tous resplendissaient, confiants en l'avenir et en leur destinée. Sur le quai, leurs familles, leurs régents, leurs maîtres. Nous saluâmes leur départ de mille encouragements et de presque aussi nombreux présents. Je leur offris personnellement une carte des cieux tracée par mes soins pour qu'ils ne perdent jamais le chemin de la Colchide. »
+
+Une pause, puis sa sombre mélancolie le reprend :
+
+« Cette carte, je crois qu'il la possède encore. Enterrée quelque part dans le noir avec les autres souvenirs de cette époque bénie, loin de ses yeux et de son cœur. Il n'y a que la statue d'Héra qu'il n'ait osé jeter dans l'oubliette, car il lui reste assez de jugeote pour ne pas fâcher les dieux outre mesure. »
+
+Et de l'être de s'enfoncer à nouveau dans un triste mutisme.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMatriarche" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="45" sound="canto_sirena" soundDelay="5" music="il_prezzo_della_carne" ending="true">
+    <Text>Jason vit. D'une main il presse son flanc pour contenir l'hémorragie, là où les griffes du monstre l'ont labouré. De l'autre il s'appuie sur une épée marquée du sang de cette même bête. Le combat a duré toute la nuit et coûté la vie à nombre de ses gardes et ses esclaves, ainsi qu'à quelques invités, mais au point du jour la victoire fut leur et la créature en fuite.
+
+Combien d'années se sont écoulées depuis la dernière fois qu'il a dû combattre qui que ce soit capable de se défendre, regarder droit dans les yeux un véritable monstre suffisamment fort pour le broyer comme un fétu de paille tout roi qu'il soit, affronter la mort en face la peur au ventre, il ne s'en souvient même plus. Cela doit remonter à l'expédition. Comme toujours.
+
+Malgré la douleur et la faiblesse, il refuse tout soin. Il n'a pas le temps. Il doit avant toute chose vérifier que le pire n'est pas arrivé. Si le gardien de ses restes a failli à son poste, c'est qu'elle est derrière tout ça.
+
+Elle. Toujours elle. Il en aura aimé, et même épousé, d'autres, mais quand les gens évoquent sa femme, sa reine, c'est toujours d'elle qu'il s'agit. Son nom est associé au sien par des chaînes sanglantes qu'il n'a cessé d'essayer de briser pour les découvrir toujours plus robustes le lendemain. Régulièrement, aux heures les plus sombres de la nuit, il s'imagine qu'elle est là, à l'attendre un poignard à la main, prête à en finir. Mais jamais le coup ne vient.
+
+La trappe montre effectivement des traces d'une utilisation récente. Cela lui demande un effort conséquent pour la soulever dans son état, mais il y parvient à force de volonté. Un nuage de poussière et une araignée s'échappent quand le carré de bois retombe lourdement, puis il s'engage dans l'escalier, tenant maladroitement une lanterne du bout de deux doigts teints en rouge par sa blessure.
+
+Là-dessous, le chaos règne. Tout ce que contenait la pièce est sens dessus dessous. Chaque souvenir qu'il s'était efforcé d'éloigner de lui sans oser le détruire est exposé à son regard, fragment nu de son passé. Chaque membre de l'équipage de l'Argo a laissé un part de lui-même ici, même les plus insignifiants que la légende a oubliés. Mais pas lui.
+
+La toison elle-même n'a pas été épargnée. Sa laine sans prix a été utilisée comme matière première pour produire un fil tout aussi doré dont les derniers fragments pendent encore du métier à tisser.
+
+Et au mur s'affiche une œuvre d'art.
+
+Sa beauté est stupéfiante. Elle est sans nul doute le magnum opus d'un maître, son œuvre la plus aboutie, la plus exceptionnelle, celle qui traversera les siècles et entretiendra la légende. Dans un ultime geste de défiance et d'orgueil, sa créatrice l'a même signée, et à la lecture de ce nom il vient au roi la pensée sacrilège que peut-être ses prétentions n'étaient pas injustifiées.
+
+Trop parfaite pour être brûlée. Trop impie pour jamais sortir de l'ombre. Une pièce en accord parfait avec ce lieu.
+
+La tapisserie elle-même est une magnifique fresque représentant un groupe de jeunes gens euphoriques sur un bateau. Le dessin est riche en personnages à toutes les profondeurs et dans tous les recoins, ombres perdues dans les cordages, silhouettes appuyées sur le bastingage, bustes au premier plan.
+
+Pour Jason qui les a réellement connus, il est évident que l'auteure a laissé libre cours à son imagination, s'inspirant parfois d'autres représentations mais travaillant souvent à partir de rien. Certains héros mineurs n'ont juste pas de point commun avec ce à quoi ils ressemblaient réellement. Et pourtant, par un habile symbole glissé dans le repli d'un vêtement, une ombre particulière, une expression ou une position bien choisie, il est possible de reconnaître chacun, de deviner les raisons de leurs présences en ces lieux. Ordre divin, quête de gloire, simple amitié, soif d'aventure… De chaque protagoniste émane une impression de réalisme, de vie, d'existence, de but, de futur.
+
+Leur ancien commandant a la gorge noué. Il lui semble qu'en tendant simplement le bras il pourrait les toucher, revenir à cette époque bénie où tout était possible, où le monde s'offrait à eux. Mais ses doigts ne rencontrent que l’entrelacs de la toile.
+
+Malgré cette foule, le tableau est ainsi conçu que toutes les lignes, tous les regards, convergent vers le couple central, resplendissant dans leurs habits d'or.
+
+Un héros triomphant, au sommet de sa force physique et de gloire, débordant de joie, serrant contre lui sa compagne, son si précieux butin négligemment abandonné sur le sol à ses pieds.
+
+Lui. Avant.
+
+Et dans ses bras, lui rendant son sourire et s'agrippant à lui comme à la vie même, une beauté orientale transie d'amour au ventre arrondi par un enfant à naître.
+
+Médée.
+
+Deux amants heureux à qui l'avenir tend les bras.
+
+Un passé à jamais enterré, une utopie perdue.
+
+Et Jason, père de Merméros et Phérès, tombe à genoux et fond en larmes.</Text>
+  </Page>
+</Librogame>

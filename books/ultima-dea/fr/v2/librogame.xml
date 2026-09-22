@@ -1,0 +1,1126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="ultima-dea-fr" workId="ultima-dea" language="fr" title="Ultima Dea" author="Skarn" checks="deterministico" genre="Fantastique, héroïque" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="l_imperatore_eterno">
+  <Blurb>« Mais ce que quatre ont créé, quatre peuvent détruire. »
+
+L'Empereur est immortel : quatre dieux l'ont voulu ainsi, et depuis mille lunes il conquiert et il règne. Vous êtes seul avec lui dans la salle du trône, l'Épée des Origines à la main, et vous allez perdre.
+
+Vous avez déjà perdu. Plusieurs fois. Vous ne vous en souvenez pas — seulement des impressions, des intuitions que rien n'explique. Car un dieu vous a accordé de recommencer, et il l'a fait à sa manière.</Blurb>
+  <ContentWarnings>Un duel à l'épée qui dure tout le livre : blessures décrites de près, os brisés, sang. Plusieurs fins racontent la mort du protagoniste. Une boucle temporelle vécue comme un désespoir qui s'approfondit à chaque tour.</ContentWarnings>
+  <Changes>
+    <Change>Adapté pour cette application : la structure, les règles et certaines parties du texte ont été modifiées ou retirées pour fonctionner avec son moteur</Change>
+    <Change>Sons et musiques d'ambiance ajoutés, livrés avec le livre</Change>
+  </Changes>
+  <Audio>
+    <Sound name="impatto_armatura_divina" file="impatto_armatura_divina.ogg" />
+    <Sound name="lampo_intuizione" file="lampo_intuizione.ogg" />
+    <Sound name="riavvolgimento_temporale" file="riavvolgimento_temporale.ogg" />
+    <Sound name="spada_delle_origini" file="spada_delle_origini.ogg" />
+    <Sound name="trono_crollo" file="trono_crollo.ogg" />
+    <Music id="frammenti_di_memoria" file="frammenti_di_memoria.ogg" />
+    <Music id="il_filo_del_tempo" file="il_filo_del_tempo.ogg" />
+    <Music id="l_imperatore_eterno" file="l_imperatore_eterno.ogg" />
+    <Music id="la_caduta_degli_dei" file="la_caduta_degli_dei.ogg" />
+    <Music id="sala_del_trono" file="sala_del_trono.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <Variables>
+    <Variable id="codicePossible" name="Mot Possible" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceCertain" name="Mot Certain" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceLegende" name="Mot Légende" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceVie" name="Mot Vie" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceMort" name="Mot Mort" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceSablier" name="Mot Sablier" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceCorps" name="Mot Corps" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceEsprit" name="Mot Esprit" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceUnique" name="Mot Unique" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceSecousse" name="Mot Secousse" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codicePluie" name="Mot Pluie" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceSucces" name="Mot Succès" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceFissure" name="Mot Fissure" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceFaille" name="Mot Faille" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceDifficulte" name="Mot Difficulté" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codicePerdu" name="Mot Perdu" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceOuverture" name="Mot Ouverture" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1">
+    <Text>Et l'Empereur se tût, son plaidoyer fini.
+
+Et l'assemblée divine médita sur ses paroles.
+
+La plupart des dieux décidèrent d'ignorer ce fol mortel.
+
+Certains s'emportèrent face à tant d’outrecuidance.
+
+Mais quatre furent conquis et le bénirent.
+
+« Ni la maladie, ni l'âge, ni le poison, jamais plus tu ne craindras », clama le Guérisseur.
+
+« Nulle arme de bois, de pierre, de verre, d'os, de corne ou de métal
+
+Ne pourra désormais te faire le moindre mal », renchérit le Guerrier.
+
+« Eau, terre, air, jamais ne t'étoufferont ou ne te manqueront,
+
+Et feu et foudre ne seront plus un danger, mais des alliés. », ajouta la Reine Élémentaire.
+
+« Et ce que nous t'offrons aujourd'hui, nul être, soit-il dieu ou homme,
+
+Jamais ne pourra te le retirer. Ainsi en ai-je décidé ! », conclut le Père de Tout.
+
+(...)
+
+Et pendant mille lunes l'Empereur conquit.
+
+Et pendant mille lunes l'Empereur régna. (bis)
+
+Mais ce que quatre ont créé, quatre peuvent détruire.
+
+Et un bras valeureux, par quatre armé, de l'Empereur
+
+Éternel triompher.
+
+Chance et Destin lui ouvriront une voie vers le succès,
+
+Le Héros de Tous les Temps lui donnera le courage,
+
+La Première Déesse, née avec l'univers et qui disparaîtra avec lui,
+
+Lui confiera la puissance absolue, celle que même les autres dieux craignent.
+
+Mais c'est la Dernière Déesse à être jamais invoquée, la plus fragile et la plus forte,
+
+Elle et elle seule qui dissipera les ténèbres et lui apportera la victoire.
+
+Geste de l'Âge Impérial (extraits)
+
+*****
+
+Il était une fois un empereur. Il s'était emparé de la couronne par la force, et se maintenait au pouvoir de même. Il régnait sur le plus grand territoire qu'aucun homme ait jamais conquis, mais cela ne lui suffisait pas. Eût-il possédé toutes les terres connues qu'il ne serait arrêté pour autant, et aurait entrepris d'asservir les habitants des mers et les cieux.
+
+Cet empereur disposait cependant d'un atout par rapport à tous les autres hommes qui l'avaient précédé avec de semblables ambitions : l'immortalité. Les décennies s'écoulaient sans que l'âge, l'acier ou le poison ne l'affectent, et pourtant tous n'avaient de cesse de le harceler.
+
+Mais si le temps n'avait pas de prise sur lui, il affectait le monde qui l'entourait. La crainte qu'il inspirait fut peu à peu remplacé par la colère, la rage, la haine, et vint un jour où ses propres soldats se retournèrent contre lui. Mille flèches furent décochées, mille lames s'abattirent. Sans lui faire le moindre mal.
+
+Et l'empereur saisit alors son épée. Et le carnage commença.
+
+Calmement, méthodiquement, infatigablement, il extermina les insurgés un par un, ne s'arrêtant que lorsque tous ses adversaires furent morts ou en fuite.
+
+La terreur née de ce sinistre exploit rétablit le statu quo pendant de longues et nombreuses années. Mais de nouveau, le temps fit son œuvre. Les mémoires de ce sinistre se diluèrent, et la révolte gronda à nouveau.
+
+Cette fois-ci cependant, la rébellion possédait elle aussi une carte maîtresse capable de changer la donne : la légende vivante, l'être béni des dieux :
+
+VOUS.
+
+Encore une fois, l'imposant espadon noir de l'Empereur vous manque de peu. Votre main directrice a beau enserrer l'Épée des Origines, la première lame ayant existé, née à l'aube des temps, l'autre le Bouclier Parfait, créé pour pouvoir arrêter la première, et votre corps être revêtu de la meilleure armure jamais forgée par l'homme, vous faites pâle figure par rapport à votre adversaire. La légende veut qu'il fût un jour un être de chair et de sang, mais il n'y a plus rien d'humain dans ce géant infatigable, trois têtes plus grand que vous et emmitouflé dans assez de plaques d'acier noir pour équiper une armée. Vous ne distinguez rien entre les couches de métal qui pourraient laisser supposer qu'un homme se cache là-dessous, et non un spectre ou un démon.
+
+Sa technique de combat est à l'inverse l'exemple même de la simplicité. Elle se base sur de larges attaques de taille, cherchant à vous renverser et vous découper en comptant sur sa force et l'allonge que lui donne sa lame démesurée. Pas de feinte, pas de botte, pas de ruse. Il n'en a pas besoin. Il compte sur son armure, sur ses protections divines, sur la fatigue qui va finir par vous gagnez.
+
+Et vous tournez dans la salle du trône déserte, enchaînant les passes d'armes, duo de danseurs cuirassés d'acier, éclairés dans d'étranges teintes colorées par la lumière qui filtre au travers des vitraux sur lesquels s'affichent les chroniques de la longue vie de votre adversaire.
+
+Et le glaive impérial se lève à nouveau, jeté en arrière dans la préparation d'une attaque particulièrement ample.</Text>
+    <Choices>
+      <Choice text="Esquiver" goto="6" />
+      <Choice text="Parer à l’aide de votre bouclier" goto="11" />
+      <Choice text="Lancer une violente estocade" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="2" sound="impatto_armatura_divina">
+    <Text>Votre arme heurte l'armure de l'Empereur avec fracas... sans lui infliger le moindre dégât apparent. Sa propre attaque est bien plus efficace. Vous ne devez qu'à la promptitude de vos réflexes de n'être pas coupé en deux. Sa lame vous zèbre cependant le torse, coupant à travers votre armure et votre torse. Vous reculez d'un pas, et votre adversaire cherche à creuser son avantage.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceDifficulte" value="1" />
+        <setVariable target="codiceFaille" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="3" music="la_caduta_degli_dei" ending="true">
+    <Text>Vous vous écroulez sur le sol, comprimant votre blessure au ventre. L'Empereur lui reste immobile, figé dans une posture d'attaque, son arme dégoulinant de votre sang. L'Épée des Origines, elle, glisse lentement du crâne dans lequel elle était plantée et retombe.
+
+Elle n'a pas touché le sol que l'Empereur se remet à bouger. Lentement et par saccades, comme une machinerie n'ayant pas servi depuis longtemps, mais ses mouvements sont plus souples, plus rapides, à chaque instant.
+
+Vous ramassez l'Épée, la saisissez à deux mains, et vous redressez. Profitant que votre adversaire soit encore gauche, vous vous ruez sur lui et plantez de toutes vos forces votre arme à travers le métal défoncé de son casque. La lame impériale mord de nouveau votre chair alors que vous effectuez cette action, mais vous tenez bon, et en pesant de tout votre poids, vous parvenez à faire basculer l'Empereur en arrière. Il s'effondre sur le sol dans un fracas métallique, vous entraînant dans sa chute.
+
+*****
+
+Quelque part dans les profondeurs de la terre, le lourd couvercle de pierre d'un sarcophage tombe bruyamment sur le sol, dérangeant la poussière tranquillement accumulée depuis des siècles. L'explorateur range son pied de biche, satisfait. À l'intérieur repose une gigantesque armure dans le crâne de laquelle quelqu'un a violemment planté une épée. L'homme est déçu. Il aurait espéré qu'une tombe aussi bien défendu aurait au minimum contenu un peu d'or. Enfin, ce maigre butin intéressera probablement des collectionneurs. Il lui faudra plusieurs voyages pour ramener cette cuirasse, morceau par morceau. Il décide donc de commencer par le plus simple, et retire l'épée...
+
+Fin 4 : Un mal scellé
+
+V : Rendez-vous donc au numéro</Text>
+    <Choices>
+      <Choice text="Tenter une dernière fois votre chance" goto="4" failGoto="3" ask="Le numéro caché en ces lignes ?" answer="4|quatre|IV" />
+    </Choices>
+  </Page>
+  <Page id="4" sound="riavvolgimento_temporale" music="il_filo_del_tempo">
+    <Text>À la croisée des chemins, un voyageur discute avec deux étranges personnages. Au coin du feu, un enfant écoute des récits de chevaliers pourfendant des nécromants. Un guerrier engoncé dans une armure calcinée affronte un dragon. Un adolescent se réveille dans la paille, la tête encore brumeuse des excès de la veille. Un homme gravement blessé marche résolument au milieu des images figées de son passé.
+
+Assis sur son trône, un géant barbu contemple le passé, le présent et le futur du visiteur qui s'approche vers lui à travers l'infinité des cristaux flottants dans les airs, chacun contenant une infime tranche de son existence. Ce colosse est vêtu d'une tunique grossière, une simple peau de bête équarrie, et son siège est si grossier qu'il semble avoir été taillé directement dans la roche par le vent et la pluie. Cependant, même le pire des fous, épaulé par une armée d'un million de géants, n'oserait le traiter de primitif tant sa puissance transparaît à travers tout son domaine.
+
+Cette fois, le vermisseau qui le distrait tant hésite. Après tant de boucles, il lui semble avoir exploré tous les chemins, toutes les possibilités. Aucune n'est parfaite, aussi devrait-il choisir le moindre mal. Et pourtant, quelque chose dans ses tripes lui fait dire qu'il a raté un embranchement, une possibilité, qu'il y a encore autre chose. Et soudain, le déclic se fait dans son esprit. Et il éclate alors de rire devant la simplicité, mais aussi la démence, de la solution qu'il vient de concevoir. Et le dieu le surplombant, malgré tout son pouvoir, frissonne en entendant ce son.
+
+*****
+
+Les mêmes personnages, le même lieu. Le dieu écoute le requête du fou qui a osé brisé toutes les lois de la nature pour venir lui parler, ici, hors du temps et de l'espace. Cependant, cet exploit l'impressionne bien moins qu'il l'irrite, car il témoigne de l'extrême orgueil de ce mortel. Aussi décide-t-il de lui accorder son souhait, mais à sa manière.
+
+Ce misérable obtiendra effectivement le pouvoir de recommencer, la force de remonter le flot du temps jusqu'au moment où il a commis son erreur pour la corriger. Mais ce choix ne sera pas conscient. Si à un seul moment, il doute de ses décisions passées, il estime qu'un meilleur avenir est possible, alors il sera automatiquement catapulté dans le passé. Et il ne gardera pas de souvenirs exacts de son parcours précédent, seulement des impressions diffuses, des intuitions incompréhensible mais pourtant justes. Mais dans son inconscient continuera à résider tous les regrets, toutes les peines, tous les malheurs de ses essais ratés. Et à chaque boucle, si son corps conservera son âge, son esprit s'enfoncera petit à petit dans les ténèbres du désespoir sans même en comprendre la raison. Et comme l'homme est incapable de se contenter de ce qu'il possède, ce cycle ne s'arrêtera en réalité jamais.
+
+*****
+
+Il avait laissé jusqu'au lever du soleil aux manants qui encerclaient sa forteresse pour s'enfuir. Ceux-ci ont préféré attaquer au beau milieu de la nuit. Les pierres pleuvent depuis plusieurs heures sur le château, et un des murs a été fortement endommagé par un tonneau de cette nouvelle découverte, la poudre orientale. Les premiers régiments sont déjà partis à la rencontre des assaillants, mais ils ne seront clairement pas assez nombreux pour espérer l'emporter face à la multitude adverse. Aussi va-t-il devoir finir le travail lui-même. Quand ces fous comprendront-ils qu'ils ne courent qu'à leur propre mort en osant le défier ?
+
+Dégainant sa lame, le géant en armure franchit le portail, déjà partiellement détruit, à la tête de sa garde personnelle. La foule de ses ennemis lui fait face. Pour lui, une simple armée d'insectes. Mais soudain, son instinct, aiguisé par une très, très, longue vie, repère un cloporte différent des autres. Escortant le général adverse se trouve un guerrier qui dépareille au milieu de ses semblables. Ni milicien, ni soldat professionnel, il porte une équipement de la meilleure qualité, mais dont les pièces sont disparates. Bouclier, casque et armure témoignent de techniques de forge des quatre coins de l'empire, dont la plupart tombés en désuétude. Mais cela n'est rien par rapport à l'épée.
+
+Elle est encore endormie dans son fourreau, mais sa puissance tranquille rayonne jusqu'ici. Il ne s'agit pas d'un simple morceau de métal acéré, mais d'une véritable déchirure dans le tissu de la réalité, qui existe dans bien plus de dimensions que l’œil ne peut le percevoir. Cette lame peut théoriquement tout trancher, la matière, le son, la lumière, les concepts, sans se soucier des règles établies par la nature, les dieux et les hommes. Sa seule faiblesse est son propriétaire, qui lui est soumis à ses propres limites, et ne peut pas atteindre l'abstraction suffisante pour en déployer le vrai potentiel. Mais même le minuscule fragment actuellement déployé la place bien au-dessus des autres armes, ordinaires ou légendaires. Il n'est pas sûr que cela soit suffisant pour le blesser, mais s'il existe une seule arme capable de lui faire du mal, ce sera celle-là et nulle autre.
+
+Son propriétaire, comme on pouvait s'y attendre, a reçu au minimum la bénédiction de deux divinités, si ce n'est plus. Les auras conflictuelles sont perceptibles, se mélangeant et s'affrontant, créant un chaos l'empêchant d'en deviner la source. Ce n'est que fétu de paille par rapport aux quatre dons majeurs dont il dispose, mais cela a son importance. Il est, comme lui, un joueur dans la grande partie céleste, et non un figurant comme les milliers et les milliers d'hommes qui les entourent.
+
+Aussi l'Empereur prend sa décision. Il demande à garde de se replier dans le château, et d'attendre ses ordres, de laisser la grande porte sans défense. Celle-ci gronde, mais l'obéissance est une seconde nature chez elle, et elle se conforme. Alors l'Empereur retourne dans le grand hall et s'assoit sur le trône, attendant la seule distraction valable qu'il ait eu depuis bien des années.
+
+*****
+
+« Qu'est-ce que cette stratégie ? On dirait qu'il nous invite à entrer ! Autant nous dérouler le tapis rouge ! »
+
+Le général rebelle fulmine. Jusqu'ici, tout se passait trop bien. Et voilà que soudain, l'Empereur retire ses défenseurs. La porte béante semble n'attendre qu'eux, mais tout cela pue le piège à plein nez. Qu'a donc encore en réserve ce démon ? Peut-être a-t-il connecté ce portail aux plans inférieurs, et le simple fait de le franchir le précipitera lui et ses hommes directement en enfer ? Ou peut-être dégage-t-il simplement le chemin pour permettre aux créatures terrifiantes, dont ses souterrains regorgeraient, de sortir au grand jour ? À moins qu'il ne soit si confiant qu'il estime réellement ne pas avoir besoin de se défendre ?
+
+« J'y vais. »
+
+Celui qui a parlé ainsi est évidemment ce casse-cou mystique qui leur sert de joker. Oh, le bonhomme est doué, rien à dire. Mais il aurait largement préféré, qu'au lieu d'un équipement que lui seul peut utiliser, celui-ci lui ramène une dizaine de flèches capable de franchir la carapace de l'Empereur. Cela lui aurait donné une solution de rechange au cas où le gus échouerait. D'autant plus que le gus a failli être en retard.
+
+— J'ai déjà envoyé des éclaireurs. Je n'allais pas prendre le risque que vous vous fassiez tuer par trois malheureux soldats embusqués derrière la porte. D'après leur rapport, selon toutes les apparences, la voie est la libre jusqu'à la salle du trône où l'Empereur siège seul. Ce qui ne veut pas dire pour autant que le monde ne s'écroulera pas sur nous dès que nous franchirons le seuil.
+
+— Alors c'est le moment de tenter ma chance. Donnez-moi une heure.
+
+Le général soupire. Inutile d'argumenter. Son interlocuteur a fait ses premières armes en infiltrant la montagneuse forteresse d'un vassal impérial, puissant sorcier de son état, et en éliminant son propriétaire. S'introduire en territoire ennemi et en ressortir vivant, il connaît.
+
+*****
+
+Alors qu'il descend seul vers le château, l'homme se demande s'il a fait le bon choix. Il n'a trouvé que deux des quatre divinités qu'il était censé rencontré. Il aurait pu continuer à chercher encore un peu, mais il a préféré chevaucher sans s'arrêter, arrivant juste à temps pour participer à la bataille finale. Il avait le sentiment que s'il était en retard ne serait-ce que d'une journée, des milliers de personnes mourraient inutilement, ce qu'il ne pouvait bien sûr tolérer, même si cela l'obligeait à sacrifier un atout.
+
+Il franchit les portes ouvertes. Aucun problème, aucune embuscade. Il remonte le grand hall. Rien à signaler. Il arrive devant l'Empereur, dans l'armure qui ne le quitte jamais, assis sur son trône. Il se lève à son approche, sans un mot, et brandit son arme démesurée. Et l'acier heurte l'acier, et le combat commence.
+
+Une feinte échouée. Une parade réussie. Deux coups de taille bloqués. Un estoc manqué. Match nul pour l'instant. Et alors que le géant se prépare de nouveau à frapper, VOUS êtes fin prêt à esquiver.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceLegende" value="1" />
+        <setVariable target="codiceUnique" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="6" />
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>Les coups pleuvent sur vous. Votre adversaire vous force à maintenir la défensive, lui ne craignant pas la fatigue. Vous ne vous en tirerez pas sans prendre de risque. Et soudain, vous la voyez. L'ouverture parfaite, l'instant tant attendu. Abandonnant toute prudence, vous lancez une superbe estocade. Comme mue par une volonté propre, votre lame s'enfonce dans l'un des rares points vulnérables de l'armure : la mince fente qui sert à la vision. Elle continue sa route, passant à travers quelque chose avant de ressortir de l'autre côté du crâne. Au même moment, l'épée de l'Empereur vous transperce de part en part avec une violence démente. Le combat semble alors s'arrêter. Vous restez tous les deux figés, mutuellement empalés.
+
+L’Empereur ne tombe pas, il reste simplement immobile. Vous vous projetez en arrière d'un coup violent pour vous dégager. Le sang coule à flots dès que le métal sort de la plaie. La douleur est insupportable. Vous avez survécu à pire, mais ce pire était très proche de votre état actuel, et vous aviez alors reçu des soins d'origine surnaturelle.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceSucces" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="6" music="frammenti_di_memoria">
+    <Text>L'étrange couple a croisé votre route à un carrefour comme il y en tant d'autres. Le lieu lui-même était sans importance. Vous deviez les rencontrer tôt ou tard, que ce soit ici, dans une auberge ou sur un toit par une nuit d'orage. L'homme veillait à ce que cela se produise, et la femme s'assurait que vous ne pourriez prédire où et quand. Habillé, coiffé, rasé avec une rigueur militaire, tout chez lui montre la minutie, un désir maniaque d'ordre. Jusqu'à son visage, parfaitement symétrique, et sans la moindre trace d'un simple grain de beauté pour en briser la continuité. Sa compagne est son exacte opposée. Elle est vêtue de l'ensemble le plus hétéroclite et incohérents de vêtements que l'on puisse imaginer : un petit soulier fin côtoie une lourde botte en métal, un carré de soie pourpre ravaude un capuchon de bure, une manche à crevée révèle un tissu d'or, un d'un vert très vif, de la laine, de la paille, et suffisamment d'autres bizarreries pour passer une vie entière à les énumérer. Son physique propre suit la même absence de logique, chacun de ses cheveux abrite une couleur différente de ses voisins, et parcourent à eux tous le spectre complet de l'arc-en-ciel.
+
+L'homme consulte un épais ouvrage, rédigé à la plume en colonnes strictes d'une écriture resserrée, comme un livre de compte, et commence à lire une description détaillée de votre vie, votre naissance, votre jeunesse, vos débuts, le commencement de cette quête. Il arrive à l'instant de cette rencontre, puis commence à vous énumérer le futur, jusqu'à votre défaite et votre mort face à l'Empereur.
+
+« Telle est votre destinée, et telle restera-t-elle si nous ne nous en mêlons pas, déclare-t-il alors. J'ai le pouvoir de réécrire cette fin. Je peux vous forger une voie vers le succès. Elle sera certaine, mais unique. Prenez-là, et vous triompherez. Manquez un embranchement, et vous mourez. »
+
+« Ou je peux tout simplement vous retirer des pages de ce vieux barbon, ajoute la femme. L'univers ne vous guidera plus, en bien ou en mal, et vous serez condamné aux affres de la chance, tantôt favorable, tantôt méprisante. Peut-être cela sera-t-il suffisant, peut-être pas. Mais où serait l'amusement sinon ? »
+
+Destin et Chance vous proposent un choix difficile, le premier d'une longue série.</Text>
+    <Choices>
+      <Choice text="La proposition du Destin" goto="30" />
+      <Choice text="La proposition de la Chance" goto="14" />
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>Vous évitez de justesse l'attaque en reculant d'un simple pas. La lame fauche l'air devant vous, assez près pour que vous en sentiez le souffle, mais vous manque tout de même. Vous exécutez alors votre propre estocade.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>Vous frappez l'Empereur au niveau de l'articulation de l'épaule avec une précision surhumaine. La pointe de votre arme se glisse juste à la jointure de l'armure, entre les deux plaques de métal. Vous faites levier, et les deux morceaux se séparent légèrement, créant une ouverture dans l'armure. Voilà déjà une première faiblesse à exploiter.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="9" sound="lampo_intuizione" soundDelay="5" music="frammenti_di_memoria">
+    <Text>Vous avez mis énormément d'énergie dans ce premier acte du duel, et vous soupçonnez, ou plutôt vous espérez, que l'Empereur en a fait de même. Cependant, les résultats de cette stratégie se sont révélés mitigés pour les deux camps, aucun ne parvenant réellement à prendre un avantage décisif. Votre adversaire change alors de tactique, et se contente de se maintenir sur la défensive, n'attaquant que sporadiquement pour vous maintenir sous pression.
+
+Un maître d'armes célèbre a un jour dit qu'un combat, aussi long et spectaculaire soit-il, se joue entièrement lors du premier assaut, le reste n'étant qu'un échange inutile de coups entre un vainqueur et un vaincu déjà décidés. Vous ne partagez pas cet avis, mais vous voulez bien lui accorder, que, dans le cas d'un combattant humain affrontant un adversaire infatigable, il est nécessaire pour le premier de se forger un avantage avant que l'épuisement ne l'envahisse. L'Empereur en est également conscient et fera durer cet enchaînement d'attaques et de parades aussi longtemps qu'il le faudra pour vous faire mordre la poussière.
+
+Pour mettre un terme à ce petit jeu, vous décidez de forcer l'offensive avant que votre organisme ne vous réclame des comptes. Mais cela vous oblige à prendre des risques, et la lame impériale mord votre chair à plusieurs reprises.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="22">
+        <Requirements>
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceFissure" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="36">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="gte" value="1" />
+          <Variable id="codiceVie" operator="gte" value="1" />
+          <Variable id="codiceCorps" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="36">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="gte" value="1" />
+          <Variable id="codiceVie" operator="gte" value="1" />
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceFissure" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="27">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="gte" value="1" />
+          <Variable id="codiceCorps" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="27">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="gte" value="1" />
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceFissure" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="22">
+        <Requirements>
+          <Variable id="codiceCorps" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="22">
+        <Requirements>
+          <Variable id="codiceCorps" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="22">
+        <Requirements>
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceFissure" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="22">
+        <Requirements>
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceFissure" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePerdu" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="10">
+    <Text>Vous pliez les genoux au dernier moment. N'aurait été votre casque, la lame ennemie vous aurait scalpé, mais elle se contente de glisser sur le métal. Avant que l'Empereur ne puisse revenir en garde, vous vous redressez et bondissez.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceOuverture" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="11" sound="spada_delle_origini" soundDelay="2" music="frammenti_di_memoria">
+    <Text>Un cube de plomb aussi grand qu'un homme, voilà le fourreau actuel de l'Épée des Origines. Forgée à l'Aube des Âges à partir de pure lumière, elle a la réputation de pouvoir pourfendre les ténèbres elles-mêmes. Une arme d'une puissance telle qu'elle effraie même les dieux, lesquels ont décidé de la sceller au plus profond de la terre, gardée par les pires monstres et démons de la création. Vous en avez vaincu certains, rusé d'autres, échappé de justesse aux crocs de la plupart. Ne reste plus que deux obstacles entre votre objectif et vous : son sarcophage de métal brut et un dernier adversaire.
+
+Il s'agit d'un homme, grand, musclé et chevelu. Il porte une armure de cuir ayant bien vécu mais semblant pourtant assez solide pour encaisser un coup de masse d'armes sans faillir. À sa ceinture pend une lame nue mais si parfaite que vous jureriez qu'il s'agit de l'objet de votre quête. Toutefois, le plus étonnant est son absence totale de visage. Non pas qu'il soit lisse comme celui d'un mannequin, non, vous ne pouvez juste pas en distinguer les traits, comme si un brouillard perpétuel les dissimulait. Alors que vous l'examinez, une voix tonitruante jaillit de là où devrait se trouver sa bouche :
+
+« Félicitations ! Cela fait plaisir de voir quelqu'un arpenter la voie du héros avec autant de conviction et de fougue ! Ce n'était pas arrivé depuis bien trop longtemps. Avant, tout était plus simple. Un sorcier menaçait une ville, un dragon brûlait des villages, un roi réduisait son peuple en servitude et aussitôt, un jeune homme courageux, ou parfois une jeune femme courageuse, attrapait une épée, une hache, un arc ou un livre de sort et allait lui régler son compte. Aujourd'hui, tout est plus compliqué. Il faut trouver des solutions pacifistes et politiquement viables, il faut du réalisme... Mais au final, on en revient toujours aux fondamentaux. »
+
+Il fait jaillir son épée dans un geste théâtral et la pointe vers vous.
+
+« Un héros... »
+
+Il englobe le monde d'un mouvement de sa main libre.
+
+« Un ennemi... »
+
+Saisissant le pommeau à deux mains, il lève son arme au-dessus de sa tête et l'abat avec force sur le bloc d'acier. Celui-ci est tranché en deux, d'un bout à l'autre, et s'ouvre comme un jouet, dévoilant une lame parfaite, miroir de celle du guerrier. Elle reste suspendue un instant dans les airs avant de se planter dans le sol, parfaitement verticale.
+
+« Et une épée ! »
+
+Vous n'hésitez pas une seule seconde. Vous l'atteignez en quelques enjambées résolues, attrapez son pommeau à deux mains et tirez. L'épée surgit de la pierre sans difficulté, aussi légère qu'une plume. Vous ne résistez pas à effectuer quelques passes avec. Sa fluidité et sa précision sont incomparables à un point que vous n'arrivez plus à décrire. La comparer à votre ancienne arme reviendrait à assimiler une branche d'arbre à la meilleure création du plus habile forgeron du pays.
+
+« La meilleure qui soit, commente l'anonyme. Et maintenant, je suppose qu'il est temps pour toi de recevoir la bénédiction des héros. Alors, que préfères-tu : une main ferme pour ne jamais manquer ta cible ou une volonté d'acier pour toujours trouver la force de te relever ? »
+
+Vous ne pouvez vous empêcher de penser que les deux seraient préférables à un seul.
+
+« Évidemment ! Mais à vaincre sans péril, on triomphe sans gloire. Ce sont les choix qui rendent l'aventure intéressante. Faut-il mieux privilégier le corps ou l'esprit ? L'attaque ou la défense ? Tourner à droite ou à gauche ? Un héros n'est pas un homme qui suit une voie toute tracée, mais au contraire celui qui n'hésite pas à sortir du sentier pour s'enfoncer dans les marécages inconnus. Alors, quel est ton choix ? »</Text>
+    <Choices>
+      <Choice text="L’habileté" goto="29" />
+      <Choice text="La volonté" goto="16" />
+    </Choices>
+  </Page>
+  <Page id="12">
+    <Text>Vous contre-attaquez avec l'une des rares bottes qu'il vous reste en réserve. L'attaque est belle mais pas assez pour se glisser dans les minuscules imperfections de l'armure impériale. La pointe de votre arme réussit cependant à ponctionner le métal.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="31">
+        <Requirements>
+          <Variable id="codiceFaille" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="9">
+        <Requirements>
+          <Variable id="codiceFaille" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="13" music="frammenti_di_memoria">
+    <Text>Vous êtes arrivé trop tard. Beaucoup trop tard. La bataille est déjà terminée depuis trois jours. Les redoutes ennemies ont été réduites à des amas de pierres noircies, les portes du château enfoncées béent encore. Tous les fidèles de l'Empereur sont morts ou en fuite. Mais les troupes rebelles n'ont pas triomphé pour autant, incapables de venir à bout du monarque, comme par le passé.
+
+Vous progressez au milieu des cadavres. Les plus chanceux sont emportés vers des bûchers par des survivants désespérés, d'autres ont déjà été dévorés jusqu'à l'os par des charognards. Personne ne vous adresse la parole, mais vous ressentez leurs reproches. Vous auriez dû être là. Dans quelques heures, si vous êtes encore en vie, il vous faudra affronter vos responsabilités. Mais pour l'instant, vous avez une quête à terminer, un dernier objectif à accomplir. Vous continuez donc le long du chemin, pataugeant dans le sang et la boue.
+
+Au milieu du champ de bataille, là où les corps sont si nombreux qu'ils forment la base d'une macabre colline, quelqu'un vous attend. Son apparence est la simplicité même : un squelette, un drap noir, un faux. Vous allez à sa rencontre et la saluez. Elle vous répond et sort un petit sablier des replis de son vêtement. À première vue, le sable paraît s'être entièrement écoulé, mais en tordant les yeux, vous remarquez qu'il reste encore un dernier grain dans la moitié supérieure, bloqué par une imperfection du verre.
+
+« Ton temps. Ta vie. Arrivés à leur terme. »
+
+Et sur ces paroles, la main squelettique se referme sur le sablier et le réduit en morceaux.
+
+« Et maintenant te voilà mort. »
+
+Et vous n'êtes plus sur le champ de bataille. Vous êtes dans les ténèbres. Vous voyez votre corps, vous voyez la Mort, mais le reste du monde n'est plus que le noir absolu. La divinité fait jaillir deux nouveaux objets du néant. Ils ressemblent à des sabliers étonnamment ouvragés, des spirales de métal composant de complexes symboles à la surface du verre. L'un est peint en blanc, l'autre en noir, et vous ne pouvez voir la quantité de sable qu'ils contiennent.
+
+« Et maintenant, tu vas ressusciter, dans un corps qui ne sera plus tout à fait celui d'un humain ordinaire. Mais quel don préfères-tu ? Le don de Vie ? Ou le don de Mort ? »</Text>
+    <Choices>
+      <Choice text="Le don de Vie" goto="39" />
+      <Choice text="Le don de Mort" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="14" music="sala_del_trono">
+    <Text>La Chance claque des doigts et l'encre de l'ouvrage se met à couler, transformant en tâches informes ce qui était auparavant des mots. Le Destin referme son livre souillé avec un soupir et, l'instant suivant, vous êtes de nouveau seul à la croisée des chemins.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codicePossible" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="33">
+        <Requirements>
+          <Variable id="codiceSecousse" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="24">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="10">
+        <Requirements>
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="15" music="sala_del_trono">
+    <Text>Vous êtes de retour sur le champ de bataille. Aucune trace ne subsiste de votre interlocutrice. Vous ne vous sentez pas non plus différent. Vous reprenez votre route.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceMort" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="34">
+        <Requirements>
+          <Variable id="codicePluie" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="32">
+        <Requirements>
+          <Variable id="codiceSucces" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="20">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSucces" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="19">
+        <Requirements>
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSucces" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16" music="sala_del_trono">
+    <Text>« Ainsi soit-il. »
+
+Le Héros abat le plat de son épée sur votre épaule, comme pour un adoubement, mais avec une force démentielle. Une montagne pourrait s'appuyer là que vous ne sentiriez pas la différence. Cependant, vous ne pliez même pas les genoux et restez droit, regardant fermement son non-visage. Vous jureriez y discerner un sourire, et l'instant suivant, vous êtes de nouveau seul.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceEsprit" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="12">
+        <Requirements>
+          <Variable id="codiceOuverture" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="20">
+        <Requirements>
+          <Variable id="codiceCertain" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="20">
+        <Requirements>
+          <Variable id="codicePossible" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="20">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+          <Variable id="codicePossible" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="18">
+        <Requirements>
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+          <Variable id="codicePossible" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="17" music="la_caduta_degli_dei" ending="true">
+    <Text>L'Empereur frappe de nouveau, vous manquant de peu, et soudain, s'écroule. Il s'effondre brutalement, d'un bloc, comme une marionnette dont on aurait coupé les fils. Un instant auparavant, il se dressait devant vous, aussi redoutable que tout au long de ce combat, mais il est maintenant allongé sur le ventre, inerte dans son armure quasiment intacte, sa main serrant encore son épée. Vous vous remettez en garde, vous attendant à quelque fourberie, mais rien ne se produit. Apparaît alors de nouveau devant vous la première éternelle, sa faux à la main. Elle vous observe de ses orbites vides, semblant attendre une réaction de votre part.
+
+« Est-il... mort ? » finissez-vous par demander sans oser y croire.
+
+« Il est mort depuis la première attaque où ta lame l'a touché. Mon pouvoir n'a que faire des armures soient-elles d'acier ou divines. Tu as désiré sa mort, tu l'as frappé, et ton souhait s'est accompli. Toutefois, comme tous les mortels, il a refusé ce destin et a lutté contre jusqu'au bout. Et dans son cas, son statut particulier lui a permis de faire illusion un peu plus longtemps que le commun. Encore maintenant il résiste, s'accrochant aux derniers fragments de ce qu'il fût. Mais il est temps de conclure. »
+
+La mort se penche alors et l'effleure du bout de ses phalanges. L'armure impériale se craquelle aussitôt, éclatant en morceaux qui tombent à leur tour en poussière. S'échappe alors de ce réceptacle une brume dense, noire et poisseuse, qui semble vouloir former une silhouette monstrueuse dans les airs, mais qui finit par se disperser et se dissiper sans y arriver. Est enfin révélé le corps d'un homme, vieux, très vieux, que la décomposition rattrape en quelques instants, ne laissant qu'une poignée d'os jaunis. Au final ne subsiste qu'un fantôme transparent, un jeune adulte de la haute noblesse, portant une tenue et une couronne digne d'un empereur. La Mort lui tend la main. Il semble hésiter, puis accepte de la prendre et s'efface alors lentement jusqu'à disparaître totalement.
+
+*****
+
+« Pour la dernière fois, vous êtes vraiment sûr de vouloir que je vous laisse ici ? demande de nouveau le capitaine. Vous êtes au Cap du Solstice, le seul endroit de l'Enfer Blanc qui voit le soleil, et encore, une fois l'an. Au-delà, ce ne sont que des terres gelées habitées par les pires des démons, les bannis des enfers. Vous n'aurez aucun ami là-bas. Ce sera tué, ou être tué. Même feu l'Empereur Démon n'a pu faire mieux que d'encercler la zone. Une fois, une de ses compagnies y a accosté un soir, pour y établir un camp de base. Un seul en est revenu, dès le lendemain, et encore, complètement fêlé. »
+
+« Je sais. C'est justement pour cela que je vais là-bas. »
+
+« Excusez-moi de vous dire cela, mais vous êtes vous-même complètement fou. »
+
+« Probablement. Maintenant, imaginez que vous possédiez le pouvoir de tuer n'importe quoi aussi facilement que l'on souffle une bougie. Est-ce que vous pourriez vivre une petite vie tranquille en sachant qu'il vous suffirait d'un seul instant d'inattention, de perte de contrôle pour tuer votre famille, vos amis ? Est-ce que vous ne préféreriez pas aller au seul endroit au monde où ce genre de don est utile, où vous pourriez y aller à fond sans prendre le risque d'éliminer quelqu'un qui vous est cher ? »
+
+Le capitaine reste perplexe, pousse un soupir et sert la main de l'inconscient. Celui-ci enjambe le rebord du navire et saute du pont du bateau sur la terre dure et glacée. Après avoir levé la main en signe d'adieu, il s'enfonce dans les terres gelées.
+
+Fin 3 : Le Combattant Éternel
+
+VI : En ces lignes caché</Text>
+    <Choices>
+      <Choice text="Tenter une dernière fois votre chance" goto="4" failGoto="17" ask="Le numéro caché en ces lignes ?" answer="4|quatre|IV" />
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Text>La lame heurte votre bouclier comme un bélier une porte de château. Vous serrez les dents, tous les muscles bandés, alors que l'Empereur s'efforce de vous renverser à défaut de réussir à trancher votre protection. Vous tenez cependant bon, et son arme commence à se courber, s'approchant dangereusement du point de rupture. Il se retire alors brusquement et vous en profitez pour reprendre l'initiative.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="19" sound="impatto_armatura_divina">
+    <Text>Votre arme heurte l'armure de l'Empereur avec fracas. Le métal frappe le métal, sans que votre lame ne puisse franchir la protection. Cependant, l'Empereur a un étrange instant de flottement, durant lequel ses mouvements semblent ralentis. Une fraction de seconde seulement, mais c'est un délai suffisamment long pour vous permettre de relever votre bouclier pour parer son prochain assaut.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceFaille" value="1" />
+        <setVariable target="codiceSablier" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="20" sound="impatto_armatura_divina" soundDelay="2">
+    <Text>Vous portez votre propre assaut. Votre angle d'attaque n'est pas mauvais, et vous frappez avec force, mais ce coup n'est pas assez exceptionnel pour être efficace contre un tel adversaire. Votre lame ricoche sur le métal sans parvenir à y pénétrer.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="23">
+        <Requirements>
+          <Variable id="codiceFaille" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="9">
+        <Requirements>
+          <Variable id="codiceFaille" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="21" music="l_imperatore_eterno">
+    <Text>Et la foudre frappe. Vous frappe.
+
+Le feu du ciel est le symbole presque universel de la colère divine, une puissance inexorable qui échappe totalement à l'homme et peut le réduire à néant en un instant. Si les dieux sont souvent accusés à tord pour les hasards de la nature, cet éclair vous a clairement visé. L'Empereur était une cible bien plus parfaite, plus grand, plus métallique.
+
+Telles seraient les pensées que vous auriez pu avoir si une décharge d'électricité ne venait pas de traverser votre organisme. Vous n'avez ressenti une douleur immense qu'une minuscule instant, avant que tous vos influx nerveux, saturés, n'abandonnent la partie. Tous vos muscles, y compris votre cœur, sont tétanisés et vous restez là, debout, paralysé.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="38">
+        <Requirements mode="any">
+          <Variable id="codiceUnique" operator="eq" value="1" />
+          <Variable id="codiceVie" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="36">
+        <Requirements>
+          <Variable id="codiceVie" operator="gte" value="1" />
+          <Variable id="codiceUnique" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="22" music="sala_del_trono">
+    <Text>Vos attaques répétées finissent par affecter l'Empereur, même si leurs répercussions sont triviales. Si vous n'avez pas réussi à le blesser, son armure est tout de même marquée par les traces de vos coups, et même percée au niveau de l'épaule gauche. Ce n'est pas grand chose, mais cela semble convaincre votre adversaire qu'il ne l'emportera pas forcément dans un combat de longue haleine, les enchantements divins de sa cuirasse semblant de moins en moins efficace face au tranchant de votre arme légendaire. Il repart alors sur l'offensive, s'efforçant de vous maintenir à distance pour profiter de son allonge supérieure.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="23">
+    <Text>Votre arme frappe de nouveau l'armure sans parvenir à l'endommager. Cependant, bien que superficielle, la trace de votre coup est cette fois visible, rayure nette sur l'acier noir.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceFissure" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="24">
+    <Text>L'Empereur vous roue de coups, s'assurant que vous ne vous releviez pas. Ceux-ci rebondissent presque tous sur votre bouclier, mais vous recevez tout de même quelques légères blessures. Pour mettre un terme à cette situation intenable, vous prenez un pari risqué pour la suite du combat : dans le court intervalle entre deux attaques vous jetez votre écu à la figure de votre adversaire. Cette action vous offre les précieuses secondes nécessaires à vous dégager, mais alors que l'Empereur envoie au loin votre meilleure défense, vous n'êtes pas certain que l'enjeu en valait la chandelle.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codicePerdu" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="20">
+        <Requirements>
+          <Variable id="codiceMort" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="13">
+        <Requirements>
+          <Variable id="codiceCorps" operator="gte" value="1" />
+          <Variable id="codiceMort" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="11">
+        <Requirements>
+          <Variable id="codiceMort" operator="lte" value="0" />
+          <Variable id="codiceCorps" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="25" sound="trono_crollo" soundDelay="3" music="sala_del_trono">
+    <Text>Vous ressentez une sensation étrange, que vous ne parvenez pas à identifier. Et soudain, la lumière se fait dans votre esprit : la terre tremble ! Et ce n'est pas un médiocre séisme, loin de là. Les murs du château, millénaires et en pierre pleine, se fissurent, le vitrail surmontant le trône éclate en morceaux, le dallage se brise, le plafond s'effondre par plaques, précédé dans sa chute par les lustres qui y étaient accrochés, et l'un des lourds madriers se déchausse même, s'écrasant avec fracas et vous manquant de peu. Certes, toute la structure a été fortement affaiblie par les violents combats des derniers jours mais les dégâts sont pour le moins exceptionnels. Jamais pareil cataclysme ne s'était abattu sur cette région du globe.
+
+Vous admirez ce spectacle depuis le recoin de la salle où la violence de la secousse vous a projeté avec autant de facilité et d'absence de considération qu'une enfant jetant sa poupée. L'Empereur, quant à lui, se dresse encore, insensible à la furie de la terre. Il avance vers vous d'un pas sûr, l'épée à l'horizontale, comme un bourreau se préparant à l'exécution. Vous ne croyez guère au coïncidence de cette ampleur, et soupçonnez que l'un de ses divins protecteurs n'apprécie guère de voir son champion en difficulté.
+
+Ironiquement, votre moral remonte, car cette action spectaculaire prouve que quelqu'un qui connaît bien les forces et faiblesses de votre adversaire a estimé que vous aviez une chance de l'emporter. C'est le sourire aux lèvres, bien que toujours à terre, que vous vous parez l'attaque de votre ennemi. Votre arme bloque le couperet impérial sans faillir malgré votre délicate position.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceSecousse" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="33">
+        <Requirements>
+          <Variable id="codicePossible" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="28">
+        <Requirements>
+          <Variable id="codiceCertain" operator="gte" value="1" />
+          <Variable id="codicePossible" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="6">
+        <Requirements>
+          <Variable id="codicePossible" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="26">
+    <Text>Vous bloquez l'attaque avec votre bouclier. Sa résistance est indéniable, mais le coup de boutoir de l'Empereur est plus proche de la charge d'un rhinocéros que de celle du sanglier. Vous ne pouvez tenir dans un confrontation de force brute et êtes obligé de vous dégagez brusquement. Votre adversaire profite aussitôt de son avantage.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceDifficulte" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="24">
+        <Requirements>
+          <Variable id="codiceMort" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="6">
+        <Requirements>
+          <Variable id="codiceMort" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="27" music="l_imperatore_eterno" ending="true">
+    <Text>Il y a plusieurs types de héros. Certains sont caractérisés par leur force surhumaine, d'autres par leur roublardise capable de tromper même les dieux. D'aucuns disposent d'un charisme exceptionnel, et parfois une chance extraordinaire suffit à entrer dans la légende.
+
+Votre propre spécialité ? Ne pas mourir.
+
+Vous avez vécu une vie pour le moins dangereuse, et vous vous en êtes toujours tiré. Pas forcément de façon très glorieuse, souvent dans la douleur, parfois en fuyant, quelques fois en faisant de lourds sacrifices, mais vous vous en êtes sorti à chaque fois.
+
+Cependant, même vous disposez de limites. Et en ce jour, vous les avez dépassées. Le sang coule de la dernière blessure que vous avez reçu, comme ils coulent encore de toutes les précédentes. La plupart de vos sens étant déjà anesthésiés par l'anémie, la douleur est moins forte que vous ne vous y seriez attendue, mais vous tombez tout de même à genoux et tentez de maintenir le liquide écarlate dans votre corps des deux mains. L'Empereur, avec son pragmatisme coutumier, ne vous laisse évidemment pas le temps d'améliorer les choses, l'espoir de sortir une potion magique d'une poche secrète. Il lève simplement son couperet. Et l'abat.
+
+*****
+
+L'alarme retentit. Une seule cloche d'abord, puis une deuxième, une troisième et enfin le tocsin lui-même. Les habitants sortent, affolés, les gardes tentent à la fois de contenir la foule et de découvrir l'origine du problème. Une seule silhouette ne semble pas affectée par la panique générale. Ombre imprécise, elle se meut dans les ténèbres avec aisance, esquivant toute rencontre malgré la foule qui remplit les rues. Humanoïde, plutôt petite, elle porte sur son dos une épée démesurée, une lame plus grande qu'elle-même, mais cet encombrant paquet ne semble pas la gêner alors même qu'elle plonge dans le fleuve. Elle ne remonte à la surface que quelques minutes plus tard, loin en aval, rentrant directement dans une forge via son arrivée d'eau. Là, deux hommes l'attendent. L'un est selon toute apparence le propriétaire des lieux, l'autre est vêtu comme un voyageur revenant de fort loin. L'ombre dépose sa possession devant eux, puis disparaît aussitôt par là d'où elle était venue.
+
+— Palsambleu, jura le forgeron, je sais bien que mieux vaut l'avoir dans notre camp que dans celui d'en face, mais ce truc est terrifiant. Dans quelle région de l'enfer avez-vous été le chercher ?
+
+— Il fait un travail qu'il est le seul à pouvoir réussir, lui répondit son compagnon. Combien de temps pour libérer l'épée de son carcan ?
+
+— Ce serait une lame normale, je dirais que quelques heures suffiraient, mais dans ce cas précis, si j'y parviens en moins d'une journée, je serai le plus heureux des hommes. Vous êtes sûr de votre coup ? L'Épée des Origines a réellement été incrustée dans ce braquemart ?
+
+— Oui, j'en suis sûr. Garde tes amis près de toi, et tes ennemis encore plus près. Et l'Empereur n'a plus d'amis depuis fort longtemps. Faites au plus vite. Mon protégé viendra la récupérer dès qu'elle sera prête.
+
+— C'est vraiment lui qui va devoir le combattre ? Je vous assure, il a plus une tête à être dans le cas d'en face que chez nous.
+
+— Chaque génération a ses héros. Ils n'ont pas tous le même style, ni les mêmes qualités, ni les mêmes défauts, mais ils restent toujours ceux dont l'histoire mérite d'être écrite.
+
+Fin 5 : Chroniques d'un autre héros
+
+IV : Tentez une dernière fois votre chance</Text>
+    <Choices>
+      <Choice text="Tenter une dernière fois votre chance" goto="4" failGoto="27" ask="Le numéro caché en ces lignes ?" answer="4|quatre|IV" />
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Text>Alors que vous peinez à vous dégager de la lourde lame qui vous cloue au sol, la terre tremble de nouveau. Vous perdez votre maigre équilibre, votre épée cesse d'être dans la trajectoire de l'attaque de l'Empereur et celle-ci continue son chemin. Elle rate votre tête, mais trace un sillon sanglant sur votre torse, tranchant sans difficulté la plate et la maille. La douleur aiguillonnant vos réflexes, vous vous projetez en arrière d'un bond disgracieux mais efficace et parvenez à vous relever. Vous parez avec le plus grand mal l'attaque suivante, mais la parez tout de même.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="27">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceUnique" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="36">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceVie" operator="gte" value="1" />
+          <Variable id="codiceUnique" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="27">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+          <Variable id="codiceUnique" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="37">
+        <Requirements mode="any">
+          <Variable id="codiceDifficulte" operator="eq" value="0" />
+          <Variable id="codiceEsprit" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="29" music="sala_del_trono">
+    <Text>« Ainsi soit-il. »
+
+Le Héros effectue alors une botte fulgurante, une attaque surprenante, que vous n'aviez jamais vu auparavant. Et pourtant, vous la bloquez du revers de votre lame sans la moindre difficulté. Vous levez les yeux vers le visage invisible de la divinité, et jureriez y discerner un sourire. L'instant suivant, vous êtes de nouveau seul.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceCorps" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="8">
+        <Requirements>
+          <Variable id="codiceOuverture" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="12">
+        <Requirements>
+          <Variable id="codiceCertain" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="12">
+        <Requirements>
+          <Variable id="codicePossible" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="12">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+          <Variable id="codicePossible" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="26">
+        <Requirements>
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceCertain" operator="lte" value="0" />
+          <Variable id="codicePossible" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="30" music="sala_del_trono">
+    <Text>Le Destin prend note de votre décision. L'encre de son ouvrage glisse sur le papier, effaçant des mots et en créant d'autres que vous ne parvenez pas à la lire. Une fois satisfait, il referme le livre et, l'instant suivant, vous êtes de nouveau seul à la croisée des chemins.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceCertain" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="28">
+        <Requirements>
+          <Variable id="codiceSecousse" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="5">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="7">
+        <Requirements>
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="31">
+    <Text>Votre attaque frappe une portion déjà fragilisée de l'armure suffisamment fort pour en détacher un morceau. Un simple ruban d'acier, une fissure de quelques centimètres, mais une première ouverture cependant.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="25" />
+    </Choices>
+  </Page>
+  <Page id="32" music="la_caduta_degli_dei" ending="true">
+    <Text>Vous vous écroulez sur le sol, comprimant votre blessure au ventre. L'Épée des Origines glisse lentement du crâne dans lequel elle était plantée et retombe. Un instant, vous êtes pris d'une terreur superstitieuse, comme si retirer l'épée était suffisant pour ramener à la vie l'Empereur. Mais, au contraire, son armure commence à se désagréger, plaque par plaque. La poussière ainsi générée est emportée par le vent, révélant une brume noire poisseuse qui est à son tour évacuée, se dispersant en fumerolles. Ne reste plus que le cadavre d'un homme extrêmement âgé, qui se décompose en accéléré jusqu'à ce qu'il n'en subsiste plus que quelques os. L'Empereur Éternel est mort, ses derniers restes teints en rouge par un flot de sang que vos efforts désespérés ne peuvent retenir.
+
+*****
+
+« Et le Héros triompha de l'Empereur d'une unique attaque, une attaque portée avec la force de l'Esprit des Héros, guidée par le Destin, et rendue fatale par la Mort. » lut le Destin dans son infini ouvrage.
+
+« Je n'ai pas envie de connaître la suite, Destin, le coupa la Chance, avec une moue boudeuse. Avec toi, c'est toujours pareil. Ce que tu donnes d'une main, tu le prends de l'autre, au nom de l'Équilibre. Et tu es totalement incapable de concevoir ce que peut être la vie d'un mortel après qu'il ait accompli ta mission. »
+
+« Toutefois, ce fut là son ultime exploit, car il ne survivrait pas aux blessures que l'Empereur lui avait infligé. Et toujours on se souviendrait de lui comme de la légende qui sacrifia sa vie à plusieurs titres dans le seul but de vaincre le mal. », conclut cependant son interlocuteur. Il se retourna ensuite vers sa compagne et rivale et déclara d'un ton scolaire, comme un professeur à une élève récalcitrante : « La conclusion est la partie la plus importante du récit. Un héros doit succomber au sommet de sa gloire, l'arme au poing, dans une ultime exploit plus extraordinaire que tous les précédents pour marquer les esprits sur des générations. Cela fait également parti de son rôle, de son destin. »
+
+Fin 2 : Le Destin d'un Héros
+
+III : Avant de reposer cet ouvrage</Text>
+    <Choices>
+      <Choice text="Tenter une dernière fois votre chance" goto="4" failGoto="32" ask="Le numéro caché en ces lignes ?" answer="4|quatre|IV" />
+    </Choices>
+  </Page>
+  <Page id="33" sound="trono_crollo" soundDelay="1" music="sala_del_trono">
+    <Text>Une nouvelle secousse fait trembler la salle, maigre réplique de la précédente. Mais elle tourne cette fois en votre faveur. En effet, un élément du plafonnier s'écrase sur l'Empereur. La pierre rebondit sur lui selon une physique irréaliste, comme si elle était en guimauve, mais cela le distrait le temps nécessaire pour vous dégager de son attaque. Vous vous redressez, bondissant comme un diable hors de sa boîte et vos armes s'entrechoquent de nouveau alors que vous tenez face à face, quasiment heaume contre heaume.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="34" music="frammenti_di_memoria">
+    <Text>Vous n'avez jamais trouvé la dernière déesse.
+
+Au début, vous ne l'avez même pas cherché. Les deux premières entités s'étaient en effet mises d'elles-mêmes sur votre route, et vous pensiez qu'il en serait de même pour les deux dernières. Mais alors que vous aviez rassemblé tous les éléments utiles pour lutter contre l'Empereur, aussi bien en équipement qu'en connaissances et alliés, vous avez commencé à douter. Vous serait-il réellement possible de triompher sans la force des quatre ? Vous avez entrepris d'autres quêtes, cherché et cherché encore, désirant vous montrer digne des deux divinités manquantes.
+
+Ce fut une erreur. Chaque instant perdu de cette manière fut payé par une vie. Lorsque vous vous en rendîtes compte, vous reprîtes aussi la route, désireux de mettre un terme à tout ceci d'une manière ou d'une autre. La troisième déesse vous attendait juste avant l'ultime épreuve, et cela vous mit du baume au cœur.
+
+Mais il en manque encore une. La dernière. Celle de la victoire.</Text>
+    <Choices>
+      <Choice text="Continuer" goto="35">
+        <Requirements>
+          <Variable id="codiceLegende" operator="gte" value="1" />
+          <Variable id="codicePossible" operator="gte" value="1" />
+          <Variable id="codiceEsprit" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="21">
+        <Requirements mode="any">
+          <Variable id="codiceEsprit" operator="eq" value="0" />
+          <Variable id="codiceLegende" operator="eq" value="0" />
+          <Variable id="codicePossible" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="35" music="la_caduta_degli_dei" ending="true">
+    <Text>Il existe des choses qui sont théoriquement possibles, mais dans la pratique infaisables. Par exemple, fendre la foudre. Même en imaginant qu'il existe une épée capable de cela et que vous la possédiez, la vitesse d'un éclair est telle qu'il serait nécessaire de savoir à l'avance où il frappera pour être en prêt au bon moment. Et même ainsi, une chance surhumaine serait nécessaire pour que la lame soit dans l'imprévisible position exacte pour que le fil tranche réellement le courant au lieu que le métal conduise simplement l'électricité. Sans parler des nerfs d'acier nécessaires pour simplement envisager pareil plan, et de la confiance absolue dans le futur nécessaire pour simplement espérer qu'il puisse réussir.
+
+Vous ignorez quel instinct vous fait lever le bras à ce moment précis. Votre lame est brandie de travers, décrivant un arc de cercle comme pour pourfendre un ennemi aérien. Et elle rencontre cet ennemi. La foudre tombe et heurte le fil de la lame. Et le flot de pure énergie suit votre mouvement, défiant tous les lois physiques possibles et inimaginables. L'éclair qui devait vous frapper est détourné de sa cible, et projeté sur l'Empereur.
+
+Le flot d'énergie le heurte de plein fouet. Son arme est pulvérisé, toutes ses protections éclatent en minuscules fragments. Le courant divin franchit les couches défensives comme si elles n'existaient pas, n'épargnant que leur propriétaire en vertu du pacte légendaire. En l'espace d'un éclair, là où se tenait l'instant d'auparavant un terrifiant géant d'acier ne gît plus qu'un vieillard nu et tremblant.
+
+*****
+
+Dans une caverne infinie, un géant brise rageusement des millions et des millions de cristaux. Cela ne peut pas se passer comme cela. Cela ne peut pas être. Cela transgresse toutes les règles. Aucun avenir ne peut lui être inconnu. Le concept même ne peut être imaginé.
+
+Au milieu d'un gigantesque cimetière, où sur chaque tombe trône un épitaphe à la gloire d'un héros passé, un homme sans visage éclate d'un rire hystérique et incontrôlable devant ce qu'il a engendré.
+
+Dans un palais où de délicates sculptures de glace et d'incontrôlables brasiers s'affrontent continuellement, un homme et une femme se disputent violemment tandis qu'un livre déchiré gît à leurs pieds.
+
+Lors d'un banquet parmi les nuages, d'innombrables personnages débattent, hurlent, prennent position, mais nul ne reste indifférent.
+
+Et, quelque part, une jeune optimiste et une vieille moissonneuse continuent leur travail, car de telles trivialités ne les concernent pas.
+
+*****
+
+Dans le coin de l'auberge, les deux hommes, l'un vieux, l'autre jeune, mais chacun sortant de l'ordinaire à sa façon, discutent passionnément :
+
+— Votre théorie est très intéressante, mais quasiment impossible à prouver. D'après vous, vous avez tout de même accompli la prophétie, mais en substituant une divinité à une autre. Et quant est-il de la dernière déesse ?
+
+— Oh, je crois que j'ai reçu sa bénédiction dès le début de mon existence sans même m'en rendre compte.
+
+— Et si je poursuis le raisonnement, vous avez bouclé sur de nombreuses existences, vous vous êtes mis la moitié du panthéon à dos, avez complètement bouleversé toutes les règles établies, juste pour trouver une fin qui finalement pour vous ne change rien. Juste pour une poignée d'anonymes dont le destin importe peu.
+
+— Évidemment. Parce que c'est ce que je suis. Une imbécile qui se bat contre des forces qui le dépassent dans le but de modifier un destin inexorable. Un héros.
+
+Fin 7 : Légende</Text>
+  </Page>
+  <Page id="36" sound="riavvolgimento_temporale" soundDelay="4" music="il_filo_del_tempo">
+    <Text>Au cours de votre carrière, vous avez souvent frôlé vos limites, et vous commencez à bien les cerner. Assez pour savoir que vous devriez déjà être en train d'expirer votre ultime souffle. Vous venez d'accomplir l'effort de trop, de recevoir la dernière blessure que vous pouviez supporter. Votre temps est venu. Vous voyez la Mort au-dessus de l'épaule de votre adversaire.
+
+Ceci n'est pas une figure de style. La Faucheuse est ici, avec vous, apparemment invisible aux yeux de votre ennemi. Elle contemple le sablier blanc qu'elle vous a offert, dont le dernier grain est en train de s'écouler. Mais avant qu'il ne rejoigne ses frères, elle retourne le récipient d'un mouvement sec. Et votre vie repart, rapidement, inexorablement.
+
+Vos blessures ne guérissent pas, votre souffrance ne diminue pas. Mais vous ne mourez pas. Pas encore. Votre corps se maintient simplement dans la zone floue où les médecins vous tiennent pour perdu, mais où ils n'osent pas encore vous enterrer car il existe une minuscule, incompréhensible chance que votre organisme se répare de lui-même.
+
+La Moissonneuse des Âmes lève alors un index squelettique et le replie. Même en l'absence de muscles faciaux, vous parvenez à décrypter son expression : une fois, mais pas deux. Et elle disparaît.
+
+Ce deuxième tête-à-tête avec une divinité que l'on croise normalement qu'une unique fois par existence n'aura duré qu'un instant. Un instant qui vous a paru des siècles, mais un instant seulement.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceUnique" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="40">
+        <Requirements>
+          <Variable id="codicePluie" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="37">
+        <Requirements>
+          <Variable id="codiceSecousse" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="3">
+        <Requirements>
+          <Variable id="codiceSucces" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="22">
+        <Requirements>
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSecousse" operator="lte" value="0" />
+          <Variable id="codiceSucces" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="37" music="sala_del_trono">
+    <Text>L'Empereur et vous croisez de nouveau le fer alors que les débris continuent de pleuvoir. Les chances que les murs ou les poutres porteurs lâchent et que le château tout entier s'effondre, vous écrasant sous des tonnes et des tonnes de roche et de bois, sont loin d'être nulles, et il est également plus que probable que votre adversaire y survive. Mais pas vous.
+
+Aussi continuez-vous votre ballet d'acier au milieu d'un nuage de poussière, cherchant à conclure au plus vite. Vos pieds dansent sur le terrain accidenté, vos talons écrasent verre et céramique, vos épaules et votre dos encaissent les assauts impromptus d'éléments de maçonnerie en chute libre. Bien que cela soit le milieu de la journée, la pièce plonge peu à peu dans la pénombre alors que de lourds nuages d'orage se rassemblent à une vitesse surnaturelle au-dessus du château. Vous devez reconnaître que les dieux ont le sens de la mise en scène.
+
+Votre corps n'est plus qu'une machine maintenue artificiellement en fonctionnement par vos hormones et votre volonté, alors que ses limites sont depuis longtemps dépassées. La douleur n'est plus une sensation aiguë et précise, mais une vague notion diffuse. Votre champ de vision est limité à un étroit cône devant vous. Vous entendez à peine les premières gouttes de pluie qui résonnent sur les armures des combattants.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codicePluie" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="17">
+        <Requirements>
+          <Variable id="codiceSablier" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="34">
+        <Requirements>
+          <Variable id="codiceVie" operator="gte" value="1" />
+          <Variable id="codiceSablier" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="34">
+        <Requirements>
+          <Variable id="codiceMort" operator="gte" value="1" />
+          <Variable id="codiceSablier" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="34">
+        <Requirements>
+          <Variable id="codiceUnique" operator="gte" value="1" />
+          <Variable id="codiceSablier" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+          <Variable id="codiceMort" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="13">
+        <Requirements>
+          <Variable id="codiceSablier" operator="lte" value="0" />
+          <Variable id="codiceVie" operator="lte" value="0" />
+          <Variable id="codiceMort" operator="lte" value="0" />
+          <Variable id="codiceUnique" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="38" music="il_filo_del_tempo" ending="true">
+    <Text>Il est une montagne dont le sommet se perd dans les nuages.
+
+Il est un escalier qui commence au pied de celle-ci et monte apparemment jusqu'à son sommet. Apparemment, car nul mortel n'a jamais réussi à en compléter l'ascension et à revenir pour le confirmer. Mais cela n'empêche pas les courageux d'essayer, comme celui qui se tient actuellement en bas des marches. Il a tous les atours de l'alpiniste, son sac est rebondi de provisions, mais l'étrange épée qu'il porte à la ceinture le différencie des autres aventuriers qui ont jusqu'ici tenté leur chance. Il est en grande discussion avec un être d'une bizarrerie largement supérieure, car dépourvue de visage, ce qui ne l'empêche pas d'avoir l'air extrêmement amusé :
+
+— Voilà, un projet pour le moins audacieux, déclara l'anonyme. Je dirais même téméraire. Ne crois-tu donc pas qu'il existe un moyen moins radical d'arriver à tes fins ?
+
+— Comptez-vous m'en dissuader ? lui répondit le grimpeur, sur la défensive, la main sur le pommeau de sa lame.
+
+Un rire franc et massif s'échappa de la non-bouche de l'être, résonnant à travers toute la vallée.
+
+— Autant demander au dieu du Feu d'arrêter un incendie ! Même si cela doit signer mon arrêt de mort, c'est le genre d'exploits pour lequel j'existe. Non, non, non. Au contraire, je suis impressionné. Quand je pense qu'il y a quelques siècles à peine, abattre dix de vos semblables en un combat était considéré comme un haut fait, et vaincre un dragon une tâche insurmontable, je m'enorgueillis de vos progrès. Mais es-tu certain d'avoir ce qu'il faut pour accomplir pareil tâche ? Ton prédécesseur te surpassait de loin, et il a pourtant échouée à un travail bien plus simple.
+
+— Quitte à mourir foudroyé, autant que ce soit en affrontant la cause de nos problèmes, et non leurs conséquences. Et pour le reste, je garde mes atouts pour moi.
+
+— Très bien alors vas ! Et fais-moi donc découvrir si la lame que tu portes est réellement fidèle à sa réputation ! Si elle peut vraiment tuer un dieu !
+
+Fin 6 : Celui qui combat les dieux
+
+II : Une fois tous les chemins parcourus</Text>
+    <Choices>
+      <Choice text="Tenter une dernière fois votre chance" goto="4" failGoto="38" ask="Le numéro caché en ces lignes ?" answer="4|quatre|IV" />
+    </Choices>
+  </Page>
+  <Page id="39" music="sala_del_trono">
+    <Text>Vous êtes de retour sur le champ de bataille. Aucune trace ne subsiste de votre interlocuteur. Vous ne vous sentez pas différent d'auparavant. Pour peu, vous pourriez croire avoir rêvé tout éveillé. Vous reprenez votre route.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceVie" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuer" goto="34">
+        <Requirements>
+          <Variable id="codicePluie" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="36">
+        <Requirements>
+          <Variable id="codiceSucces" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="20">
+        <Requirements>
+          <Variable id="codiceDifficulte" operator="gte" value="1" />
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSucces" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continuer" goto="2">
+        <Requirements>
+          <Variable id="codicePluie" operator="lte" value="0" />
+          <Variable id="codiceSucces" operator="lte" value="0" />
+          <Variable id="codiceDifficulte" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="40" sound="spada_delle_origini" soundDelay="4" music="la_caduta_degli_dei" ending="true">
+    <Text>Vous êtes mort. Vous devriez être mort. Vous venez d'être frappé de plein fouet par la foudre ! Personne ne devrait pouvoir survivre à cela.
+
+Et pourtant votre cœur se remet à battre, votre cerveau à fonctionner, vos muscles se détendent et reprennent une mécanique normale. Oh, vous n'êtes pas au mieux de votre forme, et souffrez de sérieuses brûlures cuisantes, horriblement douloureuses. Vous n'entendez plus rien et avez une sensation bizarre dans l'estomac. Il est tout à fait possible que vos organes soient endommagés au-delà du réparable et que vous vous écrouliez en hurlant dans la minute qui suit. Mais, maintenant, en cet instant précis, vous êtes en vie. Vous êtes en vie !
+
+Alors vous attrapez la poignée de votre arme à deux mains, forcez vos articulations pour revenir en garde, et avancez vers votre adversaire en essayant de marcher droit, votre sens de l'équilibre vous jouant des tours. L'Empereur est immobile, et même si vous ne pouvez voir son visage sous son heaume, vous devinez la stupéfaction, voire la peur.
+
+Vous avez finalement compris. Vous êtes en vie. Pas très loin de la mort certes, mais toujours en vie. Et tant que vous serez en vie, vous combattrez. Car tant qu'il y a de la vie, il y a l'espoir. C'est aussi simple que cela.
+
+Vous l'avez trouvé. Spes, Ultima Dea. L'Espérance, dernière déesse.
+
+Vous n'êtes plus deux dans la salle, mais trois. La nouvelle arrivante est une jeune fille, petite et maigre. Ses cheveux sont blancs et extrêmement fins, sa peau d'une pâleur maladive. Elle ne porte qu'une toge blanche étroitement nouée. De tout son corps émane une impression de fragilité, de faiblesse. Mais il y a ses yeux. Des yeux qui ont vu tous les malheurs de l'existence, qui ont vu la fin du monde, qui ont vu le néant absolu, mais qui pourtant brillent encore et ne s'éteindront jamais.
+
+L'apparition disparaît comme si elle n'avait jamais été là. Mais la pluie cesse peu à peu de tomber, et vous ne craignez plus un nouvel éclair. L'Empereur sort alors de sa léthargie. Vous pouvez sentir sa confusion, mais l'esprit lui revient vite et il prend son ultime décision. Il vous charge lame au clair, et vous l'accueillez comme il se doit. Toutefois, vous savez tous les deux que l'issue est déjà décidée. L'espoir ne peut pas perdre. Il peut souffrir, il peut faiblir, mais à la fin, il renaît, encore et toujours.
+
+Vos armes s'entrechoquent encore et encore tandis que les nuages se dissipent. La lumière entre alors à flots dans le château, et pour la première fois depuis le début de cette ère, elle frappe l'Empereur directement, traversant son armure par l'ouverture que vous y avez pratiquée. Quelque chose remue alors dans ses profondeurs. Des déformations apparaissent sur les plaques de métal, comme si quelqu'un frappait la cuirasse depuis l'intérieur, de la fumée s'échappe des jointures.
+
+Vous saisissez alors votre arme à deux mains et frappez de toutes vos forces. Un coup direct, sans feinte, sans précaution, qui porte pourtant et découpe l'armure comme du beurre, l'ouvrant en deux sur toute la longueur du torse. Le plastron éclate alors, révélant une flopée noire, boueuse que la lumière du soleil réduit en fumerolles sitôt qu'elle la touche. Le reste de la cuirasse impériale tombe en morceaux, et le cocon ténébreux ne tarde pas être réduit à peau de chagrin. Ne reste alors plus qu'un vieillard nu, un homme de chair et de sang qui tombe à genoux au milieu des débris.
+
+***** *****
+
+L'homme attaqua sa pièce de bœuf avec un féroce appétit. L'aubergiste le surveillait du coin de l’œil, comme tous les clients armés, ostensiblement ou non. D'autant plus qu'il avait remarqué la seconde épée, soigneusement enveloppée, qu'il transportait dans son sac. Il s'agissait probablement d'une arme ornementale, d'une grande valeur, peut-être volée. Ce client ne semblait en effet pas le genre d'homme à qui on confierait un objet précieux. Ses soupçons ne firent que se confirmer lorsqu'un étrange vieillard s'assit à la même table et entama la discussion. Cependant, les brides qu'il en surprit lui apportèrent plus de questions que de réponses :
+
+— Et pourquoi donc ? Je n'étais pas venu là pour tuer un vieillard sans défense. J'avais fait ce qui devait être fait. L'Empereur est mort, vous vous souvenez ?
+
+— Je pourrais recommencer. Tout rebâtir. J'en ai toujours les moyens.
+
+— Mais pas la volonté. C'est d'ailleurs pour cela que vous êtes ici, à discuter avec moi, au lieu de comploter dans l'ombre.
+
+— Vous allez remettre l'épée à sa place ?
+
+— Il le faut. Ce n'est pas le genre d'armes qui doit être utilisé lorsque deux hommes combattent.
+
+Trop puissante. À réserver aux coriaces dans votre genre.
+
+— Et ensuite ?
+
+— Ensuite ? J'aimerais dire que je vais m'installer dans une petite ferme tranquille avec femme et marmots, mais je sais que je ne tiendrai pas dix jours avant de repartir sur les routes. Alors je vais continuer à faire la seule chose que je sais faire : me laisser porter par les vents, vivre au jour le jour et accepter la compagnie de ceux qui sont comme moi en déphasage complet avec leur monde. Vous savez faire la cuisine ?
+
+Fin 1 : La Vie d'un Héros Anonyme
+
+I : Quand tout semble consumé</Text>
+    <Choices>
+      <Choice text="Tenter une dernière fois votre chance" goto="4" failGoto="40" ask="Le numéro caché en ces lignes ?" answer="4|quatre|IV" />
+    </Choices>
+  </Page>
+</Librogame>

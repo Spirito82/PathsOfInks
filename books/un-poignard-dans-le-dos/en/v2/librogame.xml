@@ -1,0 +1,1308 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="2" phase="test" id="un-poignard-dans-le-dos-en" workId="un-poignard-dans-le-dos" language="en" title="A Dagger in the Back" author="Skarn" checks="dadi" genre="Medieval fantasy" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="corridoi_di_pietra">
+  <Changes>
+    <Change>Adapted for this app: the structure, the rules and parts of the text were changed or removed to work with its engine</Change>
+    <Change>Translated into English from the original French</Change>
+    <Change>Added sounds and background music, delivered together with the book</Change>
+  </Changes>
+  <Audio>
+    <Sound name="gemito_ferita" file="gemito_ferita.ogg" />
+    <Sound name="lama_fendente" file="lama_fendente.ogg" />
+    <Sound name="materializzazione_ectoplasma" file="materializzazione_ectoplasma.ogg" />
+    <Sound name="passi_armatura" file="passi_armatura.ogg" />
+    <Sound name="sussurro_lama" file="sussurro_lama.ogg" />
+    <Music id="bosco_notturno" file="bosco_notturno.ogg" />
+    <Music id="corridoi_di_pietra" file="corridoi_di_pietra.ogg" />
+    <Music id="il_colpo_perfetto" file="il_colpo_perfetto.ogg" />
+    <Music id="l_ombra_alle_spalle" file="l_ombra_alle_spalle.ogg" />
+    <Music id="la_fine_dell_eroe" file="la_fine_dell_eroe.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <ContentWarnings>Killings, blood, corpses, a disembowelled dragon. The point of view is that of an assassin who takes pleasure in killing: the violence is constant, though never gratuitous.</ContentWarnings>
+  <Blurb>You remember the spectral dagger that pursues the hero throughout the adventure in the Knights of Destiny? Well, there you are. Except that you play the dagger. In an entirely different setting: no need to have read that book to enjoy this story.</Blurb>
+  <Variables>
+    <Variable id="energia" name="Energy" type="number" initial="7" min="-99" max="99" visible="true" />
+    <Variable id="ferite" name="The target's Wounds" type="number" initial="0" min="0" max="99" visible="true" />
+    <Variable id="somma" name="Wounds + Energy" type="number" initial="7" min="-99" max="199" visible="false" />
+    <Variable id="indizi" name="Harassment codes obtained" type="number" initial="0" min="0" max="5" visible="false" />
+    <Variable id="codiceBois" name="Bois code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceBoucan" name="Boucan code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceBruit" name="Bruit code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceChambre" name="Chambre code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceDecouvert" name="Découvert code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceDepourvu" name="Dépourvu code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceDetente" name="Détente code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceEscalier" name="Escalier code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceInsomnie" name="Insomnie code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceNuit" name="Nuit code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codiceOuverture" name="Ouverture code" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="codicePortail" name="Portail code" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Tables>
+    <Table id="daga" dice="6" times="1">
+      <Result is="esito0" range="1-3" />
+      <Result is="esito1" range="4-6" />
+      <Outcome when="esito0" goto="47" />
+      <Outcome when="esito1" goto="38" />
+    </Table>
+    <Table id="dragon" dice="6" times="1">
+      <Result is="esito0" range="1-3" />
+      <Result is="esito1" range="4-6" />
+      <Outcome when="esito0" goto="45" />
+      <Outcome when="esito1" goto="14" />
+    </Table>
+    <Table id="escalier" dice="6" times="1">
+      <Result is="esito0" range="1-3" />
+      <Result is="esito1" range="4-6" />
+      <Outcome when="esito0" goto="34" />
+      <Outcome when="esito1" goto="9" />
+    </Table>
+  </Tables>
+  <Page id="1" sound="sussurro_lama" soundDelay="1" music="l_ombra_alle_spalle">
+    <Text>You come back into existence.
+
+The phrasing is convoluted, but mortal language was not devised to describe beings such as you, scattered memories torn from limbo and clotted together until they form an independent entity.
+
+You could not even say whether the singular or the plural should be used of you. Physically you are one, but your mind houses images coming from a multitude of people. Scenes stripped of all those useless details that are names, moods, contexts, motives and consequences. Nothing remains of them but the experience and the skills needed to carry out your function to perfection.
+
+And first among them, the ecstasy of killing.
+
+You would form a smile, if your present shape allowed it. As it is, you are no more than a fine mist, invisible to ordinary humans, intangible to everyone. At most you are able, by gathering all your energy, to concentrate your substance for a while into a solid splinter that lets you act on the world around you.
+
+A manifestation that always takes the same form. That of a finely sharpened dagger with no guard. A pure blade, existing only to cut.
+
+Your tool. Your body. Your soul.
+
+You need no more than that, you need to be no more than that. You exist for a single purpose, and that weapon is all you need to reach it. You are the finest assassin there is.
+
+You are a Hunting Shadow.
+
+And you are hunting.
+
+Your target is right in front of you, barely a few metres away. In any case you could hardly move further apart. You are bound to him by an invisible chain of energy woven by your summoner, which limits your movements in space to his immediate vicinity.
+
+You will be released from this irksome proximity only once your task is accomplished. When your target breathes his last, your energy will be freed and you will return to the ether in a dazzling apotheosis, swallowed back by nothingness in an instant.
+
+To be entirely accurate, if your summoner were to revoke the spell, or become unable to maintain it in any way, then once your meagre personal reserves of power were exhausted you would likewise crumble, slowly, painfully, weakening bit by bit like a man dying of hunger.
+
+There also exist a few powerful spells capable of banishing you from the physical plane at once, and those are no more comfortable.
+
+But these are not hypotheses you care to dwell on. To the quasi-physical suffering is added the equally biting humiliation of failure. That has happened to you — and this "you" encompasses every shade — only on a very few occasions, and each remains branded on your collective memory as so many mistakes never to be repeated.
+
+For, although you technically cease to exist between missions, at each rebirth you recover not only memories from mortals who died in the interval, but also those of every contract fulfilled by the other members of your kind.
+
+Here too the notion of individuality is open to debate. You could very well be a single entity gifted with ubiquity.
+
+Not that this has any importance whatsoever. In truth you are simply letting your mind wander to kill time, being unable to stop thinking is one of the many burdens of conscious existence.
+
+Your target is indeed lucky enough, for the moment, to be in a place walled off by a shadow-net, a magical protection designed specifically to stop substanceless beings such as yourself.
+
+These things happen. Not often, but you have had a few cases in the past, when you were summoned to kill some mage or other particularly concerned about his own safety. Fortunately, defences of that kind are as complicated to weave as you are to summon, and even the most misanthropic sorcerers cannot spend their whole existence inside one of those bubbles.
+
+The last one to try cracked after a week of fasting. For although you could not reach him directly, you were able to stop his servants from bringing him his meals.
+
+Today, however, you will have no need of such subtle methods. For your target is himself destroying his only rampart, in all innocence.
+
+You almost admire the ease with which this human rushes towards his own death. Not only has he just slaughtered the man you suspect, from his eccentric dress, of being the author of that superb defence, but he is also tearing out the silver moorings that guarantee its integrity, piling them into a sack where they will be of no use whatsoever.
+
+True, he can probably neither see it nor feel it, the net being as impassable for you as it is immaterial for him, but that doesn't stop him helping you nicely.
+
+And there we are. No more protection. All you have to do is materialise and strike.
+
+Easier thought than done, however. The physical universe is reluctant to let things spring out of nothing. You are capable of taking form only in gases, solids and liquids repelling you with too much force, and even then only after expelling every particle of matter already present in a visible, hissing, crackling whirlwind.
+
+Not only is that not exactly discreet, it also consumes an enormous amount of energy. A precious resource, for which you depend entirely on your summoner's goodwill, having no means of producing or recovering any by yourself. At most you can receive and store it.
+
+You have for the moment seven points of Energy. This score can rise above the starting total, or fall below zero: as long as it is negative or nil, you are compelled to refuse any materialisation.
+
+With your present reserves you will be able to materialise only a handful of times for very short periods, or once for a little longer, but never beyond a minute. It is therefore crucial that you choose your moment with care, that you wait patiently for the instant when your victim will be vulnerable, unable to defend himself against an assault as swift as it is lethal.
+
+And what better moment could there be than now? Look at him, this fellow, exhausted, his armour still bearing the marks of his recent fight, too busy satisfying his greed to see to his own safety. He has even been kind enough to take off his helmet (and, unfortunately for him, the earplugs and the band he wore underneath) so as to expose his quivering carotid to you.
+
+Your target, for his part, bears no Wounds as yet.</Text>
+    <Choices>
+      <Choice text="Strike right now" goto="15" />
+      <Choice text="Wait a little longer" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="2" music="il_colpo_perfetto">
+    <Text>You wait for the ambush to begin. It doesn't take long. The greenskins throw their net, miss their target, but charge all the same.
+
+You then appear in your customary roll of thunder.
+
+The man has a brief but dangerous instant of hesitation.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="1" />
+        <subtractVariable target="somma" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="19">
+        <Requirements mode="any">
+          <Variable id="codiceEscalier" operator="eq" value="1" />
+          <Variable id="codiceOuverture" operator="eq" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="41">
+        <Requirements>
+          <Variable id="codiceOuverture" operator="lte" value="0" />
+          <Variable id="codiceEscalier" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="3" sound="materializzazione_ectoplasma" music="il_colpo_perfetto">
+    <Text>You materialise up in the trees, right above the man's head but partly hidden by the thorny branches.
+
+The phenomenon does not go unnoticed, however, as noisy as ever and sending pine needles raining down. You mingle with the prickly cascade, falling with it onto your target, point first.
+
+Your dive is stopped by a backhanded stroke of steel.
+
+Despite his awkward position, the man has taken his weapon in hand again and turned your attack aside with brio. However much his lowered breeches restrict his legs, he retains enough fluidity in his arms to keep you at bay effortlessly.
+
+From his behaviour you deduce that he is used to being attacked in such positions of weakness.
+
+The surprise you counted on having failed to materialise, you become mist again at once.
+
+After that, the man, unwilling to let go of his weapon, takes some time to finish his business, but his troubles stop there.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="3" />
+        <subtractVariable target="somma" value="3" />
+        <setVariable target="codiceBois" value="1" />
+        <addVariable target="indizi" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="35">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="43">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4" music="corridoi_di_pietra">
+    <Text>How could he have been quick enough to react? Even with sharp hearing, deeply ingrained martial reflexes and a little luck, he should not have had time to protect himself.
+
+If you were made of flesh you could blame some weakness of your own. A difficult awakening, fatigue, that sort of thing. But that is not the case, so the key to the mystery must necessarily lie on your target's side.
+
+Your prey, wary, has fully rearmoured himself, right down to the visor of his helmet, which he has lowered over his face. Of course no protection is perfect, and his cuirass presents dozens of exploitable gaps, but it would be a quite useless waste of energy to return to the charge now, while he is on his guard and at the height of his defences.
+
+After waiting some time with his blade drawn, he sheathes it and resumes his methodical ransacking of the place.</Text>
+    <Choices>
+      <Choice text="Continue" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="5" music="la_fine_dell_eroe" ending="true">
+    <Text>Your target leaps to his feet, weapon in hand. His bloodshot eyes search the surroundings frantically for something.
+
+You couldn't say what, for you have not materialised in several hours, and your far sharper senses have detected nothing in particular.
+
+It must be that the man has reached a point where his own paranoia, skilfully fed by your efforts, is enough to wake him at night, where the monsters of his nightmares blur into those of reality.
+
+He wanders around the spot where he collapsed, fully dressed, armour included, to try to sleep, waving his weapon menacingly, and roars his rage at the top of his lungs:
+
+"Come and fight! Come and fight, spectre! Come and fight if you're a man! I'm waiting!"
+
+This incoherent provocation offers a fine sample of the intellectual faculties still at his disposal after so much time spent with so little sleep.
+
+You let him shout himself hoarse in vain, let him spend what little strength he has left.
+
+Eventually he stops his performance and lets himself drop back into a substitute for rest.
+
+It is then that you materialise.
+
+He takes time to react. His body is tired, his mind too, and he doesn't know whether you are really there or merely a product of his imagination.
+
+That brief delay is all you need. In an instant you cross the air, slip through a joint in his disordered armour, and sever an artery.
+
+He thrashes about, tries to undress, to stop the haemorrhage with whatever comes to hand. But his panicked movements are imprecise and chaotic, and every drop of blood lost makes them slower and less effective.
+
+Soon there is no strength left to do anything, and shortly after that you both find rest.</Text>
+  </Page>
+  <Page id="6" sound="materializzazione_ectoplasma" soundDelay="2" music="il_colpo_perfetto">
+    <Text>The man draws nearer to the door. You watch him slow down, move his hand towards the hilt of his sword. His senses must have detected the danger ahead of him somehow.
+
+It is then that you materialise behind him.
+
+His confusion is total. He spins round in one piece, plunging his gaze into the roaring whirlwind. The greenskins, also alerted by the noise, throw their net, which falls only halfway over its target, but they charge after him eagerly, chirping a war cry.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="1" />
+        <subtractVariable target="somma" value="1" />
+        <setVariable target="codiceBoucan" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Complete the materialisation and intervene physically" goto="19" />
+      <Choice text="Break off the process to save your energy" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="7">
+    <Text>The man can run as fast as he likes; by your very nature it is utterly impossible for him to escape you. As soon as you are fully materialised you streak through the air in pursuit, swifter than the swiftest arrow.
+
+You catch him within moments and strike him full behind the knee. His armour protects him from direct damage, but he goes over, and gravity does its work. He falls forward and finishes his descent sliding as best he can on his belly, stopping, badly bruised, only at the next landing.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="2" />
+        <subtractVariable target="somma" value="2" />
+        <addVariable target="ferite" value="4" />
+        <addVariable target="somma" value="4" />
+        <setVariable target="codiceEscalier" value="1" />
+        <addVariable target="indizi" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="8" music="l_ombra_alle_spalle">
+    <Text>Once the two of them are seated, your target opens the conversation in a very strange way.
+
+"Mage Yoztramo, you must remember the advice you gave me in view of my confrontation with Zogar?
+
+— Of course, what sort of question is that? Attack him by day, for the night is his ally. Look at him only through a thin band of silk to foil his visual illusions, and stop your ears to escape his auditory ones.
+
+— Yes, that is precisely what I'm thinking of. With hindsight, I wonder whether you didn't simply want to stop me communicating with him.
+
+— And why on earth would I have done that?"
+
+He accompanies his reply by rolling his eyes skyward, in an apparently disdainful gesture. But in reality he fixes his gaze straight on you.
+
+You then feel your link with your summoner firm up, and a wave of new power flood into you.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="energia" value="2" />
+        <addVariable target="somma" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Materialise now" goto="21" />
+      <Choice text="Wait a little longer" goto="36" />
+    </Choices>
+  </Page>
+  <Page id="9">
+    <Text>Trying to run down a staircase with a weight like that on his shoulders, the man eventually trips and finishes his descent on his belly. He sprawls full length on the landing a few dozen steps below.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="3" />
+        <addVariable target="somma" value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="40" />
+    </Choices>
+  </Page>
+  <Page id="10" sound="passi_armatura" music="corridoi_di_pietra">
+    <Text>Judging by the dimensions and the architecture of the hall your target is entering, compared with the one he has come from, you deduce that you were in a turret and have just stepped into the main building.
+
+Several stairwells similar to the one he has just left are visible. You also catch sight of a still-warm dragon's corpse.
+
+It isn't the first time you have contemplated a dragon, or even a dead dragon. But it is the first time you have found one that succumbed to wounds like these.
+
+It is covered in a multitude of cuts, most of them mere scratches, a few deep enough for blood to escape freely, but none truly dangerous, still less fatal, in itself. It is their accumulation, it is the growing haemorrhage caused by all those lacerations, that finished it.
+
+In other words, this formidable creature was brought down by a person who struck it with a sword, or equivalent weapon, again and again until it collapsed. A technique of prodigious inefficiency, but one demonstrating uncommon endurance and determination on the part of its executant.
+
+Who, and you have little doubt on the matter given his total lack of reaction to this felled behemoth, is none other than your target.
+
+You are beginning to ask yourself a great many questions. The most logical explanation would be that the dragon had been immobilised, drugged, rendered unable to defend itself one way or another.
+
+Otherwise it would mean this human being had been capable of dodging, without flagging, the fangs, claws and flames of an adult dragon for the whole length of a long battle of attrition.
+
+A ridiculous hypothesis. Let us return to serious matters. A dragon is an animal possessing certain organs unique of their kind, capable of producing various substances which, once mixed, generate a flame of incomparable power.
+
+A dead dragon can obviously no longer work such marvellous alchemy by itself, but if a keen blade were to sever a few well-chosen elements of its organism, it might be that the necessary fluids would come into contact, releasing a veritable torrent of flames.</Text>
+    <Choices>
+      <Choice text="Do a little surgery" goto="33" />
+      <Choice text="Not waste your strength on an indirect approach" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="11" music="l_ombra_alle_spalle">
+    <Text>"Mage Yoztramo, I have a problem. I am currently being pursued by a Hunting Shade. A parting gift from Zogar, I fear."
+
+The aforesaid Yoztramo freezes for a brief instant, then strokes his beard thoughtfully.
+
+"Yes, that is exactly the sort of treachery he would be capable of. I must delve into my volumes to learn more.
+
+— No need."
+
+Your target pulls a grimoire from his sack.
+
+"I found this book among Zogar's things. It explains how to exorcise these creatures."
+
+Yoztramo takes the volume and leafs through it to the bookmark. He then reads the passage in question attentively.
+
+"Indeed. But this ritual is dangerous. It merely forces the spectre to take on a physical form in which it can be destroyed. You will then have to defeat it in single combat.
+
+— You worry too much, Mage Yoztramo. I have just killed a dragon; I think I can handle a ghost."
+
+He concludes with a smug smile. A shadow of annoyance crosses the mage's face, but he nods.
+
+"Very well. Let us go into the courtyard."
+
+The two men step outside again. The mage traces a circle in the loose earth with the tip of his foot, then sets about adorning it with complex runes using a staff.</Text>
+    <Choices>
+      <Choice text="Intervene right now" goto="46" />
+      <Choice text="Wait until the ritual is further along" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="12" music="il_colpo_perfetto">
+    <Text>The noise, the blast, the combination of the two, wake the man at once. He throws himself sideways, makes a half-turn on himself, lands, seizes his weapon.
+
+You follow him through the movement, but manage only to tickle his ribs slightly before he knocks you back with a sharp stroke of his blade.
+
+Your chance missed, you become mist again. Your target stays in a combat stance for some time, inspecting the area for clues about his mysterious assailant. Finding nothing, he eventually lies down again, clutching his weapon even closer.
+
+His eyes are slow to close, but fatigue finally overcomes nervousness, and soon the man returns to sleep.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="3" />
+        <subtractVariable target="somma" value="3" />
+        <addVariable target="ferite" value="1" />
+        <addVariable target="somma" value="1" />
+        <setVariable target="codiceNuit" value="1" />
+        <addVariable target="indizi" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Have another go" goto="48" />
+      <Choice text="Leave him to his rest" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="13" music="l_ombra_alle_spalle">
+    <Text>"I couldn't say what I want, Mage Yoztramo. Since I read that volume, I've realised I remember nothing that precedes the moment you sent me on my mission. Nothing personal, I mean. I have plenty of technical memories, confused and sometimes contradictory impressions of what I must do to kill a sorcerer as efficiently as possible, but no through-line, no feeling. Except anger.
+
+— Do you realise you may simply be under the influence of a spell of Zogar's? For all we know you didn't even defeat him; he merely bewitched you to give you that impression, and to turn you against me.
+
+— What does it matter, Mage Yoztramo? Either way I am nothing but an empty shell capable only of killing sorcerers. And I fully intend to go on doing what I do best."
+
+He draws.
+
+You then hear the characteristic hiss of a crossbow. One of those devices, hidden in the chaos of the room, has set itself off, with a small magical nudge.
+
+The bolt ricochets off its target's armour, however.
+
+"It's splendid, isn't it? I don't know where you got it, but it has saved my life many times. Without it I'd have been killed by the first slightly lucky greenskin."
+
+He struts.
+
+"Nothing better in stock? I don't know, turn me into a toad, something of that sort. Unless of course you can't, having made me too well proofed against that kind of curse for your rival to be able to use one to eliminate me."
+
+Numerous objects in the room then begin to fly, so many projectiles that he dodges, parries, takes, while other parts of the furnishings clump into vaguely humanoid shapes, makeshift golems.
+
+With a mad roar the warrior throws himself at these new opponents, sabre drawn.
+
+The mage then addresses you directly:
+
+"Do your job!"</Text>
+    <Choices>
+      <Choice text="Materialise" goto="26" />
+      <Choice text="Stay mist" goto="37" />
+    </Choices>
+  </Page>
+  <Page id="14">
+    <Text>The man starts running with all his strength, but the flames are quicker than he is. In an instant he finds himself encircled by the white furnace.
+
+He then decides to hurl himself immediately through the flames rather than let them fall on him, and thus manages, at the price of terrible burns, to carve a path to a stairwell still untouched.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="5" />
+        <addVariable target="somma" value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="15" sound="materializzazione_ectoplasma" soundDelay="2" music="il_colpo_perfetto">
+    <Text>You slip behind your target while he is on his knees, the upper half of his body plunged into a chest. And you concentrate.
+
+The air tears and flees, screaming its agony, as your blade cuts through reality to carve a way in. A routine reaction for you, but one that will not fail to surprise your victim.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="3" />
+        <subtractVariable target="somma" value="3" />
+        <setVariable target="codiceOuverture" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="See whether the surprise works" goto="47" roll="daga" />
+    </Choices>
+  </Page>
+  <Page id="16">
+    <Text>You relax your concentration and let the air return to its place in accordance with the laws of physics. Your target runs like a madman down the stairs but, by your very nature, it is impossible for him to shake you off.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceBruit" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Watch him hurtle down the steps" goto="34" roll="escalier" />
+    </Choices>
+  </Page>
+  <Page id="17" music="" ending="true">
+    <Text>Having inscribed a certain number of symbols, the mage steps aside to let your target through; he places a hand at the centre of the circle.
+
+At once you begin to materialise without having wished it. You cannot interrupt the process, which is of a rare violence. All your substance is forced to take solid form, with no possibility of keeping the slightest reserve. You become truly, entirely, the dagger that represents you, down to the last particle.
+
+You now look more like a sword than a dagger, artificially stretched by this horrifying magic.
+
+Your target draws and crosses his steel with your matter. You feel an ersatz of pain as pieces of yourself come away under the impact, with no way back.
+
+And the fight begins. A one-on-one confrontation, in broad daylight, fair and square.
+
+Which is to say that, despite your ability to move as you please through the three dimensions of space, you are not at an advantage. You cannot touch your adversary, and every blow he lands damages you a little more. And when it isn't him, it is simply time passing, the physical universe gnawing at you bit by bit, destroying this matter that ought not to exist.
+
+Soon you burst into pieces, the pieces fall to dust, the dust vanishes into smoke, and you return to nothingness.</Text>
+  </Page>
+  <Page id="18" music="l_ombra_alle_spalle">
+    <Text>You limit yourself to two, at most three appearances between each sunrise, and even then most do not go as far as full materialisation. With these fleeting but stressful appearances, he now tenses at the least breath of air, the least cracking twig.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="3" />
+        <subtractVariable target="somma" value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="32">
+        <Requirements mode="any">
+          <Variable id="codiceDepourvu" operator="eq" value="1" />
+          <Variable id="codiceInsomnie" operator="eq" value="1" />
+          <Variable id="indizi" operator="eq" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="25">
+        <Requirements>
+          <Variable id="codiceInsomnie" operator="lte" value="0" />
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>Despite his awkward position, it is you he gives all his attention, allowing himself barely a glance behind to deflect an attack or effortlessly slash one of his assailants.
+
+You hurl yourself at him, zigzagging through the air, making the most of your three-dimensional mobility and your speed.
+
+He parries your assault without difficulty with the back of his blade, but your extravagant distraction gives a greenskin the chance to land a blow. Nothing serious, however, and he rids himself of his assailant with a single vigorous kick.
+
+Hardly eager to prolong a face-to-face fight to your disadvantage, you become mist again.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="2" />
+        <subtractVariable target="somma" value="2" />
+        <addVariable target="ferite" value="1" />
+        <addVariable target="somma" value="1" />
+        <setVariable target="codicePortail" value="1" />
+        <addVariable target="indizi" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="31" />
+    </Choices>
+  </Page>
+  <Page id="20" music="bosco_notturno">
+    <Text>The last greenskins brave enough to oppose him routed, the man opens the postern. Daylight dazzles him but does not stop him, and he steps straight out into the outside world.
+
+You are on top of a rise in a region of wooded valleys. You take advantage of not being subject to gravity to gain a little height and examine it in more detail, but you find nothing to add to your initial description. You are in the middle of nowhere, the only visible construction being the small fort you have just left.
+
+The path leading to it is wide enough for a cart, and tracks suggest it does indeed see some. It is therefore far too open for your taste. Too easy to dodge a surprise attack, very little chance of falling into the adjoining precipice.
+
+So you make the best of it while the man walks quietly along the packed earth.
+
+This enforced inactivity is not entirely wasted, for it allows you to recover a little of your strength, through the power your summoner continuously infuses into you as long as the pact is unbroken.
+
+Night falls and the heights have become a wooded hollow by the time your target finally stops. He sets down what remains of his belongings, plants his weapon in the soft earth within reach, and begins removing his armour as the blinding light of day finishes dying in favour of the moon's pale glow.
+
+Once the last layer of metal is off, the man picks up his weapon, moves a little deeper into the forest, plants the weapon in the ground again and sets about relieving himself.
+
+Unsurprisingly, this is an ideal opportunity for you to operate.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="energia" value="2" />
+        <addVariable target="somma" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Strike" goto="3" />
+      <Choice text="Save your strength" goto="35">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Save your strength" goto="43">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="21" music="" ending="true">
+    <Text>Your materialisation interrupts their conversation. The man turns towards you and parries your attack in a fury.
+
+"Another of your schemes, sorcerer? I'll have him bite the dust, as I've had everyone who dared stand in my way bite the dust."
+
+But his interlocutor isn't listening. Taking advantage of the diversion you provide, he bolts, climbing his tower's staircase four steps at a time. The warrior notices perfectly well, but cannot risk turning his back on you.
+
+So he fences until you are forced to abandon your physical form to conserve your energy. Which happens soon enough, a face-to-face confrontation being none of your advantage.
+
+The moment you disappear, he sets off after the mage. His run brings him into a dead-end room on whose floor numerous sigils have been engraved. Your senses tell you a powerful spell was cast here not long ago, confirming that the old man has almost certainly teleported far away.
+
+The warrior reaches the same conclusion and lets out a roar of rage.
+
+In the days that follow, he searches the tower for something that might help him achieve his revenge. As for you, you wear away bit by bit. Your contract has been revoked by your summoner, and without his supply of energy you must consume your reserves.
+
+You do try to take advantage of the situation to finish your mission, but the man sleeps in the magician's chamber, protected of course by a shadow-net, and is on his guard during the day.
+
+You eventually become unable to materialise, then crumble little by little until at last you cease to exist, in a long and painful agony.</Text>
+  </Page>
+  <Page id="22" music="la_fine_dell_eroe" ending="true">
+    <Text>The man tells his host everything that has happened to him between his departure and his return here. His fights against the wolves in the forest. His fights against the greenskins. His fight against the dragon. His fight against the sorcerer.
+
+Nothing very gripping. His story is nothing but a succession of confrontations, and whatever the opponent, his strategy seems simply to consist of hitting it with his sword until it stops moving. A monomaniacal approach, apparently effective.
+
+At some point his interlocutor finally goes to fetch his decoction and pours them a cup each. Your attention is revived at that.
+
+For, among the aromatic herbs and the mild stimulant usual in such a brew, your species' particular senses have identified a horse's dose of a devastating poison whose taste and smell are perfectly concealed by the other ingredients.
+
+Your target notices nothing, and greedily empties his cup while his poisoner performs a little sleight of hand to give the illusion of drinking his own without in fact swallowing a single drop.
+
+The effect does not keep them waiting. Barely a few minutes later, the man begins to sweat profusely. He immediately informs the old man of his discomfort. The latter puts on a concerned expression and reassures him, but takes good care to offer no help whatsoever.
+
+His victim then tries to get up, loses his balance, crashes down onto the objects around him, tries to rise again but no longer has the strength, and lies dying there, among the utensils broken by his fall, refuse among refuse.
+
+The old man then raises his eyes to you with a jaded air.
+
+"One really does have to do everything oneself, it's not to be believed."
+
+You ignore him. Your target dead, even without any intervention on your part, you are free. The chains that held you to the physical world snap, and you return to nothingness in delight.</Text>
+  </Page>
+  <Page id="23" sound="passi_armatura" soundDelay="3" music="corridoi_di_pietra">
+    <Text>The man does not stop his eclectic looting — heaping up precious materials, books and parchments as readily as trinkets whose use is as uncertain as their value — until he has filled his sack to the point of making its seams suffer. He has the greatest difficulty lifting it, indeed, and expresses obvious relief when straps and back muscles take over from his arms.
+
+He then takes a first clumsy step, redistributes the load a little better across his shoulders, readjusts his helmet, puts one foot in front of the other, more confident this time, and at last opens the door, revealing a spiral staircase that he immediately begins to descend.
+
+Really, this fellow is going to some trouble to make your task easier. You can hardly imagine a more favourable situation, as he starts down, laden like a donkey, into a place where he cannot manoeuvre and where a bad fall could do him serious damage without your even having to cut his flesh yourself.</Text>
+    <Choices>
+      <Choice text="Materialise" goto="27" />
+      <Choice text="Wait a little longer" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="24" music="l_ombra_alle_spalle">
+    <Text>Another staircase, leading this time to what must be the ground floor and the great hall of this dwelling. And another scene of violence whose squalid brutality astonishes you.
+
+There are greenskin corpses everywhere. In a heap at the mouth of the passage you have come from, scattered along the way to it, on the floor, sprawled across the benches, on the great table, and even one in the fireplace, half charred. They are mainly uniformed soldiers, but you also make out a few civilians with improvised weapons, here a cleaver, there a poker. All slaughtered with great sword strokes.
+
+And your target walks through this charnel house as though it were all perfectly natural and ordinary. Which surprises you somewhat. Thanks to the memories of recently deceased people you carry within you, you know the customs of this age, and you therefore know that such sights are not commonplace.
+
+Moreover, just as with the dragon, you cannot entirely rule out the hypothesis that this man did this carnage all on his own, simply by strength of arm. A theory that raises as many questions as ever.
+
+This open room seeming ill-suited to an assault, you move slightly ahead of your target in search of a better place.
+
+And you are not disappointed. A band of surviving greenskins has set an ambush just on the other side of the ornate entrance leading to the vestibule.
+
+Their plan of attack is obvious: they have found a net and some spears, and almost certainly intend to throw the former over the man as soon as he is close enough, before driving the latter into the body thus immobilised.
+
+A stratagem that would doubtless work if they were less noisy but, as things stand, they will very probably be spotted well before they have a chance to carry it out.</Text>
+    <Choices>
+      <Choice text="Let them fail their assault, then strike by surprise" goto="2" />
+      <Choice text="Appear slightly ahead of time to divert his attention" goto="6" />
+      <Choice text="Save your energy" goto="44" />
+    </Choices>
+  </Page>
+  <Page id="25" music="l_ombra_alle_spalle">
+    <Text>As he does every evening, your target takes stock of his possessions and makes an effort to skim a few of the volumes he has recovered. You read over his shoulder, but see nothing of interest go by.
+
+And then, suddenly, in the middle of a whole pile of inconsequential texts, you find an article devoted to Hunting Shades. And to the ways of protecting oneself from them.
+
+Your target very nearly passes over it absent-mindedly, but some sentence must have caught his attention, for his concentration sharpens all at once and he begins reading and rereading it avidly.
+
+You keep your calm. The various solutions proposed, beginning with the shadow-net, can be put into practice only by high-level mages. Which your target is not, or else he is hiding his hand extremely well.
+
+Still, the mere fact that he now knows a great deal more about your modus operandi is awkward.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="codiceDecouvert" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="32" />
+    </Choices>
+  </Page>
+  <Page id="26" music="il_colpo_perfetto">
+    <Text>You add your presence to the chaos, a whirlwind in the storm, a meteor in the rain of projectiles.
+
+Your first assault is thwarted. The second likewise. The man is as if possessed, turning attacks aside as though it cost him nothing, never stopping his laughter. His face changes expression constantly, changes appearance, reflecting the multiple lives of which he is made. The last artifices that gave him a semblance of identity are giving way, leaving only a monster hungry for combat.
+
+You rather feel as if you were facing a degenerate, organic version of yourself. Your failed brother, in the throes of adolescence.
+
+Your common father supports you with a constant supply of energy and with the volleys of spells he unleashes. His magic is only weakly effective, but it provides a welcome distraction.</Text>
+    <Choices>
+      <Choice text="Continue" goto="50">
+        <Requirements>
+          <Variable id="somma" operator="gte" value="15" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="30">
+        <Requirements>
+          <Variable id="somma" operator="lte" value="14" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="27">
+    <Text>With the carapace of treasure he is carrying on his back, you doubt he felt the rush of air. Impossible that he didn't hear it, though. The hiss of reality tearing echoed all the way down the staircase, a dark threat from above.
+
+His reaction is immediate, and it is to start running, hurtling down the steps two at a time.
+
+It occurs to you that he would be quite capable of killing himself unaided, laden as he is.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="1" />
+        <subtractVariable target="somma" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Break off your materialisation and enjoy the show" goto="16" />
+      <Choice text="Get physically involved" goto="7" />
+    </Choices>
+  </Page>
+  <Page id="28" music="bosco_notturno">
+    <Text>A new day begins for you both.
+
+During the morning the man makes a detour off the path to gather some fruit and the main ingredient of a rabbit stew, but this activity in no way puts him in a situation you could exploit.
+
+You take advantage of this enforced rest to recover your strength.
+
+In the early afternoon he crosses paths with a wolf, but the animal merely growls a little before going off in search of easier prey.
+
+If this journey continues as peacefully as this, genuinely interesting opportunities are likely to be cruelly lacking.
+
+Several strategies are therefore open to you.
+
+The first is simply to wait patiently for your moment, hoping your summoner doesn't tire before then.
+
+The second is to harass your target at every small moment of vulnerability, weakening him bit by bit, but at the risk of no longer having reserves enough to deliver the killing blow when the moment comes.
+
+The last is a compromise between the previous two, and consists of restricting yourself to a few occasional, irregular attacks, to keep the tension up without exhausting yourself.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="energia" value="4" />
+        <addVariable target="somma" value="4" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Patience" goto="49" />
+      <Choice text="Economy" goto="18" />
+      <Choice text="Aggression" goto="42" />
+    </Choices>
+  </Page>
+  <Page id="29" sound="gemito_ferita" soundDelay="2" music="la_fine_dell_eroe" ending="true">
+    <Text>The killing blow. Already weakened by your calculated efforts, your victim cannot stop you carving a path to his heart, which you pierce with relish.
+
+His agony is brief, intense and delicious. You cease to exist in an ocean of bliss as he breathes his last.</Text>
+  </Page>
+  <Page id="30" music="" ending="true">
+    <Text>Even so, two against one, you cannot land a fatal blow on this artificial hero. Your creator wears away bit by bit, and is soon no longer able to supply you with energy. You lose your physical form, and can only watch the death of your summoner, beheaded by a stroke as furious as it is triumphant.
+
+Deprived of sustenance, already too exhausted to materialise even one last time, you crumble away over the following days, steeped in a bitter sense of failure and impotence, until at last the return to nothingness frees you from the burden of emotions.</Text>
+  </Page>
+  <Page id="31" music="corridoi_di_pietra">
+    <Text>Even tangled in a net and alone against half a dozen, your target's martial superiority is far too incontestable for him ever to be in real danger. He rids himself of his assailants as though they were so many specks of dust on his clothes, without ceasing to cast regular, searching glances in the direction from which you appeared to him.
+
+Once again the only breathing being in the place, he calmly resumes his progress, even more on his guard than before.</Text>
+    <Choices>
+      <Choice text="Continue" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="32" music="corridoi_di_pietra">
+    <Text>During the fourth day, novelty finally shows its nose, in the shape of a tower.
+
+A tower of the most classic kind, circular, tall and narrow, designed for seeing far off from its summit.
+
+Right in the middle of the woods. In the hollow of a mountainous region. Ringed by trees that almost overtop it.
+
+The incongruity of such a construction apparently doesn't bother your target, who knocks at its door energetically enough to wake the whole forest.
+
+Shortly afterwards an old man comes to open it, grumbling. As soon as he recognises his guest, his face recomposes itself into a smile:
+
+"Mission accomplished, I presume.
+
+— Indeed, Mage Yoztramo. The vile sorcerer Zogar will harm no one again.
+
+— Heaven be praised! Come in and tell me all about it."
+
+You follow them as they venture into a monumental shambles. Piled on the floor, with no logic whatsoever, are furniture, crockery, tools, food waste, books, clothes, weapons, knick-knacks, and a pigeon in a cage. The chaos is not confined to this room, moreover, and spills over into the adjoining kitchen. The floor proper is visible only along a thin strip around the fireplace.
+
+None of this troubles the occupant in the least; he conjures from that heterogeneous mass two stools, two cups, some herbs, a jug of water and a kettle. He slips over to the hearth, sets his mixture to heat and comes back to talk with your target.</Text>
+    <Choices>
+      <Choice text="Continue" goto="11">
+        <Requirements>
+          <Variable id="codiceDecouvert" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="22">
+        <Requirements>
+          <Variable id="codiceDecouvert" operator="lte" value="0" />
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="22">
+        <Requirements>
+          <Variable id="codiceDecouvert" operator="lte" value="0" />
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="codiceInsomnie" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="8">
+        <Requirements>
+          <Variable id="codiceDecouvert" operator="lte" value="0" />
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="codiceInsomnie" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="33">
+    <Text>Your appearance is no less clamorous than usual, but it is somewhat hidden and muffled by the bulk of the dragon interposed between you and your target.
+
+The man perceives it all the same, and reacts. But his reflex is not the one the situation calls for: he draws and takes up a guard, as if he thought the beast were not quite dead, that it was about to rise and resume the fight.
+
+This error of judgement gives you the chance to operate in complete peace. You dive deftly into the dragon's entrails, severing a few well-chosen sacs whose contents mingle in a colossal explosion of flame.
+
+You abandon your physical form at once and admire the work. The dragon has given birth to its own funeral pyre. The flames, instead of issuing only from its jaws, escape through every orifice, wounds included, in multiple cascades of a fire so pure it is dazzling white.
+
+The heat is such that everything becomes combustible, down to the dragon's congealed blood on the floor. Within moments the room turns into an ocean of flame in the midst of which your victim finds herself plunged.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="3" />
+        <subtractVariable target="somma" value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="45">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="45" roll="dragon">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="4" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="34">
+    <Text>Although he stumbles several times, your target manages to reach the next landing without falling.
+
+He immediately flattens himself against the adjoining wall. Draws. Waits patiently for the source of the noise to show itself so he can attack it.
+
+Nothing happens, of course. You let your victim stew quietly in his own stress. He stays on guard like that, strung to the utmost, for a time that is objectively very short but must have seemed far longer to him.</Text>
+    <Choices>
+      <Choice text="Continue" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="35" sound="sussurro_lama" soundDelay="3" music="bosco_notturno">
+    <Text>The man spends most of the evening gathering wood for the fire and food to cook on it. Only late does he undress and lie down, on an improvised mattress of grass, the little equipment still in his possession within reach.
+
+You wait quietly for him to sink into deep sleep.</Text>
+    <Choices>
+      <Choice text="Take advantage of his vulnerability" goto="12">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="3" />
+        </Requirements>
+        <Effects>
+          <addVariable target="ferite" value="1" />
+          <addVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Take advantage of his vulnerability" goto="12">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="2" />
+        </Requirements>
+      </Choice>
+      <Choice text="Save your energy" goto="28">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="3" />
+        </Requirements>
+        <Effects>
+          <addVariable target="ferite" value="1" />
+          <addVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Save your energy" goto="28">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="2" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="36" music="l_ombra_alle_spalle">
+    <Text>Your target calmly brings his hand back near the pommel of his sword.
+
+"Well, I have a theory about that. You see, Yoztramo, I had time on the way back to leaf through a few volumes borrowed from Zogar's collection. I understood nothing of most of them, but there is one I found fascinating."
+
+He produces an unremarkable booklet that you did indeed see him consulting.
+
+"It's a sort of collection of reflections on the various means mages use to fight one another. And although it doesn't dwell on the subject, its contents strongly suggest that mages have been fighting each other for a long time, a very long time, directly or indirectly, allying and betraying one another constantly in search of ever more power.
+
+— Nothing new. Black mages have always been sharks who eat each other.
+
+— I know nothing about the colours of magic, Yoztramo. One description, however, really struck me among the others. I'll read it to you."
+
+He stands up, takes a deep breath, and launches in.
+
+"After a period in which spectral assassins were fashionable, we are seeing a strong return of the physical. The fault lies with the proliferation of shadow-nets, of exorcism spells, of all that apparatus now available even to the lowest-level sorcerers.
+
+These days, to rid oneself of a troublesome rival, one must once again, as in the old times, send someone with a solid existence all of the time to slip a blade between the nuisance's ribs.
+
+Human mercenaries, however, are expensive and often ineffective. So we take care to improve them.
+
+My own experiments in this field have allowed me to obtain warriors of a frankly absurd power. If it must really be quantified, let us say that where a standard soldier has a combat skill of 8 and a troll 10, they run rather closer to 11 or 12.
+
+The price to be paid lies in their incredible instability. Physically, the artificial inflation of their muscular capacities and their regeneration speed has a strong impact on their long-term survival. Mentally, the injection of memories from former witch-hunters to develop their combat and survival skills tends to alter their memory and their perception of themselves.
+
+I thus had to eliminate every one of my experimental subjects after they had all, one by one, turned against me. With some difficulty, I must say, so well had I succeeded with them."
+
+The man closes the volume. The atmosphere in the room is glacial. The mage speaks in an unfriendly voice.
+
+"So be it. And what is it you want, then?"
+
+Once again you feel power flowing in, accompanied by a black look that could just as well be an order.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="energia" value="4" />
+        <addVariable target="somma" value="4" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Intervene" goto="21" />
+      <Choice text="Wait a little longer" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="37" music="la_fine_dell_eroe" ending="true">
+    <Text>You are the finest assassin there is. You always wait for the ideal moment to strike.
+
+In the present case, that means letting the fight run its course, letting your target wear himself out in a spectacular confrontation against a wily mage who uses every artifice at his disposal to prevail against a creature he made for the purpose of destroying people like himself.
+
+He defends himself well, very well indeed. Several times he comes within a hair of finishing the job for you. But his creation surprises him each time, proving more terrible than he had imagined.
+
+His masterpiece finally runs him through, and he collapses amid the ruins of what was his home. His triumphant murderer, wounded, exhausted, contemplates him blankly. His rage spent, he probably hasn't the faintest idea what he will do now.
+
+You deliver him from that torment. Even though your summoner is dead, he left you more than enough energy to materialise one last time.
+
+You appear amid the flames, the smoke and the debris, and dart straight for his throat. He barely has the strength left to react, his sword stuck in his master's corpse, his armour in pieces, his reason for being gone.
+
+You cut the last threads of his life, and the puppet joins the puppeteer.</Text>
+  </Page>
+  <Page id="38" sound="lama_fendente" soundDelay="2">
+    <Text>At the first noise the man spins round in one piece, pivoting on one foot while his hand closes on the grip of his sword.
+
+Surprising though this swiftness is, you dive before he can draw, aiming for his uncovered face.
+
+He dodges, with the same extraordinary reflexes as ever, so that you inflict no more than a gash along his cheek. The next instant he has his blade out and is on guard.
+
+Having no desire to embark on a costly fencing match with him, you abandon your physical form at once, vanishing before his eyes.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="1" />
+        <addVariable target="somma" value="1" />
+        <setVariable target="codiceChambre" value="1" />
+        <addVariable target="indizi" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="39">
+    <Text>You struggle to free yourself, but the man's iron grip proves as literal as it is metaphorical. He pulls you entirely out of his flesh, and finishes with a twist of the wrist designed to make an assailant drop a weapon held in the hand.
+
+On a being such as you, this has no effect other than to make you perform an inconsequential full turn on yourself.
+
+He is still gripping you, however, and you are forced to abandon your physical form to free yourself at last from his hold.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="1" />
+        <subtractVariable target="somma" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="40">
+    <Text>Unfortunately he didn't split his skull in the fall, his helmet having done its job. Shaken all the same, he gets up cautiously, examining the stairwell behind him, seeming to expect a monster to come out of it at any moment.
+
+But, of course, nothing happens.</Text>
+    <Choices>
+      <Choice text="Continue" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="41" sound="lama_fendente" soundDelay="1">
+    <Text>He chooses to dispatch the opponents in front of him first. It takes him only a few instants, but you need no more than that to complete your materialisation and strike him in the back, at a gap in the armour.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="11" />
+        </Requirements>
+        <Content>Vous passez à un cheveu de vous enfoncez suffisamment pour atteindre le cœur, mais il réussit à vous attraper de sa main libre avant cela, vous arrachant à lui en une libératrice giclée de sang.
+
+Il lui reste encore assez de forces pour vous maintenir prisonnier de sa poigne alors qu’il termine d’éliminer ses autres adversaires. Comprenant que votre moment est passé, vous redevenez brume et lui glissez entre les doigts.</Content>
+      </Text>
+    </ConditionalTexts>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="5" />
+        <addVariable target="somma" value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="29">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="12" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="20">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="11" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="2" />
+          <subtractVariable target="somma" value="2" />
+          <setVariable target="codicePortail" value="1" />
+          <addVariable target="indizi" value="1" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="42" music="l_ombra_alle_spalle">
+    <Text>You strike in the dead of night while his body wants nothing but rest. You strike at first light while he drinks, a blurred reflection on the surface of the water. You strike at noon while he hunts and his prey escapes him.
+
+A chain of small things that help to increase his fatigue, his weakness and his irritation, but which cost you enormously too.</Text>
+    <Choices>
+      <Choice text="Continue" goto="5">
+        <Requirements>
+          <Variable id="energia" operator="gte" value="11" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="10" />
+          <subtractVariable target="somma" value="10" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="32">
+        <Requirements>
+          <Variable id="energia" operator="gte" value="5" />
+          <Variable id="energia" operator="lte" value="10" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="10" />
+          <subtractVariable target="somma" value="10" />
+          <setVariable target="codiceInsomnie" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="32">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="4" />
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="10" />
+          <subtractVariable target="somma" value="10" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="32">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="4" />
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="codiceInsomnie" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="10" />
+          <subtractVariable target="somma" value="10" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="25">
+        <Requirements>
+          <Variable id="energia" operator="lte" value="4" />
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="codiceInsomnie" operator="lte" value="0" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="energia" value="10" />
+          <subtractVariable target="somma" value="10" />
+        </Effects>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="43" music="bosco_notturno">
+    <Text>Once back, the man empties his sack completely, in a cascade of riches and trinkets, to find at last, right at the bottom, a small pouch containing his fire-lighting kit, along with a few provisions. He also recovers a blanket, gathers a little wood, and thus quickly sets up, amid the disorder, a rudimentary camp.
+
+Once settled, he sets about, chewing his dried meat now grilled on the glowing coals, taking an inventory of his new possessions.
+
+After some time spent examining trinkets and leafing through manuscripts, he stuffs all that jumble back into his sack and lies down to sleep, his weapon in its scabbard within reach.
+
+You watch him sink bit by bit into deep sleep by the warmth of the dying fire.</Text>
+    <Choices>
+      <Choice text="Strike" goto="12">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="2" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="2" />
+          <subtractVariable target="somma" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Strike" goto="12">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="1" />
+          <Variable id="ferite" operator="lte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="1" />
+          <subtractVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Strike" goto="12">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Save your energy" goto="28">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="2" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="2" />
+          <subtractVariable target="somma" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Save your energy" goto="28">
+        <Requirements>
+          <Variable id="ferite" operator="gte" value="1" />
+          <Variable id="ferite" operator="lte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="1" />
+          <subtractVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Save your energy" goto="28">
+        <Requirements>
+          <Variable id="ferite" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="44" music="corridoi_di_pietra">
+    <Text>Without any intervention on your part, the ambush turns into a butchery. The man dodges the net, and beheads, cuts the throats of and maims without the slightest hesitation the greenskins bold enough to come down and fight anyway.</Text>
+    <Choices>
+      <Choice text="Continue" goto="20" />
+    </Choices>
+  </Page>
+  <Page id="45">
+    <Text>Your target stands frozen for an instant, then drops the heavy sack encumbering him to the ground before taking to his heels.
+
+Thus lightened, he manages to throw himself into another stairwell before every exit is covered by a curtain of flame, escaping with only superficial burns.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="2" />
+        <addVariable target="somma" value="2" />
+        <setVariable target="codiceDepourvu" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="24" />
+    </Choices>
+  </Page>
+  <Page id="46" music="il_colpo_perfetto">
+    <Text>You materialise. Your appearance holds nothing surprising, and your target is already on guard.
+
+You go for broke all the same. With little success. In broad daylight, on open ground, facing an adversary who knows your weaknesses, you are far too disadvantaged. You exhaust your energy and must abandon your solid form without having done him much harm.
+
+Yoztramo bursts out laughing:
+
+"Well, it seems you didn't need me to solve your little problem after all.
+
+— Oh, he isn't really dangerous. I've already put him to flight several times. He's merely tiresome."
+
+He wipes the sweat from his brow as if nothing had happened.
+
+"You don't say. Let's take a break, long enough for you to tell me all about it. He won't be back straight away in any case. We'll complete the ritual afterwards."
+
+The man agrees, and goes back inside with his host.</Text>
+    <Choices>
+      <Choice text="Continue" goto="22" />
+    </Choices>
+  </Page>
+  <Page id="47" sound="lama_fendente" soundDelay="2">
+    <Text>Your target proves far quicker than you had supposed. At the first noise he throws himself sideways by the strength of his arms, shifting a good half-metre from his original position.
+
+A derisory effort. You bend your trajectory slightly, and your keen edge bites his flesh, sends the blood spurting, notches life itself.
+
+And then the cold contact of steel puts an end to all that. Metal-sheathed fingers have closed on your blade and pulled it away from his neck before it could sink deep enough to inflict a certainly fatal wound.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferite" value="3" />
+        <addVariable target="somma" value="3" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Try to free yourself" goto="39" />
+      <Choice text="Become intangible again at once" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="48">
+    <Text>You have not finished materialising before he is on his feet, nervously hacking at the air with his weapon. You stop the process, knowing you will not get the upper hand face to face.
+
+Your disappearance does nothing to reassure the man, who once again circles his camp, puts his armour back on, then leans against a trunk, firmly resolved to stand guard all night.
+
+You let him spend his energy for nothing. When day finally breaks, your target gathers his things and takes to the road with his eyes red from exhaustion.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="energia" value="2" />
+        <subtractVariable target="somma" value="2" />
+        <setVariable target="codiceInsomnie" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="28" />
+    </Choices>
+  </Page>
+  <Page id="49" music="bosco_notturno">
+    <Text>For three days and three nights nothing of interest happens. You recover your strength, your summoner continuing to honour his side of the contract, but so does your target.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="energia" value="8" />
+        <addVariable target="somma" value="8" />
+        <setVariable target="codiceDetente" value="1" />
+        <setVariable target="codiceInsomnie" value="0" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+          <Variable id="ferite" operator="gte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="1" />
+          <subtractVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="gte" value="1" />
+          <Variable id="ferite" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="25">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="gte" value="2" />
+          <Variable id="ferite" operator="gte" value="3" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="3" />
+          <subtractVariable target="somma" value="3" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="25">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="gte" value="2" />
+          <Variable id="ferite" operator="gte" value="2" />
+          <Variable id="ferite" operator="lte" value="2" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="2" />
+          <subtractVariable target="somma" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="25">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="gte" value="2" />
+          <Variable id="ferite" operator="gte" value="1" />
+          <Variable id="ferite" operator="lte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="1" />
+          <subtractVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="25">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="gte" value="2" />
+          <Variable id="ferite" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Continue" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="lte" value="1" />
+          <Variable id="ferite" operator="gte" value="3" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="3" />
+          <subtractVariable target="somma" value="3" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="lte" value="1" />
+          <Variable id="ferite" operator="gte" value="2" />
+          <Variable id="ferite" operator="lte" value="2" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="2" />
+          <subtractVariable target="somma" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="lte" value="1" />
+          <Variable id="ferite" operator="gte" value="1" />
+          <Variable id="ferite" operator="lte" value="1" />
+        </Requirements>
+        <Effects>
+          <subtractVariable target="ferite" value="1" />
+          <subtractVariable target="somma" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Continue" goto="32">
+        <Requirements>
+          <Variable id="codiceDepourvu" operator="lte" value="0" />
+          <Variable id="indizi" operator="lte" value="1" />
+          <Variable id="ferite" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="50" sound="gemito_ferita" soundDelay="4" music="la_fine_dell_eroe" ending="true">
+    <Text>You cannot feel fatigue. You cannot be killed. These advantages eventually get the better of your adversary. At the end of a long fencing trial you finally manage to get round his defences and inflict a serious gash.
+
+From then on everything follows very quickly. That first significant wound weakens him, allowing you to inflict another, and another still. You are slow to deliver the killing blow because he is still defending himself with the energy of despair, but the outcome of the confrontation is inevitable.
+
+One last piece of bravado, and he collapses. Your summoner heaves a sigh of relief and aims a barb at you:
+
+"Better late than never."
+
+You ignore him. Your target has just expired, and with his last breath of life the bonds holding you in this physical world give way.
+
+You return to nothingness in delight, your duty accomplished.</Text>
+  </Page>
+</Librogame>
