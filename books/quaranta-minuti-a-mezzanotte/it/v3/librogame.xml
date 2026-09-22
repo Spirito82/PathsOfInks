@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="3" phase="test" id="quaranta-minuti-a-mezzanotte-it" workId="quaranta-minuti-a-mezzanotte" language="it" title="Quaranta Minuti a Mezzanotte!" author="Roberto «Fox» Marcarini" checks="deterministico" genre="Horror classico, fantasmi" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="villa_baldwin_notte">
+  <Blurb>Sei un famoso Cacciatore di Fantasmi, e a Baldwin Manor qualcosa è andato storto: qualcuno ti ha colpito alla testa. Rinvieni in una stanza in disuso, con la tua Candela Magica quasi esaurita e un Orologio a Pendolo che segna le 23:20.
+
+A mezzanotte l'attività spiritica sarà al massimo. Ogni stanza consuma una Fiammella della Candela, e quando ne avrai barrate cinque le forze della villa ti prenderanno.</Blurb>
+  <ContentWarnings>Fantasmi, spettri e una morte del protagonista raccontata senza dettagli. Paura da storia di fantasmi, niente di più.</ContentWarnings>
+  <Changes>
+    <Change>Adattato per questa app: la struttura, le regole e alcune parti del testo sono state modificate o tolte per funzionare con il suo motore</Change>
+    <Change>Aggiunti suoni e musiche di sottofondo, che arrivano insieme al libro</Change>
+  </Changes>
+  <Audio>
+    <Sound name="chiave_teschio_scatto" file="chiave_teschio_scatto.ogg" />
+    <Sound name="portone_ferro_spalancato" file="portone_ferro_spalancato.ogg" />
+    <Sound name="rintocco_pendola_baldwin" file="rintocco_pendola_baldwin.ogg" />
+    <Sound name="soffio_fiammella_spenta" file="soffio_fiammella_spenta.ogg" />
+    <Sound name="urlo_spettro_famelico" file="urlo_spettro_famelico.ogg" />
+    <Music id="il_rintocco_di_mezzanotte" file="il_rintocco_di_mezzanotte.ogg" />
+    <Music id="il_salone_delle_fiammelle" file="il_salone_delle_fiammelle.ogg" />
+    <Music id="le_forze_della_villa" file="le_forze_della_villa.ogg" />
+    <Music id="lo_studio_del_barone" file="lo_studio_del_barone.ogg" />
+    <Music id="villa_baldwin_notte" file="villa_baldwin_notte.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <Variables>
+    <Variable id="fiammelle" name="Fiammelle barrate" type="number" initial="0" min="0" max="5" visible="true" />
+    <Variable id="chiave" name="Chiave a Teschio" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1" sound="rintocco_pendola_baldwin" soundDelay="4" music="villa_baldwin_notte">
+    <Text>Sei un famoso Cacciatore di Fantasmi e, armato del tuo cappello a tesa larga e della tua fidata Candela Magica, ti sei avventurato a Baldwin Manor, una rinomata villa infestata… ma qualcosa è andato storto! Mentre eri in esplorazione tra quelle mura fatiscenti, sei stato colpito alla testa e hai perso i sensi. Ora, mentre pian piano stai rinvenendo, ti accorgi che la tua fidata Candela è quasi esaurita e che probabilmente manca poco a mezzanotte: ora in cui l’attività spiritica sarà al massimo!
+
+Devi fuggire da Baldwin Manor il prima possibile o potresti non essere in grado di contrastare le forze maligne che qui si annidano.
+
+Attento: se le Fiammelle barrate sono 5 i poteri perniciosi di Baldwin Manor ti ghermiranno!
+
+Ti rialzi con ancora la testa dolorante per il brutto colpo e, Candela alla mano, rischiari l’ambiente circostante: la luce tremola, segno che spiriti e morti irrequieti sono vicini. Ti rendi conto di essere in una camera ormai in disuso, con solo un oggetto degno di nota: un grosso Orologio a Pendolo stranamente ancora funzionante. Segna le 23:20: hai solo 40 minuti per fuggire, nel caso fosse l’ora esatta! Dietro di te, una Vecchia Porta scrostata conduce fuori dalla stanza.</Text>
+    <Choices>
+      <Choice text="Controllare l'Orologio a Pendolo" goto="17">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Aprire la Vecchia Porta e lasciare la stanza" goto="3">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="2" music="villa_baldwin_notte">
+    <Text>Puoi scegliere di passare sotto un grande arco e arrivare nel Salone, o entrare in quello che sembra essere un Piccolo Studio.</Text>
+    <Choices>
+      <Choice text="Passare sotto il grande arco, nel Salone" goto="6">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Entrare nel Piccolo Studio" goto="8">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="3" music="villa_baldwin_notte">
+    <Text>Una volta oltrepassata la soglia, la porta sbatte violentemente chiudendosi alle tue spalle: odi solo il rumore del meccanismo della serratura che scatta più volte, come se una chiave fantasma l’avesse chiusa. Ti ritrovi, quindi, a percorrere un lungo corridoio; sotto i tuoi passi il pavimento cigola in modo sinistro e temi di sprofondarvi da un momento all’altro. Quando giungi finalmente alla fine del tuo percorso ti ritrovi ad un bivio.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="2">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4" music="le_forze_della_villa">
+    <Text>Corri a perdifiato per le cantine, con solo la tua Candela che debolmente ti fa da guida. Dietro di te, lo spettro ti sta con il fiato sul collo. Arrivi ad un bivio ed hai poco tempo per pensare: dove svolti?</Text>
+    <Choices>
+      <Choice text="A destra" goto="13">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="A sinistra" goto="16">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="5" music="villa_baldwin_notte">
+    <Text>Quasi ti perdi mentre finisci di esplorare i molteplici corridoi della Cantina fino a che non giungi dinanzi ad un grosso buco in uno dei muri di mattoni: con la tua Candela rischiari una piccola caverna bagnata dall’acqua e illuminata da un flebile bagliore proveniente dall’alto. Decidi di entrarvi e non perdere altro tempo.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="fiammelle" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="18">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="6" music="il_salone_delle_fiammelle">
+    <Text>Il Salone ha visto sicuramente giorni migliori: i pochi mobili sono ricoperti da vecchi teloni polverosi e quel Vecchio Quadro appeso al camino è veramente inquietante. Scale cigolanti sembrano portare verso una Cantina e chissà a quali pericoli, ma per tua fortuna illumini la possibile via di fuga: il Portone Principale!</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="fiammelle" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Ispezionare il Vecchio Quadro" goto="10">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Controllare la Cantina" goto="11">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Correre verso il Portone Principale" goto="7">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="7" music="il_salone_delle_fiammelle">
+    <Text>Il Portone Principale è chiuso da una complicatissima serratura meccanica che solo la chiave corretta può aprire.</Text>
+    <Choices>
+      <Choice text="Usare la Chiave a Teschio" goto="19">
+        <Requirements>
+          <Variable id="chiave" operator="gte" value="1" />
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Tornare nel Salone" goto="6">
+        <Requirements>
+          <Variable id="chiave" operator="lt" value="1" />
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="8" music="lo_studio_del_barone">
+    <Text>Entri nel Piccolo Studio mentre la fiamma della tua Candela crepita leggermente. Passi alcuni minuti a rovistare in scartoffie, pergamene e vecchi libri polverosi che caoticamente adornano le librerie dello studio senza trovare nulla. Proprio poco prima di darti per vinto, scorgi un foglio appallottolato vicino ai piedi della scrivania e decidi di prenderlo e leggerne il contenuto: un numero, «333», campeggia scritto con inchiostro rosso sul documento. Mentre pensi tra te e te se abbia un qualche senso, un vento innaturale ti aspira via dal Piccolo Studio catapultandoti nel Salone, a cui arrivi ruzzolando.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="fiammelle" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="6">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="9" sound="chiave_teschio_scatto" music="lo_studio_del_barone">
+    <Text>CLICK! La combinazione è corretta e la cassaforte si apre davanti ai tuoi occhi. All’interno c’è solamente un oggetto: una Chiave a Teschio. Il tempo stringe. Dove vuoi andare ora?</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="fiammelle" value="1" />
+        <setVariable target="chiave" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Andare al Portone Principale" goto="7">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Andare in Cantina" goto="11">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="10" music="lo_studio_del_barone">
+    <Text>Il dipinto raffigura un vecchio uomo dallo sguardo arcigno. Sembra osservarti con i suoi occhi malevoli. La tela, lievemente bucherellata, ti mostra inaspettatamente che qualcosa si cela dietro al Vecchio Quadro.</Text>
+    <Choices>
+      <Choice text="Controllare più accuratamente" goto="14">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Tornare nel Salone" goto="6">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="11" sound="urlo_spettro_famelico" soundDelay="4" music="le_forze_della_villa">
+    <Text>Scendi molto cautamente le scale che portano alla cantina quando alle tue spalle, proprio dal Salone da dove sei arrivato, noti un’alta figura nera e scheletrica che ti osserva. Ti sembra che in viso assomigli al dipinto del quadro… se non fosse per le orbite rosse e le vesti fluttuanti fatte d’ombra. «ho fame, cacciatore…» dice con voce roca, dopodiché si catapulta giù per le scale con fare rapace. Cosa fai?</Text>
+    <Choices>
+      <Choice text="Tentare di fuggire" goto="4">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Dar fondo al potere della Candela (2 Fiammelle)" goto="15">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+        <Effects>
+          <addVariable target="fiammelle" value="2" />
+        </Effects>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="12" sound="soffio_fiammella_spenta" music="le_forze_della_villa" ending="true">
+    <Text>Le ombre si fanno pesanti, mentre la luce della tua Candela si spegne del tutto. Intorno a te solo freddo e le voci delle anime irrequiete che hanno fame del tuo calore. In lontananza, l’Orologio a Pendolo batte la mezzanotte. La tua avventura a Baldwin Manor finisce qui…</Text>
+  </Page>
+  <Page id="13" sound="urlo_spettro_famelico" soundDelay="2" music="le_forze_della_villa">
+    <Text>Purtroppo, la scelta che compi è quella sbagliata. Poco dopo aver svoltato ti trovi davanti ad un vicolo cieco. Dietro di te, odi solo il ringhio dello spettro…</Text>
+    <Choices>
+      <Choice text="Continuare" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="14" music="lo_studio_del_barone">
+    <Text>Togli cautamente il dipinto, adagiandolo con cura per terra, e riveli quella che sembra essere una piccola cassaforte a muro chiusa da una combinazione meccanica a 3 cifre.</Text>
+    <Choices>
+      <Choice text="Provare la combinazione" goto="9" failGoto="6" ask="La cassaforte ha una combinazione a 3 cifre. Somma i tre numeri: che cosa ottieni?" answer="9|nove">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="Tornare nel Salone" goto="6">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="15" music="le_forze_della_villa">
+    <Text>Concentri i poteri della tua Candela, colpendo con un fascio di luce lo Spettro che si vaporizza dinanzi a te. La conflagrazione che ne segue manda a gambe all’aria te e la maggior parte della vecchia mobilia della Cantina, scale comprese che si spezzano con un sonoro CRACK! Per ora il pericolo è scampato ma ormai la tua Candela è quasi scarica... Non ti rimane altro che continuare ad esplorare la Cantina.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="5">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="16" sound="urlo_spettro_famelico" soundDelay="4" music="le_forze_della_villa">
+    <Text>Continui a correre, ma dietro di te lo spettro non demorde. Stai quasi per crollare dalla fatica e dal terrore, finché non superi con un balzo un grosso buco nel muro di mattoni e ti trovi con i piedi a mollo in una piccola caverna naturale, rischiarata dalla luce della Luna che proviene sopra di te. Lo spettro si è fermato all’ingresso della caverna e ulula dalla rabbia: forse non può entrarvi?</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="fiammelle" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continuare" goto="18">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="17" sound="rintocco_pendola_baldwin" music="le_forze_della_villa">
+    <Text>Appena ti avvicini, le lancette del quadrante sembrano impazzire e le stesse ombre si fanno vive intorno a te, quasi vogliano afferrarti. Mentre fuggi dalla stanza, una voce dall'Orologio a Pendolo ti chiama, facendoti raggelare il sangue: «…ti attendo nella cantina cacciatore: vieni da me se hai il coraggio di affrontarmi!».</Text>
+    <Choices>
+      <Choice text="Continuare" goto="3">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="18" sound="soffio_fiammella_spenta" soundDelay="4" music="villa_baldwin_notte">
+    <Text>Ispezioni la Caverna e trovi una lunga corda che proviene da un buco nel soffitto, quindi capisci: sei all’interno di un pozzo rischiarato dalla luce lunare! Decidi immediatamente di arrampicarti e pian piano risali verso la superficie, pochi istanti dopo la tua Candela si spegne del tutto. Arrivato in cima, noti di essere nei giardini della Villa.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="20">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="19" sound="portone_ferro_spalancato" soundDelay="3" music="le_forze_della_villa">
+    <Text>Inserisci la Chiave a Teschio e con molta fretta la giri nella complicata serratura finché questa non scatta. Mentre togli l’ultimo chiavistello e ti accingi ad aprire il pesante portone, odi alle tue spalle un grido sommesso e disperato: «nooooo…». Fai appena in tempo a gettarti fuori dall’ingresso quando un artiglio d’ombra quasi non ti ghermisce. Ruzzoli nel vialetto di Baldwin Manor e corri per diversi metri prima di fermarti per riprendere fiato!</Text>
+    <Choices>
+      <Choice text="Continuare" goto="20">
+        <Requirements>
+          <Variable id="fiammelle" operator="lt" value="5" />
+        </Requirements>
+      </Choice>
+      <Choice text="La Candela si spegne" goto="12">
+        <Requirements>
+          <Variable id="fiammelle" operator="gte" value="5" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="20" sound="rintocco_pendola_baldwin" soundDelay="2" music="il_rintocco_di_mezzanotte" ending="true">
+    <Text>Ce l’hai fatta! Sei riuscito a fuggire da Baldwin Manor giusto poco prima dello scoccare della Mezzanotte. Mentre ti allontani nel cuore della notte, puoi sentire alle tue spalle i morti irrequieti che dalla Villa si lamentano per la sconfitta subita! Ottimo lavoro Cacciatore di Fantasmi!</Text>
+  </Page>
+</Librogame>

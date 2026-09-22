@@ -1,0 +1,628 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="3" phase="test" id="oggi-o-mai-piu-en" workId="oggi-o-mai-piu" language="en" title="Today or Never" author="Andrea Suliani" checks="dadi" genre="Western" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="stradone_polveroso">
+  <Changes>
+    <Change>Adapted for this app: the structure, the rules and parts of the text were changed or removed to work with its engine</Change>
+    <Change>Translated into English from the original Italian</Change>
+    <Change>Added sounds and background music, delivered together with the book</Change>
+  </Changes>
+  <Audio>
+    <Sound name="combinazione_cassaforte" file="combinazione_cassaforte.ogg" />
+    <Sound name="fischio_treno_vapore" file="fischio_treno_vapore.ogg" />
+    <Sound name="galoppo_cavallo" file="galoppo_cavallo.ogg" />
+    <Sound name="sparo_colt" file="sparo_colt.ogg" />
+    <Sound name="ticchettio_orologio_taschino" file="ticchettio_orologio_taschino.ogg" />
+    <Music id="fuga_verso_il_covo" file="fuga_verso_il_covo.ogg" />
+    <Music id="il_colpo_alla_banca" file="il_colpo_alla_banca.ogg" />
+    <Music id="il_fischio_del_treno" file="il_fischio_del_treno.ogg" />
+    <Music id="piombo_caldo" file="piombo_caldo.ogg" />
+    <Music id="stradone_polveroso" file="stradone_polveroso.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <ContentWarnings>Armed robbery. You can shoot an unarmed hostage and kill a bank clerk: the book tells it without relish, but it tells it. Coarse language.</ContentWarnings>
+  <Blurb>The sun burns the red earth of the main street. There are four of you under a porch, and in forty minutes the army train will be here. Elias says drop the whole thing; you say today or never.
+
+Forty minutes to rob the Bodie's Bank, reach the gang's hideout and get away with it. Every action costs minutes, and the reckoning comes only at the end: even if you run over, keep playing.</Blurb>
+  <Variables>
+    <Variable id="pv" name="Hit Points" type="number" initial="8" min="0" max="8" visible="true" />
+    <Variable id="tempo" name="Time" type="number" initial="40" min="-60" max="40" visible="true" />
+    <Variable id="fortuna" name="Stole a FORTUNE" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="spiccioli" name="Stole SMALL CHANGE" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="nemicoPv" name="The opponent's Hit Points" type="number" initial="0" min="0" max="6" visible="false" />
+    <Variable id="nemiciVivi" name="Pursuers still in the saddle" type="number" initial="0" min="0" max="3" visible="false" />
+    <Variable id="ferito" name="Shots home on the man in front of you" type="number" initial="0" min="0" max="2" visible="false" />
+  </Variables>
+  <Tables>
+    <Table id="duello" dice="6" times="2">
+      <Result is="1" range="1" />
+      <Result is="2" range="2" />
+      <Result is="3" range="3" />
+      <Result is="4" range="4" />
+      <Result is="5" range="5" />
+      <Result is="6" range="6" />
+      <Outcome when="1 1" goto="17" />
+      <Outcome when="1 2" goto="17" />
+      <Outcome when="1 3" goto="17" />
+      <Outcome when="1 4" goto="17" />
+      <Outcome when="1 5" goto="17" />
+      <Outcome when="1 6" goto="17" />
+      <Outcome when="2 2" goto="17" />
+      <Outcome when="2 3" goto="17" />
+      <Outcome when="2 4" goto="17" />
+      <Outcome when="2 5" goto="17" />
+      <Outcome when="2 6" goto="17" />
+      <Outcome when="3 3" goto="17" />
+      <Outcome when="3 4" goto="17" />
+      <Outcome when="3 5" goto="17" />
+      <Outcome when="3 6" goto="17" />
+      <Outcome when="4 4" goto="17" />
+      <Outcome when="4 5" goto="17" />
+      <Outcome when="4 6" goto="22" />
+      <Outcome when="5 5" goto="22" />
+      <Outcome when="5 6" goto="22" />
+      <Outcome when="6 6" goto="22" />
+    </Table>
+    <Table id="mira" dice="6" times="2">
+      <Result is="1" range="1" />
+      <Result is="2" range="2" />
+      <Result is="3" range="3" />
+      <Result is="4" range="4" />
+      <Result is="5" range="5" />
+      <Result is="6" range="6" />
+      <Outcome when="1 1" goto="24" />
+      <Outcome when="1 2" goto="24" />
+      <Outcome when="1 3" goto="24" />
+      <Outcome when="1 4" goto="24" />
+      <Outcome when="1 5" goto="24" />
+      <Outcome when="1 6" goto="24" />
+      <Outcome when="2 2" goto="24" />
+      <Outcome when="2 3" goto="24" />
+      <Outcome when="2 4" goto="24" />
+      <Outcome when="2 5" goto="24" />
+      <Outcome when="2 6" goto="24" />
+      <Outcome when="3 3" goto="24" />
+      <Outcome when="3 4" goto="24" />
+      <Outcome when="3 5" goto="24" />
+      <Outcome when="3 6" goto="25" />
+      <Outcome when="4 4" goto="24" />
+      <Outcome when="4 5" goto="25" />
+      <Outcome when="4 6" goto="25" />
+      <Outcome when="5 5" goto="25" />
+      <Outcome when="5 6" goto="25" />
+      <Outcome when="6 6" goto="25" />
+    </Table>
+    <Table id="velocita3" dice="6" times="2">
+      <Result is="1" range="1" />
+      <Result is="2" range="2" />
+      <Result is="3" range="3" />
+      <Result is="4" range="4" />
+      <Result is="5" range="5" />
+      <Result is="6" range="6" />
+      <Outcome when="1 1" goto="28" />
+      <Outcome when="1 2" goto="28" />
+      <Outcome when="1 3" goto="28" />
+      <Outcome when="1 4" goto="28" />
+      <Outcome when="1 5" goto="28" />
+      <Outcome when="1 6" goto="28" />
+      <Outcome when="2 2" goto="28" />
+      <Outcome when="2 3" goto="28" />
+      <Outcome when="2 4" goto="28" />
+      <Outcome when="2 5" goto="28" />
+      <Outcome when="2 6" goto="28" />
+      <Outcome when="3 3" goto="28" />
+      <Outcome when="3 4" goto="28" />
+      <Outcome when="3 5" goto="28" />
+      <Outcome when="3 6" goto="28" />
+      <Outcome when="4 4" goto="28" />
+      <Outcome when="4 5" goto="28" />
+      <Outcome when="4 6" goto="29" />
+      <Outcome when="5 5" goto="29" />
+      <Outcome when="5 6" goto="29" />
+      <Outcome when="6 6" goto="29" />
+    </Table>
+    <Table id="velocita2" dice="6" times="2">
+      <Result is="1" range="1" />
+      <Result is="2" range="2" />
+      <Result is="3" range="3" />
+      <Result is="4" range="4" />
+      <Result is="5" range="5" />
+      <Result is="6" range="6" />
+      <Outcome when="1 1" goto="28" />
+      <Outcome when="1 2" goto="28" />
+      <Outcome when="1 3" goto="28" />
+      <Outcome when="1 4" goto="28" />
+      <Outcome when="1 5" goto="28" />
+      <Outcome when="1 6" goto="28" />
+      <Outcome when="2 2" goto="28" />
+      <Outcome when="2 3" goto="28" />
+      <Outcome when="2 4" goto="28" />
+      <Outcome when="2 5" goto="28" />
+      <Outcome when="2 6" goto="28" />
+      <Outcome when="3 3" goto="28" />
+      <Outcome when="3 4" goto="28" />
+      <Outcome when="3 5" goto="28" />
+      <Outcome when="3 6" goto="28" />
+      <Outcome when="4 4" goto="28" />
+      <Outcome when="4 5" goto="28" />
+      <Outcome when="4 6" goto="30" />
+      <Outcome when="5 5" goto="30" />
+      <Outcome when="5 6" goto="30" />
+      <Outcome when="6 6" goto="30" />
+    </Table>
+    <Table id="velocita1" dice="6" times="2">
+      <Result is="1" range="1" />
+      <Result is="2" range="2" />
+      <Result is="3" range="3" />
+      <Result is="4" range="4" />
+      <Result is="5" range="5" />
+      <Result is="6" range="6" />
+      <Outcome when="1 1" goto="28" />
+      <Outcome when="1 2" goto="28" />
+      <Outcome when="1 3" goto="28" />
+      <Outcome when="1 4" goto="28" />
+      <Outcome when="1 5" goto="28" />
+      <Outcome when="1 6" goto="28" />
+      <Outcome when="2 2" goto="28" />
+      <Outcome when="2 3" goto="28" />
+      <Outcome when="2 4" goto="28" />
+      <Outcome when="2 5" goto="28" />
+      <Outcome when="2 6" goto="28" />
+      <Outcome when="3 3" goto="28" />
+      <Outcome when="3 4" goto="28" />
+      <Outcome when="3 5" goto="28" />
+      <Outcome when="3 6" goto="28" />
+      <Outcome when="4 4" goto="28" />
+      <Outcome when="4 5" goto="28" />
+      <Outcome when="4 6" goto="31" />
+      <Outcome when="5 5" goto="31" />
+      <Outcome when="5 6" goto="31" />
+      <Outcome when="6 6" goto="31" />
+    </Table>
+  </Tables>
+  <Page id="1" sound="ticchettio_orologio_taschino" soundDelay="3" music="stradone_polveroso">
+    <Text>The sun burns the red earth of the main street and turns the air into a furnace. Not even the shade of the porch you are sitting under gives you any relief. You watch the others fighting the flies on faces as sweaty as horses at pasture. Only Elias sits still, his eyes and his mind who knows where.
+
+"What's the matter, Elias, are you filling your britches?" you ask him.
+
+"We'd do better to send the whole thing to hell and wait until God is on our side," he answers.
+
+"God is never on the devils' side, Elias. Today or never."
+
+He turns and pins you with eyes as black as crude oil.
+
+"Maybe it isn't clear to you that in 40 minutes the army train will be here? That's a nuisance the size of the Mojave, and we hadn't reckoned on it."
+
+"It means we'll think of something," you say, standing up and signalling the others to do the same.
+
+Gionata and Larry follow you. Elias hesitates, then spits on the ground and gets up with a string of foul words.
+
+You draw the Colt, cross the main street with the others behind you and stop in front of the door of the Bodie's Bank.
+
+"Today or never." You go in.
+
+"This is a robbery, and anyone who moves ends up fertilising the desert!"
+
+The clerk behind the counter lets go of the bundle he was holding, frozen with fear. The customer at the counter slides down onto the floor, struck dumb with terror; the other two customers, a pair of lame old men, begin wetting their trousers in unison. The safe is firmly shut behind the clerk.</Text>
+    <Choices>
+      <Choice text="Crack the safe" goto="16" />
+      <Choice text="Threaten the clerk" goto="18" />
+      <Choice text="Shoot a customer at random" goto="9" />
+      <Choice text="Blow it sky high" goto="19" />
+    </Choices>
+  </Page>
+  <Page id="2" music="piombo_caldo">
+    <Text>You wheel your horse round and ride at the man. His eyes wide with fear, yours narrowed with rage. You both wait until the last moment and then throw yourselves from the saddle, crashing to the ground. You get up. The duel begins. You size each other up, circling, hands ready to draw faster than the other's.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Face him down" goto="17" roll="duello" />
+    </Choices>
+  </Page>
+  <Page id="3" music="il_fischio_del_treno">
+    <Text>You come tearing into the hideout, where all the others — even those who took no part in the robbery — were waiting for you. You go into a tent with Elias, Gionata and Larry to look over the haul.</Text>
+    <Choices>
+      <Choice text="Open the sack" goto="7">
+        <Requirements>
+          <Variable id="fortuna" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Open the sack" goto="14">
+        <Requirements>
+          <Variable id="spiccioli" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="4" music="fuga_verso_il_covo">
+    <Text>You see only one way out: taking the hard forest tracks. You dodge branches and undergrowth and the noise behind you fades. You look back and see that only one of the men is still after you.</Text>
+    <Choices>
+      <Choice text="Face him in a duel" goto="2" />
+      <Choice text="Face him in a shoot-out" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="5" sound="fischio_treno_vapore" soundDelay="3" music="il_fischio_del_treno" ending="true">
+    <Text>Once over the rise that shelters your hideout, you find a very nasty surprise: the hideout is surrounded by army soldiers, busy smashing everything. Your arms fall to your sides and for perhaps the first time you are close to crying. Behind you a chorus of metallic sounds promises you all the lead you could want. You let the pistol fall too. "Today or never," you think, as the soldiers close in around you.</Text>
+  </Page>
+  <Page id="6" sound="tonfo" music="piombo_caldo">
+    <Text>The blast rips open the safe and half the wall of the bank. If until now you could still stupidly imagine getting away with it, by now saints and devils alike know what you are doing. You scramble to take as much as you can, but when the sheriffs' shots start whistling past your ears, you are forced to run.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="5" />
+        <setVariable target="spiccioli" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Run for it" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="7" music="il_fischio_del_treno" ending="true">
+    <Text>Your eyes go wide: it really is a fortune. "There you are," you say, grinning through your teeth. "At last we can put an end to this life. Caribbean, here we come." The hard faces soften, and for the first time in years the future seemed brighter than the dust around them. So there is a heaven even for the likes of you.</Text>
+  </Page>
+  <Page id="8" sound="combinazione_cassaforte" soundDelay="1" music="il_colpo_alla_banca">
+    <Text>It took you a fair while to find the keys, but now at last the door, under Elias's hands, is creaking the right way.</Text>
+    <Choices>
+      <Choice text="Step into the safe" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="9" sound="sparo_colt" soundDelay="2" music="il_colpo_alla_banca">
+    <Text>You walk towards the clerk and, without taking your eyes off him, point the pistol at one of the old men and fire. The old man drops into a sitting position on the bench that runs along the wall.
+
+He seems to be sleeping, but he will never wake up again.
+
+"I put a hole in his hat and in his head too. Do you like your hat the way it is?"
+
+"Y... yes," the clerk mumbles. He takes out the keys and hands them over. They jingle with his shaking.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Take the keys" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="10" music="piombo_caldo">
+    <Text>You have to take them on all at once.
+
+Enemy 1 — HP 4, Damage 2
+
+Enemy 2 — HP 4, Damage 2
+
+Enemy 3 — HP 4, Damage 2</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="10" />
+        <setVariable target="nemiciVivi" value="3" />
+        <setVariable target="ferito" value="0" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Take them all on at once" goto="27" />
+    </Choices>
+  </Page>
+  <Page id="11" sound="galoppo_cavallo" soundDelay="3" music="fuga_verso_il_covo">
+    <Text>"Load everything onto my horse," you order. The others do it and you all mount up.
+
+"Now we..." ssss... a whistle cuts your words short and knocks your hat off your head. Behind you four or five armed men are riding your way with their guns levelled.
+
+"Now we split up!" Elias shouts. "We meet at the hideout!"</Text>
+    <Choices>
+      <Choice text="Take the main road" goto="20" />
+      <Choice text="Head into the woods" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="12" music="il_colpo_alla_banca">
+    <Text>Your eyes shine brighter than the ingots you are making off with. Gionata whistles like a man who has just broken the bank at blackjack, and you could say he has. You fill four saddlebags, thank them with a smile, rotten teeth well on show, and go out through the back door.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="10" />
+        <setVariable target="fortuna" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Out through the back door" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="13" sound="sparo_colt" music="il_colpo_alla_banca">
+    <Text>The shot tears open the silence of the valley and the clerk's head.
+
+"Christ, Christ!" Elias yells. "Now they'll be all over us!"
+
+"Then shift your arse and find the keys."</Text>
+    <Choices>
+      <Choice text="Look for the keys to the safe" goto="8" />
+      <Choice text="Blow it open" goto="19" />
+    </Choices>
+  </Page>
+  <Page id="14" music="il_fischio_del_treno" ending="true">
+    <Text>You start counting them, but every coin that drops seems smaller than the last. "Is that all?" Elias snaps, throwing the sack aside in anger. "We got ourselves into this for so little?" he goes on, looking with contempt at the few dollars scattered on the ground. You exchange a disappointed look: running off to the Caribbean, that is a hope too far away.</Text>
+  </Page>
+  <Page id="15" music="piombo_caldo">
+    <Text>You wheel your horse round and ride at the man. His eyes wide with fear, yours narrowed with rage. You both wait until the last moment and then throw yourselves from the saddle, crashing to the ground. You get up and take cover behind some rocks.
+
+You have to take him on.
+
+Enemy — HP 6, Damage 2</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="10" />
+        <setVariable target="nemicoPv" value="6" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Open fire" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="16" sound="combinazione_cassaforte" soundDelay="3" music="il_colpo_alla_banca">
+    <Text>With a shoulder-charge two of your men knock the clerk to the floor and start working on the lock of the safe. A beast like that is not as easy to open as the pigsty on a ranch.
+
+"Get a move on, our bookkeeper here is in a hurry to get home to his wife," you say, giving him a complicit wink, but he stays blank.
+
+At last the door creaks the right way. Banknotes and ingots are waiting for your great paws.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="15" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Fill the saddlebags" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="17" sound="ticchettio_orologio_taschino" soundDelay="2" music="il_fischio_del_treno">
+    <Text>Exhausted, both you and your horse, you arrive near the hideout, but it is still too soon to breathe a sigh of relief.</Text>
+    <Choices>
+      <Choice text="Ride over the rise" goto="3">
+        <Requirements>
+          <Variable id="tempo" operator="gte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Ride over the rise" goto="5">
+        <Requirements>
+          <Variable id="tempo" operator="lt" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="18" music="il_colpo_alla_banca">
+    <Text>You raise the Colt to the height of his forehead.
+
+"Well? Do we look at each other? Do we shoot each other?"
+
+The clerk does not react. Everything is still. The wait feels endless to both of you, for different reasons.
+
+"The keys!" you shout at him.
+
+"S... sir," he stammers, "th... they... they aren't my money," and a dark stain begins to run down his legs, spreading out at his feet. You watch it in disgust.
+
+"You really are a disgusting little man."</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="10" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Shoot him" goto="13" />
+      <Choice text="Kill a customer at random" goto="9" />
+    </Choices>
+  </Page>
+  <Page id="19" music="il_colpo_alla_banca">
+    <Text>"Holy hell! I didn't want it to come to this." You signal to Gionata and Larry. The two pull wire and dynamite out of the saddlebags and start rigging it against the door of the safe. After an endless stretch of time they wave you back.
+
+Larry leaves the honour to you. You aim at the contraption they have built and fire.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="15" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Fire at the contraption" goto="6" />
+    </Choices>
+  </Page>
+  <Page id="20" sound="galoppo_cavallo" music="fuga_verso_il_covo">
+    <Text>You spur your horse along the dusty road, while behind you three men on their mounts give chase with their Colts ready to sing lead.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="5" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Take on all of them" goto="10" />
+      <Choice text="Keep running" goto="21" />
+      <Choice text="Turn off into the woods" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="21" sound="galoppo_cavallo" music="fuga_verso_il_covo">
+    <Text>You lash the horse, ignoring the foam filling its mouth. The devils' shots behind you are getting closer and closer. Far too close.
+
+You are hit twice. The maddened horse chooses to hurl itself into a stand of trees on the left. Branches strike you everywhere, you jump down from the saddle and roll downhill, until you come to rest against the body of your own horse, which has gone down too. Luckily the men have not followed you, taking you for dead for certain. Battered, but alive, you climb back into the saddle.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="tempo" value="5" />
+        <subtractVariable target="pv" value="4" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Climb back into the saddle" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="22" music="stradone_polveroso" ending="true">
+    <Text>The lead gets there before you do. The sun goes on burning the red earth of the main street, and none of it matters to you any more.</Text>
+  </Page>
+  <Page id="23" music="piombo_caldo">
+    <Text>Behind the rocks there is nothing to hear but your own breathing. You always shoot first.</Text>
+    <Choices>
+      <Choice text="Shoot" goto="24" roll="mira" />
+    </Choices>
+  </Page>
+  <Page id="24" sound="sparo_colt" music="piombo_caldo">
+    <Text>The shot goes home.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="nemicoPv" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="The man slumps behind the rock" goto="17">
+        <Requirements>
+          <Variable id="nemicoPv" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="He stays on his feet" goto="26">
+        <Requirements>
+          <Variable id="nemicoPv" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Text>The shot is lost against the rock.</Text>
+    <Choices>
+      <Choice text="Keep your head down" goto="26" />
+    </Choices>
+  </Page>
+  <Page id="26">
+    <Text>The man returns fire, and he does not miss.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="pv" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="You are finished" goto="22">
+        <Requirements>
+          <Variable id="pv" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Reload" goto="23">
+        <Requirements>
+          <Variable id="pv" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="27" music="piombo_caldo">
+    <Text>Three men, three Colts. As long as your shots go home you stay on your feet.</Text>
+    <Choices>
+      <Choice text="Shoot" goto="29" roll="velocita3">
+        <Requirements>
+          <Variable id="nemiciVivi" operator="gte" value="3" />
+        </Requirements>
+      </Choice>
+      <Choice text="Shoot" goto="30" roll="velocita2">
+        <Requirements>
+          <Variable id="nemiciVivi" operator="eq" value="2" />
+        </Requirements>
+      </Choice>
+      <Choice text="Shoot" goto="31" roll="velocita1">
+        <Requirements>
+          <Variable id="nemiciVivi" operator="lte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Text>The shot goes home.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="ferito" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="The one in front of you staggers" goto="32">
+        <Requirements>
+          <Variable id="ferito" operator="gte" value="2" />
+        </Requirements>
+      </Choice>
+      <Choice text="Keep shooting" goto="27">
+        <Requirements>
+          <Variable id="ferito" operator="lte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="29">
+    <Text>Your aim is off, and the desert answers you with three barrels at once.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="pv" value="6" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="You are finished" goto="22">
+        <Requirements>
+          <Variable id="pv" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Grit your teeth" goto="27">
+        <Requirements>
+          <Variable id="pv" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="30">
+    <Text>Your aim is off, and two barrels answer you at once.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="pv" value="4" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="You are finished" goto="22">
+        <Requirements>
+          <Variable id="pv" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Grit your teeth" goto="27">
+        <Requirements>
+          <Variable id="pv" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="31">
+    <Text>Your aim is off, and the last one left answers you.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="pv" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="You are finished" goto="22">
+        <Requirements>
+          <Variable id="pv" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Grit your teeth" goto="27">
+        <Requirements>
+          <Variable id="pv" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="32">
+    <Text>One of the three falls from the saddle and does not get up again.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="nemiciVivi" value="1" />
+        <setVariable target="ferito" value="0" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="There is nobody left" goto="17">
+        <Requirements>
+          <Variable id="nemiciVivi" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+      <Choice text="Look for the next one" goto="27">
+        <Requirements>
+          <Variable id="nemiciVivi" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+</Librogame>

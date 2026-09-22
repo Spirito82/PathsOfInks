@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="3" phase="test" id="mycroft-it" workId="mycroft" language="it" title="L'orologio dei quarant'anni di Mycroft" author="Luca Santarelli" checks="deterministico" genre="Giallo, investigativo" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="salotto_baker_street">
+  <Blurb>Hai appena afferrato il violino quando Lestrade bussa alla porta: un orologio d'oro, dono personale della regina, è sparito dallo studio di Mycroft al Diogenes Club. Al momento del furto nella stanza c'erano tre persone, e tuo fratello è furioso.
+
+Interroga, esamina la scena, fai parlare la servitù. Poi punta il dito. Ogni accusa sbagliata barra una casella: confronta il tuo risultato con quello dei tuoi amici, chi è stato il più bravo?</Blurb>
+  <ContentWarnings>Nessuna. Un giallo da salotto, senza sangue e senza violenza.</ContentWarnings>
+  <Changes>
+    <Change>Adattato per questa app: la struttura, le regole e alcune parti del testo sono state modificate o tolte per funzionare con il suo motore</Change>
+    <Change>Aggiunti suoni e musiche di sottofondo, che arrivano insieme al libro</Change>
+  </Changes>
+  <Audio>
+    <Sound name="accusa_martelletto" file="accusa_martelletto.ogg" />
+    <Sound name="bussata_lestrade" file="bussata_lestrade.ogg" />
+    <Sound name="carillon_orologio_oro" file="carillon_orologio_oro.ogg" />
+    <Sound name="fruscio_lente_foglio" file="fruscio_lente_foglio.ogg" />
+    <Sound name="pizzicato_violino" file="pizzicato_violino.ogg" />
+    <Music id="il_silenzio_del_diogenes" file="il_silenzio_del_diogenes.ogg" />
+    <Music id="indagine_a_tre_fili" file="indagine_a_tre_fili.ogg" />
+    <Music id="l_orologio_della_regina" file="l_orologio_della_regina.ogg" />
+    <Music id="salotto_baker_street" file="salotto_baker_street.ogg" />
+    <Music id="sotto_accusa" file="sotto_accusa.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <Variables>
+    <Variable id="caselle" name="Caselle barrate" type="number" initial="0" min="0" max="9" visible="true" />
+    <Variable id="accCavendish" name="Ha accusato Lord Cavendish" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accAdler" name="Ha accusato Irene Adler" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accWilson" name="Ha accusato il dottor Wilson" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accLestrade" name="Ha accusato l'ispettore Lestrade" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accMycroft" name="Ha accusato Mycroft" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accSherlock" name="Ha accusato se stesso" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accCuoco" name="Ha accusato il cuoco" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accStalliere" name="Ha accusato lo stalliere" type="number" initial="0" min="0" max="1" visible="false" />
+    <Variable id="accCameriere" name="Ha accusato il cameriere" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Page id="1" sound="bussata_lestrade" music="salotto_baker_street">
+    <Text>Afferri il violino quando l'ispettore Lestrade bussa alla porta. "Holmes, un furto al Diogenes! Un prezioso orologio d'oro è scomparso dallo studio di Mycroft. Tre persone erano presenti al momento del furto: Lord Cavendish, il dottor Wilson e la signorina Adler. Possiamo contare sul vostro aiuto?" Accetti il caso o rifiuti?</Text>
+    <Choices>
+      <Choice text="Accettare il caso" goto="3" />
+      <Choice text="Rifiutare" goto="29" />
+    </Choices>
+  </Page>
+  <Page id="2" music="indagine_a_tre_fili">
+    <Text>Puoi interrogare Lord Cavendish, il dottor Wilson, la signorina Adler o fare un'altra scelta.</Text>
+    <Choices>
+      <Choice text="Lord Cavendish" goto="16" />
+      <Choice text="Il dottor Wilson" goto="7" />
+      <Choice text="La signorina Adler" goto="14" />
+      <Choice text="Fare un'altra scelta" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="3" sound="carillon_orologio_oro" soundDelay="2" music="il_silenzio_del_diogenes">
+    <Text>Al Diogenes. Mycroft è furioso: "Un furto nel mio studio! Oltre ad essere dono personale della regina, se apposto come timbro ha valenza di ordine regale! Sospetto che uno dei tre ospiti sia il colpevole. Trovate l'orologio e il ladro!". La partita è aperta!</Text>
+    <Choices>
+      <Choice text="Cominciare" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="4" sound="carillon_orologio_oro" soundDelay="3" music="indagine_a_tre_fili">
+    <Text>"Signorina Adler, vuol lasciare Londra così in fretta?" Lei ride. "Come lo sa, Holmes? Sì, ho uno spettacolo a Parigi!" Ma nella sua borsa intravedi un luccichio sospetto.</Text>
+    <Choices>
+      <Choice text="Continuare gli interrogatori" goto="2" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="5" sound="accusa_martelletto" music="sotto_accusa">
+    <Text>«Holmes alzò nel gran silenzio un dito: disse un nome. sonò alto un nitrito!» scriverà un giorno Watson nei suoi memoriali.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="6" sound="fruscio_lente_foglio" soundDelay="1" music="il_silenzio_del_diogenes">
+    <Text>Scopri dei residui di cenere sulla scrivania di Mycroft: non ricordi di averlo mai visto fumare! Noti inoltre una nota sulla scrivania: è scritta a mano con un inchiostro blu molto scuro.</Text>
+    <Choices>
+      <Choice text="Leggere la nota" goto="28" />
+      <Choice text="Continuare l'esame della scena" goto="9" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="7" music="indagine_a_tre_fili">
+    <Text>Il dottor Wilson ripone la pipa mentre il cameriere porta via il posacenere pieno. "Ero nella biblioteca, assorto nei miei studi. Cavendish è in difficoltà economiche. Fossi in voi guarderei lì!"</Text>
+    <Choices>
+      <Choice text="Metterlo in discussione" goto="19" />
+      <Choice text="Interrogare Cavendish" goto="16" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>L'ispettore è incredulo, non capisce se tu sia serio o meno. Interviene tuo fratello.</Text>
+    <Choices>
+      <Choice text="Continuare" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="9" music="il_silenzio_del_diogenes">
+    <Text>Mycroft è lapidario. "Ho lasciato tutto come l'ho trovato!"</Text>
+    <Choices>
+      <Choice text="Esaminare il pavimento" goto="26" />
+      <Choice text="Esaminare la scrivania" goto="6" />
+      <Choice text="Esaminare la cassaforte aperta" goto="21" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="10" sound="pizzicato_violino" soundDelay="2" music="sotto_accusa">
+    <Text>“Faccio finta di non avere sentito…” Mycroft ti sta dando un'altra possibilità: ripensa a tutti gli indizi!</Text>
+    <Choices>
+      <Choice text="Ripensare a tutti gli indizi" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="11">
+    <Text>Lestrade si porta un dito alla bocca dopo avere toccato la manica di Wilson. Ti guarda perplesso: "Sa di mirtillo…" Ci hai visto male, Sherlock!</Text>
+    <Choices>
+      <Choice text="Continuare" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="12" sound="accusa_martelletto" soundDelay="1" music="l_orologio_della_regina" ending="true">
+    <Text>"Gli indizi puntano nella stessa direzione…" dici creando attesa "…il depistaggio!". Lestrade, seguendo le tue indicazioni, blocca il cameriere così che tu possa togliergli la maschera: è Moriarty! Mycroft ti concede un raro sorriso. "Ben fatto, Sherlock."</Text>
+  </Page>
+  <Page id="13">
+    <Text>Lestrade torchia il cuoco per ore, ma l'unica cosa che ottiene è la ricetta della torta della nonna. "Holmes la vostra deduzione. puzza di bruciato!"</Text>
+    <Choices>
+      <Choice text="Continuare" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="14" music="indagine_a_tre_fili">
+    <Text>Irene Adler sorride passando distrattamente un bicchiere vuoto al cameriere. "Che ci faccio qui? Lo chieda a suo fratello! Mio caro Holmes, non ruberei mai un orologio da uomo. Mi è tuttavia parso di vedere Wilson avvicinarsi allo studio. Se abbiamo finito…"</Text>
+    <Choices>
+      <Choice text="Sospettare che nasconda qualcosa" goto="4" />
+      <Choice text="Interrogare Wilson" goto="7" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="15" sound="accusa_martelletto" soundDelay="3" music="sotto_accusa">
+    <Text>“Una volta eliminato l'impossibile ciò che rimane, per quanto improbabile, dev'essere la verità!” È arrivato il tuo momento: verso chi punti il dito?</Text>
+    <Choices>
+      <Choice text="Lord Cavendish" goto="25">
+        <Requirements>
+          <Variable id="accCavendish" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accCavendish" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Irene Adler" goto="18">
+        <Requirements>
+          <Variable id="accAdler" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accAdler" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Il dottor Wilson" goto="11">
+        <Requirements>
+          <Variable id="accWilson" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accWilson" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="L'ispettore Lestrade" goto="8">
+        <Requirements>
+          <Variable id="accLestrade" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accLestrade" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Mycroft" goto="10">
+        <Requirements>
+          <Variable id="accMycroft" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accMycroft" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Te stesso" goto="27">
+        <Requirements>
+          <Variable id="accSherlock" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accSherlock" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Il cuoco" goto="13">
+        <Requirements>
+          <Variable id="accCuoco" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accCuoco" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Lo stalliere" goto="5">
+        <Requirements>
+          <Variable id="accStalliere" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accStalliere" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Il cameriere" goto="12">
+        <Requirements>
+          <Variable id="accCameriere" operator="lt" value="1" />
+        </Requirements>
+        <Effects>
+          <setVariable target="accCameriere" value="1" />
+          <addVariable target="caselle" value="1" />
+        </Effects>
+      </Choice>
+      <Choice text="Tornare a investigare" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="16" music="indagine_a_tre_fili">
+    <Text>Lord Cavendish, nobile decaduto, si tormenta il baffo mentre il cameriere gli porge una tazza di the. "Stavo leggendo il giornale, Holmes. Non ho lasciato il divano! Ho però sentito la Adler discutere con Mycroft poco prima del furto."</Text>
+    <Choices>
+      <Choice text="Incalzarlo sospettando che menta" goto="24" />
+      <Choice text="Interrogare la Adler" goto="14" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="17">
+    <Text>Il cameriere ti risponde con deferenza. "Ho visto il dottor Wilson passeggiare indeciso davanti allo studio del signor Mycroft."</Text>
+    <Choices>
+      <Choice text="Chiedere altro" goto="30" />
+      <Choice text="Cambiare linea di azione" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="18">
+    <Text>Irene estrae due guanti di pizzo dalla borsa e li indossa ridendo. "Mio caro Holmes, non sapevo anche voi apprezzaste la seta!" Ci hai visto male, Sherlock!</Text>
+    <Choices>
+      <Choice text="Continuare" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="19">
+    <Text>Osservi meglio Wilson: ha una piccola macchia molto scura sul polsino. "Dottore, dice di aver studiato, ma non ha libri con sé. Cosa nasconde?" Wilson balbetta: "Vo-volevo solo vedere l’orologio! Ma poi è sparito…"</Text>
+    <Choices>
+      <Choice text="Continuare gli interrogatori" goto="2" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="20">
+    <Text>Stando al cuoco, dopo il furto il cameriere ha riportato di aver urtato inavvertitamente la signorina Adler. Dalla borsa caduta a terra è uscito qualcosa che lei ha raccolto con tutta fretta.</Text>
+    <Choices>
+      <Choice text="Chiedere altro" goto="30" />
+      <Choice text="Cambiare linea di azione" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="21" sound="fruscio_lente_foglio" soundDelay="1" music="il_silenzio_del_diogenes">
+    <Text>Noti segni di scasso sulla serratura, ma un dettaglio ti colpisce: un minuscolo brandello di stoffa blu incastrato tra le ante del mobile. Cavendish indossa un cappotto blu!</Text>
+    <Choices>
+      <Choice text="Continuare l'esame della scena" goto="9" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="22">
+    <Text>"Me l'ha confidato il cameriere: è qualche tempo che Cavendish fa spesso domande su grimaldelli e arnesi del genere! Dalle stelle alle stalle! E se lo dico io… " ti rivela lo stalliere.</Text>
+    <Choices>
+      <Choice text="Chiedere altro" goto="30" />
+      <Choice text="Cambiare linea di azione" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="23" music="indagine_a_tre_fili">
+    <Text>Puoi interrogare i sospettati, esaminare la scena del crimine, parlare con la servitù. Quando hai finito, muovi un'accusa.</Text>
+    <Choices>
+      <Choice text="Interrogare i sospettati" goto="2" />
+      <Choice text="Esaminare la scena del crimine" goto="9" />
+      <Choice text="Parlare con la servitù" goto="30" />
+      <Choice text="Muovere un'accusa" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="24">
+    <Text>Pressato, Cavendish cede: "Va bene! Sono sommerso dai debiti, volevo vendere l'orologio! Ma qualcuno lo ha preso prima di me!"</Text>
+    <Choices>
+      <Choice text="Continuare gli interrogatori" goto="2" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="25">
+    <Text>Lestrade rivolta Cavendish come un calzino, compreso il suo cappotto che tuttavia risulta integro. Ci hai visto male, Sherlock!</Text>
+    <Choices>
+      <Choice text="Continuare" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="26" sound="fruscio_lente_foglio" soundDelay="1" music="il_silenzio_del_diogenes">
+    <Text>Trovi un guanto nero a terra. È in pizzo, tipico dell’abbigliamento di Irene. Lo provi: ti calza alla perfezione.</Text>
+    <Choices>
+      <Choice text="Continuare l'esame della scena" goto="9" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="27">
+    <Text>“Il qui presen…” stai per finire la frase ma vedi lo sguardo torvo di Mycroft divenire sempre più arcigno e decidi di fare sul serio.</Text>
+    <Choices>
+      <Choice text="Fare sul serio" goto="15" />
+    </Choices>
+  </Page>
+  <Page id="28">
+    <Text>…zucchine, patate, mais, due etti di cotto, tè verde…</Text>
+    <Choices>
+      <Choice text="Continuare l'esame della scena" goto="9" />
+      <Choice text="Fare altro" goto="23" />
+    </Choices>
+  </Page>
+  <Page id="29" sound="pizzicato_violino" music="salotto_baker_street" ending="true">
+    <Text>“Sto suonando” rispondi annoiato. Lestrade scuote la testa deluso. Il caso resta irrisolto e l'orologio svanisce per sempre.</Text>
+  </Page>
+  <Page id="30" music="indagine_a_tre_fili">
+    <Text>Chiedi informazioni su Lord Cavendish, Irene Adler o il dottor Wilson.</Text>
+    <Choices>
+      <Choice text="Chiedere di Lord Cavendish" goto="22" />
+      <Choice text="Chiedere di Irene Adler" goto="20" />
+      <Choice text="Chiedere del dottor Wilson" goto="17" />
+    </Choices>
+  </Page>
+</Librogame>

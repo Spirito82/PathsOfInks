@@ -9,20 +9,92 @@
       "genre": "Fantasy, adventure",
       "blurb": "Your sister is dying. The healer gave you the potion and told you that time is everything: the long way round will get you home too late, and the forest path is not safe. You take the forest path.\n\nTwo hours in, you hear branches breaking. What comes out of the pines is eight feet tall, carries a tree trunk, and is not always in the mood to talk. Eighteen hit points, a hundred and fifty-eight scenes, seventeen endings — and some of them are not the one you would call winning.",
       "contentWarnings": "Violence, gore, death, and disappointing a parent.",
-      "version": 16,
+      "version": 17,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v16/librogame.xml",
-        "sha256": "68F575BB252DB96051A273212D3504E991176ABB390990CC23B181773B8D2B5C"
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/librogame.xml",
+        "sha256": "F3B5E915DCA8E9FF39E87B4D25B19639ED3E9EB7D274E10024CCCA53D11B8F22"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v16/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/items.xml",
         "sha256": "578CA9BCBCD78EAC2B3CC8B45A32BB1E76D07E8A586C196A5B47EC6B708AB79F"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24",
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
       "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "audio": [
+        {
+          "name": "cancelli",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/audio/cancelli.ogg",
+          "sha256": "A406C1F1DDEAC68DFEA36851EA62FD0CC293B1885A4D10A9B69065A8FCFD4A8B",
+          "bytes": 13402
+        },
+        {
+          "name": "clava",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/audio/clava.ogg",
+          "sha256": "34B7CB7271F78C3DA769B006EC31908A8A93687B67C16E3E0C1278BD5B3F42FB",
+          "bytes": 8156
+        },
+        {
+          "name": "fionda",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/audio/fionda.ogg",
+          "sha256": "71ADD56107E379DBAA08592D6543150DA11B84E55A0F6BF59BBE6D41BC746887",
+          "bytes": 10258
+        },
+        {
+          "name": "gemma",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/audio/gemma.ogg",
+          "sha256": "76AD1C6E6B4D3AAC6045520B04E0065F5AF398537FE279EDBB6089520CF18531",
+          "bytes": 13413
+        },
+        {
+          "name": "passi_bosco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/audio/passi_bosco.ogg",
+          "sha256": "6ACBD315EE1BECFC46C9C308556392B013DE2C550A66D9B0E35F6488B07AE0C7",
+          "bytes": 11537
+        },
+        {
+          "name": "bosco",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/audio/bosco.ogg",
+          "sha256": "F7AC1AFD4B782FFDDFFFD451D3D245254E41EE38DA6645F3089AE6349EBB81DF",
+          "bytes": 765603
+        },
+        {
+          "name": "cancelli_neri",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/audio/cancelli_neri.ogg",
+          "sha256": "08F0DCA584B282D9237BD7C12711AF9921BB82C6740CD0C5974DB13DB04404B2",
+          "bytes": 712931
+        },
+        {
+          "name": "ogre_incontro",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/audio/ogre_incontro.ogg",
+          "sha256": "3A7415D176EF61AC59BE9ED97EB25371BAD5CF1BA64FBEB220DECEB687828436",
+          "bytes": 881818
+        },
+        {
+          "name": "ritorno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/audio/ritorno.ogg",
+          "sha256": "5A74E05DC84645373B0194F717B1733DA325F7E5684ECA67FD62EAB62279A240",
+          "bytes": 770493
+        },
+        {
+          "name": "scontro",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/en/v17/audio/scontro.ogg",
+          "sha256": "FB77C4748C43D790911AE323279F67F08D7A88DF6AAA3EE9F2355D0FCF38D5D5",
+          "bytes": 774647
+        }
+      ]
     },
     {
       "id": "suddenly-an-ogre-it",
@@ -33,20 +105,92 @@
       "genre": "Fantastico, avventura",
       "blurb": "Tua sorella sta morendo. Il guaritore ti ha dato la pozione e ti ha detto che il tempo è tutto: la strada lunga ti riporterebbe a casa troppo tardi, e il sentiero nel bosco non è sicuro. Prendi il sentiero nel bosco.\n\nDopo due ore senti dei rami spezzarsi. Quello che esce dai pini è alto due metri e mezzo, porta un tronco d'albero, e non sempre ha voglia di parlare. Diciotto punti ferita, centocinquantotto scene, diciassette finali — e qualcuno non è quello che chiameresti vincere.",
       "contentWarnings": "Violenza, sangue, morte e la delusione di un genitore.",
-      "version": 16,
+      "version": 17,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v16/librogame.xml",
-        "sha256": "13B5F8F0D524754498C1006A0DBF908FA4C0494F7A42336D68E795B76CE0082D"
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/librogame.xml",
+        "sha256": "3A99760C48B5DD386D9013D76F02533253A2B28411F0372376E9F5CAB0C9C441"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v16/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/items.xml",
         "sha256": "7B6D98D9757BF136AAF82E3ED70CA6F1424D9EA73505E01DC043188EEC979A85"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24",
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
       "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "audio": [
+        {
+          "name": "cancelli",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/audio/cancelli.ogg",
+          "sha256": "A406C1F1DDEAC68DFEA36851EA62FD0CC293B1885A4D10A9B69065A8FCFD4A8B",
+          "bytes": 13402
+        },
+        {
+          "name": "clava",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/audio/clava.ogg",
+          "sha256": "34B7CB7271F78C3DA769B006EC31908A8A93687B67C16E3E0C1278BD5B3F42FB",
+          "bytes": 8156
+        },
+        {
+          "name": "fionda",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/audio/fionda.ogg",
+          "sha256": "71ADD56107E379DBAA08592D6543150DA11B84E55A0F6BF59BBE6D41BC746887",
+          "bytes": 10258
+        },
+        {
+          "name": "gemma",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/audio/gemma.ogg",
+          "sha256": "76AD1C6E6B4D3AAC6045520B04E0065F5AF398537FE279EDBB6089520CF18531",
+          "bytes": 13413
+        },
+        {
+          "name": "passi_bosco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/audio/passi_bosco.ogg",
+          "sha256": "6ACBD315EE1BECFC46C9C308556392B013DE2C550A66D9B0E35F6488B07AE0C7",
+          "bytes": 11537
+        },
+        {
+          "name": "bosco",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/audio/bosco.ogg",
+          "sha256": "F7AC1AFD4B782FFDDFFFD451D3D245254E41EE38DA6645F3089AE6349EBB81DF",
+          "bytes": 765603
+        },
+        {
+          "name": "cancelli_neri",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/audio/cancelli_neri.ogg",
+          "sha256": "08F0DCA584B282D9237BD7C12711AF9921BB82C6740CD0C5974DB13DB04404B2",
+          "bytes": 712931
+        },
+        {
+          "name": "ogre_incontro",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/audio/ogre_incontro.ogg",
+          "sha256": "3A7415D176EF61AC59BE9ED97EB25371BAD5CF1BA64FBEB220DECEB687828436",
+          "bytes": 881818
+        },
+        {
+          "name": "ritorno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/audio/ritorno.ogg",
+          "sha256": "5A74E05DC84645373B0194F717B1733DA325F7E5684ECA67FD62EAB62279A240",
+          "bytes": 770493
+        },
+        {
+          "name": "scontro",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ogre/it/v17/audio/scontro.ogg",
+          "sha256": "FB77C4748C43D790911AE323279F67F08D7A88DF6AAA3EE9F2355D0FCF38D5D5",
+          "bytes": 774647
+        }
+      ]
     },
     {
       "id": "viperblood-en",
@@ -181,18 +325,90 @@
       "contentWarnings": "Terrorismo, violenza politica, carcere, armi da fuoco e sequestro di persona. Il libro racconta fatti storici italiani degli anni di piombo.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 4,
+      "version": 5,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v4/librogame.xml",
-        "sha256": "9664EF5B8FCA701BD85F080268D5730D5179CB8FABB0C2B635773D955B1D27F8"
+        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/librogame.xml",
+        "sha256": "C453EB769AB67ED7E9E283926232F68E6366A9BB0E0FBAFB012947AEE522BC74"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v4/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/items.xml",
         "sha256": "8C18CE8A2A12FF974FA5DCCF2D2E8A7AD5599C36F5A2A709D184028D19A88D1B"
       },
-      "minAppBuild": 25,
-      "minAppVersion": "1.23"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "carrozza",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/audio/carrozza.ogg",
+          "sha256": "A43A37A702FB81AB43958223EE4203BAB8D47EF5980445CE67018F7C777666B7",
+          "bytes": 20864
+        },
+        {
+          "name": "gabbiani",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/audio/gabbiani.ogg",
+          "sha256": "6A5E07952E3AEB81A35E7AA7A0D321BEB05D6754047BCEB3D544AF9EF01F09D3",
+          "bytes": 15004
+        },
+        {
+          "name": "passi_caruggi",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/audio/passi_caruggi.ogg",
+          "sha256": "6F4D7A229F5B5429D6CA150B5F0E35EC6601A5800A72627C71DA0E7FF50DD771",
+          "bytes": 12486
+        },
+        {
+          "name": "porta_legno",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/audio/porta_legno.ogg",
+          "sha256": "FCA8AF075C0BF7C4BD2F603F3BDEF29321AA7FF1B0F2EE0F1D944E933A6774E2",
+          "bytes": 28437
+        },
+        {
+          "name": "sirena_porto",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/audio/sirena_porto.ogg",
+          "sha256": "16B9E8BD360809A98A70E1F53D439BEE4BCDAFDABBD66BE740EDF38CF513A37B",
+          "bytes": 21182
+        },
+        {
+          "name": "caruggi",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/audio/caruggi.ogg",
+          "sha256": "B0D56B810BC427AC33EC376AEEBD0577DC6C13CF737C4AD5BD687C0470187D61",
+          "bytes": 774089
+        },
+        {
+          "name": "inseguimento",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/audio/inseguimento.ogg",
+          "sha256": "ACFABD159030CCDC0CFB34296462A7C4C3DB018F281C47B6B45DF6571D3D7211",
+          "bytes": 872995
+        },
+        {
+          "name": "ombra",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/audio/ombra.ogg",
+          "sha256": "54D21B3E98DC955E617BA7E1F619D007D1015BAB81B76BDB67C60D5395B88347",
+          "bytes": 691012
+        },
+        {
+          "name": "porto_antico",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/audio/porto_antico.ogg",
+          "sha256": "A5C2F4E26055E549F05A6C432F737FB30CDE8D2164142BF35D04FB4C2C48AB3F",
+          "bytes": 805186
+        },
+        {
+          "name": "verita",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/lanterna-rossa/it/v5/audio/verita.ogg",
+          "sha256": "1AF42024122A4BEF9CAC16FA9C74EB450109B63ADA8DAFF2C927C6E057448B6F",
+          "bytes": 721239
+        }
+      ]
     },
     {
       "id": "deep-state-it",
@@ -205,18 +421,90 @@
       "contentWarnings": "Rapimento e interrogatorio coercitivo. Le domande sono volutamente invadenti e comprendono la vita sessuale, il voto e i rapporti famigliari. È una satira: non c'è violenza in scena, c'è un apparato che ti tratta come una pratica da evadere.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v2/librogame.xml",
-        "sha256": "117EF392232FC9CCA625471BE4997C54440703BE39C172F214AC3F8CD2B79F87"
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/librogame.xml",
+        "sha256": "561271AE6F843CCE9770FEDBA16C087F9970B1CF98BE1952F78D9A76F46F9D7A"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "nastro_adesivo_strappo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/audio/nastro_adesivo_strappo.ogg",
+          "sha256": "742F238A6D034C00BBCA757188AAD100D551C2ECBEA81BE4570A4D5AAC0FC0DF",
+          "bytes": 12983
+        },
+        {
+          "name": "penna_crocetta",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/audio/penna_crocetta.ogg",
+          "sha256": "FE2F17D947BAE1D859BC4E520310247E80C6D6EF10D6DAD3B77C13A5BC429AD5",
+          "bytes": 6900
+        },
+        {
+          "name": "porta_garage_ferro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/audio/porta_garage_ferro.ogg",
+          "sha256": "09D738C615EBE641166287A9852A06D58A50B25991A680EBA796FC76E1E497E4",
+          "bytes": 13640
+        },
+        {
+          "name": "ronzio_poligrafo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/audio/ronzio_poligrafo.ogg",
+          "sha256": "89E12C7C68428A0FCF4DA328E86C8D888703C29C7E06AAFACA7EB29F4A446612",
+          "bytes": 8039
+        },
+        {
+          "name": "scatto_lampadina",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/audio/scatto_lampadina.ogg",
+          "sha256": "D24372A600891B509BB630E8C2E48E5FAF03234AD8E9BD35A48B6104F6639A13",
+          "bytes": 6515
+        },
+        {
+          "name": "domanda_quaranta",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/audio/domanda_quaranta.ogg",
+          "sha256": "4B3277A3B8CD8FF7403ABFFA16E26A4E4FDA670D19F6D09ABCF9C93B8021AC9E",
+          "bytes": 425145
+        },
+        {
+          "name": "il_questionario",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/audio/il_questionario.ogg",
+          "sha256": "BF44F6BE4047EC45F3D653DFFFA17242E06579095BE81824693DFA38A46EF1B2",
+          "bytes": 237719
+        },
+        {
+          "name": "la_trappola_delle_bugie",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/audio/la_trappola_delle_bugie.ogg",
+          "sha256": "4C420CEE0AF58478940D497C5AFBAE1BB1EB1E2E44420929438CEFD0617C04D5",
+          "bytes": 152183
+        },
+        {
+          "name": "luce_al_neon",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/audio/luce_al_neon.ogg",
+          "sha256": "E594E8411F0FD62206F7086B689E31FFB4EA5EDF9DB7AE94CC201766C8E706CF",
+          "bytes": 211230
+        },
+        {
+          "name": "ricordi_dalla_grata",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/it/v3/audio/ricordi_dalla_grata.ogg",
+          "sha256": "E8D054C28B1C43F942C7FB5F415641A21DE080D825085A8C6605B481460D1EBA",
+          "bytes": 355646
+        }
+      ]
     },
     {
       "id": "deep-state-en",
@@ -229,18 +517,90 @@
       "contentWarnings": "Abduction and coercive interrogation. The questions are deliberately intrusive and cover sexual history, voting and family relationships. This is satire: there is no violence on the page, only an apparatus that treats you as a case to be processed.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v2/librogame.xml",
-        "sha256": "4DC2B208DAAA0A579293E5CC5A9534A6D199B5B6F4BDF23C8D94EBF58D491589"
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/librogame.xml",
+        "sha256": "4E1F4C54821082F3C90002BB1DD33679A98E17A6BD541EE47B6F4F33FFFC0F78"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "nastro_adesivo_strappo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/audio/nastro_adesivo_strappo.ogg",
+          "sha256": "742F238A6D034C00BBCA757188AAD100D551C2ECBEA81BE4570A4D5AAC0FC0DF",
+          "bytes": 12983
+        },
+        {
+          "name": "penna_crocetta",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/audio/penna_crocetta.ogg",
+          "sha256": "FE2F17D947BAE1D859BC4E520310247E80C6D6EF10D6DAD3B77C13A5BC429AD5",
+          "bytes": 6900
+        },
+        {
+          "name": "porta_garage_ferro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/audio/porta_garage_ferro.ogg",
+          "sha256": "09D738C615EBE641166287A9852A06D58A50B25991A680EBA796FC76E1E497E4",
+          "bytes": 13640
+        },
+        {
+          "name": "ronzio_poligrafo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/audio/ronzio_poligrafo.ogg",
+          "sha256": "89E12C7C68428A0FCF4DA328E86C8D888703C29C7E06AAFACA7EB29F4A446612",
+          "bytes": 8039
+        },
+        {
+          "name": "scatto_lampadina",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/audio/scatto_lampadina.ogg",
+          "sha256": "D24372A600891B509BB630E8C2E48E5FAF03234AD8E9BD35A48B6104F6639A13",
+          "bytes": 6515
+        },
+        {
+          "name": "domanda_quaranta",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/audio/domanda_quaranta.ogg",
+          "sha256": "4B3277A3B8CD8FF7403ABFFA16E26A4E4FDA670D19F6D09ABCF9C93B8021AC9E",
+          "bytes": 425145
+        },
+        {
+          "name": "il_questionario",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/audio/il_questionario.ogg",
+          "sha256": "BF44F6BE4047EC45F3D653DFFFA17242E06579095BE81824693DFA38A46EF1B2",
+          "bytes": 237719
+        },
+        {
+          "name": "la_trappola_delle_bugie",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/audio/la_trappola_delle_bugie.ogg",
+          "sha256": "4C420CEE0AF58478940D497C5AFBAE1BB1EB1E2E44420929438CEFD0617C04D5",
+          "bytes": 152183
+        },
+        {
+          "name": "luce_al_neon",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/audio/luce_al_neon.ogg",
+          "sha256": "E594E8411F0FD62206F7086B689E31FFB4EA5EDF9DB7AE94CC201766C8E706CF",
+          "bytes": 211230
+        },
+        {
+          "name": "ricordi_dalla_grata",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/deep-state/en/v3/audio/ricordi_dalla_grata.ogg",
+          "sha256": "E8D054C28B1C43F942C7FB5F415641A21DE080D825085A8C6605B481460D1EBA",
+          "bytes": 355646
+        }
+      ]
     },
     {
       "id": "giacominerloch-it",
@@ -253,18 +613,90 @@
       "contentWarnings": "Una ragazza rapita e trasformata contro la sua volontà. Un finale racconta una metamorfosi mostruosa vista da vicino, un altro una condanna e una pietrificazione. Ferite, annegamento, vecchiaia e rimpianto.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v2/librogame.xml",
-        "sha256": "8CD08702AAD7CCFAF4408A4A4CF045E55912ABF689CE6CD9E206CBB7CE6FDFD4"
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/librogame.xml",
+        "sha256": "2565CC48E5E4A81203F43471D8C2259D0892BD099E8BA2AF4BB870F424F771C8"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "campanacci_schella_marz",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/audio/campanacci_schella_marz.ogg",
+          "sha256": "45C7DB6D2D089AD76AD2582EEB7DB0E940989D1CFB67D61BE9742C9FE4DBD6C1",
+          "bytes": 10325
+        },
+        {
+          "name": "goccia_caverna_carsica",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/audio/goccia_caverna_carsica.ogg",
+          "sha256": "3E33F7FC11923E94AB5E98A8D57CDC2F7DFC9D10DD0D06F76BAF2EB282FFCDB0",
+          "bytes": 6945
+        },
+        {
+          "name": "lamento_voragine_eco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/audio/lamento_voragine_eco.ogg",
+          "sha256": "CF72B737B266EAFABACC8E621BA1D8DA6C0B9E4D800915119F0BB9CC69CF36D4",
+          "bytes": 9802
+        },
+        {
+          "name": "lancio_tre_monete",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/audio/lancio_tre_monete.ogg",
+          "sha256": "85A17ED696D829BAD39306C9C60E2F019645519F0A5135372EF958E5C117C544",
+          "bytes": 6898
+        },
+        {
+          "name": "resina_impacco_fasce",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/audio/resina_impacco_fasce.ogg",
+          "sha256": "F0F2694C57D5640E2AACF960063EBA66A26C64E7A3DA239946E2FF7F1898F4E6",
+          "bytes": 13219
+        },
+        {
+          "name": "il_lamento_di_giacomina",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/audio/il_lamento_di_giacomina.ogg",
+          "sha256": "64DA60D15FE4757FA3052FC6F81DD302ED672B56E4A300590E7E28207AB50E92",
+          "bytes": 169329
+        },
+        {
+          "name": "l_alba_sull_altopiano",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/audio/l_alba_sull_altopiano.ogg",
+          "sha256": "EF0F89D3D678A9A9EF7B94F9B0F9980BD67D72E0E49D7032446B4D45528D9D7A",
+          "bytes": 193294
+        },
+        {
+          "name": "la_voragine_dei_sussurri",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/audio/la_voragine_dei_sussurri.ogg",
+          "sha256": "0722EA16E3BC83662677B3AD6F729C2A6BF7FD17CA0B33811C1E482B7AA4F8AC",
+          "bytes": 173526
+        },
+        {
+          "name": "notte_sul_lemerle",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/audio/notte_sul_lemerle.ogg",
+          "sha256": "129E9212A2ABF8E542866DF6BAC1A2DBB2F2A37DD1599BF25163565852D7EF02",
+          "bytes": 212861
+        },
+        {
+          "name": "schella_marz_lontana",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/it/v3/audio/schella_marz_lontana.ogg",
+          "sha256": "35C7829A22998AAEBDBC06C85BFACEAA374903C39E955A950DA0EFBAC0F39E00",
+          "bytes": 166241
+        }
+      ]
     },
     {
       "id": "giacominerloch-en",
@@ -277,18 +709,90 @@
       "contentWarnings": "A girl taken and changed against her will. One ending tells of a monstrous metamorphosis seen close up, another of a sentence and a petrification. Wounds, drowning, old age and regret.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v2/librogame.xml",
-        "sha256": "A7B8A11E90FC4A0F7C97C9218C798EDE1532B3D499F9224EEC9F7E5DB15FC04C"
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/librogame.xml",
+        "sha256": "B3755F71ED3B725B0D2711046CA193D7D13BCFB3488A00AA34721AFC4AA52ECB"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "campanacci_schella_marz",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/audio/campanacci_schella_marz.ogg",
+          "sha256": "45C7DB6D2D089AD76AD2582EEB7DB0E940989D1CFB67D61BE9742C9FE4DBD6C1",
+          "bytes": 10325
+        },
+        {
+          "name": "goccia_caverna_carsica",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/audio/goccia_caverna_carsica.ogg",
+          "sha256": "3E33F7FC11923E94AB5E98A8D57CDC2F7DFC9D10DD0D06F76BAF2EB282FFCDB0",
+          "bytes": 6945
+        },
+        {
+          "name": "lamento_voragine_eco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/audio/lamento_voragine_eco.ogg",
+          "sha256": "CF72B737B266EAFABACC8E621BA1D8DA6C0B9E4D800915119F0BB9CC69CF36D4",
+          "bytes": 9802
+        },
+        {
+          "name": "lancio_tre_monete",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/audio/lancio_tre_monete.ogg",
+          "sha256": "85A17ED696D829BAD39306C9C60E2F019645519F0A5135372EF958E5C117C544",
+          "bytes": 6898
+        },
+        {
+          "name": "resina_impacco_fasce",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/audio/resina_impacco_fasce.ogg",
+          "sha256": "F0F2694C57D5640E2AACF960063EBA66A26C64E7A3DA239946E2FF7F1898F4E6",
+          "bytes": 13219
+        },
+        {
+          "name": "il_lamento_di_giacomina",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/audio/il_lamento_di_giacomina.ogg",
+          "sha256": "64DA60D15FE4757FA3052FC6F81DD302ED672B56E4A300590E7E28207AB50E92",
+          "bytes": 169329
+        },
+        {
+          "name": "l_alba_sull_altopiano",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/audio/l_alba_sull_altopiano.ogg",
+          "sha256": "EF0F89D3D678A9A9EF7B94F9B0F9980BD67D72E0E49D7032446B4D45528D9D7A",
+          "bytes": 193294
+        },
+        {
+          "name": "la_voragine_dei_sussurri",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/audio/la_voragine_dei_sussurri.ogg",
+          "sha256": "0722EA16E3BC83662677B3AD6F729C2A6BF7FD17CA0B33811C1E482B7AA4F8AC",
+          "bytes": 173526
+        },
+        {
+          "name": "notte_sul_lemerle",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/audio/notte_sul_lemerle.ogg",
+          "sha256": "129E9212A2ABF8E542866DF6BAC1A2DBB2F2A37DD1599BF25163565852D7EF02",
+          "bytes": 212861
+        },
+        {
+          "name": "schella_marz_lontana",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/giacominerloch/en/v3/audio/schella_marz_lontana.ogg",
+          "sha256": "35C7829A22998AAEBDBC06C85BFACEAA374903C39E955A950DA0EFBAC0F39E00",
+          "bytes": 166241
+        }
+      ]
     },
     {
       "id": "la-grande-fuga-it",
@@ -301,18 +805,90 @@
       "contentWarnings": "Nessuna. Una fuga per ridere, con conigli da guardia, filastrocche e uova di cioccolato.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v2/librogame.xml",
-        "sha256": "DF3F5297BCE35A9CAAEFBE3FDAB0D5FAEE6394F672523021C18ED03D004ABB98"
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/librogame.xml",
+        "sha256": "53F0EC063F7DE7A2A4747B72771AA085B11860EEBDBB9DE59D886F429899D24B"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "balzo_coniglio_gigante",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/audio/balzo_coniglio_gigante.ogg",
+          "sha256": "448D7570C9F90B36483AE16B32619335113EB2B19F94E8C4419D15CEC4D04E16",
+          "bytes": 6364
+        },
+        {
+          "name": "fruscio_sacco_uova",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/audio/fruscio_sacco_uova.ogg",
+          "sha256": "31902174184CCC51363D917B9B87416816BD71BFDF7A378610849D776FB63481",
+          "bytes": 13440
+        },
+        {
+          "name": "risatina_libro_parlante",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/audio/risatina_libro_parlante.ogg",
+          "sha256": "C1C09D2EBB6FEC95A716718699398A2BE8D49CA994118716B0846F2DF0ED3500",
+          "bytes": 7039
+        },
+        {
+          "name": "rottura_guscio_cioccolato",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/audio/rottura_guscio_cioccolato.ogg",
+          "sha256": "303FBDA5F3B30FC1F2CF8CC1BB88E524157D06EA5F325C4443BD274403BC1167",
+          "bytes": 9718
+        },
+        {
+          "name": "vortice_portale_magico",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/audio/vortice_portale_magico.ogg",
+          "sha256": "E2E94EC11A78C8AFD28BE3282418B54249620979F2C5CFC733146CB93DDB85AF",
+          "bytes": 17910
+        },
+        {
+          "name": "corsa_nel_paese_dei_conigli",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/audio/corsa_nel_paese_dei_conigli.ogg",
+          "sha256": "D4470B15E7F8BA9EECFB8BA4FB20B331BED91E7EAE36DD2D9192D50DB7F7B1B1",
+          "bytes": 171177
+        },
+        {
+          "name": "filastrocche_di_cuoio",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/audio/filastrocche_di_cuoio.ogg",
+          "sha256": "24444F44D74E38CFBDBA3B36F69789273487FE12573334363C42C86FFCA722AF",
+          "bytes": 196884
+        },
+        {
+          "name": "il_bosco_di_cioccolato",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/audio/il_bosco_di_cioccolato.ogg",
+          "sha256": "64B8E3B8058DCF9F95C02BEE62BDDD4A0987FF29ADCAA4BE60481718A2E67859",
+          "bytes": 197431
+        },
+        {
+          "name": "il_passo_del_coniglio",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/audio/il_passo_del_coniglio.ogg",
+          "sha256": "107F1F36981BF1BD940260B91063BDAC30201B902B25027022E0307480962AD9",
+          "bytes": 239124
+        },
+        {
+          "name": "la_grande_caccia_vinta",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/it/v3/audio/la_grande_caccia_vinta.ogg",
+          "sha256": "06B2B94B322F854FE58276CA58BEF95356B77ECA4E719CA5865673A54EBB3FE4",
+          "bytes": 222841
+        }
+      ]
     },
     {
       "id": "la-grande-fuga-en",
@@ -325,18 +901,90 @@
       "contentWarnings": "None. A chase played for laughs, with guard bunnies, nursery rhymes and chocolate eggs.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v2/librogame.xml",
-        "sha256": "3ED392C1532DD66D0F2F622C4B452741CB8BA9AFA5A51F025388E9DC61168F39"
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/librogame.xml",
+        "sha256": "3D4385C85A10D73ACFE8AE45C6825B09D2201D4B0E7B81746434EFA015576693"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "balzo_coniglio_gigante",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/audio/balzo_coniglio_gigante.ogg",
+          "sha256": "448D7570C9F90B36483AE16B32619335113EB2B19F94E8C4419D15CEC4D04E16",
+          "bytes": 6364
+        },
+        {
+          "name": "fruscio_sacco_uova",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/audio/fruscio_sacco_uova.ogg",
+          "sha256": "31902174184CCC51363D917B9B87416816BD71BFDF7A378610849D776FB63481",
+          "bytes": 13440
+        },
+        {
+          "name": "risatina_libro_parlante",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/audio/risatina_libro_parlante.ogg",
+          "sha256": "C1C09D2EBB6FEC95A716718699398A2BE8D49CA994118716B0846F2DF0ED3500",
+          "bytes": 7039
+        },
+        {
+          "name": "rottura_guscio_cioccolato",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/audio/rottura_guscio_cioccolato.ogg",
+          "sha256": "303FBDA5F3B30FC1F2CF8CC1BB88E524157D06EA5F325C4443BD274403BC1167",
+          "bytes": 9718
+        },
+        {
+          "name": "vortice_portale_magico",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/audio/vortice_portale_magico.ogg",
+          "sha256": "E2E94EC11A78C8AFD28BE3282418B54249620979F2C5CFC733146CB93DDB85AF",
+          "bytes": 17910
+        },
+        {
+          "name": "corsa_nel_paese_dei_conigli",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/audio/corsa_nel_paese_dei_conigli.ogg",
+          "sha256": "D4470B15E7F8BA9EECFB8BA4FB20B331BED91E7EAE36DD2D9192D50DB7F7B1B1",
+          "bytes": 171177
+        },
+        {
+          "name": "filastrocche_di_cuoio",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/audio/filastrocche_di_cuoio.ogg",
+          "sha256": "24444F44D74E38CFBDBA3B36F69789273487FE12573334363C42C86FFCA722AF",
+          "bytes": 196884
+        },
+        {
+          "name": "il_bosco_di_cioccolato",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/audio/il_bosco_di_cioccolato.ogg",
+          "sha256": "64B8E3B8058DCF9F95C02BEE62BDDD4A0987FF29ADCAA4BE60481718A2E67859",
+          "bytes": 197431
+        },
+        {
+          "name": "il_passo_del_coniglio",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/audio/il_passo_del_coniglio.ogg",
+          "sha256": "107F1F36981BF1BD940260B91063BDAC30201B902B25027022E0307480962AD9",
+          "bytes": 239124
+        },
+        {
+          "name": "la_grande_caccia_vinta",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/la-grande-fuga/en/v3/audio/la_grande_caccia_vinta.ogg",
+          "sha256": "06B2B94B322F854FE58276CA58BEF95356B77ECA4E719CA5865673A54EBB3FE4",
+          "bytes": 222841
+        }
+      ]
     },
     {
       "id": "mycroft-it",
@@ -349,18 +997,90 @@
       "contentWarnings": "Nessuna. Un giallo da salotto, senza sangue e senza violenza.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v2/librogame.xml",
-        "sha256": "D0FE06FE1F4A7739F0AFEF19C26FC86C5EB4A9330D8537E8218A6E4B03222421"
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/librogame.xml",
+        "sha256": "4052F80174CEBDEA50382E6BA25D18528DB86BCB284CA2D7151A07E3BBA71153"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "accusa_martelletto",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/audio/accusa_martelletto.ogg",
+          "sha256": "4B9829A7249C2761ADBDA18EEFF1D9BE94A941E7456945F1E91251574C92FCF0",
+          "bytes": 4544
+        },
+        {
+          "name": "bussata_lestrade",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/audio/bussata_lestrade.ogg",
+          "sha256": "3442F6BD1ADDE2EA8B90B6299CD6A79D8DBD2975A22A319C407BA2C606B38704",
+          "bytes": 6476
+        },
+        {
+          "name": "carillon_orologio_oro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/audio/carillon_orologio_oro.ogg",
+          "sha256": "AE96EC9E284896A4A4DF9401BBC8CBA1BBE9E9CCA37D2EAEA6C92F056EDE18D4",
+          "bytes": 7877
+        },
+        {
+          "name": "fruscio_lente_foglio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/audio/fruscio_lente_foglio.ogg",
+          "sha256": "C11876B0E1ABC5A80641EB09E76E089E8851C9052E02DC273C5EC25013A095CE",
+          "bytes": 7729
+        },
+        {
+          "name": "pizzicato_violino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/audio/pizzicato_violino.ogg",
+          "sha256": "FC0FA1359CCBE6A3202D7040B46142B7A91AA6B05C8AA6D9722EB3291C54C862",
+          "bytes": 8825
+        },
+        {
+          "name": "il_silenzio_del_diogenes",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/audio/il_silenzio_del_diogenes.ogg",
+          "sha256": "91F18A65B71CFEA8F702F72FD98E40089D65517E02B0ABA4A05CBBA05BCE045E",
+          "bytes": 169194
+        },
+        {
+          "name": "indagine_a_tre_fili",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/audio/indagine_a_tre_fili.ogg",
+          "sha256": "A1D1E7E2A35762DBC9C858B43AFB1EB2531335D91945FC257EC817BFF87072EB",
+          "bytes": 139116
+        },
+        {
+          "name": "l_orologio_della_regina",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/audio/l_orologio_della_regina.ogg",
+          "sha256": "FF013F9367193762F2054BA3230F037D25C96E7339A512B9B038B6D7AD46A277",
+          "bytes": 165496
+        },
+        {
+          "name": "salotto_baker_street",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/audio/salotto_baker_street.ogg",
+          "sha256": "370F88E2A455859C02CB4D04B702413538493FC8EB458AD67F107E326D7D0E37",
+          "bytes": 209594
+        },
+        {
+          "name": "sotto_accusa",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/it/v3/audio/sotto_accusa.ogg",
+          "sha256": "EA0453C6C12FD1C707D208008B3B6639A09078402CF0D39F5B470313EE5AE04A",
+          "bytes": 228365
+        }
+      ]
     },
     {
       "id": "mycroft-en",
@@ -373,18 +1093,90 @@
       "contentWarnings": "None. A drawing-room mystery, with no blood and no violence.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v2/librogame.xml",
-        "sha256": "151A534971351626D22808BDE2FDCDDC0D1334F9453FC4C227CA8B63157F2630"
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/librogame.xml",
+        "sha256": "286D30055AF3B2D304B90034CC1D8B14A1112E5884315D07B313EDA425BFBFED"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "accusa_martelletto",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/audio/accusa_martelletto.ogg",
+          "sha256": "4B9829A7249C2761ADBDA18EEFF1D9BE94A941E7456945F1E91251574C92FCF0",
+          "bytes": 4544
+        },
+        {
+          "name": "bussata_lestrade",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/audio/bussata_lestrade.ogg",
+          "sha256": "3442F6BD1ADDE2EA8B90B6299CD6A79D8DBD2975A22A319C407BA2C606B38704",
+          "bytes": 6476
+        },
+        {
+          "name": "carillon_orologio_oro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/audio/carillon_orologio_oro.ogg",
+          "sha256": "AE96EC9E284896A4A4DF9401BBC8CBA1BBE9E9CCA37D2EAEA6C92F056EDE18D4",
+          "bytes": 7877
+        },
+        {
+          "name": "fruscio_lente_foglio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/audio/fruscio_lente_foglio.ogg",
+          "sha256": "C11876B0E1ABC5A80641EB09E76E089E8851C9052E02DC273C5EC25013A095CE",
+          "bytes": 7729
+        },
+        {
+          "name": "pizzicato_violino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/audio/pizzicato_violino.ogg",
+          "sha256": "FC0FA1359CCBE6A3202D7040B46142B7A91AA6B05C8AA6D9722EB3291C54C862",
+          "bytes": 8825
+        },
+        {
+          "name": "il_silenzio_del_diogenes",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/audio/il_silenzio_del_diogenes.ogg",
+          "sha256": "91F18A65B71CFEA8F702F72FD98E40089D65517E02B0ABA4A05CBBA05BCE045E",
+          "bytes": 169194
+        },
+        {
+          "name": "indagine_a_tre_fili",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/audio/indagine_a_tre_fili.ogg",
+          "sha256": "A1D1E7E2A35762DBC9C858B43AFB1EB2531335D91945FC257EC817BFF87072EB",
+          "bytes": 139116
+        },
+        {
+          "name": "l_orologio_della_regina",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/audio/l_orologio_della_regina.ogg",
+          "sha256": "FF013F9367193762F2054BA3230F037D25C96E7339A512B9B038B6D7AD46A277",
+          "bytes": 165496
+        },
+        {
+          "name": "salotto_baker_street",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/audio/salotto_baker_street.ogg",
+          "sha256": "370F88E2A455859C02CB4D04B702413538493FC8EB458AD67F107E326D7D0E37",
+          "bytes": 209594
+        },
+        {
+          "name": "sotto_accusa",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/mycroft/en/v3/audio/sotto_accusa.ogg",
+          "sha256": "EA0453C6C12FD1C707D208008B3B6639A09078402CF0D39F5B470313EE5AE04A",
+          "bytes": 228365
+        }
+      ]
     },
     {
       "id": "quaranta-minuti-a-mezzanotte-it",
@@ -397,18 +1189,90 @@
       "contentWarnings": "Fantasmi, spettri e una morte del protagonista raccontata senza dettagli. Paura da storia di fantasmi, niente di più.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v2/librogame.xml",
-        "sha256": "B7D6A05D0FE15AF3BFEA27B77AC9B98C21B1A3FD07408EB88FA2262E356018DB"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/librogame.xml",
+        "sha256": "18C4CB6C358DC55285F5FA5BB4DC55C0659E7123733A930B877940C93C5AA443"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "chiave_teschio_scatto",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/audio/chiave_teschio_scatto.ogg",
+          "sha256": "62F386541E25474EFA21A537265961F969C886CF458E34E06FDE62DA7C484AF1",
+          "bytes": 10774
+        },
+        {
+          "name": "portone_ferro_spalancato",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/audio/portone_ferro_spalancato.ogg",
+          "sha256": "9FB90D43B359AB10D9EBC97E7903F22E78DB60689E569A1501F529565BE79E14",
+          "bytes": 11058
+        },
+        {
+          "name": "rintocco_pendola_baldwin",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/audio/rintocco_pendola_baldwin.ogg",
+          "sha256": "59C33C16D62C045F8DD422762E68D113DDA9E7B1C682411AFED1349940025DA3",
+          "bytes": 8321
+        },
+        {
+          "name": "soffio_fiammella_spenta",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/audio/soffio_fiammella_spenta.ogg",
+          "sha256": "E81EADB04865C5727B584B86CBFAEEA830EECA729DCB89A272F328FB76B29EF2",
+          "bytes": 7007
+        },
+        {
+          "name": "urlo_spettro_famelico",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/audio/urlo_spettro_famelico.ogg",
+          "sha256": "0275392199EEFB6B3F2C6E0C952D9A8B514E002DF247F89D51BA943C11B7347C",
+          "bytes": 13973
+        },
+        {
+          "name": "il_rintocco_di_mezzanotte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/audio/il_rintocco_di_mezzanotte.ogg",
+          "sha256": "176235079AF0471DEA9E293D1AF40FBEBAFD44CFC2AB17845ACD7C62346E4D06",
+          "bytes": 208535
+        },
+        {
+          "name": "il_salone_delle_fiammelle",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/audio/il_salone_delle_fiammelle.ogg",
+          "sha256": "F796434F9360F967A01B0AD1B68580BF4C367C3CFB251E036EE869412F31B415",
+          "bytes": 113735
+        },
+        {
+          "name": "le_forze_della_villa",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/audio/le_forze_della_villa.ogg",
+          "sha256": "A058B010658AF354AF1C2D056A40E9E6F25F4698F692EDCFDF347C33A6247D9D",
+          "bytes": 181155
+        },
+        {
+          "name": "lo_studio_del_barone",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/audio/lo_studio_del_barone.ogg",
+          "sha256": "FED602E282319AA55131D641F354BB7090CC6B605A2478763AC6530E54EC257E",
+          "bytes": 176046
+        },
+        {
+          "name": "villa_baldwin_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/it/v3/audio/villa_baldwin_notte.ogg",
+          "sha256": "D2B38A1363C3F841A69CC9C91C2618428741E8D4A995B18C95B13BB816D6BC9B",
+          "bytes": 217147
+        }
+      ]
     },
     {
       "id": "quaranta-minuti-a-mezzanotte-en",
@@ -421,18 +1285,90 @@
       "contentWarnings": "Ghosts, spectres and a death of the protagonist told without detail. Ghost-story fright, nothing more.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v2/librogame.xml",
-        "sha256": "959CF22DAAD9E7FCB02763A134C58BE62FFE66812A151D310E1BB07D49151A0F"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/librogame.xml",
+        "sha256": "B3B87CFA71C11B2122A0C697AF50A2E2AC68408664D006DC43AD1E5E889E4E69"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "chiave_teschio_scatto",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/audio/chiave_teschio_scatto.ogg",
+          "sha256": "62F386541E25474EFA21A537265961F969C886CF458E34E06FDE62DA7C484AF1",
+          "bytes": 10774
+        },
+        {
+          "name": "portone_ferro_spalancato",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/audio/portone_ferro_spalancato.ogg",
+          "sha256": "9FB90D43B359AB10D9EBC97E7903F22E78DB60689E569A1501F529565BE79E14",
+          "bytes": 11058
+        },
+        {
+          "name": "rintocco_pendola_baldwin",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/audio/rintocco_pendola_baldwin.ogg",
+          "sha256": "59C33C16D62C045F8DD422762E68D113DDA9E7B1C682411AFED1349940025DA3",
+          "bytes": 8321
+        },
+        {
+          "name": "soffio_fiammella_spenta",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/audio/soffio_fiammella_spenta.ogg",
+          "sha256": "E81EADB04865C5727B584B86CBFAEEA830EECA729DCB89A272F328FB76B29EF2",
+          "bytes": 7007
+        },
+        {
+          "name": "urlo_spettro_famelico",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/audio/urlo_spettro_famelico.ogg",
+          "sha256": "0275392199EEFB6B3F2C6E0C952D9A8B514E002DF247F89D51BA943C11B7347C",
+          "bytes": 13973
+        },
+        {
+          "name": "il_rintocco_di_mezzanotte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/audio/il_rintocco_di_mezzanotte.ogg",
+          "sha256": "176235079AF0471DEA9E293D1AF40FBEBAFD44CFC2AB17845ACD7C62346E4D06",
+          "bytes": 208535
+        },
+        {
+          "name": "il_salone_delle_fiammelle",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/audio/il_salone_delle_fiammelle.ogg",
+          "sha256": "F796434F9360F967A01B0AD1B68580BF4C367C3CFB251E036EE869412F31B415",
+          "bytes": 113735
+        },
+        {
+          "name": "le_forze_della_villa",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/audio/le_forze_della_villa.ogg",
+          "sha256": "A058B010658AF354AF1C2D056A40E9E6F25F4698F692EDCFDF347C33A6247D9D",
+          "bytes": 181155
+        },
+        {
+          "name": "lo_studio_del_barone",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/audio/lo_studio_del_barone.ogg",
+          "sha256": "FED602E282319AA55131D641F354BB7090CC6B605A2478763AC6530E54EC257E",
+          "bytes": 176046
+        },
+        {
+          "name": "villa_baldwin_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quaranta-minuti-a-mezzanotte/en/v3/audio/villa_baldwin_notte.ogg",
+          "sha256": "D2B38A1363C3F841A69CC9C91C2618428741E8D4A995B18C95B13BB816D6BC9B",
+          "bytes": 217147
+        }
+      ]
     },
     {
       "id": "quarantesimo-ladrone-it",
@@ -445,14 +1381,14 @@
       "contentWarnings": "Furti, un paradosso temporale che distrugge l'universo e un rapace gigante che si porta via qualcuno per cena. Tutto raccontato per ridere.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 5,
+      "version": 6,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/librogame.xml",
-        "sha256": "66E83C056A872EDFA8D795FF72317C3E9B2226E59F29A699203E49F5D44FBC34"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/librogame.xml",
+        "sha256": "23C1DC8576889DCC4767A1804F648A4152AB1F8AB6C4BEA2209761E0CBA20CA1"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/items.xml",
         "sha256": "A4D6FA7B1C977B1D14B3B08D9EC6269F50E6AE313EA5ECDCE4F9D0DD02EF2081"
       },
       "minAppBuild": 34,
@@ -461,77 +1397,77 @@
         {
           "name": "pietra",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/pietra.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/pietra.ogg",
           "sha256": "FB22B86549905D7BEF8AA7A7CE681A33F9E5C6D527B7A3ADB30530BA90236ED2",
           "bytes": 26649
         },
         {
           "name": "soffio",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/soffio.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/soffio.ogg",
           "sha256": "945E3E465DB2FB9AAFCFBA8AE4C69627CCBC8343A79FFE383951ABB52AFBA83B",
           "bytes": 15798
         },
         {
           "name": "sabbia",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/sabbia.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/sabbia.ogg",
           "sha256": "7BD66EE37B7671525FCFF162B90569BC7DC1D0DA00A975121C0672C660AD441A",
           "bytes": 22745
         },
         {
           "name": "catene",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/catene.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/catene.ogg",
           "sha256": "0111FB38C1854144403703D3024FB044F318D79803E89650EC31070FB125B6F5",
           "bytes": 19543
         },
         {
           "name": "ali",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/ali.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/ali.ogg",
           "sha256": "8F80FAB62C737FE6F2D396E62CC7A0A78990DF282A82D5CB4377E03F9A9EDA4E",
           "bytes": 8336
         },
         {
           "name": "folla",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/folla.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/folla.ogg",
           "sha256": "1230C7CAE624A511F73D883D1D3DEB6AB98FAFBC6F2A2F44918D10B068DF88E3",
           "bytes": 17751
         },
         {
           "name": "mistero",
           "kind": "music",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/mistero.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/mistero.ogg",
           "sha256": "664F79D369CF1434AF1C18D3AD45DDAA8BD4A393FDFBA13B1E526601A91104AD",
           "bytes": 734001
         },
         {
           "name": "pericolo",
           "kind": "music",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/pericolo.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/pericolo.ogg",
           "sha256": "D5BC6AE69F2DC496A6F9EE18AD9210167C1A53752232D18E335559A9E255FA2A",
           "bytes": 806320
         },
         {
           "name": "meraviglia",
           "kind": "music",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/meraviglia.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/meraviglia.ogg",
           "sha256": "F1B4BD42CEBBB71888A5DBC780C1BEC4BD48B09BBFCB502AD39CD25AF591F025",
           "bytes": 802288
         },
         {
           "name": "trionfo",
           "kind": "music",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/trionfo.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/trionfo.ogg",
           "sha256": "30B509CE81B1DC72E9821BD544BD6F2F8F0802BD91597D4E1DC1CD0A2650516B",
           "bytes": 751494
         },
         {
           "name": "rovina",
           "kind": "music",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/rovina.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v6/audio/rovina.ogg",
           "sha256": "437E7E263CA49F488EEC6983FFD838DA42FD7C4E04966FCF888609251E90FC34",
           "bytes": 555959
         }
@@ -548,14 +1484,14 @@
       "contentWarnings": "Theft, a time paradox that destroys the universe, and a giant bird of prey that carries someone off for dinner. All of it played for laughs.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 5,
+      "version": 6,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/librogame.xml",
-        "sha256": "693CC92DC89FC026A95C4D4C892C80853813691E5608F428B9665652E7391F30"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/librogame.xml",
+        "sha256": "5AF3369C672798A029D9483567EB2CACE4C3728F0D83AD1ACE1CFD6FAACB5939"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/items.xml",
         "sha256": "2827626F99CD018AFB98C670BD497E055294FBF864E941FBAD2887E4A69FE213"
       },
       "minAppBuild": 34,
@@ -564,77 +1500,77 @@
         {
           "name": "pietra",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/pietra.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/pietra.ogg",
           "sha256": "FB22B86549905D7BEF8AA7A7CE681A33F9E5C6D527B7A3ADB30530BA90236ED2",
           "bytes": 26649
         },
         {
           "name": "soffio",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/soffio.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/soffio.ogg",
           "sha256": "945E3E465DB2FB9AAFCFBA8AE4C69627CCBC8343A79FFE383951ABB52AFBA83B",
           "bytes": 15798
         },
         {
           "name": "sabbia",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/sabbia.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/sabbia.ogg",
           "sha256": "7BD66EE37B7671525FCFF162B90569BC7DC1D0DA00A975121C0672C660AD441A",
           "bytes": 22745
         },
         {
           "name": "catene",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/catene.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/catene.ogg",
           "sha256": "0111FB38C1854144403703D3024FB044F318D79803E89650EC31070FB125B6F5",
           "bytes": 19543
         },
         {
           "name": "ali",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/ali.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/ali.ogg",
           "sha256": "8F80FAB62C737FE6F2D396E62CC7A0A78990DF282A82D5CB4377E03F9A9EDA4E",
           "bytes": 8336
         },
         {
           "name": "folla",
           "kind": "sound",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/folla.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/folla.ogg",
           "sha256": "1230C7CAE624A511F73D883D1D3DEB6AB98FAFBC6F2A2F44918D10B068DF88E3",
           "bytes": 17751
         },
         {
           "name": "mistero",
           "kind": "music",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/mistero.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/mistero.ogg",
           "sha256": "664F79D369CF1434AF1C18D3AD45DDAA8BD4A393FDFBA13B1E526601A91104AD",
           "bytes": 734001
         },
         {
           "name": "pericolo",
           "kind": "music",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/pericolo.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/pericolo.ogg",
           "sha256": "D5BC6AE69F2DC496A6F9EE18AD9210167C1A53752232D18E335559A9E255FA2A",
           "bytes": 806320
         },
         {
           "name": "meraviglia",
           "kind": "music",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/meraviglia.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/meraviglia.ogg",
           "sha256": "F1B4BD42CEBBB71888A5DBC780C1BEC4BD48B09BBFCB502AD39CD25AF591F025",
           "bytes": 802288
         },
         {
           "name": "trionfo",
           "kind": "music",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/trionfo.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/trionfo.ogg",
           "sha256": "30B509CE81B1DC72E9821BD544BD6F2F8F0802BD91597D4E1DC1CD0A2650516B",
           "bytes": 751494
         },
         {
           "name": "rovina",
           "kind": "music",
-          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/rovina.ogg",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v6/audio/rovina.ogg",
           "sha256": "437E7E263CA49F488EEC6983FFD838DA42FD7C4E04966FCF888609251E90FC34",
           "bytes": 555959
         }
@@ -651,18 +1587,90 @@
       "contentWarnings": "Suicidio chiesto a un'altra persona, schizofrenia e allucinazioni, accoltellamenti, morte del protagonista e della sua compagna, linguaggio volgare. Il racconto è frammentato e disturbante per scelta.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v2/librogame.xml",
-        "sha256": "035C714528F89C7356EDF4FA4C610BDAE85E1424F539775158812C3149F15AE7"
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/librogame.xml",
+        "sha256": "38797D54AD86C086CC1B6DE4B451C9A86F54F61B37C719F64B16FD9BAED2CF86"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "fendente_coltello_aria",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/audio/fendente_coltello_aria.ogg",
+          "sha256": "58B28CAC8C93ED199ACB1E38AE22895D619A303909992D1BC1ED1DA288751E1A",
+          "bytes": 5771
+        },
+        {
+          "name": "intermittenza_neon_ronzio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/audio/intermittenza_neon_ronzio.ogg",
+          "sha256": "14C3D1BC754F64BE52235AA61B3411632A79E4F952C784DFD7085D851ED3C312",
+          "bytes": 7870
+        },
+        {
+          "name": "sfregamento_specchio_vapore",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/audio/sfregamento_specchio_vapore.ogg",
+          "sha256": "054F48BA98B0F46F00A91802E3F087BEAE2BD9C19598BC28254C425ACD526C77",
+          "bytes": 7299
+        },
+        {
+          "name": "tachicardia_panico",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/audio/tachicardia_panico.ogg",
+          "sha256": "BE6506ED7005924A0CFEDE4D5D8BFB590EF0C937686F17D80E61599409C51C62",
+          "bytes": 10663
+        },
+        {
+          "name": "vetro_frantumato_lavandino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/audio/vetro_frantumato_lavandino.ogg",
+          "sha256": "E4F3FD0FEFA8C336E74130BF531D5F730540CA4E8666A749FBC59ED8B710DF8E",
+          "bytes": 15492
+        },
+        {
+          "name": "camera_del_motel",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/audio/camera_del_motel.ogg",
+          "sha256": "1397FFFF8046047E1350FBADCBA482F0ED92F02D14ABBE98CC4B83E10A1A1C65",
+          "bytes": 444203
+        },
+        {
+          "name": "frammenti_di_noi",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/audio/frammenti_di_noi.ogg",
+          "sha256": "2F00A083547C796257548EEE74981C8D5EF830859C3982E9FCBD36E729CCDA0F",
+          "bytes": 128790
+        },
+        {
+          "name": "il_coltello_di_lisa",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/audio/il_coltello_di_lisa.ogg",
+          "sha256": "19E0C01B36C4DBC2DF0CBEC8E56EE8C58D93BB78A0F9B5FB881CF19F5062D65A",
+          "bytes": 180911
+        },
+        {
+          "name": "lo_scatto_dello_zero",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/audio/lo_scatto_dello_zero.ogg",
+          "sha256": "6A2E7F39CA4166853ECAAC09615048EE887BA092B8DE84C60C1C3C3413096B36",
+          "bytes": 208010
+        },
+        {
+          "name": "venti_secondi",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/it/v3/audio/venti_secondi.ogg",
+          "sha256": "C299102A5C14192AE93378907D10C9D1C1B9F1212FABFB58DF7E2E86B3FE22DF",
+          "bytes": 157413
+        }
+      ]
     },
     {
       "id": "ti-rimangono-40-secondi-en",
@@ -675,18 +1683,90 @@
       "contentWarnings": "A suicide asked of another person, schizophrenia and hallucinations, stabbings, the death of the protagonist and of his partner, coarse language. The story is fragmented and disturbing by design.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v2/librogame.xml",
-        "sha256": "A79F21C30FFF3DB4943BB34B16E536CFF351016D5A41CFDDEABE6D012233724B"
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/librogame.xml",
+        "sha256": "1AE214F1727507A705969C88C32B1CDBBEBA5D42B6233B27BF39899411762B3D"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "fendente_coltello_aria",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/audio/fendente_coltello_aria.ogg",
+          "sha256": "58B28CAC8C93ED199ACB1E38AE22895D619A303909992D1BC1ED1DA288751E1A",
+          "bytes": 5771
+        },
+        {
+          "name": "intermittenza_neon_ronzio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/audio/intermittenza_neon_ronzio.ogg",
+          "sha256": "14C3D1BC754F64BE52235AA61B3411632A79E4F952C784DFD7085D851ED3C312",
+          "bytes": 7870
+        },
+        {
+          "name": "sfregamento_specchio_vapore",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/audio/sfregamento_specchio_vapore.ogg",
+          "sha256": "054F48BA98B0F46F00A91802E3F087BEAE2BD9C19598BC28254C425ACD526C77",
+          "bytes": 7299
+        },
+        {
+          "name": "tachicardia_panico",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/audio/tachicardia_panico.ogg",
+          "sha256": "BE6506ED7005924A0CFEDE4D5D8BFB590EF0C937686F17D80E61599409C51C62",
+          "bytes": 10663
+        },
+        {
+          "name": "vetro_frantumato_lavandino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/audio/vetro_frantumato_lavandino.ogg",
+          "sha256": "E4F3FD0FEFA8C336E74130BF531D5F730540CA4E8666A749FBC59ED8B710DF8E",
+          "bytes": 15492
+        },
+        {
+          "name": "camera_del_motel",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/audio/camera_del_motel.ogg",
+          "sha256": "1397FFFF8046047E1350FBADCBA482F0ED92F02D14ABBE98CC4B83E10A1A1C65",
+          "bytes": 444203
+        },
+        {
+          "name": "frammenti_di_noi",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/audio/frammenti_di_noi.ogg",
+          "sha256": "2F00A083547C796257548EEE74981C8D5EF830859C3982E9FCBD36E729CCDA0F",
+          "bytes": 128790
+        },
+        {
+          "name": "il_coltello_di_lisa",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/audio/il_coltello_di_lisa.ogg",
+          "sha256": "19E0C01B36C4DBC2DF0CBEC8E56EE8C58D93BB78A0F9B5FB881CF19F5062D65A",
+          "bytes": 180911
+        },
+        {
+          "name": "lo_scatto_dello_zero",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/audio/lo_scatto_dello_zero.ogg",
+          "sha256": "6A2E7F39CA4166853ECAAC09615048EE887BA092B8DE84C60C1C3C3413096B36",
+          "bytes": 208010
+        },
+        {
+          "name": "venti_secondi",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/ti-rimangono-40-secondi/en/v3/audio/venti_secondi.ogg",
+          "sha256": "C299102A5C14192AE93378907D10C9D1C1B9F1212FABFB58DF7E2E86B3FE22DF",
+          "bytes": 157413
+        }
+      ]
     },
     {
       "id": "40-deuce-it",
@@ -699,18 +1779,90 @@
       "contentWarnings": "Nessuna. Tennis, superstizioni e una peperonata di troppo.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v1/librogame.xml",
-        "sha256": "B2966161094154488A1B5DF192A459EFC6C58DE2F42BA45E9C89E9F06A711C57"
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/librogame.xml",
+        "sha256": "17D90F5559B4DF6355CB7AFE9B1E3716FAAA929991E03F82099CCBACD9B78A36"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "applauso",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/audio/applauso.ogg",
+          "sha256": "C28CB25BB2691377F5A59B08DF7381F1557923C7DB2E74A9ACD620DBEACFFE32",
+          "bytes": 32578
+        },
+        {
+          "name": "nastro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/audio/nastro.ogg",
+          "sha256": "4EC6F16CE5B566AA229532793C0A4F1A9C16D267A167FD16EEC49B298612196A",
+          "bytes": 10604
+        },
+        {
+          "name": "racchetta",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/audio/racchetta.ogg",
+          "sha256": "539088731206A767B06FE86FB7F4172F6DEA0C5389F82E1237617E2888BB9711",
+          "bytes": 7391
+        },
+        {
+          "name": "rimbalzo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/audio/rimbalzo.ogg",
+          "sha256": "3549D0D601CD74DF503254CD341E29FADA94281A58BAD89B98FC742882D8D929",
+          "bytes": 8260
+        },
+        {
+          "name": "sospiro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/audio/sospiro.ogg",
+          "sha256": "233CC16AD385298E28257C9AEA52F78373FD1D9248A88E35CD943F5CD0CBDA07",
+          "bytes": 13884
+        },
+        {
+          "name": "matchpoint",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/audio/matchpoint.ogg",
+          "sha256": "1E0C7DA99D2A1C1033DD87C6C666E389AFEA78EE7839335D90295DCBDABCC7FC",
+          "bytes": 791185
+        },
+        {
+          "name": "scambio",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/audio/scambio.ogg",
+          "sha256": "FED1A38AB9D87729BDBF1FACE14A591D66A0AE73727B5513F9442310F3C771BB",
+          "bytes": 821162
+        },
+        {
+          "name": "sconfitta_deuce",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/audio/sconfitta_deuce.ogg",
+          "sha256": "E681AA1762233BCBCBDA19410BFB6BE2D4B8727392FB9131460C66CF147EBB87",
+          "bytes": 721997
+        },
+        {
+          "name": "servizio",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/audio/servizio.ogg",
+          "sha256": "76E0C944DE38568F2894ED9E14FD448314B05848D87A15A9C824814D7C131953",
+          "bytes": 745082
+        },
+        {
+          "name": "trionfo_deuce",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/it/v3/audio/trionfo_deuce.ogg",
+          "sha256": "F890E3E7B57224D73EDBC7D9B460616663B48838200A4E241B3E5CAC9D0FDE72",
+          "bytes": 656359
+        }
+      ]
     },
     {
       "id": "40-deuce-en",
@@ -723,18 +1875,90 @@
       "contentWarnings": "None. Tennis, superstitions and one peperonata too many.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 1,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v1/librogame.xml",
-        "sha256": "4C9E10C08237A7E1FFAB60A4928527CF3C55D4DAC983688A7AC7C642269F2ED6"
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/librogame.xml",
+        "sha256": "E57BEF511B252130CDD2E505C04E13186D3612008DE1AE384453CB4126EAE108"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v1/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "applauso",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/audio/applauso.ogg",
+          "sha256": "C28CB25BB2691377F5A59B08DF7381F1557923C7DB2E74A9ACD620DBEACFFE32",
+          "bytes": 32578
+        },
+        {
+          "name": "nastro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/audio/nastro.ogg",
+          "sha256": "4EC6F16CE5B566AA229532793C0A4F1A9C16D267A167FD16EEC49B298612196A",
+          "bytes": 10604
+        },
+        {
+          "name": "racchetta",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/audio/racchetta.ogg",
+          "sha256": "539088731206A767B06FE86FB7F4172F6DEA0C5389F82E1237617E2888BB9711",
+          "bytes": 7391
+        },
+        {
+          "name": "rimbalzo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/audio/rimbalzo.ogg",
+          "sha256": "3549D0D601CD74DF503254CD341E29FADA94281A58BAD89B98FC742882D8D929",
+          "bytes": 8260
+        },
+        {
+          "name": "sospiro",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/audio/sospiro.ogg",
+          "sha256": "233CC16AD385298E28257C9AEA52F78373FD1D9248A88E35CD943F5CD0CBDA07",
+          "bytes": 13884
+        },
+        {
+          "name": "matchpoint",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/audio/matchpoint.ogg",
+          "sha256": "1E0C7DA99D2A1C1033DD87C6C666E389AFEA78EE7839335D90295DCBDABCC7FC",
+          "bytes": 791185
+        },
+        {
+          "name": "scambio",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/audio/scambio.ogg",
+          "sha256": "FED1A38AB9D87729BDBF1FACE14A591D66A0AE73727B5513F9442310F3C771BB",
+          "bytes": 821162
+        },
+        {
+          "name": "sconfitta_deuce",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/audio/sconfitta_deuce.ogg",
+          "sha256": "E681AA1762233BCBCBDA19410BFB6BE2D4B8727392FB9131460C66CF147EBB87",
+          "bytes": 721997
+        },
+        {
+          "name": "servizio",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/audio/servizio.ogg",
+          "sha256": "76E0C944DE38568F2894ED9E14FD448314B05848D87A15A9C824814D7C131953",
+          "bytes": 745082
+        },
+        {
+          "name": "trionfo_deuce",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/40-deuce/en/v3/audio/trionfo_deuce.ogg",
+          "sha256": "F890E3E7B57224D73EDBC7D9B460616663B48838200A4E241B3E5CAC9D0FDE72",
+          "bytes": 656359
+        }
+      ]
     },
     {
       "id": "oggi-o-mai-piu-it",
@@ -747,18 +1971,90 @@
       "contentWarnings": "Rapina a mano armata. Si può sparare a un ostaggio disarmato e uccidere un impiegato: il libro lo racconta senza compiacimento, ma lo racconta. Linguaggio volgare.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v2/librogame.xml",
-        "sha256": "154A2071F1615243B13310226BF6FB9E629F328520E8AB37FA3F9513D3528FF4"
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/librogame.xml",
+        "sha256": "F76F8808A5540D5077927AF4F06937782F2D95C5A53401B3468E5752140DDA5E"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "combinazione_cassaforte",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/audio/combinazione_cassaforte.ogg",
+          "sha256": "0AAC13491A8CCD1FAA5511FCE3A507DA3F8739B8F64CE788485DE210D65D55B7",
+          "bytes": 6913
+        },
+        {
+          "name": "fischio_treno_vapore",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/audio/fischio_treno_vapore.ogg",
+          "sha256": "A9849EADCBE023F7CE719A0099C954E169F5EDDAF4F224C0A8BC1DC57071A29D",
+          "bytes": 17547
+        },
+        {
+          "name": "galoppo_cavallo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/audio/galoppo_cavallo.ogg",
+          "sha256": "E3D57CCFE48923ED0EA15F58A6F49065834B710CE240538B91C989FF0DE1476F",
+          "bytes": 7359
+        },
+        {
+          "name": "sparo_colt",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/audio/sparo_colt.ogg",
+          "sha256": "4B6F1AB352AC16758C42F43683F9C2BC85F9F226D311A168FA18CFED4F89E5DB",
+          "bytes": 8862
+        },
+        {
+          "name": "ticchettio_orologio_taschino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/audio/ticchettio_orologio_taschino.ogg",
+          "sha256": "EB62B25FE5E3291446AA5598A4AA6A62A7DAB523A30536EC123F38C4AE5B238A",
+          "bytes": 6060
+        },
+        {
+          "name": "fuga_verso_il_covo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/audio/fuga_verso_il_covo.ogg",
+          "sha256": "48F89B0DBE8D4338DD3CBBD5F73A2354A2DED0F0D63BC8A6099F502CF1833FF3",
+          "bytes": 268939
+        },
+        {
+          "name": "il_colpo_alla_banca",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/audio/il_colpo_alla_banca.ogg",
+          "sha256": "88215CF25ECC6FB885F81971D6A6B21D95BE7245B9056684755514AFAB632FAB",
+          "bytes": 170614
+        },
+        {
+          "name": "il_fischio_del_treno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/audio/il_fischio_del_treno.ogg",
+          "sha256": "87C3F65ADF4B6BD0C3BD3DCD97C4613745EC5684E8BE0CB71ADA0B49597939CF",
+          "bytes": 174226
+        },
+        {
+          "name": "piombo_caldo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/audio/piombo_caldo.ogg",
+          "sha256": "EB30743B2F214E70CE216C13DCA5F637643B2308E1C0B2682DD46A345693AAF1",
+          "bytes": 149263
+        },
+        {
+          "name": "stradone_polveroso",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/it/v3/audio/stradone_polveroso.ogg",
+          "sha256": "5DC25ED020D1ADFC07F7C03AE14312AB4FCF64664BBEA904EC44D4ADB5603BC7",
+          "bytes": 310317
+        }
+      ]
     },
     {
       "id": "oggi-o-mai-piu-en",
@@ -771,18 +2067,90 @@
       "contentWarnings": "Armed robbery. You can shoot an unarmed hostage and kill a bank clerk: the book tells it without relish, but it tells it. Coarse language.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v2/librogame.xml",
-        "sha256": "AD6C2D32E297A4771573599AE15DB8ACF7B66D84187D9542CC8CB6536F94505E"
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/librogame.xml",
+        "sha256": "3646C83FD691E003B047984D4422ED40913582B9D462AC5E3FB2D38A7941E00D"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "combinazione_cassaforte",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/audio/combinazione_cassaforte.ogg",
+          "sha256": "0AAC13491A8CCD1FAA5511FCE3A507DA3F8739B8F64CE788485DE210D65D55B7",
+          "bytes": 6913
+        },
+        {
+          "name": "fischio_treno_vapore",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/audio/fischio_treno_vapore.ogg",
+          "sha256": "A9849EADCBE023F7CE719A0099C954E169F5EDDAF4F224C0A8BC1DC57071A29D",
+          "bytes": 17547
+        },
+        {
+          "name": "galoppo_cavallo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/audio/galoppo_cavallo.ogg",
+          "sha256": "E3D57CCFE48923ED0EA15F58A6F49065834B710CE240538B91C989FF0DE1476F",
+          "bytes": 7359
+        },
+        {
+          "name": "sparo_colt",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/audio/sparo_colt.ogg",
+          "sha256": "4B6F1AB352AC16758C42F43683F9C2BC85F9F226D311A168FA18CFED4F89E5DB",
+          "bytes": 8862
+        },
+        {
+          "name": "ticchettio_orologio_taschino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/audio/ticchettio_orologio_taschino.ogg",
+          "sha256": "EB62B25FE5E3291446AA5598A4AA6A62A7DAB523A30536EC123F38C4AE5B238A",
+          "bytes": 6060
+        },
+        {
+          "name": "fuga_verso_il_covo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/audio/fuga_verso_il_covo.ogg",
+          "sha256": "48F89B0DBE8D4338DD3CBBD5F73A2354A2DED0F0D63BC8A6099F502CF1833FF3",
+          "bytes": 268939
+        },
+        {
+          "name": "il_colpo_alla_banca",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/audio/il_colpo_alla_banca.ogg",
+          "sha256": "88215CF25ECC6FB885F81971D6A6B21D95BE7245B9056684755514AFAB632FAB",
+          "bytes": 170614
+        },
+        {
+          "name": "il_fischio_del_treno",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/audio/il_fischio_del_treno.ogg",
+          "sha256": "87C3F65ADF4B6BD0C3BD3DCD97C4613745EC5684E8BE0CB71ADA0B49597939CF",
+          "bytes": 174226
+        },
+        {
+          "name": "piombo_caldo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/audio/piombo_caldo.ogg",
+          "sha256": "EB30743B2F214E70CE216C13DCA5F637643B2308E1C0B2682DD46A345693AAF1",
+          "bytes": 149263
+        },
+        {
+          "name": "stradone_polveroso",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/oggi-o-mai-piu/en/v3/audio/stradone_polveroso.ogg",
+          "sha256": "5DC25ED020D1ADFC07F7C03AE14312AB4FCF64664BBEA904EC44D4ADB5603BC7",
+          "bytes": 310317
+        }
+      ]
     },
     {
       "id": "toile-it",
@@ -795,18 +2163,90 @@
       "contentWarnings": "Violenza sulle donne: il re picchia, umilia e aggredisce sessualmente la protagonista, schiava per una notte. Niente è compiaciuto, tutto è visto dai suoi occhi, e il libro non lascia dubbi su che cosa pensi di quell'uomo. Una belva divora qualcuno. Prostituzione, schiavitù, lutto di figli.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v2/librogame.xml",
-        "sha256": "ED6321A5064B3830CBF17933591641F34AA0213098ACD4EC8C1AAE0201C4D973"
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/librogame.xml",
+        "sha256": "079A1515D6F3B22E556A09247C24CA36C6065AEF26DAC176B22CBAE256B2FAF8"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "braciere_bronzo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/audio/braciere_bronzo.ogg",
+          "sha256": "4D51F6C16E9236E9143AD1EA0F4D103B15AACBCD8A3FC1B37B36A0F61649E373",
+          "bytes": 21752
+        },
+        {
+          "name": "canto_sirena",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/audio/canto_sirena.ogg",
+          "sha256": "B0E846E32BF627FD101A993878392B49FA11BC8293DC8349B38FEDF07E3C8BDD",
+          "bytes": 12171
+        },
+        {
+          "name": "coppa_vino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/audio/coppa_vino.ogg",
+          "sha256": "08D550713CB8401DFA3D4CBEEA997380AC34449CCB29B2D92983377F9C34C5BB",
+          "bytes": 9771
+        },
+        {
+          "name": "frantumi_maschera",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/audio/frantumi_maschera.ogg",
+          "sha256": "6812C3E49B80E9F7843225AADAA016B65205DA4035E825841534B1471284E2DB",
+          "bytes": 13226
+        },
+        {
+          "name": "ruggito_sfinge",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/audio/ruggito_sfinge.ogg",
+          "sha256": "BB3212763E12801BCA3B6323ECBF58A655256041D7FD7AA81E2F6A8020E4AB06",
+          "bytes": 10667
+        },
+        {
+          "name": "il_banchetto_di_giasone",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/audio/il_banchetto_di_giasone.ogg",
+          "sha256": "BF284C354B6E413A438CE5E0ACFD0CCF604717757D70C7E03B098B526E7D9FFA",
+          "bytes": 217105
+        },
+        {
+          "name": "il_prezzo_della_carne",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/audio/il_prezzo_della_carne.ogg",
+          "sha256": "3F2A207BD268EE5077D6CCF87E6988B4BC9BB6ABF3A1A55CC83B5152454A8521",
+          "bytes": 225714
+        },
+        {
+          "name": "iolco_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/audio/iolco_notte.ogg",
+          "sha256": "7159D0177EB2C7A9B93D7C5925A697F7B6EEA6EF3F65CC3042B3C7DE107F8745",
+          "bytes": 271762
+        },
+        {
+          "name": "la_sfinge_sotterranea",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/audio/la_sfinge_sotterranea.ogg",
+          "sha256": "C9A6AC40A40A893D805BB183B45347BA21DEC14AB97A79777AFCE25B8D94DE99",
+          "bytes": 173859
+        },
+        {
+          "name": "le_maschere_di_argilla",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/it/v3/audio/le_maschere_di_argilla.ogg",
+          "sha256": "8D5645E0E281616A25200FAFA4E59CCCF56EBE34BE9D147CE259DF05B779D4F7",
+          "bytes": 215810
+        }
+      ]
     },
     {
       "id": "toile-en",
@@ -819,18 +2259,274 @@
       "contentWarnings": "Violence against women: the king strikes, humiliates and sexually assaults the protagonist, a slave for the night. Nothing is gratuitous, everything is seen through her eyes, and the book leaves no doubt about what it thinks of this man. A beast devours someone. Prostitution, slavery, the loss of children.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 2,
+      "version": 3,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v2/librogame.xml",
-        "sha256": "7960F288F446119CC616FE6045A29D55EB9B265EC798EC4EAB97F59B00D5ACB0"
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/librogame.xml",
+        "sha256": "BFD2AAD25F0D9A2948C5A6FEF47D2F1B2C1CF8BEF2F28E0A8F79D95791259736"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v2/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/items.xml",
         "sha256": "6558216A0CF8DC7B22ABDF31AB506321FDE72C4C5ADBB432D0567F3D2C826DB1"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "audio": [
+        {
+          "name": "braciere_bronzo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/audio/braciere_bronzo.ogg",
+          "sha256": "4D51F6C16E9236E9143AD1EA0F4D103B15AACBCD8A3FC1B37B36A0F61649E373",
+          "bytes": 21752
+        },
+        {
+          "name": "canto_sirena",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/audio/canto_sirena.ogg",
+          "sha256": "B0E846E32BF627FD101A993878392B49FA11BC8293DC8349B38FEDF07E3C8BDD",
+          "bytes": 12171
+        },
+        {
+          "name": "coppa_vino",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/audio/coppa_vino.ogg",
+          "sha256": "08D550713CB8401DFA3D4CBEEA997380AC34449CCB29B2D92983377F9C34C5BB",
+          "bytes": 9771
+        },
+        {
+          "name": "frantumi_maschera",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/audio/frantumi_maschera.ogg",
+          "sha256": "6812C3E49B80E9F7843225AADAA016B65205DA4035E825841534B1471284E2DB",
+          "bytes": 13226
+        },
+        {
+          "name": "ruggito_sfinge",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/audio/ruggito_sfinge.ogg",
+          "sha256": "BB3212763E12801BCA3B6323ECBF58A655256041D7FD7AA81E2F6A8020E4AB06",
+          "bytes": 10667
+        },
+        {
+          "name": "il_banchetto_di_giasone",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/audio/il_banchetto_di_giasone.ogg",
+          "sha256": "BF284C354B6E413A438CE5E0ACFD0CCF604717757D70C7E03B098B526E7D9FFA",
+          "bytes": 217105
+        },
+        {
+          "name": "il_prezzo_della_carne",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/audio/il_prezzo_della_carne.ogg",
+          "sha256": "3F2A207BD268EE5077D6CCF87E6988B4BC9BB6ABF3A1A55CC83B5152454A8521",
+          "bytes": 225714
+        },
+        {
+          "name": "iolco_notte",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/audio/iolco_notte.ogg",
+          "sha256": "7159D0177EB2C7A9B93D7C5925A697F7B6EEA6EF3F65CC3042B3C7DE107F8745",
+          "bytes": 271762
+        },
+        {
+          "name": "la_sfinge_sotterranea",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/audio/la_sfinge_sotterranea.ogg",
+          "sha256": "C9A6AC40A40A893D805BB183B45347BA21DEC14AB97A79777AFCE25B8D94DE99",
+          "bytes": 173859
+        },
+        {
+          "name": "le_maschere_di_argilla",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/toile/en/v3/audio/le_maschere_di_argilla.ogg",
+          "sha256": "8D5645E0E281616A25200FAFA4E59CCCF56EBE34BE9D147CE259DF05B779D4F7",
+          "bytes": 215810
+        }
+      ]
+    },
+    {
+      "id": "the-last-sacrifice-it",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/librogame.xml",
+        "sha256": "1E86127D9F6048C128BEBBEE4C2FE257A9DB17195C99379C92303AA86211E265"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/items.xml",
+        "sha256": "A46B42ABF3E5BB87F4713B596F2E394019E1FFA90DF65B25715760D6C4A6AB38"
+      },
+      "audio": [
+        {
+          "name": "bufera_vento_gelo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/audio/bufera_vento_gelo.ogg",
+          "sha256": "336CB18DCA3FF35DE624C0C2D0C46643826AD5E3B3ED94BB826E2B2FACE8B86F",
+          "bytes": 22830
+        },
+        {
+          "name": "gemito_leviatano",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/audio/gemito_leviatano.ogg",
+          "sha256": "0C464C6DA47666912CF9DED261C8B9A43797CA33CA6762DE1E280C35A7129A90",
+          "bytes": 8323
+        },
+        {
+          "name": "impatto_scafo_ghiaccio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/audio/impatto_scafo_ghiaccio.ogg",
+          "sha256": "A47948FE4984B2EAEC635A5367E6F6ADDB140A72E68A243CE76ED2F398D40A2E",
+          "bytes": 14955
+        },
+        {
+          "name": "ingranaggi_mano_metallo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/audio/ingranaggi_mano_metallo.ogg",
+          "sha256": "EA1B0F5A0BDB45F6FE0EF5E412A34A1CCF9F2C25FB2E95DEE436972BC1DB9224",
+          "bytes": 8854
+        },
+        {
+          "name": "mannaia_sacrificio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/audio/mannaia_sacrificio.ogg",
+          "sha256": "3B75708E346CC8D521655B814357C343FF3C0FD38D3C13FA872FAAFEAD42E421",
+          "bytes": 8015
+        },
+        {
+          "name": "articolazioni_di_ferro",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/audio/articolazioni_di_ferro.ogg",
+          "sha256": "914588352834F2C634ECCE445DF88E1521D97DD9428E719D6B28FB73072C0FAC",
+          "bytes": 144419
+        },
+        {
+          "name": "il_cuore_della_tempesta",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/audio/il_cuore_della_tempesta.ogg",
+          "sha256": "7959EBC490FBC0B5771FD3575685E6D98197D7E3BF3F230CA837C08C2363FCF3",
+          "bytes": 230046
+        },
+        {
+          "name": "il_rito_del_sangue",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/audio/il_rito_del_sangue.ogg",
+          "sha256": "848C6A84C719B28DE690A007392E96038FC47FE5BF5FA64C4A8D9D48AA056AE3",
+          "bytes": 166577
+        },
+        {
+          "name": "la_cattedrale_nera",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/audio/la_cattedrale_nera.ogg",
+          "sha256": "DB558136BCD8E98B14988A083084EB2FD7925FFC664C91E4E78B91B291BB4A9D",
+          "bytes": 212079
+        },
+        {
+          "name": "la_riva_ghiacciata",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/it/v2/audio/la_riva_ghiacciata.ogg",
+          "sha256": "F644C832A4FE5CC26F5F42F4FDE6C9B18D4FC4D9BBC008E92A7C54ED554C3F78",
+          "bytes": 169991
+        }
+      ],
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "title": "L'ultimo sacrificio",
+      "author": "Andrei Simion",
+      "genre": "Fantasia oscura gotica",
+      "blurb": "Una nave di metallo si conficca nella riva ghiacciata e ti lascia ai piedi della tempesta. Dentro il bianco qualcosa ti chiama, e tu vuoi rispondere da quel giorno in cui hai letto che il re dell'imperium era morto.\n\nFra te e il centro della tempesta ci sono tre sacrifici. Il secondo ti costa una mano, e il libro si ricorda se l'hai pagato: quello che potrai ancora fare con le braccia, più tardi, al buio, dipende da quella notte nella cattedrale.",
+      "contentWarnings": "Mutilazione, orrore del corpo, ferite descritte nei particolari e la morte del personaggio."
+    },
+    {
+      "id": "the-last-sacrifice-en",
+      "phase": "test",
+      "version": 2,
+      "story": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/librogame.xml",
+        "sha256": "841F5A7E830A267190B290C90B60AB84BFB1912E0C35BFB6E065151843B827E8"
+      },
+      "catalog": {
+        "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/items.xml",
+        "sha256": "9C0F1E3E96701E37E47D5C4A529CE66F95330AFF748E410DDC65FDE436407CAB"
+      },
+      "audio": [
+        {
+          "name": "bufera_vento_gelo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/audio/bufera_vento_gelo.ogg",
+          "sha256": "336CB18DCA3FF35DE624C0C2D0C46643826AD5E3B3ED94BB826E2B2FACE8B86F",
+          "bytes": 22830
+        },
+        {
+          "name": "gemito_leviatano",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/audio/gemito_leviatano.ogg",
+          "sha256": "0C464C6DA47666912CF9DED261C8B9A43797CA33CA6762DE1E280C35A7129A90",
+          "bytes": 8323
+        },
+        {
+          "name": "impatto_scafo_ghiaccio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/audio/impatto_scafo_ghiaccio.ogg",
+          "sha256": "A47948FE4984B2EAEC635A5367E6F6ADDB140A72E68A243CE76ED2F398D40A2E",
+          "bytes": 14955
+        },
+        {
+          "name": "ingranaggi_mano_metallo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/audio/ingranaggi_mano_metallo.ogg",
+          "sha256": "EA1B0F5A0BDB45F6FE0EF5E412A34A1CCF9F2C25FB2E95DEE436972BC1DB9224",
+          "bytes": 8854
+        },
+        {
+          "name": "mannaia_sacrificio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/audio/mannaia_sacrificio.ogg",
+          "sha256": "3B75708E346CC8D521655B814357C343FF3C0FD38D3C13FA872FAAFEAD42E421",
+          "bytes": 8015
+        },
+        {
+          "name": "articolazioni_di_ferro",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/audio/articolazioni_di_ferro.ogg",
+          "sha256": "914588352834F2C634ECCE445DF88E1521D97DD9428E719D6B28FB73072C0FAC",
+          "bytes": 144419
+        },
+        {
+          "name": "il_cuore_della_tempesta",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/audio/il_cuore_della_tempesta.ogg",
+          "sha256": "7959EBC490FBC0B5771FD3575685E6D98197D7E3BF3F230CA837C08C2363FCF3",
+          "bytes": 230046
+        },
+        {
+          "name": "il_rito_del_sangue",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/audio/il_rito_del_sangue.ogg",
+          "sha256": "848C6A84C719B28DE690A007392E96038FC47FE5BF5FA64C4A8D9D48AA056AE3",
+          "bytes": 166577
+        },
+        {
+          "name": "la_cattedrale_nera",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/audio/la_cattedrale_nera.ogg",
+          "sha256": "DB558136BCD8E98B14988A083084EB2FD7925FFC664C91E4E78B91B291BB4A9D",
+          "bytes": 212079
+        },
+        {
+          "name": "la_riva_ghiacciata",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/the-last-sacrifice/en/v2/audio/la_riva_ghiacciata.ogg",
+          "sha256": "F644C832A4FE5CC26F5F42F4FDE6C9B18D4FC4D9BBC008E92A7C54ED554C3F78",
+          "bytes": 169991
+        }
+      ],
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
+      "title": "The Last Sacrifice",
+      "author": "Andrei Simion",
+      "genre": "Gothic dark fantasy",
+      "blurb": "A metal ship rams the frozen shore and leaves you at the foot of the storm. Somewhere inside the white something is calling you, and you have wanted to answer it since the day you read that the king of the imperium was dead.\n\nThree sacrifices stand between you and the centre of the storm. The second one costs you a hand, and the book remembers whether you paid it: what you can still do with your arms, later, in the dark, depends on that night in the cathedral.",
+      "contentWarnings": "Mutilation, body horror, wounds described in detail, and the death of the character."
     }
   ]
 }

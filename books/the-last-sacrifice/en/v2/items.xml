@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<librogame formatVersion="1">
+  <items>
+    <item id="revolver" name="Revolver" description="Taken from the nightstand in the dark, three shots already spent. What is left in the chamber is a question the book answers late." />
+  </items>
+</librogame>

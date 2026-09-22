@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="3" phase="test" id="la-grande-fuga-en" workId="la-grande-fuga" language="en" title="The Great Escape" author="MastroRozen e IsabelFae" checks="deterministico" genre="Fable, comedy" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="corsa_nel_paese_dei_conigli">
+  <Changes>
+    <Change>Adapted for this app: the structure, the rules and parts of the text were changed or removed to work with its engine</Change>
+    <Change>Translated into English from the original Italian</Change>
+    <Change>Added sounds and background music, delivered together with the book</Change>
+  </Changes>
+  <ContentWarnings>None. A chase played for laughs, with guard bunnies, nursery rhymes and chocolate eggs.</ContentWarnings>
+  <Blurb>You have organised the most memorable Great Egg Hunt ever, and to pull it off you stole the Easter Bunny's eggs. And his Talking Book too, which knows the way back and tells it to you in rhyme.
+
+But the Bunny has noticed, and he is after you. Reach the portal with as many eggs as you can, and don't trust the Book too much.</Blurb>
+  <Audio>
+    <Sound name="balzo_coniglio_gigante" file="balzo_coniglio_gigante.ogg" />
+    <Sound name="fruscio_sacco_uova" file="fruscio_sacco_uova.ogg" />
+    <Sound name="risatina_libro_parlante" file="risatina_libro_parlante.ogg" />
+    <Sound name="rottura_guscio_cioccolato" file="rottura_guscio_cioccolato.ogg" />
+    <Sound name="vortice_portale_magico" file="vortice_portale_magico.ogg" />
+    <Music id="corsa_nel_paese_dei_conigli" file="corsa_nel_paese_dei_conigli.ogg" />
+    <Music id="filastrocche_di_cuoio" file="filastrocche_di_cuoio.ogg" />
+    <Music id="il_bosco_di_cioccolato" file="il_bosco_di_cioccolato.ogg" />
+    <Music id="il_passo_del_coniglio" file="il_passo_del_coniglio.ogg" />
+    <Music id="la_grande_caccia_vinta" file="la_grande_caccia_vinta.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <Variables>
+    <Variable id="uova" name="Eggs" type="number" initial="40" min="0" max="46" visible="true" />
+    <Variable id="disegnate" name="Eggs drawn in the Notes" type="number" initial="0" min="0" max="3" visible="true" />
+  </Variables>
+  <Page id="1" sound="fruscio_sacco_uova" soundDelay="3" music="corsa_nel_paese_dei_conigli">
+    <Text>After years of research, you have finally got hold of the coordinates for reaching the world of the Easter Bunny. Thanks to his delicious eggs, the "Great Egg Hunt" you have organised will be unforgettable! You step through the portal and soon see the Bunny in his workshop, busy working chocolate. Taking advantage of the moment, you secretly steal all the eggs you can, as well as his Talking Book; you know it will be essential if you are not to get lost on the way back. This last move backfires on you, though, because the Bunny notices you and sets off after you in a fury.
+
+You must get as far away from the Easter Bunny as you can! A shallow stream lies across your path. You have two ways of crossing it:
+
+The Talking Book whistles, but it won't give you any clues.</Text>
+    <Choices>
+      <Choice text="Walk across the rocks just above the water" goto="6" />
+      <Choice text="Use the wooden bridge, so as not to get wet" goto="8" />
+    </Choices>
+  </Page>
+  <Page id="2" sound="balzo_coniglio_gigante" soundDelay="2" music="filastrocche_di_cuoio">
+    <Text>The ravine you come to is indeed gloomy, but a narrow natural bridge lets you cross it without too much trouble. When you turn round, you see with dismay that the Bunny has almost caught up with you but, the moment he sets foot on the bridge, it starts to crumble. Your pursuer, enraged, shakes his fist and goes away.
+
+In front of you now is an immense forest, from which three apparently identical paths wind away. You hear the Book clearing its throat, getting ready to speak:
+
+"The forest holds no fear at all: go left, the safest path of all"
+
+"The straight road leads you to a fight, and bad luck may strike you outright"
+
+"To the right the way is harder still; if I were you, I'd flee downhill!"</Text>
+    <Choices>
+      <Choice text="The path on the left" goto="15" />
+      <Choice text="The straight path" goto="5" />
+      <Choice text="The path on the right" goto="19" />
+    </Choices>
+  </Page>
+  <Page id="3" music="il_bosco_di_cioccolato">
+    <Text>The path ends in a narrow gorge, completely filled by an immense tangle of brambles. You can tell the Book is worried: "Those brambles could give you a scratch... Turn back, don't give it a thought."</Text>
+    <Choices>
+      <Choice text="Examine the tangle of brambles" goto="18" />
+      <Choice text="Turn back and carry on along the road" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="4" sound="balzo_coniglio_gigante" soundDelay="1" music="il_passo_del_coniglio">
+    <Text>As you cross a clearing, you hear in the distance the unmistakable voice of the Easter Bunny; he is coming closer with long strides. In a panic you stare at the Book, which starts to chant:
+
+"After this glade, go left: another hill, I sense your goal is near you still."
+
+"On the right a ravine, as grim a place as you have seen."
+
+It suddenly stops chanting and, serious now, adds:
+
+"You could go back at once, straight away: perhaps the Bunny will be merciful today..."</Text>
+    <Choices>
+      <Choice text="Left, towards the hill" goto="10" />
+      <Choice text="Right, towards the ravine" goto="2" />
+      <Choice text="Go back to the Bunny" goto="13" />
+    </Choices>
+  </Page>
+  <Page id="5" sound="risatina_libro_parlante" soundDelay="2" music="il_passo_del_coniglio">
+    <Text>The Portal at last! But to your utter dismay, the Easter Bunny and his little Guard Bunnies are there to defend it. The Book trills its last chant happily. "If the portal you would reach, something you must give up, I preach!"</Text>
+    <Choices>
+      <Choice text="You throw some Eggs at the Guard Bunnies to distract them" goto="9" />
+      <Choice text="You throw the hateful Talking Book" goto="17" />
+      <Choice text="You charge at the portal head down, hoping the bunnies are as soft and fluffy as they look" goto="14" />
+    </Choices>
+  </Page>
+  <Page id="6" sound="risatina_libro_parlante" soundDelay="1">
+    <Text>Once across the river you see:
+
+The Book whispers: "Behind the falls, oh what a mystery! Go back, and the wrong path is all you'll see."</Text>
+    <Choices>
+      <Choice text="A brick road that runs straight on towards a hill" goto="11" />
+      <Choice text="On the right, a stony path leading to a waterfall" goto="16" />
+      <Choice text="On the left, a dirt track that seems to lead back towards the Easter Bunny's workshop" goto="3" />
+    </Choices>
+  </Page>
+  <Page id="7" music="il_bosco_di_cioccolato">
+    <Text>This Book talks a bit too much. While you are thinking about throwing it away, you trip over something half buried in the ground. What a wonder! Looking more closely, you see that it is a Strawberry-Glazed Egg. Without a second thought, you stuff it in your sack and go on your way, whistling happily.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="uova" value="2" />
+        <addVariable target="disegnate" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="8">
+    <Text>The bridge is less solid than you hoped. Halfway across it gives way and you end up falling into the stream below. Luckily you aren't hurt, but some eggs are swept away by the current. Grumbling, you get up and wade across the stream.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="uova" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="6" />
+    </Choices>
+  </Page>
+  <Page id="9" sound="vortice_portale_magico" soundDelay="3">
+    <Text>You throw a few eggs as a diversion. One of them hits the Easter Bunny on the head, knocking him out. The Guard Bunnies are busy gathering up the others. You get past them all and go through the portal...</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="uova" value="6" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="10" music="il_passo_del_coniglio">
+    <Text>You reach the top of the hill and can see, not far away, the portal that will take you home. The trouble is that there are also about thirty little Guard Bunnies who will never let you through. As soon as they see you, they come after you. You are forced to turn round and run away at full speed, throwing eggs at them to distract them. You take the path into the gloomy ravine.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="uova" value="6" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="2" />
+    </Choices>
+  </Page>
+  <Page id="11" music="filastrocche_di_cuoio">
+    <Text>As you go on, the Book gets agitated and hums: "Noble thief! If rather than taking you'd rather give, go Left and hesitate not while you live! If giving is a source of woe, go Right, and no harm you'll know."</Text>
+    <Choices>
+      <Choice text="Go left towards some well-kept hedges" goto="20" />
+      <Choice text="Go right towards a clearing" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="12" music="la_grande_caccia_vinta" ending="true">
+    <Text>You did it! You made it back Home. It's time to see how many Eggs you managed to collect!</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="uova" operator="gte" value="38" />
+        </Requirements>
+        <Content>The Hunt will be Magnificent!</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="uova" operator="gte" value="32" />
+          <Variable id="uova" operator="lte" value="37" />
+        </Requirements>
+        <Content>The Hunt will be a smash hit!</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="uova" operator="gte" value="22" />
+          <Variable id="uova" operator="lte" value="31" />
+        </Requirements>
+        <Content>The Hunt will be short, but at least you'll get to have it.</Content>
+      </Text>
+      <Text>
+        <Requirements>
+          <Variable id="uova" operator="lte" value="21" />
+        </Requirements>
+        <Content>No Hunt this year...</Content>
+      </Text>
+    </ConditionalTexts>
+  </Page>
+  <Page id="13" music="il_passo_del_coniglio" ending="true">
+    <Text>You catch up with the Easter Bunny and, apologising, give him back the eggs. He stares at you for a moment. He takes the sack in his left paw while, to your surprise, he grabs you with his right. You are dragged by force to the workshop where, as a punishment, you will spend the rest of your life as his assistant. Every day you will curse that hateful Book for tricking you, but also yourself for being naive enough to believe it.</Text>
+  </Page>
+  <Page id="14" sound="vortice_portale_magico" soundDelay="4">
+    <Text>Just as you hoped, the Guard Bunnies are soft, light, silky and, like furry skittles, they fly through the air. With a shoulder-charge you push the Easter Bunny aside too; he is lighter than you thought. He loses his balance and out of his work apron falls a big Pure Dark Chocolate Egg, which you pick up just before you step through the portal.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="uova" value="2" />
+        <addVariable target="disegnate" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="15" sound="fruscio_sacco_uova" soundDelay="3" music="corsa_nel_paese_dei_conigli">
+    <Text>The forest is gloomy, dark, murky, anything but safe! The path blends into the undergrowth and in no time at all you are completely lost. You seem to go round in circles for an eternity and, when you finally manage to get out, you notice some tears in your sack and raise your eyes to heaven, calling on your ancestors. You mend the sack.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="uova" value="4" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="16" sound="rottura_guscio_cioccolato" soundDelay="3" music="il_bosco_di_cioccolato">
+    <Text>The Book was telling the truth! Behind the waterfall you find... a dark and murky cave. You go in, sure that the bunny won't be able to find you here, and grope your way forward for quite some time; when you reach the exit you notice to your annoyance that your sack has torn and some of your eggs have rolled away. You mend the sack.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="uova" value="4" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="17" sound="vortice_portale_magico" soundDelay="4">
+    <Text>"To hell with you and your blasted riddles!" With those words, you fling the Talking Book away. It curses you back with one last rhyme: "How dare you throw ME, you beggar? May a sickness strike you this very mom..." it doesn't have time to finish before it crashes into the Easter Bunny, sending him tumbling to the ground. The Guard Bunnies rush to help him; taking advantage of the moment, you dash through the portal.</Text>
+    <Choices>
+      <Choice text="Continue" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="18" music="il_bosco_di_cioccolato">
+    <Text>Looking more closely at the tangle, you notice a big Hazelnut and Pistachio Egg in it! Now that really is a treasure! Happy as a lark, you go back to the road.</Text>
+    <OnEnter>
+      <Effects>
+        <addVariable target="uova" value="2" />
+        <addVariable target="disegnate" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="19" sound="risatina_libro_parlante" soundDelay="2" music="filastrocche_di_cuoio">
+    <Text>The path is rough and tiring, but passable, and it ends in front of a sinister-looking old oak, where gnarled roots cross at its foot.
+
+As usual, the Book has something to say:
+
+"Those roots look shady, don't you find? Perhaps a treasure lies behind"</Text>
+    <Choices>
+      <Choice text="You examine the roots" goto="21" />
+      <Choice text="You give up, not trusting the book, and walk on" goto="7" />
+    </Choices>
+  </Page>
+  <Page id="20" music="il_bosco_di_cioccolato">
+    <Text>A marvellous garden opens up in front of you. You lose yourself admiring it until you feel something moving in your sack. Out jump 3 little bunnies, running off with some of your eggs! You try to chase them, but they vanish into the green of the hedges. Cursing those little pests, you turn back.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="uova" value="6" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="4" />
+    </Choices>
+  </Page>
+  <Page id="21" sound="rottura_guscio_cioccolato" soundDelay="3" music="il_bosco_di_cioccolato">
+    <Text>You lean over the roots but, however hard you look, you find nothing. To your great dismay, though, you notice that some of your eggs have been nibbled; insects like ladybirds are devouring them! Furious, you throw them away and hurry off before any more arrive.</Text>
+    <OnEnter>
+      <Effects>
+        <subtractVariable target="uova" value="2" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Continue" goto="5" />
+    </Choices>
+  </Page>
+</Librogame>

@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Librogame formatVersion="1" version="3" phase="test" id="giacominerloch-en" workId="giacominerloch" language="en" title="Giacominerloch, the Chasm of Whispers" author="Alessandro Rubbo" checks="dadi" genre="Fantasy, folklore" license="CC BY-SA 4.0" licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/" music="notte_sul_lemerle">
+  <Changes>
+    <Change>Adapted for this app: the structure, the rules and parts of the text were changed or removed to work with its engine</Change>
+    <Change>Translated into English from the original Italian</Change>
+    <Change>Added sounds and background music, delivered together with the book</Change>
+  </Changes>
+  <ContentWarnings>A girl taken and changed against her will. One ending tells of a monstrous metamorphosis seen close up, another of a sentence and a petrification. Wounds, drowning, old age and regret.</ContentWarnings>
+  <Blurb>You are walking home from the Schella Marz feast, the wine still in your veins and the full moon over the Altopiano. Near the Lèmerle a moan breaks the silence: a woman's voice, and it seems to come out of the earth itself.
+
+Her name is Giacomina. She says she is the daughter of Hèberle the woodcutter, and that she has been down there far too long. With every night that passes the change advances: forty moons, and nothing human will be left of her.</Blurb>
+  <Audio>
+    <Sound name="campanacci_schella_marz" file="campanacci_schella_marz.ogg" />
+    <Sound name="goccia_caverna_carsica" file="goccia_caverna_carsica.ogg" />
+    <Sound name="lamento_voragine_eco" file="lamento_voragine_eco.ogg" />
+    <Sound name="lancio_tre_monete" file="lancio_tre_monete.ogg" />
+    <Sound name="resina_impacco_fasce" file="resina_impacco_fasce.ogg" />
+    <Music id="il_lamento_di_giacomina" file="il_lamento_di_giacomina.ogg" />
+    <Music id="l_alba_sull_altopiano" file="l_alba_sull_altopiano.ogg" />
+    <Music id="la_voragine_dei_sussurri" file="la_voragine_dei_sussurri.ogg" />
+    <Music id="notte_sul_lemerle" file="notte_sul_lemerle.ogg" />
+    <Music id="schella_marz_lontana" file="schella_marz_lontana.ogg" />
+  </Audio>
+  <CharacterRules skillPoints="0" attributePoints="0">
+    <Skills />
+  </CharacterRules>
+  <Variables>
+    <Variable id="impacco" name="Poultice of moss and weed" type="number" initial="0" min="0" max="1" visible="false" />
+  </Variables>
+  <Tables>
+    <Table id="monete6" dice="8" times="1">
+      <Result is="fallito" range="1-4" />
+      <Result is="riuscito" range="5-8" />
+      <Outcome when="fallito" goto="14" />
+      <Outcome when="riuscito" goto="20" />
+    </Table>
+    <Table id="monete9" dice="8" times="1">
+      <Result is="fallito" range="1-1" />
+      <Result is="riuscito" range="2-8" />
+      <Outcome when="fallito" goto="15" />
+      <Outcome when="riuscito" goto="3" />
+    </Table>
+    <Table id="monete19" dice="8" times="1">
+      <Result is="fallito" range="1-1" />
+      <Result is="riuscito" range="2-8" />
+      <Outcome when="fallito" goto="15" />
+      <Outcome when="riuscito" goto="8" />
+    </Table>
+    <Table id="monete20" dice="8" times="1">
+      <Result is="fallito" range="1-1" />
+      <Result is="riuscito" range="2-8" />
+      <Outcome when="fallito" goto="14" />
+      <Outcome when="riuscito" goto="2" />
+    </Table>
+  </Tables>
+  <Page id="1" sound="lamento_voragine_eco" soundDelay="4" music="notte_sul_lemerle">
+    <Text>The evening wind hisses through the larches as you climb the Kan Züne path. The Schella Marz feast, down in the village, ended hours ago, but the wine still warms your veins and drags at your step. The full moon lights the landscape with a spectral glow. As you pass near the Lèmerle, a stifled moan breaks the silence. You stop, holding your breath. It is a woman's voice, a distant weeping that seems to come out of the earth itself.</Text>
+    <Choices>
+      <Choice text="Investigate where the moaning is coming from" goto="13" />
+      <Choice text="Walk on home and ignore it" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="2" sound="resina_impacco_fasce" soundDelay="1" music="il_lamento_di_giacomina">
+    <Text>The cool air of the Altopiano wraps around you both as you come out into the sunlight. Giacomina is shivering.</Text>
+    <ConditionalTexts>
+      <Text>
+        <Requirements>
+          <Variable id="impacco" operator="gte" value="1" />
+        </Requirements>
+        <Content>The weed and moss wound about her feet seem to be working: her skin keeps its silver sheen, her hair its green tinge. The landscape, on the other hand, looks changed to you: the paths have become roads, the woods have turned into pasture. You walk as far as Kan Züne and find a headstone with an inscription cut into it which, translated, reads: "In this chasm / To find Giacomina / Josel was lost / Woodcutter of the Lèmerle." (In dizar tir loch Zo / vennen Giacomina / Is-se smariert Josel / Wàllemar vo’ Lèmerle) You look into each other's eyes, understanding the truth: time in the underground kingdom runs differently. You are twenty years young, but centuries old.</Content>
+      </Text>
+    </ConditionalTexts>
+    <Choices>
+      <Choice text="Take Giacomina's hand" goto="18">
+        <Requirements>
+          <Variable id="impacco" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Give in to panic" goto="7">
+        <Requirements>
+          <Variable id="impacco" operator="gte" value="1" />
+        </Requirements>
+      </Choice>
+      <Choice text="Carry on" goto="21">
+        <Requirements>
+          <Variable id="impacco" operator="lte" value="0" />
+        </Requirements>
+      </Choice>
+    </Choices>
+  </Page>
+  <Page id="3" sound="campanacci_schella_marz" soundDelay="3" music="schella_marz_lontana">
+    <Text>The girl slumps into your arms. Her skin is cold, almost damp. She thanks you in a trembling voice, telling you she has been a prisoner for a long, far too long time.
+
+"I must be back before dawn," she whispers, watching the sky without letting go of you. "The elves will come looking for me. But how I should love to see the pastures again, the woods..."
+
+Together you walk towards the village. Giacomina touches everything as though rediscovering a lost world. Then, when the first cockcrow breaks the silence, a shudder runs through her.
+
+Her body seems to dissolve. "I shall come back tomorrow night," she promises as she fades. "If you are still willing to help me..."</Text>
+    <Choices>
+      <Choice text="Come back the following night" goto="7" />
+      <Choice text="Not get any further mixed up in this story" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="4" sound="lancio_tre_monete" soundDelay="2" music="il_lamento_di_giacomina">
+    <Text>"Let us pass," you say, facing him. The elf smiles. A mocking grin of pointed teeth. "A mortal who dares give me orders? How interesting."
+
+In an instant he is on you and, almost idly, rakes you with an unusually long claw. The wound runs down your arm, wide but shallow. It will leave a scar.
+
+It is Giacomina who steps between you, perhaps preventing worse. "By the ancient pact between Hèberle and the Lords of the Underground," she declares, "I claim the right of passage."
+
+The elf steps aside. "The ancient pact still holds, anguana. You may go, daughter of Hèberle. But know that what you were can never be again. Forty moons before the change. Forty moons for the passing that allows rebirth." You wonder what those words conceal as you climb. The stair comes out in a cave. The dawn sun welcomes you.</Text>
+    <Choices>
+      <Choice text="Carry on" goto="2" />
+    </Choices>
+  </Page>
+  <Page id="5">
+    <Text>"How did you end up down there?" you ask, mistrust overcome by the slightly drunken boldness of that festive night. "And why should I trust a voice in the dark?"
+
+"I was the daughter of Hèberle, the woodcutter," the voice answers. "I was taken by the elves when my father destroyed their forest. They have… changed me, but I do not want this fate. Help me back to the light before the change is complete."</Text>
+    <Choices>
+      <Choice text="Help her" goto="9" />
+      <Choice text="Leave" goto="17" />
+    </Choices>
+  </Page>
+  <Page id="6" sound="goccia_caverna_carsica" soundDelay="1" music="la_voragine_dei_sussurri">
+    <Text>You reach an underground shore where the waters of a black lake lap at the stone. An island gleams in the distance.
+
+"We must wait for the ship of the fading ones," Giacomina explains. She tells you her story: how she was taken while picking flowers, how she was changed, how she resisted the urge to lure men into the depths. "Forty moons before I am changed for good," she confesses, "and many have already passed. Forty is the change, the number of the Queen, the passage into the new life. Mem, 40, is the mother and the water, the drowsy stillness of the pond and the tumbling rush of the torrent."
+
+While the echo of that last sentence rings in your soul, a silent ship comes out of the haze. "The anguane of the isle of dreams," she whispers. "Now or never."</Text>
+    <Choices>
+      <Choice text="Board the ship of the fading ones" goto="20" roll="monete6" />
+    </Choices>
+  </Page>
+  <Page id="7" music="notte_sul_lemerle">
+    <Text>Was it only a dream, perhaps? The day drags by in waiting. At night you go back to the chasm. Giacomina is there! She rises quickly, her smile bright. For weeks the ritual is repeated but, as the moons pass, you see her change. Her skin turns more silver, her hair greener. Sometimes you catch her staring at the streams with a dreaming look.
+
+"I cannot go on like this," she confesses at last. "Every time I go back to the underground kingdom, the change advances. Soon I shall become an anguana for good."</Text>
+    <Choices>
+      <Choice text="Go down into the underground world with her" goto="19" />
+      <Choice text="Let it be" goto="11" />
+    </Choices>
+  </Page>
+  <Page id="8" sound="goccia_caverna_carsica" music="la_voragine_dei_sussurri">
+    <Text>You reach the bottom of the chasm. You are in a vast cavern crossed by glowing streams. Strange crystals glimmer, reflected in an unsettling firmament.
+
+"Follow me," Giacomina whispers, leading you along a hidden path. You cross labyrinthine galleries where the water has carved the rock into impossible shapes. In some recesses, stone statues depict terrified men.</Text>
+    <Choices>
+      <Choice text="Keep following her towards the island" goto="6" />
+      <Choice text="Look for another way out" goto="10" />
+    </Choices>
+  </Page>
+  <Page id="9" sound="campanacci_schella_marz" soundDelay="1">
+    <Text>"Wait," you say. "I will help you." You run to the village and fetch a rope. Back at the chasm, you tie it to a trunk and lower it into the abyss. "Take hold," you shout. "I will pull you up."
+
+Slowly a figure rises out of the darkness, wrapped in a pale halo. She is a young woman with a silvery complexion and shining hair, green as pine needles lit by the dewy sun of spring. Her eyes, deep mountain lakes, look up at you in gratitude.</Text>
+    <Choices>
+      <Choice text="Pull her up" goto="3" roll="monete9" />
+    </Choices>
+  </Page>
+  <Page id="10" sound="lancio_tre_monete" soundDelay="4" music="la_voragine_dei_sussurri">
+    <Text>You press on into ever narrower galleries, where the air grows thin. Giacomina's light seems to fade with every step. At last you reach a stone stair rising upwards.
+
+In front of it, an imposing figure blocks the way: an elf with noble, cruel features. A hostile, wild beauty radiates from him.
+
+"No one leaves the kingdom without the Queen's permission," he declares, in a voice melodious and terrible.</Text>
+    <Choices>
+      <Choice text="Face the elf guardian" goto="4" />
+      <Choice text="Leave it to Giacomina" goto="12" />
+    </Choices>
+  </Page>
+  <Page id="11" music="notte_sul_lemerle" ending="true">
+    <Text>Wisdom prevails over curiosity. The legends of the Altopiano are clear about the dangers of the creatures below. You stop visiting the chasm and go back to your life.
+
+In the years that follow, strange dreams trouble your nights: underground lakes and a figure watching you, her eyes veiled with sadness. Every time, you wake with the feeling of drowning.
+
+Forty years have passed since then. You have become known on the Altopiano as the one who refused the anguana's call. But on full-moon nights regret comes to visit, and you wonder what would have happened if you had had the courage to follow Giacomina.</Text>
+  </Page>
+  <Page id="12" sound="resina_impacco_fasce" soundDelay="3" music="il_lamento_di_giacomina">
+    <Text>She goes up to the elf. They speak in an ancient, incomprehensible tongue. "We may pass," she explains a little later, "but I shall have to give up a fragment of my humanity."
+
+The elf bends down and passes his hand over her ankles. A silver glow crosses his fingers. When Giacomina comes back to you, her gaze is more distant but still recognisable, and her feet are wrapped in a poultice of moss and weed. "Let us go," she says simply. You climb the stair until you come out in a cave. Dawn is rising over the Altopiano.</Text>
+    <OnEnter>
+      <Effects>
+        <setVariable target="impacco" value="1" />
+      </Effects>
+    </OnEnter>
+    <Choices>
+      <Choice text="Carry on" goto="2" />
+    </Choices>
+  </Page>
+  <Page id="13" sound="lamento_voragine_eco" soundDelay="2">
+    <Text>You move towards the edge of the Kan Züne wood. The voice is clearer now: the low moaning of a woman. Among the bushes you find the mouth of a chasm, a well of darkness driving into the mountain. You lie down on the ground, crawling carefully to the brink, and peer into the dark. "Who are you?" you ask. "How can I help you?"
+
+Silence first, then an answer: "My name is Giacomina. I am trapped in this place. I want to see the Altopiano again, to feel the sun, the scent of the wood. Please, help me."</Text>
+    <Choices>
+      <Choice text="Help Giacomina out of the chasm" goto="9" />
+      <Choice text="Ask her to explain" goto="5" />
+    </Choices>
+  </Page>
+  <Page id="14" music="la_voragine_dei_sussurri" ending="true">
+    <Text>You are discovered. "The daughter of Hèberle," an anguana hisses, "and a mortal!" The last word hangs in the air, dripping with hatred — and disappointment, perhaps? "This is an offence against the Queen!"
+
+You are dragged in chains to the centre of the isle of dreams. The Queen of the Waters, a creature of terrible beauty, stares at Giacomina with ill-concealed contempt.
+
+Sentence is passed at once: Giacomina is plunged into the Lake of Memory, losing every recollection, while you are turned into a statue of stone. The last thing your eyes see, before the dark falls over them for eternity, is her face twisting and changing as her humanity vanishes for ever.</Text>
+  </Page>
+  <Page id="15" music="la_voragine_dei_sussurri" ending="true">
+    <Text>Suddenly, as you hold the rope in your hands, it goes taut. A smell of weed and stagnant water reaches you.
+
+The face before you is not a young woman's. Luminous eyes and sharp teeth gleam in the night. You let go in terror and the creature falls back into the abyss with a scream of rage. You flee towards the village without once looking back.
+
+In the days that follow, fever consumes you. Nobody believes your ravings, but from then on the people avoid that part of the wood on full-moon nights.</Text>
+  </Page>
+  <Page id="17" music="notte_sul_lemerle" ending="true">
+    <Text>You quicken your step while the moaning seems to grow clearer behind you. The people of the Altopiano know these night calls well: they are traps for the incautious.
+
+You reach your home with your heart in your mouth. In the days that follow, the memory of that night fades. But on full-moon nights, when the wind blows from the west, you would swear you can still hear that weeping, closer and closer to your window.</Text>
+  </Page>
+  <Page id="18" music="l_alba_sull_altopiano" ending="true">
+    <Text>In the days that follow you accept your new reality. Giacomina, with her silver skin and green hair, is taken by the locals for "a stranger from the city".
+
+You settle in a small refuge on the Col del Vento, at the edge of the wood and not too far from the chasm. Guardians of the physical border between the two worlds.
+
+Giacomina keeps enough of her humanity to live on the surface, and enough of her anguana nature to hold on to a bond with the waters. Every spring she must dip her feet in the mountain torrents so as not to wither.
+
+Over the years you turn your refuge into a small museum of the old traditions of the Altopiano, and you plant wild flowers in memory of a time when elves and anguane were not only legends.</Text>
+  </Page>
+  <Page id="19" music="la_voragine_dei_sussurri">
+    <Text>"I will help you," you decide. "Lead the way and I will come down with you. I promise we shall find a way to break this curse." Giacomina looks at you with eyes full of hope and fear, and then lowers herself firmly into the abyss. That night, in the complete darkness that swallows even the moon, you take hold of the rope to follow the girl.</Text>
+    <Choices>
+      <Choice text="Take the rope and follow her" goto="8" roll="monete19" />
+    </Choices>
+  </Page>
+  <Page id="20" music="la_voragine_dei_sussurri">
+    <Text>You slip aboard the ship while the anguane are distracted. Giacomina reveals her plan: on the far shore there is a forgotten passage leading to the surface. But you will have to gather special weeds and mosses from the isle of dreams and weave them into a poultice. When the ship docks, you slide into the water and swim to the island's shore. It is a place of extraordinary beauty where crystals soar in majesty, lighting your steps.</Text>
+    <Choices>
+      <Choice text="Swim to the island's shore" goto="2" roll="monete20" />
+    </Choices>
+  </Page>
+  <Page id="21" music="il_lamento_di_giacomina" ending="true">
+    <Text>You watch in horror at what happens. Giacomina screams as her legs grow coarse hair and her feet turn into goat's hooves, her back arches unnaturally and appears torn, hollowed out, only partly hidden by her long hair. Her eyes lose their soft brightness and turn feral. Sharp teeth flash in her mouth, twisted into a snarl.
+
+She hurls herself at you but, before she can strike, her body vanishes in the light of the sun. You are left alone and, weeping, you think of what might have been and what you have lost.
+
+You feel the elf's wound burning, and his parting words, which you now understand were meant as one last, sly and malevolent warning.</Text>
+  </Page>
+</Librogame>
