@@ -66,8 +66,8 @@
         "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v12/items.xml",
         "sha256": "B58E432BB8B0347398D1BE017E7BDB739269A4F71AAA489314ED52B633733FDA"
       },
-      "minAppBuild": 33,
-      "minAppVersion": "1.31",
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "contentWarnings": "Violence, wounds described in detail, and the death of the character.",
@@ -128,8 +128,8 @@
         "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v12/items.xml",
         "sha256": "20CAFA2B58D213E68CE2CFD768EA6EE14B69ADC553EA499984C16E39114E4372"
       },
-      "minAppBuild": 33,
-      "minAppVersion": "1.31",
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "audio": [
@@ -455,8 +455,8 @@
         "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/items.xml",
         "sha256": "A4D6FA7B1C977B1D14B3B08D9EC6269F50E6AE313EA5ECDCE4F9D0DD02EF2081"
       },
-      "minAppBuild": 33,
-      "minAppVersion": "1.31",
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
       "audio": [
         {
           "name": "pietra",
@@ -558,8 +558,8 @@
         "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/items.xml",
         "sha256": "2827626F99CD018AFB98C670BD497E055294FBF864E941FBAD2887E4A69FE213"
       },
-      "minAppBuild": 33,
-      "minAppVersion": "1.31",
+      "minAppBuild": 34,
+      "minAppVersion": "1.32",
       "audio": [
         {
           "name": "pietra",
