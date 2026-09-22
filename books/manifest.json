@@ -56,21 +56,58 @@
       "language": "en",
       "genre": "Dungeon crawl",
       "blurb": "The king is dying, and the only cure is a green water that runs somewhere under the crypt of the ancient queens. You are the next volunteer sent down to fetch it — the ones before you did not come back, though their notes did.\n\nFifteen rooms of jade and cold air, a statue you have to climb through, rabets who trade and ambush in equal measure, and a purple snake asleep on a pile of coin. Everything you carry out is yours to keep, if you carry yourself out with it.",
-      "version": 11,
+      "version": 12,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v11/librogame.xml",
-        "sha256": "26788BF3857C22601BCD1FBA729789AFD5523945D90707C715F2163AB762AD31"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v12/librogame.xml",
+        "sha256": "D3BD23B28FDEFF8990D0B46FF5A07D46A335D007C088C696F38EC645C21AFC8C"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v11/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v12/items.xml",
         "sha256": "B58E432BB8B0347398D1BE017E7BDB739269A4F71AAA489314ED52B633733FDA"
       },
-      "minAppBuild": 28,
-      "minAppVersion": "1.26",
+      "minAppBuild": 33,
+      "minAppVersion": "1.31",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "contentWarnings": "Violence, wounds described in detail, and the death of the character."
+      "contentWarnings": "Violence, wounds described in detail, and the death of the character.",
+      "audio": [
+        {
+          "name": "sibilo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v12/audio/sibilo.ogg",
+          "sha256": "590747E1759CC97732A42551D0DF1679D606AB372B328818B3F75547F3DE0461",
+          "bytes": 27590
+        },
+        {
+          "name": "fiume",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v12/audio/fiume.ogg",
+          "sha256": "CACFF1853BA5AF8B39276633585C531AEF82E1D6408DF210263449AAB1E786C1",
+          "bytes": 13824
+        },
+        {
+          "name": "fuoco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v12/audio/fuoco.ogg",
+          "sha256": "9BE851B185DACEA52202FEBBC81CD678658999911E2E3D357F9D5112794F600A",
+          "bytes": 16555
+        },
+        {
+          "name": "ribollire",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v12/audio/ribollire.ogg",
+          "sha256": "522B70BCEF429816CE765E072E7D92199A705C09676D6FA41F454B8C5F0C9FA7",
+          "bytes": 17200
+        },
+        {
+          "name": "goccia",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/en/v12/audio/goccia.ogg",
+          "sha256": "E0788394940E4D19B5084F49C4EDF16F74FDCF11CA45DED7C4431602D084CE1B",
+          "bytes": 20751
+        }
+      ]
     },
     {
       "id": "viperblood-it",
@@ -81,20 +118,57 @@
       "genre": "Dungeon crawl",
       "blurb": "Il re sta morendo, e l'unica cura è un'acqua verde che scorre da qualche parte sotto la cripta delle antiche regine. Tocca a te scendere a prenderla: chi è andato prima di te non è tornato, i suoi appunti sì.\n\nQuindici stanze di giada e aria fredda, una statua dentro cui devi arrampicarti, rabet che commerciano e tendono agguati in egual misura, e un serpente viola addormentato su un mucchio di monete. Tutto quello che porti fuori è tuo, se porti fuori anche te.",
       "contentWarnings": "Violenza, ferite descritte per esteso, e la morte del personaggio.",
-      "version": 11,
+      "version": 12,
       "phase": "pubblico",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v11/librogame.xml",
-        "sha256": "7C40EB2EA863E7CB560D9DBD0E06D07EC7224C9918172ABB47F557706FB9BD1E"
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v12/librogame.xml",
+        "sha256": "60940407E50D390A7E464EBA64756D9321FCD0FD665C304D9D78325FEB8410C2"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v11/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v12/items.xml",
         "sha256": "20CAFA2B58D213E68CE2CFD768EA6EE14B69ADC553EA499984C16E39114E4372"
       },
-      "minAppBuild": 28,
-      "minAppVersion": "1.26",
+      "minAppBuild": 33,
+      "minAppVersion": "1.31",
       "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "audio": [
+        {
+          "name": "sibilo",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v12/audio/sibilo.ogg",
+          "sha256": "590747E1759CC97732A42551D0DF1679D606AB372B328818B3F75547F3DE0461",
+          "bytes": 27590
+        },
+        {
+          "name": "fiume",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v12/audio/fiume.ogg",
+          "sha256": "CACFF1853BA5AF8B39276633585C531AEF82E1D6408DF210263449AAB1E786C1",
+          "bytes": 13824
+        },
+        {
+          "name": "fuoco",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v12/audio/fuoco.ogg",
+          "sha256": "9BE851B185DACEA52202FEBBC81CD678658999911E2E3D357F9D5112794F600A",
+          "bytes": 16555
+        },
+        {
+          "name": "ribollire",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v12/audio/ribollire.ogg",
+          "sha256": "522B70BCEF429816CE765E072E7D92199A705C09676D6FA41F454B8C5F0C9FA7",
+          "bytes": 17200
+        },
+        {
+          "name": "goccia",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/viperblood/it/v12/audio/goccia.ogg",
+          "sha256": "E0788394940E4D19B5084F49C4EDF16F74FDCF11CA45DED7C4431602D084CE1B",
+          "bytes": 20751
+        }
+      ]
     },
     {
       "id": "lanterna-rossa-it",
@@ -371,18 +445,97 @@
       "contentWarnings": "Furti, un paradosso temporale che distrugge l'universo e un rapace gigante che si porta via qualcuno per cena. Tutto raccontato per ridere.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 4,
+      "version": 5,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v4/librogame.xml",
-        "sha256": "6A2883EE59C932E8A716C7EC5A51C7D971BA62D1CA2FFF36A57DCF42E34FC383"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/librogame.xml",
+        "sha256": "66E83C056A872EDFA8D795FF72317C3E9B2226E59F29A699203E49F5D44FBC34"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v4/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/items.xml",
         "sha256": "A4D6FA7B1C977B1D14B3B08D9EC6269F50E6AE313EA5ECDCE4F9D0DD02EF2081"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 33,
+      "minAppVersion": "1.31",
+      "audio": [
+        {
+          "name": "pietra",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/pietra.ogg",
+          "sha256": "FB22B86549905D7BEF8AA7A7CE681A33F9E5C6D527B7A3ADB30530BA90236ED2",
+          "bytes": 26649
+        },
+        {
+          "name": "soffio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/soffio.ogg",
+          "sha256": "945E3E465DB2FB9AAFCFBA8AE4C69627CCBC8343A79FFE383951ABB52AFBA83B",
+          "bytes": 15798
+        },
+        {
+          "name": "sabbia",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/sabbia.ogg",
+          "sha256": "7BD66EE37B7671525FCFF162B90569BC7DC1D0DA00A975121C0672C660AD441A",
+          "bytes": 22745
+        },
+        {
+          "name": "catene",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/catene.ogg",
+          "sha256": "0111FB38C1854144403703D3024FB044F318D79803E89650EC31070FB125B6F5",
+          "bytes": 19543
+        },
+        {
+          "name": "ali",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/ali.ogg",
+          "sha256": "8F80FAB62C737FE6F2D396E62CC7A0A78990DF282A82D5CB4377E03F9A9EDA4E",
+          "bytes": 8336
+        },
+        {
+          "name": "folla",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/folla.ogg",
+          "sha256": "1230C7CAE624A511F73D883D1D3DEB6AB98FAFBC6F2A2F44918D10B068DF88E3",
+          "bytes": 17751
+        },
+        {
+          "name": "mistero",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/mistero.ogg",
+          "sha256": "664F79D369CF1434AF1C18D3AD45DDAA8BD4A393FDFBA13B1E526601A91104AD",
+          "bytes": 734001
+        },
+        {
+          "name": "pericolo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/pericolo.ogg",
+          "sha256": "D5BC6AE69F2DC496A6F9EE18AD9210167C1A53752232D18E335559A9E255FA2A",
+          "bytes": 806320
+        },
+        {
+          "name": "meraviglia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/meraviglia.ogg",
+          "sha256": "F1B4BD42CEBBB71888A5DBC780C1BEC4BD48B09BBFCB502AD39CD25AF591F025",
+          "bytes": 802288
+        },
+        {
+          "name": "trionfo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/trionfo.ogg",
+          "sha256": "30B509CE81B1DC72E9821BD544BD6F2F8F0802BD91597D4E1DC1CD0A2650516B",
+          "bytes": 751494
+        },
+        {
+          "name": "rovina",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/it/v5/audio/rovina.ogg",
+          "sha256": "437E7E263CA49F488EEC6983FFD838DA42FD7C4E04966FCF888609251E90FC34",
+          "bytes": 555959
+        }
+      ]
     },
     {
       "id": "quarantesimo-ladrone-en",
@@ -395,18 +548,97 @@
       "contentWarnings": "Theft, a time paradox that destroys the universe, and a giant bird of prey that carries someone off for dinner. All of it played for laughs.",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "version": 4,
+      "version": 5,
       "phase": "test",
       "story": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v4/librogame.xml",
-        "sha256": "98B9CBECEF738E7F72D5FEE95878E04710F3FB12CA6D6D6A4CF11934CC39CF81"
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/librogame.xml",
+        "sha256": "693CC92DC89FC026A95C4D4C892C80853813691E5608F428B9665652E7391F30"
       },
       "catalog": {
-        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v4/items.xml",
+        "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/items.xml",
         "sha256": "2827626F99CD018AFB98C670BD497E055294FBF864E941FBAD2887E4A69FE213"
       },
-      "minAppBuild": 26,
-      "minAppVersion": "1.24"
+      "minAppBuild": 33,
+      "minAppVersion": "1.31",
+      "audio": [
+        {
+          "name": "pietra",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/pietra.ogg",
+          "sha256": "FB22B86549905D7BEF8AA7A7CE681A33F9E5C6D527B7A3ADB30530BA90236ED2",
+          "bytes": 26649
+        },
+        {
+          "name": "soffio",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/soffio.ogg",
+          "sha256": "945E3E465DB2FB9AAFCFBA8AE4C69627CCBC8343A79FFE383951ABB52AFBA83B",
+          "bytes": 15798
+        },
+        {
+          "name": "sabbia",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/sabbia.ogg",
+          "sha256": "7BD66EE37B7671525FCFF162B90569BC7DC1D0DA00A975121C0672C660AD441A",
+          "bytes": 22745
+        },
+        {
+          "name": "catene",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/catene.ogg",
+          "sha256": "0111FB38C1854144403703D3024FB044F318D79803E89650EC31070FB125B6F5",
+          "bytes": 19543
+        },
+        {
+          "name": "ali",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/ali.ogg",
+          "sha256": "8F80FAB62C737FE6F2D396E62CC7A0A78990DF282A82D5CB4377E03F9A9EDA4E",
+          "bytes": 8336
+        },
+        {
+          "name": "folla",
+          "kind": "sound",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/folla.ogg",
+          "sha256": "1230C7CAE624A511F73D883D1D3DEB6AB98FAFBC6F2A2F44918D10B068DF88E3",
+          "bytes": 17751
+        },
+        {
+          "name": "mistero",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/mistero.ogg",
+          "sha256": "664F79D369CF1434AF1C18D3AD45DDAA8BD4A393FDFBA13B1E526601A91104AD",
+          "bytes": 734001
+        },
+        {
+          "name": "pericolo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/pericolo.ogg",
+          "sha256": "D5BC6AE69F2DC496A6F9EE18AD9210167C1A53752232D18E335559A9E255FA2A",
+          "bytes": 806320
+        },
+        {
+          "name": "meraviglia",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/meraviglia.ogg",
+          "sha256": "F1B4BD42CEBBB71888A5DBC780C1BEC4BD48B09BBFCB502AD39CD25AF591F025",
+          "bytes": 802288
+        },
+        {
+          "name": "trionfo",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/trionfo.ogg",
+          "sha256": "30B509CE81B1DC72E9821BD544BD6F2F8F0802BD91597D4E1DC1CD0A2650516B",
+          "bytes": 751494
+        },
+        {
+          "name": "rovina",
+          "kind": "music",
+          "url": "https://spirito82.github.io/PathsOfInks/books/quarantesimo-ladrone/en/v5/audio/rovina.ogg",
+          "sha256": "437E7E263CA49F488EEC6983FFD838DA42FD7C4E04966FCF888609251E90FC34",
+          "bytes": 555959
+        }
+      ]
     },
     {
       "id": "ti-rimangono-40-secondi-it",
