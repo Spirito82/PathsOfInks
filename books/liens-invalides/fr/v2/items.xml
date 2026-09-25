@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<librogame formatVersion="1">
-  <items>
-    <item id="glock" name="Glock" description="Chargé, sous votre veston. Vous n'avez pas eu à vous en servir depuis longtemps, et vous n'y tenez pas." />
-    <item id="bracelet" name="Bracelet à écran" description="Tout le monde en porte un. Le vôtre vous relie au commissariat, aux GAFAmedia et à une nuit qui ne fait que commencer." />
-    <item id="fiasque" name="Fiasque de vodka" description="Le totem d'invincibilité du commissaire K. Chaque lampée compte, et le livre les compte aussi." />
-  </items>
-</librogame>

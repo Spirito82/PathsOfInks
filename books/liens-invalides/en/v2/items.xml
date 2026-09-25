@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<librogame formatVersion="1">
-  <items>
-    <item id="glock" name="Glock" description="Loaded, under your jacket. You haven't had to use it in a long time, and you'd rather keep it that way." />
-    <item id="bracelet" name="Screen bracelet" description="Everyone wears one. Yours links you to the station, to the GAFAmedia and to a night that has only just begun." />
-    <item id="fiasque" name="Vodka flask" description="Commissioner K.'s totem of invincibility. Every swig counts, and the book counts them with you." />
-  </items>
-</librogame>
